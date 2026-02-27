@@ -1,0 +1,48 @@
+{{ $limit := .Site.Params.display_episodes_until | int }}
+{{ $current := .Params.episode | int }}
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a href="{{ "/" | relURL }}" class="sidebar-title">AMATH 390</a>
+    <div class="sidebar-subtitle">数学与音乐</div>
+  </div>
+
+  {{ $arcs := slice
+    (dict "name" "数学基础篇"            "label" "数学基础篇"             "start" 1  "end" 9)
+    (dict "name" "Jacob Collier 系列"   "label" "Jacob Collier 系列"    "start" 10 "end" 13)
+    (dict "name" "拓扑数学专篇"          "label" "拓扑数学专篇"            "start" 14 "end" 14)
+    (dict "name" "歌剧系列"             "label" "歌剧系列"               "start" 15 "end" 20)
+    (dict "name" "AI 音乐三部曲"        "label" "AI 音乐三部曲"           "start" 21 "end" 23)
+    (dict "name" "流行音乐 × 数学"      "label" "流行音乐 × 数学"         "start" 24 "end" 27)
+    (dict "name" "音乐技术系列"          "label" "音乐技术系列"            "start" 28 "end" 40)
+    (dict "name" "分离与识别"           "label" "分离与识别"              "start" 41 "end" 42)
+  }}
+
+  {{ range $arcs }}
+    {{ $arcStart := .start | int }}
+    {{ $arcEnd := .end | int }}
+    {{ if le $arcStart $limit }}
+      {{ $visibleEnd := (math.Min $arcEnd $limit) | int }}
+      <div class="arc-group">
+        <div class="arc-label">{{ .label }}</div>
+        {{ $pages := where $.Site.RegularPages "Section" "episodes" }}
+        {{ range $pages }}
+          {{ $ep := .Params.episode | int }}
+          {{ if and (ge $ep $arcStart) (le $ep $visibleEnd) }}
+            <a href="{{ .Permalink }}"
+               class="ep-link{{ if eq $ep $current }} active{{ end }}">
+              <span class="ep-num">{{ printf "%02d" $ep }}</span>
+              <span class="ep-title">{{ replaceRE "^EP[0-9]+:\\s*" "" .Title }}</span>
+            </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    {{ end }}
+  {{ end }}
+
+  <div class="sidebar-footer">
+    <a href="{{ "/theorems/" | relURL }}">定理索引</a>
+    <a href="{{ "/domains/" | relURL }}">数学领域</a>
+    <a href="{{ "/about/" | relURL }}">关于</a>
+  </div>
+</nav>

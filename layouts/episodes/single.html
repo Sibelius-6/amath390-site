@@ -1,0 +1,50 @@
+{{ define "main" }}
+{{ $limit := .Site.Params.display_episodes_until | int }}
+{{ $ep := .Params.episode | int }}
+
+<div class="episode-layout">
+  <article class="episode-page">
+    {{ partial "episode-header.html" . }}
+    {{ partial "cross-refs.html" . }}
+    {{ partial "xhs-videos.html" . }}
+
+    <div class="episode-content content">
+      {{ .Content }}
+    </div>
+
+    <!-- Prev / Next navigation -->
+    <nav class="ep-nav">
+      {{ $pages := where .Site.RegularPages "Section" "episodes" }}
+      {{ $sorted := sort $pages ".Params.episode" "asc" }}
+      {{ $prev := "" }}
+      {{ $next := "" }}
+      {{ range $i, $p := $sorted }}
+        {{ $pep := $p.Params.episode | int }}
+        {{ if and (lt $pep $ep) (le $pep $limit) }}{{ $prev = $p }}{{ end }}
+        {{ if and (gt $pep $ep) (le $pep $limit) (eq $next "") }}{{ $next = $p }}{{ end }}
+      {{ end }}
+      {{ with $prev }}
+      <a href="{{ .Permalink }}" class="ep-nav-prev">
+        ← {{ .Title }}
+      </a>
+      {{ end }}
+      {{ with $next }}
+      <a href="{{ .Permalink }}" class="ep-nav-next">
+        {{ .Title }} →
+      </a>
+      {{ end }}
+    </nav>
+  </article>
+
+  <!-- Floating right TOC -->
+  {{ $toc := .TableOfContents }}
+  {{ if $toc }}
+  <aside class="ep-toc-aside">
+    <div class="ep-toc-sticky">
+      <div class="ep-toc-label">本页目录</div>
+      {{ $toc }}
+    </div>
+  </aside>
+  {{ end }}
+</div>
+{{ end }}

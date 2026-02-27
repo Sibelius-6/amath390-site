@@ -1,0 +1,80 @@
+{{ define "main" }}
+{{ $limit := .Site.Params.display_episodes_until | int }}
+
+<article class="page-content">
+  <h1>定理索引</h1>
+  <p style="color:#9999bb;font-size:.9rem;margin-bottom:1.5em">
+    所有已发布集数中的核心定理与命题。
+  </p>
+
+  <div class="filter-bar" id="domain-filters">
+    <button class="filter-btn active" data-domain="all">全部</button>
+    <button class="filter-btn" data-domain="Signal Processing">信号处理</button>
+    <button class="filter-btn" data-domain="Abstract Algebra">抽象代数</button>
+    <button class="filter-btn" data-domain="Graph Theory">图论</button>
+    <button class="filter-btn" data-domain="Number Theory">数论</button>
+    <button class="filter-btn" data-domain="Topology">拓扑</button>
+    <button class="filter-btn" data-domain="Information Theory">信息论</button>
+    <button class="filter-btn" data-domain="Statistics/ML">统计/ML</button>
+  </div>
+
+  <table class="theorem-table" id="theorem-table">
+    <thead>
+      <tr>
+        <th>定理</th>
+        <th>集数</th>
+        <th>领域</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ $pages := where .Site.RegularPages "Section" "episodes" }}
+      {{ range $pages }}
+        {{ $ep := .Params.episode | int }}
+        {{ if le $ep $limit }}
+          {{ with .Params.key_theorems }}
+            {{ $epRef := $ep }}
+            {{ $epPage := . }}
+            {{ range . }}
+              {{ $domainList := $.Params.domains }}
+              <tr data-domain="{{ range $domainList }}{{ . }} {{ end }}">
+                <td>
+                  <a href="{{ (index $pages 0).Permalink }}">{{ . }}</a>
+                </td>
+                <td>
+                  <a href="{{ (index (where $.Site.RegularPages "Params.episode" $epRef) 0).Permalink }}">
+                    EP{{ printf "%02d" $epRef }}
+                  </a>
+                </td>
+                <td style="font-size:.8rem;color:#9999bb">
+                  {{ range $domainList }}{{ . }} {{ end }}
+                </td>
+              </tr>
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    </tbody>
+  </table>
+</article>
+
+<script>
+(function() {
+  const btns = document.querySelectorAll('.filter-btn');
+  const rows = document.querySelectorAll('#theorem-table tbody tr');
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const domain = btn.dataset.domain;
+      rows.forEach(row => {
+        if (domain === 'all' || row.dataset.domain.includes(domain)) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    });
+  });
+})();
+</script>
+{{ end }}

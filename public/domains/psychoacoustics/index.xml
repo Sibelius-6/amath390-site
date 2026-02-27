@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Psychoacoustics on AMATH 390 数学与音乐</title>
+    <link>https://amath390.sibeliusp.com/domains/psychoacoustics/</link>
+    <description>Recent content in Psychoacoustics on AMATH 390 数学与音乐</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://amath390.sibeliusp.com/domains/psychoacoustics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EP15: Opera Acoustics and the Singer&#39;s Formant</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep15/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep15/</guid>
+      <description>Overview An opera singer has no microphone. A single voice must cut through 110 orchestral instruments in a live hall. This episode asks: how?
+ 中文: &amp;ldquo;答案藏在——3000赫兹。乐队能量在这里暴跌18分贝。这是歌手唯一的窗口——或者被淹没，或者穿透。&amp;rdquo;
+ The answer is not louder singing. It is frequency targeting: the singer concentrates acoustic energy precisely where the orchestra is weakest, where the human ear is most sensitive, and where the physics of the vocal tract allows a structural resonance enhancement.
+This episode develops a three-layer quantitative model:</description>
+    </item>
+    
+    <item>
+      <title>EP39: How Spotify Knows You Are Too Loud — The LUFS Algorithm</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep39/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep39/</guid>
+      <description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
+本集探讨：ITU-R BS.1770 K加权双二阶, 双门限, 真峰值。
+前置知识 定义 Definition (...)  &amp;hellip;  -- 主要定理 Theorem 39.1 (...)  &amp;hellip;  -- Proof. &amp;hellip;  -- 音乐联系 音乐联系 &amp;hellip;  -- 局限性与开放问题 参考文献  待补充  </description>
+    </item>
+    
+  </channel>
+</rss>

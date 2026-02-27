@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Topology on AMATH 390 数学与音乐</title>
+    <link>https://amath390.sibeliusp.com/domains/topology/</link>
+    <description>Recent content in Topology on AMATH 390 数学与音乐</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://amath390.sibeliusp.com/domains/topology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EP01: Chord Space and the Torus</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep01/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep01/</guid>
+      <description>Overview If I told you that moving from a C major chord to an A minor chord takes exactly one step in a certain geometric space — and that this space has the shape of a donut — would you believe it?
+This episode develops the mathematical backbone of Neo-Riemannian theory: three involutory chord transformations (P, L, R) that generate a dihedral group acting on 24 major/minor triads, a torus-shaped visualization called the Tonnetz, and Dmitri Tymoczko&amp;rsquo;s general theory of voice-leading orbifolds.</description>
+    </item>
+    
+    <item>
+      <title>EP08: Shepard Tones and the Tritone Paradox</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep08/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep08/</guid>
+      <description>Overview A tone rises through twelve semitones. Then it rises again. It has been rising for thirty seconds and is at exactly the same pitch it started on.
+This is not an acoustic trick — it is a topological fact. Roger Shepard&amp;rsquo;s 1964 construction exploits the two-dimensional structure of human pitch perception: every pitch has a chroma (position on a circle, ) and a height (octave number, ). Pitch lives on a helix .</description>
+    </item>
+    
+    <item>
+      <title>EP14: Tonnetz Hodge Duality</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep14/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep14/</guid>
+      <description>Overview The Tonnetz — Euler&amp;rsquo;s 1739 interval lattice, rediscovered by neo-Riemannian theorists — is not merely a picture of chord relationships. It is a simplicial complex triangulating a torus, and every chord progression on it is a cochain that decomposes, uniquely and orthogonally, into three mathematically distinct components.
+This episode applies discrete Hodge theory (Eckmann 1944; Lim 2020) to the Tonnetz. The central result:
+ Any 1-cochain on the Tonnetz torus decomposes as:  where the three summands are pairwise orthogonal and uniquely determined.</description>
+    </item>
+    
+  </channel>
+</rss>

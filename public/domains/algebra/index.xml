@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algebra on AMATH 390 数学与音乐</title>
+    <link>https://amath390.sibeliusp.com/domains/algebra/</link>
+    <description>Recent content in Algebra on AMATH 390 数学与音乐</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://amath390.sibeliusp.com/domains/algebra/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EP01: Chord Space and the Torus</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep01/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep01/</guid>
+      <description>Overview If I told you that moving from a C major chord to an A minor chord takes exactly one step in a certain geometric space — and that this space has the shape of a donut — would you believe it?
+This episode develops the mathematical backbone of Neo-Riemannian theory: three involutory chord transformations (P, L, R) that generate a dihedral group acting on 24 major/minor triads, a torus-shaped visualization called the Tonnetz, and Dmitri Tymoczko&amp;rsquo;s general theory of voice-leading orbifolds.</description>
+    </item>
+    
+  </channel>
+</rss>

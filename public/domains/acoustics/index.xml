@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Acoustics on AMATH 390 数学与音乐</title>
+    <link>https://amath390.sibeliusp.com/domains/acoustics/</link>
+    <description>Recent content in Acoustics on AMATH 390 数学与音乐</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://amath390.sibeliusp.com/domains/acoustics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EP08: Shepard Tones and the Tritone Paradox</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep08/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep08/</guid>
+      <description>Overview A tone rises through twelve semitones. Then it rises again. It has been rising for thirty seconds and is at exactly the same pitch it started on.
+This is not an acoustic trick — it is a topological fact. Roger Shepard&amp;rsquo;s 1964 construction exploits the two-dimensional structure of human pitch perception: every pitch has a chroma (position on a circle, ) and a height (octave number, ). Pitch lives on a helix .</description>
+    </item>
+    
+    <item>
+      <title>EP13: Polyrhythm and Rhythm-Pitch Duality</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep13/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep13/</guid>
+      <description>Overview This is Episode 4 of 4 in the Jacob Collier series — the finale of the  arc.
+Jacob Collier&amp;rsquo;s mastery of both rhythm and harmony looks like two separate gifts. This episode argues it is one: the ability to perceive integer ratios across all time scales. A polyrhythm of  and a perfect fifth are mathematically identical — the ratio  — separated only by a perceptual threshold near 20 Hz.</description>
+    </item>
+    
+  </channel>
+</rss>

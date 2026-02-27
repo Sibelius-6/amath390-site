@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EP01: Chord Space and the Torus | AMATH 390 数学与音乐</title>
+<meta name="description" content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('[data-latex]').forEach(function(el) {
+    try {
+      katex.render(el.getAttribute('data-latex'), el, {
+        displayMode: el.classList.contains('math-display'),
+        throwOnError: false
+      });
+    } catch(e) { console.warn('KaTeX:', e.message, el); }
+  });
+});
+</script>
+
+
+<link rel="stylesheet" href="/css/amath390.css">
+
+</head>
+<body>
+  <div class="layout-wrapper">
+    
+
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a href="/" class="sidebar-title">AMATH 390</a>
+    <div class="sidebar-subtitle">数学与音乐</div>
+  </div>
+
+  
+
+  
+    
+    
+    
+      
+      <div class="arc-group">
+        <div class="arc-label">数学基础篇</div>
+        
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep01/"
+               class="ep-link active">
+              <span class="ep-num">01</span>
+              <span class="ep-title">Chord Space and the Torus</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep02/"
+               class="ep-link">
+              <span class="ep-num">02</span>
+              <span class="ep-title">String Vibration and the Wave Equation</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep03/"
+               class="ep-link">
+              <span class="ep-num">03</span>
+              <span class="ep-title">Bach and Graph Connectivity</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep04/"
+               class="ep-link">
+              <span class="ep-num">04</span>
+              <span class="ep-title">All-Interval Rows and ℤ₁₂</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep05/"
+               class="ep-link">
+              <span class="ep-num">05</span>
+              <span class="ep-title">Turán&#39;s Theorem and Counterpoint</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep06/"
+               class="ep-link">
+              <span class="ep-num">06</span>
+              <span class="ep-title">Graph Coloring and Voice Assignment</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep07/"
+               class="ep-link">
+              <span class="ep-num">07</span>
+              <span class="ep-title">Information Entropy and All-Interval Rows</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep08/"
+               class="ep-link">
+              <span class="ep-num">08</span>
+              <span class="ep-title">Shepard Tones and the Tritone Paradox</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep09/"
+               class="ep-link">
+              <span class="ep-num">09</span>
+              <span class="ep-title">Combination Tones and Nonlinear Acoustics</span>
+            </a>
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
+    
+  
+    
+    
+    
+      
+      <div class="arc-group">
+        <div class="arc-label">Jacob Collier 系列</div>
+        
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep10/"
+               class="ep-link">
+              <span class="ep-num">10</span>
+              <span class="ep-title">Negative Harmony and the Dihedral Group D₁₂</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep11/"
+               class="ep-link">
+              <span class="ep-num">11</span>
+              <span class="ep-title">Comma Drift and the Impossibility of Perfect Tuning</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep12/"
+               class="ep-link">
+              <span class="ep-num">12</span>
+              <span class="ep-title">The Circle of Fifths as a Folded Spiral</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep13/"
+               class="ep-link">
+              <span class="ep-num">13</span>
+              <span class="ep-title">Polyrhythm and Rhythm-Pitch Duality</span>
+            </a>
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
+    
+  
+    
+    
+    
+      
+      <div class="arc-group">
+        <div class="arc-label">拓扑数学专篇</div>
+        
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep14/"
+               class="ep-link">
+              <span class="ep-num">14</span>
+              <span class="ep-title">Tonnetz Hodge Duality</span>
+            </a>
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
+    
+  
+    
+    
+    
+      
+      <div class="arc-group">
+        <div class="arc-label">歌剧系列</div>
+        
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep15/"
+               class="ep-link">
+              <span class="ep-num">15</span>
+              <span class="ep-title">Opera Acoustics and the Singer&#39;s Formant</span>
+            </a>
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+
+  <div class="sidebar-footer">
+    <a href="/theorems/">定理索引</a>
+    <a href="/domains/">数学领域</a>
+    <a href="/about/">关于</a>
+  </div>
+</nav>
+
+    <main class="main-content">
+      
+
+
+
+<div class="episode-layout">
+  <article class="episode-page">
+    <header class="episode-header">
+  <div class="ep-badge">EP01</div>
+  <h1 class="ep-main-title">EP01: Chord Space and the Torus</h1>
+  <div class="ep-subtitle">Tonnetz, PLR变换与轨形</div>
+
+  <div class="ep-meta">
+    
+    <span class="meta-item">
+      <span class="meta-icon">▶</span> —
+    </span>
+    
+    
+    <span class="meta-item domains">
+      <span class="domain-chip">Topology</span><span class="domain-chip">Algebra</span>
+    </span>
+    
+  </div>
+</header>
+
+    
+
+
+
+
+
+
+
+<div class="cross-refs">
+  <h3 class="cross-refs-title">后续拓展</h3>
+  <div class="ref-cards">
+    
+      
+      
+        
+        
+        
+          <a href="https://amath390.sibeliusp.com/episodes/ep08/" class="ref-card forward">
+            <span class="ref-ep">EP08</span>
+            <span class="ref-title">Shepard Tones and the Tritone Paradox</span>
+          </a>
+        
+      
+    
+      
+      
+        
+        
+        
+          <a href="https://amath390.sibeliusp.com/episodes/ep10/" class="ref-card forward">
+            <span class="ref-ep">EP10</span>
+            <span class="ref-title">Negative Harmony and the Dihedral Group D₁₂</span>
+          </a>
+        
+      
+    
+      
+      
+        
+        
+        
+          <a href="https://amath390.sibeliusp.com/episodes/ep14/" class="ref-card forward">
+            <span class="ref-ep">EP14</span>
+            <span class="ref-title">Tonnetz Hodge Duality</span>
+          </a>
+        
+      
+    
+      
+      
+    
+  </div>
+</div>
+
+
+
+    
+<div class="xhs-section">
+  <div class="xhs-section-header">
+    <span class="xhs-logo-badge">小红书</span>
+    <span class="xhs-section-title">Watch on 小红书</span>
+  </div>
+  <div class="xhs-cards">
+    
+    <a href="https://www.xiaohongshu.com/discovery/item/698188f0000000000e03ec44?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=AB_EX7qAA_u2pNynnxuM8Q0RsY1ccM_tBK3e1QjGSyU4E=&amp;xsec_source=pc_share" target="_blank" rel="noopener" class="xhs-card">
+      <div class="xhs-card-inner">
+        <div class="xhs-card-icon">▶</div>
+        <div class="xhs-card-text">
+          <div class="xhs-card-title">和弦空间竟然是甜甜圈？音乐里的拓扑学入门</div>
+          <div class="xhs-card-sub">xiaohongshu.com</div>
+        </div>
+        <div class="xhs-card-arrow">→</div>
+      </div>
+    </a>
+    
+    <a href="https://www.xiaohongshu.com/discovery/item/6984bb26000000000903b09b?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABV5JuXAYhntH_XRyCTDW0xHSuBBSe9giqZjMgg0ikgP4=&amp;xsec_source=pc_share" target="_blank" rel="noopener" class="xhs-card">
+      <div class="xhs-card-inner">
+        <div class="xhs-card-icon">▶</div>
+        <div class="xhs-card-text">
+          <div class="xhs-card-title">R L R L R L... 两个字母写完贝多芬第九？</div>
+          <div class="xhs-card-sub">xiaohongshu.com</div>
+        </div>
+        <div class="xhs-card-arrow">→</div>
+      </div>
+    </a>
+    
+  </div>
+</div>
+
+
+
+    <div class="episode-content content">
+      <h2 id="overview">Overview</h2>
+<p>If I told you that moving from a C major chord to an A minor chord takes exactly one step in a certain geometric space — and that this space has the shape of a donut — would you believe it?</p>
+<p>This episode develops the mathematical backbone of <strong>Neo-Riemannian theory</strong>: three involutory chord transformations (P, L, R) that generate a dihedral group acting on 24 major/minor triads, a torus-shaped visualization called the <strong>Tonnetz</strong>, and Dmitri Tymoczko&rsquo;s general theory of <strong>voice-leading orbifolds</strong>.</p>
+<blockquote>
+<p><em>中文:</em> &ldquo;从数学角度看，这三种变换生成了一个群。具体来说，是二面体群D12，一共有24个元素。这个群作用在24个大小三和弦上，而且是simply transitive的。&rdquo;</p>
+</blockquote>
+<hr>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Basic group theory: groups, generators, homomorphisms</li>
+<li>Topology: quotient spaces, torus as product of circles</li>
+<li>
+
+
+
+<a href="https://amath390.sibeliusp.com/episodes/ep08/" class="episode-ref-link">Pitch-class topology (EP08)</a>
+
+ — <span class="math-inline" data-latex="\mathbb{Z}_{12}"></span> as the circle of pitch classes</li>
+<li>
+
+
+
+<a href="https://amath390.sibeliusp.com/episodes/ep17/" class="episode-ref-link">Motif networks (EP17)</a>
+
+ — graph models of musical structure</li>
+</ul>
+<hr>
+<h2 id="definitions">Definitions</h2>
+
+
+<div class="definition-block" id="definition-1.1">
+  <div class="block-label">
+    Definition 1.1 (Major and Minor Triad)
+  </div>
+  <div class="block-body"><p>A <strong>triad</strong> is an ordered triple of pitch classes <span class="math-inline" data-latex="(r, m, \ell) \in \mathbb{Z}_{12}^3"></span> satisfying the spacing constraint:</p>
+<ul>
+<li><strong>Major triad</strong> rooted at <span class="math-inline" data-latex="r"></span>: pitch classes <span class="math-inline" data-latex="\{r,\; r&#43;4,\; r&#43;7\} \pmod{12}"></span></li>
+<li><strong>Minor triad</strong> rooted at <span class="math-inline" data-latex="r"></span>: pitch classes <span class="math-inline" data-latex="\{r,\; r&#43;3,\; r&#43;7\} \pmod{12}"></span></li>
+</ul>
+<p>There are 12 major triads and 12 minor triads, giving a set <span class="math-inline" data-latex="\mathcal{T}"></span> of 24 triads. We write <span class="math-inline" data-latex="[r,&#43;]"></span> for the major triad rooted at <span class="math-inline" data-latex="r"></span> and <span class="math-inline" data-latex="[r,-]"></span> for the minor triad rooted at <span class="math-inline" data-latex="r"></span>.</p>
+</div>
+</div>
+
+
+
+<div class="definition-block" id="definition-1.2">
+  <div class="block-label">
+    Definition 1.2 (PLR Transformations)
+  </div>
+  <div class="block-body"><p>Three functions <span class="math-inline" data-latex="P, L, R : \mathcal{T} \to \mathcal{T}"></span> are defined by the rule: each transformation preserves two common tones and moves the remaining tone by the minimal semitone distance.</p>
+<ul>
+<li>
+<p><strong>P (Parallel)</strong>: changes mode while keeping root fixed.</p>
+<div class="math-display" data-latex="P([r,&#43;]) = [r,-], \qquad P([r,-]) = [r,&#43;]"></div>
+Concretely: in <span class="math-inline" data-latex="[r,&#43;] = \{r, r{&#43;}4, r{&#43;}7\}"></span>, the note <span class="math-inline" data-latex="r{&#43;}4"></span> moves by one semitone to <span class="math-inline" data-latex="r{&#43;}3"></span>.
+</li>
+<li>
+<p><strong>L (Leading-tone exchange)</strong>: in a major triad, the root moves down by semitone; in minor, the fifth moves up by semitone.</p>
+<div class="math-display" data-latex="L([r,&#43;]) = [r&#43;4,-], \qquad L([r,-]) = [r&#43;8,&#43;]"></div>
+(indices mod 12)
+</li>
+<li>
+<p><strong>R (Relative)</strong>: relates a major triad to its relative minor (sharing the same key signature).</p>
+<div class="math-display" data-latex="R([r,&#43;]) = [r&#43;9,-], \qquad R([r,-]) = [r&#43;3,&#43;]"></div>
+</li>
+</ul>
+<p>Each of P, L, R is an <strong>involution</strong>: <span class="math-inline" data-latex="P^2 = L^2 = R^2 = \mathrm{id}"></span>.</p>
+</div>
+</div>
+
+<blockquote>
+<p><em>Visual:</em> C major <span class="math-inline" data-latex="\{C, E, G\}"></span> under P becomes C minor <span class="math-inline" data-latex="\{C, E\flat, G\}"></span> — only E moves, dropping one semitone to E<span class="math-inline" data-latex="\flat"></span>. Under R it becomes A minor <span class="math-inline" data-latex="\{A, C, E\}"></span> — only G moves, ascending a whole tone to A.</p>
+</blockquote>
+
+
+<div class="definition-block" id="definition-1.3">
+  <div class="block-label">
+    Definition 1.3 (Neo-Riemannian Group)
+  </div>
+  <div class="block-body"><p>The <strong>Neo-Riemannian group</strong> <span class="math-inline" data-latex="\mathcal{R}"></span> is the subgroup of <span class="math-inline" data-latex="\mathrm{Sym}(\mathcal{T})"></span> generated by <span class="math-inline" data-latex="\{P, L, R\}"></span>:</p>
+<div class="math-display" data-latex="\mathcal{R} = \langle P, L, R \rangle \leq \mathrm{Sym}(\mathcal{T})"></div>
+<p>Since <span class="math-inline" data-latex="P = (LR)^3 \cdot L"></span> (a provable relation), <span class="math-inline" data-latex="\mathcal{R}"></span> is already generated by <span class="math-inline" data-latex="L"></span> and <span class="math-inline" data-latex="R"></span> alone. As a group, <span class="math-inline" data-latex="\mathcal{R} \cong D_{24}"></span>, the dihedral group of order 24.</p>
+</div>
+</div>
+
+
+
+<div class="definition-block" id="definition-1.4">
+  <div class="block-label">
+    Definition 1.4 (Tonnetz)
+  </div>
+  <div class="block-body"><p>The <strong>Tonnetz</strong> (German: &ldquo;tone network&rdquo;) is a graph <span class="math-inline" data-latex="G = (V, E)"></span> where:</p>
+<ul>
+<li><strong>Vertices</strong> <span class="math-inline" data-latex="V = \mathbb{Z}_{12}"></span>: the 12 pitch classes.</li>
+<li><strong>Edges</strong> <span class="math-inline" data-latex="E"></span>: pairs <span class="math-inline" data-latex="\{a, b\}"></span> with <span class="math-inline" data-latex="|a - b| \equiv 7 \pmod{12}"></span> (perfect fifth), <span class="math-inline" data-latex="|a - b| \equiv 4 \pmod{12}"></span> (major third), or <span class="math-inline" data-latex="|a - b| \equiv 3 \pmod{12}"></span> (minor third).</li>
+</ul>
+<p>Each triangular face of this planar graph corresponds to a triad: upward-pointing triangles are major triads, downward-pointing triangles are minor triads.</p>
+<p>A PLR transformation corresponds to a <strong>flip across a shared edge</strong>: P flips across the minor-third edge, L flips across the major-third edge, R flips across the perfect-fifth edge.</p>
+</div>
+</div>
+
+
+
+<div class="definition-block" id="definition-1.5">
+  <div class="block-label">
+    Definition 1.5 (Voice-Leading Distance)
+  </div>
+  <div class="block-body"><p>The <strong>voice-leading distance</strong> between two chords <span class="math-inline" data-latex="A = \{a_1, \ldots, a_n\}"></span> and <span class="math-inline" data-latex="B = \{b_1, \ldots, b_n\}"></span> (as multisets in <span class="math-inline" data-latex="\mathbb{R}/12\mathbb{Z}"></span>) is</p>
+<div class="math-display" data-latex="d_{\mathrm{VL}}(A, B) = \min_{\sigma \in S_n} \sum_{i=1}^n \min_{k \in \mathbb{Z}} |a_i - b_{\sigma(i)} &#43; 12k|"></div>
+<p>where the outer minimum is over all bijections <span class="math-inline" data-latex="\sigma"></span> pairing voices, and the inner minimum realizes the shortest semitone displacement respecting octave equivalence.</p>
+</div>
+</div>
+
+<hr>
+<h2 id="main-theorems">Main Theorems</h2>
+
+
+<div class="theorem-block" id="theorem-1.1">
+  <div class="block-label">
+    Theorem 1.1 (PLR Are Involutions)
+  </div>
+  <div class="block-body"><p>Each of the three transformations <span class="math-inline" data-latex="P"></span>, <span class="math-inline" data-latex="L"></span>, <span class="math-inline" data-latex="R"></span> is an involution on <span class="math-inline" data-latex="\mathcal{T}"></span>:</p>
+<div class="math-display" data-latex="P^2 = L^2 = R^2 = \mathrm{id}_{\mathcal{T}}"></div>
+</div>
+</div>
+
+<div class="proof-block">
+  <div class="block-label">Proof.</div>
+  <div class="block-body"><p>We verify for <span class="math-inline" data-latex="P"></span>; the argument for <span class="math-inline" data-latex="L"></span> and <span class="math-inline" data-latex="R"></span> is analogous.</p>
+<p>By Definition 1.2, <span class="math-inline" data-latex="P([r,&#43;]) = [r,-]"></span> and <span class="math-inline" data-latex="P([r,-]) = [r,&#43;]"></span>.
+Thus <span class="math-inline" data-latex="P^2([r,&#43;]) = P(P([r,&#43;])) = P([r,-]) = [r,&#43;]"></span>, and similarly <span class="math-inline" data-latex="P^2([r,-]) = [r,-]"></span>.
+Since <span class="math-inline" data-latex="P^2"></span> fixes every element of <span class="math-inline" data-latex="\mathcal{T}"></span>, we have <span class="math-inline" data-latex="P^2 = \mathrm{id}"></span>. <span class="math-inline" data-latex="\square"></span></p>
+</div>
+</div>
+
+
+
+<div class="theorem-block" id="theorem-1.2">
+  <div class="block-label">
+    Theorem 1.2 (Simple Transitivity of D₁₂ on Triads)
+  </div>
+  <div class="block-body">The Neo-Riemannian group <span class="math-inline" data-latex="\mathcal{R} \cong D_{24}"></span> acts <strong>simply transitively</strong> on <span class="math-inline" data-latex="\mathcal{T}"></span>: for any two triads <span class="math-inline" data-latex="s, t \in \mathcal{T}"></span>, there exists a <strong>unique</strong> group element <span class="math-inline" data-latex="g \in \mathcal{R}"></span> such that <span class="math-inline" data-latex="g \cdot s = t"></span>.</div>
+</div>
+
+<div class="proof-block">
+  <div class="block-label">Proof.</div>
+  <div class="block-body"><p><strong>Transitivity</strong> (any triad reachable from any other): The 24 triads form a single orbit under <span class="math-inline" data-latex="\mathcal{R}"></span>. Starting from <span class="math-inline" data-latex="[C,&#43;]"></span>, repeated application of <span class="math-inline" data-latex="L"></span> and <span class="math-inline" data-latex="R"></span> generates a connected path through all 24 triads — this can be verified by explicitly tracing the &ldquo;Chicken-wire&rdquo; cycle <span class="math-inline" data-latex="L, R, L, R, \ldots"></span> (the 24-cycle that returns to the start), which visits all elements of <span class="math-inline" data-latex="\mathcal{T}"></span>.</p>
+<p><strong>Free action</strong> (no nonidentity element fixes any triad): <span class="math-inline" data-latex="|\mathcal{R}| = 24 = |\mathcal{T}|"></span>. By the orbit-stabilizer theorem,</p>
+<div class="math-display" data-latex="|\mathcal{R}| = |\mathrm{Orb}(s)| \cdot |\mathrm{Stab}(s)|"></div>
+Since <span class="math-inline" data-latex="|\mathrm{Orb}(s)| = 24"></span> (transitivity) and <span class="math-inline" data-latex="|\mathcal{R}| = 24"></span>, we get <span class="math-inline" data-latex="|\mathrm{Stab}(s)| = 1"></span>, meaning only the identity fixes any element. <span class="math-inline" data-latex="\square"></span>
+</div>
+</div>
+
+<blockquote>
+<p><em>Visual:</em> Place all 24 triads as vertices of a 24-gon. Draw edges for each generator: blue edges for <span class="math-inline" data-latex="L"></span>, red edges for <span class="math-inline" data-latex="R"></span>, green edges for <span class="math-inline" data-latex="P"></span>. The result is a Cayley graph of <span class="math-inline" data-latex="D_{24}"></span> — every vertex has exactly three colored edges emanating from it.</p>
+</blockquote>
+
+
+<div class="theorem-block" id="theorem-1.3">
+  <div class="block-label">
+    Theorem 1.3 (Tonnetz Torus Identification)
+  </div>
+  <div class="block-body"><p>Under enharmonic equivalence (identifying <span class="math-inline" data-latex="G\sharp = A\flat"></span>, etc.), the Tonnetz wraps into a torus <span class="math-inline" data-latex="T^2 = S^1 \times S^1"></span>.</p>
+<p>Specifically:</p>
+<ol>
+<li>Ascending by a perfect fifth (7 semitones) twelve times returns to the starting pitch class: <span class="math-inline" data-latex="0 \xrightarrow{&#43;7} 7 \xrightarrow{&#43;7} 2 \xrightarrow{&#43;7} \cdots \xrightarrow{&#43;7} 0 \pmod{12}"></span>. This identifies opposite vertical edges.</li>
+<li>Ascending by a major third (4 semitones) three times traverses the augmented triad and returns: <span class="math-inline" data-latex="0 \xrightarrow{&#43;4} 4 \xrightarrow{&#43;4} 8 \xrightarrow{&#43;4} 0 \pmod{12}"></span>. Combined with the <span class="math-inline" data-latex="\mathbb{Z}_{12}"></span> structure, this identifies opposite horizontal edges.</li>
+</ol>
+<p>The resulting quotient space is homeomorphic to the torus <span class="math-inline" data-latex="T^2"></span>.</p>
+</div>
+</div>
+
+<div class="proof-block">
+  <div class="block-label">Proof.</div>
+  <div class="block-body">The Tonnetz can be given coordinates in <span class="math-inline" data-latex="\mathbb{Z}_{12} \times \mathbb{Z}_{12}"></span> (or more precisely, in <span class="math-inline" data-latex="\mathbb{Z}_{12} \times \mathbb{Z}_3"></span> with the diagonal fifth-direction). The key point is that the lattice of pitch classes generated by the intervals <span class="math-inline" data-latex="\{3, 4, 7\}"></span> modulo 12 is a quotient <span class="math-inline" data-latex="\mathbb{Z}^2 / \Lambda"></span> for some sublattice <span class="math-inline" data-latex="\Lambda"></span>. The identifications imposed by <span class="math-inline" data-latex="\mathbb{Z}_{12}"></span> (the group of pitch classes) cause both pairs of opposite sides of the fundamental domain to be glued with the same orientation, producing <span class="math-inline" data-latex="T^2"></span> rather than <span class="math-inline" data-latex="S^2"></span> or <span class="math-inline" data-latex="K"></span> (the Klein bottle). The formal identification is: the fifth-direction generator <span class="math-inline" data-latex="e_1"></span> satisfies <span class="math-inline" data-latex="12 e_1 = 0"></span>, and the third-direction generator <span class="math-inline" data-latex="e_2"></span> satisfies <span class="math-inline" data-latex="3 e_2 = 0"></span> within the fundamental domain, with both identifications orientation-preserving. <span class="math-inline" data-latex="\square"></span></div>
+</div>
+
+
+
+<div class="theorem-block" id="theorem-1.4">
+  <div class="block-label">
+    Theorem 1.4 (Tymoczko Orbifold)
+  </div>
+  <div class="block-body"><p>The space of <span class="math-inline" data-latex="n"></span>-voice chords (unordered multisets of <span class="math-inline" data-latex="n"></span> pitch classes in <span class="math-inline" data-latex="\mathbb{R}/12\mathbb{Z}"></span>) is the orbifold</p>
+<div class="math-display" data-latex="\mathcal{O}_n = T^n / S_n"></div>
+<p>where <span class="math-inline" data-latex="T^n = (\mathbb{R}/12\mathbb{Z})^n"></span> is the <span class="math-inline" data-latex="n"></span>-torus of ordered <span class="math-inline" data-latex="n"></span>-tuples, and <span class="math-inline" data-latex="S_n"></span> acts by permuting coordinates.</p>
+<p>Special cases:</p>
+<ul>
+<li><span class="math-inline" data-latex="n = 2"></span>: <span class="math-inline" data-latex="T^2 / S_2 \cong"></span> Möbius band (with boundary = unison/octave dyads)</li>
+<li><span class="math-inline" data-latex="n = 3"></span>: <span class="math-inline" data-latex="T^3 / S_3 \cong"></span> a twisted triangular prism with three singular edges</li>
+</ul>
+<p>Voice-leading distance <span class="math-inline" data-latex="d_{\mathrm{VL}}"></span> equals the path length in <span class="math-inline" data-latex="\mathcal{O}_n"></span> under the quotient metric.</p>
+</div>
+</div>
+
+<div class="proof-block">
+  <div class="block-label">Proof.</div>
+  <div class="block-body"><p>(Sketch) <span class="math-inline" data-latex="T^n"></span> carries the flat metric from <span class="math-inline" data-latex="(\mathbb{R}/12\mathbb{Z})^n"></span>. The action of <span class="math-inline" data-latex="S_n"></span> by coordinate permutation is an isometric group action, so the quotient <span class="math-inline" data-latex="T^n/S_n"></span> inherits a well-defined metric (on the regular part) and becomes an orbifold at fixed points of the <span class="math-inline" data-latex="S_n"></span>-action (i.e., at chords with repeated notes). The geodesic distance in <span class="math-inline" data-latex="\mathcal{O}_n"></span> between two points <span class="math-inline" data-latex="[A]"></span> and <span class="math-inline" data-latex="[B]"></span> is</p>
+<div class="math-display" data-latex="d_{\mathcal{O}_n}([A],[B]) = \min_{\sigma \in S_n} d_{T^n}(A, \sigma(B))"></div>
+<p>which is exactly the formula for <span class="math-inline" data-latex="d_{\mathrm{VL}}"></span> in Definition 1.5. The homeomorphism type of <span class="math-inline" data-latex="\mathcal{O}_2"></span> follows from the standard identification of the quotient of <span class="math-inline" data-latex="[0,12)^2"></span> by <span class="math-inline" data-latex="(a,b) \sim (b,a)"></span> as a Möbius band when one accounts for the periodic boundary. <span class="math-inline" data-latex="\square"></span></p>
+</div>
+</div>
+
+
+
+<div class="proposition-block" id="prop-1.1">
+  <div class="block-label">
+    Prop 1.1 (Parsimony of PLR)
+  </div>
+  <div class="block-body"><p>Each PLR transformation moves exactly one pitch class by one or two semitones and fixes the other two. More precisely:</p>
+<ul>
+<li><span class="math-inline" data-latex="P"></span> moves one note by exactly 1 semitone (the third of the triad).</li>
+<li><span class="math-inline" data-latex="L"></span> moves one note by exactly 1 semitone (the root of a major triad, or the fifth of a minor triad).</li>
+<li><span class="math-inline" data-latex="R"></span> moves one note by exactly 2 semitones (the fifth of a major triad, or the root of a minor triad).</li>
+</ul>
+<p>Consequently, <span class="math-inline" data-latex="d_{\mathrm{VL}}(t, P(t)) \leq 1"></span>, <span class="math-inline" data-latex="d_{\mathrm{VL}}(t, L(t)) \leq 1"></span>, <span class="math-inline" data-latex="d_{\mathrm{VL}}(t, R(t)) \leq 2"></span> for all <span class="math-inline" data-latex="t \in \mathcal{T}"></span>.</p>
+</div>
+</div>
+
+<div class="proof-block">
+  <div class="block-label">Proof.</div>
+  <div class="block-body">Direct computation. For <span class="math-inline" data-latex="P"></span>: in <span class="math-inline" data-latex="[C,&#43;] = \{0,4,7\}"></span>, we have <span class="math-inline" data-latex="P([C,&#43;]) = [C,-] = \{0,3,7\}"></span>. The note 4 (E) moves to 3 (E<span class="math-inline" data-latex="\flat"></span>), a displacement of 1 semitone; notes 0 (C) and 7 (G) are fixed. For <span class="math-inline" data-latex="L"></span>: <span class="math-inline" data-latex="L([C,&#43;]) = [E,-] = \{4,7,11\}"></span>. Note 0 (C) moves to 11 (B), a displacement of 1 semitone downward; notes 4 and 7 are fixed. For <span class="math-inline" data-latex="R"></span>: <span class="math-inline" data-latex="R([C,&#43;]) = [A,-] = \{9,0,4\}"></span>. Note 7 (G) moves to 9 (A), a displacement of 2 semitones; notes 0 and 4 are fixed. <span class="math-inline" data-latex="\square"></span></div>
+</div>
+
+<hr>
+<h2 id="musical-connection">Musical Connection</h2>
+<div class="music-block">
+  <div class="block-label">音乐联系</div>
+  <div class="block-body"><p><strong>The Tristan Chord and the Tonnetz</strong></p>
+<p>Wagner&rsquo;s opera <em>Tristan und Isolde</em> (1865) opens with the famous &ldquo;Tristan chord&rdquo; <span class="math-inline" data-latex="\{F, B, D\sharp, G\sharp\}"></span>, which resisted definitive functional-harmonic analysis for over a century. Neo-Riemannian theory offers an alternative reading.</p>
+<p>The chord progression in the opening bars — Tristan chord → E major → (continuation) — can be tracked as a path on the Tonnetz. The Tristan chord is an instance of a &ldquo;French augmented sixth&rdquo; spelling, but on the Tonnetz it occupies a position adjacent to multiple triads. The initial resolution traces a short geodesic on <span class="math-inline" data-latex="T^2"></span>.</p>
+<blockquote>
+<p><em>中文:</em> &ldquo;在Tonnetz上，我们可以清晰地追踪它的路径。这些和弦在环面上形成了一个优美的轨迹，绕着Torus表面滑行。&rdquo;</p>
+</blockquote>
+<p><strong>Romantic-era chromatic harmony</strong> exploited exactly the smooth voice-leading that the Tonnetz geometry quantifies. Schubert&rsquo;s &ldquo;Wanderer&rdquo; Fantasy and Liszt&rsquo;s harmonic progressions follow paths through the Tonnetz that minimize total voice-leading displacement — instinctively approaching the geodesics that Tymoczko&rsquo;s orbifold formalism later made rigorous.</p>
+<p><strong>Practical use in analysis</strong>: music theorist Brian Hyer (1995) and Richard Cohn (1996–1998) revived 19th-century Riemannian ideas precisely because PLR transformations capture how chromatic composers modulated through unrelated keys with minimal voice-leading effort. The mathematical structure predicts which progressions will sound &ldquo;smooth&rdquo; even when harmonically distant in the traditional functional sense.</p>
+</div>
+</div>
+
+<hr>
+<h2 id="limits-and-open-questions">Limits and Open Questions</h2>
+<ol>
+<li>
+<p><strong>Extension to seventh chords</strong>: PLR theory is cleanest for triads. Extending to dominant seventh chords, half-diminished sevenths, etc. requires defining additional generators and working in a larger group. The resulting orbifold <span class="math-inline" data-latex="T^4/S_4"></span> is considerably more complex.</p>
+</li>
+<li>
+<p><strong>Metric vs. combinatorial voice-leading</strong>: Definition 1.5 gives a metric, but actual voice-leading in score involves register (which octave each note is in) and voice-crossing constraints. A full model requires lifting from <span class="math-inline" data-latex="\mathbb{R}/12\mathbb{Z}"></span> to <span class="math-inline" data-latex="\mathbb{R}"></span> and imposing ordering constraints.</p>
+</li>
+<li>
+<p><strong>Perception vs. geometry</strong>: It remains an open empirical question whether listeners perceive voice-leading distance as the geodesic metric in <span class="math-inline" data-latex="\mathcal{O}_n"></span>. Psychoacoustic experiments (e.g., Callender, Quinn, Tymoczko 2008) support the orbifold model, but individual variation and musical context complicate direct verification.</p>
+</li>
+<li>
+<p><strong>Higher-dimensional orbifold topology</strong>: The orbifold <span class="math-inline" data-latex="T^n/S_n"></span> has non-trivial orbifold fundamental group and orbifold Euler characteristic. For <span class="math-inline" data-latex="n \geq 4"></span>, the topology of these spaces is not yet fully classified in music-theoretically useful terms.</p>
+</li>
+</ol>
+
+
+<div class="conjecture-block" id="conjecture">
+  <div class="block-label">
+    Conjecture (Optimality of PLR in Voice-Leading)
+  </div>
+  <div class="block-body">Among all involutory chord transformations that preserve two common tones in a triad, PLR uniquely minimizes the maximum single-voice displacement over all 24 triads. No other set of three involutions achieves the same parsimony bound simultaneously for all elements of <span class="math-inline" data-latex="\mathcal{T}"></span>.</div>
+</div>
+
+<hr>
+<h2 id="academic-references">Academic References</h2>
+<ol>
+<li>
+<p>Cohn, R. (1997). Neo-Riemannian operations, parsimonious trichords, and their Tonnetz representations. <em>Journal of Music Theory</em>, 41(1), 1–66.</p>
+</li>
+<li>
+<p>Tymoczko, D. (2006). The geometry of musical chords. <em>Science</em>, 313(5783), 72–74.</p>
+</li>
+<li>
+<p>Tymoczko, D. (2011). <em>A Geometry of Music: Harmony and Counterpoint in the Extended Common Practice</em>. Oxford University Press.</p>
+</li>
+<li>
+<p>Hyer, B. (1995). Reimag(in)ing Riemann. <em>Journal of Music Theory</em>, 39(1), 101–138.</p>
+</li>
+<li>
+<p>Callender, C., Quinn, I., &amp; Tymoczko, D. (2008). Generalized voice-leading spaces. <em>Science</em>, 320(5874), 346–348.</p>
+</li>
+<li>
+<p>Cohn, R. (2012). <em>Audacious Euphony: Chromaticism and the Triad&rsquo;s Second Nature</em>. Oxford University Press.</p>
+</li>
+<li>
+<p>Riemann, H. (1880). <em>Skizze einer neuen Methode der Harmonielehre</em>. Leipzig: Breitkopf und Härtel.</p>
+</li>
+</ol>
+
+    </div>
+
+    
+    <nav class="ep-nav">
+      
+      
+      
+      
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+      
+      
+      <a href="https://amath390.sibeliusp.com/episodes/ep02/" class="ep-nav-next">
+        EP02: String Vibration and the Wave Equation →
+      </a>
+      
+    </nav>
+  </article>
+
+  
+  
+  
+  <aside class="ep-toc-aside">
+    <div class="ep-toc-sticky">
+      <div class="ep-toc-label">本页目录</div>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#definitions">Definitions</a></li>
+    <li><a href="#main-theorems">Main Theorems</a></li>
+    <li><a href="#musical-connection">Musical Connection</a></li>
+    <li><a href="#limits-and-open-questions">Limits and Open Questions</a></li>
+    <li><a href="#academic-references">Academic References</a></li>
+  </ul>
+</nav>
+    </div>
+  </aside>
+  
+</div>
+
+      <footer class="site-footer">
+  <div class="footer-content">
+    <span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
+    <span class="footer-sep">·</span>
+    <a href="https://www.xiaohongshu.com" target="_blank" rel="noopener">小红书</a>
+    <span class="footer-sep">·</span>
+    <span>Built with <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> + KaTeX</span>
+  </div>
+</footer>
+
+    </main>
+  </div>
+</body>
+</html>

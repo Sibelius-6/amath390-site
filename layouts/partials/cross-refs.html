@@ -1,0 +1,49 @@
+{{ $limit := .Site.Params.display_episodes_until | int }}
+
+{{ with .Params.callbacks }}
+<div class="cross-refs">
+  <h3 class="cross-refs-title">前置知识</h3>
+  <div class="ref-cards">
+    {{ range . }}
+      {{ $epNum := . | int }}
+      {{ $slug := printf "ep%02d" $epNum }}
+      {{ $page := $.Site.GetPage (printf "/episodes/%s" $slug) }}
+      {{ if $page }}
+        <a href="{{ $page.Permalink }}" class="ref-card callback">
+          <span class="ref-ep">EP{{ printf "%02d" $epNum }}</span>
+          <span class="ref-title">{{ replaceRE "^EP[0-9]+:\\s*" "" $page.Title }}</span>
+        </a>
+      {{ else }}
+        <span class="ref-card callback placeholder">
+          <span class="ref-ep">EP{{ printf "%02d" $epNum }}</span>
+        </span>
+      {{ end }}
+    {{ end }}
+  </div>
+</div>
+{{ end }}
+
+{{ with .Params.forward_refs }}
+{{ $hasVisible := false }}
+{{ range . }}{{ if le (. | int) $limit }}{{ $hasVisible = true }}{{ end }}{{ end }}
+{{ if $hasVisible }}
+<div class="cross-refs">
+  <h3 class="cross-refs-title">后续拓展</h3>
+  <div class="ref-cards">
+    {{ range . }}
+      {{ $epNum := . | int }}
+      {{ if le $epNum $limit }}
+        {{ $slug := printf "ep%02d" $epNum }}
+        {{ $page := $.Site.GetPage (printf "/episodes/%s" $slug) }}
+        {{ if $page }}
+          <a href="{{ $page.Permalink }}" class="ref-card forward">
+            <span class="ref-ep">EP{{ printf "%02d" $epNum }}</span>
+            <span class="ref-title">{{ replaceRE "^EP[0-9]+:\\s*" "" $page.Title }}</span>
+          </a>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  </div>
+</div>
+{{ end }}
+{{ end }}

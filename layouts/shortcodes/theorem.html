@@ -1,0 +1,8 @@
+{{ $label := .Get "label" | default "Theorem" }}
+{{ $name  := .Get "name" }}
+<div class="theorem-block" id="{{ $label | urlize }}">
+  <div class="block-label">
+    {{ $label }}{{ with $name }} ({{ . }}){{ end }}
+  </div>
+  <div class="block-body">{{ .Inner | markdownify }}</div>
+</div>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linear Algebra on AMATH 390 数学与音乐</title>
+    <link>https://amath390.sibeliusp.com/domains/linear-algebra/</link>
+    <description>Recent content in Linear Algebra on AMATH 390 数学与音乐</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://amath390.sibeliusp.com/domains/linear-algebra/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EP14: Tonnetz Hodge Duality</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep14/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep14/</guid>
+      <description>Overview The Tonnetz — Euler&amp;rsquo;s 1739 interval lattice, rediscovered by neo-Riemannian theorists — is not merely a picture of chord relationships. It is a simplicial complex triangulating a torus, and every chord progression on it is a cochain that decomposes, uniquely and orthogonally, into three mathematically distinct components.
+This episode applies discrete Hodge theory (Eckmann 1944; Lim 2020) to the Tonnetz. The central result:
+ Any 1-cochain on the Tonnetz torus decomposes as:  where the three summands are pairwise orthogonal and uniquely determined.</description>
+    </item>
+    
+    <item>
+      <title>EP38: Reverberation Is Matrix Multiplication</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep38/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep38/</guid>
+      <description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
+本集探讨：卷积混响, FDN反馈矩阵, Hadamard正交性, 互质延迟。
+前置知识 定义 Definition (...)  &amp;hellip;  -- 主要定理 Theorem 38.1 (...)  &amp;hellip;  -- Proof. &amp;hellip;  -- 音乐联系 音乐联系 &amp;hellip;  -- 局限性与开放问题 参考文献  待补充  </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,48 @@
+{{ define "main" }}
+{{ $limit := .Site.Params.display_episodes_until | int }}
+
+<div class="homepage">
+  <div class="hero">
+    <h1>AMATH 390</h1>
+    <div class="ep-badge" style="margin-bottom:.8em">数学与音乐</div>
+    <p class="tagline">{{ .Site.Params.description }}</p>
+  </div>
+
+  {{ .Content }}
+
+  {{ $arcs := slice
+    (dict "name" "数学基础篇"              "start" 1  "end" 9  "desc" "弦振动、图论、群论、信息论、Shepard悖论、组合音——数学工具箱")
+    (dict "name" "Jacob Collier 系列"     "start" 10 "end" 13 "desc" "负和声与D₁₂、音差不可能定理、五度圈螺旋、节奏-音高对偶")
+    (dict "name" "拓扑数学专篇"            "start" 14 "end" 14 "desc" "Tonnetz 单纯复形 · 链复形 · Hodge ★算子 · 调性同调")
+    (dict "name" "歌剧系列"               "start" 15 "end" 20 "desc" "歌手声学、Rossini CFG、Wagner 主导动机、博弈论、FM颤音、人物网络")
+    (dict "name" "AI 音乐三部曲"          "start" 21 "end" 23 "desc" "Markov→扩散模型、EnCodec RVQ、潜空间几何与信息瓶颈")
+    (dict "name" "流行音乐 × 数学"        "start" 24 "end" 27 "desc" "Shannon熵、预测误差与鸡皮疙瘩、1/f法则、用数学回应爆款批评")
+    (dict "name" "音乐技术系列"            "start" 28 "end" 40 "desc" "麦克风ODE、QRD驻波、采样定理、Moog滤波器、FM/波导/声码器、混响FDN、LUFS、MP3")
+    (dict "name" "分离与识别"             "start" 41 "end" 42 "desc" "NMF人声分离 · Wiener掩模 · HTDemucs · HMM和弦识别 · Viterbi")
+  }}
+
+  {{ range $arcs }}
+    {{ $arcStart := .start | int }}
+    {{ $arcEnd   := .end   | int }}
+    {{ if le $arcStart $limit }}
+      {{ $visEnd := (math.Min $arcEnd $limit) | int }}
+      <div class="arc-section">
+        <h2>{{ .name }} <span style="font-weight:400;font-size:.85rem;color:#9999bb">EP{{ $arcStart }}–{{ $visEnd }}</span></h2>
+        <p style="font-size:.88rem;color:#9999bb;margin-bottom:1em">{{ .desc }}</p>
+        <div class="episode-grid">
+          {{ $pages := where $.Site.RegularPages "Section" "episodes" }}
+          {{ range $pages }}
+            {{ $ep := .Params.episode | int }}
+            {{ if and (ge $ep $arcStart) (le $ep $visEnd) }}
+              <a href="{{ .Permalink }}" class="ep-card">
+                <span class="ep-num">EP{{ printf "%02d" $ep }}</span>
+                <span class="ep-name">{{ .Title }}</span>
+              </a>
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+  {{ end }}
+</div>
+{{ end }}

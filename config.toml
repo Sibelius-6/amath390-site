@@ -1,0 +1,18 @@
+baseURL = "https://amath390.sibeliusp.com/"
+languageCode = "zh-cn"
+title = "AMATH 390 数学与音乐"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.goldmark.extensions]
+  strikethrough = true
+
+[taxonomies]
+  domain = "domains"
+
+[params]
+  author = "Sibelius P."
+  description = "Comprehensive mathematical companion for AMATH 390: Mathematics and Music"
+  total_episodes = 42
+  display_episodes_until = 15

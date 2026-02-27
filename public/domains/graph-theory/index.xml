@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Graph Theory on AMATH 390 数学与音乐</title>
+    <link>https://amath390.sibeliusp.com/domains/graph-theory/</link>
+    <description>Recent content in Graph Theory on AMATH 390 数学与音乐</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://amath390.sibeliusp.com/domains/graph-theory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EP03: Bach and Graph Connectivity</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep03/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep03/</guid>
+      <description>Overview Bach&amp;rsquo;s Fugue in C Major (BWV 846) has four independent voices: soprano, alto, tenor, bass. Delete any one of them and the remaining three still form a coherent harmonic structure. Why? The mathematical answer is graph connectivity: the voice-structure of polyphonic music forms a 2-connected graph with no cut vertices, while homophonic music (melody + accompaniment) is at best 1-connected, with the melody as a potential cut vertex.
+This episode develops the theory of graph connectivity — cut vertices, bridges, -connectivity — and applies it to a Bach chorale model.</description>
+    </item>
+    
+    <item>
+      <title>EP05: Turán&#39;s Theorem and Counterpoint</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep05/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep05/</guid>
+      <description>Overview How many simultaneous intervals can a polyphonic texture contain before forbidden structures inevitably appear? In 1941, the Hungarian mathematician Pál Turán gave a precise answer to the general question: given  vertices and no complete subgraph , the maximum number of edges is achieved by a unique graph called the Turán graph .
+This episode applies Turán&amp;rsquo;s theorem to Western counterpoint. Model the twelve pitch classes as vertices and &amp;ldquo;permitted simultaneous intervals&amp;rdquo; as edges.</description>
+    </item>
+    
+    <item>
+      <title>EP06: Graph Coloring and Voice Assignment</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep06/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep06/</guid>
+      <description>Overview Beethoven&amp;rsquo;s Fifth Symphony, fourth movement, deploys over twenty orchestral staves. Collapse all octave doublings, and the climax still demands more than ten distinct pitch heights simultaneously — more than two human hands can play. How do you reduce a full orchestra to a piano score without destroying the harmonic structure? And what is the minimum number of voices absolutely required?
+This episode answers both questions with graph coloring. Model each note as a vertex; connect two vertices when their sounding intervals overlap in time.</description>
+    </item>
+    
+    <item>
+      <title>EP17: Leitmotif Networks — Wagner&#39;s Ring Cycle</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep17/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep17/</guid>
+      <description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
+本集探讨：图结构, Klein V₄回调。
+前置知识 定义 Definition (...)  &amp;hellip;  -- 主要定理 Theorem 17.1 (...)  &amp;hellip;  -- Proof. &amp;hellip;  -- 音乐联系 音乐联系 &amp;hellip;  -- 局限性与开放问题 参考文献  待补充  </description>
+    </item>
+    
+    <item>
+      <title>EP20: Character Interaction Networks in Opera</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep20/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep20/</guid>
+      <description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
+本集探讨：度/介数中心性, 社区检测, 割顶。
+前置知识 定义 Definition (...)  &amp;hellip;  -- 主要定理 Theorem 20.1 (...)  &amp;hellip;  -- Proof. &amp;hellip;  -- 音乐联系 音乐联系 &amp;hellip;  -- 局限性与开放问题 参考文献  待补充  </description>
+    </item>
+    
+  </channel>
+</rss>

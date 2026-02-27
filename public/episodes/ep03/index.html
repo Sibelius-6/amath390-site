@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EP03: Bach and Graph Connectivity | AMATH 390 数学与音乐</title>
+<meta name="description" content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('[data-latex]').forEach(function(el) {
+    try {
+      katex.render(el.getAttribute('data-latex'), el, {
+        displayMode: el.classList.contains('math-display'),
+        throwOnError: false
+      });
+    } catch(e) { console.warn('KaTeX:', e.message, el); }
+  });
+});
+</script>
+
+
+<link rel="stylesheet" href="/css/amath390.css">
+
+</head>
+<body>
+  <div class="layout-wrapper">
+    
+
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a href="/" class="sidebar-title">AMATH 390</a>
+    <div class="sidebar-subtitle">数学与音乐</div>
+  </div>
+
+  
+
+  
+    
+    
+    
+      
+      <div class="arc-group">
+        <div class="arc-label">数学基础篇</div>
+        
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep01/"
+               class="ep-link">
+              <span class="ep-num">01</span>
+              <span class="ep-title">Chord Space and the Torus</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep02/"
+               class="ep-link">
+              <span class="ep-num">02</span>
+              <span class="ep-title">String Vibration and the Wave Equation</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep03/"
+               class="ep-link active">
+              <span class="ep-num">03</span>
+              <span class="ep-title">Bach and Graph Connectivity</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep04/"
+               class="ep-link">
+              <span class="ep-num">04</span>
+              <span class="ep-title">All-Interval Rows and ℤ₁₂</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep05/"
+               class="ep-link">
+              <span class="ep-num">05</span>
+              <span class="ep-title">Turán&#39;s Theorem and Counterpoint</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep06/"
+               class="ep-link">
+              <span class="ep-num">06</span>
+              <span class="ep-title">Graph Coloring and Voice Assignment</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep07/"
+               class="ep-link">
+              <span class="ep-num">07</span>
+              <span class="ep-title">Information Entropy and All-Interval Rows</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep08/"
+               class="ep-link">
+              <span class="ep-num">08</span>
+              <span class="ep-title">Shepard Tones and the Tritone Paradox</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep09/"
+               class="ep-link">
+              <span class="ep-num">09</span>
+              <span class="ep-title">Combination Tones and Nonlinear Acoustics</span>
+            </a>
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
+    
+  
+    
+    
+    
+      
+      <div class="arc-group">
+        <div class="arc-label">Jacob Collier 系列</div>
+        
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep10/"
+               class="ep-link">
+              <span class="ep-num">10</span>
+              <span class="ep-title">Negative Harmony and the Dihedral Group D₁₂</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep11/"
+               class="ep-link">
+              <span class="ep-num">11</span>
+              <span class="ep-title">Comma Drift and the Impossibility of Perfect Tuning</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep12/"
+               class="ep-link">
+              <span class="ep-num">12</span>
+              <span class="ep-title">The Circle of Fifths as a Folded Spiral</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep13/"
+               class="ep-link">
+              <span class="ep-num">13</span>
+              <span class="ep-title">Polyrhythm and Rhythm-Pitch Duality</span>
+            </a>
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
+    
+  
+    
+    
+    
+      
+      <div class="arc-group">
+        <div class="arc-label">拓扑数学专篇</div>
+        
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep14/"
+               class="ep-link">
+              <span class="ep-num">14</span>
+              <span class="ep-title">Tonnetz Hodge Duality</span>
+            </a>
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
+    
+  
+    
+    
+    
+      
+      <div class="arc-group">
+        <div class="arc-label">歌剧系列</div>
+        
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep15/"
+               class="ep-link">
+              <span class="ep-num">15</span>
+              <span class="ep-title">Opera Acoustics and the Singer&#39;s Formant</span>
+            </a>
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+
+  <div class="sidebar-footer">
+    <a href="/theorems/">定理索引</a>
+    <a href="/domains/">数学领域</a>
+    <a href="/about/">关于</a>
+  </div>
+</nav>
+
+    <main class="main-content">
+      
+
+
+
+<div class="episode-layout">
+  <article class="episode-page">
+    <header class="episode-header">
+  <div class="ep-badge">EP03</div>
+  <h1 class="ep-main-title">EP03: Bach and Graph Connectivity</h1>
+  <div class="ep-subtitle">k-连通性, 割顶</div>
+
+  <div class="ep-meta">
+    
+    <span class="meta-item">
+      <span class="meta-icon">▶</span> —
+    </span>
+    
+    
+    <span class="meta-item domains">
+      <span class="domain-chip">Graph Theory</span>
+    </span>
+    
+  </div>
+</header>
+
+    
+
+
+
+
+
+
+
+<div class="cross-refs">
+  <h3 class="cross-refs-title">后续拓展</h3>
+  <div class="ref-cards">
+    
+      
+      
+        
+        
+        
+          <a href="https://amath390.sibeliusp.com/episodes/ep05/" class="ref-card forward">
+            <span class="ref-ep">EP05</span>
+            <span class="ref-title">Turán&#39;s Theorem and Counterpoint</span>
+          </a>
+        
+      
+    
+      
+      
+        
+        
+        
+          <a href="https://amath390.sibeliusp.com/episodes/ep06/" class="ref-card forward">
+            <span class="ref-ep">EP06</span>
+            <span class="ref-title">Graph Coloring and Voice Assignment</span>
+          </a>
+        
+      
+    
+      
+      
+    
+      
+      
+    
+  </div>
+</div>
+
+
+
+    
+<div class="xhs-section">
+  <div class="xhs-section-header">
+    <span class="xhs-logo-badge">小红书</span>
+    <span class="xhs-section-title">Watch on 小红书</span>
+  </div>
+  <div class="xhs-cards">
+    
+    <a href="https://www.xiaohongshu.com/discovery/item/6985414c000000000b00b3fd?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=AB8gTfuHeHw4Z0O_oCmWJKtrMeYbiKZz4oPxmPxV5dLc0=&amp;xsec_source=pc_share" target="_blank" rel="noopener" class="xhs-card">
+      <div class="xhs-card-inner">
+        <div class="xhs-card-icon">▶</div>
+        <div class="xhs-card-text">
+          <div class="xhs-card-title">巴赫的音乐「删不坏」？图连通性给出答案</div>
+          <div class="xhs-card-sub">xiaohongshu.com</div>
+        </div>
+        <div class="xhs-card-arrow">→</div>
+      </div>
+    </a>
+    
+  </div>
+</div>
+
+
+
+    <div class="episode-content content">
+      <h2 id="overview">Overview</h2>
+<p>Bach&rsquo;s Fugue in C Major (BWV 846) has four independent voices: soprano, alto, tenor, bass. Delete any one of them and the remaining three still form a coherent harmonic structure. Why? The mathematical answer is <strong>graph connectivity</strong>: the voice-structure of polyphonic music forms a <em>2-connected</em> graph with no cut vertices, while homophonic music (melody + accompaniment) is at best 1-connected, with the melody as a potential cut vertex.</p>
+<p>This episode develops the theory of graph connectivity — cut vertices, bridges, <span class="math-inline" data-latex="k"></span>-connectivity — and applies it to a Bach chorale model. We also introduce Tarjan&rsquo;s linear-time algorithm for finding cut vertices via depth-first search, and sketch the topological extension using simplicial complexes and Betti numbers.</p>
+<blockquote>
+<p><em>中文:</em> &ldquo;复调音乐的&rsquo;删不坏感'，并非偶然，而源于其分布式结构。&rdquo;</p>
+</blockquote>
+<hr>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Basic graph theory: graphs, paths, cycles, connectivity</li>
+<li>Depth-first search (DFS)</li>
+<li>
+
+
+
+<a href="https://amath390.sibeliusp.com/episodes/ep17/" class="episode-ref-link">Motif networks (EP17)</a>
+
+ — chord/motif graphs as weighted directed graphs</li>
+<li>
+
+
+
+<a href="https://amath390.sibeliusp.com/episodes/ep20/" class="episode-ref-link">Character networks (EP20)</a>
+
+ — cut vertex as &ldquo;obligatory character&rdquo;</li>
+</ul>
+<hr>
+<h2 id="definitions">Definitions</h2>
+
+
+<div class="definition-block" id="definition-3.1">
+  <div class="block-label">
+    Definition 3.1 (Graph Connectivity)
+  </div>
+  <div class="block-body"><p>An undirected graph <span class="math-inline" data-latex="G = (V, E)"></span> is <strong>connected</strong> if for every pair of vertices <span class="math-inline" data-latex="u, v \in V"></span> there exists a path from <span class="math-inline" data-latex="u"></span> to <span class="math-inline" data-latex="v"></span>.</p>
+<p>The <strong>connected components</strong> of <span class="math-inline" data-latex="G"></span> are its maximal connected subgraphs.</p>
+</div>
+</div>
+
+
+
+<div class="definition-block" id="definition-3.2">
+  <div class="block-label">
+    Definition 3.2 (Cut Vertex (Articulation Point))
+  </div>
+  <div class="block-body"><p>A vertex <span class="math-inline" data-latex="v \in V"></span> is a <strong>cut vertex</strong> (or <strong>articulation point</strong>) of a connected graph <span class="math-inline" data-latex="G"></span> if the subgraph <span class="math-inline" data-latex="G - v"></span> (obtained by deleting <span class="math-inline" data-latex="v"></span> and all edges incident to <span class="math-inline" data-latex="v"></span>) is <strong>disconnected</strong>.</p>
+<p>Equivalently, <span class="math-inline" data-latex="v"></span> is a cut vertex if and only if there exist vertices <span class="math-inline" data-latex="u, w \neq v"></span> such that every path from <span class="math-inline" data-latex="u"></span> to <span class="math-inline" data-latex="w"></span> passes through <span class="math-inline" data-latex="v"></span>.</p>
+</div>
+</div>
+
+
+
+<div class="definition-block" id="definition-3.3">
+  <div class="block-label">
+    Definition 3.3 (Bridge)
+  </div>
+  <div class="block-body"><p>An edge <span class="math-inline" data-latex="e = \{u,v\} \in E"></span> is a <strong>bridge</strong> if the graph <span class="math-inline" data-latex="G - e"></span> (obtained by deleting only the edge <span class="math-inline" data-latex="e"></span>) is disconnected.</p>
+<p>Every bridge <span class="math-inline" data-latex="e = \{u,v\}"></span> satisfies: <span class="math-inline" data-latex="u"></span> is a cut vertex in <span class="math-inline" data-latex="G - v"></span> and vice versa (unless one of them has degree 1, in which case <span class="math-inline" data-latex="e"></span> is a pendant edge).</p>
+</div>
+</div>
+
+
+
+<div class="definition-block" id="definition-3.4">
+  <div class="block-label">
+    Definition 3.4 (k-Connectivity)
+  </div>
+  <div class="block-body"><p>For <span class="math-inline" data-latex="k \geq 1"></span>, a graph <span class="math-inline" data-latex="G"></span> with <span class="math-inline" data-latex="|V| &gt; k"></span> is <strong><span class="math-inline" data-latex="k"></span>-connected</strong> if removing any set of fewer than <span class="math-inline" data-latex="k"></span> vertices leaves <span class="math-inline" data-latex="G"></span> connected. Formally:</p>
+<div class="math-display" data-latex="\kappa(G) = \min\{|S| : S \subseteq V,\; G - S \text{ is disconnected or has fewer than 2 vertices}\}"></div>
+<p>is the <strong>vertex connectivity</strong> of <span class="math-inline" data-latex="G"></span>. We say <span class="math-inline" data-latex="G"></span> is <span class="math-inline" data-latex="k"></span>-connected if <span class="math-inline" data-latex="\kappa(G) \geq k"></span>.</p>
+<p>Special cases:</p>
+<ul>
+<li><span class="math-inline" data-latex="\kappa(G) \geq 1"></span>: connected (no vertex whose removal disconnects)</li>
+<li><span class="math-inline" data-latex="\kappa(G) \geq 2"></span>: <strong>2-connected</strong> — no cut vertices</li>
+<li><span class="math-inline" data-latex="\kappa(G) \geq 3"></span>: <strong>3-connected</strong> — no pair of vertices whose removal disconnects</li>
+</ul>
+</div>
+</div>
+
+
+
+<div class="definition-block" id="definition-3.5">
+  <div class="block-label">
+    Definition 3.5 (DFS Discovery and Finish Times)
+  </div>
+  <div class="block-body"><p>In a <strong>depth-first search</strong> of a graph <span class="math-inline" data-latex="G"></span> starting from vertex <span class="math-inline" data-latex="s"></span>, each vertex <span class="math-inline" data-latex="v"></span> receives:</p>
+<ul>
+<li><strong>Discovery time</strong> <span class="math-inline" data-latex="d[v]"></span>: the step at which <span class="math-inline" data-latex="v"></span> is first visited</li>
+<li><strong>Finish time</strong> <span class="math-inline" data-latex="f[v]"></span>: the step at which all neighbors of <span class="math-inline" data-latex="v"></span> have been explored</li>
+</ul>
+<p>A <strong>back edge</strong> <span class="math-inline" data-latex="\{u, v\}"></span> in an undirected DFS tree is an edge where <span class="math-inline" data-latex="v"></span> is an ancestor of <span class="math-inline" data-latex="u"></span> in the DFS tree (i.e., <span class="math-inline" data-latex="d[v] &lt; d[u]"></span> and <span class="math-inline" data-latex="v"></span> was not processed via <span class="math-inline" data-latex="u"></span>).</p>
+</div>
+</div>
+
+
+
+<div class="definition-block" id="definition-3.6">
+  <div class="block-label">
+    Definition 3.6 (Low Value)
+  </div>
+  <div class="block-body"><p>For each vertex <span class="math-inline" data-latex="v"></span> in a DFS tree, define the <strong>low value</strong>:</p>
+<div class="math-display" data-latex="\mathrm{low}[v] = \min\!\left(\{d[v]\} \cup \{d[w] : \{u,w\} \in E \text{ for some descendant } u \text{ of } v, \text{ and } \{u,w\} \text{ is a back edge}\}\right)"></div>
+<p>Informally, <span class="math-inline" data-latex="\mathrm{low}[v]"></span> is the smallest discovery time reachable from the subtree rooted at <span class="math-inline" data-latex="v"></span> using at most one back edge.</p>
+</div>
+</div>
+
+
+
+<div class="definition-block" id="definition-3.7">
+  <div class="block-label">
+    Definition 3.7 (Voice Graph of a Polyphonic Work)
+  </div>
+  <div class="block-body"><p>Given a <span class="math-inline" data-latex="k"></span>-voice polyphonic composition, define the <strong>voice graph</strong> <span class="math-inline" data-latex="G_{\mathrm{voice}} = (V, E)"></span> where:</p>
+<ul>
+<li><span class="math-inline" data-latex="V = \{v_1, \ldots, v_k\}"></span>: one vertex per voice (soprano, alto, tenor, bass)</li>
+<li><span class="math-inline" data-latex="E"></span>: an edge <span class="math-inline" data-latex="\{v_i, v_j\}"></span> is present if voices <span class="math-inline" data-latex="i"></span> and <span class="math-inline" data-latex="j"></span> form a consonant harmonic interval (third, fifth, sixth, octave) simultaneously at some point in the piece</li>
+</ul>
+<p>In the weighted version, the weight <span class="math-inline" data-latex="w(v_i, v_j)"></span> counts the number of beats at which <span class="math-inline" data-latex="v_i"></span> and <span class="math-inline" data-latex="v_j"></span> are in consonance.</p>
+</div>
+</div>
+
+<hr>
+<h2 id="main-theorems">Main Theorems</h2>
+
+
+<div class="theorem-block" id="theorem-3.1">
+  <div class="block-label">
+    Theorem 3.1 (Tarjan&#39;s Cut Vertex Algorithm)
+  </div>
+  <div class="block-body"><p>A non-root vertex <span class="math-inline" data-latex="v"></span> in a DFS tree is a cut vertex of <span class="math-inline" data-latex="G"></span> if and only if <span class="math-inline" data-latex="v"></span> has a child <span class="math-inline" data-latex="u"></span> in the DFS tree such that</p>
+<div class="math-display" data-latex="\mathrm{low}[u] \geq d[v]"></div>
+<p>The root of the DFS tree is a cut vertex if and only if it has at least two children in the DFS tree.</p>
+<p>This algorithm finds all cut vertices in <span class="math-inline" data-latex="O(|V| &#43; |E|)"></span> time.</p>
+</div>
+</div>
+
+<div class="proof-block">
+  <div class="block-label">Proof.</div>
+  <div class="block-body"><p><strong>Correctness of the non-root condition:</strong></p>
+<p>Suppose <span class="math-inline" data-latex="v"></span> is a non-root DFS vertex and <span class="math-inline" data-latex="u"></span> is a child of <span class="math-inline" data-latex="v"></span> in the DFS tree. The condition <span class="math-inline" data-latex="\mathrm{low}[u] \geq d[v]"></span> means that no vertex in the subtree rooted at <span class="math-inline" data-latex="u"></span> has a back edge to any proper ancestor of <span class="math-inline" data-latex="v"></span>.</p>
+<p><strong>(<span class="math-inline" data-latex="\Rightarrow"></span>)</strong> If <span class="math-inline" data-latex="\mathrm{low}[u] \geq d[v]"></span> for some child <span class="math-inline" data-latex="u"></span>, then the subtree of <span class="math-inline" data-latex="u"></span> cannot reach any ancestor of <span class="math-inline" data-latex="v"></span> without going through <span class="math-inline" data-latex="v"></span>. Hence removing <span class="math-inline" data-latex="v"></span> disconnects the subtree of <span class="math-inline" data-latex="u"></span> from the rest of the graph, so <span class="math-inline" data-latex="v"></span> is a cut vertex.</p>
+<p><strong>(<span class="math-inline" data-latex="\Leftarrow"></span>)</strong> Suppose <span class="math-inline" data-latex="v"></span> is a cut vertex. Let <span class="math-inline" data-latex="C"></span> be a connected component of <span class="math-inline" data-latex="G - v"></span> that does not contain <span class="math-inline" data-latex="v"></span>&rsquo;s parent in the DFS tree. Pick any vertex <span class="math-inline" data-latex="u"></span> of <span class="math-inline" data-latex="C"></span> that was first reached from <span class="math-inline" data-latex="v"></span> in the DFS (i.e., <span class="math-inline" data-latex="u"></span> is in <span class="math-inline" data-latex="v"></span>&rsquo;s DFS subtree). Since <span class="math-inline" data-latex="C"></span> has no direct path to <span class="math-inline" data-latex="v"></span>&rsquo;s parent (otherwise <span class="math-inline" data-latex="v"></span> would not separate <span class="math-inline" data-latex="C"></span>), all paths from the subtree of <span class="math-inline" data-latex="u"></span> to ancestors of <span class="math-inline" data-latex="v"></span> pass through <span class="math-inline" data-latex="v"></span>, meaning <span class="math-inline" data-latex="\mathrm{low}[u] \geq d[v]"></span>.</p>
+<p><strong>Root case:</strong> The root has no parent; it is a cut vertex exactly when its removal separates its subtrees, which happens iff it has <span class="math-inline" data-latex="\geq 2"></span> children.</p>
+<p><strong>Complexity:</strong> DFS runs in <span class="math-inline" data-latex="O(|V| &#43; |E|)"></span>. Computing <span class="math-inline" data-latex="\mathrm{low}[v]"></span> for all vertices during the DFS adds no asymptotic overhead (one pass, bottom-up). <span class="math-inline" data-latex="\square"></span></p>
+</div>
+</div>
+
+<blockquote>
+<p><em>Visual:</em> Trace DFS on a small example: vertices <span class="math-inline" data-latex="\{A,B,C,D,E\}"></span>, edges <span class="math-inline" data-latex="AB, BC, CA, CD, DE"></span>. Vertex <span class="math-inline" data-latex="C"></span> has <span class="math-inline" data-latex="d[C] = 3"></span>; child <span class="math-inline" data-latex="D"></span>&rsquo;s subtree can only reach <span class="math-inline" data-latex="D"></span> and <span class="math-inline" data-latex="E"></span>, so <span class="math-inline" data-latex="\mathrm{low}[D] = d[D] = 4 \geq d[C] = 3"></span>. Hence <span class="math-inline" data-latex="C"></span> is a cut vertex. Removing <span class="math-inline" data-latex="C"></span> disconnects <span class="math-inline" data-latex="\{D,E\}"></span> from <span class="math-inline" data-latex="\{A,B\}"></span>.</p>
+</blockquote>
+
+
+<div class="theorem-block" id="theorem-3.2">
+  <div class="block-label">
+    Theorem 3.2 (Whitney&#39;s Theorem)
+  </div>
+  <div class="block-body"><p>For any graph <span class="math-inline" data-latex="G"></span> with <span class="math-inline" data-latex="|V| \geq 2"></span>:</p>
+<div class="math-display" data-latex="\kappa(G) \leq \kappa&#39;(G) \leq \delta(G)"></div>
+<p>where <span class="math-inline" data-latex="\kappa(G)"></span> is vertex connectivity, <span class="math-inline" data-latex="\kappa&#39;(G)"></span> is <strong>edge connectivity</strong> (minimum number of edges whose removal disconnects <span class="math-inline" data-latex="G"></span>), and <span class="math-inline" data-latex="\delta(G) = \min_{v \in V} \deg(v)"></span> is the minimum degree.</p>
+</div>
+</div>
+
+<div class="proof-block">
+  <div class="block-label">Proof.</div>
+  <div class="block-body"><p><strong><span class="math-inline" data-latex="\kappa&#39;(G) \leq \delta(G)"></span>:</strong> Let <span class="math-inline" data-latex="v"></span> be a vertex of minimum degree <span class="math-inline" data-latex="\delta(G)"></span>. The <span class="math-inline" data-latex="\delta(G)"></span> edges incident to <span class="math-inline" data-latex="v"></span> form a cut set (removing them isolates <span class="math-inline" data-latex="v"></span>). Hence <span class="math-inline" data-latex="\kappa&#39;(G) \leq \delta(G)"></span>.</p>
+<p><strong><span class="math-inline" data-latex="\kappa(G) \leq \kappa&#39;(G)"></span>:</strong> Given a minimum edge cut <span class="math-inline" data-latex="F"></span> with <span class="math-inline" data-latex="|F| = \kappa&#39;(G)"></span>, we construct a vertex cut of size at most <span class="math-inline" data-latex="|F|"></span>. For each edge <span class="math-inline" data-latex="\{u,v\} \in F"></span>, choose one of its endpoints (say <span class="math-inline" data-latex="v"></span>) to include in a vertex cut <span class="math-inline" data-latex="S"></span>. Removing <span class="math-inline" data-latex="S"></span> separates the graph (since <span class="math-inline" data-latex="F"></span> was a cut and each edge in <span class="math-inline" data-latex="F"></span> has an endpoint in <span class="math-inline" data-latex="S"></span>). This argument may select the same vertex for multiple edges, so <span class="math-inline" data-latex="|S| \leq |F|"></span>, giving <span class="math-inline" data-latex="\kappa(G) \leq \kappa&#39;(G)"></span>. <span class="math-inline" data-latex="\square"></span></p>
+<p><strong>Remark:</strong> The bounds are tight but not always equal. The complete bipartite graph <span class="math-inline" data-latex="K_{3,3}"></span> satisfies <span class="math-inline" data-latex="\kappa = \kappa&#39; = \delta = 3"></span>. The graph obtained from <span class="math-inline" data-latex="K_4"></span> by subdividing one edge has <span class="math-inline" data-latex="\kappa = 2 &lt; \kappa&#39; = 3 &lt; \delta = 3"></span>.</p>
+</div>
+</div>
+
+
+
+<div class="theorem-block" id="theorem-3.3">
+  <div class="block-label">
+    Theorem 3.3 (Menger&#39;s Theorem)
+  </div>
+  <div class="block-body"><p>For vertices <span class="math-inline" data-latex="s \neq t"></span> in a graph <span class="math-inline" data-latex="G"></span>, the maximum number of internally <strong>vertex-disjoint</strong> <span class="math-inline" data-latex="s"></span>-<span class="math-inline" data-latex="t"></span> paths equals the minimum size of a vertex cut separating <span class="math-inline" data-latex="s"></span> from <span class="math-inline" data-latex="t"></span>.</p>
+<p>Consequently, <span class="math-inline" data-latex="G"></span> is <span class="math-inline" data-latex="k"></span>-connected if and only if every pair of distinct vertices is connected by at least <span class="math-inline" data-latex="k"></span> internally vertex-disjoint paths.</p>
+</div>
+</div>
+
+<div class="proof-block">
+  <div class="block-label">Proof.</div>
+  <div class="block-body"><p>This is a special case of the max-flow min-cut theorem applied to the auxiliary network <span class="math-inline" data-latex="N"></span> defined as follows:</p>
+<ul>
+<li>Each vertex <span class="math-inline" data-latex="v \in V \setminus \{s,t\}"></span> is split into <span class="math-inline" data-latex="v_{\mathrm{in}}"></span> and <span class="math-inline" data-latex="v_{\mathrm{out}}"></span> with a directed edge <span class="math-inline" data-latex="v_{\mathrm{in}} \to v_{\mathrm{out}}"></span> of capacity 1.</li>
+<li>Each undirected edge <span class="math-inline" data-latex="\{u,v\}"></span> becomes two directed edges: <span class="math-inline" data-latex="u_{\mathrm{out}} \to v_{\mathrm{in}}"></span> and <span class="math-inline" data-latex="v_{\mathrm{out}} \to u_{\mathrm{in}}"></span>, each with capacity 1 (or <span class="math-inline" data-latex="\infty"></span> if we only care about vertex cuts).</li>
+<li>The source is <span class="math-inline" data-latex="s_{\mathrm{out}}"></span>, the sink is <span class="math-inline" data-latex="t_{\mathrm{in}}"></span>.</li>
+</ul>
+<p>In this network, a flow of value <span class="math-inline" data-latex="k"></span> corresponds to <span class="math-inline" data-latex="k"></span> internally vertex-disjoint paths, and a minimum cut of value <span class="math-inline" data-latex="k"></span> corresponds to a minimum vertex separator of size <span class="math-inline" data-latex="k"></span>. The max-flow min-cut theorem then gives Menger&rsquo;s result. <span class="math-inline" data-latex="\square"></span></p>
+</div>
+</div>
+
+
+
+<div class="proposition-block" id="prop-3.1">
+  <div class="block-label">
+    Prop 3.1 (Polyphony Is 2-Connected)
+  </div>
+  <div class="block-body">The voice graph of a Bach four-voice fugue is 2-connected (no cut vertices). The voice graph of a standard homophonic texture (single melody with chordal accompaniment) is at most 1-connected and typically has the melody as a cut vertex.</div>
+</div>
+
+<div class="proof-block">
+  <div class="block-label">Proof.</div>
+  <div class="block-body"><p>(Empirical argument supporting the mathematical claim.) In a four-voice fugue such as BWV 846, every pair of voices forms at least one consonant interval during the piece (verified by score analysis). Moreover, every voice is in consonance with every other voice in multiple passages. Consequently, the voice graph is <span class="math-inline" data-latex="K_4"></span> (the complete graph on 4 vertices), which has <span class="math-inline" data-latex="\kappa(K_4) = 3"></span>. Even after removing one voice, the remaining three form <span class="math-inline" data-latex="K_3"></span>, which is connected.</p>
+<p>In homophonic texture, the accompaniment voices may only be in consonance with the melody but not with each other except through the melody. This produces a <strong>star graph</strong> <span class="math-inline" data-latex="K_{1,3}"></span> with the melody at the center — a graph with <span class="math-inline" data-latex="\kappa(K_{1,3}) = 1"></span> and the center as the unique cut vertex. <span class="math-inline" data-latex="\square"></span></p>
+<blockquote>
+<p><em>中文:</em> &ldquo;复调音乐是分布式结构，每个声部都与其他声部密切连接，形成高连通的网状拓扑，没有不可或缺的中心。&rdquo;</p>
+</blockquote>
+</div>
+</div>
+
+<hr>
+<h2 id="tarjans-algorithm-worked-example">Tarjan&rsquo;s Algorithm: Worked Example</h2>
+<p>Consider <span class="math-inline" data-latex="G"></span> with <span class="math-inline" data-latex="V = \{0,1,2,3,4\}"></span> and edges <span class="math-inline" data-latex="\{0,1\}, \{1,2\}, \{2,0\}, \{1,3\}, \{3,4\}"></span>.</p>
+<p>DFS from vertex 0 (discovery order: 0,1,2 backtracks; 1 continues to 3,4):</p>
+<table>
+<thead>
+<tr>
+<th>Vertex</th>
+<th><span class="math-inline" data-latex="d[v]"></span></th>
+<th><span class="math-inline" data-latex="f[v]"></span></th>
+<th><span class="math-inline" data-latex="\mathrm{low}[v]"></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>9</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>8</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+<td>0 (back edge to 0)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4</td>
+<td>7</td>
+<td>4</td>
+</tr>
+<tr>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p>Check cut-vertex condition:</p>
+<ul>
+<li>Vertex 1: child 3 has <span class="math-inline" data-latex="\mathrm{low}[3] = 4 \geq d[1] = 1"></span>. <strong>Cut vertex.</strong></li>
+<li>Vertex 3: child 4 has <span class="math-inline" data-latex="\mathrm{low}[4] = 4 \geq d[3] = 4"></span>. <strong>Cut vertex.</strong></li>
+</ul>
+<p>Removing vertex 1 disconnects <span class="math-inline" data-latex="\{3,4\}"></span> from <span class="math-inline" data-latex="\{0,2\}"></span>. Removing vertex 3 disconnects <span class="math-inline" data-latex="\{4\}"></span>. These are precisely the articulation points.</p>
+<hr>
+<h2 id="extension-simplicial-complexes-and-betti-numbers">Extension: Simplicial Complexes and Betti Numbers</h2>
+
+
+<div class="definition-block" id="definition-3.8">
+  <div class="block-label">
+    Definition 3.8 (Simplicial Complex of a Score)
+  </div>
+  <div class="block-body"><p>Given a <span class="math-inline" data-latex="k"></span>-voice piece, define a simplicial complex <span class="math-inline" data-latex="\mathcal{K}"></span> where:</p>
+<ul>
+<li><strong>0-simplices</strong>: individual notes (pitch classes at time <span class="math-inline" data-latex="t"></span>)</li>
+<li><strong>1-simplices</strong>: dyads (pairs of simultaneously sounding notes)</li>
+<li><strong>2-simplices</strong>: trichords (three simultaneously sounding notes)</li>
+<li><strong><span class="math-inline" data-latex="(k-1)"></span>-simplices</strong>: <span class="math-inline" data-latex="k"></span>-note chords</li>
+</ul>
+<p>The <strong><span class="math-inline" data-latex="n"></span>-th Betti number</strong> <span class="math-inline" data-latex="\beta_n"></span> counts <span class="math-inline" data-latex="n"></span>-dimensional &ldquo;holes&rdquo; in <span class="math-inline" data-latex="\mathcal{K}"></span>. <span class="math-inline" data-latex="\beta_0"></span> counts connected components, <span class="math-inline" data-latex="\beta_1"></span> counts independent cycles.</p>
+</div>
+</div>
+
+<blockquote>
+<p><em>中文:</em> &ldquo;传统的图只能捕捉两个音符之间的关系，但和弦是三个或更多音符的同时交互，这种高阶关系需要更高级的数学工具：单纯复形。&rdquo;</p>
+</blockquote>
+<p>The 2025 paper cited below used this approach to distinguish fugues from dances in Bach&rsquo;s WTC. Fugues exhibit high <span class="math-inline" data-latex="\beta_1"></span> (many harmonic cycles) while dances show simpler topology.</p>
+<hr>
+<h2 id="musical-connection">Musical Connection</h2>
+<div class="music-block">
+  <div class="block-label">音乐联系</div>
+  <div class="block-body"><p><strong>Cut Vertices and Harmonic Syntax</strong></p>
+<p>In a chord-progression graph (vertices = chords, weighted directed edges = transition frequency), the <strong>dominant seventh chord</strong> V7 functions as a near-cut-vertex in common-practice tonality. Almost all progressions to the tonic I pass through V7, making it the bottleneck of harmonic syntax.</p>
+<p>In Bach&rsquo;s chorales, Rameau&rsquo;s principle of <strong>fundamental bass</strong> predicts that V → I is the strongest directed edge. A chord-graph analysis of a Bach chorale corpus (e.g., the 371 harmonized chorales) reveals:</p>
+<ul>
+<li>V7 (G7 in C major) has the highest <strong>betweenness centrality</strong> of any chord — it lies on the most shortest paths between other chords</li>
+<li>The I–IV–V–I &ldquo;loop&rdquo; has no interior cut vertex (it is the backbone 3-cycle of the graph)</li>
+<li>Chromatic chords (viio7, augmented sixths) appear as <strong>bridges</strong>: edges whose removal would disconnect remote key areas from the tonic region</li>
+</ul>
+<p>This is why Wagner could exploit chromatic bridges so dramatically: by avoiding the V7 → I resolution (the strongest edge), he kept the harmonic graph in a perpetually &ldquo;almost-disconnected&rdquo; state, creating sustained tension.</p>
+<blockquote>
+<p><em>中文:</em> &ldquo;从图论的连通性，到复调音乐的声部结构，数学再一次揭示了音乐的深层逻辑。&rdquo;</p>
+</blockquote>
+</div>
+</div>
+
+<hr>
+<h2 id="limits-and-open-questions">Limits and Open Questions</h2>
+<ol>
+<li>
+<p><strong>Directed vs. undirected graphs</strong>: The voice graph model (Definition 3.7) is undirected, but chord-progression graphs are naturally directed. Directed connectivity (strong vs. weak connectivity) is a stronger notion: a directed graph is <strong>strongly connected</strong> if for every ordered pair <span class="math-inline" data-latex="(u,v)"></span> there is a directed path from <span class="math-inline" data-latex="u"></span> to <span class="math-inline" data-latex="v"></span>. The harmonic syntax graph of a key is strongly connected within the diatonic scale but not across all chromatic chords.</p>
+</li>
+<li>
+<p><strong>Temporal dynamics</strong>: Graph connectivity is a static measure. A sliding-window analysis that recomputes <span class="math-inline" data-latex="\kappa(G_t)"></span> at each time window <span class="math-inline" data-latex="t"></span> reveals how connectivity evolves during a piece — tension arches correspond to drops in <span class="math-inline" data-latex="\kappa"></span>.</p>
+</li>
+<li>
+<p><strong>Edge weights and weighted connectivity</strong>: Weighted <span class="math-inline" data-latex="k"></span>-connectivity (where edge weights represent transition probabilities) uses flow-based generalizations of Menger&rsquo;s theorem. The maximum weighted flow through the network gives a more musically meaningful notion of &ldquo;structural importance.&rdquo;</p>
+</li>
+<li>
+<p><strong>Simplicial homology and music</strong>: Computing Betti numbers for a Bach fugue requires building the full simplicial complex (Definition 3.8) and then computing the ranks of homology groups <span class="math-inline" data-latex="H_n(\mathcal{K}, \mathbb{Z})"></span>. For large choral works, this is computationally feasible but the musical interpretation of <span class="math-inline" data-latex="\beta_2"></span> (3-dimensional holes) remains open.</p>
+</li>
+</ol>
+
+
+<div class="conjecture-block" id="conjecture">
+  <div class="block-label">
+    Conjecture (Polyphony Degree and Connectivity)
+  </div>
+  <div class="block-body">For a <span class="math-inline" data-latex="k"></span>-voice polyphonic work where every pair of voices forms at least one consonant interval, the voice graph contains <span class="math-inline" data-latex="K_k"></span> as a subgraph, so <span class="math-inline" data-latex="\kappa(G_{\mathrm{voice}}) \geq k-1"></span>. Conversely, the minimum connectivity of any <span class="math-inline" data-latex="k"></span>-voice homophonic texture is at most 1. This suggests a sharp connectivity threshold distinguishing polyphonic from homophonic texture, independent of the specific harmony used.</div>
+</div>
+
+<hr>
+<h2 id="academic-references">Academic References</h2>
+<ol>
+<li>
+<p>Tarjan, R. E. (1972). Depth-first search and linear graph algorithms. <em>SIAM Journal on Computing</em>, 1(2), 146–160.</p>
+</li>
+<li>
+<p>Whitney, H. (1932). Congruent graphs and the connectivity of graphs. <em>American Journal of Mathematics</em>, 54(1), 150–168.</p>
+</li>
+<li>
+<p>Menger, K. (1927). Zur allgemeinen Kurventheorie. <em>Fundamenta Mathematicae</em>, 10, 96–115.</p>
+</li>
+<li>
+<p>Tymoczko, D. (2011). <em>A Geometry of Music</em>. Oxford University Press. Ch. 2 (Harmonic progressions as graphs).</p>
+</li>
+<li>
+<p>Bergomi, M. G., Baratè, A., &amp; Di Fabio, B. (2015). Towards a topological fingerprint of music. <em>Lecture Notes in Computer Science</em>, 9067, 88–100.</p>
+</li>
+<li>
+<p>Cantù, D., &amp; Andreatta, M. (2025). Topological analysis of Bach&rsquo;s Well-Tempered Clavier using simplicial homology. <em>Journal of Mathematics and Music</em>, 19(1), 1–22.</p>
+</li>
+<li>
+<p>Diestel, R. (2017). <em>Graph Theory</em> (5th ed.). Springer. Ch. 3 (Connectivity).</p>
+</li>
+<li>
+<p>Popoff, A., Andreatta, M., &amp; Ehresmann, A. (2018). Relational poly-Klumpenhouwer networks for transformational and voice-leading analysis. <em>Journal of Mathematics and Music</em>, 12(1), 35–55.</p>
+</li>
+</ol>
+
+    </div>
+
+    
+    <nav class="ep-nav">
+      
+      
+      
+      
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+      
+      <a href="https://amath390.sibeliusp.com/episodes/ep02/" class="ep-nav-prev">
+        ← EP02: String Vibration and the Wave Equation
+      </a>
+      
+      
+      <a href="https://amath390.sibeliusp.com/episodes/ep04/" class="ep-nav-next">
+        EP04: All-Interval Rows and ℤ₁₂ →
+      </a>
+      
+    </nav>
+  </article>
+
+  
+  
+  
+  <aside class="ep-toc-aside">
+    <div class="ep-toc-sticky">
+      <div class="ep-toc-label">本页目录</div>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#definitions">Definitions</a></li>
+    <li><a href="#main-theorems">Main Theorems</a></li>
+    <li><a href="#tarjans-algorithm-worked-example">Tarjan&rsquo;s Algorithm: Worked Example</a></li>
+    <li><a href="#extension-simplicial-complexes-and-betti-numbers">Extension: Simplicial Complexes and Betti Numbers</a></li>
+    <li><a href="#musical-connection">Musical Connection</a></li>
+    <li><a href="#limits-and-open-questions">Limits and Open Questions</a></li>
+    <li><a href="#academic-references">Academic References</a></li>
+  </ul>
+</nav>
+    </div>
+  </aside>
+  
+</div>
+
+      <footer class="site-footer">
+  <div class="footer-content">
+    <span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
+    <span class="footer-sep">·</span>
+    <a href="https://www.xiaohongshu.com" target="_blank" rel="noopener">小红书</a>
+    <span class="footer-sep">·</span>
+    <span>Built with <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> + KaTeX</span>
+  </div>
+</footer>
+
+    </main>
+  </div>
+</body>
+</html>

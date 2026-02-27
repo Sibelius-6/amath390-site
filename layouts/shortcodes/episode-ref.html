@@ -1,0 +1,8 @@
+{{ $ep := .Get "ep" | int }}
+{{ $slug := printf "/episodes/ep%02d" $ep }}
+{{ $page := .Site.GetPage $slug }}
+{{ if $page }}
+<a href="{{ $page.Permalink }}" class="episode-ref-link">{{ .Inner }}</a>
+{{ else }}
+<span class="episode-ref-placeholder">{{ .Inner }}</span>
+{{ end }}

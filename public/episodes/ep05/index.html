@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EP05: Turán&#39;s Theorem and Counterpoint | AMATH 390 数学与音乐</title>
+<meta name="description" content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('[data-latex]').forEach(function(el) {
+    try {
+      katex.render(el.getAttribute('data-latex'), el, {
+        displayMode: el.classList.contains('math-display'),
+        throwOnError: false
+      });
+    } catch(e) { console.warn('KaTeX:', e.message, el); }
+  });
+});
+</script>
+
+
+<link rel="stylesheet" href="/css/amath390.css">
+
+</head>
+<body>
+  <div class="layout-wrapper">
+    
+
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a href="/" class="sidebar-title">AMATH 390</a>
+    <div class="sidebar-subtitle">数学与音乐</div>
+  </div>
+
+  
+
+  
+    
+    
+    
+      
+      <div class="arc-group">
+        <div class="arc-label">数学基础篇</div>
+        
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep01/"
+               class="ep-link">
+              <span class="ep-num">01</span>
+              <span class="ep-title">Chord Space and the Torus</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep02/"
+               class="ep-link">
+              <span class="ep-num">02</span>
+              <span class="ep-title">String Vibration and the Wave Equation</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep03/"
+               class="ep-link">
+              <span class="ep-num">03</span>
+              <span class="ep-title">Bach and Graph Connectivity</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep04/"
+               class="ep-link">
+              <span class="ep-num">04</span>
+              <span class="ep-title">All-Interval Rows and ℤ₁₂</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep05/"
+               class="ep-link active">
+              <span class="ep-num">05</span>
+              <span class="ep-title">Turán&#39;s Theorem and Counterpoint</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep06/"
+               class="ep-link">
+              <span class="ep-num">06</span>
+              <span class="ep-title">Graph Coloring and Voice Assignment</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep07/"
+               class="ep-link">
+              <span class="ep-num">07</span>
+              <span class="ep-title">Information Entropy and All-Interval Rows</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep08/"
+               class="ep-link">
+              <span class="ep-num">08</span>
+              <span class="ep-title">Shepard Tones and the Tritone Paradox</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep09/"
+               class="ep-link">
+              <span class="ep-num">09</span>
+              <span class="ep-title">Combination Tones and Nonlinear Acoustics</span>
+            </a>
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
+    
+  
+    
+    
+    
+      
+      <div class="arc-group">
+        <div class="arc-label">Jacob Collier 系列</div>
+        
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep10/"
+               class="ep-link">
+              <span class="ep-num">10</span>
+              <span class="ep-title">Negative Harmony and the Dihedral Group D₁₂</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep11/"
+               class="ep-link">
+              <span class="ep-num">11</span>
+              <span class="ep-title">Comma Drift and the Impossibility of Perfect Tuning</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep12/"
+               class="ep-link">
+              <span class="ep-num">12</span>
+              <span class="ep-title">The Circle of Fifths as a Folded Spiral</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep13/"
+               class="ep-link">
+              <span class="ep-num">13</span>
+              <span class="ep-title">Polyrhythm and Rhythm-Pitch Duality</span>
+            </a>
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
+    
+  
+    
+    
+    
+      
+      <div class="arc-group">
+        <div class="arc-label">拓扑数学专篇</div>
+        
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep14/"
+               class="ep-link">
+              <span class="ep-num">14</span>
+              <span class="ep-title">Tonnetz Hodge Duality</span>
+            </a>
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
+    
+  
+    
+    
+    
+      
+      <div class="arc-group">
+        <div class="arc-label">歌剧系列</div>
+        
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep15/"
+               class="ep-link">
+              <span class="ep-num">15</span>
+              <span class="ep-title">Opera Acoustics and the Singer&#39;s Formant</span>
+            </a>
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+
+  <div class="sidebar-footer">
+    <a href="/theorems/">定理索引</a>
+    <a href="/domains/">数学领域</a>
+    <a href="/about/">关于</a>
+  </div>
+</nav>
+
+    <main class="main-content">
+      
+
+
+
+<div class="episode-layout">
+  <article class="episode-page">
+    <header class="episode-header">
+  <div class="ep-badge">EP05</div>
+  <h1 class="ep-main-title">EP05: Turán&#39;s Theorem and Counterpoint</h1>
+  <div class="ep-subtitle">极值图论</div>
+
+  <div class="ep-meta">
+    
+    <span class="meta-item">
+      <span class="meta-icon">▶</span> 6:27
+    </span>
+    
+    
+    <span class="meta-item domains">
+      <span class="domain-chip">Graph Theory</span><span class="domain-chip">Combinatorics</span>
+    </span>
+    
+  </div>
+</header>
+
+    
+
+
+<div class="cross-refs">
+  <h3 class="cross-refs-title">前置知识</h3>
+  <div class="ref-cards">
+    
+      
+      
+      
+      
+        <a href="https://amath390.sibeliusp.com/episodes/ep04/" class="ref-card callback">
+          <span class="ref-ep">EP04</span>
+          <span class="ref-title">All-Interval Rows and ℤ₁₂</span>
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+
+
+
+<div class="cross-refs">
+  <h3 class="cross-refs-title">后续拓展</h3>
+  <div class="ref-cards">
+    
+      
+      
+        
+        
+        
+          <a href="https://amath390.sibeliusp.com/episodes/ep06/" class="ref-card forward">
+            <span class="ref-ep">EP06</span>
+            <span class="ref-title">Graph Coloring and Voice Assignment</span>
+          </a>
+        
+      
+    
+  </div>
+</div>
+
+
+
+    
+<div class="xhs-section">
+  <div class="xhs-section-header">
+    <span class="xhs-logo-badge">小红书</span>
+    <span class="xhs-section-title">Watch on 小红书</span>
+  </div>
+  <div class="xhs-cards">
+    
+    <a href="https://www.xiaohongshu.com/discovery/item/69861f8c000000000a03f44e?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=AB81FHuGUGKdS8GJWaI8g_yMwDmCQ_jrQGlLmmL-tlgzg=&amp;xsec_source=pc_share" target="_blank" rel="noopener" class="xhs-card">
+      <div class="xhs-card-inner">
+        <div class="xhs-card-icon">▶</div>
+        <div class="xhs-card-text">
+          <div class="xhs-card-title">从中世纪到文艺复兴｜和声演变的图论优化</div>
+          <div class="xhs-card-sub">xiaohongshu.com</div>
+        </div>
+        <div class="xhs-card-arrow">→</div>
+      </div>
+    </a>
+    
+  </div>
+</div>
+
+
+
+    <div class="episode-content content">
+      <h2 id="overview">Overview</h2>
+<p>How many simultaneous intervals can a polyphonic texture contain before forbidden structures inevitably appear? In 1941, the Hungarian mathematician Pál Turán gave a precise answer to the general question: given <span class="math-inline" data-latex="n"></span> vertices and no complete subgraph <span class="math-inline" data-latex="K_{r&#43;1}"></span>, the maximum number of edges is achieved by a unique graph called the <strong>Turán graph</strong> <span class="math-inline" data-latex="T(n,r)"></span>.</p>
+<p>This episode applies Turán&rsquo;s theorem to Western counterpoint. Model the twelve pitch classes as vertices and &ldquo;permitted simultaneous intervals&rdquo; as edges. Forbidden parallels (parallel fifths, parallel octaves) and unstable intervals translate directly into forbidden cliques. Turán&rsquo;s bound then governs the maximum <em>polyphonic density</em> achievable under any given set of contrapuntal rules — and the historical evolution from medieval organum to Renaissance polyphony traces a path along a rising Turán bound.</p>
+<p>A second thread uses the <strong>Orbit-Stabilizer theorem</strong> from group theory (introduced in EP04) to count how many essentially distinct chord types exist under transposition symmetry, explaining why the most harmonically symmetric chords (augmented triads, diminished seventh chords) have the fewest distinct forms.</p>
+<blockquote>
+<p><em>中文:</em> &ldquo;Turán定理描述的不是声音，而是约束如何塑造结构。每一条禁令，都在雕刻和声的精确边界。&rdquo;</p>
+</blockquote>
+<hr>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>
+
+
+
+<a href="https://amath390.sibeliusp.com/episodes/ep04/" class="episode-ref-link">All-Interval Rows and <span class="math-inline" data-latex="\mathbb{Z}_{12}"></span> (EP04)</a>
+
+ — cyclic group of pitch classes, group actions, orbit-stabilizer theorem</li>
+<li>Basic graph theory: vertices, edges, complete graph <span class="math-inline" data-latex="K_n"></span>, complete bipartite graph <span class="math-inline" data-latex="K_{m,n}"></span></li>
+</ul>
+<hr>
+<h2 id="definitions">Definitions</h2>
+
+
+<div class="definition-block" id="def-5.1">
+  <div class="block-label">
+    Def 5.1 (Complete Graph and Complete Bipartite Graph)
+  </div>
+  <div class="block-body"><p>The <strong>complete graph</strong> <span class="math-inline" data-latex="K_n"></span> has <span class="math-inline" data-latex="n"></span> vertices with every pair connected by an edge; it has <span class="math-inline" data-latex="\binom{n}{2}"></span> edges.</p>
+<p>The <strong>complete bipartite graph</strong> <span class="math-inline" data-latex="K_{m,n}"></span> has two disjoint vertex sets of sizes <span class="math-inline" data-latex="m"></span> and <span class="math-inline" data-latex="n"></span>; every vertex in one set is connected to every vertex in the other, giving <span class="math-inline" data-latex="mn"></span> edges. No edges exist within either set.</p>
+</div>
+</div>
+
+
+
+<div class="definition-block" id="def-5.2">
+  <div class="block-label">
+    Def 5.2 (Turán Graph)
+  </div>
+  <div class="block-body"><p>The <strong>Turán graph</strong> <span class="math-inline" data-latex="T(n,r)"></span> is the complete <span class="math-inline" data-latex="r"></span>-partite graph on <span class="math-inline" data-latex="n"></span> vertices whose <span class="math-inline" data-latex="r"></span> parts are as nearly equal in size as possible. Concretely, write <span class="math-inline" data-latex="n = qr &#43; s"></span> with <span class="math-inline" data-latex="0 \le s &lt; r"></span>; then <span class="math-inline" data-latex="s"></span> parts have <span class="math-inline" data-latex="q&#43;1"></span> vertices and <span class="math-inline" data-latex="r-s"></span> parts have <span class="math-inline" data-latex="q"></span> vertices. All edges between different parts are present; no edges within any part.</p>
+<p><span class="math-inline" data-latex="T(n,r)"></span> has</p>
+<div class="math-display" data-latex="e(T(n,r)) = \frac{r-1}{2r}\bigl(n^2 - s^2\bigr) &#43; \binom{s}{2}"></div>
+<p>edges. For the asymptotic statement it suffices to remember the leading term:</p>
+<div class="math-display" data-latex="e(T(n,r)) = \left(1 - \frac{1}{r}\right)\frac{n^2}{2} &#43; O(n)."></div>
+</div>
+</div>
+
+
+
+<div class="definition-block" id="def-5.3">
+  <div class="block-label">
+    Def 5.3 (Extremal Number)
+  </div>
+  <div class="block-body">For a graph <span class="math-inline" data-latex="H"></span>, the <strong>extremal number</strong> <span class="math-inline" data-latex="\mathrm{ex}(n, H)"></span> is the maximum number of edges in an <span class="math-inline" data-latex="n"></span>-vertex graph that contains no subgraph isomorphic to <span class="math-inline" data-latex="H"></span>.</div>
+</div>
+
+
+
+<div class="definition-block" id="def-5.4">
+  <div class="block-label">
+    Def 5.4 (Contrapuntal Interval Graph)
+  </div>
+  <div class="block-body"><p>Given a set of allowed intervals <span class="math-inline" data-latex="\mathcal{A} \subseteq \{0,1,\ldots,11\}"></span>, define the <strong>contrapuntal interval graph</strong> <span class="math-inline" data-latex="G_\mathcal{A}"></span> with vertex set <span class="math-inline" data-latex="\mathbb{Z}_{12}"></span> (the twelve pitch classes arranged around a clock face) and an edge <span class="math-inline" data-latex="\{i,j\}"></span> whenever the interval <span class="math-inline" data-latex="|i-j| \bmod 12"></span> or <span class="math-inline" data-latex="12 - (|i-j| \bmod 12)"></span> belongs to <span class="math-inline" data-latex="\mathcal{A}"></span>.</p>
+<p>A clique of size <span class="math-inline" data-latex="r"></span> in <span class="math-inline" data-latex="G_\mathcal{A}"></span> is a set of <span class="math-inline" data-latex="r"></span> pitch classes that are pairwise connected by allowed intervals — a maximally consonant <span class="math-inline" data-latex="r"></span>-note chord under the rules encoded by <span class="math-inline" data-latex="\mathcal{A}"></span>.</p>
+</div>
+</div>
+
+<hr>
+<h2 id="main-theorems">Main Theorems</h2>
+
+
+<div class="theorem-block" id="theorem-5.1">
+  <div class="block-label">
+    Theorem 5.1 (Turán&#39;s Theorem)
+  </div>
+  <div class="block-body"><p>Let <span class="math-inline" data-latex="G"></span> be a graph on <span class="math-inline" data-latex="n"></span> vertices with no complete subgraph <span class="math-inline" data-latex="K_{r&#43;1}"></span> (i.e., no clique of size <span class="math-inline" data-latex="r&#43;1"></span>). Then</p>
+<div class="math-display" data-latex="|E(G)| \le e(T(n,r)) = \left(1 - \frac{1}{r}\right)\frac{n^2}{2} &#43; O(n)."></div>
+<p>Moreover, equality holds <strong>if and only if</strong> <span class="math-inline" data-latex="G \cong T(n,r)"></span>. The Turán graph is the unique extremal graph.</p>
+</div>
+</div>
+
+<div class="proof-block">
+  <div class="block-label">Proof.</div>
+  <div class="block-body"><p>We give the elegant <em>probabilistic / double-counting</em> proof.</p>
+<p><strong>Step 1 (Zykov symmetrization).</strong> Call a graph <em><span class="math-inline" data-latex="r"></span>-partite</em> if its vertices can be partitioned into <span class="math-inline" data-latex="r"></span> independent sets. Any graph with no <span class="math-inline" data-latex="K_{r&#43;1}"></span> is <span class="math-inline" data-latex="r"></span>-partite (since a graph is <span class="math-inline" data-latex="r"></span>-partite iff its clique number <span class="math-inline" data-latex="\omega \le r"></span>; this follows from the fact that <span class="math-inline" data-latex="K_{r&#43;1}"></span> requires <span class="math-inline" data-latex="r&#43;1"></span> mutually adjacent vertices). [Alternatively this follows from Ramsey theory, or by induction on <span class="math-inline" data-latex="n"></span>.]</p>
+<p><strong>Step 2 (Counting within a partition).</strong> Let <span class="math-inline" data-latex="G"></span> have parts <span class="math-inline" data-latex="V_1, \ldots, V_r"></span> with <span class="math-inline" data-latex="|V_i| = n_i"></span> and <span class="math-inline" data-latex="\sum n_i = n"></span>. Since there are no edges within parts, the edge count is</p>
+<div class="math-display" data-latex="|E(G)| \le \sum_{1 \le i &lt; j \le r} n_i n_j = \frac{1}{2}\left[\left(\sum_i n_i\right)^2 - \sum_i n_i^2\right] = \frac{n^2 - \sum_i n_i^2}{2}."></div>
+<p><strong>Step 3 (Optimize over partitions).</strong> By the convexity of <span class="math-inline" data-latex="x^2"></span>, <span class="math-inline" data-latex="\sum_i n_i^2"></span> is minimized when all <span class="math-inline" data-latex="n_i"></span> are as equal as possible, i.e., when <span class="math-inline" data-latex="|n_i - n_j| \le 1"></span> for all <span class="math-inline" data-latex="i,j"></span>. This exactly describes <span class="math-inline" data-latex="T(n,r)"></span>.</p>
+<p><strong>Step 4 (Equality).</strong> Equality holds when: (a) <span class="math-inline" data-latex="G"></span> is complete <span class="math-inline" data-latex="r"></span>-partite (all inter-part edges present), and (b) parts are as equal as possible. These two conditions uniquely determine <span class="math-inline" data-latex="T(n,r)"></span> up to isomorphism. <span class="math-inline" data-latex="\square"></span></p>
+</div>
+</div>
+
+
+
+<div class="theorem-block" id="theorem-5.2">
+  <div class="block-label">
+    Theorem 5.2 (Mantel&#39;s Theorem)
+  </div>
+  <div class="block-body">The maximum number of edges in a triangle-free graph on <span class="math-inline" data-latex="n"></span> vertices is <span class="math-inline" data-latex="\lfloor n^2/4 \rfloor"></span>, achieved uniquely by <span class="math-inline" data-latex="K_{\lfloor n/2 \rfloor,\, \lceil n/2 \rceil} = T(n,2)"></span>.</div>
+</div>
+
+<div class="proof-block">
+  <div class="block-label">Proof.</div>
+  <div class="block-body"><p>This is Turán&rsquo;s theorem with <span class="math-inline" data-latex="r = 2"></span>: no <span class="math-inline" data-latex="K_3"></span> means the graph is bipartite ($2$-partite), and the unique maximum bipartite graph on <span class="math-inline" data-latex="n"></span> vertices is the balanced complete bipartite graph <span class="math-inline" data-latex="K_{\lfloor n/2\rfloor, \lceil n/2\rceil}"></span>, which has <span class="math-inline" data-latex="\lfloor n^2/4 \rfloor"></span> edges.</p>
+<p><em>Mantel&rsquo;s original 1907 proof</em> uses a neat counting argument: let <span class="math-inline" data-latex="d_v"></span> be the degree of vertex <span class="math-inline" data-latex="v"></span>. For any edge <span class="math-inline" data-latex="\{u,v\}"></span>, since <span class="math-inline" data-latex="G"></span> is triangle-free <span class="math-inline" data-latex="u"></span> and <span class="math-inline" data-latex="v"></span> share no common neighbor, so <span class="math-inline" data-latex="d_u &#43; d_v \le n"></span>. Summing over all edges gives <span class="math-inline" data-latex="\sum_{\{u,v\}\in E} (d_u &#43; d_v) \le n|E|"></span>. The left side equals <span class="math-inline" data-latex="\sum_v d_v^2"></span> (each vertex <span class="math-inline" data-latex="v"></span> contributes <span class="math-inline" data-latex="d_v"></span> to the sum for each of its <span class="math-inline" data-latex="d_v"></span> edges). By Cauchy-Schwarz, <span class="math-inline" data-latex="\sum_v d_v^2 \ge \frac{(\sum_v d_v)^2}{n} = \frac{4|E|^2}{n}"></span>. Combining: <span class="math-inline" data-latex="4|E|^2/n \le n|E|"></span>, so <span class="math-inline" data-latex="|E| \le n^2/4"></span>. <span class="math-inline" data-latex="\square"></span></p>
+</div>
+</div>
+
+
+
+<div class="theorem-block" id="theorem-5.3">
+  <div class="block-label">
+    Theorem 5.3 (Orbit-Stabilizer Theorem (applied to chords))
+  </div>
+  <div class="block-body"><p>The group <span class="math-inline" data-latex="\mathbb{Z}_{12}"></span> acts on the set of <span class="math-inline" data-latex="k"></span>-element subsets of <span class="math-inline" data-latex="\mathbb{Z}_{12}"></span> by transposition <span class="math-inline" data-latex="T_m(S) = \{s &#43; m \bmod 12 : s \in S\}"></span>. For any chord <span class="math-inline" data-latex="S"></span>:</p>
+<div class="math-display" data-latex="|\mathrm{Orb}(S)| \cdot |\mathrm{Stab}(S)| = 12"></div>
+<p>where <span class="math-inline" data-latex="\mathrm{Stab}(S) = \{m \in \mathbb{Z}_{12} : T_m(S) = S\}"></span> is the stabilizer (the set of transpositions that map <span class="math-inline" data-latex="S"></span> to itself).</p>
+</div>
+</div>
+
+<div class="proof-block">
+  <div class="block-label">Proof.</div>
+  <div class="block-body">This is the standard Orbit-Stabilizer theorem from group theory. The map <span class="math-inline" data-latex="\mathbb{Z}_{12}/\mathrm{Stab}(S) \to \mathrm{Orb}(S)"></span> defined by <span class="math-inline" data-latex="[m] \mapsto T_m(S)"></span> is a well-defined bijection: <span class="math-inline" data-latex="T_m(S) = T_{m&#39;}(S)"></span> iff <span class="math-inline" data-latex="T_{m-m&#39;}(S) = S"></span> iff <span class="math-inline" data-latex="m - m&#39; \in \mathrm{Stab}(S)"></span> iff <span class="math-inline" data-latex="[m] = [m&#39;]"></span>. Therefore <span class="math-inline" data-latex="|\mathrm{Orb}(S)| = |\mathbb{Z}_{12}/\mathrm{Stab}(S)| = 12/|\mathrm{Stab}(S)|"></span>, giving the formula. <span class="math-inline" data-latex="\square"></span></div>
+</div>
+
+
+
+<div class="proposition-block" id="prop-5.1">
+  <div class="block-label">
+    Prop 5.1 (Turán Bound for the Interval Graph)
+  </div>
+  <div class="block-body"><p>For the contrapuntal interval graph <span class="math-inline" data-latex="G_\mathcal{A}"></span> on 12 pitch classes with no allowed clique of size <span class="math-inline" data-latex="r&#43;1"></span>:</p>
+<div class="math-display" data-latex="|E(G_\mathcal{A})| \le \left(1 - \frac{1}{r}\right) \cdot 36."></div>
+<p>In particular, if triads (<span class="math-inline" data-latex="K_3"></span>) are forbidden (<span class="math-inline" data-latex="r = 2"></span>): <span class="math-inline" data-latex="|E| \le 36"></span>. If four-note chords (<span class="math-inline" data-latex="K_4"></span>) are forbidden (<span class="math-inline" data-latex="r = 3"></span>): <span class="math-inline" data-latex="|E| \le 48"></span>.</p>
+</div>
+</div>
+
+<blockquote>
+<p><em>Visual:</em> A clock-face of 12 pitch-class nodes; edges light up as <span class="math-inline" data-latex="\mathcal{A}"></span> expands from <span class="math-inline" data-latex="\{0,5,7\}"></span> (medieval) to <span class="math-inline" data-latex="\{0,3,4,7,8,9\}"></span> (Renaissance), with a running edge count approaching the Turán bound.</p>
+</blockquote>
+<hr>
+<h2 id="musical-connection">Musical Connection</h2>
+<div class="music-block">
+  <div class="block-label">音乐联系</div>
+  <div class="block-body"><p><strong>Counterpoint rules as forbidden cliques</strong></p>
+<p>Western counterpoint evolved in stages, each corresponding to an expansion of the allowed interval set <span class="math-inline" data-latex="\mathcal{A}"></span> and a corresponding rise in the Turán bound.</p>
+<table>
+<thead>
+<tr>
+<th>Era</th>
+<th>Allowed intervals <span class="math-inline" data-latex="\mathcal{A}"></span></th>
+<th>Forbidden clique size</th>
+<th>Turán bound <span class="math-inline" data-latex="\mathrm{ex}(12, K_{r&#43;1})"></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Medieval organum</td>
+<td><span class="math-inline" data-latex="\{0, 5, 7\}"></span> (unison, 4th, 5th)</td>
+<td><span class="math-inline" data-latex="K_3"></span></td>
+<td>36 edges</td>
+</tr>
+<tr>
+<td>Renaissance (Palestrina)</td>
+<td><span class="math-inline" data-latex="\{0, 3, 4, 7, 8, 9\}"></span> (+ thirds, sixths)</td>
+<td><span class="math-inline" data-latex="K_4"></span></td>
+<td>48 edges</td>
+</tr>
+<tr>
+<td>Common practice</td>
+<td>all intervals except augmented/diminished 4ths/5ths</td>
+<td><span class="math-inline" data-latex="K_5"></span></td>
+<td>54 edges</td>
+</tr>
+<tr>
+<td>Modern chromatic</td>
+<td>near-complete</td>
+<td><span class="math-inline" data-latex="K_{13}"></span> (trivial)</td>
+<td>66 edges</td>
+</tr>
+</tbody>
+</table>
+<p>The most important medieval prohibition is <strong>parallel fifths and octaves</strong>: two voices may not move in the same direction by a perfect fifth (or octave) simultaneously. In graph terms, this constrains which edges may <em>co-occur dynamically</em> (a temporal constraint), not merely which edges exist. The static Turán bound gives a necessary condition on polyphonic density; the dynamic parallel-motion rules give additional linear-algebraic constraints on voice-leading paths through the graph.</p>
+<p><strong>Chord symmetry and ambiguity</strong></p>
+<p>The Orbit-Stabilizer theorem explains why certain chords are harmonically &ldquo;slippery&rdquo;:</p>
+<ul>
+<li><strong>Major triad</strong> <span class="math-inline" data-latex="\{0,4,7\}"></span>: <span class="math-inline" data-latex="\mathrm{Stab} = \{0\}"></span>, <span class="math-inline" data-latex="|\mathrm{Orb}| = 12"></span>. Twelve distinct major triads, each pointing unambiguously to one key.</li>
+<li><strong>Augmented triad</strong> <span class="math-inline" data-latex="\{0,4,8\}"></span>: <span class="math-inline" data-latex="\mathrm{Stab} = \{0,4,8\}"></span>, <span class="math-inline" data-latex="|\mathrm{Orb}| = 4"></span>. Only four distinct augmented triads; Liszt and Wagner exploited this to pivot between three keys simultaneously.</li>
+<li><strong>Diminished seventh chord</strong> <span class="math-inline" data-latex="\{0,3,6,9\}"></span>: <span class="math-inline" data-latex="\mathrm{Stab} = \{0,3,6,9\}"></span>, <span class="math-inline" data-latex="|\mathrm{Orb}| = 3"></span>. Only three distinct diminished seventh chords; the ultimate modulation tool of Romanticism.</li>
+<li><strong>Whole-tone scale</strong> <span class="math-inline" data-latex="\{0,2,4,6,8,10\}"></span>: <span class="math-inline" data-latex="|\mathrm{Stab}| = 6"></span>, <span class="math-inline" data-latex="|\mathrm{Orb}| = 2"></span>. Debussy&rsquo;s floating, directionless sonority comes from having only two whole-tone collections.</li>
+</ul>
+<p>By Burnside&rsquo;s lemma, the total number of essentially distinct three-note chord types under transposition is exactly <strong>19</strong>, and four-note chord types is <strong>43</strong>. This is the complete mathematical map of harmonic space.</p>
+</div>
+</div>
+
+<hr>
+<h2 id="numerical-examples">Numerical Examples</h2>
+<p><strong>Turán numbers for <span class="math-inline" data-latex="n = 12"></span> vertices:</strong></p>
+<div class="math-display" data-latex="\mathrm{ex}(12, K_3) = \left(1 - \frac{1}{2}\right)\frac{144}{2} = 36 \quad \Leftrightarrow \quad K_{6,6}"></div>
+<div class="math-display" data-latex="\mathrm{ex}(12, K_4) = \left(1 - \frac{1}{3}\right)\frac{144}{2} = 48 \quad \Leftrightarrow \quad T(12,3) = K_{4,4,4}"></div>
+<div class="math-display" data-latex="\mathrm{ex}(12, K_5) = \left(1 - \frac{1}{4}\right)\frac{144}{2} = 54 \quad \Leftrightarrow \quad T(12,4) = K_{3,3,3,3}"></div>
+<p>The fact that <span class="math-inline" data-latex="\mathrm{ex}(12, K_3) = 36"></span> is achieved by <span class="math-inline" data-latex="K_{6,6}"></span> has an elegant musical coincidence: the whole-tone scale divides the twelve pitch classes into exactly two groups of six (<span class="math-inline" data-latex="\{0,2,4,6,8,10\}"></span> and <span class="math-inline" data-latex="\{1,3,5,7,9,11\}"></span>), which is the vertex bipartition of <span class="math-inline" data-latex="K_{6,6}"></span>.</p>
+<hr>
+<h2 id="limits-and-open-questions">Limits and Open Questions</h2>
+<ol>
+<li>
+<p><strong>Dynamic vs. static constraints.</strong> Turán&rsquo;s theorem addresses static graph density. The counterpoint rules for parallel motion are inherently dynamic: they constrain <em>sequences</em> of simultaneously sounding intervals. A full mathematical treatment requires modeling voice-leading as paths in a product graph, connecting to the work of Tymoczko on voice-leading geometry.</p>
+</li>
+<li>
+<p><strong>Non-graph-theoretic interval constraints.</strong> Some contrapuntal rules involve absolute pitch height (e.g., avoid crossing voices), orchestration timbre, and metric accent — none of which are captured by the pitch-class graph model.</p>
+</li>
+<li>
+<p><strong>Extremal combinatorics of other forbidden patterns.</strong> Zarankiewicz&rsquo;s problem asks for the maximum edges in a bipartite graph with no complete bipartite subgraph <span class="math-inline" data-latex="K_{s,t}"></span>. In a musical reading, this would model textures where no group of <span class="math-inline" data-latex="s"></span> upper-voice notes may all be consonant with every one of <span class="math-inline" data-latex="t"></span> bass notes.</p>
+</li>
+<li>
+<p><strong>Burnside count for rhythm.</strong> Analogous to counting chord types, one can count essentially distinct rhythmic patterns of length <span class="math-inline" data-latex="n"></span> under rotation and reflection — a direct application of Burnside&rsquo;s lemma to dihedral groups, relevant to tala (Indian rhythmic cycles) and African polyrhythm.</p>
+</li>
+</ol>
+<hr>
+<h2 id="academic-references">Academic References</h2>
+<ol>
+<li>
+<p>Turán, P. (1941). On an extremal problem in graph theory. <em>Matematikai és Fizikai Lapok</em>, 48, 436–452. (Hungarian; the theorem that started extremal graph theory.)</p>
+</li>
+<li>
+<p>Bollobás, B. (1978). <em>Extremal Graph Theory</em>. Academic Press. Ch. 2–3 (Turán-type results).</p>
+</li>
+<li>
+<p>Aigner, M., &amp; Ziegler, G. M. (2018). <em>Proofs from THE BOOK</em> (6th ed.). Springer. &ldquo;Turán&rsquo;s Graph Theorem&rdquo; chapter (Mantel&rsquo;s proof).</p>
+</li>
+<li>
+<p>Tymoczko, D. (2011). <em>A Geometry of Music</em>. Oxford University Press. Ch. 2 (Voice-leading and chord geometry).</p>
+</li>
+<li>
+<p>Forte, A. (1973). <em>The Structure of Atonal Music</em>. Yale University Press. (Pitch-class set theory and the 219 chord types.)</p>
+</li>
+<li>
+<p>Guerino Mazzola (2002). <em>The Topos of Music</em>. Birkhäuser. (Categorical and topological approach to harmony.)</p>
+</li>
+<li>
+<p>Knopoff, L., &amp; Hutchinson, W. (1983). Entropy as a measure of style. <em>Journal of Music Theory</em>, 27(1), 75–97.</p>
+</li>
+</ol>
+
+    </div>
+
+    
+    <nav class="ep-nav">
+      
+      
+      
+      
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+      
+      <a href="https://amath390.sibeliusp.com/episodes/ep04/" class="ep-nav-prev">
+        ← EP04: All-Interval Rows and ℤ₁₂
+      </a>
+      
+      
+      <a href="https://amath390.sibeliusp.com/episodes/ep06/" class="ep-nav-next">
+        EP06: Graph Coloring and Voice Assignment →
+      </a>
+      
+    </nav>
+  </article>
+
+  
+  
+  
+  <aside class="ep-toc-aside">
+    <div class="ep-toc-sticky">
+      <div class="ep-toc-label">本页目录</div>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#definitions">Definitions</a></li>
+    <li><a href="#main-theorems">Main Theorems</a></li>
+    <li><a href="#musical-connection">Musical Connection</a></li>
+    <li><a href="#numerical-examples">Numerical Examples</a></li>
+    <li><a href="#limits-and-open-questions">Limits and Open Questions</a></li>
+    <li><a href="#academic-references">Academic References</a></li>
+  </ul>
+</nav>
+    </div>
+  </aside>
+  
+</div>
+
+      <footer class="site-footer">
+  <div class="footer-content">
+    <span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
+    <span class="footer-sep">·</span>
+    <a href="https://www.xiaohongshu.com" target="_blank" rel="noopener">小红书</a>
+    <span class="footer-sep">·</span>
+    <span>Built with <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> + KaTeX</span>
+  </div>
+</footer>
+
+    </main>
+  </div>
+</body>
+</html>

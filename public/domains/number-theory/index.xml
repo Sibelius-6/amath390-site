@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Number Theory on AMATH 390 数学与音乐</title>
+    <link>https://amath390.sibeliusp.com/domains/number-theory/</link>
+    <description>Recent content in Number Theory on AMATH 390 数学与音乐</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://amath390.sibeliusp.com/domains/number-theory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EP11: Comma Drift and the Impossibility of Perfect Tuning</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep11/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep11/</guid>
+      <description>Overview Jacob Collier calls the piano&amp;rsquo;s major third a &amp;ldquo;cheat.&amp;rdquo; He is right, in a precise mathematical sense: the equal-tempered major third is 14 cents wider than the just major third. And the reason this discrepancy can never be eliminated — not by any tuning system, however ingeniously constructed — is a theorem in number theory.
+ 中文: &amp;ldquo;Jacob说，钢琴的大三度比纯律高了14音分——他把这叫做骗局。他选择用耳朵去调律，追求纯律的融合。但这个选择有代价：调性会漂移。这集，我们从数学角度解释：为什么纯净必然导致漂移？因为三个素数，永不相交。&amp;rdquo;
+ The core result is that  is irrational — no power of a perfect fifth (3:2) equals any power of an octave (2:1).</description>
+    </item>
+    
+    <item>
+      <title>EP12: The Circle of Fifths as a Folded Spiral</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep12/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep12/</guid>
+      <description>Overview Jacob Collier&amp;rsquo;s &amp;ldquo;Super Ultra Hyper Mega Meta Lydian&amp;rdquo; is not just a joke. It describes a real mathematical structure: an infinite chain of Lydian tetrachords ascending the circle of fifths, never stopping, never repeating. But on a piano — which uses 12-TET — the spiral is forced into a circle, and after 12 steps you return to the same key.
+ 中文: &amp;ldquo;圆是钢琴的近似。螺旋是数学的真实。SUM的永不停步，恰好映射了这条螺旋。&amp;rdquo;
+ The key mathematical fact is : the interval of a fifth (7 semitones) generates the entire group  because 7 and 12 are coprime.</description>
+    </item>
+    
+    <item>
+      <title>EP13: Polyrhythm and Rhythm-Pitch Duality</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep13/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep13/</guid>
+      <description>Overview This is Episode 4 of 4 in the Jacob Collier series — the finale of the  arc.
+Jacob Collier&amp;rsquo;s mastery of both rhythm and harmony looks like two separate gifts. This episode argues it is one: the ability to perceive integer ratios across all time scales. A polyrhythm of  and a perfect fifth are mathematically identical — the ratio  — separated only by a perceptual threshold near 20 Hz.</description>
+    </item>
+    
+    <item>
+      <title>EP29: Primes in the Studio — Standing Waves and QRD Diffusers</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep29/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep29/</guid>
+      <description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
+本集探讨：房间模态, Helmholtz共鸣器, 二次剩余模素数, Gauss和。
+前置知识 定义 Definition (...)  &amp;hellip;  -- 主要定理 Theorem 29.1 (...)  &amp;hellip;  -- Proof. &amp;hellip;  -- 音乐联系 音乐联系 &amp;hellip;  -- 局限性与开放问题 参考文献  待补充  </description>
+    </item>
+    
+  </channel>
+</rss>

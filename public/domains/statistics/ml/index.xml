@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Statistics/ML on AMATH 390 数学与音乐</title>
+    <link>https://amath390.sibeliusp.com/domains/statistics/ml/</link>
+    <description>Recent content in Statistics/ML on AMATH 390 数学与音乐</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language><atom:link href="https://amath390.sibeliusp.com/domains/statistics/ml/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EP21: From Markov to Diffusion — Sixty Years of AI Composition</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep21/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep21/</guid>
+      <description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
+本集探讨：Markov链, Transformer注意力, 分数匹配/扩散。
+前置知识 定义 Definition (...)  &amp;hellip;  -- 主要定理 Theorem 21.1 (...)  &amp;hellip;  -- Proof. &amp;hellip;  -- 音乐联系 音乐联系 &amp;hellip;  -- 局限性与开放问题 参考文献  待补充  </description>
+    </item>
+    
+    <item>
+      <title>EP22: How AI Writes Music — EnCodec and RVQ</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep22/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep22/</guid>
+      <description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
+本集探讨：EnCodec RVQ, 因果Transformer, 扩散DiT。
+前置知识 定义 Definition (...)  &amp;hellip;  -- 主要定理 Theorem 22.1 (...)  &amp;hellip;  -- Proof. &amp;hellip;  -- 音乐联系 音乐联系 &amp;hellip;  -- 局限性与开放问题 参考文献  待补充  </description>
+    </item>
+    
+    <item>
+      <title>EP23: Can AI Understand Music? Latent Space and Information Bottleneck</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep23/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep23/</guid>
+      <description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
+本集探讨：潜空间几何, 码本探测, 信息瓶颈。
+前置知识 定义 Definition (...)  &amp;hellip;  -- 主要定理 Theorem 23.1 (...)  &amp;hellip;  -- Proof. &amp;hellip;  -- 音乐联系 音乐联系 &amp;hellip;  -- 局限性与开放问题 参考文献  待补充  </description>
+    </item>
+    
+    <item>
+      <title>EP25: Why Music Gives You Goosebumps — Prediction Error and Frisson</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep25/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep25/</guid>
+      <description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
+本集探讨：预测误差δ=r+γV(s&#39;)−V(s), 贝叶斯更新。
+前置知识 定义 Definition (...)  &amp;hellip;  -- 主要定理 Theorem 25.1 (...)  &amp;hellip;  -- Proof. &amp;hellip;  -- 音乐联系 音乐联系 &amp;hellip;  -- 局限性与开放问题 参考文献  待补充  </description>
+    </item>
+    
+    <item>
+      <title>EP41: The Mathematics of Source Separation — NMF to Demucs</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep41/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep41/</guid>
+      <description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
+本集探讨：NMF V≈WH乘法更新规则, Wiener掩模MMSE最优性, U-Net, HTDemucs, SDR指标。
+前置知识 定义 Definition (...)  &amp;hellip;  -- 主要定理 Theorem 41.1 (...)  &amp;hellip;  -- Proof. &amp;hellip;  -- 音乐联系 音乐联系 &amp;hellip;  -- 局限性与开放问题 参考文献  待补充  </description>
+    </item>
+    
+    <item>
+      <title>EP42: Chord Recognition — From Chroma Vectors to Viterbi Decoding</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep42/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep42/</guid>
+      <description>概述 你播放一首歌，App 在零点一秒内报出和弦名。这不是凭感觉猜测，也不是查数据库。 背后是一个隐马尔可夫模型（Hidden Markov Model, HMM），和一个格形图上的最短路径算法（Viterbi）。
+本集从信号处理（STFT 色度向量）出发，经过模板匹配，建立 HMM 的三要素， 最终用 Viterbi 动态规划在  时间内精确解码最优和弦序列。
+ 前置知识   STFT 与相位声码器（EP35） — 短时傅里叶变换  全音程列与 （EP04） — 十二音类循环群结构  马尔可夫链与 AI 作曲（EP21） — 离散 Markov 链  人声分离（EP41） — 上游信号分离流程   定义 Definition 42.1 (色度特征向量)  设音频帧的短时傅里叶变换幅度谱为 ，。 色度向量  的第  分量（）定义为
+ 其中 ， 为第  个频率箱的中心频率， 为参考频率（通常取 C0 = 16.35 Hz）。
+色度向量将所有八度的能量折叠到  上， 实现八度等价： 汇聚了 C4、C5、C6 等所有八度上音名为  的能量。</description>
+    </item>
+    
+  </channel>
+</rss>

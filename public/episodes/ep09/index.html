@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EP09: Combination Tones and Nonlinear Acoustics | AMATH 390 数学与音乐</title>
+<meta name="description" content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('[data-latex]').forEach(function(el) {
+    try {
+      katex.render(el.getAttribute('data-latex'), el, {
+        displayMode: el.classList.contains('math-display'),
+        throwOnError: false
+      });
+    } catch(e) { console.warn('KaTeX:', e.message, el); }
+  });
+});
+</script>
+
+
+<link rel="stylesheet" href="/css/amath390.css">
+
+</head>
+<body>
+  <div class="layout-wrapper">
+    
+
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a href="/" class="sidebar-title">AMATH 390</a>
+    <div class="sidebar-subtitle">数学与音乐</div>
+  </div>
+
+  
+
+  
+    
+    
+    
+      
+      <div class="arc-group">
+        <div class="arc-label">数学基础篇</div>
+        
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep01/"
+               class="ep-link">
+              <span class="ep-num">01</span>
+              <span class="ep-title">Chord Space and the Torus</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep02/"
+               class="ep-link">
+              <span class="ep-num">02</span>
+              <span class="ep-title">String Vibration and the Wave Equation</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep03/"
+               class="ep-link">
+              <span class="ep-num">03</span>
+              <span class="ep-title">Bach and Graph Connectivity</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep04/"
+               class="ep-link">
+              <span class="ep-num">04</span>
+              <span class="ep-title">All-Interval Rows and ℤ₁₂</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep05/"
+               class="ep-link">
+              <span class="ep-num">05</span>
+              <span class="ep-title">Turán&#39;s Theorem and Counterpoint</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep06/"
+               class="ep-link">
+              <span class="ep-num">06</span>
+              <span class="ep-title">Graph Coloring and Voice Assignment</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep07/"
+               class="ep-link">
+              <span class="ep-num">07</span>
+              <span class="ep-title">Information Entropy and All-Interval Rows</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep08/"
+               class="ep-link">
+              <span class="ep-num">08</span>
+              <span class="ep-title">Shepard Tones and the Tritone Paradox</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep09/"
+               class="ep-link active">
+              <span class="ep-num">09</span>
+              <span class="ep-title">Combination Tones and Nonlinear Acoustics</span>
+            </a>
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
+    
+  
+    
+    
+    
+      
+      <div class="arc-group">
+        <div class="arc-label">Jacob Collier 系列</div>
+        
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep10/"
+               class="ep-link">
+              <span class="ep-num">10</span>
+              <span class="ep-title">Negative Harmony and the Dihedral Group D₁₂</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep11/"
+               class="ep-link">
+              <span class="ep-num">11</span>
+              <span class="ep-title">Comma Drift and the Impossibility of Perfect Tuning</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep12/"
+               class="ep-link">
+              <span class="ep-num">12</span>
+              <span class="ep-title">The Circle of Fifths as a Folded Spiral</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep13/"
+               class="ep-link">
+              <span class="ep-num">13</span>
+              <span class="ep-title">Polyrhythm and Rhythm-Pitch Duality</span>
+            </a>
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
+    
+  
+    
+    
+    
+      
+      <div class="arc-group">
+        <div class="arc-label">拓扑数学专篇</div>
+        
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep14/"
+               class="ep-link">
+              <span class="ep-num">14</span>
+              <span class="ep-title">Tonnetz Hodge Duality</span>
+            </a>
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
+    
+  
+    
+    
+    
+      
+      <div class="arc-group">
+        <div class="arc-label">歌剧系列</div>
+        
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep15/"
+               class="ep-link">
+              <span class="ep-num">15</span>
+              <span class="ep-title">Opera Acoustics and the Singer&#39;s Formant</span>
+            </a>
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+
+  <div class="sidebar-footer">
+    <a href="/theorems/">定理索引</a>
+    <a href="/domains/">数学领域</a>
+    <a href="/about/">关于</a>
+  </div>
+</nav>
+
+    <main class="main-content">
+      
+
+
+
+<div class="episode-layout">
+  <article class="episode-page">
+    <header class="episode-header">
+  <div class="ep-badge">EP09</div>
+  <h1 class="ep-main-title">EP09: Combination Tones and Nonlinear Acoustics</h1>
+  <div class="ep-subtitle">Product-to-Sum Identities, Cochlear Nonlinearity, Tartini Tones</div>
+
+  <div class="ep-meta">
+    
+    <span class="meta-item">
+      <span class="meta-icon">▶</span> 6:28
+    </span>
+    
+    
+    <span class="meta-item domains">
+      <span class="domain-chip">Physics/Acoustics</span><span class="domain-chip">Nonlinear Dynamics</span>
+    </span>
+    
+  </div>
+</header>
+
+    
+
+
+<div class="cross-refs">
+  <h3 class="cross-refs-title">前置知识</h3>
+  <div class="ref-cards">
+    
+      
+      
+      
+      
+        <a href="https://amath390.sibeliusp.com/episodes/ep02/" class="ref-card callback">
+          <span class="ref-ep">EP02</span>
+          <span class="ref-title">String Vibration and the Wave Equation</span>
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="xhs-section">
+  <div class="xhs-section-header">
+    <span class="xhs-logo-badge">小红书</span>
+    <span class="xhs-section-title">Watch on 小红书</span>
+  </div>
+  <div class="xhs-cards">
+    
+    <a href="https://www.xiaohongshu.com/discovery/item/698d8307000000000a03d479?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=AB41xbjqYNdNP85k3iYbMd5YgCV5XLVYcuw3Q-5iAdZes=&amp;xsec_source=pc_share" target="_blank" rel="noopener" class="xhs-card">
+      <div class="xhs-card-inner">
+        <div class="xhs-card-icon">▶</div>
+        <div class="xhs-card-text">
+          <div class="xhs-card-title">你的耳朵会自己造声音</div>
+          <div class="xhs-card-sub">xiaohongshu.com</div>
+        </div>
+        <div class="xhs-card-arrow">→</div>
+      </div>
+    </a>
+    
+  </div>
+</div>
+
+
+
+    <div class="episode-content content">
+      <h2 id="overview">Overview</h2>
+<p>Play two pure tones — 200 Hz and 300 Hz. The spectrum shows exactly two lines. Yet some listeners perceive a faint 100 Hz drone that is not present in the air at all. It is manufactured inside the cochlea.</p>
+<blockquote>
+<p><em>中文:</em> &ldquo;这个100赫兹不存在于空气中。它是你的耳蜗制造出来的。那它从哪来的？&rdquo;</p>
+</blockquote>
+<p>This episode answers that question through the mathematics of nonlinear systems. A linear system passes both frequencies through unchanged. But the cochlea&rsquo;s outer hair cells act as nonlinear amplifiers: their response curve is an S-shaped tanh function, not a straight line. When you expand a nonlinear response <span class="math-inline" data-latex="y = x &#43; \varepsilon x^2 &#43; \delta x^3 &#43; \cdots"></span> around a two-tone input, algebra forces new frequencies into existence. These are the <strong>combination tones</strong> — <span class="math-inline" data-latex="mf_1 \pm nf_2"></span> for all non-negative integers <span class="math-inline" data-latex="m, n"></span>.</p>
+<p>The same mathematics that explains why pure-fifth intervals feel &ldquo;locked&rdquo; also underlies every modern newborn hearing screening: the distortion product otoacoustic emission (DPOAE) test, which records the cochlea&rsquo;s own self-generated sound to check whether outer hair cells are intact.</p>
+<hr>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>
+
+
+
+<a href="https://amath390.sibeliusp.com/episodes/ep02/" class="episode-ref-link">Fourier Analysis and the Wave Equation (EP02)</a>
+
+ — sinusoids as building blocks, frequency domain</li>
+<li>Basic trigonometric identities: <span class="math-inline" data-latex="\cos\alpha\cos\beta = \frac{1}{2}[\cos(\alpha-\beta)&#43;\cos(\alpha&#43;\beta)]"></span></li>
+<li>Elementary differential equations (for the hair-cell oscillator model in EP31)</li>
+</ul>
+<hr>
+<h2 id="definitions">Definitions</h2>
+
+
+<div class="definition-block" id="definition-9.1">
+  <div class="block-label">
+    Definition 9.1 (Linear System)
+  </div>
+  <div class="block-body"><p>A system <span class="math-inline" data-latex="L"></span> mapping input signals to output signals is <strong>linear</strong> if and only if it satisfies superposition:</p>
+<div class="math-display" data-latex="L(af_1 &#43; bf_2) = a\,L(f_1) &#43; b\,L(f_2)"></div>
+<p>for all signals <span class="math-inline" data-latex="f_1, f_2"></span> and scalars <span class="math-inline" data-latex="a, b"></span>.</p>
+<p><strong>Consequence for pure tones:</strong> if <span class="math-inline" data-latex="x(t) = \cos(2\pi f_0 t)"></span> is a pure tone, then <span class="math-inline" data-latex="L(x)(t)"></span> contains only the frequency <span class="math-inline" data-latex="f_0"></span>. A linear system cannot create new frequencies.</p>
+</div>
+</div>
+
+
+
+<div class="definition-block" id="definition-9.2">
+  <div class="block-label">
+    Definition 9.2 (Nonlinear Polynomial Response)
+  </div>
+  <div class="block-body"><p>A <strong>nonlinear response function</strong> <span class="math-inline" data-latex="y = F(x)"></span> is one that cannot be written as <span class="math-inline" data-latex="F(x) = cx"></span> for a constant <span class="math-inline" data-latex="c"></span>. The simplest model is the Taylor expansion</p>
+<div class="math-display" data-latex="y = x &#43; \varepsilon x^2 &#43; \delta x^3 &#43; \cdots"></div>
+<p>where <span class="math-inline" data-latex="\varepsilon, \delta \ll 1"></span> are small nonlinearity coefficients. The quadratic term <span class="math-inline" data-latex="\varepsilon x^2"></span> is responsible for <strong>second-order</strong> combination tones; the cubic term <span class="math-inline" data-latex="\delta x^3"></span> generates <strong>third-order</strong> combination tones.</p>
+</div>
+</div>
+
+
+
+<div class="definition-block" id="definition-9.3">
+  <div class="block-label">
+    Definition 9.3 (Combination Tone)
+  </div>
+  <div class="block-body"><p>Given two input frequencies <span class="math-inline" data-latex="f_1 &lt; f_2"></span>, a <strong>combination tone</strong> is any frequency of the form</p>
+<div class="math-display" data-latex="f_{m,n} = |m f_1 \pm n f_2|, \qquad m, n \in \mathbb{Z}_{\geq 0},\; m&#43;n \geq 1"></div>
+<p>The most audible combination tones are:</p>
+<table>
+<thead>
+<tr>
+<th>Order</th>
+<th>Formula</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2nd</td>
+<td><span class="math-inline" data-latex="f_2 - f_1"></span></td>
+<td>simple difference tone</td>
+</tr>
+<tr>
+<td>2nd</td>
+<td><span class="math-inline" data-latex="f_1 &#43; f_2"></span></td>
+<td>summation tone</td>
+</tr>
+<tr>
+<td>3rd</td>
+<td><span class="math-inline" data-latex="2f_1 - f_2"></span></td>
+<td>cubic difference tone (CDT)</td>
+</tr>
+<tr>
+<td>3rd</td>
+<td><span class="math-inline" data-latex="2f_2 - f_1"></span></td>
+<td>upper cubic difference tone</td>
+</tr>
+</tbody>
+</table>
+<p>In human hearing, the <strong>cubic difference tone</strong> <span class="math-inline" data-latex="2f_1 - f_2"></span> is the strongest, because the cochlear nonlinearity is predominantly cubic rather than quadratic.</p>
+</div>
+</div>
+
+
+
+<div class="definition-block" id="definition-9.4">
+  <div class="block-label">
+    Definition 9.4 (Distortion Product Otoacoustic Emission (DPOAE))
+  </div>
+  <div class="block-body"><p>A <strong>distortion product otoacoustic emission</strong> is a sound generated by the cochlea itself in response to two simultaneous pure-tone stimuli <span class="math-inline" data-latex="f_1"></span> and <span class="math-inline" data-latex="f_2"></span> (<span class="math-inline" data-latex="f_2 &gt; f_1"></span>). The emitted sound propagates back through the middle ear and can be recorded in the ear canal with a sensitive microphone.</p>
+<p>The dominant DPOAE frequency is <span class="math-inline" data-latex="2f_1 - f_2"></span>. Its presence and amplitude serve as a diagnostic indicator of outer hair cell (OHC) function. Absence or attenuation of the DPOAE at <span class="math-inline" data-latex="2f_1 - f_2"></span> indicates OHC damage.</p>
+</div>
+</div>
+
+<hr>
+<h2 id="main-theorems">Main Theorems</h2>
+
+
+<div class="theorem-block" id="theorem-9.1">
+  <div class="block-label">
+    Theorem 9.1 (Second-Order Frequency Generation)
+  </div>
+  <div class="block-body"><p>Let the input be <span class="math-inline" data-latex="x(t) = A\cos(2\pi f_1 t) &#43; B\cos(2\pi f_2 t)"></span>. Then the output of the quadratic term <span class="math-inline" data-latex="\varepsilon x^2"></span> is</p>
+<div class="math-display" data-latex="\varepsilon x^2 = \varepsilon\bigl[A\cos(2\pi f_1 t) &#43; B\cos(2\pi f_2 t)\bigr]^2"></div>
+<p>which contains sinusoidal components at frequencies $0$, <span class="math-inline" data-latex="2f_1"></span>, <span class="math-inline" data-latex="2f_2"></span>, <span class="math-inline" data-latex="f_1 &#43; f_2"></span>, and <span class="math-inline" data-latex="|f_1 - f_2|"></span>.</p>
+<p>Specifically:</p>
+<div class="math-display" data-latex="\varepsilon x^2 = \varepsilon\left[\frac{A^2&#43;B^2}{2} &#43; \frac{A^2}{2}\cos(4\pi f_1 t) &#43; \frac{B^2}{2}\cos(4\pi f_2 t) &#43; AB\cos(2\pi(f_1-f_2)t) &#43; AB\cos(2\pi(f_1&#43;f_2)t)\right]"></div>
+</div>
+</div>
+
+<div class="proof-block">
+  <div class="block-label">Proof.</div>
+  <div class="block-body"><p>Expand <span class="math-inline" data-latex="\varepsilon(A\cos\alpha &#43; B\cos\beta)^2"></span> where <span class="math-inline" data-latex="\alpha = 2\pi f_1 t"></span> and <span class="math-inline" data-latex="\beta = 2\pi f_2 t"></span>:</p>
+<div class="math-display" data-latex="\varepsilon x^2 = \varepsilon\left(A^2\cos^2\alpha &#43; 2AB\cos\alpha\cos\beta &#43; B^2\cos^2\beta\right)"></div>
+<p>Apply the identities <span class="math-inline" data-latex="\cos^2\theta = \frac{1&#43;\cos 2\theta}{2}"></span> and <span class="math-inline" data-latex="\cos\alpha\cos\beta = \frac{1}{2}[\cos(\alpha-\beta)&#43;\cos(\alpha&#43;\beta)]"></span>:</p>
+<div class="math-display" data-latex="= \varepsilon\left[\frac{A^2}{2}(1&#43;\cos 2\alpha) &#43; AB(\cos(\alpha-\beta)&#43;\cos(\alpha&#43;\beta)) &#43; \frac{B^2}{2}(1&#43;\cos 2\beta)\right]"></div>
+<div class="math-display" data-latex="= \varepsilon\left[\frac{A^2&#43;B^2}{2} &#43; \frac{A^2}{2}\cos(4\pi f_1 t) &#43; \frac{B^2}{2}\cos(4\pi f_2 t) &#43; AB\cos(2\pi(f_1-f_2)t) &#43; AB\cos(2\pi(f_1&#43;f_2)t)\right]"></div>
+<p>The new frequencies <span class="math-inline" data-latex="f_1 - f_2"></span> and <span class="math-inline" data-latex="f_1 &#43; f_2"></span> arise purely from the algebraic expansion. No such frequencies exist in the input spectrum. <span class="math-inline" data-latex="\square"></span></p>
+</div>
+</div>
+
+
+
+<div class="theorem-block" id="theorem-9.2">
+  <div class="block-label">
+    Theorem 9.2 (Third-Order Cubic Difference Tone)
+  </div>
+  <div class="block-body"><p>For input <span class="math-inline" data-latex="x(t) = A\cos(2\pi f_1 t) &#43; B\cos(2\pi f_2 t)"></span>, the cubic term <span class="math-inline" data-latex="\delta x^3"></span> generates, among other components, a sinusoid at the <strong>cubic difference tone</strong> frequency <span class="math-inline" data-latex="2f_1 - f_2"></span> with amplitude <span class="math-inline" data-latex="\frac{3}{4}\delta A^2 B"></span>.</p>
+<p>In particular, for equal amplitudes <span class="math-inline" data-latex="A = B"></span>, this term has amplitude <span class="math-inline" data-latex="\frac{3}{4}\delta A^3"></span>.</p>
+</div>
+</div>
+
+<div class="proof-block">
+  <div class="block-label">Proof.</div>
+  <div class="block-body"><p>We need the cross-term in <span class="math-inline" data-latex="\delta(A\cos\alpha &#43; B\cos\beta)^3"></span> that produces frequency <span class="math-inline" data-latex="2f_1 - f_2"></span>. The expansion yields terms of the form <span class="math-inline" data-latex="\cos^2\alpha\cos\beta"></span>:</p>
+<div class="math-display" data-latex="3\delta A^2 B \cos^2\alpha\cos\beta = 3\delta A^2 B \cdot \frac{1&#43;\cos 2\alpha}{2} \cdot \cos\beta"></div>
+<div class="math-display" data-latex="= \frac{3\delta A^2 B}{2}\cos\beta &#43; \frac{3\delta A^2 B}{2}\cos 2\alpha\cos\beta"></div>
+<p>Apply the product formula to the last term:</p>
+<div class="math-display" data-latex="\frac{3\delta A^2 B}{2}\cos(2\alpha-\beta) &#43; \frac{3\delta A^2 B}{2}\cos(2\alpha&#43;\beta)"></div>
+<p>The term <span class="math-inline" data-latex="\frac{3\delta A^2 B}{2}\cos(2\alpha-\beta) = \frac{3\delta A^2 B}{2}\cos(2\pi(2f_1-f_2)t)"></span> is the cubic difference tone at <span class="math-inline" data-latex="2f_1 - f_2"></span>.</p>
+<p>Since the full expansion of <span class="math-inline" data-latex="\cos^3"></span> and the cross-terms also contribute to the coefficient by a factor of <span class="math-inline" data-latex="\frac{1}{2}"></span> (from averaging), the amplitude of the CDT component is <span class="math-inline" data-latex="\frac{3}{4}\delta A^2 B"></span>. <span class="math-inline" data-latex="\square"></span></p>
+</div>
+</div>
+
+
+
+<div class="theorem-block" id="theorem-9.3">
+  <div class="block-label">
+    Theorem 9.3 (Harmonic Alignment Under Just Intonation)
+  </div>
+  <div class="block-body">Let <span class="math-inline" data-latex="f_1"></span> and <span class="math-inline" data-latex="f_2 = \frac{3}{2}f_1"></span> be a just perfect fifth. Then all combination tones <span class="math-inline" data-latex="|mf_1 - nf_2|"></span> for <span class="math-inline" data-latex="m, n \in \{0,1,2\}"></span> are integer multiples of <span class="math-inline" data-latex="\frac{f_1}{2}"></span>. In particular, they all belong to the harmonic series with fundamental <span class="math-inline" data-latex="\frac{f_1}{2}"></span>.</div>
+</div>
+
+<div class="proof-block">
+  <div class="block-label">Proof.</div>
+  <div class="block-body"><p>Set <span class="math-inline" data-latex="f_1 = 2F"></span> so that <span class="math-inline" data-latex="f_2 = 3F"></span>, where <span class="math-inline" data-latex="F = f_1/2"></span>. Then:</p>
+<ul>
+<li><span class="math-inline" data-latex="f_2 - f_1 = F"></span> (1st harmonic of <span class="math-inline" data-latex="F"></span>)</li>
+<li><span class="math-inline" data-latex="f_1 = 2F"></span> (2nd harmonic)</li>
+<li><span class="math-inline" data-latex="f_2 = 3F"></span> (3rd harmonic)</li>
+<li><span class="math-inline" data-latex="2f_1 - f_2 = 4F - 3F = F"></span> (1st harmonic)</li>
+<li><span class="math-inline" data-latex="2f_2 - f_1 = 6F - 2F = 4F"></span> (4th harmonic)</li>
+<li><span class="math-inline" data-latex="f_1 &#43; f_2 = 5F"></span> (5th harmonic)</li>
+</ul>
+<p>All values are positive integer multiples of <span class="math-inline" data-latex="F"></span>. They form a complete harmonic series <span class="math-inline" data-latex="\{F, 2F, 3F, 4F, 5F\}"></span>.</p>
+<blockquote>
+<p><em>中文:</em> &ldquo;看这组数字——它们全部是100赫兹的整数倍。第1、第2、第3、第4、第5谐波，一个不差。神经元看到的是一面整齐的栅栏——每根栏杆间距完全相等。同步放电。大脑说：这是一个声音。&rdquo;</p>
+</blockquote>
+<p><span class="math-inline" data-latex="\square"></span></p>
+</div>
+</div>
+
+
+
+<div class="proposition-block" id="prop-9.1">
+  <div class="block-label">
+    Prop 9.1 (12-TET Fifth Misalignment)
+  </div>
+  <div class="block-body">For the equal-tempered fifth <span class="math-inline" data-latex="f_2 = 2^{7/12}f_1 \approx 1.4983\,f_1"></span>, the combination tones <span class="math-inline" data-latex="2f_1 - f_2"></span> and <span class="math-inline" data-latex="f_2 - f_1"></span> are <strong>not</strong> integer multiples of any common fundamental. The misalignment (compared to the just fifth) is approximately <span class="math-inline" data-latex="|f_2^{\text{ET}} - f_2^{\text{just}}| \approx 0.0017 f_1"></span>, which corresponds to about 2 cents per fifth — small but systematic.</div>
+</div>
+
+<div class="proof-block">
+  <div class="block-label">Proof.</div>
+  <div class="block-body"><p>For <span class="math-inline" data-latex="f_1 = 200"></span> Hz, <span class="math-inline" data-latex="f_2^{\text{just}} = 300"></span> Hz, <span class="math-inline" data-latex="f_2^{\text{ET}} = 200 \times 2^{7/12} \approx 299.66"></span> Hz.</p>
+<ul>
+<li>Just CDT: <span class="math-inline" data-latex="2(200) - 300 = 100"></span> Hz</li>
+<li>ET CDT: <span class="math-inline" data-latex="2(200) - 299.66 = 100.34"></span> Hz</li>
+</ul>
+<p>These differ by 0.34 Hz. Similarly, <span class="math-inline" data-latex="f_2^{\text{ET}} - f_1 = 99.66"></span> Hz vs. 100 Hz for just. The combination tones no longer align on a harmonic series: no integer <span class="math-inline" data-latex="k"></span> satisfies <span class="math-inline" data-latex="k \times 99.66 = 100.34 \times j"></span> for small integers <span class="math-inline" data-latex="j"></span>. The slight incommensurability produces <strong>beating</strong> — a slow amplitude modulation at <span class="math-inline" data-latex="\approx 0.34"></span> Hz for the CDT, and <span class="math-inline" data-latex="\approx 0.68"></span> Hz between the two difference tones — which is perceived as a mild instability or &ldquo;floating&rdquo; quality compared to the locked just fifth. <span class="math-inline" data-latex="\square"></span></p>
+</div>
+</div>
+
+<hr>
+<h2 id="numerical-example-tartinis-major-third">Numerical Example: Tartini&rsquo;s Major Third</h2>
+<p>Tartini (1714) observed a third tone when bowing a major third. For a just major third <span class="math-inline" data-latex="f_2/f_1 = 5/4"></span>:</p>
+<p>Set <span class="math-inline" data-latex="f_1 = 400"></span> Hz, <span class="math-inline" data-latex="f_2 = 500"></span> Hz.</p>
+<div class="math-display" data-latex="f_2 - f_1 = 100 \text{ Hz} \quad \Bigl(\text{two octaves below } f_1\Bigr)"></div>
+<div class="math-display" data-latex="2f_1 - f_2 = 800 - 500 = 300 \text{ Hz} \quad \Bigl(= \tfrac{3}{4}f_1\Bigr)"></div>
+<div class="math-display" data-latex="2f_2 - f_1 = 1000 - 400 = 600 \text{ Hz} \quad \Bigl(= \tfrac{3}{2}f_1\Bigr)"></div>
+<p>The difference tone 100 Hz is <span class="math-inline" data-latex="f_1/4"></span> — two octaves below the lower note. All tones lie on the harmonic series of 100 Hz (the 4th, 5th, 6th, 8th harmonics). Tartini used the clarity of this 100 Hz ghost tone to verify that his double-stop was in tune.</p>
+<hr>
+<h2 id="musical-connection">Musical Connection</h2>
+<div class="music-block">
+  <div class="block-label">音乐联系</div>
+  <div class="block-body"><p><strong>Why pure fifths &ldquo;lock&rdquo; and equal-tempered fifths &ldquo;float&rdquo;</strong></p>
+<p>The perception of consonance in sustained intervals (especially by string players) is tightly coupled to combination tone alignment. When <span class="math-inline" data-latex="f_2/f_1 = 3/2"></span> exactly, all second- and third-order combination tones fall on a shared harmonic series. The auditory nerve, which phase-locks to individual frequency components, receives a periodic pattern whose inter-spike intervals are all integer multiples of the same period. The brainstem perceives this as &ldquo;one sound&rdquo; — what string players call the sensation of locking or resonating in.</p>
+<p>When <span class="math-inline" data-latex="f_2/f_1 = 2^{7/12} \approx 1.4983"></span>, the combination tones are incommensurable. The auditory nerve receives multiple nearly-but-not-quite periodic patterns, producing slow intermodulation — perceived as a gentle beating or floating quality.</p>
+<blockquote>
+<p><em>中文:</em> &ldquo;组合音不是协和感的全部解释，但它是&rsquo;锁定感&rsquo;的一个重要机制。不只是音符本身在决定稳不稳——你的耳蜗制造的副产品，也在参与投票。&rdquo;</p>
+</blockquote>
+<p><strong>DPOAE and the cochlea as a sound source</strong></p>
+<p>The cubic difference tone <span class="math-inline" data-latex="2f_1 - f_2"></span> is not merely perceived — it is physically emitted. Measurements by Kemp (1978) confirmed that a microphone placed in the ear canal can detect this frequency while the listener hears the two-tone stimulus. The cochlea is not merely a passive receiver; it is an active, nonlinear amplifier that broadcasts evidence of its own computation.</p>
+<blockquote>
+<p><em>中文:</em> &ldquo;1714年，意大利小提琴家Tartini拉双音时听到了这个幽灵般的第三音。他教学生用它来校准纯律五度——如果第三音清晰稳定，说明音准对了。他以为自己发现了一个演奏技巧。其实他发现了所有哺乳动物耳蜗的基本工作原理——比Helmholtz的严格数学分析早了149年。&rdquo;</p>
+</blockquote>
+<p><strong>Forward connection to EP31 and EP32</strong></p>
+<p>The tanh saturation curve of the outer hair cell is the same nonlinearity that Moog used to model tube saturation in filter design (EP31), and the polynomial expansion <span class="math-inline" data-latex="x &#43; \varepsilon x^2 &#43; \delta x^3"></span> is the generating mechanism for Chebyshev waveshaping (EP32). Nonlinear distortion is simultaneously a biological fact, a psychoacoustic mechanism, and a synthesis tool.</p>
+</div>
+</div>
+
+<hr>
+<h2 id="limits-and-open-questions">Limits and Open Questions</h2>
+<ol>
+<li>
+<p><strong>Cochlear mechanics vs. neural origin.</strong> Whether combination tones arise primarily in the mechanical nonlinearity of the basilar membrane (Helmholtz) or in the neural transduction process (Goldstein 1967) is still debated. The DPOAE evidence strongly favors a mechanical, pre-neural origin for the <span class="math-inline" data-latex="2f_1-f_2"></span> tone, but higher-order combination tones may have neural contributions.</p>
+</li>
+<li>
+<p><strong>Threshold and masking.</strong> Combination tones are audible only above certain stimulus levels and in the absence of masking noise. A full psychoacoustic model requires integrating the nonlinear generation mechanism with critical-band masking theory (EP40). The transition between &ldquo;audible CDT&rdquo; and &ldquo;masked CDT&rdquo; is not sharp and depends on individual cochlear gain.</p>
+</li>
+<li>
+<p><strong>Musical consonance as a single-mechanism account.</strong> The harmonic alignment argument for consonance (Theorem 9.3) is necessary but not sufficient. Cultural conditioning, spectral envelope, and sensory fusion all contribute. The Plomp-Levelt (1965) roughness model provides a complementary account based on critical-band interference rather than combination tones.</p>
+</li>
+<li>
+<p><strong>Composition using DPOAEs.</strong> Maryanne Amacher&rsquo;s work (referenced in the narration) raises the open question: can a composer write music whose &ldquo;notes&rdquo; are the listener&rsquo;s own DPOAEs? This requires knowing the individual listener&rsquo;s cochlear gain curve — a personalized, biologically-dependent compositional parameter.</p>
+</li>
+</ol>
+<hr>
+<h2 id="academic-references">Academic References</h2>
+<ol>
+<li>
+<p>Helmholtz, H. L. F. (1877). <em>On the Sensations of Tone as a Physiological Basis for the Theory of Music</em> (A. J. Ellis, Trans.). Longmans, Green. (Original German: 1863.)</p>
+</li>
+<li>
+<p>Tartini, G. (1754). <em>Trattato di Musica Secondo la Vera Scienza dell&rsquo;Armonia</em>. Padova.</p>
+</li>
+<li>
+<p>Kemp, D. T. (1978). Stimulated acoustic emissions from within the human auditory system. <em>Journal of the Acoustical Society of America</em>, 64(5), 1386–1391.</p>
+</li>
+<li>
+<p>Goldstein, J. L. (1967). Auditory nonlinearity. <em>Journal of the Acoustical Society of America</em>, 41(3), 676–689.</p>
+</li>
+<li>
+<p>Plomp, R., &amp; Levelt, W. J. M. (1965). Tonal consonance and critical bandwidth. <em>Journal of the Acoustical Society of America</em>, 38(4), 548–560.</p>
+</li>
+<li>
+<p>Robles, L., Ruggero, M. A., &amp; Rich, N. C. (1997). Two-tone distortion in the basilar membrane of the cochlea. <em>Nature</em>, 349, 413–414.</p>
+</li>
+<li>
+<p>Zwicker, E., &amp; Fastl, H. (1999). <em>Psychoacoustics: Facts and Models</em> (2nd ed.). Springer. Ch. 4 (Nonlinear distortion).</p>
+</li>
+</ol>
+
+    </div>
+
+    
+    <nav class="ep-nav">
+      
+      
+      
+      
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+      
+      <a href="https://amath390.sibeliusp.com/episodes/ep08/" class="ep-nav-prev">
+        ← EP08: Shepard Tones and the Tritone Paradox
+      </a>
+      
+      
+      <a href="https://amath390.sibeliusp.com/episodes/ep10/" class="ep-nav-next">
+        EP10: Negative Harmony and the Dihedral Group D₁₂ →
+      </a>
+      
+    </nav>
+  </article>
+
+  
+  
+  
+  <aside class="ep-toc-aside">
+    <div class="ep-toc-sticky">
+      <div class="ep-toc-label">本页目录</div>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#definitions">Definitions</a></li>
+    <li><a href="#main-theorems">Main Theorems</a></li>
+    <li><a href="#numerical-example-tartinis-major-third">Numerical Example: Tartini&rsquo;s Major Third</a></li>
+    <li><a href="#musical-connection">Musical Connection</a></li>
+    <li><a href="#limits-and-open-questions">Limits and Open Questions</a></li>
+    <li><a href="#academic-references">Academic References</a></li>
+  </ul>
+</nav>
+    </div>
+  </aside>
+  
+</div>
+
+      <footer class="site-footer">
+  <div class="footer-content">
+    <span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
+    <span class="footer-sep">·</span>
+    <a href="https://www.xiaohongshu.com" target="_blank" rel="noopener">小红书</a>
+    <span class="footer-sep">·</span>
+    <span>Built with <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> + KaTeX</span>
+  </div>
+</footer>
+
+    </main>
+  </div>
+</body>
+</html>

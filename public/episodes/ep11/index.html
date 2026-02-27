@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EP11: Comma Drift and the Impossibility of Perfect Tuning | AMATH 390 数学与音乐</title>
+<meta name="description" content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('[data-latex]').forEach(function(el) {
+    try {
+      katex.render(el.getAttribute('data-latex'), el, {
+        displayMode: el.classList.contains('math-display'),
+        throwOnError: false
+      });
+    } catch(e) { console.warn('KaTeX:', e.message, el); }
+  });
+});
+</script>
+
+
+<link rel="stylesheet" href="/css/amath390.css">
+
+</head>
+<body>
+  <div class="layout-wrapper">
+    
+
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a href="/" class="sidebar-title">AMATH 390</a>
+    <div class="sidebar-subtitle">数学与音乐</div>
+  </div>
+
+  
+
+  
+    
+    
+    
+      
+      <div class="arc-group">
+        <div class="arc-label">数学基础篇</div>
+        
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep01/"
+               class="ep-link">
+              <span class="ep-num">01</span>
+              <span class="ep-title">Chord Space and the Torus</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep02/"
+               class="ep-link">
+              <span class="ep-num">02</span>
+              <span class="ep-title">String Vibration and the Wave Equation</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep03/"
+               class="ep-link">
+              <span class="ep-num">03</span>
+              <span class="ep-title">Bach and Graph Connectivity</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep04/"
+               class="ep-link">
+              <span class="ep-num">04</span>
+              <span class="ep-title">All-Interval Rows and ℤ₁₂</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep05/"
+               class="ep-link">
+              <span class="ep-num">05</span>
+              <span class="ep-title">Turán&#39;s Theorem and Counterpoint</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep06/"
+               class="ep-link">
+              <span class="ep-num">06</span>
+              <span class="ep-title">Graph Coloring and Voice Assignment</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep07/"
+               class="ep-link">
+              <span class="ep-num">07</span>
+              <span class="ep-title">Information Entropy and All-Interval Rows</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep08/"
+               class="ep-link">
+              <span class="ep-num">08</span>
+              <span class="ep-title">Shepard Tones and the Tritone Paradox</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep09/"
+               class="ep-link">
+              <span class="ep-num">09</span>
+              <span class="ep-title">Combination Tones and Nonlinear Acoustics</span>
+            </a>
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
+    
+  
+    
+    
+    
+      
+      <div class="arc-group">
+        <div class="arc-label">Jacob Collier 系列</div>
+        
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep10/"
+               class="ep-link">
+              <span class="ep-num">10</span>
+              <span class="ep-title">Negative Harmony and the Dihedral Group D₁₂</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep11/"
+               class="ep-link active">
+              <span class="ep-num">11</span>
+              <span class="ep-title">Comma Drift and the Impossibility of Perfect Tuning</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep12/"
+               class="ep-link">
+              <span class="ep-num">12</span>
+              <span class="ep-title">The Circle of Fifths as a Folded Spiral</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep13/"
+               class="ep-link">
+              <span class="ep-num">13</span>
+              <span class="ep-title">Polyrhythm and Rhythm-Pitch Duality</span>
+            </a>
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
+    
+  
+    
+    
+    
+      
+      <div class="arc-group">
+        <div class="arc-label">拓扑数学专篇</div>
+        
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep14/"
+               class="ep-link">
+              <span class="ep-num">14</span>
+              <span class="ep-title">Tonnetz Hodge Duality</span>
+            </a>
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
+    
+  
+    
+    
+    
+      
+      <div class="arc-group">
+        <div class="arc-label">歌剧系列</div>
+        
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep15/"
+               class="ep-link">
+              <span class="ep-num">15</span>
+              <span class="ep-title">Opera Acoustics and the Singer&#39;s Formant</span>
+            </a>
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+
+  <div class="sidebar-footer">
+    <a href="/theorems/">定理索引</a>
+    <a href="/domains/">数学领域</a>
+    <a href="/about/">关于</a>
+  </div>
+</nav>
+
+    <main class="main-content">
+      
+
+
+
+<div class="episode-layout">
+  <article class="episode-page">
+    <header class="episode-header">
+  <div class="ep-badge">EP11</div>
+  <h1 class="ep-main-title">EP11: Comma Drift and the Impossibility of Perfect Tuning</h1>
+  <div class="ep-subtitle">Irrationality of log₂3, Syntonic Comma 81:80, Pythagorean Comma</div>
+
+  <div class="ep-meta">
+    
+    <span class="meta-item">
+      <span class="meta-icon">▶</span> 8:05
+    </span>
+    
+    
+    <span class="meta-item domains">
+      <span class="domain-chip">Number Theory</span>
+    </span>
+    
+  </div>
+</header>
+
+    
+
+
+
+
+
+
+
+<div class="cross-refs">
+  <h3 class="cross-refs-title">后续拓展</h3>
+  <div class="ref-cards">
+    
+      
+      
+        
+        
+        
+          <a href="https://amath390.sibeliusp.com/episodes/ep12/" class="ref-card forward">
+            <span class="ref-ep">EP12</span>
+            <span class="ref-title">The Circle of Fifths as a Folded Spiral</span>
+          </a>
+        
+      
+    
+      
+      
+    
+  </div>
+</div>
+
+
+
+    
+<div class="xhs-section">
+  <div class="xhs-section-header">
+    <span class="xhs-logo-badge">小红书</span>
+    <span class="xhs-section-title">Watch on 小红书</span>
+  </div>
+  <div class="xhs-cards">
+    
+    <a href="https://www.xiaohongshu.com/discovery/item/69965433000000000b012f27?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABez8tR0nI84xzRA5my0NDJwaqRptnkpm0deE5TByjF7M=&amp;xsec_source=pc_share" target="_blank" rel="noopener" class="xhs-card">
+      <div class="xhs-card-inner">
+        <div class="xhs-card-icon">▶</div>
+        <div class="xhs-card-text">
+          <div class="xhs-card-title">调好的钢琴为什么还是走音的？</div>
+          <div class="xhs-card-sub">xiaohongshu.com</div>
+        </div>
+        <div class="xhs-card-arrow">→</div>
+      </div>
+    </a>
+    
+  </div>
+</div>
+
+
+
+    <div class="episode-content content">
+      <h2 id="overview">Overview</h2>
+<p>Jacob Collier calls the piano&rsquo;s major third a &ldquo;cheat.&rdquo; He is right, in a precise mathematical sense: the equal-tempered major third is 14 cents wider than the just major third. And the reason this discrepancy can never be eliminated — not by any tuning system, however ingeniously constructed — is a theorem in number theory.</p>
+<blockquote>
+<p><em>中文:</em> &ldquo;Jacob说，钢琴的大三度比纯律高了14音分——他把这叫做骗局。他选择用耳朵去调律，追求纯律的融合。但这个选择有代价：调性会漂移。这集，我们从数学角度解释：为什么纯净必然导致漂移？因为三个素数，永不相交。&rdquo;</p>
+</blockquote>
+<p>The core result is that <span class="math-inline" data-latex="\log_2 3"></span> is irrational — no power of a perfect fifth (3:2) equals any power of an octave (2:1). This means the &ldquo;spiral of fifths&rdquo; never closes into a circle. Every tuning system is a choice about which aspect of acoustic purity to sacrifice. 12-tone equal temperament chooses to sacrifice a little from every interval equally. Jacob Collier chooses to sacrifice transposability in order to keep pure intervals — and accepts that his pitch center drifts by 14 cents with each just major third progression.</p>
+<p>This is the second episode in the Jacob Collier arc (of four).</p>
+<hr>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Basic number theory: prime factorization, the Fundamental Theorem of Arithmetic</li>
+<li>Logarithm properties: <span class="math-inline" data-latex="\log_b(xy) = \log_b x &#43; \log_b y"></span>, <span class="math-inline" data-latex="\log_b(x^n) = n\log_b x"></span></li>
+<li>Cents: <span class="math-inline" data-latex="1 \text{ cent} = 2^{1/1200}"></span>, so an interval of ratio <span class="math-inline" data-latex="r"></span> equals <span class="math-inline" data-latex="1200\log_2 r"></span> cents</li>
+<li>
+
+
+
+<a href="https://amath390.sibeliusp.com/episodes/ep09/" class="episode-ref-link">Combination Tones (EP09)</a>
+
+ — why just intervals produce locked harmonic series</li>
+</ul>
+<hr>
+<h2 id="definitions">Definitions</h2>
+
+
+<div class="definition-block" id="definition-11.1">
+  <div class="block-label">
+    Definition 11.1 (Just Intervals)
+  </div>
+  <div class="block-body"><p>A <strong>just interval</strong> is a frequency ratio expressible as <span class="math-inline" data-latex="p/q"></span> where <span class="math-inline" data-latex="p, q"></span> are positive integers with small prime factors (i.e., drawn from the <strong>5-limit</strong> prime set <span class="math-inline" data-latex="\{2, 3, 5\}"></span>):</p>
+<table>
+<thead>
+<tr>
+<th>Interval</th>
+<th>Ratio</th>
+<th>Cents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Perfect octave</td>
+<td>2/1</td>
+<td>1200.00</td>
+</tr>
+<tr>
+<td>Perfect fifth</td>
+<td>3/2</td>
+<td>701.96</td>
+</tr>
+<tr>
+<td>Perfect fourth</td>
+<td>4/3</td>
+<td>498.04</td>
+</tr>
+<tr>
+<td>Just major third</td>
+<td>5/4</td>
+<td>386.31</td>
+</tr>
+<tr>
+<td>Just minor third</td>
+<td>6/5</td>
+<td>315.64</td>
+</tr>
+</tbody>
+</table>
+<p>The &ldquo;just&rdquo; in &ldquo;just intonation&rdquo; refers to the small integer ratios that produce perfect harmonic alignment (cf. EP09, Theorem 9.3).</p>
+</div>
+</div>
+
+
+
+<div class="definition-block" id="definition-11.2">
+  <div class="block-label">
+    Definition 11.2 (Syntonic Comma)
+  </div>
+  <div class="block-body"><p>The <strong>syntonic comma</strong> is the ratio</p>
+<div class="math-display" data-latex="\sigma = \frac{81}{80} = \frac{(3/2)^4 / 2^2}{5/4} = \frac{81/64}{80/64} = \frac{81}{80}"></div>
+<p>In cents: <span class="math-inline" data-latex="1200\log_2(81/80) \approx 21.51"></span> cents.</p>
+<p>It measures the discrepancy between two natural routes to the major third:</p>
+<ol>
+<li><strong>Via the harmonic series:</strong> <span class="math-inline" data-latex="5/4"></span> (the 5th partial divided by the 4th partial) <span class="math-inline" data-latex="\approx 386.31"></span> cents</li>
+<li><strong>Via four perfect fifths:</strong> <span class="math-inline" data-latex="(3/2)^4 / 4 = 81/64 \approx 407.82"></span> cents</li>
+</ol>
+<p>The difference is <span class="math-inline" data-latex="407.82 - 386.31 = 21.51"></span> cents. This means the Pythagorean major third (four fifths up, two octaves down) is <strong>sharper</strong> than the just major third by exactly one syntonic comma.</p>
+</div>
+</div>
+
+
+
+<div class="definition-block" id="definition-11.3">
+  <div class="block-label">
+    Definition 11.3 (Pythagorean Comma)
+  </div>
+  <div class="block-body"><p>The <strong>Pythagorean comma</strong> is the ratio</p>
+<div class="math-display" data-latex="\kappa = \frac{(3/2)^{12}}{2^7} = \frac{3^{12}}{2^{19}} = \frac{531441}{524288}"></div>
+<p>In cents: <span class="math-inline" data-latex="1200\log_2(531441/524288) \approx 23.46"></span> cents.</p>
+<p>It measures how far 12 consecutive perfect fifths overshoot 7 perfect octaves:</p>
+<div class="math-display" data-latex="(3/2)^{12} = \frac{531441}{4096} \approx 129.746 \quad \text{vs} \quad 2^7 = 128"></div>
+<p>The spiral of fifths misses closure by this amount after 12 steps.</p>
+</div>
+</div>
+
+
+
+<div class="definition-block" id="definition-11.4">
+  <div class="block-label">
+    Definition 11.4 (Equal Temperament)
+  </div>
+  <div class="block-body"><p><strong>12-tone equal temperament</strong> (12-TET) sets every semitone to the ratio <span class="math-inline" data-latex="2^{1/12}"></span>, so that 12 semitones span exactly one octave. The equal-tempered fifth is <span class="math-inline" data-latex="2^{7/12}"></span> and the equal-tempered major third is <span class="math-inline" data-latex="2^{4/12} = 2^{1/3}"></span>.</p>
+<p>Comparison with just intervals:</p>
+<table>
+<thead>
+<tr>
+<th>Interval</th>
+<th>Just ratio</th>
+<th>ET ratio</th>
+<th>Difference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fifth (P5)</td>
+<td>3/2 = 1.50000</td>
+<td><span class="math-inline" data-latex="2^{7/12} \approx 1.49831"></span></td>
+<td><span class="math-inline" data-latex="-1.955"></span> cents</td>
+</tr>
+<tr>
+<td>Major third (M3)</td>
+<td>5/4 = 1.25000</td>
+<td><span class="math-inline" data-latex="2^{4/12} \approx 1.25992"></span></td>
+<td><span class="math-inline" data-latex="&#43;13.686"></span> cents</td>
+</tr>
+</tbody>
+</table>
+<p>The fifth is nearly pure (2 cents flat); the major third is noticeably wide (14 cents sharp). This is the asymmetry Collier objects to.</p>
+</div>
+</div>
+
+
+
+<div class="definition-block" id="definition-11.5">
+  <div class="block-label">
+    Definition 11.5 (Cents)
+  </div>
+  <div class="block-body"><p>The <strong>cent</strong> is a logarithmic unit of musical interval: 100 cents = 1 equal-tempered semitone, 1200 cents = 1 octave. For a frequency ratio <span class="math-inline" data-latex="r"></span>,</p>
+<div class="math-display" data-latex="\text{interval in cents} = 1200 \cdot \log_2 r"></div>
+<p>The cent scale linearizes the logarithmic frequency axis, making interval arithmetic additive: stacking two intervals means adding their cent values.</p>
+</div>
+</div>
+
+<hr>
+<h2 id="main-theorems">Main Theorems</h2>
+
+
+<div class="theorem-block" id="theorem-11.1">
+  <div class="block-label">
+    Theorem 11.1 (Irrationality of log₂3)
+  </div>
+  <div class="block-body"><span class="math-inline" data-latex="\log_2 3"></span> is irrational. Equivalently, there exist no positive integers <span class="math-inline" data-latex="m, n"></span> such that <span class="math-inline" data-latex="2^m = 3^n"></span>.</div>
+</div>
+
+<div class="proof-block">
+  <div class="block-label">Proof.</div>
+  <div class="block-body"><p>Suppose for contradiction that <span class="math-inline" data-latex="\log_2 3 = m/n"></span> for positive integers <span class="math-inline" data-latex="m, n"></span>. Then</p>
+<div class="math-display" data-latex="2^{m/n} = 3 \implies 2^m = 3^n"></div>
+<p>The left side <span class="math-inline" data-latex="2^m"></span> has prime factorization containing only the prime 2. The right side <span class="math-inline" data-latex="3^n"></span> has prime factorization containing only the prime 3. By the <strong>Fundamental Theorem of Arithmetic</strong>, two integers with distinct prime factorizations cannot be equal. Therefore <span class="math-inline" data-latex="2^m \neq 3^n"></span> for all positive integers <span class="math-inline" data-latex="m, n"></span>.</p>
+<p>This is a contradiction. Hence <span class="math-inline" data-latex="\log_2 3 \notin \mathbb{Q}"></span>. <span class="math-inline" data-latex="\square"></span></p>
+<blockquote>
+<p><em>中文:</em> &ldquo;假设 log 以 2 为底 3 等于某个分数 m 比 n。那么 2 的 m 次方等于 3 的 n 次方。但左边是 2 的 m 次方——素因子分解后，只有 2。右边是 3 的 n 次方——只有 3。一个数不可能既等于&rsquo;全是 2 的乘积'，又等于&rsquo;全是 3 的乘积'。矛盾。&rdquo;</p>
+</blockquote>
+</div>
+</div>
+
+
+
+<div class="theorem-block" id="theorem-11.2">
+  <div class="block-label">
+    Theorem 11.2 (Irrationality of log₂5)
+  </div>
+  <div class="block-body"><span class="math-inline" data-latex="\log_2 5"></span> is irrational. More generally, <span class="math-inline" data-latex="\log_2 p"></span> is irrational for every odd prime <span class="math-inline" data-latex="p"></span>.</div>
+</div>
+
+<div class="proof-block">
+  <div class="block-label">Proof.</div>
+  <div class="block-body"><p>The same argument applies. Suppose <span class="math-inline" data-latex="\log_2 5 = m/n"></span>, giving <span class="math-inline" data-latex="2^m = 5^n"></span>. The left side factors as <span class="math-inline" data-latex="2^m"></span>, the right side as <span class="math-inline" data-latex="5^n"></span>. Since 2 and 5 are distinct primes, the Fundamental Theorem of Arithmetic gives a contradiction. <span class="math-inline" data-latex="\square"></span></p>
+<p><strong>Musical consequence:</strong> Since <span class="math-inline" data-latex="\log_2 2 = 1"></span>, <span class="math-inline" data-latex="\log_2 3"></span>, and <span class="math-inline" data-latex="\log_2 5"></span> are linearly independent over <span class="math-inline" data-latex="\mathbb{Q}"></span>, the three interval generators — octave (2:1), fifth (3:2), major third (5:4) — cannot simultaneously be expressed as integer multiples of any single interval. No EDO (equal division of the octave) can make all three perfectly just.</p>
+<blockquote>
+<p><em>中文:</em> &ldquo;八度即2的幂、纯五度即3的幂、纯大三度即5的幂，这三条指数曲线永不相交。不存在一种调律系统能同时保持它们。你必须选择牺牲哪一个。&rdquo;</p>
+</blockquote>
+</div>
+</div>
+
+
+
+<div class="theorem-block" id="theorem-11.3">
+  <div class="block-label">
+    Theorem 11.3 (The Spiral of Fifths Never Closes)
+  </div>
+  <div class="block-body">The sequence of pitch classes generated by iterating the just perfect fifth <span class="math-inline" data-latex="3/2"></span> never returns to its starting frequency. Formally, there is no positive integer <span class="math-inline" data-latex="n"></span> such that <span class="math-inline" data-latex="(3/2)^n"></span> is a power of 2.</div>
+</div>
+
+<div class="proof-block">
+  <div class="block-label">Proof.</div>
+  <div class="block-body"><p>This is an immediate restatement of Theorem 11.1. <span class="math-inline" data-latex="(3/2)^n = 2^k"></span> iff <span class="math-inline" data-latex="3^n = 2^{n&#43;k}"></span>, which is impossible for <span class="math-inline" data-latex="n &gt; 0"></span> by the Fundamental Theorem of Arithmetic (the left side has 3 as a prime factor, the right side does not). <span class="math-inline" data-latex="\square"></span></p>
+<p><strong>Corollary (Pythagorean Comma as a Measure of Non-closure):</strong> After 12 steps of the just fifth, we reach <span class="math-inline" data-latex="(3/2)^{12} = 3^{12}/2^{12}"></span>. The closest power of 2 is <span class="math-inline" data-latex="2^7 = 128"></span>. The ratio <span class="math-inline" data-latex="(3/2)^{12}/2^7 = 3^{12}/2^{19} = 531441/524288 \approx 1.01364"></span> is the Pythagorean comma <span class="math-inline" data-latex="\kappa \approx 23.46"></span> cents.</p>
+</div>
+</div>
+
+
+
+<div class="theorem-block" id="theorem-11.4">
+  <div class="block-label">
+    Theorem 11.4 (Continued Fraction Approximation and Good EDOs)
+  </div>
+  <div class="block-body"><p>The continued fraction expansion of <span class="math-inline" data-latex="\log_2(3/2)"></span> is</p>
+<div class="math-display" data-latex="\log_2(3/2) = [0;\, 1, 1, 2, 2, 3, 1, 5, 2, 23, \ldots]"></div>
+<p>The convergents are <span class="math-inline" data-latex="0/1,\, 1/1,\, 1/2,\, 3/5,\, 7/12,\, 17/29,\, 24/41,\, 31/53, \ldots"></span></p>
+<p>The convergent <span class="math-inline" data-latex="p/q"></span> means that <span class="math-inline" data-latex="q"></span> equal divisions of the octave (q-EDO) approximate the fifth to within <span class="math-inline" data-latex="1/(q^2 \cdot a_{k&#43;1})"></span> octaves, where <span class="math-inline" data-latex="a_{k&#43;1}"></span> is the next continued fraction coefficient. In particular:</p>
+<ul>
+<li><strong>7/12</strong>: 12-TET has the fifth at 7 semitones <span class="math-inline" data-latex="= 2^{7/12}"></span>, error <span class="math-inline" data-latex="\approx 2"></span> cents — small enough to be nearly imperceptible in melodic context.</li>
+<li><strong>31/53</strong>: 53-TET has the fifth at 31 steps, error <span class="math-inline" data-latex="&lt; 0.1"></span> cents — essentially just.</li>
+</ul>
+<p>The large coefficient <span class="math-inline" data-latex="a_{10} = 23"></span> after the 53-EDO convergent means 53-TET is exceptionally good — the next meaningful improvement requires 306-TET.</p>
+</div>
+</div>
+
+<div class="proof-block">
+  <div class="block-label">Proof.</div>
+  <div class="block-body"><p>The continued fraction algorithm applied to <span class="math-inline" data-latex="\log_2(3/2) \approx 0.58496"></span>:</p>
+<ul>
+<li><span class="math-inline" data-latex="0.58496 = 0 &#43; 0.58496"></span>; <span class="math-inline" data-latex="a_0 = 0"></span></li>
+<li><span class="math-inline" data-latex="1/0.58496 \approx 1.7095"></span>; <span class="math-inline" data-latex="a_1 = 1"></span>, remainder $0.7095$</li>
+<li><span class="math-inline" data-latex="1/0.7095 \approx 1.4094"></span>; <span class="math-inline" data-latex="a_2 = 1"></span>, remainder $0.4094$</li>
+<li><span class="math-inline" data-latex="1/0.4094 \approx 2.4426"></span>; <span class="math-inline" data-latex="a_3 = 2"></span>, remainder $0.4426$</li>
+<li><span class="math-inline" data-latex="1/0.4426 \approx 2.2593"></span>; <span class="math-inline" data-latex="a_4 = 2"></span>, remainder $0.2593$</li>
+<li><span class="math-inline" data-latex="1/0.2593 \approx 3.857"></span>; <span class="math-inline" data-latex="a_5 = 3"></span>, remainder $0.857$</li>
+<li>&hellip; and so on.</li>
+</ul>
+<p>The convergents <span class="math-inline" data-latex="p_k/q_k"></span> are computed by the standard recurrence <span class="math-inline" data-latex="p_k = a_k p_{k-1} &#43; p_{k-2}"></span>, <span class="math-inline" data-latex="q_k = a_k q_{k-1} &#43; q_{k-2}"></span>:</p>
+<div class="math-display" data-latex="\frac{0}{1},\, \frac{1}{1},\, \frac{1}{2},\, \frac{3}{5},\, \frac{7}{12},\, \frac{17}{29},\, \frac{24}{41},\, \frac{31}{53}"></div>
+<p>The best-approximation property of continued fraction convergents guarantees that <span class="math-inline" data-latex="q_k"></span>-EDO provides a better approximation to the just fifth than any <span class="math-inline" data-latex="q"></span>-EDO with <span class="math-inline" data-latex="q &lt; q_{k&#43;1}"></span>. <span class="math-inline" data-latex="\square"></span></p>
+</div>
+</div>
+
+
+
+<div class="proposition-block" id="prop-11.1">
+  <div class="block-label">
+    Prop 11.1 (Syntonic Comma Drift in a Comma Pump)
+  </div>
+  <div class="block-body"><p>A <strong>comma pump</strong> is a chord progression that uses only just intervals and returns to the same nominal pitch class but has accumulated a net pitch shift of one syntonic comma (21.5 cents). The canonical example is:</p>
+<div class="math-display" data-latex="C \to \text{Am} \to \text{Dm} \to G \to C"></div>
+<p>If each fifth and major third is just, the final C is <span class="math-inline" data-latex="81/80 \approx 1.0125"></span> times the starting C frequency — 21.5 cents higher. After 4 repetitions of this progression, the pitch has drifted by <span class="math-inline" data-latex="4 \times 21.5 = 86"></span> cents — nearly a semitone.</p>
+</div>
+</div>
+
+<hr>
+<h2 id="numerical-example-jacob-colliers-drift">Numerical Example: Jacob Collier&rsquo;s Drift</h2>
+<p>Collier&rsquo;s &ldquo;In the Bleak Midwinter&rdquo; (a cappella) uses just intervals throughout. Consider four consecutive just major third chords in ascending transposition:</p>
+<p>Each just major third raises the pitch center by <span class="math-inline" data-latex="5/4"></span>. Four such steps:</p>
+<div class="math-display" data-latex="(5/4)^4 = 625/256 \approx 2.4414"></div>
+<p>An equal-tempered four-major-thirds progression would be <span class="math-inline" data-latex="2^{16/12} = 2^{4/3} \approx 2.5198"></span>, which is exactly a diminished seventh above the start.</p>
+<p>The just version lands at <span class="math-inline" data-latex="625/256 \approx 2.44"></span>, not $2.52$. In cents:</p>
+<div class="math-display" data-latex="1200\log_2(625/256) \approx 1200 \times 1.2854 \approx 1542.5 \text{ cents}"></div>
+<p>vs. the equal-tempered $1600$ cents. The drift is <span class="math-inline" data-latex="1600 - 1542.5 = 57.5"></span> cents, or approximately <span class="math-inline" data-latex="4 \times 13.7 = 54.8"></span> cents (four times the major-third error in 12-TET).</p>
+<blockquote>
+<p><em>中文:</em> &ldquo;四个连续的纯律和弦，每步令调性中心偏移14音分。四步累积56音分——约半个半音。从E大调出发，就到了G半升大调，一个钢琴键盘上不存在的音。&rdquo;</p>
+</blockquote>
+<p>Collier treats this drift as a compositional tool — the gradual brightening of pitch level is perceived as an emotional ascent, not a tuning error.</p>
+<hr>
+<h2 id="musical-connection">Musical Connection</h2>
+<div class="music-block">
+  <div class="block-label">音乐联系</div>
+  <div class="block-body"><p><strong>The three incommensurable generators</strong></p>
+<p>Octave (2:1), fifth (3:2), and major third (5:4) are the three generators of 5-limit just intonation. Theorems 11.1 and 11.2 show that <span class="math-inline" data-latex="\log_2 2 = 1"></span>, <span class="math-inline" data-latex="\log_2 3"></span>, and <span class="math-inline" data-latex="\log_2 5"></span> are linearly independent over <span class="math-inline" data-latex="\mathbb{Q}"></span>. This means the &ldquo;pitch lattice&rdquo; <span class="math-inline" data-latex="\{2^a 3^b 5^c : a, b, c \in \mathbb{Z}\}"></span> is a 3-dimensional free abelian group — no element can be reached from another by a finite sequence of transpositions unless the generators commute exactly, which they cannot (by the irrationality theorems).</p>
+<p><strong>Bach&rsquo;s pragmatic solution: 12-TET</strong></p>
+<p>The <em>Well-Tempered Clavier</em> (1722) demonstrated that 12-TET (or a close approximation) makes all 24 keys usable. The price: every major third is 14 cents sharp. Bach presumably accepted this bargain as enabling the compositional freedom of free modulation.</p>
+<blockquote>
+<p><em>中文:</em> &ldquo;具体的赢：任意转调。巴赫1722年的《平均律键盘曲集》，24个前奏曲与赋格，遍历所有大小调——这在纯律里不可能。具体的输：纯五度缩短2音分，几乎无感；但大三度拉宽14音分，明显粗糙。这不是最好的调律——是最公平的调律。&rdquo;</p>
+</blockquote>
+<p><strong>Collier&rsquo;s solution: deliberate drift</strong></p>
+<p>Where Bach sacrifices purity for transposability, Collier sacrifices transposability for purity. His voice-leading uses just intervals at each local step; the global pitch center drifts. The drift is reframed as a narrative arc — ascending pitch equals ascending emotional intensity. The mathematics of tuning becomes a compositional parameter.</p>
+<p><strong>Connection to EP33 (Physical Modeling)</strong></p>
+<p>The syntonic comma directly affects inharmonicity in stringed instruments (EP33). A real string&rsquo;s overtone series is slightly stretched (inharmonic), so the &ldquo;pure&rdquo; fifth a string naturally produces is not exactly 3:2 but slightly wider. The comma thus interacts with the physical properties of strings, making just intonation on a bowed string instrument a dynamic target, not a fixed table.</p>
+</div>
+</div>
+
+<hr>
+<h2 id="limits-and-open-questions">Limits and Open Questions</h2>
+<ol>
+<li>
+<p><strong>Higher-limit just intonation.</strong> The 5-limit system (primes 2, 3, 5) covered here is the classical foundation. 7-limit (adding 7:4 as the harmonic seventh), 11-limit (adding 11:8), and higher limits introduce additional incommensurable generators. Each new prime adds a new dimension to the pitch lattice and new categories of commas. The &ldquo;optimal&rdquo; temperament depends on which prime limit the composer wishes to approximate.</p>
+</li>
+<li>
+<p><strong>Adaptive tuning in electronic music.</strong> Software systems (e.g., Hermode Tuning) attempt to dynamically adjust pitch to minimize beating in real time, effectively implementing just intonation on the fly. The challenge is that adjustments must be perceptually smooth (avoiding &ldquo;jumps&rdquo;) while tracking the drift — an optimization problem with conflicting objectives.</p>
+</li>
+<li>
+<p><strong>Perceptual threshold of comma drift.</strong> The syntonic comma is 21.5 cents. The just-noticeable difference (JND) for pitch in a musical context is roughly 5–10 cents. This means a single comma step is detectable, but gradual drift over many measures may be below the threshold of conscious perception. The exact threshold for &ldquo;perceived drift&rdquo; vs. &ldquo;unnoticed drift&rdquo; in a musical context is not well-established.</p>
+</li>
+<li>
+<p><strong>Transcendental extensions.</strong> Theorems 11.1–11.2 show <span class="math-inline" data-latex="\log_2 3"></span> and <span class="math-inline" data-latex="\log_2 5"></span> are irrational. Are they transcendental? By the Lindemann–Weierstrass theorem, <span class="math-inline" data-latex="e^{\alpha}"></span> is transcendental for any nonzero algebraic <span class="math-inline" data-latex="\alpha"></span>, but the transcendence of <span class="math-inline" data-latex="\log_2 3 = \ln 3 / \ln 2"></span> follows from the Gelfond–Schneider theorem: <span class="math-inline" data-latex="2^{\log_2 3} = 3"></span> is rational, so if <span class="math-inline" data-latex="\log_2 3"></span> were algebraic and irrational, <span class="math-inline" data-latex="2^{\log_2 3}"></span> would be transcendental — a contradiction. Hence <span class="math-inline" data-latex="\log_2 3"></span> is transcendental. The tuning problem thus involves transcendental numbers at its core.</p>
+</li>
+</ol>
+<hr>
+<h2 id="academic-references">Academic References</h2>
+<ol>
+<li>
+<p>Barbour, J. M. (1951). <em>Tuning and Temperament: A Historical Survey</em>. Michigan State College Press. (Reprinted Dover, 2004.)</p>
+</li>
+<li>
+<p>Duffin, R. W. (2007). <em>How Equal Temperament Ruined Harmony (and Why You Should Care)</em>. Norton.</p>
+</li>
+<li>
+<p>Milne, A., Sethares, W. A., &amp; Plamondon, J. (2007). Isomorphic controllers and dynamic tuning: Invariant fingering over a tuning continuum. <em>Computer Music Journal</em>, 31(4), 15–32.</p>
+</li>
+<li>
+<p>Sethares, W. A. (2005). <em>Tuning, Timbre, Spectrum, Scale</em> (2nd ed.). Springer.</p>
+</li>
+<li>
+<p>Euler, L. (1739). <em>Tentamen novae theoriae musicae</em>. St. Petersburg Academy. (The first systematic mathematical theory of consonance using integer ratios.)</p>
+</li>
+<li>
+<p>Noll, T. (2008). Rolling the dice for musical scales. <em>Journal of Mathematics and Music</em>, 2(2), 105–127.</p>
+</li>
+<li>
+<p>Hardy, G. H., &amp; Wright, E. M. (2008). <em>An Introduction to the Theory of Numbers</em> (6th ed.). Oxford University Press. Ch. 4 (Irrational numbers and the continued fraction algorithm).</p>
+</li>
+</ol>
+
+    </div>
+
+    
+    <nav class="ep-nav">
+      
+      
+      
+      
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+      
+      <a href="https://amath390.sibeliusp.com/episodes/ep10/" class="ep-nav-prev">
+        ← EP10: Negative Harmony and the Dihedral Group D₁₂
+      </a>
+      
+      
+      <a href="https://amath390.sibeliusp.com/episodes/ep12/" class="ep-nav-next">
+        EP12: The Circle of Fifths as a Folded Spiral →
+      </a>
+      
+    </nav>
+  </article>
+
+  
+  
+  
+  <aside class="ep-toc-aside">
+    <div class="ep-toc-sticky">
+      <div class="ep-toc-label">本页目录</div>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#definitions">Definitions</a></li>
+    <li><a href="#main-theorems">Main Theorems</a></li>
+    <li><a href="#numerical-example-jacob-colliers-drift">Numerical Example: Jacob Collier&rsquo;s Drift</a></li>
+    <li><a href="#musical-connection">Musical Connection</a></li>
+    <li><a href="#limits-and-open-questions">Limits and Open Questions</a></li>
+    <li><a href="#academic-references">Academic References</a></li>
+  </ul>
+</nav>
+    </div>
+  </aside>
+  
+</div>
+
+      <footer class="site-footer">
+  <div class="footer-content">
+    <span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
+    <span class="footer-sep">·</span>
+    <a href="https://www.xiaohongshu.com" target="_blank" rel="noopener">小红书</a>
+    <span class="footer-sep">·</span>
+    <span>Built with <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> + KaTeX</span>
+  </div>
+</footer>
+
+    </main>
+  </div>
+</body>
+</html>

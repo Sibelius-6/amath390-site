@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Combinatorics on AMATH 390 数学与音乐</title>
+    <link>https://amath390.sibeliusp.com/domains/combinatorics/</link>
+    <description>Recent content in Combinatorics on AMATH 390 数学与音乐</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://amath390.sibeliusp.com/domains/combinatorics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EP05: Turán&#39;s Theorem and Counterpoint</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep05/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep05/</guid>
+      <description>Overview How many simultaneous intervals can a polyphonic texture contain before forbidden structures inevitably appear? In 1941, the Hungarian mathematician Pál Turán gave a precise answer to the general question: given  vertices and no complete subgraph , the maximum number of edges is achieved by a unique graph called the Turán graph .
+This episode applies Turán&amp;rsquo;s theorem to Western counterpoint. Model the twelve pitch classes as vertices and &amp;ldquo;permitted simultaneous intervals&amp;rdquo; as edges.</description>
+    </item>
+    
+    <item>
+      <title>EP06: Graph Coloring and Voice Assignment</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep06/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep06/</guid>
+      <description>Overview Beethoven&amp;rsquo;s Fifth Symphony, fourth movement, deploys over twenty orchestral staves. Collapse all octave doublings, and the climax still demands more than ten distinct pitch heights simultaneously — more than two human hands can play. How do you reduce a full orchestra to a piano score without destroying the harmonic structure? And what is the minimum number of voices absolutely required?
+This episode answers both questions with graph coloring. Model each note as a vertex; connect two vertices when their sounding intervals overlap in time.</description>
+    </item>
+    
+    <item>
+      <title>EP07: Information Entropy and All-Interval Rows</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep07/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep07/</guid>
+      <description>Overview A listener hears two melodies and judges the second as &amp;ldquo;more chaotic.&amp;rdquo; But when you measure the distribution of adjacent intervals, the second melody is mathematically more uniform — its Shannon entropy is higher, not lower. The discomfort comes not from disorder but from the absence of the familiar concentrated pattern that tonal music trains the brain to expect.
+This episode builds Shannon&amp;rsquo;s entropy from first principles and applies it to music.</description>
+    </item>
+    
+  </channel>
+</rss>

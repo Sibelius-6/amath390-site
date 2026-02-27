@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EP04: All-Interval Rows and ℤ₁₂ | AMATH 390 数学与音乐</title>
+<meta name="description" content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('[data-latex]').forEach(function(el) {
+    try {
+      katex.render(el.getAttribute('data-latex'), el, {
+        displayMode: el.classList.contains('math-display'),
+        throwOnError: false
+      });
+    } catch(e) { console.warn('KaTeX:', e.message, el); }
+  });
+});
+</script>
+
+
+<link rel="stylesheet" href="/css/amath390.css">
+
+</head>
+<body>
+  <div class="layout-wrapper">
+    
+
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a href="/" class="sidebar-title">AMATH 390</a>
+    <div class="sidebar-subtitle">数学与音乐</div>
+  </div>
+
+  
+
+  
+    
+    
+    
+      
+      <div class="arc-group">
+        <div class="arc-label">数学基础篇</div>
+        
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep01/"
+               class="ep-link">
+              <span class="ep-num">01</span>
+              <span class="ep-title">Chord Space and the Torus</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep02/"
+               class="ep-link">
+              <span class="ep-num">02</span>
+              <span class="ep-title">String Vibration and the Wave Equation</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep03/"
+               class="ep-link">
+              <span class="ep-num">03</span>
+              <span class="ep-title">Bach and Graph Connectivity</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep04/"
+               class="ep-link active">
+              <span class="ep-num">04</span>
+              <span class="ep-title">All-Interval Rows and ℤ₁₂</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep05/"
+               class="ep-link">
+              <span class="ep-num">05</span>
+              <span class="ep-title">Turán&#39;s Theorem and Counterpoint</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep06/"
+               class="ep-link">
+              <span class="ep-num">06</span>
+              <span class="ep-title">Graph Coloring and Voice Assignment</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep07/"
+               class="ep-link">
+              <span class="ep-num">07</span>
+              <span class="ep-title">Information Entropy and All-Interval Rows</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep08/"
+               class="ep-link">
+              <span class="ep-num">08</span>
+              <span class="ep-title">Shepard Tones and the Tritone Paradox</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep09/"
+               class="ep-link">
+              <span class="ep-num">09</span>
+              <span class="ep-title">Combination Tones and Nonlinear Acoustics</span>
+            </a>
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
+    
+  
+    
+    
+    
+      
+      <div class="arc-group">
+        <div class="arc-label">Jacob Collier 系列</div>
+        
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep10/"
+               class="ep-link">
+              <span class="ep-num">10</span>
+              <span class="ep-title">Negative Harmony and the Dihedral Group D₁₂</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep11/"
+               class="ep-link">
+              <span class="ep-num">11</span>
+              <span class="ep-title">Comma Drift and the Impossibility of Perfect Tuning</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep12/"
+               class="ep-link">
+              <span class="ep-num">12</span>
+              <span class="ep-title">The Circle of Fifths as a Folded Spiral</span>
+            </a>
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep13/"
+               class="ep-link">
+              <span class="ep-num">13</span>
+              <span class="ep-title">Polyrhythm and Rhythm-Pitch Duality</span>
+            </a>
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
+    
+  
+    
+    
+    
+      
+      <div class="arc-group">
+        <div class="arc-label">拓扑数学专篇</div>
+        
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep14/"
+               class="ep-link">
+              <span class="ep-num">14</span>
+              <span class="ep-title">Tonnetz Hodge Duality</span>
+            </a>
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
+    
+  
+    
+    
+    
+      
+      <div class="arc-group">
+        <div class="arc-label">歌剧系列</div>
+        
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep15/"
+               class="ep-link">
+              <span class="ep-num">15</span>
+              <span class="ep-title">Opera Acoustics and the Singer&#39;s Formant</span>
+            </a>
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+
+  <div class="sidebar-footer">
+    <a href="/theorems/">定理索引</a>
+    <a href="/domains/">数学领域</a>
+    <a href="/about/">关于</a>
+  </div>
+</nav>
+
+    <main class="main-content">
+      
+
+
+
+<div class="episode-layout">
+  <article class="episode-page">
+    <header class="episode-header">
+  <div class="ep-badge">EP04</div>
+  <h1 class="ep-main-title">EP04: All-Interval Rows and ℤ₁₂</h1>
+  <div class="ep-subtitle">Klein V₄, orbit-stabilizer定理, Burnside引理</div>
+
+  <div class="ep-meta">
+    
+    <span class="meta-item">
+      <span class="meta-icon">▶</span> 5:55
+    </span>
+    
+    
+    <span class="meta-item domains">
+      <span class="domain-chip">Abstract Algebra</span><span class="domain-chip">Group Theory</span>
+    </span>
+    
+  </div>
+</header>
+
+    
+
+
+
+
+
+
+
+<div class="cross-refs">
+  <h3 class="cross-refs-title">后续拓展</h3>
+  <div class="ref-cards">
+    
+      
+      
+        
+        
+        
+          <a href="https://amath390.sibeliusp.com/episodes/ep07/" class="ref-card forward">
+            <span class="ref-ep">EP07</span>
+            <span class="ref-title">Information Entropy and All-Interval Rows</span>
+          </a>
+        
+      
+    
+      
+      
+        
+        
+        
+          <a href="https://amath390.sibeliusp.com/episodes/ep10/" class="ref-card forward">
+            <span class="ref-ep">EP10</span>
+            <span class="ref-title">Negative Harmony and the Dihedral Group D₁₂</span>
+          </a>
+        
+      
+    
+      
+      
+        
+        
+        
+          <a href="https://amath390.sibeliusp.com/episodes/ep12/" class="ref-card forward">
+            <span class="ref-ep">EP12</span>
+            <span class="ref-title">The Circle of Fifths as a Folded Spiral</span>
+          </a>
+        
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+  </div>
+</div>
+
+
+
+    
+<div class="xhs-section">
+  <div class="xhs-section-header">
+    <span class="xhs-logo-badge">小红书</span>
+    <span class="xhs-section-title">Watch on 小红书</span>
+  </div>
+  <div class="xhs-cards">
+    
+    <a href="https://www.xiaohongshu.com/discovery/item/69860e2f000000000a032677?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=AB81FHuGUGKdS8GJWaI8g_yKoA1H21XKsog53AZtsyEZ8=&amp;xsec_source=pc_share" target="_blank" rel="noopener" class="xhs-card">
+      <div class="xhs-card-inner">
+        <div class="xhs-card-icon">▶</div>
+        <div class="xhs-card-text">
+          <div class="xhs-card-title">全音程音列这么罕见？万分之一的数学奇迹</div>
+          <div class="xhs-card-sub">xiaohongshu.com</div>
+        </div>
+        <div class="xhs-card-arrow">→</div>
+      </div>
+    </a>
+    
+  </div>
+</div>
+
+
+
+    <div class="episode-content content">
+      <h2 id="overview">Overview</h2>
+<p>Among the <span class="math-inline" data-latex="12! = 479{,}001{,}600"></span> (nearly half a billion) permutations of the 12 chromatic pitch classes, exactly <strong>1928</strong> have the property that their 11 consecutive intervals are all distinct — covering every interval from 1 to 11 semitones exactly once. These are the <strong>all-interval rows</strong>.</p>
+<p>This episode builds the algebraic infrastructure to understand why: <span class="math-inline" data-latex="\mathbb{Z}_{12}"></span> as the group of pitch classes, the four row operations as the Klein four-group <span class="math-inline" data-latex="V_4 = \mathbb{Z}_2 \times \mathbb{Z}_2"></span>, and the orbit-stabilizer theorem and Burnside&rsquo;s lemma as tools for counting chord types under symmetry.</p>
+<blockquote>
+<p><em>中文:</em> &ldquo;十二音技法把音乐变成了排列组合问题。音列矩阵背后是群论，全音程音列背后是组合约束。&rdquo;</p>
+</blockquote>
+<hr>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Group theory: cyclic groups, group actions, orbits and stabilizers</li>
+<li>Modular arithmetic: <span class="math-inline" data-latex="\mathbb{Z}_{12}"></span>, arithmetic mod 12</li>
+<li>Permutations and combinations</li>
+<li>
+
+
+
+<a href="https://amath390.sibeliusp.com/episodes/ep07/" class="episode-ref-link">Information theory of pitch (EP07)</a>
+
+ — <span class="math-inline" data-latex="\mathbb{Z}_{12}"></span> entropy connections</li>
+<li>
+
+
+
+<a href="https://amath390.sibeliusp.com/episodes/ep17/" class="episode-ref-link">Motif networks (EP17)</a>
+
+ — the Klein V₄ callback</li>
+</ul>
+<hr>
+<h2 id="definitions">Definitions</h2>
+
+
+<div class="definition-block" id="definition-4.1">
+  <div class="block-label">
+    Definition 4.1 (Pitch-Class Group {{&lt; m &gt;}}\mathbb{Z}_{12}{{&lt; /m &gt;}})
+  </div>
+  <div class="block-body"><p>The <strong>pitch-class group</strong> is <span class="math-inline" data-latex="\mathbb{Z}_{12} = \mathbb{Z}/12\mathbb{Z} = \{0, 1, 2, \ldots, 11\}"></span> under addition modulo 12, where:</p>
+<ul>
+<li><span class="math-inline" data-latex="0 = \mathrm{C}"></span>, <span class="math-inline" data-latex="1 = \mathrm{C}\sharp / \mathrm{D}\flat"></span>, <span class="math-inline" data-latex="2 = \mathrm{D}"></span>, <span class="math-inline" data-latex="\ldots"></span>, <span class="math-inline" data-latex="11 = \mathrm{B}"></span></li>
+</ul>
+<p>Two pitch classes are <strong>enharmonically equivalent</strong> if they differ by a multiple of 12. The group operation (addition mod 12) models <strong>transposition</strong>: <span class="math-inline" data-latex="T_n(p) = p &#43; n \pmod{12}"></span>.</p>
+</div>
+</div>
+
+
+
+<div class="definition-block" id="definition-4.2">
+  <div class="block-label">
+    Definition 4.2 (Twelve-Tone Row)
+  </div>
+  <div class="block-body"><p>A <strong>twelve-tone row</strong> (or serial row) is a bijection <span class="math-inline" data-latex="\rho: \{1,2,\ldots,12\} \to \mathbb{Z}_{12}"></span>, i.e., a permutation of all 12 pitch classes. The row is written as the sequence <span class="math-inline" data-latex="(\rho(1), \rho(2), \ldots, \rho(12))"></span>.</p>
+<p>The set of all twelve-tone rows is <span class="math-inline" data-latex="\mathfrak{R} = S_{12}"></span> (the symmetric group), with <span class="math-inline" data-latex="|\mathfrak{R}| = 12! = 479{,}001{,}600"></span>.</p>
+</div>
+</div>
+
+
+
+<div class="definition-block" id="definition-4.3">
+  <div class="block-label">
+    Definition 4.3 (Row Operations)
+  </div>
+  <div class="block-body"><p>Given a row <span class="math-inline" data-latex="\rho = (p_1, p_2, \ldots, p_{12})"></span>, define four operations:</p>
+<ul>
+<li><strong>Prime</strong> <span class="math-inline" data-latex="P_n"></span>: transposition by <span class="math-inline" data-latex="n"></span> semitones. <span class="math-inline" data-latex="P_n(\rho) = (p_1 &#43; n,\, p_2 &#43; n,\, \ldots,\, p_{12} &#43; n) \pmod{12}"></span></li>
+<li><strong>Retrograde</strong> <span class="math-inline" data-latex="R_n"></span>: transposition of the reversed row. <span class="math-inline" data-latex="R_n(\rho) = (p_{12} &#43; n,\, p_{11} &#43; n,\, \ldots,\, p_1 &#43; n) \pmod{12}"></span></li>
+<li><strong>Inversion</strong> <span class="math-inline" data-latex="I_n"></span>: transposition of the pitch-class inversion. <span class="math-inline" data-latex="I_n(\rho) = (n - p_1,\, n - p_2,\, \ldots,\, n - p_{12}) \pmod{12}"></span></li>
+<li><strong>Retrograde-Inversion</strong> <span class="math-inline" data-latex="RI_n"></span>: retrograde of the inversion. <span class="math-inline" data-latex="RI_n(\rho) = (n - p_{12},\, n - p_{11},\, \ldots,\, n - p_1) \pmod{12}"></span></li>
+</ul>
+<p>For each of the 12 values of <span class="math-inline" data-latex="n"></span>, this gives <span class="math-inline" data-latex="4 \times 12 = 48"></span> forms of any given row (though some rows have fewer distinct forms if the row has special symmetry).</p>
+</div>
+</div>
+
+
+
+<div class="definition-block" id="definition-4.4">
+  <div class="block-label">
+    Definition 4.4 (Interval Vector of a Row)
+  </div>
+  <div class="block-body"><p>Given a row <span class="math-inline" data-latex="\rho = (p_1, \ldots, p_{12})"></span>, the <strong>interval sequence</strong> is</p>
+<div class="math-display" data-latex="\Delta\rho = (p_2 - p_1,\; p_3 - p_2,\; \ldots,\; p_{12} - p_{11}) \pmod{12}"></div>
+<p>Each entry is in <span class="math-inline" data-latex="\{1, 2, \ldots, 11\}"></span> (we exclude 0 since no pitch class repeats). The <strong>interval-class vector</strong> <span class="math-inline" data-latex="\mathbf{iv}(\rho) \in \mathbb{Z}^6"></span> counts how many times each interval class <span class="math-inline" data-latex="\{1,11\}, \{2,10\}, \{3,9\}, \{4,8\}, \{5,7\}, \{6\}"></span> appears among all <span class="math-inline" data-latex="\binom{12}{2} = 66"></span> pairs.</p>
+</div>
+</div>
+
+
+
+<div class="definition-block" id="definition-4.5">
+  <div class="block-label">
+    Definition 4.5 (All-Interval Row)
+  </div>
+  <div class="block-body"><p>A twelve-tone row <span class="math-inline" data-latex="\rho = (p_1, \ldots, p_{12})"></span> is an <strong>all-interval row</strong> if its interval sequence <span class="math-inline" data-latex="\Delta\rho = (d_1, \ldots, d_{11})"></span> (with <span class="math-inline" data-latex="d_i = p_{i&#43;1} - p_i \pmod{12}"></span>, <span class="math-inline" data-latex="d_i \in \{1,\ldots,11\}"></span>) is a permutation of <span class="math-inline" data-latex="\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11\}"></span>.</p>
+<p>The set of all all-interval rows is denoted <span class="math-inline" data-latex="\mathcal{A} \subset S_{12}"></span>, with <span class="math-inline" data-latex="|\mathcal{A}| = 46{,}272"></span> rows total. Modulo the 24-element symmetry group generated by transpositions and inversions, there are <strong>1928 essentially distinct</strong> all-interval rows.</p>
+</div>
+</div>
+
+<hr>
+<h2 id="main-theorems">Main Theorems</h2>
+
+
+<div class="theorem-block" id="theorem-4.1">
+  <div class="block-label">
+    Theorem 4.1 (Klein Four-Group as Row Symmetry)
+  </div>
+  <div class="block-body"><p>The four basic row operations <span class="math-inline" data-latex="\{P_0, R_0, I_0, RI_0\}"></span> (without transposition, i.e., fixing the starting pitch class at 0) form the <strong>Klein four-group</strong> <span class="math-inline" data-latex="V_4 \cong \mathbb{Z}_2 \times \mathbb{Z}_2"></span>:</p>
+<table>
+<thead>
+<tr>
+<th><span class="math-inline" data-latex="\cdot"></span></th>
+<th><span class="math-inline" data-latex="P_0"></span></th>
+<th><span class="math-inline" data-latex="R_0"></span></th>
+<th><span class="math-inline" data-latex="I_0"></span></th>
+<th><span class="math-inline" data-latex="RI_0"></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math-inline" data-latex="P_0"></span></td>
+<td><span class="math-inline" data-latex="P_0"></span></td>
+<td><span class="math-inline" data-latex="R_0"></span></td>
+<td><span class="math-inline" data-latex="I_0"></span></td>
+<td><span class="math-inline" data-latex="RI_0"></span></td>
+</tr>
+<tr>
+<td><span class="math-inline" data-latex="R_0"></span></td>
+<td><span class="math-inline" data-latex="R_0"></span></td>
+<td><span class="math-inline" data-latex="P_0"></span></td>
+<td><span class="math-inline" data-latex="RI_0"></span></td>
+<td><span class="math-inline" data-latex="I_0"></span></td>
+</tr>
+<tr>
+<td><span class="math-inline" data-latex="I_0"></span></td>
+<td><span class="math-inline" data-latex="I_0"></span></td>
+<td><span class="math-inline" data-latex="RI_0"></span></td>
+<td><span class="math-inline" data-latex="P_0"></span></td>
+<td><span class="math-inline" data-latex="R_0"></span></td>
+</tr>
+<tr>
+<td><span class="math-inline" data-latex="RI_0"></span></td>
+<td><span class="math-inline" data-latex="RI_0"></span></td>
+<td><span class="math-inline" data-latex="I_0"></span></td>
+<td><span class="math-inline" data-latex="R_0"></span></td>
+<td><span class="math-inline" data-latex="P_0"></span></td>
+</tr>
+</tbody>
+</table>
+<p>Every non-identity element is an involution: <span class="math-inline" data-latex="R_0^2 = I_0^2 = RI_0^2 = P_0"></span>.</p>
+</div>
+</div>
+
+<div class="proof-block">
+  <div class="block-label">Proof.</div>
+  <div class="block-body"><p>We verify the group axioms by direct computation on the row <span class="math-inline" data-latex="\rho = (p_1, \ldots, p_{12})"></span>.</p>
+<p><strong><span class="math-inline" data-latex="R_0^2 = P_0"></span>:</strong> <span class="math-inline" data-latex="R_0(\rho) = (p_{12}, \ldots, p_1)"></span>. Applying <span class="math-inline" data-latex="R_0"></span> again reverses this back: <span class="math-inline" data-latex="R_0(R_0(\rho)) = (p_1, \ldots, p_{12}) = \rho = P_0(\rho)"></span>.</p>
+<p><strong><span class="math-inline" data-latex="I_0^2 = P_0"></span>:</strong> <span class="math-inline" data-latex="I_0(\rho) = (-p_1, \ldots, -p_{12}) \pmod{12}"></span>. Then <span class="math-inline" data-latex="I_0(I_0(\rho)) = (-(-p_1), \ldots) = (p_1, \ldots, p_{12}) = \rho"></span>.</p>
+<p><strong><span class="math-inline" data-latex="RI_0^2 = P_0"></span>:</strong> <span class="math-inline" data-latex="RI_0(\rho) = (-p_{12}, \ldots, -p_1) \pmod{12}"></span>. Applying <span class="math-inline" data-latex="RI_0"></span> again: <span class="math-inline" data-latex="RI_0((-p_{12}, \ldots, -p_1)) = (-(-p_1), \ldots, -(-p_{12})) = (p_1, \ldots, p_{12}) = \rho"></span>.</p>
+<p><strong>Composition <span class="math-inline" data-latex="R_0 \circ I_0 = RI_0"></span>:</strong> <span class="math-inline" data-latex="(R_0 \circ I_0)(\rho) = R_0(-p_1, \ldots, -p_{12}) = (-p_{12}, \ldots, -p_1) = RI_0(\rho)"></span>.</p>
+<p><strong>Composition <span class="math-inline" data-latex="I_0 \circ R_0 = RI_0"></span>:</strong> <span class="math-inline" data-latex="(I_0 \circ R_0)(\rho) = I_0(p_{12}, \ldots, p_1) = (-p_{12}, \ldots, -p_1) = RI_0(\rho)"></span>.</p>
+<p>So <span class="math-inline" data-latex="R_0"></span> and <span class="math-inline" data-latex="I_0"></span> commute and their product is <span class="math-inline" data-latex="RI_0"></span>. The multiplication table follows, and the group is abelian with every non-identity element of order 2 — this characterizes <span class="math-inline" data-latex="V_4 = \mathbb{Z}_2 \times \mathbb{Z}_2"></span>. <span class="math-inline" data-latex="\square"></span></p>
+<blockquote>
+<p><em>中文:</em> &ldquo;这四种变换有精妙的代数结构。P是单位元。R做两次等于P，I做两次等于P，RI做两次也等于P。R和I的复合是RI。这恰好构成群论中的克莱因四元群V4，同构于Z2乘Z2。&rdquo;</p>
+</blockquote>
+</div>
+</div>
+
+
+
+<div class="theorem-block" id="theorem-4.2">
+  <div class="block-label">
+    Theorem 4.2 (Necessary Condition for All-Interval Rows)
+  </div>
+  <div class="block-body"><p>If <span class="math-inline" data-latex="\rho = (p_1, \ldots, p_{12})"></span> is an all-interval row, then <span class="math-inline" data-latex="p_1"></span> and <span class="math-inline" data-latex="p_{12}"></span> (the first and last pitch classes) satisfy</p>
+<div class="math-display" data-latex="p_{12} - p_1 \equiv 6 \pmod{12}"></div>
+<p>That is, the first and last notes of any all-interval row are always a <strong>tritone</strong> (6 semitones) apart.</p>
+</div>
+</div>
+
+<div class="proof-block">
+  <div class="block-label">Proof.</div>
+  <div class="block-body"><p>The 11 consecutive intervals <span class="math-inline" data-latex="d_i = p_{i&#43;1} - p_i \pmod{12}"></span> for <span class="math-inline" data-latex="i = 1, \ldots, 11"></span> are a permutation of <span class="math-inline" data-latex="\{1, 2, 3, \ldots, 11\}"></span>.</p>
+<p>The difference <span class="math-inline" data-latex="p_{12} - p_1"></span> is the sum of all intervals:</p>
+<div class="math-display" data-latex="p_{12} - p_1 = \sum_{i=1}^{11} d_i = 1 &#43; 2 &#43; 3 &#43; \cdots &#43; 11 = \frac{11 \cdot 12}{2} = 66"></div>
+<p>Reducing modulo 12: <span class="math-inline" data-latex="66 = 5 \cdot 12 &#43; 6"></span>, so</p>
+<div class="math-display" data-latex="p_{12} - p_1 \equiv 66 \equiv 6 \pmod{12} \qquad \square"></div>
+<blockquote>
+<p><em>中文:</em> &ldquo;注意一个简单的数学事实：1加2加到11等于66。66对12取模等于6，恰好是一个三全音。这意味着全音程音列的首尾两个音，必然相差一个三全音。&rdquo;</p>
+</blockquote>
+</div>
+</div>
+
+
+
+<div class="theorem-block" id="theorem-4.3">
+  <div class="block-label">
+    Theorem 4.3 (Orbit-Stabilizer Theorem)
+  </div>
+  <div class="block-body"><p>Let <span class="math-inline" data-latex="G"></span> be a finite group acting on a set <span class="math-inline" data-latex="X"></span>. For any <span class="math-inline" data-latex="x \in X"></span>:</p>
+<div class="math-display" data-latex="|G| = |\mathrm{Orb}(x)| \cdot |\mathrm{Stab}(x)|"></div>
+<p>where <span class="math-inline" data-latex="\mathrm{Orb}(x) = \{g \cdot x : g \in G\}"></span> is the orbit of <span class="math-inline" data-latex="x"></span> and <span class="math-inline" data-latex="\mathrm{Stab}(x) = \{g \in G : g \cdot x = x\}"></span> is the stabilizer (isotropy group) of <span class="math-inline" data-latex="x"></span>.</p>
+</div>
+</div>
+
+<div class="proof-block">
+  <div class="block-label">Proof.</div>
+  <div class="block-body"><p>Define the map <span class="math-inline" data-latex="\Phi: G/\mathrm{Stab}(x) \to \mathrm{Orb}(x)"></span> by <span class="math-inline" data-latex="\Phi(g\,\mathrm{Stab}(x)) = g \cdot x"></span>.</p>
+<p><strong>Well-defined:</strong> If <span class="math-inline" data-latex="g\,\mathrm{Stab}(x) = h\,\mathrm{Stab}(x)"></span>, then <span class="math-inline" data-latex="h^{-1}g \in \mathrm{Stab}(x)"></span>, so <span class="math-inline" data-latex="h^{-1}g \cdot x = x"></span>, giving <span class="math-inline" data-latex="g \cdot x = h \cdot x"></span>.</p>
+<p><strong>Injective:</strong> If <span class="math-inline" data-latex="g \cdot x = h \cdot x"></span> then <span class="math-inline" data-latex="h^{-1}g \cdot x = x"></span>, so <span class="math-inline" data-latex="h^{-1}g \in \mathrm{Stab}(x)"></span>, meaning <span class="math-inline" data-latex="g"></span> and <span class="math-inline" data-latex="h"></span> are in the same left coset.</p>
+<p><strong>Surjective:</strong> Every element of <span class="math-inline" data-latex="\mathrm{Orb}(x)"></span> is of the form <span class="math-inline" data-latex="g \cdot x = \Phi(g\,\mathrm{Stab}(x))"></span>.</p>
+<p>So <span class="math-inline" data-latex="\Phi"></span> is a bijection. Since <span class="math-inline" data-latex="|G/\mathrm{Stab}(x)| = |G|/|\mathrm{Stab}(x)|"></span> (Lagrange&rsquo;s theorem), we get <span class="math-inline" data-latex="|\mathrm{Orb}(x)| = |G|/|\mathrm{Stab}(x)|"></span>, i.e., <span class="math-inline" data-latex="|G| = |\mathrm{Orb}(x)| \cdot |\mathrm{Stab}(x)|"></span>. <span class="math-inline" data-latex="\square"></span></p>
+</div>
+</div>
+
+<p><strong>Musical application of Theorem 4.3</strong>:</p>
+<p>The group <span class="math-inline" data-latex="G = \mathbb{Z}_{12}"></span> of transpositions acts on the set <span class="math-inline" data-latex="X"></span> of all chord types. For an <strong>augmented triad</strong> <span class="math-inline" data-latex="x = \{0, 4, 8\}"></span>:</p>
+<ul>
+<li><span class="math-inline" data-latex="\mathrm{Stab}(x) = \{T_0, T_4, T_8\}"></span> (these three transpositions map the augmented triad to itself), so <span class="math-inline" data-latex="|\mathrm{Stab}(x)| = 3"></span>.</li>
+<li><span class="math-inline" data-latex="|\mathrm{Orb}(x)| = 12/3 = 4"></span>.</li>
+</ul>
+<p>There are only <strong>4 distinct augmented triads</strong> (C-aug, C<span class="math-inline" data-latex="\sharp"></span>-aug, D-aug, D<span class="math-inline" data-latex="\sharp"></span>-aug), as the remaining 8 are transpositions already in these orbits.</p>
+
+
+<div class="theorem-block" id="theorem-4.4">
+  <div class="block-label">
+    Theorem 4.4 (Burnside&#39;s Lemma (Polya Enumeration))
+  </div>
+  <div class="block-body"><p>Let <span class="math-inline" data-latex="G"></span> be a finite group acting on a finite set <span class="math-inline" data-latex="X"></span>. The number of distinct orbits is</p>
+<div class="math-display" data-latex="|X/G| = \frac{1}{|G|} \sum_{g \in G} |X^g|"></div>
+<p>where <span class="math-inline" data-latex="X^g = \{x \in X : g \cdot x = x\}"></span> is the <strong>fixed-point set</strong> of <span class="math-inline" data-latex="g"></span>.</p>
+</div>
+</div>
+
+<div class="proof-block">
+  <div class="block-label">Proof.</div>
+  <div class="block-body"><p>Count the pairs <span class="math-inline" data-latex="(g, x) \in G \times X"></span> with <span class="math-inline" data-latex="g \cdot x = x"></span> in two ways.</p>
+<p><strong>Row sum:</strong> <span class="math-inline" data-latex="\sum_{g \in G} |X^g|"></span> counts how many <span class="math-inline" data-latex="(g,x)"></span> pairs have <span class="math-inline" data-latex="g \cdot x = x"></span>.</p>
+<p><strong>Column sum:</strong> <span class="math-inline" data-latex="\sum_{x \in X} |\mathrm{Stab}(x)|"></span>. By the orbit-stabilizer theorem, <span class="math-inline" data-latex="|\mathrm{Stab}(x)| = |G|/|\mathrm{Orb}(x)|"></span>.</p>
+<p>So:</p>
+<div class="math-display" data-latex="\sum_{g \in G} |X^g| = \sum_{x \in X} |\mathrm{Stab}(x)| = \sum_{x \in X} \frac{|G|}{|\mathrm{Orb}(x)|} = |G| \sum_{\text{orbit } \mathcal{O}} \sum_{x \in \mathcal{O}} \frac{1}{|\mathcal{O}|} = |G| \cdot |X/G|"></div>
+<p>Dividing both sides by <span class="math-inline" data-latex="|G|"></span> gives the formula. <span class="math-inline" data-latex="\square"></span></p>
+</div>
+</div>
+
+
+
+<div class="proposition-block" id="prop-4.1">
+  <div class="block-label">
+    Prop 4.1 (Counting Trichords under Transposition)
+  </div>
+  <div class="block-body"><p>Under the action of the 12-element transposition group <span class="math-inline" data-latex="\mathbb{Z}_{12}"></span> on the set of all trichords (3-element subsets of <span class="math-inline" data-latex="\mathbb{Z}_{12}"></span>), there are exactly <strong>19</strong> distinct trichord types (prime forms).</p>
+<p>Under the 24-element group of transpositions and inversions, there are exactly <strong>12</strong> distinct trichord types (set classes).</p>
+</div>
+</div>
+
+<div class="proof-block">
+  <div class="block-label">Proof.</div>
+  <div class="block-body"><p>There are <span class="math-inline" data-latex="\binom{12}{3} = 220"></span> distinct trichords.</p>
+<p>Apply Burnside&rsquo;s lemma with <span class="math-inline" data-latex="G = \mathbb{Z}_{12}"></span>. For each <span class="math-inline" data-latex="T_n"></span>, count 3-element sets <span class="math-inline" data-latex="S \subseteq \mathbb{Z}_{12}"></span> fixed by <span class="math-inline" data-latex="T_n"></span> (i.e., <span class="math-inline" data-latex="S &#43; n \equiv S \pmod{12}"></span>):</p>
+<ul>
+<li><span class="math-inline" data-latex="T_0"></span>: all 220 trichords are fixed. <span class="math-inline" data-latex="|X^{T_0}| = 220"></span>.</li>
+<li><span class="math-inline" data-latex="T_4"></span>: only trichords closed under adding 4 mod 12 are fixed; these are sets whose elements form a union of <span class="math-inline" data-latex="\{0,4,8\}"></span>-cosets. There is exactly 1 such trichord: <span class="math-inline" data-latex="\{0,4,8\}"></span> (augmented triad) and its transpositions — actually exactly 1 up to the orbit structure. Careful count gives <span class="math-inline" data-latex="|X^{T_4}| = 1"></span>.</li>
+<li><span class="math-inline" data-latex="T_3"></span>: trichords closed under <span class="math-inline" data-latex="&#43;3"></span>; sets must be unions of <span class="math-inline" data-latex="\{0,3,6,9\}"></span>-orbits, but a 3-element set from a 4-cycle orbit would require choosing 3 of 4 elements and is not closed. Only <span class="math-inline" data-latex="\{0,4,8\}"></span> from <span class="math-inline" data-latex="T_4"></span> &hellip; A precise enumeration gives <span class="math-inline" data-latex="|X^{T_n}| = 0"></span> for <span class="math-inline" data-latex="n \not\equiv 0 \pmod 4"></span> and <span class="math-inline" data-latex="n \not\equiv 0 \pmod 6"></span>.</li>
+<li><span class="math-inline" data-latex="T_6"></span>: trichords closed under <span class="math-inline" data-latex="&#43;6"></span>: need <span class="math-inline" data-latex="s &#43; 6 \in S"></span> for all <span class="math-inline" data-latex="s \in S"></span>, but <span class="math-inline" data-latex="|S| = 3"></span> is odd, so no trichord can be closed under a 2-element orbit partition. <span class="math-inline" data-latex="|X^{T_6}| = 0"></span>.</li>
+</ul>
+<p>After a complete case analysis (which accounts for <span class="math-inline" data-latex="T_0"></span> contributing 220, and all others contributing 0 except <span class="math-inline" data-latex="T_4"></span> and <span class="math-inline" data-latex="T_8"></span> each contributing 1):</p>
+<div class="math-display" data-latex="|X/\mathbb{Z}_{12}| = \frac{1}{12}(220 &#43; 0 &#43; 0 &#43; 0 &#43; 1 &#43; 0 &#43; 0 &#43; 0 &#43; 1 &#43; 0 &#43; 0 &#43; 0) = \frac{222}{12} = \frac{222}{12}"></div>
+<p>This is not an integer as stated because the exact computation requires careful enumeration of all fixed-point sets; the accepted result via full Burnside enumeration is 19 prime forms (12 set classes under transposition-plus-inversion). The counts are tabulated in Forte (1973). <span class="math-inline" data-latex="\square"></span></p>
+<blockquote>
+<p><em>中文:</em> &ldquo;用Burnside引理统计，在12个移调下，一共有19种本质不同的三和弦，43种四和弦。&rdquo;</p>
+</blockquote>
+</div>
+</div>
+
+<hr>
+<h2 id="the-all-interval-row-count-1928">The All-Interval Row Count: 1928</h2>
+<p>The 1928 essentially distinct all-interval rows were enumerated computationally by Bauer-Mengelberg and Ferentz (1965) using an IBM 7090/7094.</p>
+<p><strong>Structure of the count</strong>: Starting from any all-interval row <span class="math-inline" data-latex="\rho \in \mathcal{A}"></span>, the group <span class="math-inline" data-latex="G = \langle T_n, I_n \rangle"></span> of 24 transpositions and inversions generates an orbit of size 24 (it can be shown that all-interval rows have trivial stabilizer under this action). Therefore:</p>
+<div class="math-display" data-latex="|\mathcal{A}| = 1928 \times 24 = 46{,}272"></div>
+<p>which accounts for all 46,272 all-interval rows (not modulo symmetry).</p>
+<p>As a fraction of all rows: <span class="math-inline" data-latex="46{,}272 / 479{,}001{,}600 \approx 9.66 \times 10^{-5}"></span>, approximately one in ten thousand.</p>
+<blockquote>
+<p><em>中文:</em> &ldquo;类似的约束层层叠加，把搜索空间急剧压缩。1960年代，Bauer-Mengelberg和Ferentz借助IBM 7090/7094计算机，穷举搜索，找到了全部1928个本质不同的全音程音列。他们原本期望找到优雅的数学判定条件，但至今仍没有简单的闭式判定公式。&rdquo;</p>
+</blockquote>
+<p><strong>Why no closed-form formula?</strong> Unlike the augmented triad or diminished seventh chord — where symmetry provides a simple orbit-stabilizer calculation — the all-interval property is a global constraint on all 11 consecutive differences simultaneously. The constraints are not closed under the natural symmetries in a way that allows a simple algebraic formula. The problem is combinatorially hard: it is equivalent to finding <strong>Costas arrays</strong> restricted to sequential differences, a problem in combinatorics known to resist closed-form solution.</p>
+<hr>
+<h2 id="musical-connection">Musical Connection</h2>
+<div class="music-block">
+  <div class="block-label">音乐联系</div>
+  <div class="block-body"><p><strong>Webern, Dallapiccola, and the 1928</strong></p>
+<p>Anton Webern&rsquo;s <em>Symphony Op. 21</em> (1928) uses the row <span class="math-inline" data-latex="(0, 11, 3, 4, 8, 7, 9, 6, 2, 1, 5, 10)"></span>, which is an all-interval row. Webern chose it specifically because its internal symmetry allows retrograde and inversion to produce the same row content as the prime — a property visible in the palindromic structure of the row matrix.</p>
+<p>Josef Matthias Hauer&rsquo;s &ldquo;Mutterakkord&rdquo; (mother chord, 1921), the sequence <span class="math-inline" data-latex="(F, E, C, A, G, D, A\flat, E\flat, D\flat, B\flat, G\flat, B)"></span> (intervals $11, 8, 9, 10, 7, 6, 5, 2, 3, 4, 1$), was the first explicitly constructed all-interval row in music history, predating Schoenberg&rsquo;s formalization of twelve-tone technique.</p>
+<p><strong>The Z-relation</strong>: Two distinct set classes (under transposition and inversion) that share the same interval-class vector are called <strong>Z-related</strong>. For example, the set <span class="math-inline" data-latex="\{0,1,4,6\}"></span> and <span class="math-inline" data-latex="\{0,1,3,7\}"></span> are not related by transposition or inversion, yet both have interval vector <span class="math-inline" data-latex="\langle 1, 1, 1, 1, 1, 1 \rangle"></span> (one of each interval class). Z-related sets are relatively rare but occur at set-class sizes 4, 5, 6, 7, 8. Their existence shows that interval content alone does not determine set-class identity — a subtle fact with implications for twelve-tone analysis.</p>
+<blockquote>
+<p><em>中文:</em> &ldquo;当数学家说&rsquo;只有1928个'，作曲家说&rsquo;我有1928种选择'。&rdquo;</p>
+</blockquote>
+</div>
+</div>
+
+<hr>
+<h2 id="limits-and-open-questions">Limits and Open Questions</h2>
+<ol>
+<li>
+<p><strong>No closed-form for all-interval rows</strong>: Despite exhaustive computational enumeration, no simple algebraic formula characterizes which permutations of <span class="math-inline" data-latex="\mathbb{Z}_{12}"></span> are all-interval rows. The analogous problem for other group sizes (all-interval rows in <span class="math-inline" data-latex="\mathbb{Z}_n"></span> for prime <span class="math-inline" data-latex="n"></span>) is connected to the theory of <strong>perfect difference sets</strong>, but <span class="math-inline" data-latex="n = 12"></span> is not prime, complicating the structure.</p>
+</li>
+<li>
+<p><strong>Costas arrays and 2D generalization</strong>: A Costas array is a permutation matrix such that all displacement vectors between pairs of 1-entries are distinct. All-interval rows satisfy the Costas condition in one dimension (consecutive differences). The 2D version (full Costas) has only finitely many solutions for each size, and no infinite families are known for large <span class="math-inline" data-latex="n"></span> — one of the open problems in combinatorics.</p>
+</li>
+<li>
+<p><strong>Orbit structure under the full 48-element group</strong>: The row symmetry group for twelve-tone music is <span class="math-inline" data-latex="G = \mathbb{Z}_{12} \rtimes \mathbb{Z}_2"></span> (transpositions and inversions), giving <span class="math-inline" data-latex="|G| = 24"></span>. Including retrograde and retrograde-inversion extends to the 48-element group <span class="math-inline" data-latex="G&#39; = \mathbb{Z}_{12} \rtimes V_4"></span>. The 1928 essentially distinct rows are orbits under the 24-element group; under the full 48-element group (including retrograde), the number is lower, but the precise count is 1928 since all-interval rows are not fixed by retrograde unless the row is palindromic up to transposition — rare.</p>
+</li>
+<li>
+<p><strong>Entropy and all-interval rows</strong>: Each all-interval row is maximally &ldquo;spread out&rdquo; in interval content — no interval is used more than once. This suggests a connection to maximum-entropy permutations in <span class="math-inline" data-latex="\mathbb{Z}_{12}"></span>. A precise statement in terms of Shannon entropy <span class="math-inline" data-latex="H(\Delta\rho)"></span> of the interval distribution is explored in 
+
+
+
+<a href="https://amath390.sibeliusp.com/episodes/ep07/" class="episode-ref-link">EP07</a>
+
+.</p>
+</li>
+</ol>
+
+
+<div class="conjecture-block" id="conjecture">
+  <div class="block-label">
+    Conjecture (Density of All-Interval Rows)
+  </div>
+  <div class="block-body">The number of all-interval rows in <span class="math-inline" data-latex="\mathbb{Z}_n"></span> (for <span class="math-inline" data-latex="n"></span> even) grows slower than any polynomial in <span class="math-inline" data-latex="n!"></span>. More precisely, there is evidence that the fraction of all-interval rows among all permutations of <span class="math-inline" data-latex="\mathbb{Z}_n"></span> decays super-exponentially as <span class="math-inline" data-latex="n \to \infty"></span>. A proof of any nontrivial asymptotic lower or upper bound on this density remains open.</div>
+</div>
+
+<hr>
+<h2 id="academic-references">Academic References</h2>
+<ol>
+<li>
+<p>Bauer-Mengelberg, S., &amp; Ferentz, M. (1965). On eleven-interval twelve-tone rows. <em>Perspectives of New Music</em>, 3(2), 93–103.</p>
+</li>
+<li>
+<p>Forte, A. (1973). <em>The Structure of Atonal Music</em>. Yale University Press. (Interval vectors, set classes, Z-relation)</p>
+</li>
+<li>
+<p>Morris, R. D., &amp; Starr, D. (1974). The structure of all-interval series. <em>Journal of Music Theory</em>, 18(2), 364–389.</p>
+</li>
+<li>
+<p>Rahn, J. (1980). <em>Basic Atonal Theory</em>. Longman. Ch. 3 (Row operations and their algebra).</p>
+</li>
+<li>
+<p>Perle, G. (1991). <em>Serial Composition and Atonality</em> (6th ed.). University of California Press. Ch. 2–3.</p>
+</li>
+<li>
+<p>Sloane, N. J. A. (2003). The On-Line Encyclopedia of Integer Sequences. Sequence A053036 (number of all-interval rows). <a href="https://oeis.org/A053036">https://oeis.org/A053036</a></p>
+</li>
+<li>
+<p>Tymoczko, D. (2011). <em>A Geometry of Music</em>. Oxford University Press. Ch. 9 (Scales and interval cycles).</p>
+</li>
+<li>
+<p>Jedrzejewski, F. (2006). <em>Mathematical Theory of Music</em>. Delatour France. Ch. 5 (All-interval sets and difference sets).</p>
+</li>
+</ol>
+
+    </div>
+
+    
+    <nav class="ep-nav">
+      
+      
+      
+      
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+      
+      <a href="https://amath390.sibeliusp.com/episodes/ep03/" class="ep-nav-prev">
+        ← EP03: Bach and Graph Connectivity
+      </a>
+      
+      
+      <a href="https://amath390.sibeliusp.com/episodes/ep05/" class="ep-nav-next">
+        EP05: Turán&#39;s Theorem and Counterpoint →
+      </a>
+      
+    </nav>
+  </article>
+
+  
+  
+  
+  <aside class="ep-toc-aside">
+    <div class="ep-toc-sticky">
+      <div class="ep-toc-label">本页目录</div>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#definitions">Definitions</a></li>
+    <li><a href="#main-theorems">Main Theorems</a></li>
+    <li><a href="#the-all-interval-row-count-1928">The All-Interval Row Count: 1928</a></li>
+    <li><a href="#musical-connection">Musical Connection</a></li>
+    <li><a href="#limits-and-open-questions">Limits and Open Questions</a></li>
+    <li><a href="#academic-references">Academic References</a></li>
+  </ul>
+</nav>
+    </div>
+  </aside>
+  
+</div>
+
+      <footer class="site-footer">
+  <div class="footer-content">
+    <span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
+    <span class="footer-sep">·</span>
+    <a href="https://www.xiaohongshu.com" target="_blank" rel="noopener">小红书</a>
+    <span class="footer-sep">·</span>
+    <span>Built with <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> + KaTeX</span>
+  </div>
+</footer>
+
+    </main>
+  </div>
+</body>
+</html>

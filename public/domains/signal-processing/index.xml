@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Signal Processing on AMATH 390 数学与音乐</title>
+    <link>https://amath390.sibeliusp.com/domains/signal-processing/</link>
+    <description>Recent content in Signal Processing on AMATH 390 数学与音乐</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://amath390.sibeliusp.com/domains/signal-processing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EP15: Opera Acoustics and the Singer&#39;s Formant</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep15/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep15/</guid>
+      <description>Overview An opera singer has no microphone. A single voice must cut through 110 orchestral instruments in a live hall. This episode asks: how?
+ 中文: &amp;ldquo;答案藏在——3000赫兹。乐队能量在这里暴跌18分贝。这是歌手唯一的窗口——或者被淹没，或者穿透。&amp;rdquo;
+ The answer is not louder singing. It is frequency targeting: the singer concentrates acoustic energy precisely where the orchestra is weakest, where the human ear is most sensitive, and where the physics of the vocal tract allows a structural resonance enhancement.
+This episode develops a three-layer quantitative model:</description>
+    </item>
+    
+    <item>
+      <title>EP19: Vibrato as FM Synthesis</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep19/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep19/</guid>
+      <description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
+本集探讨：Bessel函数Jₙ(β), Jacobi-Anger展开。
+前置知识 定义 Definition (...)  &amp;hellip;  -- 主要定理 Theorem 19.1 (...)  &amp;hellip;  -- Proof. &amp;hellip;  -- 音乐联系 音乐联系 &amp;hellip;  -- 局限性与开放问题 参考文献  待补充  </description>
+    </item>
+    
+    <item>
+      <title>EP22: How AI Writes Music — EnCodec and RVQ</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep22/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep22/</guid>
+      <description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
+本集探讨：EnCodec RVQ, 因果Transformer, 扩散DiT。
+前置知识 定义 Definition (...)  &amp;hellip;  -- 主要定理 Theorem 22.1 (...)  &amp;hellip;  -- Proof. &amp;hellip;  -- 音乐联系 音乐联系 &amp;hellip;  -- 局限性与开放问题 参考文献  待补充  </description>
+    </item>
+    
+    <item>
+      <title>EP28: Your Microphone Is a Damped Oscillator</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep28/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep28/</guid>
+      <description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
+本集探讨：阻尼谐振子ODE, Bode图, Q因子, 极坐标指向性。
+前置知识 定义 Definition (...)  &amp;hellip;  -- 主要定理 Theorem 28.1 (...)  &amp;hellip;  -- Proof. &amp;hellip;  -- 音乐联系 音乐联系 &amp;hellip;  -- 局限性与开放问题 参考文献  待补充  </description>
+    </item>
+    
+    <item>
+      <title>EP30: The Sampling Theorem Is Not What You Think</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep30/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep30/</guid>
+      <description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
+本集探讨：sinc重建, 量化SNR, TPDF抖动, 噪声整形NTF(z)。
+前置知识 定义 Definition (...)  &amp;hellip;  -- 主要定理 Theorem 30.1 (...)  &amp;hellip;  -- Proof. &amp;hellip;  -- 音乐联系 音乐联系 &amp;hellip;  -- 局限性与开放问题 参考文献  待补充  </description>
+    </item>
+    
+    <item>
+      <title>EP31: The Warmth of Moog Has an Equation</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep31/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep31/</guid>
+      <description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
+本集探讨：4极级联H(s), Barkhausen准则, tanh→奇次谐波。
+前置知识 定义 Definition (...)  &amp;hellip;  -- 主要定理 Theorem 31.1 (...)  &amp;hellip;  -- Proof. &amp;hellip;  -- 音乐联系 音乐联系 &amp;hellip;  -- 局限性与开放问题 参考文献  待补充  </description>
+    </item>
+    
+    <item>
+      <title>EP32: Chebyshev Waveshaping — Buchla and West Coast Synthesis</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep32/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep32/</guid>
+      <description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
+本集探讨：Chebyshev多项式T_n, 波形整形, 谐波控制。
+前置知识 定义 Definition (...)  &amp;hellip;  -- 主要定理 Theorem 32.1 (...)  &amp;hellip;  -- Proof. &amp;hellip;  -- 音乐联系 音乐联系 &amp;hellip;  -- 局限性与开放问题 参考文献  待补充  </description>
+    </item>
+    
+    <item>
+      <title>EP33: One Delay Line, One String — Physical Modeling</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep33/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep33/</guid>
+      <description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
+本集探讨：Karplus-Strong, d&amp;rsquo;Alembert行波, 数字波导。
+前置知识 定义 Definition (...)  &amp;hellip;  -- 主要定理 Theorem 33.1 (...)  &amp;hellip;  -- Proof. &amp;hellip;  -- 音乐联系 音乐联系 &amp;hellip;  -- 局限性与开放问题 参考文献  待补充  </description>
+    </item>
+    
+    <item>
+      <title>EP34: The Bessel Secret of the DX7 — FM Synthesis Mathematics</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep34/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep34/</guid>
+      <description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
+本集探讨：Bessel旁频展开J_n(I), Carson带宽公式, 算子反馈分岔。
+前置知识 定义 Definition (...)  &amp;hellip;  -- 主要定理 Theorem 34.1 (...)  &amp;hellip;  -- Proof. &amp;hellip;  -- 音乐联系 音乐联系 &amp;hellip;  -- 局限性与开放问题 参考文献  待补充  </description>
+    </item>
+    
+    <item>
+      <title>EP35: The Phase Vocoder — Mathematics of Pitch Shifting</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep35/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep35/</guid>
+      <description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
+本集探讨：STFT相位展开, COLA条件, 重叠相加, 音高移位。
+前置知识 定义 Definition (...)  &amp;hellip;  -- 主要定理 Theorem 35.1 (...)  &amp;hellip;  -- Proof. &amp;hellip;  -- 音乐联系 音乐联系 &amp;hellip;  -- 局限性与开放问题 参考文献  待补充  </description>
+    </item>
+    
+    <item>
+      <title>EP36: Quanta of Sound — Gabor and the Uncertainty Principle</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep36/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep36/</guid>
+      <description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
+本集探讨：Heisenberg-Gabor σ_t·σ_f≥1/(4π), Gabor原子, Balian-Low定理。
+前置知识 定义 Definition (...)  &amp;hellip;  -- 主要定理 Theorem 36.1 (...)  &amp;hellip;  -- Proof. &amp;hellip;  -- 音乐联系 音乐联系 &amp;hellip;  -- 局限性与开放问题 参考文献  待补充  </description>
+    </item>
+    
+    <item>
+      <title>EP37: Your EQ Moves Poles — Biquad Filters</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep37/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep37/</guid>
+      <description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
+本集探讨：双二阶H(z), 双线性变换, 极零点迁移。
+前置知识 定义 Definition (...)  &amp;hellip;  -- 主要定理 Theorem 37.1 (...)  &amp;hellip;  -- Proof. &amp;hellip;  -- 音乐联系 音乐联系 &amp;hellip;  -- 局限性与开放问题 参考文献  待补充  </description>
+    </item>
+    
+    <item>
+      <title>EP38: Reverberation Is Matrix Multiplication</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep38/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep38/</guid>
+      <description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
+本集探讨：卷积混响, FDN反馈矩阵, Hadamard正交性, 互质延迟。
+前置知识 定义 Definition (...)  &amp;hellip;  -- 主要定理 Theorem 38.1 (...)  &amp;hellip;  -- Proof. &amp;hellip;  -- 音乐联系 音乐联系 &amp;hellip;  -- 局限性与开放问题 参考文献  待补充  </description>
+    </item>
+    
+    <item>
+      <title>EP39: How Spotify Knows You Are Too Loud — The LUFS Algorithm</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep39/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep39/</guid>
+      <description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
+本集探讨：ITU-R BS.1770 K加权双二阶, 双门限, 真峰值。
+前置知识 定义 Definition (...)  &amp;hellip;  -- 主要定理 Theorem 39.1 (...)  &amp;hellip;  -- Proof. &amp;hellip;  -- 音乐联系 音乐联系 &amp;hellip;  -- 局限性与开放问题 参考文献  待补充  </description>
+    </item>
+    
+    <item>
+      <title>EP40: What MP3 Deletes — Psychoacoustics and MDCT</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep40/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep40/</guid>
+      <description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
+本集探讨：心理声学掩蔽(Bark尺度), MDCT核, TDAC定理, Huffman编码。
+前置知识 定义 Definition (...)  &amp;hellip;  -- 主要定理 Theorem 40.1 (...)  &amp;hellip;  -- Proof. &amp;hellip;  -- 音乐联系 音乐联系 &amp;hellip;  -- 局限性与开放问题 参考文献  待补充  </description>
+    </item>
+    
+    <item>
+      <title>EP41: The Mathematics of Source Separation — NMF to Demucs</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep41/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep41/</guid>
+      <description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
+本集探讨：NMF V≈WH乘法更新规则, Wiener掩模MMSE最优性, U-Net, HTDemucs, SDR指标。
+前置知识 定义 Definition (...)  &amp;hellip;  -- 主要定理 Theorem 41.1 (...)  &amp;hellip;  -- Proof. &amp;hellip;  -- 音乐联系 音乐联系 &amp;hellip;  -- 局限性与开放问题 参考文献  待补充  </description>
+    </item>
+    
+    <item>
+      <title>EP42: Chord Recognition — From Chroma Vectors to Viterbi Decoding</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep42/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep42/</guid>
+      <description>概述 你播放一首歌，App 在零点一秒内报出和弦名。这不是凭感觉猜测，也不是查数据库。 背后是一个隐马尔可夫模型（Hidden Markov Model, HMM），和一个格形图上的最短路径算法（Viterbi）。
+本集从信号处理（STFT 色度向量）出发，经过模板匹配，建立 HMM 的三要素， 最终用 Viterbi 动态规划在  时间内精确解码最优和弦序列。
+ 前置知识   STFT 与相位声码器（EP35） — 短时傅里叶变换  全音程列与 （EP04） — 十二音类循环群结构  马尔可夫链与 AI 作曲（EP21） — 离散 Markov 链  人声分离（EP41） — 上游信号分离流程   定义 Definition 42.1 (色度特征向量)  设音频帧的短时傅里叶变换幅度谱为 ，。 色度向量  的第  分量（）定义为
+ 其中 ， 为第  个频率箱的中心频率， 为参考频率（通常取 C0 = 16.35 Hz）。
+色度向量将所有八度的能量折叠到  上， 实现八度等价： 汇聚了 C4、C5、C6 等所有八度上音名为  的能量。</description>
+    </item>
+    
+  </channel>
+</rss>
