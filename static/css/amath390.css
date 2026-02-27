@@ -383,6 +383,19 @@ pre {
 }
 .hero h1 { font-size: 2.8rem; margin-bottom: .3em; }
 .hero .tagline { font-size: 1.1rem; color: var(--text-muted); max-width: 560px; margin: 0 auto; }
+.hero-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #2a2a4a;
+  margin-bottom: 1.2em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: border-color .2s;
+}
+.hero-avatar:hover { border-color: var(--accent-blue); }
 
 .arc-section { margin-bottom: 2.5em; }
 .arc-section h2 { font-size: 1.1rem; margin-bottom: 1em; }
@@ -508,8 +521,19 @@ pre {
   font-size: .8rem;
   color: var(--text-muted);
 }
-.footer-content { display: flex; gap: .8em; flex-wrap: wrap; align-items: center; }
+.footer-content { display: flex; gap: 1em; flex-wrap: wrap; align-items: center; }
 .footer-sep { opacity: .5; }
+.footer-avatar-link { flex-shrink: 0; }
+.footer-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #2a2a4a;
+  transition: border-color .2s;
+}
+.footer-avatar:hover { border-color: var(--accent-blue); }
+.footer-text { display: flex; gap: .8em; flex-wrap: wrap; align-items: center; }
 
 /* ===== KATEX DISPLAY ===== */
 .katex-display { overflow-x: auto; padding: .5em 0; }
