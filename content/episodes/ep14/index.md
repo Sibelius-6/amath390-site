@@ -521,6 +521,18 @@ The Hodge decomposition yields testable predictions: Bach chorales should have h
 
 ---
 
+## Extended Reading
+
+{{< youtube id="5xLe77iTHuQ" start="14" title="What is algebraic topology?" caption="A visual introduction to algebraic topology: holes, loops, and how algebra captures what geometry cannot. The conceptual foundation for the homology groups H_k and Betti numbers used throughout EP14." >}}
+
+{{< youtube id="MflpyJwhMhQ" title="Simplicial homology explained" caption="Simplicial complexes, boundary operators, and homology groups built from scratch — the mathematical machinery behind the Tonnetz Betti numbers β₀=1, β₁=2, β₂=1." >}}
+
+{{< youtube id="IDcw33YRgpY" start="11" title="Visualizing the Hodge decomposition" caption="The Hodge decomposition on graphs: exact (gradient), coexact (curl), and harmonic components visualized as water flows. The EP14 musical interpretation (cadences/PLR cycles/modulations) maps directly onto these three flow types." >}}
+
+{{< youtube id="2ptFnIj71SM" start="78" title="The derivative isn't what you think" caption="3Blue1Brown on exterior derivatives and differential forms — the continuous analogue of the coboundary operator δ used in EP14's discrete Hodge theory." >}}
+
+{{< youtube id="IQqtsm-bBRU" start="279" title="The open hole problem" caption="An exploration of holes in topology — why the loop test (can you fill this closed curve?) is the right definition of a hole, connecting to the Tonnetz's two non-contractible loops." >}}
+
 ## Academic References
 
 1. Euler, L. (1739). *Tentamen novae theoriae musicae*. St. Petersburg.

@@ -1,7 +1,11 @@
 <div class="yt-container">
   <div class="yt-embed">
+    {{ $id := .Get "id" | default (.Get 0) }}
+    {{ $start := .Get "start" }}
+    {{ $src := printf "https://www.youtube.com/embed/%s" $id }}
+    {{ if $start }}{{ $src = printf "%s?start=%s" $src $start }}{{ end }}
     <iframe
-      src="https://www.youtube.com/embed/{{ .Get "id" | default (.Get 0) }}"
+      src="{{ $src }}"
       title="{{ .Get "title" | default "YouTube video" }}"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
