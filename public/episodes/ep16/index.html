@@ -23,6 +23,11 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+
 <link rel="stylesheet" href="/css/amath390.css">
 
 </head>
@@ -596,8 +601,20 @@ document.addEventListener('DOMContentLoaded', function() {
         
           
           
+            <a href="https://amath390.sibeliusp.com/episodes/ep16/"
+               class="ep-link active">
+              <span class="ep-num">16</span>
+              <span class="ep-title">Rossini&#39;s Code — Opera as a Context-Free Grammar</span>
+            </a>
+          
         
           
+          
+            <a href="https://amath390.sibeliusp.com/episodes/ep17/"
+               class="ep-link">
+              <span class="ep-num">17</span>
+              <span class="ep-title">Leitmotif Networks — Wagner&#39;s Ring Cycle</span>
+            </a>
           
         
           
@@ -712,7 +729,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <header class="episode-header">
   <div class="ep-badge">EP16</div>
   <h1 class="ep-main-title">EP16: Rossini&#39;s Code — Opera as a Context-Free Grammar</h1>
-  <div class="ep-subtitle">上下文无关文法, 迭代映射</div>
+  <div class="ep-subtitle">Solita Forma, Context-Free Grammars, Kolmogorov Compression, and Combinatorial Ensemble Growth</div>
 
   <div class="ep-meta">
     
@@ -722,7 +739,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     <span class="meta-item domains">
-      <span class="domain-chip">Formal Languages</span>
+      <span class="domain-chip">Formal Languages</span><span class="domain-chip">Combinatorics</span><span class="domain-chip">Information Theory</span>
     </span>
     
   </div>
@@ -731,10 +748,49 @@ document.addEventListener('DOMContentLoaded', function() {
     
 
 
+<div class="cross-refs">
+  <h3 class="cross-refs-title">前置知识</h3>
+  <div class="ref-cards">
+    
+      
+      
+      
+      
+        <a href="https://amath390.sibeliusp.com/episodes/ep15/" class="ref-card callback">
+          <span class="ref-ep">EP15</span>
+          <span class="ref-title">Opera Acoustics and the Singer&#39;s Formant</span>
+        </a>
+      
+    
+  </div>
+</div>
 
 
 
 
+
+
+<div class="cross-refs">
+  <h3 class="cross-refs-title">后续拓展</h3>
+  <div class="ref-cards">
+    
+      
+      
+        
+        
+        
+          <a href="https://amath390.sibeliusp.com/episodes/ep17/" class="ref-card forward">
+            <span class="ref-ep">EP17</span>
+            <span class="ref-title">Leitmotif Networks — Wagner&#39;s Ring Cycle</span>
+          </a>
+        
+      
+    
+      
+      
+    
+  </div>
+</div>
 
 
 
@@ -742,46 +798,503 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     <div class="episode-content content">
-      <h2 id="概述">概述</h2>
-<p><em>本页内容正在撰写中。请先观看<a href="#">小红书视频</a>了解核心概念。</em></p>
-<p>本集探讨：上下文无关文法, 迭代映射。</p>
-<h2 id="前置知识">前置知识</h2>
-<!-- cross-refs partial handles callback links -->
-<h2 id="定义">定义</h2>
-<!-- 
+      <h2 id="overview">Overview</h2>
+<p>Thirty-four operas in thirteen years. An average of one every five months — while his contemporaries typically took two to three years per opera. Rossini was not merely talented; he had discovered a <strong>system</strong>.</p>
+<blockquote>
+<p><em>中文:</em> &ldquo;罗西尼不是天才，他找到了一套方法。这期我们来拆解 Budden 所说的罗西尼法典。&rdquo;</p>
+</blockquote>
+<p>The musicologist Julian Budden named this system the <strong>Code Rossini</strong> — deliberately evoking the Code Napoléon. Like Napoleon&rsquo;s legal code, Rossini&rsquo;s system provided a fixed structural framework within which infinite variation could occur. Every aria, duet, and ensemble finale in early 19th-century Italian opera follows a template called the <strong>solita forma</strong> (&ldquo;customary form&rdquo;), a hierarchical convention system that can be modeled as a <strong>context-free grammar</strong>.</p>
+<p>This episode develops three mathematical perspectives on Code Rossini:</p>
+<ol>
+<li><strong>Formal language theory</strong>: The solita forma is a context-free grammar — a set of production rules that generate an infinite family of structurally valid operas from a finite rule set.</li>
+<li><strong>Information theory</strong>: The template-plus-parameter architecture achieves <strong>Kolmogorov compression</strong> — describe the template once, fill in parameters thirty-four times.</li>
+<li><strong>Combinatorics</strong>: Rossini&rsquo;s ensemble finales exploit the quadratic growth of pairwise interactions: <span class="math-inline" data-latex="n"></span> singers produce <span class="math-inline" data-latex="\binom{n}{2}"></span> interaction pairs, and at <span class="math-inline" data-latex="n = 7"></span> the complexity exceeds the human auditory system&rsquo;s tracking capacity.</li>
+</ol>
+<hr>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>
 
-<div class="definition-block" id="definition">
+
+
+<a href="https://amath390.sibeliusp.com/episodes/ep15/" class="episode-ref-link">Opera Acoustics and the Singer's Formant (EP15)</a>
+
+ — physical acoustics of the operatic voice; the environment in which Code Rossini operates</li>
+</ul>
+<hr>
+<h2 id="definitions">Definitions</h2>
+
+
+<div class="definition-block" id="definition-16.1">
   <div class="block-label">
-    Definition (...)
+    Definition 16.1 (Solita Forma)
   </div>
-  <div class="block-body">&hellip;</div>
+  <div class="block-body"><p>The <strong>solita forma</strong> (Italian: &ldquo;customary form&rdquo;) is a four-stage structural template governing individual numbers (arias, duets, ensembles) in early 19th-century Italian opera. The term was introduced by Abramo Basevi (1859) and systematized by Budden (1973).</p>
+<p><strong>Standard solo aria form</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Italian name</th>
+<th>Dramatic function</th>
+<th>Tempo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><em>Scena</em> (Recitative)</td>
+<td>Establish context, advance plot</td>
+<td>Free</td>
+</tr>
+<tr>
+<td>2</td>
+<td><em>Cantabile</em> (Slow aria)</td>
+<td>Express inner emotion</td>
+<td>Slow (Andante/Larghetto)</td>
+</tr>
+<tr>
+<td>3</td>
+<td><em>Tempo di mezzo</em></td>
+<td>External event interrupts</td>
+<td>Variable</td>
+</tr>
+<tr>
+<td>4</td>
+<td><em>Cabaletta</em> (Fast aria)</td>
+<td>Character decides, virtuosic display</td>
+<td>Fast (Allegro/Vivace)</td>
+</tr>
+</tbody>
+</table>
+<p>The four stages alternate between stasis and action: <strong>static → static → dynamic → dynamic</strong>, or equivalently, <strong>reflection → reflection → disruption → resolution</strong>.</p>
+<p><strong>Adaptations</strong>:</p>
+<ul>
+<li><strong>Duet</strong>: The <em>cantabile</em> becomes a dialogue; the <em>cabaletta</em> becomes a <em>stretta</em> (accelerating joint conclusion).</li>
+<li><strong>Finale</strong>: The <em>cantabile</em> is replaced by a <em>largo concertato</em> (frozen ensemble moment, all characters singing simultaneously); the <em>tempo di mezzo</em> drives toward a collective <em>stretta</em>.</li>
+</ul>
+<blockquote>
+<p><em>中文:</em> &ldquo;四个阶段，两静两动交替。历史学家 Budden 管这套系统叫 Code Rossini，罗西尼法典。&rdquo;</p>
+</blockquote>
 </div>
- -->
-<h2 id="主要定理">主要定理</h2>
-<!-- 
+</div>
+
+
+
+<div class="definition-block" id="definition-16.2">
+  <div class="block-label">
+    Definition 16.2 (Context-Free Grammar (Formal Language Theory))
+  </div>
+  <div class="block-body"><p>A <strong>context-free grammar</strong> (CFG) is a 4-tuple <span class="math-inline" data-latex="G = (V, \Sigma, R, S)"></span> where:</p>
+<ul>
+<li><span class="math-inline" data-latex="V"></span> = finite set of <strong>non-terminal</strong> symbols (structural categories)</li>
+<li><span class="math-inline" data-latex="\Sigma"></span> = finite set of <strong>terminal</strong> symbols (concrete musical material), <span class="math-inline" data-latex="V \cap \Sigma = \emptyset"></span></li>
+<li><span class="math-inline" data-latex="R \subseteq V \times (V \cup \Sigma)^*"></span> = finite set of <strong>production rules</strong></li>
+<li><span class="math-inline" data-latex="S \in V"></span> = <strong>start symbol</strong></li>
+</ul>
+<p>A string <span class="math-inline" data-latex="w \in \Sigma^*"></span> is <strong>generated</strong> by <span class="math-inline" data-latex="G"></span> if there exists a sequence of rule applications from <span class="math-inline" data-latex="S"></span> that produces <span class="math-inline" data-latex="w"></span>. The set of all such strings is the <strong>language</strong> <span class="math-inline" data-latex="L(G)"></span>.</p>
+<p>The key property of CFGs: each non-terminal can be expanded <strong>independently of its surrounding context</strong> — hence &ldquo;context-free.&rdquo;</p>
+</div>
+</div>
+
+<h3 id="example-una-voce-poco-fa-as-solita-forma">Example: &ldquo;Una voce poco fa&rdquo; as Solita Forma</h3>
+<p>Rosina&rsquo;s cavatina from <em>Il barbiere di Siviglia</em> (1816) is a textbook instantiation:</p>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Content</th>
+<th>Musical character</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Scena</em></td>
+<td>&ldquo;Una voce poco fa&hellip;&rdquo; — Rosina reveals she heard a voice</td>
+<td>Recitative, free rhythm</td>
+</tr>
+<tr>
+<td><em>Cantabile</em></td>
+<td>&ldquo;Io sono docile&hellip;&rdquo; — She professes her love</td>
+<td>Lyrical E major, ornamented</td>
+</tr>
+<tr>
+<td><em>Tempo di mezzo</em></td>
+<td>She realizes she is being watched</td>
+<td>Modulatory, agitated</td>
+</tr>
+<tr>
+<td><em>Cabaletta</em></td>
+<td>&ldquo;Ma se mi toccano&hellip;&rdquo; — She declares she will not submit</td>
+<td>Virtuosic coloratura, rapid passagework</td>
+</tr>
+</tbody>
+</table>
+<div class="yt-container">
+  <div class="yt-embed">
+    <iframe
+      src="https://www.youtube.com/embed/mDyXqf0at_w"
+      title="Una voce poco fa — Cecilia Bartoli"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
+  </div>
+  <p class="yt-caption">Cecilia Bartoli performs Rosina&#39;s cavatina &#39;Una voce poco fa&#39; from Il barbiere di Siviglia. Note the four-stage solita forma structure: recitative → cantabile → tempo di mezzo → cabaletta.</p>
+</div>
+
+<div class="yt-container">
+  <div class="yt-embed">
+    <iframe
+      src="https://www.youtube.com/embed/RvW9cUCuPQI"
+      title="Una voce poco fa — Teresa Berganza"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
+  </div>
+  <p class="yt-caption">Teresa Berganza&#39;s interpretation of the same aria, demonstrating how the solita forma template accommodates different vocal approaches.</p>
+</div>
+
+<hr>
+
+
+<div class="definition-block" id="definition-16.3">
+  <div class="block-label">
+    Definition 16.3 (Rossini Crescendo)
+  </div>
+  <div class="block-body"><p>The <strong>Rossini Crescendo</strong> (the technique that earned Rossini the nickname <em>Signor Crescendo</em>) is a compositional procedure with the following structure:</p>
+<ol>
+<li>Take a short melodic phrase of <span class="math-inline" data-latex="k"></span> bars (typically <span class="math-inline" data-latex="k = 4"></span> or <span class="math-inline" data-latex="k = 8"></span>).</li>
+<li>Repeat the phrase <span class="math-inline" data-latex="n"></span> times (typically <span class="math-inline" data-latex="n = 3"></span>).</li>
+<li>On each repetition, <strong>add orchestral layers</strong>: strings → woodwinds → brass + percussion.</li>
+<li>Simultaneously increase dynamics (<span class="math-inline" data-latex="p \to f \to ff"></span>) and raise the register.</li>
+</ol>
+<p>Formally, let <span class="math-inline" data-latex="I(r)"></span> denote the set of active instruments at repetition <span class="math-inline" data-latex="r"></span>, and <span class="math-inline" data-latex="d(r)"></span> the dynamic level. The crescendo satisfies:</p>
+<div class="math-display" data-latex="I(1) \subset I(2) \subset I(3), \qquad d(1) &lt; d(2) &lt; d(3)"></div>
+<p>This is a <strong>monotone saturation process</strong>: intensity increases monotonically, each repetition adds a layer, and after <span class="math-inline" data-latex="n"></span> steps the full orchestra (<em>tutti</em>) is reached.</p>
+</div>
+</div>
+
+<h3 id="william-tell-overture-the-crescendo-in-action">William Tell Overture: The Crescendo in Action</h3>
+<p>The finale of the <em>Guillaume Tell</em> overture (1829) — Rossini&rsquo;s last opera — is the most famous example. A galloping theme repeats three times, building from light cavalry to full military charge.</p>
+<div class="yt-container">
+  <div class="yt-embed">
+    <iframe
+      src="https://www.youtube.com/embed/xuayt2HazNY"
+      title="William Tell Overture — Riccardo Chailly"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
+  </div>
+  <p class="yt-caption">Rossini&#39;s William Tell Overture, conducted by Riccardo Chailly. The finale (from ~9:00) demonstrates the classic Rossini Crescendo: three repetitions building to full orchestral saturation.</p>
+</div>
+
+
+
+<div class="definition-block" id="definition-16.4">
+  <div class="block-label">
+    Definition 16.4 (Self-Borrowing (Autoimprestito))
+  </div>
+  <div class="block-body"><p>Rossini&rsquo;s practice of <strong>self-borrowing</strong> (<em>autoimprestito</em>) consists of reusing musical material — particularly overtures — across multiple operas with entirely different dramatic content.</p>
+<p>The most famous case: the same overture serves three operas:</p>
+<ol>
+<li><em>Aureliano in Palmira</em> (1813) — Roman historical drama</li>
+<li><em>Elisabetta, regina d&rsquo;Inghilterra</em> (1815) — Elizabethan court intrigue</li>
+<li><em>Il barbiere di Siviglia</em> (1816) — Spanish comedy</li>
+</ol>
+<p>This is possible because, as Gossett (1979) observed, the overture&rsquo;s function in the Italian tradition is to establish <strong>mood and energy level</strong>, not to preview specific dramatic content. The overture has its own independent musical logic.</p>
+<blockquote>
+<p><em>中文:</em> &ldquo;惯例的力量恰恰在于，它不关心你填入什么故事。&rdquo;</p>
+</blockquote>
+</div>
+</div>
+
+<hr>
+<h2 id="main-theorems">Main Theorems</h2>
+
 
 <div class="theorem-block" id="theorem-16.1">
   <div class="block-label">
-    Theorem 16.1 (...)
+    Theorem 16.1 (CFG Representation of Solita Forma)
   </div>
-  <div class="block-body">&hellip;</div>
+  <div class="block-body"><p>The solita forma convention system can be represented as a context-free grammar <span class="math-inline" data-latex="G_\text{Rossini} = (V, \Sigma, R, S)"></span> with the following production rules:</p>
+<p><strong>Start symbol</strong>: <span class="math-inline" data-latex="S \to \texttt{Opera}"></span></p>
+<p><strong>Top-level structure</strong>:</p>
+<div class="math-display" data-latex="\texttt{Opera} \to \texttt{Overture} \; \texttt{Act}_1 \; \texttt{Act}_2 \; [\texttt{Act}_3]"></div>
+<div class="math-display" data-latex="\texttt{Act} \to \texttt{Number}^&#43;"></div>
+<p><strong>Number types</strong>:</p>
+<div class="math-display" data-latex="\texttt{Number} \to \texttt{SoloAria} \mid \texttt{Duet} \mid \texttt{Ensemble} \mid \texttt{Finale}"></div>
+<p><strong>Solo aria (solita forma)</strong>:</p>
+<div class="math-display" data-latex="\texttt{SoloAria} \to \texttt{Scena} \; \texttt{Cantabile} \; \texttt{TempoMezzo} \; \texttt{Cabaletta}"></div>
+<p><strong>Internal expansion</strong> (ornamental detail):</p>
+<div class="math-display" data-latex="\texttt{Cantabile} \to \texttt{Theme} \; \texttt{Variation}"></div>
+<div class="math-display" data-latex="\texttt{Variation} \to \texttt{Trill} \mid \texttt{Passaggio} \mid \texttt{Cadenza}"></div>
+<p><strong>Adaptation rules</strong>:</p>
+<div class="math-display" data-latex="\texttt{Duet} \to \texttt{Scena} \; \texttt{DuetCantabile} \; \texttt{TempoMezzo} \; \texttt{Stretta}"></div>
+<div class="math-display" data-latex="\texttt{Finale} \to \texttt{Scena} \; \texttt{LargoConcertato} \; \texttt{TempoMezzo} \; \texttt{Stretta}"></div>
+<p>The terminal symbols <span class="math-inline" data-latex="\Sigma"></span> are the concrete musical materials — specific melodies, harmonies, rhythms, and texts chosen by the composer.</p>
+<p>Three different opera types (solo aria, duet, finale) are surface variants of the <strong>same underlying grammar</strong>, differing only in which production rules are applied at the <span class="math-inline" data-latex="\texttt{Number}"></span> level.</p>
 </div>
- -->
-<!-- <div class="proof-block">
+</div>
+
+<div class="proof-block">
   <div class="block-label">Proof.</div>
-  <div class="block-body">&hellip;</div>
+  <div class="block-body"><p>The representation is constructive: given any Rossini opera number, we can identify its derivation tree. For Rosina&rsquo;s &ldquo;Una voce poco fa&rdquo;:</p>
+<div class="math-display" data-latex="\texttt{SoloAria} \to \texttt{Scena}(\text{&#34;Una voce...&#34;}) \; \texttt{Cantabile}(\text{&#34;Io sono docile...&#34;}) \; \texttt{TempoMezzo}(\text{discovery}) \; \texttt{Cabaletta}(\text{&#34;Ma se mi toccano...&#34;})"></div>
+<p>The CFG property (context-freeness) holds because each stage&rsquo;s internal structure does not depend on the content of surrounding stages. The <em>cantabile</em> in a comic aria follows the same structural rules as a <em>cantabile</em> in a tragic aria — only the terminal symbols (melodies, texts) differ.</p>
+<p>The key claim is that the convention system is <strong>at least</strong> context-free but <strong>not regular</strong>: the <em>tempo di mezzo</em>&rsquo;s function depends on the <em>cantabile</em> that precedes it (it must provide a dramatic contrast), which creates a dependency that a regular grammar cannot express. <span class="math-inline" data-latex="\square"></span></p>
 </div>
- -->
-<h2 id="音乐联系">音乐联系</h2>
-<!-- <div class="music-block">
+</div>
+
+
+
+<div class="theorem-block" id="theorem-16.2">
+  <div class="block-label">
+    Theorem 16.2 (Ensemble Interaction Growth)
+  </div>
+  <div class="block-body"><p>In a Rossini ensemble with <span class="math-inline" data-latex="n"></span> simultaneously singing characters, the number of pairwise harmonic and dramatic interaction relationships is:</p>
+<div class="math-display" data-latex="\binom{n}{2} = \frac{n(n-1)}{2}"></div>
+<table>
+<thead>
+<tr>
+<th>Singers <span class="math-inline" data-latex="n"></span></th>
+<th>Interactions <span class="math-inline" data-latex="\binom{n}{2}"></span></th>
+<th>Musical texture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>Monologue — one melodic line</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+<td>Dialogue — one harmonic relationship</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>Trio — three interlocking pairs</td>
+</tr>
+<tr>
+<td>4</td>
+<td>6</td>
+<td>Quartet — six relationships</td>
+</tr>
+<tr>
+<td>7</td>
+<td>21</td>
+<td>Septet (<em>L&rsquo;italiana</em> finale) — twenty-one relationships</td>
+</tr>
+</tbody>
+</table>
+<p>The complexity grows <strong>quadratically</strong>. At <span class="math-inline" data-latex="n = 7"></span>, the 21 simultaneous interaction pairs exceed the human auditory system&rsquo;s capacity for segregating individual streams (estimated at 3–4 by Bregman 1990), producing the perception of <strong>organized chaos</strong>.</p>
+</div>
+</div>
+
+<div class="proof-block">
+  <div class="block-label">Proof.</div>
+  <div class="block-body"><p>Each pair <span class="math-inline" data-latex="\{i, j\}"></span> with <span class="math-inline" data-latex="1 \leq i &lt; j \leq n"></span> contributes one harmonic/dramatic interaction. The number of such pairs is:</p>
+<div class="math-display" data-latex="\binom{n}{2} = \frac{n!}{2!(n-2)!} = \frac{n(n-1)}{2}"></div>
+<p>For <span class="math-inline" data-latex="n = 7"></span>: <span class="math-inline" data-latex="\binom{7}{2} = \frac{7 \times 6}{2} = 21"></span>. <span class="math-inline" data-latex="\square"></span></p>
+</div>
+</div>
+
+<h3 id="litaliana-in-algeri-the-ensemble-finale-as-controlled-collapse"><em>L&rsquo;italiana in Algeri</em>: The Ensemble Finale as Controlled Collapse</h3>
+<p>The Act 1 finale of <em>L&rsquo;italiana in Algeri</em> (1813) is Rossini&rsquo;s most extreme application of ensemble growth. Seven characters enter one by one. As the interaction count reaches 21, the characters abandon language entirely and begin singing onomatopoeia:</p>
+<table>
+<thead>
+<tr>
+<th>Character</th>
+<th>Sound</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Multiple</td>
+<td><em>din din</em></td>
+<td>Bell ringing</td>
+</tr>
+<tr>
+<td>Multiple</td>
+<td><em>tac tac</em></td>
+<td>Hammer striking</td>
+</tr>
+<tr>
+<td>Multiple</td>
+<td><em>croa croa</em></td>
+<td>Crow cawing</td>
+</tr>
+<tr>
+<td>Multiple</td>
+<td><em>bum bum</em></td>
+<td>Cannon firing</td>
+</tr>
+</tbody>
+</table>
+<p>Every note is precisely written in the score — fully determined — yet the superposition of seven independent parts creates the perception of total systemic breakdown.</p>
+<blockquote>
+<p><em>中文:</em> &ldquo;每个角色的每一个音符都写在谱上，完全确定，但七个人叠加在一起，听起来像完全疯了。&rdquo;</p>
+</blockquote>
+<div class="yt-container">
+  <div class="yt-embed">
+    <iframe
+      src="https://www.youtube.com/embed/42FPYWPUR9I"
+      title="L&#39;italiana in Algeri — Act 1 Finale"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
+  </div>
+  <p class="yt-caption">The Act 1 finale &#39;Nella testa ho un campanello&#39; from L&#39;italiana in Algeri: seven singers progressively overwhelm the listener with din din, tac tac, croa croa, bum bum — a deterministic score that sounds like chaos.</p>
+</div>
+
+<hr>
+
+
+<div class="theorem-block" id="theorem-16.3">
+  <div class="block-label">
+    Theorem 16.3 (Kolmogorov Compression of Code Rossini)
+  </div>
+  <div class="block-body"><p>Let <span class="math-inline" data-latex="K(x)"></span> denote the Kolmogorov complexity of a string <span class="math-inline" data-latex="x"></span> (the length of the shortest program that outputs <span class="math-inline" data-latex="x"></span>). For Rossini&rsquo;s corpus of <span class="math-inline" data-latex="N = 34"></span> operas, the template-plus-parameter architecture achieves:</p>
+<div class="math-display" data-latex="K(\text{corpus}) \leq K(\text{template}) &#43; \sum_{i=1}^{N} K(\text{params}_i)"></div>
+<p>Since <span class="math-inline" data-latex="K(\text{template}) \ll K(\text{single opera})"></span> and the parameter descriptions are significantly shorter than full opera descriptions, the total complexity is much less than describing each opera independently:</p>
+<div class="math-display" data-latex="K(\text{corpus}) \ll N \cdot K(\text{single opera})"></div>
+<p>This is the information-theoretic explanation for Rossini&rsquo;s productivity: the Code Rossini compresses the compositional search space.</p>
+</div>
+</div>
+
+<div class="proof-block">
+  <div class="block-label">Proof.</div>
+  <div class="block-body"><p>The Kolmogorov complexity <span class="math-inline" data-latex="K(x)"></span> satisfies the subadditivity property: <span class="math-inline" data-latex="K(x, y) \leq K(x) &#43; K(y) &#43; O(\log(\max(K(x), K(y))))"></span>.</p>
+<p>The template <span class="math-inline" data-latex="T"></span> (the solita forma grammar rules plus orchestration conventions) has a fixed complexity <span class="math-inline" data-latex="K(T) = c"></span> independent of <span class="math-inline" data-latex="N"></span>. Each opera <span class="math-inline" data-latex="i"></span> is generated by <span class="math-inline" data-latex="T"></span> plus opera-specific parameters <span class="math-inline" data-latex="p_i"></span> (specific melodies, texts, orchestration choices). Therefore:</p>
+<div class="math-display" data-latex="K(\text{corpus}) \leq c &#43; \sum_{i=1}^{N} K(p_i) &#43; O(N \log N)"></div>
+<p>The compression ratio is approximately <span class="math-inline" data-latex="c / (N \cdot K(\text{opera}))"></span> — one template description amortized over thirty-four operas. <span class="math-inline" data-latex="\square"></span></p>
+</div>
+</div>
+
+<hr>
+<h2 id="the-overture-as-invariant">The Overture as Invariant</h2>
+<p>The self-borrowing phenomenon (Definition 16.4) demonstrates that the overture is a <strong>structural invariant</strong> — it is preserved under changes to the opera&rsquo;s dramatic content. In the language of Theorem 16.1, the overture is a terminal symbol that can be substituted independently of other terminals:</p>
+<div class="math-display" data-latex="\texttt{Opera}_1, \texttt{Opera}_2, \texttt{Opera}_3 \text{ share } \texttt{Overture} = \texttt{ov}_0"></div>
+<p>despite having completely different derivation trees below the <span class="math-inline" data-latex="\texttt{Act}"></span> level.</p>
+<p>This is possible because the Italian operatic convention assigns the overture a <strong>purely atmospheric</strong> function — it establishes energy and mood, not narrative content. Gossett (1979) formalized this observation: the overture operates in an independent musical logic space, coupled to the drama only through shared tonal center and emotional register.</p>
+<div class="yt-container">
+  <div class="yt-embed">
+    <iframe
+      src="https://www.youtube.com/embed/J1uMN5LIW6E"
+      title="Il barbiere di Siviglia — Overture (Abbado)"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
+  </div>
+  <p class="yt-caption">The Barber of Seville overture, conducted by Claudio Abbado. This same music previously served Aureliano in Palmira (1813) and Elisabetta (1815) — three completely different dramatic contexts.</p>
+</div>
+
+<hr>
+<h2 id="musical-connection">Musical Connection</h2>
+<div class="music-block">
   <div class="block-label">音乐联系</div>
-  <div class="block-body">&hellip;</div>
+  <div class="block-body"><p><strong>From Frequency Domain to Structural Domain</strong></p>
+<p>This episode marks a transition in the series:</p>
+<ul>
+<li>
+<p><strong>EP15</strong> analyzed opera at the <strong>physical layer</strong>: how acoustic energy at specific frequencies propagates through halls and vocal tracts. The key quantity was the Singer&rsquo;s Formant — a spectral peak near 3 kHz.</p>
+</li>
+<li>
+<p><strong>EP16</strong> analyzes opera at the <strong>structural layer</strong>: how dramatic information is organized into hierarchical conventions. The key quantity is the grammar&rsquo;s production rule set.</p>
+</li>
+</ul>
+<p>The source-filter model from EP15 (Definition 15.1) has a structural analogue: in Code Rossini, the <strong>source</strong> is the convention system (grammar), and the <strong>filter</strong> is the composer&rsquo;s specific choices (terminal symbols). The radiated opera is:</p>
+<div class="math-display" data-latex="\text{Opera} = \text{Grammar} \times \text{Parameters}"></div>
+<p>just as the radiated voice is <span class="math-inline" data-latex="S = G \cdot H \cdot R"></span>.</p>
+<p><strong>Forward connections</strong>:</p>
+<ul>
+<li>
+<p><strong>EP17</strong> (Leitmotif Networks): Wagner&rsquo;s system is the structural inverse of Rossini&rsquo;s. Where Rossini builds top-down from a fixed grammar (a <strong>tree</strong>), Wagner builds bottom-up from local motif connections (a <strong>graph</strong>). EP16&rsquo;s CFG becomes EP17&rsquo;s network — two architectures for organizing operatic information.</p>
+</li>
+<li>
+<p><strong>EP20</strong> (Character Networks): Rossini&rsquo;s ensemble interactions (Theorem 16.2) are formalized as a complete graph <span class="math-inline" data-latex="K_n"></span> on <span class="math-inline" data-latex="n"></span> characters, connecting directly to the character network analysis of Wagner&rsquo;s <em>Ring</em>.</p>
+</li>
+</ul>
+<blockquote>
+<p><em>中文:</em> &ldquo;罗西尼是编译器，从语法生成程序。瓦格纳是神经网络，从局部连接涌现全局秩序。&rdquo;</p>
+</blockquote>
 </div>
- -->
-<h2 id="局限性与开放问题">局限性与开放问题</h2>
-<h2 id="参考文献">参考文献</h2>
+</div>
+
+<hr>
+<h2 id="rossinis-retirement">Rossini&rsquo;s Retirement</h2>
+<p>In 1829, after the premiere of <em>Guillaume Tell</em>, thirty-seven-year-old Rossini announced his retirement from opera. For the remaining thirty-nine years of his life — until his death in 1868 — he never wrote another opera.</p>
+<blockquote>
+<p><em>中文:</em> &ldquo;也许他意识到，当听众的期待超越了惯例所能承载的范围，最优雅的选择是停笔。但那套法典，至今还在上演。&rdquo;</p>
+</blockquote>
+<hr>
+<h2 id="limits-and-open-questions">Limits and Open Questions</h2>
 <ol>
-<li><em>待补充</em></li>
+<li>
+<p><strong>Is the solita forma truly context-free?</strong> The claim that the <em>tempo di mezzo</em> depends on the preceding <em>cantabile</em> (creating a non-trivial dependency) suggests the grammar may require context-sensitive features. A rigorous classification would require formalizing the full convention system — including the emotional-contrast constraints — as a formal language and determining its Chomsky hierarchy level.</p>
+</li>
+<li>
+<p><strong>Self-borrowing across composers.</strong> Rossini&rsquo;s self-borrowing is well-documented, but the practice was common in 18th-century opera (Handel, Vivaldi). The mathematical question: is there a measurable &ldquo;borrowing distance&rdquo; that quantifies how far a piece of music can travel between dramatic contexts before the fit breaks down?</p>
+</li>
+<li>
+<p><strong>Kolmogorov complexity is uncomputable.</strong> Theorem 16.3 uses Kolmogorov complexity conceptually. In practice, we can only compute upper bounds via actual compression algorithms. Applying standard compressors (gzip, LZ77) to symbolic representations of Rossini scores would give concrete compression ratios, testing whether Code Rossini truly achieves greater compression than non-template-based composers.</p>
+</li>
+<li>
+<p><strong>Auditory stream segregation limit.</strong> Theorem 16.2 claims that <span class="math-inline" data-latex="\binom{7}{2} = 21"></span> interactions exceed the auditory system&rsquo;s tracking capacity. The precise limit depends on pitch separation, rhythmic independence, and spatial separation (Bregman 1990). The &ldquo;3–4 streams&rdquo; figure is an estimate from cocktail-party experiments; operatic settings (with staged spatial separation and differentiated vocal timbres) may allow slightly higher limits.</p>
+</li>
+</ol>
+
+
+<div class="conjecture-block" id="conjecture">
+  <div class="block-label">
+    Conjecture (Grammar Complexity Classification)
+  </div>
+  <div class="block-body">The full convention system of early 19th-century Italian opera (including inter-number dependencies such as tonal planning across acts, dramatic arc constraints, and the requirement that the <em>primo finale</em> be more complex than individual numbers) is <strong>context-sensitive</strong> but not context-free. If confirmed, this would place operatic convention at Chomsky Type 1 — more complex than programming language syntax (mostly Type 2) but less complex than natural language semantics (Type 0).</div>
+</div>
+
+<hr>
+<h2 id="academic-references">Academic References</h2>
+<ol>
+<li>
+<p>Budden, J. (1973–1981). <em>The Operas of Verdi</em> (3 vols.). Oxford University Press. — Systematization of the solita forma concept; &ldquo;Code Rossini&rdquo; terminology.</p>
+</li>
+<li>
+<p>Basevi, A. (1859). <em>Studio sulle opere di Giuseppe Verdi</em>. Florence. — Original identification of the four-stage aria template.</p>
+</li>
+<li>
+<p>Gossett, P. (1979). The overtures of Rossini. <em>19th-Century Music</em>, 3(1), 3–31. — Analysis of Rossini&rsquo;s self-borrowing practice; the atmospheric (vs. narrative) function of the overture.</p>
+</li>
+<li>
+<p>Powers, H. S. (1987). &ldquo;La solita forma&rdquo; and &ldquo;The Uses of Convention.&rdquo; <em>Acta Musicologica</em>, 59(1), 65–90. — Formal analysis of the convention system and its variants.</p>
+</li>
+<li>
+<p>Chomsky, N. (1956). Three models for the description of language. <em>IRE Transactions on Information Theory</em>, 2(3), 113–124. — The Chomsky hierarchy of formal grammars.</p>
+</li>
+<li>
+<p>Li, M., &amp; Vitányi, P. (2008). <em>An Introduction to Kolmogorov Complexity and Its Applications</em> (3rd ed.). Springer. — Mathematical foundations of Kolmogorov complexity.</p>
+</li>
+<li>
+<p>Bregman, A. S. (1990). <em>Auditory Scene Analysis: The Perceptual Organization of Sound</em>. MIT Press. — Auditory stream segregation; limits on simultaneous stream tracking.</p>
+</li>
+<li>
+<p>Osborne, R. (2007). <em>Rossini: His Life and Works</em>. Oxford University Press. — Biographical context; productivity and retirement.</p>
+</li>
+<li>
+<p>Emanuele, M. (2003). Musica e Grammatiche Generative. <em>Rivista Italiana di Musicologia</em>, 38(2), 269–303. — Application of generative grammar theory to musical structure.</p>
+</li>
 </ol>
 
     </div>
@@ -967,6 +1480,10 @@ document.addEventListener('DOMContentLoaded', function() {
       </a>
       
       
+      <a href="https://amath390.sibeliusp.com/episodes/ep17/" class="ep-nav-next">
+        EP17: Leitmotif Networks — Wagner&#39;s Ring Cycle →
+      </a>
+      
     </nav>
   </article>
 
@@ -978,13 +1495,24 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="ep-toc-label">本页目录</div>
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#概述">概述</a></li>
-    <li><a href="#前置知识">前置知识</a></li>
-    <li><a href="#定义">定义</a></li>
-    <li><a href="#主要定理">主要定理</a></li>
-    <li><a href="#音乐联系">音乐联系</a></li>
-    <li><a href="#局限性与开放问题">局限性与开放问题</a></li>
-    <li><a href="#参考文献">参考文献</a></li>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#definitions">Definitions</a>
+      <ul>
+        <li><a href="#example-una-voce-poco-fa-as-solita-forma">Example: &ldquo;Una voce poco fa&rdquo; as Solita Forma</a></li>
+        <li><a href="#william-tell-overture-the-crescendo-in-action">William Tell Overture: The Crescendo in Action</a></li>
+      </ul>
+    </li>
+    <li><a href="#main-theorems">Main Theorems</a>
+      <ul>
+        <li><a href="#litaliana-in-algeri-the-ensemble-finale-as-controlled-collapse"><em>L&rsquo;italiana in Algeri</em>: The Ensemble Finale as Controlled Collapse</a></li>
+      </ul>
+    </li>
+    <li><a href="#the-overture-as-invariant">The Overture as Invariant</a></li>
+    <li><a href="#musical-connection">Musical Connection</a></li>
+    <li><a href="#rossinis-retirement">Rossini&rsquo;s Retirement</a></li>
+    <li><a href="#limits-and-open-questions">Limits and Open Questions</a></li>
+    <li><a href="#academic-references">Academic References</a></li>
   </ul>
 </nav>
     </div>
@@ -994,11 +1522,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
       <footer class="site-footer">
   <div class="footer-content">
-    <span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
-    <span class="footer-sep">·</span>
-    <a href="https://www.xiaohongshu.com" target="_blank" rel="noopener">小红书</a>
-    <span class="footer-sep">·</span>
-    <span>Built with <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> + KaTeX</span>
+    <a href="https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f" target="_blank" rel="noopener" class="footer-avatar-link">
+      <img src="/images/avatar.png" alt="Sibelius P." class="footer-avatar">
+    </a>
+    <div class="footer-text">
+      <span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
+      <span class="footer-sep">·</span>
+      <a href="https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f" target="_blank" rel="noopener">小红书</a>
+      <span class="footer-sep">·</span>
+      <span>Built with <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> + KaTeX</span>
+    </div>
   </div>
 </footer>
 

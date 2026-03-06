@@ -50,6 +50,18 @@ This episode builds Shannon&amp;rsquo;s entropy from first principles and applie
     </item>
     
     <item>
+      <title>EP17: Leitmotif Networks — Wagner&#39;s Ring Cycle</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep17/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep17/</guid>
+      <description>Overview You have heard this melody before. But in the Ring cycle&amp;rsquo;s sixteen hours, it returns in dozens of different forms — transposed, inverted, reversed, fragmented. Scholars have catalogued over a hundred such motifs. Wagner did not write melodies — he wrote an operating system.
+ 中文: &amp;ldquo;瓦格纳没有写旋律——他写了一个操作系统。这期我们来拆解这个系统的网络结构。&amp;rdquo;
+ This episode analyzes Wagner&amp;rsquo;s leitmotif system through three mathematical lenses:
+  Abstract algebra: The four basic motivic transformations — original, retrograde, inversion, retrograde-inversion — form the Klein four-group , the same algebraic structure we encountered in EP04 &amp;rsquo;s analysis of Schoenberg&amp;rsquo;s twelve-tone rows.</description>
+    </item>
+    
+    <item>
       <title>EP42: Chord Recognition — From Chroma Vectors to Viterbi Decoding</title>
       <link>https://amath390.sibeliusp.com/episodes/ep42/</link>
       <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>

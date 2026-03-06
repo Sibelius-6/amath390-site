@@ -1,0 +1,13 @@
+<div class="yt-container">
+  <div class="yt-embed">
+    <iframe
+      src="https://www.youtube.com/embed/{{ .Get "id" | default (.Get 0) }}"
+      title="{{ .Get "title" | default "YouTube video" }}"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
+  </div>
+  {{ with .Get "caption" }}<p class="yt-caption">{{ . }}</p>{{ end }}
+</div>

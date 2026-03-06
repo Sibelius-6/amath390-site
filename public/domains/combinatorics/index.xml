@@ -37,5 +37,16 @@ This episode answers both questions with graph coloring. Model each note as a ve
 This episode builds Shannon&amp;rsquo;s entropy from first principles and applies it to music.</description>
     </item>
     
+    <item>
+      <title>EP16: Rossini&#39;s Code — Opera as a Context-Free Grammar</title>
+      <link>https://amath390.sibeliusp.com/episodes/ep16/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://amath390.sibeliusp.com/episodes/ep16/</guid>
+      <description>Overview Thirty-four operas in thirteen years. An average of one every five months — while his contemporaries typically took two to three years per opera. Rossini was not merely talented; he had discovered a system.
+ 中文: &amp;ldquo;罗西尼不是天才，他找到了一套方法。这期我们来拆解 Budden 所说的罗西尼法典。&amp;rdquo;
+ The musicologist Julian Budden named this system the Code Rossini — deliberately evoking the Code Napoléon. Like Napoleon&amp;rsquo;s legal code, Rossini&amp;rsquo;s system provided a fixed structural framework within which infinite variation could occur.</description>
+    </item>
+    
   </channel>
 </rss>
