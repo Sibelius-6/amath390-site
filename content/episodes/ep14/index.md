@@ -79,7 +79,7 @@ Replace the geometric surface with an oriented combinatorial skeleton. Work with
 
 Orientation: {{< m >}}[B,A] = -[A,B]{{< /m >}}. These form real vector spaces {{< m >}}C_0, C_1, C_2, \ldots{{< /m >}}
 
-### P.4 — The Boundary Operator {{< m >}}\partial{{< /m >}}
+### P.4 — The Boundary Operator ∂
 
 {{< m >}}\partial_k{{< /m >}} takes a {{< m >}}k{{< /m >}}-chain and returns its {{< m >}}(k-1){{< /m >}}-dimensional boundary:
 
@@ -91,7 +91,7 @@ Sign rule: delete each vertex in turn, alternating signs — the result is the c
 
 ![Boundary operator: triangle → its three edges](img/BoundaryScene_ManimCE_v0.19.1.png)
 
-### P.5 — {{< m >}}\partial^2 = 0{{< /m >}}: The Fundamental Identity
+### P.5 — ∂² = 0: The Fundamental Identity
 
 {{< theorem name="Boundary of a Boundary Vanishes" label="Theorem P.1" >}}
 For any simplicial complex, {{< m >}}\partial_k \circ \partial_{k+1} = 0{{< /m >}}.
