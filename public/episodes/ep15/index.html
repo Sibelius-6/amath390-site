@@ -1,792 +1,177 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
+<!doctype html><html lang=zh-cn>
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EP15: Opera Acoustics and the Singer&#39;s Formant | AMATH 390 数学与音乐</title>
-<meta name="description" content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('[data-latex]').forEach(function(el) {
-    try {
-      katex.render(el.getAttribute('data-latex'), el, {
-        displayMode: el.classList.contains('math-display'),
-        throwOnError: false
-      });
-    } catch(e) { console.warn('KaTeX:', e.message, el); }
-  });
-});
-</script>
-
-
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
-
-<link rel="stylesheet" href="/css/amath390.css">
-
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>EP15: Opera Acoustics and the Singer's Formant | AMATH 390 数学与音乐</title>
+<meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script>
+<script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('[data-latex]').forEach(function(a){try{katex.render(a.getAttribute('data-latex'),a,{displayMode:a.classList.contains('math-display'),throwOnError:!1})}catch(b){console.warn('KaTeX:',b.message,a)}})})</script>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16.png>
+<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+<link rel=stylesheet href=/css/amath390.css>
 </head>
 <body>
-  <div class="layout-wrapper">
-    
-
-
-<nav class="sidebar">
-  <div class="sidebar-header">
-    <a href="/" class="sidebar-title">AMATH 390</a>
-    <div class="sidebar-subtitle">数学与音乐</div>
-  </div>
-
-  
-
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">数学基础篇</div>
-        
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep01/"
-               class="ep-link">
-              <span class="ep-num">01</span>
-              <span class="ep-title">Chord Space and the Torus</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep02/"
-               class="ep-link">
-              <span class="ep-num">02</span>
-              <span class="ep-title">String Vibration and the Wave Equation</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep03/"
-               class="ep-link">
-              <span class="ep-num">03</span>
-              <span class="ep-title">Bach and Graph Connectivity</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep04/"
-               class="ep-link">
-              <span class="ep-num">04</span>
-              <span class="ep-title">All-Interval Rows and ℤ₁₂</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep05/"
-               class="ep-link">
-              <span class="ep-num">05</span>
-              <span class="ep-title">Turán&#39;s Theorem and Counterpoint</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep06/"
-               class="ep-link">
-              <span class="ep-num">06</span>
-              <span class="ep-title">Graph Coloring and Voice Assignment</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep07/"
-               class="ep-link">
-              <span class="ep-num">07</span>
-              <span class="ep-title">Information Entropy and All-Interval Rows</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep08/"
-               class="ep-link">
-              <span class="ep-num">08</span>
-              <span class="ep-title">Shepard Tones and the Tritone Paradox</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep09/"
-               class="ep-link">
-              <span class="ep-num">09</span>
-              <span class="ep-title">Combination Tones and Nonlinear Acoustics</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">Jacob Collier 系列</div>
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep10/"
-               class="ep-link">
-              <span class="ep-num">10</span>
-              <span class="ep-title">Negative Harmony and the Dihedral Group D₁₂</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep11/"
-               class="ep-link">
-              <span class="ep-num">11</span>
-              <span class="ep-title">Comma Drift and the Impossibility of Perfect Tuning</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep12/"
-               class="ep-link">
-              <span class="ep-num">12</span>
-              <span class="ep-title">The Circle of Fifths as a Folded Spiral</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep13/"
-               class="ep-link">
-              <span class="ep-num">13</span>
-              <span class="ep-title">Polyrhythm and Rhythm-Pitch Duality</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">拓扑数学专篇</div>
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep14/"
-               class="ep-link">
-              <span class="ep-num">14</span>
-              <span class="ep-title">Tonnetz Hodge Duality</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">歌剧系列</div>
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep15/"
-               class="ep-link active">
-              <span class="ep-num">15</span>
-              <span class="ep-title">Opera Acoustics and the Singer&#39;s Formant</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep16/"
-               class="ep-link">
-              <span class="ep-num">16</span>
-              <span class="ep-title">Rossini&#39;s Code — Budden, Gossett, and the Convention System</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep17/"
-               class="ep-link">
-              <span class="ep-num">17</span>
-              <span class="ep-title">Leitmotif Networks — Wagner&#39;s Ring Cycle</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-
-  <div class="sidebar-footer">
-    <a href="/theorems/">定理索引</a>
-    <a href="/domains/">数学领域</a>
-    <a href="/about/">关于</a>
-  </div>
-</nav>
-
-    <main class="main-content">
-      
-
-
-
-<div class="episode-layout">
-  <article class="episode-page">
-    <header class="episode-header">
-  <div class="ep-badge">EP15</div>
-  <h1 class="ep-main-title">EP15: Opera Acoustics and the Singer&#39;s Formant</h1>
-  <div class="ep-subtitle">Source-Filter Theory, Formant Clustering, and the 3 kHz Window</div>
-
-  <div class="ep-meta">
-    
-    <span class="meta-item">
-      <span class="meta-icon">▶</span> 9:06
-    </span>
-    
-    
-    <span class="meta-item domains">
-      <span class="domain-chip">Physics/Acoustics</span><span class="domain-chip">Signal Processing</span><span class="domain-chip">Psychoacoustics</span>
-    </span>
-    
-  </div>
-</header>
-
-    
-
-
-<div class="cross-refs">
-  <h3 class="cross-refs-title">前置知识</h3>
-  <div class="ref-cards">
-    
-      
-      
-      
-      
-        <a href="https://amath390.sibeliusp.com/episodes/ep02/" class="ref-card callback">
-          <span class="ref-ep">EP02</span>
-          <span class="ref-title">String Vibration and the Wave Equation</span>
-        </a>
-      
-    
-      
-      
-      
-      
-        <a href="https://amath390.sibeliusp.com/episodes/ep09/" class="ref-card callback">
-          <span class="ref-ep">EP09</span>
-          <span class="ref-title">Combination Tones and Nonlinear Acoustics</span>
-        </a>
-      
-    
-  </div>
+<div class=layout-wrapper>
+<nav class=sidebar>
+<div class=sidebar-header>
+<a href=/ class=sidebar-title>AMATH 390</a>
+<div class=sidebar-subtitle>数学与音乐</div>
 </div>
-
-
-
-
-
-
-
-
-    
-
-
-    <div class="episode-content content">
-      <h2 id="overview">Overview</h2>
+<div class=arc-group>
+<div class=arc-label>数学基础篇</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link>
+<span class=ep-num>01</span>
+<span class=ep-title>Chord Space and the Torus</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep02/ class=ep-link>
+<span class=ep-num>02</span>
+<span class=ep-title>String Vibration and the Wave Equation</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link>
+<span class=ep-num>03</span>
+<span class=ep-title>Bach and Graph Connectivity</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link>
+<span class=ep-num>04</span>
+<span class=ep-title>All-Interval Rows and ℤ₁₂</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link>
+<span class=ep-num>05</span>
+<span class=ep-title>Turán's Theorem and Counterpoint</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-link>
+<span class=ep-num>06</span>
+<span class=ep-title>Graph Coloring and Voice Assignment</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-link>
+<span class=ep-num>07</span>
+<span class=ep-title>Information Entropy and All-Interval Rows</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-link>
+<span class=ep-num>08</span>
+<span class=ep-title>Shepard Tones and the Tritone Paradox</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link>
+<span class=ep-num>09</span>
+<span class=ep-title>Combination Tones and Nonlinear Acoustics</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>Jacob Collier 系列</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep10/ class=ep-link>
+<span class=ep-num>10</span>
+<span class=ep-title>Negative Harmony and the Dihedral Group D₁₂</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link>
+<span class=ep-num>11</span>
+<span class=ep-title>Comma Drift and the Impossibility of Perfect Tuning</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep12/ class=ep-link>
+<span class=ep-num>12</span>
+<span class=ep-title>The Circle of Fifths as a Folded Spiral</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-link>
+<span class=ep-num>13</span>
+<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>拓扑数学专篇</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-link>
+<span class=ep-num>14</span>
+<span class=ep-title>Tonnetz Hodge Duality</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>歌剧系列</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep15/ class="ep-link active">
+<span class=ep-num>15</span>
+<span class=ep-title>Opera Acoustics and the Singer's Formant</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link>
+<span class=ep-num>16</span>
+<span class=ep-title>Rossini's Code — Budden, Gossett, and the Convention System</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-link>
+<span class=ep-num>17</span>
+<span class=ep-title>Leitmotif Networks — Wagner's Ring Cycle</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-link>
+<span class=ep-num>18</span>
+<span class=ep-title>Game Theory in Operatic Duets</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link>
+<span class=ep-num>19</span>
+<span class=ep-title>Vibrato as FM Synthesis</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-link>
+<span class=ep-num>20</span>
+<span class=ep-title>Character Interaction Networks in Opera</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>AI 音乐三部曲</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-link>
+<span class=ep-num>21</span>
+<span class=ep-title>From Markov to Diffusion — Sixty Years of AI Composition</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-link>
+<span class=ep-num>22</span>
+<span class=ep-title>How AI Writes Music — EnCodec and RVQ</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-link>
+<span class=ep-num>23</span>
+<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span>
+</a>
+</div>
+<div class=sidebar-footer>
+<a href=/theorems/>定理索引</a>
+<a href=/domains/>数学领域</a>
+<a href=/about/>关于</a>
+</div>
+</nav>
+<main class=main-content>
+<div class=episode-layout>
+<article class=episode-page>
+<header class=episode-header>
+<div class=ep-badge>EP15</div>
+<h1 class=ep-main-title>EP15: Opera Acoustics and the Singer's Formant</h1>
+<div class=ep-subtitle>Source-Filter Theory, Formant Clustering, and the 3 kHz Window</div>
+<div class=ep-meta>
+<span class=meta-item>
+<span class=meta-icon>▶</span> 9:06
+</span>
+<span class="meta-item domains">
+<span class=domain-chip>Physics/Acoustics</span><span class=domain-chip>Signal Processing</span><span class=domain-chip>Psychoacoustics</span>
+</span>
+</div>
+</header>
+<div class=cross-refs>
+<h3 class=cross-refs-title>前置知识</h3>
+<div class=ref-cards>
+<a href=https://amath390.sibeliusp.com/episodes/ep02/ class="ref-card callback">
+<span class=ref-ep>EP02</span>
+<span class=ref-title>String Vibration and the Wave Equation</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep09/ class="ref-card callback">
+<span class=ref-ep>EP09</span>
+<span class=ref-title>Combination Tones and Nonlinear Acoustics</span>
+</a>
+</div>
+</div>
+<div class=cross-refs>
+<h3 class=cross-refs-title>后续拓展</h3>
+<div class=ref-cards>
+<a href=https://amath390.sibeliusp.com/episodes/ep19/ class="ref-card forward">
+<span class=ref-ep>EP19</span>
+<span class=ref-title>Vibrato as FM Synthesis</span>
+</a>
+</div>
+</div>
+<div class="episode-content content">
+<h2 id=overview>Overview</h2>
 <p>An opera singer has no microphone. A single voice must cut through 110 orchestral instruments in a live hall. This episode asks: how?</p>
 <blockquote>
 <p><em>中文:</em> &ldquo;答案藏在——3000赫兹。乐队能量在这里暴跌18分贝。这是歌手唯一的窗口——或者被淹没，或者穿透。&rdquo;</p>
@@ -795,62 +180,49 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>This episode develops a three-layer quantitative model:</p>
 <ol>
 <li><strong>Physical layer</strong>: The orchestra&rsquo;s spectrum drops ~18 dB between its 500 Hz peak and the 3 kHz region. This is the frequency window.</li>
-<li><strong>Source layer</strong>: The singer&rsquo;s Formant — a cluster of vocal resonances <span class="math-inline" data-latex="F_3"></span>, <span class="math-inline" data-latex="F_4"></span>, <span class="math-inline" data-latex="F_5"></span> near 2500–3500 Hz — raises the singer&rsquo;s output at exactly this window by approximately +10 dB.</li>
+<li><strong>Source layer</strong>: The singer&rsquo;s Formant — a cluster of vocal resonances <span class=math-inline data-latex=F_3></span>, <span class=math-inline data-latex=F_4></span>, <span class=math-inline data-latex=F_5></span> near 2500–3500 Hz — raises the singer&rsquo;s output at exactly this window by approximately +10 dB.</li>
 <li><strong>Perceptual layer</strong>: The human auditory system (Fletcher-Munson equal-loudness curves, ISO 226) is ~10 dB more sensitive at 3 kHz than at 500 Hz at forte dynamics.</li>
 </ol>
 <p>Combined, the physical signal-to-noise ratio is 48 dB; the perceptual penetration index reaches 49 dB (with a ±2 dB uncertainty on the Formant term). A fourth factor — room acoustics — modulates this advantage by up to ±7 dB depending on hall design.</p>
 <p>The episode also presents spectral centroid measurements from four tenors, connecting vocal technique to quantifiable acoustic parameters.</p>
 <hr>
-<h2 id="prerequisites">Prerequisites</h2>
+<h2 id=prerequisites>Prerequisites</h2>
 <ul>
 <li>
-
-
-
-<a href="https://amath390.sibeliusp.com/episodes/ep02/" class="episode-ref-link">Fourier Analysis and Timbre (EP02)</a>
-
- — frequency spectrum, harmonics, Fourier decomposition</li>
+<a href=https://amath390.sibeliusp.com/episodes/ep02/ class=episode-ref-link>Fourier Analysis and Timbre (EP02)</a>
+— frequency spectrum, harmonics, Fourier decomposition</li>
 <li>
-
-
-
-<a href="https://amath390.sibeliusp.com/episodes/ep09/" class="episode-ref-link">Combination Tones and Nonlinearity (EP09)</a>
-
- — nonlinear acoustics, cochlear response, harmonic generation</li>
+<a href=https://amath390.sibeliusp.com/episodes/ep09/ class=episode-ref-link>Combination Tones and Nonlinearity (EP09)</a>
+— nonlinear acoustics, cochlear response, harmonic generation</li>
 </ul>
 <hr>
-<h2 id="definitions">Definitions</h2>
-
-
-<div class="definition-block" id="definition-15.1">
-  <div class="block-label">
-    Definition 15.1 (Acoustic Source-Filter Model)
-  </div>
-  <div class="block-body"><p>The <strong>source-filter model</strong> of voice production separates the voice into two independent stages:</p>
+<h2 id=definitions>Definitions</h2>
+<div class=definition-block id=definition-15.1>
+<div class=block-label>
+Definition 15.1 (Acoustic Source-Filter Model)
+</div>
+<div class=block-body><p>The <strong>source-filter model</strong> of voice production separates the voice into two independent stages:</p>
 <ol>
 <li>
-<p><strong>Source</strong> (glottal excitation): The vocal folds produce a periodic buzz with fundamental frequency <span class="math-inline" data-latex="f_0"></span> and a harmonic series at <span class="math-inline" data-latex="f_0, 2f_0, 3f_0, \ldots"></span> The spectral envelope of the glottal source decays at approximately <span class="math-inline" data-latex="-12"></span> dB/octave (i.e., the amplitude of harmonic <span class="math-inline" data-latex="n"></span> is proportional to <span class="math-inline" data-latex="1/n^2"></span>).</p>
+<p><strong>Source</strong> (glottal excitation): The vocal folds produce a periodic buzz with fundamental frequency <span class=math-inline data-latex=f_0></span> and a harmonic series at <span class=math-inline data-latex="f_0, 2f_0, 3f_0, \ldots"></span> The spectral envelope of the glottal source decays at approximately <span class=math-inline data-latex=-12></span> dB/octave (i.e., the amplitude of harmonic <span class=math-inline data-latex=n></span> is proportional to <span class=math-inline data-latex=1/n^2></span>).</p>
 </li>
 <li>
-<p><strong>Filter</strong> (vocal tract): The air column above the larynx acts as an acoustic resonator. Its resonant frequencies <span class="math-inline" data-latex="F_1, F_2, F_3, \ldots"></span> are called <strong>formants</strong>. The vocal tract transfer function amplifies harmonics near each formant and attenuates those between formants.</p>
+<p><strong>Filter</strong> (vocal tract): The air column above the larynx acts as an acoustic resonator. Its resonant frequencies <span class=math-inline data-latex="F_1, F_2, F_3, \ldots"></span> are called <strong>formants</strong>. The vocal tract transfer function amplifies harmonics near each formant and attenuates those between formants.</p>
 </li>
 </ol>
 <p>The radiated sound spectrum is:</p>
-<div class="math-display" data-latex="|S(f)| = |G(f)| \cdot |H(f)| \cdot |R(f)|"></div>
-<p>where <span class="math-inline" data-latex="G(f)"></span> is the glottal source spectrum, <span class="math-inline" data-latex="H(f)"></span> is the vocal tract transfer function, and <span class="math-inline" data-latex="R(f)"></span> is a radiation factor (<span class="math-inline" data-latex="\propto f"></span>, adding +6 dB/octave to the final output).</p>
-<p>Net source spectral slope: <span class="math-inline" data-latex="-12 &#43; 6 = -6"></span> dB/octave (before formant amplification).</p>
+<p><span class=math-display data-latex="|S(f)| = |G(f)| \cdot |H(f)| \cdot |R(f)|"></span></p>
+<p>where <span class=math-inline data-latex=G(f)></span> is the glottal source spectrum, <span class=math-inline data-latex=H(f)></span> is the vocal tract transfer function, and <span class=math-inline data-latex=R(f)></span> is a radiation factor (<span class=math-inline data-latex="\propto f"></span>, adding +6 dB/octave to the final output).</p>
+<p>Net source spectral slope: <span class=math-inline data-latex="-12 + 6 = -6"></span> dB/octave (before formant amplification).</p>
 </div>
 </div>
-
-
-
-<div class="definition-block" id="definition-15.2">
-  <div class="block-label">
-    Definition 15.2 (Formants and Vocal Tract Transfer Function)
-  </div>
-  <div class="block-body"><p>The <strong>formant frequencies</strong> <span class="math-inline" data-latex="F_1, F_2, F_3, F_4, F_5"></span> are the resonant peaks of the vocal tract transfer function. For a simplified model of <span class="math-inline" data-latex="k"></span> uncoupled resonators, the transfer function is:</p>
-<div class="math-display" data-latex="H(f) = \prod_{k} \frac{1}{1 - (f/F_k)^2}"></div>
-<p>Each term contributes a peak of amplitude <span class="math-inline" data-latex="\rightarrow \infty"></span> at <span class="math-inline" data-latex="f = F_k"></span> (in the lossless approximation). Including damping, each resonator has a finite bandwidth <span class="math-inline" data-latex="B_k"></span> and the actual amplitude at resonance is <span class="math-inline" data-latex="F_k / B_k"></span>.</p>
+<div class=definition-block id=definition-15.2>
+<div class=block-label>
+Definition 15.2 (Formants and Vocal Tract Transfer Function)
+</div>
+<div class=block-body><p>The <strong>formant frequencies</strong> <span class=math-inline data-latex="F_1, F_2, F_3, F_4, F_5"></span> are the resonant peaks of the vocal tract transfer function. For a simplified model of <span class=math-inline data-latex=k></span> uncoupled resonators, the transfer function is:</p>
+<p><span class=math-display data-latex="H(f) = \prod_{k} \frac{1}{1 - (f/F_k)^2}"></span></p>
+<p>Each term contributes a peak of amplitude <span class=math-inline data-latex="\rightarrow \infty"></span> at <span class=math-inline data-latex="f = F_k"></span> (in the lossless approximation). Including damping, each resonator has a finite bandwidth <span class=math-inline data-latex=B_k></span> and the actual amplitude at resonance is <span class=math-inline data-latex="F_k / B_k"></span>.</p>
 <p>Typical speech formant frequencies (male voice):</p>
 <table>
 <thead>
@@ -863,31 +235,31 @@ document.addEventListener('DOMContentLoaded', function() {
 </thead>
 <tbody>
 <tr>
-<td><span class="math-inline" data-latex="F_1"></span></td>
+<td><span class=math-inline data-latex=F_1></span></td>
 <td>500</td>
 <td>300–500</td>
 <td>varies</td>
 </tr>
 <tr>
-<td><span class="math-inline" data-latex="F_2"></span></td>
+<td><span class=math-inline data-latex=F_2></span></td>
 <td>1500</td>
 <td>800–1200</td>
 <td>varies</td>
 </tr>
 <tr>
-<td><span class="math-inline" data-latex="F_3"></span></td>
+<td><span class=math-inline data-latex=F_3></span></td>
 <td>2200</td>
 <td><strong>2600</strong></td>
 <td>+400 Hz</td>
 </tr>
 <tr>
-<td><span class="math-inline" data-latex="F_4"></span></td>
+<td><span class=math-inline data-latex=F_4></span></td>
 <td>3100</td>
 <td><strong>3000</strong></td>
 <td>−100 Hz</td>
 </tr>
 <tr>
-<td><span class="math-inline" data-latex="F_5"></span></td>
+<td><span class=math-inline data-latex=F_5></span></td>
 <td>3900</td>
 <td><strong>3400</strong></td>
 <td>−500 Hz</td>
@@ -896,29 +268,23 @@ document.addEventListener('DOMContentLoaded', function() {
 </table>
 </div>
 </div>
-
-
-
-<div class="definition-block" id="definition-15.3">
-  <div class="block-label">
-    Definition 15.3 (Singer&#39;s Formant)
-  </div>
-  <div class="block-body"><p>The <strong>Singer&rsquo;s Formant</strong> (Sundberg, 1974) is a clustering of <span class="math-inline" data-latex="F_3"></span>, <span class="math-inline" data-latex="F_4"></span>, and <span class="math-inline" data-latex="F_5"></span> into a narrow frequency band near 2500–3500 Hz, producing an energy concentration approximately <strong>+10 dB</strong> above what would occur with the same formants in their speech positions.</p>
-<p>This clustering is produced by a specific laryngeal configuration in which the pharyngeal cross-sectional area to laryngeal tube opening ratio reaches approximately <strong>6:1</strong>. This geometric ratio creates an additional coupled resonance mode that draws <span class="math-inline" data-latex="F_3"></span>, <span class="math-inline" data-latex="F_4"></span>, and <span class="math-inline" data-latex="F_5"></span> toward the same frequency region.</p>
-<p>Measured range (Sundberg 1974): +8 to +12 dB. Canonical value: <span class="math-inline" data-latex="\Delta_\text{Formant} \approx &#43;10"></span> dB.</p>
+<div class=definition-block id=definition-15.3>
+<div class=block-label>
+Definition 15.3 (Singer's Formant)
+</div>
+<div class=block-body><p>The <strong>Singer&rsquo;s Formant</strong> (Sundberg, 1974) is a clustering of <span class=math-inline data-latex=F_3></span>, <span class=math-inline data-latex=F_4></span>, and <span class=math-inline data-latex=F_5></span> into a narrow frequency band near 2500–3500 Hz, producing an energy concentration approximately <strong>+10 dB</strong> above what would occur with the same formants in their speech positions.</p>
+<p>This clustering is produced by a specific laryngeal configuration in which the pharyngeal cross-sectional area to laryngeal tube opening ratio reaches approximately <strong>6:1</strong>. This geometric ratio creates an additional coupled resonance mode that draws <span class=math-inline data-latex=F_3></span>, <span class=math-inline data-latex=F_4></span>, and <span class=math-inline data-latex=F_5></span> toward the same frequency region.</p>
+<p>Measured range (Sundberg 1974): +8 to +12 dB. Canonical value: <span class=math-inline data-latex="\Delta_\text{Formant} \approx +10"></span> dB.</p>
 <blockquote>
 <p><em>中文:</em> &ldquo;这不是单一谐波，而是三个共振峰F3、F4、F5的聚合。&rdquo;</p>
 </blockquote>
 </div>
 </div>
-
-
-
-<div class="definition-block" id="definition-15.4">
-  <div class="block-label">
-    Definition 15.4 (Equal-Loudness Contour (Fletcher-Munson / ISO 226))
-  </div>
-  <div class="block-body"><p>An <strong>equal-loudness contour</strong> at <span class="math-inline" data-latex="L"></span> phon is the curve of sound pressure level (SPL) in dB as a function of frequency <span class="math-inline" data-latex="f"></span> such that a pure tone at <span class="math-inline" data-latex="(f, \text{SPL}(f))"></span> is judged equally loud to a 1 kHz reference tone at <span class="math-inline" data-latex="L"></span> dB SPL.</p>
+<div class=definition-block id=definition-15.4>
+<div class=block-label>
+Definition 15.4 (Equal-Loudness Contour (Fletcher-Munson / ISO 226))
+</div>
+<div class=block-body><p>An <strong>equal-loudness contour</strong> at <span class=math-inline data-latex=L></span> phon is the curve of sound pressure level (SPL) in dB as a function of frequency <span class=math-inline data-latex=f></span> such that a pure tone at <span class=math-inline data-latex="(f, \text{SPL}(f))"></span> is judged equally loud to a 1 kHz reference tone at <span class=math-inline data-latex=L></span> dB SPL.</p>
 <p><strong>Key data (ISO 226:2003)</strong>:</p>
 <table>
 <thead>
@@ -957,53 +323,44 @@ document.addEventListener('DOMContentLoaded', function() {
 </tbody>
 </table>
 <p>At forte operatic dynamics (~90–100 phon), the ear requires 10 dB less SPL at 3 kHz than at 500 Hz to perceive the same loudness. Equivalently, a 3 kHz tone sounds 10 dB louder than a 500 Hz tone at the same physical SPL.</p>
-<p><span class="math-inline" data-latex="\Delta_\text{Fletcher} \approx &#43;10"></span> dB at operatic forte.</p>
+<p><span class=math-inline data-latex="\Delta_\text{Fletcher} \approx +10"></span> dB at operatic forte.</p>
 </div>
 </div>
-
-
-
-<div class="definition-block" id="definition-15.5">
-  <div class="block-label">
-    Definition 15.5 (Spectral Centroid)
-  </div>
-  <div class="block-body"><p>The <strong>spectral centroid</strong> of a signal with power spectrum <span class="math-inline" data-latex="P(f)"></span> is:</p>
-<div class="math-display" data-latex="f_c = \frac{\int_0^\infty f \cdot P(f)\, df}{\int_0^\infty P(f)\, df}"></div>
+<div class=definition-block id=definition-15.5>
+<div class=block-label>
+Definition 15.5 (Spectral Centroid)
+</div>
+<div class=block-body><p>The <strong>spectral centroid</strong> of a signal with power spectrum <span class=math-inline data-latex=P(f)></span> is:</p>
+<p><span class=math-display data-latex="f_c = \frac{\int_0^\infty f \cdot P(f)\, df}{\int_0^\infty P(f)\, df}"></span></p>
 <p>In discrete form (DFT bins):</p>
-<div class="math-display" data-latex="f_c = \frac{\sum_k f_k \cdot |X_k|^2}{\sum_k |X_k|^2}"></div>
-<p>The spectral centroid is a single-number proxy for perceived <strong>brightness</strong> (timbre). Higher <span class="math-inline" data-latex="f_c"></span> correlates with a &ldquo;brighter,&rdquo; more &ldquo;forward&rdquo; vocal quality; lower <span class="math-inline" data-latex="f_c"></span> with a &ldquo;darker,&rdquo; &ldquo;covered&rdquo; sound.</p>
+<p><span class=math-display data-latex="f_c = \frac{\sum_k f_k \cdot |X_k|^2}{\sum_k |X_k|^2}"></span></p>
+<p>The spectral centroid is a single-number proxy for perceived <strong>brightness</strong> (timbre). Higher <span class=math-inline data-latex=f_c></span> correlates with a &ldquo;brighter,&rdquo; more &ldquo;forward&rdquo; vocal quality; lower <span class=math-inline data-latex=f_c></span> with a &ldquo;darker,&rdquo; &ldquo;covered&rdquo; sound.</p>
 </div>
 </div>
-
-
-
-<div class="definition-block" id="definition-15.6">
-  <div class="block-label">
-    Definition 15.6 (Clarity Index {{&lt; m &gt;}}C_{80}{{&lt; /m &gt;}})
-  </div>
-  <div class="block-body"><p>The <strong>clarity index</strong> <span class="math-inline" data-latex="C_{80}"></span> of a room measures the ratio of early to late reflected energy arriving at a listener position:</p>
-<div class="math-display" data-latex="C_{80} = 10 \log_{10} \frac{\int_0^{80\,\text{ms}} p^2(t)\, dt}{\int_{80\,\text{ms}}^\infty p^2(t)\, dt} \quad \text{(dB)}"></div>
-<p>Higher <span class="math-inline" data-latex="C_{80}"></span> (positive values) indicates more early energy — the room sounds cleaner and more &ldquo;articulate.&rdquo; Lower <span class="math-inline" data-latex="C_{80}"></span> (negative values) indicates excessive reverberation blurring onsets.</p>
+<div class=definition-block id=definition-15.6>
+<div class=block-label>
+Definition 15.6 (Clarity Index C₈₀)
+</div>
+<div class=block-body><p>The <strong>clarity index</strong> <span class=math-inline data-latex=C_{80}></span> of a room measures the ratio of early to late reflected energy arriving at a listener position:</p>
+<p><span class=math-display data-latex="C_{80} = 10 \log_{10} \frac{\int_0^{80\,\text{ms}} p^2(t)\, dt}{\int_{80\,\text{ms}}^\infty p^2(t)\, dt} \quad \text{(dB)}"></span></p>
+<p>Higher <span class=math-inline data-latex=C_{80}></span> (positive values) indicates more early energy — the room sounds cleaner and more &ldquo;articulate.&rdquo; Lower <span class=math-inline data-latex=C_{80}></span> (negative values) indicates excessive reverberation blurring onsets.</p>
 <p>Representative values:</p>
 <ul>
-<li>Center orchestra (good hall): <span class="math-inline" data-latex="C_{80} \approx &#43;3"></span> dB</li>
-<li>Side balcony seat: <span class="math-inline" data-latex="C_{80} \approx -2"></span> dB</li>
-<li>Difference: <span class="math-inline" data-latex="\Delta C_{80} \approx 5"></span> dB of perceived clarity loss</li>
+<li>Center orchestra (good hall): <span class=math-inline data-latex="C_{80} \approx +3"></span> dB</li>
+<li>Side balcony seat: <span class=math-inline data-latex="C_{80} \approx -2"></span> dB</li>
+<li>Difference: <span class=math-inline data-latex="\Delta C_{80} \approx 5"></span> dB of perceived clarity loss</li>
 </ul>
 </div>
 </div>
-
 <hr>
-<h2 id="main-theorems">Main Theorems</h2>
-
-
-<div class="theorem-block" id="theorem-15.1">
-  <div class="block-label">
-    Theorem 15.1 (Orchestra Spectral Attenuation Model)
-  </div>
-  <div class="block-body"><p>The long-term average sound pressure level of a full symphony orchestra follows an approximate decay model:</p>
-<div class="math-display" data-latex="\text{SPL}(f) \approx \text{SPL}_0 - \alpha \cdot \log_2\!\left(\frac{f}{f_0}\right)"></div>
-<p>with <span class="math-inline" data-latex="\text{SPL}_0 = 80"></span> dB at the peak frequency <span class="math-inline" data-latex="f_0 = 500"></span> Hz and <span class="math-inline" data-latex="\alpha \approx 9"></span> dB/octave (Beranek 2004, Meyer 2009).</p>
+<h2 id=main-theorems>Main Theorems</h2>
+<div class=theorem-block id=theorem-15.1>
+<div class=block-label>
+Theorem 15.1 (Orchestra Spectral Attenuation Model)
+</div>
+<div class=block-body><p>The long-term average sound pressure level of a full symphony orchestra follows an approximate decay model:</p>
+<p><span class=math-display data-latex="\text{SPL}(f) \approx \text{SPL}_0 - \alpha \cdot \log_2\!\left(\frac{f}{f_0}\right)"></span></p>
+<p>with <span class=math-inline data-latex="\text{SPL}_0 = 80"></span> dB at the peak frequency <span class=math-inline data-latex="f_0 = 500"></span> Hz and <span class=math-inline data-latex="\alpha \approx 9"></span> dB/octave (Beranek 2004, Meyer 2009).</p>
 <p><strong>Numerical values</strong>:</p>
 <table>
 <thead>
@@ -1044,85 +401,71 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>The <strong>3 kHz window</strong>: at 3000 Hz, orchestral SPL is approximately 57–62 dB (18–23 dB below peak), leaving a spectral gap that a well-trained singer can exploit.</p>
 </div>
 </div>
-
-<div class="proof-block">
-  <div class="block-label">Proof.</div>
-  <div class="block-body"><p><span class="math-inline" data-latex="\log_2(3000/500) = \log_2(6) = \ln 6 / \ln 2 \approx 1.7918 / 0.6931 \approx 2.585"></span>.</p>
-<p><span class="math-inline" data-latex="\text{SPL}(3000) = 80 - 9 \times 2.585 = 80 - 23.3 \approx 56.7"></span> dB.</p>
-<p>The narration uses 62 dB, which corresponds to <span class="math-inline" data-latex="\alpha = 7"></span> dB/octave: <span class="math-inline" data-latex="80 - 7 \times 2.585 \approx 62"></span> dB. Both values (7–9 dB/octave) appear in the literature depending on the ensemble and measurement method. We adopt the more conservative estimate <span class="math-inline" data-latex="\text{SPL}(3000) \approx 62"></span> dB for the SNR calculation, consistent with the video. <span class="math-inline" data-latex="\square"></span></p>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><p><span class=math-inline data-latex="\log_2(3000/500) = \log_2(6) = \ln 6 / \ln 2 \approx 1.7918 / 0.6931 \approx 2.585"></span>.</p>
+<p><span class=math-inline data-latex="\text{SPL}(3000) = 80 - 9 \times 2.585 = 80 - 23.3 \approx 56.7"></span> dB.</p>
+<p>The narration uses 62 dB, which corresponds to <span class=math-inline data-latex="\alpha = 7"></span> dB/octave: <span class=math-inline data-latex="80 - 7 \times 2.585 \approx 62"></span> dB. Both values (7–9 dB/octave) appear in the literature depending on the ensemble and measurement method. We adopt the more conservative estimate <span class=math-inline data-latex="\text{SPL}(3000) \approx 62"></span> dB for the SNR calculation, consistent with the video. <span class=math-inline data-latex=\square></span></p>
 </div>
 </div>
-
-
-
-<div class="theorem-block" id="theorem-15.2">
-  <div class="block-label">
-    Theorem 15.2 (Physical Signal-to-Noise Ratio)
-  </div>
-  <div class="block-body"><p>When an opera singer performs at fortissimo dynamics with peak SPL of approximately 110 dB at 3 kHz (peak value; orchestra measured as long-term average), the <strong>physical signal-to-noise ratio</strong> at 3 kHz is:</p>
-<div class="math-display" data-latex="\text{SNR}_\text{phys} = \text{SPL}_\text{singer}(3\,\text{kHz}) - \text{SPL}_\text{orchestra}(3\,\text{kHz}) = 110 - 62 = 48 \text{ dB}"></div>
+<div class=theorem-block id=theorem-15.2>
+<div class=block-label>
+Theorem 15.2 (Physical Signal-to-Noise Ratio)
+</div>
+<div class=block-body><p>When an opera singer performs at fortissimo dynamics with peak SPL of approximately 110 dB at 3 kHz (peak value; orchestra measured as long-term average), the <strong>physical signal-to-noise ratio</strong> at 3 kHz is:</p>
+<p><span class=math-display data-latex="\text{SNR}_\text{phys} = \text{SPL}_\text{singer}(3\,\text{kHz}) - \text{SPL}_\text{orchestra}(3\,\text{kHz}) = 110 - 62 = 48 \text{ dB}"></span></p>
 <p><strong>Important caveat</strong>: The singer&rsquo;s 110 dB is a peak SPL during fortissimo, while the orchestra&rsquo;s 62 dB is a long-term average. This &ldquo;peak vs. average&rdquo; comparison captures the perceptual reality that the singer&rsquo;s loudest moments cut through the orchestra&rsquo;s sustained texture.</p>
 </div>
 </div>
-
-
-
-<div class="theorem-block" id="theorem-15.3">
-  <div class="block-label">
-    Theorem 15.3 (Helmholtz Resonator Model of the Singer&#39;s Formant)
-  </div>
-  <div class="block-body"><p>The pharynx-larynx system can be approximated as a <strong>Helmholtz resonator</strong>: a cavity of volume <span class="math-inline" data-latex="V"></span> connected to the exterior through a neck of cross-sectional area <span class="math-inline" data-latex="A"></span> and length <span class="math-inline" data-latex="L"></span>. The resonant frequency is:</p>
-<div class="math-display" data-latex="f_H = \frac{v}{2\pi} \sqrt{\frac{A}{V \cdot L}}"></div>
-<p>where <span class="math-inline" data-latex="v = 343"></span> m/s is the speed of sound.</p>
-<p>Sundberg (1974) identified that when the ratio of pharyngeal cross-section to laryngeal tube opening reaches <span class="math-inline" data-latex="\approx 6:1"></span>, the coupled resonance mode of the pharynx-larynx system places an extra resonance peak near 3000 Hz, drawing <span class="math-inline" data-latex="F_3"></span>, <span class="math-inline" data-latex="F_4"></span>, and <span class="math-inline" data-latex="F_5"></span> into proximity.</p>
-<p><strong>Typical values</strong> (Ternström 1988): <span class="math-inline" data-latex="V \approx 35"></span> cm<span class="math-inline" data-latex="^3"></span>, <span class="math-inline" data-latex="L \approx 2.5"></span> cm, <span class="math-inline" data-latex="A"></span> tunable by laryngeal action. The 6:1 area ratio is a key degree of freedom controlled by the singer.</p>
+<div class=theorem-block id=theorem-15.3>
+<div class=block-label>
+Theorem 15.3 (Helmholtz Resonator Model of the Singer's Formant)
+</div>
+<div class=block-body><p>The pharynx-larynx system can be approximated as a <strong>Helmholtz resonator</strong>: a cavity of volume <span class=math-inline data-latex=V></span> connected to the exterior through a neck of cross-sectional area <span class=math-inline data-latex=A></span> and length <span class=math-inline data-latex=L></span>. The resonant frequency is:</p>
+<p><span class=math-display data-latex="f_H = \frac{v}{2\pi} \sqrt{\frac{A}{V \cdot L}}"></span></p>
+<p>where <span class=math-inline data-latex="v = 343"></span> m/s is the speed of sound.</p>
+<p>Sundberg (1974) identified that when the ratio of pharyngeal cross-section to laryngeal tube opening reaches <span class=math-inline data-latex="\approx 6:1"></span>, the coupled resonance mode of the pharynx-larynx system places an extra resonance peak near 3000 Hz, drawing <span class=math-inline data-latex=F_3></span>, <span class=math-inline data-latex=F_4></span>, and <span class=math-inline data-latex=F_5></span> into proximity.</p>
+<p><strong>Typical values</strong> (Ternström 1988): <span class=math-inline data-latex="V \approx 35"></span> cm<span class=math-inline data-latex=^3></span>, <span class=math-inline data-latex="L \approx 2.5"></span> cm, <span class=math-inline data-latex=A></span> tunable by laryngeal action. The 6:1 area ratio is a key degree of freedom controlled by the singer.</p>
 <p><em>Note</em>: The full vocal tract is a multi-cavity coupled system; the Helmholtz model is a pedagogical approximation. The mechanism is directionally correct but not quantitatively exact.</p>
 </div>
 </div>
-
-<div class="proof-block">
-  <div class="block-label">Proof.</div>
-  <div class="block-body"><p>Helmholtz resonance derivation (simplified): consider air in the neck as an acoustic mass <span class="math-inline" data-latex="m = \rho L / A"></span> (where <span class="math-inline" data-latex="\rho"></span> is air density), and the cavity volume as an acoustic compliance <span class="math-inline" data-latex="C_V = V / (\rho v^2)"></span>. The resonant frequency of this mass-spring system is:</p>
-<div class="math-display" data-latex="f_H = \frac{1}{2\pi\sqrt{m \cdot C_V}} = \frac{1}{2\pi} \sqrt{\frac{A / (\rho L)}{V / (\rho v^2)}} = \frac{v}{2\pi}\sqrt{\frac{A}{VL}}"></div>
-<p>The 6:1 area ratio <span class="math-inline" data-latex="A_\text{pharynx} : A_\text{larynx} = 6:1"></span> makes the laryngeal tube act as a Helmholtz neck relative to the pharyngeal cavity, positioning the resonance near 3 kHz for typical adult male vocal tract geometry. <span class="math-inline" data-latex="\square"></span></p>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><p>Helmholtz resonance derivation (simplified): consider air in the neck as an acoustic mass <span class=math-inline data-latex="m = \rho L / A"></span> (where <span class=math-inline data-latex=\rho></span> is air density), and the cavity volume as an acoustic compliance <span class=math-inline data-latex="C_V = V / (\rho v^2)"></span>. The resonant frequency of this mass-spring system is:</p>
+<p><span class=math-display data-latex="f_H = \frac{1}{2\pi\sqrt{m \cdot C_V}} = \frac{1}{2\pi} \sqrt{\frac{A / (\rho L)}{V / (\rho v^2)}} = \frac{v}{2\pi}\sqrt{\frac{A}{VL}}"></span></p>
+<p>The 6:1 area ratio <span class=math-inline data-latex="A_\text{pharynx} : A_\text{larynx} = 6:1"></span> makes the laryngeal tube act as a Helmholtz neck relative to the pharyngeal cavity, positioning the resonance near 3 kHz for typical adult male vocal tract geometry. <span class=math-inline data-latex=\square></span></p>
 </div>
 </div>
-
-
-
-<div class="theorem-block" id="theorem-15.4">
-  <div class="block-label">
-    Theorem 15.4 (Total Penetration Index)
-  </div>
-  <div class="block-body"><p>Define the <strong>perceptual penetration index</strong> as the sum of the physical SNR and the relevant psychoacoustic advantages:</p>
-<div class="math-display" data-latex="\text{PI} = \underbrace{\text{SNR}_\text{phys}}_\text{48 dB} &#43; \underbrace{\Delta_\text{Formant}}_\text{&#43;10 dB} &#43; \underbrace{\Delta_\text{Fletcher}}_\text{&#43;10 dB} \approx 49 \text{ dB}"></div>
-<p><em>Note: <span class="math-inline" data-latex="\Delta_\text{Formant}"></span> is already incorporated in the singer&rsquo;s SPL figure if the 110 dB measurement includes the Formant clustering. In that interpretation, the 48 dB SNR already embeds the Formant effect, and <span class="math-inline" data-latex="\Delta_\text{Fletcher} = &#43;10"></span> dB is the pure perceptual bonus. The video presents all three layers separately for pedagogical clarity; the combined effect is approximately 49 dB.</em></p>
-<p>Under adverse conditions (suboptimal seat, insufficient technique):</p>
-<div class="math-display" data-latex="\text{PI}_\text{adverse} = 49 - \underbrace{8}_\text{side seat} - \underbrace{10}_\text{no Formant} = 31 \text{ dB}"></div>
+<div class=theorem-block id=theorem-15.4>
+<div class=block-label>
+Theorem 15.4 (Total Penetration Index)
+</div>
+<div class=block-body><p>Define the <strong>perceptual penetration index</strong> as the sum of the physical SNR and the relevant psychoacoustic advantages:</p>
+<p><span class=math-display data-latex="\text{PI} = \underbrace{\text{SNR}_\text{phys}}_\text{48 dB} + \underbrace{\Delta_\text{Formant}}_\text{+10 dB} + \underbrace{\Delta_\text{Fletcher}}_\text{+10 dB} \approx 49 \text{ dB}"></span></p>
+<p><em>Note: <span class=math-inline data-latex=\Delta_\text{Formant}></span> is already incorporated in the singer&rsquo;s SPL figure if the 110 dB measurement includes the Formant clustering. In that interpretation, the 48 dB SNR already embeds the Formant effect, and <span class=math-inline data-latex="\Delta_\text{Fletcher} = +10"></span> dB is the pure perceptual bonus. The video presents all three layers separately for pedagogical clarity; the combined effect is approximately 49 dB.</em></p>
+<p>Under adverse conditions (suboptimal seat, insufficient technique):
+<span class=math-display data-latex="\text{PI}_\text{adverse} = 49 - \underbrace{8}_\text{side seat} - \underbrace{10}_\text{no Formant} = 31 \text{ dB}"></span></p>
 <p>approaching the ~20 dB empirical threshold below which singers are perceived as &ldquo;masked.&rdquo;</p>
 </div>
 </div>
-
-
-
-<div class="theorem-block" id="theorem-15.5">
-  <div class="block-label">
-    Theorem 15.5 (Sabine Reverberation Formula)
-  </div>
-  <div class="block-body"><p>The <strong>reverberation time</strong> <span class="math-inline" data-latex="T_{60}"></span> of a room — the time for a sound to decay 60 dB after the source stops — is given by <strong>Sabine&rsquo;s formula</strong> (1900):</p>
-<div class="math-display" data-latex="T_{60} = \frac{0.161 \cdot V}{A}"></div>
+<div class=theorem-block id=theorem-15.5>
+<div class=block-label>
+Theorem 15.5 (Sabine Reverberation Formula)
+</div>
+<div class=block-body><p>The <strong>reverberation time</strong> <span class=math-inline data-latex=T_{60}></span> of a room — the time for a sound to decay 60 dB after the source stops — is given by <strong>Sabine&rsquo;s formula</strong> (1900):</p>
+<p><span class=math-display data-latex="T_{60} = \frac{0.161 \cdot V}{A}"></span></p>
 <p>where:</p>
 <ul>
-<li><span class="math-inline" data-latex="V"></span> = room volume (m<span class="math-inline" data-latex="^3"></span>)</li>
-<li><span class="math-inline" data-latex="A = \sum_i \alpha_i S_i"></span> = total absorption area (m<span class="math-inline" data-latex="^2"></span>), with <span class="math-inline" data-latex="\alpha_i"></span> the absorption coefficient of surface <span class="math-inline" data-latex="i"></span> and <span class="math-inline" data-latex="S_i"></span> its area</li>
-<li>The constant <span class="math-inline" data-latex="0.161 = 4\ln(10^6)/v \approx 4 \times 13.816 / 343 \approx 0.161"></span> s/m in SI units</li>
+<li><span class=math-inline data-latex=V></span> = room volume (m<span class=math-inline data-latex=^3></span>)</li>
+<li><span class=math-inline data-latex="A = \sum_i \alpha_i S_i"></span> = total absorption area (m<span class=math-inline data-latex=^2></span>), with <span class=math-inline data-latex=\alpha_i></span> the absorption coefficient of surface <span class=math-inline data-latex=i></span> and <span class=math-inline data-latex=S_i></span> its area</li>
+<li>The constant <span class=math-inline data-latex="0.161 = 4\ln(10^6)/v \approx 4 \times 13.816 / 343 \approx 0.161"></span> s/m in SI units</li>
 </ul>
 <p><strong>Comparison of opera houses</strong>:</p>
 <table>
 <thead>
 <tr>
 <th>Hall</th>
-<th><span class="math-inline" data-latex="T_{60}"></span> (mid-frequency)</th>
+<th><span class=math-inline data-latex=T_{60}></span> (mid-frequency)</th>
 <th>Character</th>
 </tr>
 </thead>
@@ -1154,23 +497,21 @@ document.addEventListener('DOMContentLoaded', function() {
 </tr>
 </tbody>
 </table>
-<p><span class="math-inline" data-latex="C_{80}"></span> difference between La Scala and Sydney: approximately 4 dB.</p>
+<p><span class=math-inline data-latex=C_{80}></span> difference between La Scala and Sydney: approximately 4 dB.</p>
 </div>
 </div>
-
-<div class="proof-block">
-  <div class="block-label">Proof.</div>
-  <div class="block-body"><p>Sabine&rsquo;s derivation assumes a diffuse sound field (energy uniformly distributed in all directions). The energy density <span class="math-inline" data-latex="E(t)"></span> in the room decays as:</p>
-<div class="math-display" data-latex="\frac{dE}{dt} = -\frac{v \cdot A}{4V} E"></div>
-<p>(each reflection removes a fraction <span class="math-inline" data-latex="\bar{\alpha} = A/S_\text{total}"></span> of the energy hitting each surface). Solving:</p>
-<div class="math-display" data-latex="E(t) = E_0 \exp\!\left(-\frac{v A}{4V} t\right)"></div>
-<p>Setting <span class="math-inline" data-latex="E(t) = 10^{-6} E_0"></span> (60 dB decay, factor <span class="math-inline" data-latex="10^6"></span> in power):</p>
-<div class="math-display" data-latex="t = T_{60} = \frac{4V \ln(10^6)}{v A} = \frac{4V \times 6\ln 10}{v A} = \frac{24 \ln 10}{343} \cdot \frac{V}{A} \approx 0.161 \cdot \frac{V}{A} \quad \square"></div>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><p>Sabine&rsquo;s derivation assumes a diffuse sound field (energy uniformly distributed in all directions). The energy density <span class=math-inline data-latex=E(t)></span> in the room decays as:</p>
+<p><span class=math-display data-latex="\frac{dE}{dt} = -\frac{v \cdot A}{4V} E"></span></p>
+<p>(each reflection removes a fraction <span class=math-inline data-latex="\bar{\alpha} = A/S_\text{total}"></span> of the energy hitting each surface). Solving:</p>
+<p><span class=math-display data-latex="E(t) = E_0 \exp\!\left(-\frac{v A}{4V} t\right)"></span></p>
+<p>Setting <span class=math-inline data-latex="E(t) = 10^{-6} E_0"></span> (60 dB decay, factor <span class=math-inline data-latex=10^6></span> in power):</p>
+<p><span class=math-display data-latex="t = T_{60} = \frac{4V \ln(10^6)}{v A} = \frac{4V \times 6\ln 10}{v A} = \frac{24 \ln 10}{343} \cdot \frac{V}{A} \approx 0.161 \cdot \frac{V}{A} \quad \square"></span></p>
 </div>
 </div>
-
 <hr>
-<h2 id="bayreuth-architectural-acoustics-as-instrument">Bayreuth: Architectural Acoustics as Instrument</h2>
+<h2 id=bayreuth-architectural-acoustics-as-instrument>Bayreuth: Architectural Acoustics as Instrument</h2>
 <p>The Bayreuth Festspielhaus (1876, designed by Wagner) demonstrates that room design can substitute for vocal technique. Wagner submerged the orchestra pit below stage level and covered it with a curved hood that deflects orchestral sound toward the ceiling rather than directly toward the audience.</p>
 <p>Effects:</p>
 <ol>
@@ -1182,29 +523,29 @@ document.addEventListener('DOMContentLoaded', function() {
 <p><em>中文:</em> &ldquo;瓦格纳把乐池沉入地下，弧形盖板把乐队声反射向天花板。歌手直达声先到，Haas效应让人声漂浮在乐队之上。乐队衰减7分贝——不靠歌手技术，靠建筑。&rdquo;</p>
 </blockquote>
 <hr>
-<h2 id="failure-cases-quantitative-analysis">Failure Cases: Quantitative Analysis</h2>
-<h3 id="lateral-seating-hahahugoshortcode-s19-hbhb-loss--high-frequency-diffraction">Lateral Seating (<span class="math-inline" data-latex="C_{80}"></span> Loss + High-Frequency Diffraction)</h3>
+<h2 id=failure-cases-quantitative-analysis>Failure Cases: Quantitative Analysis</h2>
+<h3 id=lateral-seating-c80-loss--high-frequency-diffraction>Lateral Seating (C80 Loss + High-Frequency Diffraction)</h3>
 <p>A seat at Ring 3 right side (example: seat B311 at the Canadian Opera Company house) experiences two independent losses compared to center orchestra:</p>
 <p><strong>1. Early reflection deficit:</strong>
-<div class="math-display" data-latex="\Delta C_{80} = C_{80}^\text{center} - C_{80}^\text{side} \approx (&#43;3) - (-2) = 5 \text{ dB}"></div></p>
+<span class=math-display data-latex="\Delta C_{80} = C_{80}^\text{center} - C_{80}^\text{side} \approx (+3) - (-2) = 5 \text{ dB}"></span></p>
 <p>Central seats receive multiple early reflections from lateral walls; side seats in enclosed boxes receive predominantly direct sound plus late reverberation, reducing intelligibility.</p>
 <p><strong>2. High-frequency diffraction loss:</strong></p>
-<p>At 3000 Hz: wavelength <span class="math-inline" data-latex="\lambda = v/f = 343/3000 \approx 11"></span> cm. Objects of dimension <span class="math-inline" data-latex="\sim 10"></span> cm or larger (seat backs, box partitions) shadow high frequencies effectively. Low frequencies (500 Hz, <span class="math-inline" data-latex="\lambda \approx 69"></span> cm) diffract around these obstacles easily.</p>
+<p>At 3000 Hz: wavelength <span class=math-inline data-latex="\lambda = v/f = 343/3000 \approx 11"></span> cm. Objects of dimension <span class=math-inline data-latex="\sim 10"></span> cm or larger (seat backs, box partitions) shadow high frequencies effectively. Low frequencies (500 Hz, <span class=math-inline data-latex="\lambda \approx 69"></span> cm) diffract around these obstacles easily.</p>
 <p>Estimated additional HF attenuation for obstructed sightlines: approximately <strong>3 dB</strong> at 3 kHz.</p>
-<p><strong>Total lateral seat loss</strong>: <span class="math-inline" data-latex="5 &#43; 3 = 8"></span> dB reduction in perceived vocal penetration.</p>
-<h3 id="technical-deficiency-missing-formant-cluster">Technical Deficiency: Missing Formant Cluster</h3>
-<p>If the singer does not achieve the 6:1 pharynx-to-larynx area ratio (insufficient laryngeal lowering or pharyngeal expansion), <span class="math-inline" data-latex="F_3"></span>, <span class="math-inline" data-latex="F_4"></span>, <span class="math-inline" data-latex="F_5"></span> remain at their speech positions (dispersed) rather than clustering near 3 kHz. The Formant gain of +10 dB is lost entirely.</p>
-<h3 id="combined-adverse-scenario">Combined adverse scenario:</h3>
-<div class="math-display" data-latex="\text{PI}_\text{worst} = 49 - 8 - 10 = 31 \text{ dB}"></div>
-<p>If the room&rsquo;s <span class="math-inline" data-latex="C_{80}"></span> is also unfavorable (e.g., <span class="math-inline" data-latex="C_{80} &lt; -3"></span> dB), the effective PI drops further, crossing the empirical ~20 dB masking threshold.</p>
+<p><strong>Total lateral seat loss</strong>: <span class=math-inline data-latex="5 + 3 = 8"></span> dB reduction in perceived vocal penetration.</p>
+<h3 id=technical-deficiency-missing-formant-cluster>Technical Deficiency: Missing Formant Cluster</h3>
+<p>If the singer does not achieve the 6:1 pharynx-to-larynx area ratio (insufficient laryngeal lowering or pharyngeal expansion), <span class=math-inline data-latex=F_3></span>, <span class=math-inline data-latex=F_4></span>, <span class=math-inline data-latex=F_5></span> remain at their speech positions (dispersed) rather than clustering near 3 kHz. The Formant gain of +10 dB is lost entirely.</p>
+<h3 id=combined-adverse-scenario>Combined adverse scenario:</h3>
+<span class=math-display data-latex="\text{PI}_\text{worst} = 49 - 8 - 10 = 31 \text{ dB}"></span>
+<p>If the room&rsquo;s <span class=math-inline data-latex=C_{80}></span> is also unfavorable (e.g., <span class=math-inline data-latex="C_{80} < -3"></span> dB), the effective PI drops further, crossing the empirical ~20 dB masking threshold.</p>
 <hr>
-<h2 id="tenor-brightness-spectral-centroid-measurements">Tenor Brightness: Spectral Centroid Measurements</h2>
-<p>Spectral centroid <span class="math-inline" data-latex="f_c"></span> (Definition 15.5) was computed from recordings of four tenors on comparable high notes (B<span class="math-inline" data-latex="\flat"></span>4–B4):</p>
+<h2 id=tenor-brightness-spectral-centroid-measurements>Tenor Brightness: Spectral Centroid Measurements</h2>
+<p>Spectral centroid <span class=math-inline data-latex=f_c></span> (Definition 15.5) was computed from recordings of four tenors on comparable high notes (B<span class=math-inline data-latex=\flat></span>4–B4):</p>
 <table>
 <thead>
 <tr>
 <th>Tenor</th>
-<th>Spectral Centroid (<span class="math-inline" data-latex="f_c"></span>)</th>
+<th>Spectral Centroid (<span class=math-inline data-latex=f_c></span>)</th>
 <th>Brilliance band (5–8 kHz)</th>
 </tr>
 </thead>
@@ -1231,97 +572,49 @@ document.addEventListener('DOMContentLoaded', function() {
 </tr>
 </tbody>
 </table>
-<p>The 17–24 dB gap in the 5–8 kHz brilliance band between Ben Bliss and the other three singers is objectively measurable and perceptually salient. A singer with <span class="math-inline" data-latex="f_c \approx 2246"></span> Hz has most energy concentrated below 3 kHz; the spectral rolloff (the frequency below which 85% of energy falls) is approximately 4818 Hz for Bliss vs. 7354 Hz for Monaco.</p>
+<p>The 17–24 dB gap in the 5–8 kHz brilliance band between Ben Bliss and the other three singers is objectively measurable and perceptually salient. A singer with <span class=math-inline data-latex="f_c \approx 2246"></span> Hz has most energy concentrated below 3 kHz; the spectral rolloff (the frequency below which 85% of energy falls) is approximately 4818 Hz for Bliss vs. 7354 Hz for Monaco.</p>
 <blockquote>
 <p><em>中文:</em> &ldquo;这不是偏好，而是可测量的声学差异。&rdquo;</p>
 </blockquote>
 <p>This is not a value judgment on vocal quality — a &ldquo;covered&rdquo; (voix sombre) sound has different artistic functions than a bright squillo sound. But the acoustic difference is real and measurable, and directly predicts penetration capacity.</p>
-<h3 id="hear-the-difference">Hear the Difference</h3>
+<h3 id=hear-the-difference>Hear the Difference</h3>
 <p>Listen to these tenors and compare the brightness and penetration qualities discussed above:</p>
-<div class="yt-container">
-  <div class="yt-embed">
-    
-    
-    
-    
-    <iframe
-      src="https://www.youtube.com/embed/68jmZfCJVWk"
-      title="Yijie Shi (石倚洁)"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen>
-    </iframe>
-  </div>
-  <p class="yt-caption">Yijie Shi (石倚洁) — spectral centroid ~3335 Hz, the highest measured among our four tenors. Listen for the bright, cutting quality in the upper register.</p>
+<div class=yt-container>
+<div class=yt-embed>
+<iframe src=https://www.youtube.com/embed/68jmZfCJVWk title="Yijie Shi (石倚洁)" frameborder=0 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy=strict-origin-when-cross-origin allowfullscreen></iframe>
 </div>
-
-<div class="yt-container">
-  <div class="yt-embed">
-    
-    
-    
-    
-    <iframe
-      src="https://www.youtube.com/embed/Hc1dFDY3NKo"
-      title="Juan Diego Flórez"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen>
-    </iframe>
-  </div>
-  <p class="yt-caption">Juan Diego Flórez — spectral centroid ~3306 Hz. Similar brilliance to Shi, with strong energy concentration in the Singer&#39;s Formant region.</p>
+<p class=yt-caption>Yijie Shi (石倚洁) — spectral centroid ~3335 Hz, the highest measured among our four tenors. Listen for the bright, cutting quality in the upper register.</p>
 </div>
-
-<div class="yt-container">
-  <div class="yt-embed">
-    
-    
-    
-    
-    <iframe
-      src="https://www.youtube.com/embed/1cspM93eNr8"
-      title="Dave Monaco"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen>
-    </iframe>
-  </div>
-  <p class="yt-caption">Dave Monaco (COC, 2026) — spectral centroid ~3005 Hz. Slightly lower centroid than Flórez and Shi, but still well within the 3 kHz penetration window.</p>
+<div class=yt-container>
+<div class=yt-embed>
+<iframe src=https://www.youtube.com/embed/Hc1dFDY3NKo title="Juan Diego Flórez" frameborder=0 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy=strict-origin-when-cross-origin allowfullscreen></iframe>
 </div>
-
-<div class="yt-container">
-  <div class="yt-embed">
-    
-    
-    
-    
-    <iframe
-      src="https://www.youtube.com/embed/RUxp7EywJWQ"
-      title="Ben Bliss"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen>
-    </iframe>
-  </div>
-  <p class="yt-caption">Ben Bliss (COC, 2026) — spectral centroid ~2246 Hz. A darker, more covered (voix sombre) timbre with most energy below 3 kHz. The 17–24 dB gap in the 5–8 kHz brilliance band compared to the other three tenors is audible.</p>
+<p class=yt-caption>Juan Diego Flórez — spectral centroid ~3306 Hz. Similar brilliance to Shi, with strong energy concentration in the Singer's Formant region.</p>
 </div>
-
+<div class=yt-container>
+<div class=yt-embed>
+<iframe src=https://www.youtube.com/embed/1cspM93eNr8 title="Dave Monaco" frameborder=0 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy=strict-origin-when-cross-origin allowfullscreen></iframe>
+</div>
+<p class=yt-caption>Dave Monaco (COC, 2026) — spectral centroid ~3005 Hz. Slightly lower centroid than Flórez and Shi, but still well within the 3 kHz penetration window.</p>
+</div>
+<div class=yt-container>
+<div class=yt-embed>
+<iframe src=https://www.youtube.com/embed/RUxp7EywJWQ title="Ben Bliss" frameborder=0 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy=strict-origin-when-cross-origin allowfullscreen></iframe>
+</div>
+<p class=yt-caption>Ben Bliss (COC, 2026) — spectral centroid ~2246 Hz. A darker, more covered (voix sombre) timbre with most energy below 3 kHz. The 17–24 dB gap in the 5–8 kHz brilliance band compared to the other three tenors is audible.</p>
+</div>
 <hr>
-<h2 id="musical-connection">Musical Connection</h2>
-<div class="music-block">
-  <div class="block-label">音乐联系</div>
-  <div class="block-body"><p><strong>The 3 kHz Window Across the Series</strong></p>
+<h2 id=musical-connection>Musical Connection</h2>
+<div class=music-block>
+<div class=block-label>音乐联系</div>
+<div class=block-body><p><strong>The 3 kHz Window Across the Series</strong></p>
 <p>The 3 kHz frequency region appears repeatedly across the arc:</p>
 <ul>
 <li>
-<p><strong>EP02</strong> (Fourier): The spectrum of a complex tone is the sum of harmonic components. The human voice&rsquo;s harmonic series above <span class="math-inline" data-latex="f_0 \sim 200"></span> Hz reaches 3 kHz at approximately the 15th harmonic — well within the resonance-amplifiable range.</p>
+<p><strong>EP02</strong> (Fourier): The spectrum of a complex tone is the sum of harmonic components. The human voice&rsquo;s harmonic series above <span class=math-inline data-latex="f_0 \sim 200"></span> Hz reaches 3 kHz at approximately the 15th harmonic — well within the resonance-amplifiable range.</p>
 </li>
 <li>
-<p><strong>EP09</strong> (Combination tones): The cochlea&rsquo;s nonlinear response generates combination tones at <span class="math-inline" data-latex="|mf_1 - nf_2|"></span>. For a sung vowel with <span class="math-inline" data-latex="F_1 \approx 700"></span> Hz and <span class="math-inline" data-latex="F_2 \approx 1200"></span> Hz, combination products <span class="math-inline" data-latex="2F_2 - F_1 \approx 1700"></span> Hz and <span class="math-inline" data-latex="3F_2 - F_1 \approx 2900"></span> Hz fall near the Singer&rsquo;s Formant region.</p>
+<p><strong>EP09</strong> (Combination tones): The cochlea&rsquo;s nonlinear response generates combination tones at <span class=math-inline data-latex="|mf_1 - nf_2|"></span>. For a sung vowel with <span class=math-inline data-latex="F_1 \approx 700"></span> Hz and <span class=math-inline data-latex="F_2 \approx 1200"></span> Hz, combination products <span class=math-inline data-latex="2F_2 - F_1 \approx 1700"></span> Hz and <span class=math-inline data-latex="3F_2 - F_1 \approx 2900"></span> Hz fall near the Singer&rsquo;s Formant region.</p>
 </li>
 <li>
 <p><strong>EP15</strong> (this episode): The Singer&rsquo;s Formant is the mechanism by which the vocalist intentionally concentrates energy in this region.</p>
@@ -1340,15 +633,14 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><strong>Brass instruments</strong>: The lip buzz is the source; the bell and bore are the filter.</li>
 <li><strong>Piano</strong>: The hammer strike is the source; the soundboard is the filter.</li>
 </ul>
-<p>The mathematical structure <span class="math-inline" data-latex="S = G \cdot H \cdot R"></span> is universal. Opera singing is the case where the filter (<span class="math-inline" data-latex="H"></span>, the vocal tract) is dynamically reconfigured by the performer in real time — a capability not available to instrument players.</p>
+<p>The mathematical structure <span class=math-inline data-latex="S = G \cdot H \cdot R"></span> is universal. Opera singing is the case where the filter (<span class=math-inline data-latex=H></span>, the vocal tract) is dynamically reconfigured by the performer in real time — a capability not available to instrument players.</p>
 </div>
 </div>
-
 <hr>
-<h2 id="limits-and-open-questions">Limits and Open Questions</h2>
+<h2 id=limits-and-open-questions>Limits and Open Questions</h2>
 <ol>
 <li>
-<p><strong>Sabine formula assumes diffuse field.</strong> For non-diffuse rooms (long, narrow halls; rooms with strong focusing surfaces) Sabine&rsquo;s formula can overestimate <span class="math-inline" data-latex="T_{60}"></span> by 20–50%. Eyring&rsquo;s formula <span class="math-inline" data-latex="T_{60} = -0.161 V / [S \ln(1 - \bar{\alpha})]"></span> is more accurate for high-absorption environments.</p>
+<p><strong>Sabine formula assumes diffuse field.</strong> For non-diffuse rooms (long, narrow halls; rooms with strong focusing surfaces) Sabine&rsquo;s formula can overestimate <span class=math-inline data-latex=T_{60}></span> by 20–50%. Eyring&rsquo;s formula <span class=math-inline data-latex="T_{60} = -0.161 V / [S \ln(1 - \bar{\alpha})]"></span> is more accurate for high-absorption environments.</p>
 </li>
 <li>
 <p><strong>Masking threshold is not universal.</strong> The empirical &ldquo;~20 dB SNR for audibility&rdquo; is a population average. Listeners with musical training show lower masking thresholds (better ability to segregate voices from noise). The cocktail party effect (auditory streaming) provides additional perceptual benefit beyond the physical SNR.</p>
@@ -1357,27 +649,24 @@ document.addEventListener('DOMContentLoaded', function() {
 <p><strong>Formant clustering mechanism needs clarification.</strong> While Sundberg&rsquo;s 6:1 area ratio is widely cited, the precise biomechanical mechanism (arytenoid adduction, cricothyroid rotation, laryngeal lowering) remains debated. Recent laryngoscopic studies support multiple pathways to Singer&rsquo;s Formant production.</p>
 </li>
 <li>
-<p><strong>Individual vocal tract geometry varies.</strong> The 6:1 ratio produces a ~3 kHz resonance for an average adult male vocal tract. Sopranos have shorter vocal tracts; their Singer&rsquo;s Formant region is higher (~3.5–4 kHz). The model predicts this correctly: smaller <span class="math-inline" data-latex="V"></span>, larger <span class="math-inline" data-latex="f_H"></span> in the Helmholtz formula.</p>
+<p><strong>Individual vocal tract geometry varies.</strong> The 6:1 ratio produces a ~3 kHz resonance for an average adult male vocal tract. Sopranos have shorter vocal tracts; their Singer&rsquo;s Formant region is higher (~3.5–4 kHz). The model predicts this correctly: smaller <span class=math-inline data-latex=V></span>, larger <span class=math-inline data-latex=f_H></span> in the Helmholtz formula.</p>
 </li>
 <li>
-<p><strong>Soprano formant tuning (not in EP15, but related).</strong> At high soprano pitches (<span class="math-inline" data-latex="f_0 &gt; 700"></span> Hz), <span class="math-inline" data-latex="F_1"></span> in normal vowels falls <em>below</em> <span class="math-inline" data-latex="f_0"></span>. The soprano must retune <span class="math-inline" data-latex="F_1"></span> to match <span class="math-inline" data-latex="f_0"></span> to maintain acoustic efficiency — sacrificing vowel intelligibility for loudness. This is a frequency-domain trade-off studied by Joliver and Sundberg; it forward-connects to EP19 (vibrato and formant interaction).</p>
+<p><strong>Soprano formant tuning (not in EP15, but related).</strong> At high soprano pitches (<span class=math-inline data-latex="f_0 > 700"></span> Hz), <span class=math-inline data-latex=F_1></span> in normal vowels falls <em>below</em> <span class=math-inline data-latex=f_0></span>. The soprano must retune <span class=math-inline data-latex=F_1></span> to match <span class=math-inline data-latex=f_0></span> to maintain acoustic efficiency — sacrificing vowel intelligibility for loudness. This is a frequency-domain trade-off studied by Joliver and Sundberg; it forward-connects to EP19 (vibrato and formant interaction).</p>
 </li>
 </ol>
-
-
-<div class="conjecture-block" id="conjecture">
-  <div class="block-label">
-    Conjecture (Optimal Formant Placement for Penetration)
-  </div>
-  <div class="block-body"><p>For a given orchestral texture, the singer&rsquo;s optimal formant cluster frequency <span class="math-inline" data-latex="F^*"></span> is the frequency <span class="math-inline" data-latex="f^*"></span> that maximizes:</p>
-<div class="math-display" data-latex="f^* = \arg\max_f \left[ \text{SPL}_\text{singer}(f) - \text{SPL}_\text{orchestra}(f) &#43; w(f) \right]"></div>
-<p>where <span class="math-inline" data-latex="w(f)"></span> is the ISO 226 perceptual weighting function and <span class="math-inline" data-latex="\text{SPL}_\text{singer}(f)"></span> depends on the singer&rsquo;s achievable formant placement.</p>
-<p><strong>Open question</strong>: For different orchestral configurations (Romantic orchestra vs. Baroque ensemble vs. chamber orchestra), does the optimal <span class="math-inline" data-latex="f^*"></span> shift significantly? If so, could this explain stylistic differences in formant placement between Baroque-specialist singers and Verdi tenors?</p>
+<div class=conjecture-block id=conjecture>
+<div class=block-label>
+Conjecture (Optimal Formant Placement for Penetration)
+</div>
+<div class=block-body><p>For a given orchestral texture, the singer&rsquo;s optimal formant cluster frequency <span class=math-inline data-latex=F^*></span> is the frequency <span class=math-inline data-latex=f^*></span> that maximizes:</p>
+<p><span class=math-display data-latex="f^* = \arg\max_f \left[ \text{SPL}_\text{singer}(f) - \text{SPL}_\text{orchestra}(f) + w(f) \right]"></span></p>
+<p>where <span class=math-inline data-latex=w(f)></span> is the ISO 226 perceptual weighting function and <span class=math-inline data-latex=\text{SPL}_\text{singer}(f)></span> depends on the singer&rsquo;s achievable formant placement.</p>
+<p><strong>Open question</strong>: For different orchestral configurations (Romantic orchestra vs. Baroque ensemble vs. chamber orchestra), does the optimal <span class=math-inline data-latex=f^*></span> shift significantly? If so, could this explain stylistic differences in formant placement between Baroque-specialist singers and Verdi tenors?</p>
 </div>
 </div>
-
 <hr>
-<h2 id="academic-references">Academic References</h2>
+<h2 id=academic-references>Academic References</h2>
 <ol>
 <li>
 <p>Sundberg, J. (1974). Articulatory interpretation of the &ldquo;singing formant.&rdquo; <em>Journal of the Acoustical Society of America</em>, 55(4), 838–844. — Original identification and quantification of the Singer&rsquo;s Formant; 6:1 area ratio; +8–12 dB clustering gain.</p>
@@ -1386,7 +675,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>Beranek, L. L. (2004). <em>Concert Halls and Opera Houses: Music, Acoustics, and Architecture</em> (2nd ed.). Springer. — Measured RT60 and C80 for major opera houses worldwide; orchestral SPL measurements.</p>
 </li>
 <li>
-<p>Fletcher, H., &amp; Munson, W. A. (1933). Loudness, its definition, measurement and calculation. <em>Journal of the Acoustical Society of America</em>, 5(2), 82–108. — Original equal-loudness contour measurements.</p>
+<p>Fletcher, H., & Munson, W. A. (1933). Loudness, its definition, measurement and calculation. <em>Journal of the Acoustical Society of America</em>, 5(2), 82–108. — Original equal-loudness contour measurements.</p>
 </li>
 <li>
 <p>ISO 226:2003. <em>Acoustics — Normal equal-loudness-level contours</em>. International Organization for Standardization. — Current standard for equal-loudness data; replaces Fletcher-Munson with modern measurements.</p>
@@ -1395,7 +684,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>Sabine, W. C. (1900). Reverberation. <em>The American Architect</em> (reprinted in <em>Architectural Acoustics</em>, Sabine, 1922, Harvard University Press). — Original derivation of the reverberation formula.</p>
 </li>
 <li>
-<p>Meyer, J. (2009). <em>Acoustics and the Performance of Music</em> (5th ed.). Springer. — Orchestral frequency spectra by section; instrument directivity patterns; ensemble SPL measurements. Source for <span class="math-inline" data-latex="\alpha \approx 9"></span> dB/octave attenuation figure.</p>
+<p>Meyer, J. (2009). <em>Acoustics and the Performance of Music</em> (5th ed.). Springer. — Orchestral frequency spectra by section; instrument directivity patterns; ensemble SPL measurements. Source for <span class=math-inline data-latex="\alpha \approx 9"></span> dB/octave attenuation figure.</p>
 </li>
 <li>
 <p>Ternström, S. (1988). Acoustical aspects of choir singing. Ph.D. dissertation, KTH Stockholm. — Vocal tract parameter measurements; Helmholtz resonator parameters for male singers.</p>
@@ -1404,254 +693,67 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>Haas, H. (1951). Über den Einfluss eines Einfachechos auf die Hörsamkeit von Sprache. <em>Acustica</em>, 1, 49–58. (English translation in <em>Journal of the Audio Engineering Society</em>, 1972, 20(2), 146–159.) — The Haas (precedence) effect; perceptual fusion and localization dominance of early sound.</p>
 </li>
 <li>
-<p>Rossing, T. D., Moore, F. R., &amp; Wheeler, P. A. (2002). <em>The Science of Sound</em> (3rd ed.). Addison-Wesley. Ch. 17 (Voice and Speech). — Source-filter model derivation; formant theory; vocal tract acoustics.</p>
+<p>Rossing, T. D., Moore, F. R., & Wheeler, P. A. (2002). <em>The Science of Sound</em> (3rd ed.). Addison-Wesley. Ch. 17 (Voice and Speech). — Source-filter model derivation; formant theory; vocal tract acoustics.</p>
 </li>
 <li>
-<p>Plomp, R. (1970). Timbre as a multidimensional attribute of complex tones. In <em>Frequency Analysis and Periodicity Detection in Hearing</em>, ed. Plomp &amp; Smoorenburg. Sijthoff. — Perceptual dimensions of timbre; spectral centroid as brightness correlate.</p>
+<p>Plomp, R. (1970). Timbre as a multidimensional attribute of complex tones. In <em>Frequency Analysis and Periodicity Detection in Hearing</em>, ed. Plomp & Smoorenburg. Sijthoff. — Perceptual dimensions of timbre; spectral centroid as brightness correlate.</p>
 </li>
 </ol>
-
-    </div>
-
-    
-    <nav class="ep-nav">
-      
-      
-      
-      
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-      
-      <a href="https://amath390.sibeliusp.com/episodes/ep14/" class="ep-nav-prev">
-        ← EP14: Tonnetz Hodge Duality
-      </a>
-      
-      
-      <a href="https://amath390.sibeliusp.com/episodes/ep16/" class="ep-nav-next">
-        EP16: Rossini&#39;s Code — Budden, Gossett, and the Convention System →
-      </a>
-      
-    </nav>
-  </article>
-
-  
-  
-  
-  <aside class="ep-toc-aside">
-    <div class="ep-toc-sticky">
-      <div class="ep-toc-label">本页目录</div>
-      <nav id="TableOfContents">
-  <ul>
-    <li><a href="#overview">Overview</a></li>
-    <li><a href="#prerequisites">Prerequisites</a></li>
-    <li><a href="#definitions">Definitions</a></li>
-    <li><a href="#main-theorems">Main Theorems</a></li>
-    <li><a href="#bayreuth-architectural-acoustics-as-instrument">Bayreuth: Architectural Acoustics as Instrument</a></li>
-    <li><a href="#failure-cases-quantitative-analysis">Failure Cases: Quantitative Analysis</a>
-      <ul>
-        <li><a href="#lateral-seating-hahahugoshortcode-s19-hbhb-loss--high-frequency-diffraction">Lateral Seating (HAHAHUGOSHORTCODE-s19-HBHB Loss + High-Frequency Diffraction)</a></li>
-        <li><a href="#technical-deficiency-missing-formant-cluster">Technical Deficiency: Missing Formant Cluster</a></li>
-        <li><a href="#combined-adverse-scenario">Combined adverse scenario:</a></li>
-      </ul>
-    </li>
-    <li><a href="#tenor-brightness-spectral-centroid-measurements">Tenor Brightness: Spectral Centroid Measurements</a>
-      <ul>
-        <li><a href="#hear-the-difference">Hear the Difference</a></li>
-      </ul>
-    </li>
-    <li><a href="#musical-connection">Musical Connection</a></li>
-    <li><a href="#limits-and-open-questions">Limits and Open Questions</a></li>
-    <li><a href="#academic-references">Academic References</a></li>
-  </ul>
-</nav>
-    </div>
-  </aside>
-  
 </div>
-
-      <footer class="site-footer">
-  <div class="footer-content">
-    <a href="https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f" target="_blank" rel="noopener" class="footer-avatar-link">
-      <img src="/images/avatar.png" alt="Sibelius P." class="footer-avatar">
-    </a>
-    <div class="footer-text">
-      <span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
-      <span class="footer-sep">·</span>
-      <a href="https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f" target="_blank" rel="noopener">小红书</a>
-      <span class="footer-sep">·</span>
-      <span>Built with <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> + KaTeX</span>
-    </div>
-  </div>
+<nav class=ep-nav>
+<a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-nav-prev>
+← EP14: Tonnetz Hodge Duality
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-nav-next>
+EP16: Rossini's Code — Budden, Gossett, and the Convention System →
+</a>
+</nav>
+</article>
+<aside class=ep-toc-aside>
+<div class=ep-toc-sticky>
+<div class=ep-toc-label>本页目录</div>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#overview>Overview</a></li>
+<li><a href=#prerequisites>Prerequisites</a></li>
+<li><a href=#definitions>Definitions</a></li>
+<li><a href=#main-theorems>Main Theorems</a></li>
+<li><a href=#bayreuth-architectural-acoustics-as-instrument>Bayreuth: Architectural Acoustics as Instrument</a></li>
+<li><a href=#failure-cases-quantitative-analysis>Failure Cases: Quantitative Analysis</a>
+<ul>
+<li><a href=#lateral-seating-c80-loss--high-frequency-diffraction>Lateral Seating (C80 Loss + High-Frequency Diffraction)</a></li>
+<li><a href=#technical-deficiency-missing-formant-cluster>Technical Deficiency: Missing Formant Cluster</a></li>
+<li><a href=#combined-adverse-scenario>Combined adverse scenario:</a></li>
+</ul>
+</li>
+<li><a href=#tenor-brightness-spectral-centroid-measurements>Tenor Brightness: Spectral Centroid Measurements</a>
+<ul>
+<li><a href=#hear-the-difference>Hear the Difference</a></li>
+</ul>
+</li>
+<li><a href=#musical-connection>Musical Connection</a></li>
+<li><a href=#limits-and-open-questions>Limits and Open Questions</a></li>
+<li><a href=#academic-references>Academic References</a></li>
+</ul>
+</nav>
+</div>
+</aside>
+</div>
+<footer class=site-footer>
+<div class=footer-content>
+<a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link>
+<img src=/images/avatar.png alt="Sibelius P." class=footer-avatar>
+</a>
+<div class=footer-text>
+<span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
+<span class=footer-sep>·</span>
+<a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener>小红书</a>
+<span class=footer-sep>·</span>
+<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span>
+</div>
+</div>
 </footer>
-
-    </main>
-  </div>
+</main>
+</div>
 </body>
 </html>

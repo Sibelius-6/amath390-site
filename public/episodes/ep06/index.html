@@ -1,1031 +1,358 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
+<!doctype html><html lang=zh-cn>
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
 <title>EP06: Graph Coloring and Voice Assignment | AMATH 390 数学与音乐</title>
-<meta name="description" content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('[data-latex]').forEach(function(el) {
-    try {
-      katex.render(el.getAttribute('data-latex'), el, {
-        displayMode: el.classList.contains('math-display'),
-        throwOnError: false
-      });
-    } catch(e) { console.warn('KaTeX:', e.message, el); }
-  });
-});
-</script>
-
-
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
-
-<link rel="stylesheet" href="/css/amath390.css">
-
+<meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script>
+<script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('[data-latex]').forEach(function(a){try{katex.render(a.getAttribute('data-latex'),a,{displayMode:a.classList.contains('math-display'),throwOnError:!1})}catch(b){console.warn('KaTeX:',b.message,a)}})})</script>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16.png>
+<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+<link rel=stylesheet href=/css/amath390.css>
 </head>
 <body>
-  <div class="layout-wrapper">
-    
-
-
-<nav class="sidebar">
-  <div class="sidebar-header">
-    <a href="/" class="sidebar-title">AMATH 390</a>
-    <div class="sidebar-subtitle">数学与音乐</div>
-  </div>
-
-  
-
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">数学基础篇</div>
-        
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep01/"
-               class="ep-link">
-              <span class="ep-num">01</span>
-              <span class="ep-title">Chord Space and the Torus</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep02/"
-               class="ep-link">
-              <span class="ep-num">02</span>
-              <span class="ep-title">String Vibration and the Wave Equation</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep03/"
-               class="ep-link">
-              <span class="ep-num">03</span>
-              <span class="ep-title">Bach and Graph Connectivity</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep04/"
-               class="ep-link">
-              <span class="ep-num">04</span>
-              <span class="ep-title">All-Interval Rows and ℤ₁₂</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep05/"
-               class="ep-link">
-              <span class="ep-num">05</span>
-              <span class="ep-title">Turán&#39;s Theorem and Counterpoint</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep06/"
-               class="ep-link active">
-              <span class="ep-num">06</span>
-              <span class="ep-title">Graph Coloring and Voice Assignment</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep07/"
-               class="ep-link">
-              <span class="ep-num">07</span>
-              <span class="ep-title">Information Entropy and All-Interval Rows</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep08/"
-               class="ep-link">
-              <span class="ep-num">08</span>
-              <span class="ep-title">Shepard Tones and the Tritone Paradox</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep09/"
-               class="ep-link">
-              <span class="ep-num">09</span>
-              <span class="ep-title">Combination Tones and Nonlinear Acoustics</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">Jacob Collier 系列</div>
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep10/"
-               class="ep-link">
-              <span class="ep-num">10</span>
-              <span class="ep-title">Negative Harmony and the Dihedral Group D₁₂</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep11/"
-               class="ep-link">
-              <span class="ep-num">11</span>
-              <span class="ep-title">Comma Drift and the Impossibility of Perfect Tuning</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep12/"
-               class="ep-link">
-              <span class="ep-num">12</span>
-              <span class="ep-title">The Circle of Fifths as a Folded Spiral</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep13/"
-               class="ep-link">
-              <span class="ep-num">13</span>
-              <span class="ep-title">Polyrhythm and Rhythm-Pitch Duality</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">拓扑数学专篇</div>
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep14/"
-               class="ep-link">
-              <span class="ep-num">14</span>
-              <span class="ep-title">Tonnetz Hodge Duality</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">歌剧系列</div>
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep15/"
-               class="ep-link">
-              <span class="ep-num">15</span>
-              <span class="ep-title">Opera Acoustics and the Singer&#39;s Formant</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep16/"
-               class="ep-link">
-              <span class="ep-num">16</span>
-              <span class="ep-title">Rossini&#39;s Code — Budden, Gossett, and the Convention System</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep17/"
-               class="ep-link">
-              <span class="ep-num">17</span>
-              <span class="ep-title">Leitmotif Networks — Wagner&#39;s Ring Cycle</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-
-  <div class="sidebar-footer">
-    <a href="/theorems/">定理索引</a>
-    <a href="/domains/">数学领域</a>
-    <a href="/about/">关于</a>
-  </div>
+<div class=layout-wrapper>
+<nav class=sidebar>
+<div class=sidebar-header>
+<a href=/ class=sidebar-title>AMATH 390</a>
+<div class=sidebar-subtitle>数学与音乐</div>
+</div>
+<div class=arc-group>
+<div class=arc-label>数学基础篇</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link>
+<span class=ep-num>01</span>
+<span class=ep-title>Chord Space and the Torus</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep02/ class=ep-link>
+<span class=ep-num>02</span>
+<span class=ep-title>String Vibration and the Wave Equation</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link>
+<span class=ep-num>03</span>
+<span class=ep-title>Bach and Graph Connectivity</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link>
+<span class=ep-num>04</span>
+<span class=ep-title>All-Interval Rows and ℤ₁₂</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link>
+<span class=ep-num>05</span>
+<span class=ep-title>Turán's Theorem and Counterpoint</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep06/ class="ep-link active">
+<span class=ep-num>06</span>
+<span class=ep-title>Graph Coloring and Voice Assignment</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-link>
+<span class=ep-num>07</span>
+<span class=ep-title>Information Entropy and All-Interval Rows</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-link>
+<span class=ep-num>08</span>
+<span class=ep-title>Shepard Tones and the Tritone Paradox</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link>
+<span class=ep-num>09</span>
+<span class=ep-title>Combination Tones and Nonlinear Acoustics</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>Jacob Collier 系列</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep10/ class=ep-link>
+<span class=ep-num>10</span>
+<span class=ep-title>Negative Harmony and the Dihedral Group D₁₂</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link>
+<span class=ep-num>11</span>
+<span class=ep-title>Comma Drift and the Impossibility of Perfect Tuning</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep12/ class=ep-link>
+<span class=ep-num>12</span>
+<span class=ep-title>The Circle of Fifths as a Folded Spiral</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-link>
+<span class=ep-num>13</span>
+<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>拓扑数学专篇</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-link>
+<span class=ep-num>14</span>
+<span class=ep-title>Tonnetz Hodge Duality</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>歌剧系列</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-link>
+<span class=ep-num>15</span>
+<span class=ep-title>Opera Acoustics and the Singer's Formant</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link>
+<span class=ep-num>16</span>
+<span class=ep-title>Rossini's Code — Budden, Gossett, and the Convention System</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-link>
+<span class=ep-num>17</span>
+<span class=ep-title>Leitmotif Networks — Wagner's Ring Cycle</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-link>
+<span class=ep-num>18</span>
+<span class=ep-title>Game Theory in Operatic Duets</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link>
+<span class=ep-num>19</span>
+<span class=ep-title>Vibrato as FM Synthesis</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-link>
+<span class=ep-num>20</span>
+<span class=ep-title>Character Interaction Networks in Opera</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>AI 音乐三部曲</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-link>
+<span class=ep-num>21</span>
+<span class=ep-title>From Markov to Diffusion — Sixty Years of AI Composition</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-link>
+<span class=ep-num>22</span>
+<span class=ep-title>How AI Writes Music — EnCodec and RVQ</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-link>
+<span class=ep-num>23</span>
+<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span>
+</a>
+</div>
+<div class=sidebar-footer>
+<a href=/theorems/>定理索引</a>
+<a href=/domains/>数学领域</a>
+<a href=/about/>关于</a>
+</div>
 </nav>
-
-    <main class="main-content">
-      
-
-
-
-<div class="episode-layout">
-  <article class="episode-page">
-    <header class="episode-header">
-  <div class="ep-badge">EP06</div>
-  <h1 class="ep-main-title">EP06: Graph Coloring and Voice Assignment</h1>
-  <div class="ep-subtitle">完美图, χ=ω</div>
-
-  <div class="ep-meta">
-    
-    <span class="meta-item">
-      <span class="meta-icon">▶</span> 6:28
-    </span>
-    
-    
-    <span class="meta-item domains">
-      <span class="domain-chip">Graph Theory</span><span class="domain-chip">Combinatorics</span>
-    </span>
-    
-  </div>
+<main class=main-content>
+<div class=episode-layout>
+<article class=episode-page>
+<header class=episode-header>
+<div class=ep-badge>EP06</div>
+<h1 class=ep-main-title>EP06: Graph Coloring and Voice Assignment</h1>
+<div class=ep-subtitle>完美图, χ=ω</div>
+<div class=ep-meta>
+<span class=meta-item>
+<span class=meta-icon>▶</span> 6:28
+</span>
+<span class="meta-item domains">
+<span class=domain-chip>Graph Theory</span><span class=domain-chip>Combinatorics</span>
+</span>
+</div>
 </header>
-
-    
-
-
-<div class="cross-refs">
-  <h3 class="cross-refs-title">前置知识</h3>
-  <div class="ref-cards">
-    
-      
-      
-      
-      
-        <a href="https://amath390.sibeliusp.com/episodes/ep03/" class="ref-card callback">
-          <span class="ref-ep">EP03</span>
-          <span class="ref-title">Bach and Graph Connectivity</span>
-        </a>
-      
-    
-      
-      
-      
-      
-        <a href="https://amath390.sibeliusp.com/episodes/ep04/" class="ref-card callback">
-          <span class="ref-ep">EP04</span>
-          <span class="ref-title">All-Interval Rows and ℤ₁₂</span>
-        </a>
-      
-    
-      
-      
-      
-      
-        <a href="https://amath390.sibeliusp.com/episodes/ep05/" class="ref-card callback">
-          <span class="ref-ep">EP05</span>
-          <span class="ref-title">Turán&#39;s Theorem and Counterpoint</span>
-        </a>
-      
-    
-  </div>
+<div class=cross-refs>
+<h3 class=cross-refs-title>前置知识</h3>
+<div class=ref-cards>
+<a href=https://amath390.sibeliusp.com/episodes/ep03/ class="ref-card callback">
+<span class=ref-ep>EP03</span>
+<span class=ref-title>Bach and Graph Connectivity</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep04/ class="ref-card callback">
+<span class=ref-ep>EP04</span>
+<span class=ref-title>All-Interval Rows and ℤ₁₂</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep05/ class="ref-card callback">
+<span class=ref-ep>EP05</span>
+<span class=ref-title>Turán's Theorem and Counterpoint</span>
+</a>
 </div>
-
-
-
-
-    
-<div class="xhs-section">
-  <div class="xhs-section-header">
-    <span class="xhs-logo-badge">小红书</span>
-    <span class="xhs-section-title">Watch on 小红书</span>
-  </div>
-  <div class="xhs-cards">
-    
-    <a href="https://www.xiaohongshu.com/discovery/item/6987cf26000000000a02aaa2?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=AB4NWdVDUc0Ol-KPeNByDv_jkXhPffD9-YCZpiLAmoNZA=&amp;xsec_source=pc_share" target="_blank" rel="noopener" class="xhs-card">
-      <div class="xhs-card-inner">
-        <div class="xhs-card-icon">▶</div>
-        <div class="xhs-card-text">
-          <div class="xhs-card-title">15个声部塞进10手指？完美图定理的力量</div>
-          <div class="xhs-card-sub">xiaohongshu.com</div>
-        </div>
-        <div class="xhs-card-arrow">→</div>
-      </div>
-    </a>
-    
-  </div>
 </div>
-
-
-
-    <div class="episode-content content">
-      <h2 id="overview">Overview</h2>
+<div class=xhs-section>
+<div class=xhs-section-header>
+<span class=xhs-logo-badge>小红书</span>
+<span class=xhs-section-title>Watch on 小红书</span>
+</div>
+<div class=xhs-cards>
+<a href="https://www.xiaohongshu.com/discovery/item/6987cf26000000000a02aaa2?source=webshare&xhsshare=pc_web&xsec_token=AB4NWdVDUc0Ol-KPeNByDv_jkXhPffD9-YCZpiLAmoNZA=&xsec_source=pc_share" target=_blank rel=noopener class=xhs-card>
+<div class=xhs-card-inner>
+<div class=xhs-card-icon>▶</div>
+<div class=xhs-card-text>
+<div class=xhs-card-title>15个声部塞进10手指？完美图定理的力量</div>
+<div class=xhs-card-sub>xiaohongshu.com</div>
+</div>
+<div class=xhs-card-arrow>→</div>
+</div>
+</a>
+</div>
+</div>
+<div class="episode-content content">
+<h2 id=overview>Overview</h2>
 <p>Beethoven&rsquo;s Fifth Symphony, fourth movement, deploys over twenty orchestral staves. Collapse all octave doublings, and the climax still demands more than ten distinct pitch heights simultaneously — more than two human hands can play. How do you reduce a full orchestra to a piano score without destroying the harmonic structure? And what is the <em>minimum</em> number of voices absolutely required?</p>
-<p>This episode answers both questions with graph coloring. Model each note as a vertex; connect two vertices when their sounding intervals overlap in time. The resulting <strong>interval graph</strong> encodes all simultaneity conflicts. The <strong>chromatic number</strong> <span class="math-inline" data-latex="\chi(G)"></span> of this graph is the minimum number of voices (colors) needed so that no two simultaneously-sounding notes share a voice. The <strong>Perfect Graph Theorem</strong> (Lovász, 1972) guarantees that for interval graphs <span class="math-inline" data-latex="\chi = \omega"></span> — the chromatic number equals the clique number, i.e., the maximum number of notes sounding at once. A single greedy pass along the time axis achieves this bound in linear time.</p>
-<p>When <span class="math-inline" data-latex="\omega"></span> exceeds the number of available performers, the theorem gives the precise cost of every forced deletion — turning an artistic choice into a quantifiable trade-off.</p>
+<p>This episode answers both questions with graph coloring. Model each note as a vertex; connect two vertices when their sounding intervals overlap in time. The resulting <strong>interval graph</strong> encodes all simultaneity conflicts. The <strong>chromatic number</strong> <span class=math-inline data-latex=\chi(G)></span> of this graph is the minimum number of voices (colors) needed so that no two simultaneously-sounding notes share a voice. The <strong>Perfect Graph Theorem</strong> (Lovász, 1972) guarantees that for interval graphs <span class=math-inline data-latex="\chi = \omega"></span> — the chromatic number equals the clique number, i.e., the maximum number of notes sounding at once. A single greedy pass along the time axis achieves this bound in linear time.</p>
+<p>When <span class=math-inline data-latex=\omega></span> exceeds the number of available performers, the theorem gives the precise cost of every forced deletion — turning an artistic choice into a quantifiable trade-off.</p>
 <blockquote>
 <p><em>中文:</em> &ldquo;完美图定理给了我们一个保证：对区间图，χ永远等于ω。不多不少。&rdquo;</p>
 </blockquote>
 <hr>
-<h2 id="prerequisites">Prerequisites</h2>
+<h2 id=prerequisites>Prerequisites</h2>
 <ul>
 <li>
-
-
-
-<a href="https://amath390.sibeliusp.com/episodes/ep03/" class="episode-ref-link">Graph Connectivity and Cut Vertices (EP03)</a>
-
- — basic graph vocabulary: degree, path, cycle, connectivity</li>
+<a href=https://amath390.sibeliusp.com/episodes/ep03/ class=episode-ref-link>Graph Connectivity and Cut Vertices (EP03)</a>
+— basic graph vocabulary: degree, path, cycle, connectivity</li>
 <li>
-
-
-
-<a href="https://amath390.sibeliusp.com/episodes/ep04/" class="episode-ref-link">All-Interval Rows and <span class="math-inline" data-latex="\mathbb{Z}_{12}"></span> (EP04)</a>
-
- — group-theoretic thinking about music structure</li>
+<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=episode-ref-link>All-Interval Rows and <span class=math-inline data-latex=\mathbb{Z}_{12}></span> (EP04)</a>
+— group-theoretic thinking about music structure</li>
 <li>
-
-
-
-<a href="https://amath390.sibeliusp.com/episodes/ep05/" class="episode-ref-link">Turán's Theorem (EP05)</a>
-
- — cliques, extremal graph density</li>
+<a href=https://amath390.sibeliusp.com/episodes/ep05/ class=episode-ref-link>Turán's Theorem (EP05)</a>
+— cliques, extremal graph density</li>
 </ul>
 <hr>
-<h2 id="definitions">Definitions</h2>
-
-
-<div class="definition-block" id="def-6.1">
-  <div class="block-label">
-    Def 6.1 (Proper Graph Coloring)
-  </div>
-  <div class="block-body"><p>A <strong>proper <span class="math-inline" data-latex="k"></span>-coloring</strong> of a graph <span class="math-inline" data-latex="G = (V,E)"></span> is a function <span class="math-inline" data-latex="c : V \to \{1,2,\ldots,k\}"></span> such that <span class="math-inline" data-latex="c(u) \ne c(v)"></span> whenever <span class="math-inline" data-latex="\{u,v\} \in E"></span>.</p>
-<p>The <strong>chromatic number</strong> <span class="math-inline" data-latex="\chi(G)"></span> is the smallest <span class="math-inline" data-latex="k"></span> for which a proper <span class="math-inline" data-latex="k"></span>-coloring exists.</p>
+<h2 id=definitions>Definitions</h2>
+<div class=definition-block id=def-6.1>
+<div class=block-label>
+Def 6.1 (Proper Graph Coloring)
+</div>
+<div class=block-body><p>A <strong>proper <span class=math-inline data-latex=k></span>-coloring</strong> of a graph <span class=math-inline data-latex="G = (V,E)"></span> is a function <span class=math-inline data-latex="c : V \to \{1,2,\ldots,k\}"></span> such that <span class=math-inline data-latex="c(u) \ne c(v)"></span> whenever <span class=math-inline data-latex="\{u,v\} \in E"></span>.</p>
+<p>The <strong>chromatic number</strong> <span class=math-inline data-latex=\chi(G)></span> is the smallest <span class=math-inline data-latex=k></span> for which a proper <span class=math-inline data-latex=k></span>-coloring exists.</p>
 </div>
 </div>
-
-
-
-<div class="definition-block" id="def-6.2">
-  <div class="block-label">
-    Def 6.2 (Clique Number)
-  </div>
-  <div class="block-body"><p>A <strong>clique</strong> in <span class="math-inline" data-latex="G"></span> is a set of vertices that are pairwise adjacent. The <strong>clique number</strong> <span class="math-inline" data-latex="\omega(G)"></span> is the size of the largest clique.</p>
-<p>Since any clique requires all its vertices to have distinct colors, <span class="math-inline" data-latex="\chi(G) \ge \omega(G)"></span> always.</p>
+<div class=definition-block id=def-6.2>
+<div class=block-label>
+Def 6.2 (Clique Number)
+</div>
+<div class=block-body><p>A <strong>clique</strong> in <span class=math-inline data-latex=G></span> is a set of vertices that are pairwise adjacent. The <strong>clique number</strong> <span class=math-inline data-latex=\omega(G)></span> is the size of the largest clique.</p>
+<p>Since any clique requires all its vertices to have distinct colors, <span class=math-inline data-latex="\chi(G) \ge \omega(G)"></span> always.</p>
 </div>
 </div>
-
-
-
-<div class="definition-block" id="def-6.3">
-  <div class="block-label">
-    Def 6.3 (Interval Graph)
-  </div>
-  <div class="block-body"><p>An <strong>interval graph</strong> <span class="math-inline" data-latex="G = (V,E)"></span> is constructed from a finite set of closed intervals <span class="math-inline" data-latex="\{[a_i, b_i]\}_{i=1}^n"></span> on the real line by:</p>
+<div class=definition-block id=def-6.3>
+<div class=block-label>
+Def 6.3 (Interval Graph)
+</div>
+<div class=block-body><p>An <strong>interval graph</strong> <span class=math-inline data-latex="G = (V,E)"></span> is constructed from a finite set of closed intervals <span class=math-inline data-latex="\{[a_i, b_i]\}_{i=1}^n"></span> on the real line by:</p>
 <ul>
-<li>setting <span class="math-inline" data-latex="V = \{1, 2, \ldots, n\}"></span> (one vertex per interval),</li>
-<li>connecting <span class="math-inline" data-latex="i"></span> and <span class="math-inline" data-latex="j"></span> with an edge iff <span class="math-inline" data-latex="[a_i, b_i] \cap [a_j, b_j] \ne \emptyset"></span> (intervals overlap).</li>
+<li>setting <span class=math-inline data-latex="V = \{1, 2, \ldots, n\}"></span> (one vertex per interval),</li>
+<li>connecting <span class=math-inline data-latex=i></span> and <span class=math-inline data-latex=j></span> with an edge iff <span class=math-inline data-latex="[a_i, b_i] \cap [a_j, b_j] \ne \emptyset"></span> (intervals overlap).</li>
 </ul>
-<p>In the musical application, each interval <span class="math-inline" data-latex="[a_i, b_i]"></span> represents the sounding duration of note <span class="math-inline" data-latex="i"></span>: onset <span class="math-inline" data-latex="a_i"></span>, release <span class="math-inline" data-latex="b_i"></span>.</p>
+<p>In the musical application, each interval <span class=math-inline data-latex="[a_i, b_i]"></span> represents the sounding duration of note <span class=math-inline data-latex=i></span>: onset <span class=math-inline data-latex=a_i></span>, release <span class=math-inline data-latex=b_i></span>.</p>
 </div>
 </div>
-
-
-
-<div class="definition-block" id="def-6.4">
-  <div class="block-label">
-    Def 6.4 (Perfect Graph)
-  </div>
-  <div class="block-body"><p>A graph <span class="math-inline" data-latex="G"></span> is <strong>perfect</strong> if for every induced subgraph <span class="math-inline" data-latex="H \subseteq G"></span>:</p>
-<div class="math-display" data-latex="\chi(H) = \omega(H)."></div>
-<p>Equivalently, <span class="math-inline" data-latex="G"></span> is perfect iff neither <span class="math-inline" data-latex="G"></span> nor its complement <span class="math-inline" data-latex="\bar{G}"></span> contains an odd cycle of length <span class="math-inline" data-latex="\ge 5"></span> as an induced subgraph (this is the content of the <strong>Strong Perfect Graph Theorem</strong>, Chudnovsky et al. 2006).</p>
+<div class=definition-block id=def-6.4>
+<div class=block-label>
+Def 6.4 (Perfect Graph)
+</div>
+<div class=block-body><p>A graph <span class=math-inline data-latex=G></span> is <strong>perfect</strong> if for every induced subgraph <span class=math-inline data-latex="H \subseteq G"></span>:
+<span class=math-display data-latex="\chi(H) = \omega(H)."></span></p>
+<p>Equivalently, <span class=math-inline data-latex=G></span> is perfect iff neither <span class=math-inline data-latex=G></span> nor its complement <span class=math-inline data-latex=\bar{G}></span> contains an odd cycle of length <span class=math-inline data-latex="\ge 5"></span> as an induced subgraph (this is the content of the <strong>Strong Perfect Graph Theorem</strong>, Chudnovsky et al. 2006).</p>
 </div>
 </div>
-
-
-
-<div class="definition-block" id="def-6.5">
-  <div class="block-label">
-    Def 6.5 (Chromatic Polynomial)
-  </div>
-  <div class="block-body"><p>The <strong>chromatic polynomial</strong> <span class="math-inline" data-latex="P(G, k)"></span> counts the number of proper <span class="math-inline" data-latex="k"></span>-colorings of <span class="math-inline" data-latex="G"></span>. It is a polynomial in <span class="math-inline" data-latex="k"></span> of degree <span class="math-inline" data-latex="|V|"></span>.</p>
+<div class=definition-block id=def-6.5>
+<div class=block-label>
+Def 6.5 (Chromatic Polynomial)
+</div>
+<div class=block-body><p>The <strong>chromatic polynomial</strong> <span class=math-inline data-latex="P(G, k)"></span> counts the number of proper <span class=math-inline data-latex=k></span>-colorings of <span class=math-inline data-latex=G></span>. It is a polynomial in <span class=math-inline data-latex=k></span> of degree <span class=math-inline data-latex=|V|></span>.</p>
 <p>Examples:</p>
 <ul>
-<li><span class="math-inline" data-latex="P(K_n, k) = k(k-1)(k-2)\cdots(k-n&#43;1)"></span> — must assign <span class="math-inline" data-latex="n"></span> distinct colors.</li>
-<li><span class="math-inline" data-latex="P(T_n, k) = k(k-1)^{n-1}"></span> — tree on <span class="math-inline" data-latex="n"></span> vertices; each new vertex has one neighbor constraint.</li>
-<li><span class="math-inline" data-latex="P(C_5, k) = (k-1)^5 &#43; (k-1)"></span> — the 5-cycle (odd cycle), which violates perfection: <span class="math-inline" data-latex="P(C_5, 2) = 0"></span> but <span class="math-inline" data-latex="\omega(C_5) = 2"></span>, confirming <span class="math-inline" data-latex="\chi(C_5) = 3 &gt; 2 = \omega(C_5)"></span>.</li>
+<li><span class=math-inline data-latex="P(K_n, k) = k(k-1)(k-2)\cdots(k-n+1)"></span> — must assign <span class=math-inline data-latex=n></span> distinct colors.</li>
+<li><span class=math-inline data-latex="P(T_n, k) = k(k-1)^{n-1}"></span> — tree on <span class=math-inline data-latex=n></span> vertices; each new vertex has one neighbor constraint.</li>
+<li><span class=math-inline data-latex="P(C_5, k) = (k-1)^5 + (k-1)"></span> — the 5-cycle (odd cycle), which violates perfection: <span class=math-inline data-latex="P(C_5, 2) = 0"></span> but <span class=math-inline data-latex="\omega(C_5) = 2"></span>, confirming <span class=math-inline data-latex="\chi(C_5) = 3 > 2 = \omega(C_5)"></span>.</li>
 </ul>
 </div>
 </div>
-
 <hr>
-<h2 id="main-theorems">Main Theorems</h2>
-
-
-<div class="theorem-block" id="theorem-6.1">
-  <div class="block-label">
-    Theorem 6.1 (Interval Graphs are Perfect)
-  </div>
-  <div class="block-body">Every interval graph is a perfect graph: <span class="math-inline" data-latex="\chi(G) = \omega(G)"></span> for any interval graph <span class="math-inline" data-latex="G"></span>.</div>
+<h2 id=main-theorems>Main Theorems</h2>
+<div class=theorem-block id=theorem-6.1>
+<div class=block-label>
+Theorem 6.1 (Interval Graphs are Perfect)
 </div>
-
-<div class="proof-block">
-  <div class="block-label">Proof.</div>
-  <div class="block-body"><p>We show that the greedy algorithm achieves <span class="math-inline" data-latex="\omega(G)"></span> colors, establishing <span class="math-inline" data-latex="\chi(G) \le \omega(G)"></span>. Since <span class="math-inline" data-latex="\chi \ge \omega"></span> always, equality follows.</p>
-<p><strong>Algorithm:</strong> Sort the <span class="math-inline" data-latex="n"></span> intervals by left endpoint: <span class="math-inline" data-latex="a_{\sigma(1)} \le a_{\sigma(2)} \le \cdots \le a_{\sigma(n)}"></span>. Process vertices in this order. When processing vertex <span class="math-inline" data-latex="v"></span> with interval <span class="math-inline" data-latex="[a_v, b_v]"></span>, assign the smallest color <span class="math-inline" data-latex="c \notin \{c(u) : u \text{ is a neighbor of } v \text{ already processed}\}"></span>.</p>
-<p><strong>Claim:</strong> The algorithm uses at most <span class="math-inline" data-latex="\omega(G)"></span> colors.</p>
-<p>At the moment vertex <span class="math-inline" data-latex="v"></span> is processed, the set of already-processed neighbors of <span class="math-inline" data-latex="v"></span> is exactly <span class="math-inline" data-latex="N_&lt;(v) = \{u : a_u \le a_v \text{ and } b_u \ge a_v\}"></span> — the intervals that started before <span class="math-inline" data-latex="v"></span> and are still sounding when <span class="math-inline" data-latex="v"></span> begins. Together with <span class="math-inline" data-latex="v"></span> itself, the set <span class="math-inline" data-latex="N_&lt;(v) \cup \{v\}"></span> is a clique (all pairwise overlapping, since they all contain <span class="math-inline" data-latex="a_v"></span> in their interiors). Therefore <span class="math-inline" data-latex="|N_&lt;(v) \cup \{v\}| \le \omega(G)"></span>.</p>
-<p>Since <span class="math-inline" data-latex="v"></span> needs a color different from at most <span class="math-inline" data-latex="|N_&lt;(v)| = \omega(G) - 1"></span> colors, there is always a color in <span class="math-inline" data-latex="\{1,\ldots,\omega(G)\}"></span> available. The algorithm never needs a <span class="math-inline" data-latex="(\omega(G)&#43;1)"></span>-th color. <span class="math-inline" data-latex="\square"></span></p>
-<p><strong>Why general graphs fail:</strong> The odd 5-cycle <span class="math-inline" data-latex="C_5"></span> has <span class="math-inline" data-latex="\omega = 2"></span> but <span class="math-inline" data-latex="\chi = 3"></span>. The greedy ordering can be bad (e.g., alternating vertices of <span class="math-inline" data-latex="C_5"></span>) and need a third color. But <span class="math-inline" data-latex="C_5"></span> cannot be an interval graph, because any five intervals containing a cyclic overlap pattern must contain a &ldquo;triangle&rdquo; (three mutually overlapping intervals) by the Helly property for intervals on the line: if pairwise intersections are nonempty, the total intersection is nonempty.</p>
+<div class=block-body>Every interval graph is a perfect graph: <span class=math-inline data-latex="\chi(G) = \omega(G)"></span> for any interval graph <span class=math-inline data-latex=G></span>.</div>
+</div>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><p>We show that the greedy algorithm achieves <span class=math-inline data-latex=\omega(G)></span> colors, establishing <span class=math-inline data-latex="\chi(G) \le \omega(G)"></span>. Since <span class=math-inline data-latex="\chi \ge \omega"></span> always, equality follows.</p>
+<p><strong>Algorithm:</strong> Sort the <span class=math-inline data-latex=n></span> intervals by left endpoint: <span class=math-inline data-latex="a_{\sigma(1)} \le a_{\sigma(2)} \le \cdots \le a_{\sigma(n)}"></span>. Process vertices in this order. When processing vertex <span class=math-inline data-latex=v></span> with interval <span class=math-inline data-latex="[a_v, b_v]"></span>, assign the smallest color <span class=math-inline data-latex="c \notin \{c(u) : u \text{ is a neighbor of } v \text{ already processed}\}"></span>.</p>
+<p><strong>Claim:</strong> The algorithm uses at most <span class=math-inline data-latex=\omega(G)></span> colors.</p>
+<p>At the moment vertex <span class=math-inline data-latex=v></span> is processed, the set of already-processed neighbors of <span class=math-inline data-latex=v></span> is exactly <span class=math-inline data-latex="N_<(v) = \{u : a_u \le a_v \text{ and } b_u \ge a_v\}"></span> — the intervals that started before <span class=math-inline data-latex=v></span> and are still sounding when <span class=math-inline data-latex=v></span> begins. Together with <span class=math-inline data-latex=v></span> itself, the set <span class=math-inline data-latex="N_<(v) \cup \{v\}"></span> is a clique (all pairwise overlapping, since they all contain <span class=math-inline data-latex=a_v></span> in their interiors). Therefore <span class=math-inline data-latex="|N_<(v) \cup \{v\}| \le \omega(G)"></span>.</p>
+<p>Since <span class=math-inline data-latex=v></span> needs a color different from at most <span class=math-inline data-latex="|N_<(v)| = \omega(G) - 1"></span> colors, there is always a color in <span class=math-inline data-latex=\{1,\ldots,\omega(G)\}></span> available. The algorithm never needs a <span class=math-inline data-latex=(\omega(G)+1)></span>-th color. <span class=math-inline data-latex=\square></span></p>
+<p><strong>Why general graphs fail:</strong> The odd 5-cycle <span class=math-inline data-latex=C_5></span> has <span class=math-inline data-latex="\omega = 2"></span> but <span class=math-inline data-latex="\chi = 3"></span>. The greedy ordering can be bad (e.g., alternating vertices of <span class=math-inline data-latex=C_5></span>) and need a third color. But <span class=math-inline data-latex=C_5></span> cannot be an interval graph, because any five intervals containing a cyclic overlap pattern must contain a &ldquo;triangle&rdquo; (three mutually overlapping intervals) by the Helly property for intervals on the line: if pairwise intersections are nonempty, the total intersection is nonempty.</p>
 </div>
 </div>
-
-
-
-<div class="theorem-block" id="theorem-6.2">
-  <div class="block-label">
-    Theorem 6.2 (Perfect Graph Theorem (Lovász, 1972))
-  </div>
-  <div class="block-body"><p>A graph <span class="math-inline" data-latex="G"></span> is perfect if and only if its complement <span class="math-inline" data-latex="\bar{G}"></span> is perfect.</p>
-<p>Equivalently (the <strong>Weak Perfect Graph Theorem</strong>): <span class="math-inline" data-latex="G"></span> is perfect iff it contains no odd cycle of length <span class="math-inline" data-latex="\ge 5"></span> as an induced subgraph, and neither does <span class="math-inline" data-latex="\bar{G}"></span>.</p>
+<div class=theorem-block id=theorem-6.2>
+<div class=block-label>
+Theorem 6.2 (Perfect Graph Theorem (Lovász, 1972))
+</div>
+<div class=block-body><p>A graph <span class=math-inline data-latex=G></span> is perfect if and only if its complement <span class=math-inline data-latex=\bar{G}></span> is perfect.</p>
+<p>Equivalently (the <strong>Weak Perfect Graph Theorem</strong>): <span class=math-inline data-latex=G></span> is perfect iff it contains no odd cycle of length <span class=math-inline data-latex="\ge 5"></span> as an induced subgraph, and neither does <span class=math-inline data-latex=\bar{G}></span>.</p>
 </div>
 </div>
-
-<div class="proof-block">
-  <div class="block-label">Proof.</div>
-  <div class="block-body"><p>The full proof is deep (Lovász&rsquo;s original 1972 proof uses a topological argument; the full Strong Perfect Graph Theorem by Chudnovsky, Robertson, Seymour, Thomas (2006) is a 150-page paper). We give the key idea for the weak version.</p>
-<p><strong>Necessity (<span class="math-inline" data-latex="\Rightarrow"></span>):</strong> An odd cycle <span class="math-inline" data-latex="C_{2k&#43;1}"></span> with <span class="math-inline" data-latex="k \ge 2"></span> has <span class="math-inline" data-latex="\omega = 2"></span> (no triangle since it is an odd cycle) but <span class="math-inline" data-latex="\chi = 3"></span> (it takes 3 colors to properly color any odd cycle). So it is not perfect.</p>
-<p><strong>Sufficiency (<span class="math-inline" data-latex="\Leftarrow"></span>) sketch (Lovász&rsquo;s approach):</strong> The key lemma is that any minimal non-perfect graph <span class="math-inline" data-latex="G"></span> must satisfy <span class="math-inline" data-latex="|V||E(\bar{G})| \ge \binom{|V|}{2} &#43; \alpha(G)\omega(G)"></span> where <span class="math-inline" data-latex="\alpha"></span> is the independence number. Lovász showed this forces the existence of an odd hole or odd antihole. The details require the theory of perfect graph structure theorems. <span class="math-inline" data-latex="\square"></span></p>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><p>The full proof is deep (Lovász&rsquo;s original 1972 proof uses a topological argument; the full Strong Perfect Graph Theorem by Chudnovsky, Robertson, Seymour, Thomas (2006) is a 150-page paper). We give the key idea for the weak version.</p>
+<p><strong>Necessity (<span class=math-inline data-latex=\Rightarrow></span>):</strong> An odd cycle <span class=math-inline data-latex=C_{2k+1}></span> with <span class=math-inline data-latex="k \ge 2"></span> has <span class=math-inline data-latex="\omega = 2"></span> (no triangle since it is an odd cycle) but <span class=math-inline data-latex="\chi = 3"></span> (it takes 3 colors to properly color any odd cycle). So it is not perfect.</p>
+<p><strong>Sufficiency (<span class=math-inline data-latex=\Leftarrow></span>) sketch (Lovász&rsquo;s approach):</strong> The key lemma is that any minimal non-perfect graph <span class=math-inline data-latex=G></span> must satisfy <span class=math-inline data-latex="|V||E(\bar{G})| \ge \binom{|V|}{2} + \alpha(G)\omega(G)"></span> where <span class=math-inline data-latex=\alpha></span> is the independence number. Lovász showed this forces the existence of an odd hole or odd antihole. The details require the theory of perfect graph structure theorems. <span class=math-inline data-latex=\square></span></p>
 </div>
 </div>
-
-
-
-<div class="theorem-block" id="theorem-6.3">
-  <div class="block-label">
-    Theorem 6.3 (Brooks&#39; Theorem)
-  </div>
-  <div class="block-body"><p>For any connected graph <span class="math-inline" data-latex="G"></span> that is neither a complete graph <span class="math-inline" data-latex="K_n"></span> nor an odd cycle <span class="math-inline" data-latex="C_{2k&#43;1}"></span>:</p>
-<div class="math-display" data-latex="\chi(G) \le \Delta(G)"></div>
-where <span class="math-inline" data-latex="\Delta(G)"></span> is the maximum degree.
-<p>(The bound <span class="math-inline" data-latex="\chi(G) \le \Delta(G) &#43; 1"></span> always holds by greedy coloring; Brooks' theorem improves this by 1 in all non-exceptional cases.)</p>
+<div class=theorem-block id=theorem-6.3>
+<div class=block-label>
+Theorem 6.3 (Brooks' Theorem)
+</div>
+<div class=block-body><p>For any connected graph <span class=math-inline data-latex=G></span> that is neither a complete graph <span class=math-inline data-latex=K_n></span> nor an odd cycle <span class=math-inline data-latex=C_{2k+1}></span>:
+<span class=math-display data-latex="\chi(G) \le \Delta(G)"></span>
+where <span class=math-inline data-latex=\Delta(G)></span> is the maximum degree.</p>
+<p>(The bound <span class=math-inline data-latex="\chi(G) \le \Delta(G) + 1"></span> always holds by greedy coloring; Brooks' theorem improves this by 1 in all non-exceptional cases.)</p>
 </div>
 </div>
-
-<div class="proof-block">
-  <div class="block-label">Proof.</div>
-  <div class="block-body"><p><strong>Greedy bound <span class="math-inline" data-latex="\chi \le \Delta &#43; 1"></span>:</strong> When the greedy algorithm processes a vertex <span class="math-inline" data-latex="v"></span>, it has at most <span class="math-inline" data-latex="\deg(v) \le \Delta"></span> neighbors already colored. At most <span class="math-inline" data-latex="\Delta"></span> colors are forbidden, so one of <span class="math-inline" data-latex="\{1, \ldots, \Delta&#43;1\}"></span> is always available.</p>
-<p><strong>Improvement to <span class="math-inline" data-latex="\Delta"></span> (sketch):</strong> The key step is to find a vertex ordering in which every vertex except the last has a neighbor later in the ordering. For a <span class="math-inline" data-latex="\Delta"></span>-regular connected non-complete graph, one shows (using a spanning tree rooted at a non-cut vertex) an ordering where each vertex has at most <span class="math-inline" data-latex="\Delta - 1"></span> earlier-colored neighbors, allowing greedy to use only <span class="math-inline" data-latex="\Delta"></span> colors. The odd cycle is exceptional because any <span class="math-inline" data-latex="\Delta = 2"></span> coloring attempt on <span class="math-inline" data-latex="C_{2k&#43;1}"></span> fails at the last step. <span class="math-inline" data-latex="\square"></span></p>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><p><strong>Greedy bound <span class=math-inline data-latex="\chi \le \Delta + 1"></span>:</strong> When the greedy algorithm processes a vertex <span class=math-inline data-latex=v></span>, it has at most <span class=math-inline data-latex="\deg(v) \le \Delta"></span> neighbors already colored. At most <span class=math-inline data-latex=\Delta></span> colors are forbidden, so one of <span class=math-inline data-latex="\{1, \ldots, \Delta+1\}"></span> is always available.</p>
+<p><strong>Improvement to <span class=math-inline data-latex=\Delta></span> (sketch):</strong> The key step is to find a vertex ordering in which every vertex except the last has a neighbor later in the ordering. For a <span class=math-inline data-latex=\Delta></span>-regular connected non-complete graph, one shows (using a spanning tree rooted at a non-cut vertex) an ordering where each vertex has at most <span class=math-inline data-latex="\Delta - 1"></span> earlier-colored neighbors, allowing greedy to use only <span class=math-inline data-latex=\Delta></span> colors. The odd cycle is exceptional because any <span class=math-inline data-latex="\Delta = 2"></span> coloring attempt on <span class=math-inline data-latex=C_{2k+1}></span> fails at the last step. <span class=math-inline data-latex=\square></span></p>
 </div>
 </div>
-
-
-
-<div class="proposition-block" id="prop-6.1">
-  <div class="block-label">
-    Prop 6.1 (Helly Property for Intervals)
-  </div>
-  <div class="block-body">Let <span class="math-inline" data-latex="\{[a_i, b_i]\}_{i=1}^n"></span> be a collection of intervals on the real line. If every two intervals intersect (pairwise intersection), then all intervals share a common point: <span class="math-inline" data-latex="\bigcap_{i=1}^n [a_i, b_i] \ne \emptyset"></span>.</div>
+<div class=proposition-block id=prop-6.1>
+<div class=block-label>
+Prop 6.1 (Helly Property for Intervals)
 </div>
-
-<div class="proof-block">
-  <div class="block-label">Proof.</div>
-  <div class="block-body"><p>Let <span class="math-inline" data-latex="p = \max_i a_i"></span> (rightmost left endpoint) and <span class="math-inline" data-latex="q = \min_i b_i"></span> (leftmost right endpoint). For the interval achieving <span class="math-inline" data-latex="p"></span>, say <span class="math-inline" data-latex="[a_k, b_k]"></span>, and the interval achieving <span class="math-inline" data-latex="q"></span>, say <span class="math-inline" data-latex="[a_l, b_l]"></span>: since these two intersect, <span class="math-inline" data-latex="a_k \le b_l"></span>, i.e., <span class="math-inline" data-latex="p \le q"></span>. Then the point <span class="math-inline" data-latex="p"></span> (or any point in <span class="math-inline" data-latex="[p,q]"></span>) belongs to every interval. <span class="math-inline" data-latex="\square"></span></p>
-<p>This property underlies the perfection of interval graphs: it prevents the formation of odd holes (chordless odd cycles of length <span class="math-inline" data-latex="\ge 5"></span>), since three pairwise-overlapping intervals always share a common time point, forming a triangle rather than a triangle-free cycle.</p>
+<div class=block-body>Let <span class=math-inline data-latex="\{[a_i, b_i]\}_{i=1}^n"></span> be a collection of intervals on the real line. If every two intervals intersect (pairwise intersection), then all intervals share a common point: <span class=math-inline data-latex="\bigcap_{i=1}^n [a_i, b_i] \ne \emptyset"></span>.</div>
+</div>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><p>Let <span class=math-inline data-latex="p = \max_i a_i"></span> (rightmost left endpoint) and <span class=math-inline data-latex="q = \min_i b_i"></span> (leftmost right endpoint). For the interval achieving <span class=math-inline data-latex=p></span>, say <span class=math-inline data-latex="[a_k, b_k]"></span>, and the interval achieving <span class=math-inline data-latex=q></span>, say <span class=math-inline data-latex="[a_l, b_l]"></span>: since these two intersect, <span class=math-inline data-latex="a_k \le b_l"></span>, i.e., <span class=math-inline data-latex="p \le q"></span>. Then the point <span class=math-inline data-latex=p></span> (or any point in <span class=math-inline data-latex=[p,q]></span>) belongs to every interval. <span class=math-inline data-latex=\square></span></p>
+<p>This property underlies the perfection of interval graphs: it prevents the formation of odd holes (chordless odd cycles of length <span class=math-inline data-latex="\ge 5"></span>), since three pairwise-overlapping intervals always share a common time point, forming a triangle rather than a triangle-free cycle.</p>
 </div>
 </div>
-
 <hr>
-<h2 id="musical-connection">Musical Connection</h2>
-<div class="music-block">
-  <div class="block-label">音乐联系</div>
-  <div class="block-body"><p><strong>Voice allocation as graph coloring</strong></p>
+<h2 id=musical-connection>Musical Connection</h2>
+<div class=music-block>
+<div class=block-label>音乐联系</div>
+<div class=block-body><p><strong>Voice allocation as graph coloring</strong></p>
 <p>Every polyphonic score implicitly defines an interval graph: notes are vertices, simultaneous notes are adjacent. The chromatic number is the minimum voice count. For Bach&rsquo;s C-major Fugue BWV 846:</p>
 <ul>
-<li>Maximum simultaneous voices: <span class="math-inline" data-latex="\omega = 4"></span></li>
-<li>Chromatic number (by perfection): <span class="math-inline" data-latex="\chi = 4"></span></li>
+<li>Maximum simultaneous voices: <span class=math-inline data-latex="\omega = 4"></span></li>
+<li>Chromatic number (by perfection): <span class=math-inline data-latex="\chi = 4"></span></li>
 <li>Bach&rsquo;s actual voices: 4 — exactly matching the theoretical minimum</li>
 </ul>
 <p>No voice is redundant; no voice can be removed without a collision. The theorem <em>proves</em> that Bach&rsquo;s four-voice writing is tight.</p>
 <p>For Beethoven&rsquo;s Fifth Symphony, fourth movement:</p>
 <ul>
-<li>After collapsing octave doublings, <span class="math-inline" data-latex="\omega &gt; 10"></span> at the climax</li>
+<li>After collapsing octave doublings, <span class=math-inline data-latex="\omega > 10"></span> at the climax</li>
 <li>Two hands give at most 10 simultaneous notes</li>
 <li>The theorem guarantees the reduction is <em>lossy by necessity</em>, not by artistic choice</li>
 </ul>
 <p><strong>Liszt&rsquo;s strategy (1865) as high-degree-first deletion</strong></p>
-<p>When <span class="math-inline" data-latex="\omega &gt; 10"></span>, Liszt retained the outer voices (melody and bass) and deleted middle-register doublings. In graph-theoretic terms: middle-register notes have the highest degree (most overlaps with other notes), so deleting them disrupts the fewest colorings. This is equivalent to a <strong>maximum independent set</strong> heuristic on the conflict subgraph — preserve as many non-conflicting notes as possible.</p>
+<p>When <span class=math-inline data-latex="\omega > 10"></span>, Liszt retained the outer voices (melody and bass) and deleted middle-register doublings. In graph-theoretic terms: middle-register notes have the highest degree (most overlaps with other notes), so deleting them disrupts the fewest colorings. This is equivalent to a <strong>maximum independent set</strong> heuristic on the conflict subgraph — preserve as many non-conflicting notes as possible.</p>
 <p><strong>Register allocation in compilers (Chaitin, 1982)</strong></p>
-<p>IBM&rsquo;s Gregory Chaitin recognized that assigning variables to CPU registers is exactly graph coloring: variables are vertices, two variables are adjacent if they are <em>live</em> simultaneously (overlap in program execution time), and registers are colors. The variable liveness graph is an interval graph (live ranges are intervals of program time), so <span class="math-inline" data-latex="\chi = \omega"></span> and greedy allocation is optimal when registers suffice. When registers are insufficient (<span class="math-inline" data-latex="\omega &gt; k"></span> registers available), some variables must &ldquo;spill&rdquo; to memory. Chaitin&rsquo;s heuristic: spill the variable with the highest degree (most conflicts) — the same principle as Liszt deleting the most-overlapping middle voices.</p>
+<p>IBM&rsquo;s Gregory Chaitin recognized that assigning variables to CPU registers is exactly graph coloring: variables are vertices, two variables are adjacent if they are <em>live</em> simultaneously (overlap in program execution time), and registers are colors. The variable liveness graph is an interval graph (live ranges are intervals of program time), so <span class=math-inline data-latex="\chi = \omega"></span> and greedy allocation is optimal when registers suffice. When registers are insufficient (<span class=math-inline data-latex="\omega > k"></span> registers available), some variables must &ldquo;spill&rdquo; to memory. Chaitin&rsquo;s heuristic: spill the variable with the highest degree (most conflicts) — the same principle as Liszt deleting the most-overlapping middle voices.</p>
 <p>Music and compiler design, separated by 117 years, converge on the same graph-coloring trade-off.</p>
 </div>
 </div>
-
 <hr>
-<h2 id="limits-and-open-questions">Limits and Open Questions</h2>
+<h2 id=limits-and-open-questions>Limits and Open Questions</h2>
 <ol>
 <li>
-<p><strong>The Four Color Theorem.</strong> For <em>planar</em> graphs (graphs drawable without edge crossings), <span class="math-inline" data-latex="\chi \le 4"></span>. Proved by Appel and Haken (1976) using computer-assisted case analysis — the first major theorem proved by computer. Musical planar graphs arise when voice crossings are forbidden (a common constraint in choral writing).</p>
+<p><strong>The Four Color Theorem.</strong> For <em>planar</em> graphs (graphs drawable without edge crossings), <span class=math-inline data-latex="\chi \le 4"></span>. Proved by Appel and Haken (1976) using computer-assisted case analysis — the first major theorem proved by computer. Musical planar graphs arise when voice crossings are forbidden (a common constraint in choral writing).</p>
 </li>
 <li>
 <p><strong>Kempe chains and the failed 1879 proof.</strong> Alfred Kempe published a purported proof of the four color theorem in 1879. His key idea was &ldquo;Kempe chains&rdquo; — maximal connected subgraphs alternating between two colors. In 1890, Percy Heawood found Kempe&rsquo;s proof was flawed. Kempe chains are still used in graph coloring algorithms; the flaw only appears in a subtle case with five-colored maps.</p>
 </li>
 <li>
-<p><strong>Chromatic polynomial complexity.</strong> Computing <span class="math-inline" data-latex="P(G, k)"></span> for general <span class="math-inline" data-latex="G"></span> is <span class="math-inline" data-latex="\#\mathbf{P}"></span>-hard (harder than NP), but for interval graphs it can be computed in polynomial time due to the perfect structure.</p>
+<p><strong>Chromatic polynomial complexity.</strong> Computing <span class=math-inline data-latex="P(G, k)"></span> for general <span class=math-inline data-latex=G></span> is <span class=math-inline data-latex=\#\mathbf{P}></span>-hard (harder than NP), but for interval graphs it can be computed in polynomial time due to the perfect structure.</p>
 </li>
 <li>
 <p><strong>Tonal pitch space vs. pitch height.</strong> The interval graph model treats pitch height as a continuous real variable. But Western tonal harmony groups notes into equivalence classes (e.g., C4 and C5 are &ldquo;the same harmony&rdquo;). A richer model uses the pitch helix (introduced in EP08) and asks about coloring in that quotient space.</p>
@@ -1035,13 +362,13 @@ where <span class="math-inline" data-latex="\Delta(G)"></span> is the maximum de
 </li>
 </ol>
 <hr>
-<h2 id="academic-references">Academic References</h2>
+<h2 id=academic-references>Academic References</h2>
 <ol>
 <li>
 <p>Lovász, L. (1972). Normal hypergraphs and the perfect graph conjecture. <em>Discrete Mathematics</em>, 2(3), 253–267.</p>
 </li>
 <li>
-<p>Chudnovsky, M., Robertson, N., Seymour, P., &amp; Thomas, R. (2006). The strong perfect graph theorem. <em>Annals of Mathematics</em>, 164(1), 51–229.</p>
+<p>Chudnovsky, M., Robertson, N., Seymour, P., & Thomas, R. (2006). The strong perfect graph theorem. <em>Annals of Mathematics</em>, 164(1), 51–229.</p>
 </li>
 <li>
 <p>Golumbic, M. C. (2004). <em>Algorithmic Graph Theory and Perfect Graphs</em> (2nd ed.). Elsevier. (The standard reference on interval graphs and perfect graphs.)</p>
@@ -1053,7 +380,7 @@ where <span class="math-inline" data-latex="\Delta(G)"></span> is the maximum de
 <p>Chaitin, G. J. (1982). Register allocation and spilling via graph coloring. <em>ACM SIGPLAN Notices</em>, 17(6), 98–105.</p>
 </li>
 <li>
-<p>Appel, K., &amp; Haken, W. (1977). Every planar map is four colorable. <em>Bulletin of the American Mathematical Society</em>, 82(5), 711–712.</p>
+<p>Appel, K., & Haken, W. (1977). Every planar map is four colorable. <em>Bulletin of the American Mathematical Society</em>, 82(5), 711–712.</p>
 </li>
 <li>
 <p>Tymoczko, D. (2011). <em>A Geometry of Music</em>. Oxford University Press. Ch. 3 (Voice leading as motion in chord space).</p>
@@ -1062,235 +389,48 @@ where <span class="math-inline" data-latex="\Delta(G)"></span> is the maximum de
 <p>West, D. B. (2001). <em>Introduction to Graph Theory</em> (2nd ed.). Prentice Hall. Ch. 5 (Graph coloring).</p>
 </li>
 </ol>
-
-    </div>
-
-    
-    <nav class="ep-nav">
-      
-      
-      
-      
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-      
-      <a href="https://amath390.sibeliusp.com/episodes/ep05/" class="ep-nav-prev">
-        ← EP05: Turán&#39;s Theorem and Counterpoint
-      </a>
-      
-      
-      <a href="https://amath390.sibeliusp.com/episodes/ep07/" class="ep-nav-next">
-        EP07: Information Entropy and All-Interval Rows →
-      </a>
-      
-    </nav>
-  </article>
-
-  
-  
-  
-  <aside class="ep-toc-aside">
-    <div class="ep-toc-sticky">
-      <div class="ep-toc-label">本页目录</div>
-      <nav id="TableOfContents">
-  <ul>
-    <li><a href="#overview">Overview</a></li>
-    <li><a href="#prerequisites">Prerequisites</a></li>
-    <li><a href="#definitions">Definitions</a></li>
-    <li><a href="#main-theorems">Main Theorems</a></li>
-    <li><a href="#musical-connection">Musical Connection</a></li>
-    <li><a href="#limits-and-open-questions">Limits and Open Questions</a></li>
-    <li><a href="#academic-references">Academic References</a></li>
-  </ul>
-</nav>
-    </div>
-  </aside>
-  
 </div>
-
-      <footer class="site-footer">
-  <div class="footer-content">
-    <a href="https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f" target="_blank" rel="noopener" class="footer-avatar-link">
-      <img src="/images/avatar.png" alt="Sibelius P." class="footer-avatar">
-    </a>
-    <div class="footer-text">
-      <span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
-      <span class="footer-sep">·</span>
-      <a href="https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f" target="_blank" rel="noopener">小红书</a>
-      <span class="footer-sep">·</span>
-      <span>Built with <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> + KaTeX</span>
-    </div>
-  </div>
+<nav class=ep-nav>
+<a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-nav-prev>
+← EP05: Turán's Theorem and Counterpoint
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-nav-next>
+EP07: Information Entropy and All-Interval Rows →
+</a>
+</nav>
+</article>
+<aside class=ep-toc-aside>
+<div class=ep-toc-sticky>
+<div class=ep-toc-label>本页目录</div>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#overview>Overview</a></li>
+<li><a href=#prerequisites>Prerequisites</a></li>
+<li><a href=#definitions>Definitions</a></li>
+<li><a href=#main-theorems>Main Theorems</a></li>
+<li><a href=#musical-connection>Musical Connection</a></li>
+<li><a href=#limits-and-open-questions>Limits and Open Questions</a></li>
+<li><a href=#academic-references>Academic References</a></li>
+</ul>
+</nav>
+</div>
+</aside>
+</div>
+<footer class=site-footer>
+<div class=footer-content>
+<a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link>
+<img src=/images/avatar.png alt="Sibelius P." class=footer-avatar>
+</a>
+<div class=footer-text>
+<span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
+<span class=footer-sep>·</span>
+<a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener>小红书</a>
+<span class=footer-sep>·</span>
+<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span>
+</div>
+</div>
 </footer>
-
-    </main>
-  </div>
+</main>
+</div>
 </body>
 </html>

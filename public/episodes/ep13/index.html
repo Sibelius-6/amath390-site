@@ -1,825 +1,192 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
+<!doctype html><html lang=zh-cn>
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
 <title>EP13: Polyrhythm and Rhythm-Pitch Duality | AMATH 390 数学与音乐</title>
-<meta name="description" content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('[data-latex]').forEach(function(el) {
-    try {
-      katex.render(el.getAttribute('data-latex'), el, {
-        displayMode: el.classList.contains('math-display'),
-        throwOnError: false
-      });
-    } catch(e) { console.warn('KaTeX:', e.message, el); }
-  });
-});
-</script>
-
-
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
-
-<link rel="stylesheet" href="/css/amath390.css">
-
+<meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script>
+<script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('[data-latex]').forEach(function(a){try{katex.render(a.getAttribute('data-latex'),a,{displayMode:a.classList.contains('math-display'),throwOnError:!1})}catch(b){console.warn('KaTeX:',b.message,a)}})})</script>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16.png>
+<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+<link rel=stylesheet href=/css/amath390.css>
 </head>
 <body>
-  <div class="layout-wrapper">
-    
-
-
-<nav class="sidebar">
-  <div class="sidebar-header">
-    <a href="/" class="sidebar-title">AMATH 390</a>
-    <div class="sidebar-subtitle">数学与音乐</div>
-  </div>
-
-  
-
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">数学基础篇</div>
-        
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep01/"
-               class="ep-link">
-              <span class="ep-num">01</span>
-              <span class="ep-title">Chord Space and the Torus</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep02/"
-               class="ep-link">
-              <span class="ep-num">02</span>
-              <span class="ep-title">String Vibration and the Wave Equation</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep03/"
-               class="ep-link">
-              <span class="ep-num">03</span>
-              <span class="ep-title">Bach and Graph Connectivity</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep04/"
-               class="ep-link">
-              <span class="ep-num">04</span>
-              <span class="ep-title">All-Interval Rows and ℤ₁₂</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep05/"
-               class="ep-link">
-              <span class="ep-num">05</span>
-              <span class="ep-title">Turán&#39;s Theorem and Counterpoint</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep06/"
-               class="ep-link">
-              <span class="ep-num">06</span>
-              <span class="ep-title">Graph Coloring and Voice Assignment</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep07/"
-               class="ep-link">
-              <span class="ep-num">07</span>
-              <span class="ep-title">Information Entropy and All-Interval Rows</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep08/"
-               class="ep-link">
-              <span class="ep-num">08</span>
-              <span class="ep-title">Shepard Tones and the Tritone Paradox</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep09/"
-               class="ep-link">
-              <span class="ep-num">09</span>
-              <span class="ep-title">Combination Tones and Nonlinear Acoustics</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">Jacob Collier 系列</div>
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep10/"
-               class="ep-link">
-              <span class="ep-num">10</span>
-              <span class="ep-title">Negative Harmony and the Dihedral Group D₁₂</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep11/"
-               class="ep-link">
-              <span class="ep-num">11</span>
-              <span class="ep-title">Comma Drift and the Impossibility of Perfect Tuning</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep12/"
-               class="ep-link">
-              <span class="ep-num">12</span>
-              <span class="ep-title">The Circle of Fifths as a Folded Spiral</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep13/"
-               class="ep-link active">
-              <span class="ep-num">13</span>
-              <span class="ep-title">Polyrhythm and Rhythm-Pitch Duality</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">拓扑数学专篇</div>
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep14/"
-               class="ep-link">
-              <span class="ep-num">14</span>
-              <span class="ep-title">Tonnetz Hodge Duality</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">歌剧系列</div>
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep15/"
-               class="ep-link">
-              <span class="ep-num">15</span>
-              <span class="ep-title">Opera Acoustics and the Singer&#39;s Formant</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep16/"
-               class="ep-link">
-              <span class="ep-num">16</span>
-              <span class="ep-title">Rossini&#39;s Code — Budden, Gossett, and the Convention System</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep17/"
-               class="ep-link">
-              <span class="ep-num">17</span>
-              <span class="ep-title">Leitmotif Networks — Wagner&#39;s Ring Cycle</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-
-  <div class="sidebar-footer">
-    <a href="/theorems/">定理索引</a>
-    <a href="/domains/">数学领域</a>
-    <a href="/about/">关于</a>
-  </div>
+<div class=layout-wrapper>
+<nav class=sidebar>
+<div class=sidebar-header>
+<a href=/ class=sidebar-title>AMATH 390</a>
+<div class=sidebar-subtitle>数学与音乐</div>
+</div>
+<div class=arc-group>
+<div class=arc-label>数学基础篇</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link>
+<span class=ep-num>01</span>
+<span class=ep-title>Chord Space and the Torus</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep02/ class=ep-link>
+<span class=ep-num>02</span>
+<span class=ep-title>String Vibration and the Wave Equation</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link>
+<span class=ep-num>03</span>
+<span class=ep-title>Bach and Graph Connectivity</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link>
+<span class=ep-num>04</span>
+<span class=ep-title>All-Interval Rows and ℤ₁₂</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link>
+<span class=ep-num>05</span>
+<span class=ep-title>Turán's Theorem and Counterpoint</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-link>
+<span class=ep-num>06</span>
+<span class=ep-title>Graph Coloring and Voice Assignment</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-link>
+<span class=ep-num>07</span>
+<span class=ep-title>Information Entropy and All-Interval Rows</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-link>
+<span class=ep-num>08</span>
+<span class=ep-title>Shepard Tones and the Tritone Paradox</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link>
+<span class=ep-num>09</span>
+<span class=ep-title>Combination Tones and Nonlinear Acoustics</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>Jacob Collier 系列</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep10/ class=ep-link>
+<span class=ep-num>10</span>
+<span class=ep-title>Negative Harmony and the Dihedral Group D₁₂</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link>
+<span class=ep-num>11</span>
+<span class=ep-title>Comma Drift and the Impossibility of Perfect Tuning</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep12/ class=ep-link>
+<span class=ep-num>12</span>
+<span class=ep-title>The Circle of Fifths as a Folded Spiral</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep13/ class="ep-link active">
+<span class=ep-num>13</span>
+<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>拓扑数学专篇</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-link>
+<span class=ep-num>14</span>
+<span class=ep-title>Tonnetz Hodge Duality</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>歌剧系列</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-link>
+<span class=ep-num>15</span>
+<span class=ep-title>Opera Acoustics and the Singer's Formant</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link>
+<span class=ep-num>16</span>
+<span class=ep-title>Rossini's Code — Budden, Gossett, and the Convention System</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-link>
+<span class=ep-num>17</span>
+<span class=ep-title>Leitmotif Networks — Wagner's Ring Cycle</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-link>
+<span class=ep-num>18</span>
+<span class=ep-title>Game Theory in Operatic Duets</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link>
+<span class=ep-num>19</span>
+<span class=ep-title>Vibrato as FM Synthesis</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-link>
+<span class=ep-num>20</span>
+<span class=ep-title>Character Interaction Networks in Opera</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>AI 音乐三部曲</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-link>
+<span class=ep-num>21</span>
+<span class=ep-title>From Markov to Diffusion — Sixty Years of AI Composition</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-link>
+<span class=ep-num>22</span>
+<span class=ep-title>How AI Writes Music — EnCodec and RVQ</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-link>
+<span class=ep-num>23</span>
+<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span>
+</a>
+</div>
+<div class=sidebar-footer>
+<a href=/theorems/>定理索引</a>
+<a href=/domains/>数学领域</a>
+<a href=/about/>关于</a>
+</div>
 </nav>
-
-    <main class="main-content">
-      
-
-
-
-<div class="episode-layout">
-  <article class="episode-page">
-    <header class="episode-header">
-  <div class="ep-badge">EP13</div>
-  <h1 class="ep-main-title">EP13: Polyrhythm and Rhythm-Pitch Duality</h1>
-  <div class="ep-subtitle">LCM, GCD, and the Continuum from Rhythm to Harmony</div>
-
-  <div class="ep-meta">
-    
-    <span class="meta-item">
-      <span class="meta-icon">▶</span> 6:55
-    </span>
-    
-    
-    <span class="meta-item domains">
-      <span class="domain-chip">Number Theory</span><span class="domain-chip">Acoustics/Perception</span>
-    </span>
-    
-  </div>
+<main class=main-content>
+<div class=episode-layout>
+<article class=episode-page>
+<header class=episode-header>
+<div class=ep-badge>EP13</div>
+<h1 class=ep-main-title>EP13: Polyrhythm and Rhythm-Pitch Duality</h1>
+<div class=ep-subtitle>LCM, GCD, and the Continuum from Rhythm to Harmony</div>
+<div class=ep-meta>
+<span class=meta-item>
+<span class=meta-icon>▶</span> 6:55
+</span>
+<span class="meta-item domains">
+<span class=domain-chip>Number Theory</span><span class=domain-chip>Acoustics/Perception</span>
+</span>
+</div>
 </header>
-
-    
-
-
-<div class="cross-refs">
-  <h3 class="cross-refs-title">前置知识</h3>
-  <div class="ref-cards">
-    
-      
-      
-      
-      
-        <a href="https://amath390.sibeliusp.com/episodes/ep09/" class="ref-card callback">
-          <span class="ref-ep">EP09</span>
-          <span class="ref-title">Combination Tones and Nonlinear Acoustics</span>
-        </a>
-      
-    
-      
-      
-      
-      
-        <a href="https://amath390.sibeliusp.com/episodes/ep11/" class="ref-card callback">
-          <span class="ref-ep">EP11</span>
-          <span class="ref-title">Comma Drift and the Impossibility of Perfect Tuning</span>
-        </a>
-      
-    
-      
-      
-      
-      
-        <a href="https://amath390.sibeliusp.com/episodes/ep12/" class="ref-card callback">
-          <span class="ref-ep">EP12</span>
-          <span class="ref-title">The Circle of Fifths as a Folded Spiral</span>
-        </a>
-      
-    
-  </div>
+<div class=cross-refs>
+<h3 class=cross-refs-title>前置知识</h3>
+<div class=ref-cards>
+<a href=https://amath390.sibeliusp.com/episodes/ep09/ class="ref-card callback">
+<span class=ref-ep>EP09</span>
+<span class=ref-title>Combination Tones and Nonlinear Acoustics</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep11/ class="ref-card callback">
+<span class=ref-ep>EP11</span>
+<span class=ref-title>Comma Drift and the Impossibility of Perfect Tuning</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep12/ class="ref-card callback">
+<span class=ref-ep>EP12</span>
+<span class=ref-title>The Circle of Fifths as a Folded Spiral</span>
+</a>
 </div>
-
-
-
-
-
-
-
-
-    
-<div class="xhs-section">
-  <div class="xhs-section-header">
-    <span class="xhs-logo-badge">小红书</span>
-    <span class="xhs-section-title">Watch on 小红书</span>
-  </div>
-  <div class="xhs-cards">
-    
-    <a href="https://www.xiaohongshu.com/discovery/item/69975a0c000000000a031b2e?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABXqV7Kny044IgKKVXQGWtmGBt782BuOrNA7wsh6DJAxA=&amp;xsec_source=pc_share" target="_blank" rel="noopener" class="xhs-card">
-      <div class="xhs-card-inner">
-        <div class="xhs-card-icon">▶</div>
-        <div class="xhs-card-text">
-          <div class="xhs-card-title">把节奏越打越快，和弦出来了？</div>
-          <div class="xhs-card-sub">xiaohongshu.com</div>
-        </div>
-        <div class="xhs-card-arrow">→</div>
-      </div>
-    </a>
-    
-  </div>
 </div>
-
-
-
-    <div class="episode-content content">
-      <h2 id="overview">Overview</h2>
-<p>This is Episode 4 of 4 in the Jacob Collier series — the finale of the <span class="math-inline" data-latex="\mathbb{Z}_{12}"></span> arc.</p>
-<p>Jacob Collier&rsquo;s mastery of both rhythm and harmony looks like two separate gifts. This episode argues it is one: the ability to perceive integer ratios across all time scales. A polyrhythm of <span class="math-inline" data-latex="2:3"></span> and a perfect fifth are mathematically identical — the ratio <span class="math-inline" data-latex="2:3"></span> — separated only by a perceptual threshold near 20 Hz.</p>
+<div class=xhs-section>
+<div class=xhs-section-header>
+<span class=xhs-logo-badge>小红书</span>
+<span class=xhs-section-title>Watch on 小红书</span>
+</div>
+<div class=xhs-cards>
+<a href="https://www.xiaohongshu.com/discovery/item/69975a0c000000000a031b2e?source=webshare&xhsshare=pc_web&xsec_token=ABXqV7Kny044IgKKVXQGWtmGBt782BuOrNA7wsh6DJAxA=&xsec_source=pc_share" target=_blank rel=noopener class=xhs-card>
+<div class=xhs-card-inner>
+<div class=xhs-card-icon>▶</div>
+<div class=xhs-card-text>
+<div class=xhs-card-title>把节奏越打越快，和弦出来了？</div>
+<div class=xhs-card-sub>xiaohongshu.com</div>
+</div>
+<div class=xhs-card-arrow>→</div>
+</div>
+</a>
+</div>
+</div>
+<div class="episode-content content">
+<h2 id=overview>Overview</h2>
+<p>This is Episode 4 of 4 in the Jacob Collier series — the finale of the <span class=math-inline data-latex=\mathbb{Z}_{12}></span> arc.</p>
+<p>Jacob Collier&rsquo;s mastery of both rhythm and harmony looks like two separate gifts. This episode argues it is one: the ability to perceive integer ratios across all time scales. A polyrhythm of <span class=math-inline data-latex=2:3></span> and a perfect fifth are mathematically identical — the ratio <span class=math-inline data-latex=2:3></span> — separated only by a perceptual threshold near 20 Hz.</p>
 <blockquote>
 <p><em>中文:</em> &ldquo;节奏和和声，是同一种数学在不同时间尺度上的表达。&rdquo;</p>
 </blockquote>
@@ -827,205 +194,164 @@ document.addEventListener('DOMContentLoaded', function() {
 <ol>
 <li>LCM governs the period of any polyrhythm.</li>
 <li>GCD governs irreducibility and structural richness — the same theorem used in EP12 to generate the circle of fifths.</li>
-<li>A <span class="math-inline" data-latex="2:3"></span> rhythm accelerated past ~20 Hz becomes a perfect fifth — the perceptual boundary is not a mathematical one.</li>
+<li>A <span class=math-inline data-latex=2:3></span> rhythm accelerated past ~20 Hz becomes a perfect fifth — the perceptual boundary is not a mathematical one.</li>
 </ol>
 <hr>
-<h2 id="prerequisites">Prerequisites</h2>
+<h2 id=prerequisites>Prerequisites</h2>
 <ul>
 <li>
-
-
-
-<a href="https://amath390.sibeliusp.com/episodes/ep09/" class="episode-ref-link">Combination Tones and Nonlinearity (EP09)</a>
-
- — frequency ratios and perceived intervals</li>
+<a href=https://amath390.sibeliusp.com/episodes/ep09/ class=episode-ref-link>Combination Tones and Nonlinearity (EP09)</a>
+— frequency ratios and perceived intervals</li>
 <li>
-
-
-
-<a href="https://amath390.sibeliusp.com/episodes/ep11/" class="episode-ref-link">Tuning Systems and Irrational Numbers (EP11)</a>
-
- — <span class="math-inline" data-latex="\log_2 3"></span> is irrational; the Pythagorean comma</li>
+<a href=https://amath390.sibeliusp.com/episodes/ep11/ class=episode-ref-link>Tuning Systems and Irrational Numbers (EP11)</a>
+— <span class=math-inline data-latex="\log_2 3"></span> is irrational; the Pythagorean comma</li>
 <li>
-
-
-
-<a href="https://amath390.sibeliusp.com/episodes/ep12/" class="episode-ref-link">The Circle of Fifths as a Generator (EP12)</a>
-
- — <span class="math-inline" data-latex="\gcd(7, 12) = 1"></span> generates all 12 pitch classes</li>
+<a href=https://amath390.sibeliusp.com/episodes/ep12/ class=episode-ref-link>The Circle of Fifths as a Generator (EP12)</a>
+— <span class=math-inline data-latex="\gcd(7, 12) = 1"></span> generates all 12 pitch classes</li>
 </ul>
 <hr>
-<h2 id="definitions">Definitions</h2>
-
-
-<div class="definition-block" id="definition-13.1">
-  <div class="block-label">
-    Definition 13.1 (Polyrhythm)
-  </div>
-  <div class="block-body"><p>A <strong>polyrhythm</strong> <span class="math-inline" data-latex="m:n"></span> is the simultaneous sounding of <span class="math-inline" data-latex="m"></span> beats against <span class="math-inline" data-latex="n"></span> beats within the same time span <span class="math-inline" data-latex="T"></span>. The beat durations are <span class="math-inline" data-latex="T/m"></span> and <span class="math-inline" data-latex="T/n"></span> respectively. The two sequences share the same start and end point but divide the interval differently.</p>
+<h2 id=definitions>Definitions</h2>
+<div class=definition-block id=definition-13.1>
+<div class=block-label>
+Definition 13.1 (Polyrhythm)
+</div>
+<div class=block-body><p>A <strong>polyrhythm</strong> <span class=math-inline data-latex=m:n></span> is the simultaneous sounding of <span class=math-inline data-latex=m></span> beats against <span class=math-inline data-latex=n></span> beats within the same time span <span class=math-inline data-latex=T></span>. The beat durations are <span class=math-inline data-latex=T/m></span> and <span class=math-inline data-latex=T/n></span> respectively. The two sequences share the same start and end point but divide the interval differently.</p>
 <p>Special cases:</p>
 <ul>
-<li><span class="math-inline" data-latex="2:3"></span> — <strong>hemiola</strong>: two against three; the most common polyrhythm in Western art music.</li>
-<li><span class="math-inline" data-latex="3:4"></span>, <span class="math-inline" data-latex="4:5"></span>, <span class="math-inline" data-latex="3:2:4:5:6"></span> — increasingly complex combinations.</li>
+<li><span class=math-inline data-latex=2:3></span> — <strong>hemiola</strong>: two against three; the most common polyrhythm in Western art music.</li>
+<li><span class=math-inline data-latex=3:4></span>, <span class=math-inline data-latex=4:5></span>, <span class=math-inline data-latex=3:2:4:5:6></span> — increasingly complex combinations.</li>
 </ul>
 </div>
 </div>
-
-
-
-<div class="definition-block" id="definition-13.2">
-  <div class="block-label">
-    Definition 13.2 (Rhythmic LCM Grid)
-  </div>
-  <div class="block-body"><p>Given a polyrhythm <span class="math-inline" data-latex="m:n"></span>, the <strong>common grid</strong> is the finest uniform subdivision that contains all beat onsets of both rhythmic streams. The number of grid cells per span <span class="math-inline" data-latex="T"></span> is <span class="math-inline" data-latex="\text{lcm}(m, n)"></span>.</p>
-<p>More generally, for a <span class="math-inline" data-latex="k"></span>-layer polyrhythm with layers <span class="math-inline" data-latex="m_1, m_2, \ldots, m_k"></span>, the common grid has <span class="math-inline" data-latex="\text{lcm}(m_1, \ldots, m_k)"></span> subdivisions.</p>
+<div class=definition-block id=definition-13.2>
+<div class=block-label>
+Definition 13.2 (Rhythmic LCM Grid)
+</div>
+<div class=block-body><p>Given a polyrhythm <span class=math-inline data-latex=m:n></span>, the <strong>common grid</strong> is the finest uniform subdivision that contains all beat onsets of both rhythmic streams. The number of grid cells per span <span class=math-inline data-latex=T></span> is <span class=math-inline data-latex="\text{lcm}(m, n)"></span>.</p>
+<p>More generally, for a <span class=math-inline data-latex=k></span>-layer polyrhythm with layers <span class=math-inline data-latex="m_1, m_2, \ldots, m_k"></span>, the common grid has <span class=math-inline data-latex="\text{lcm}(m_1, \ldots, m_k)"></span> subdivisions.</p>
 </div>
 </div>
-
-
-
-<div class="definition-block" id="definition-13.3">
-  <div class="block-label">
-    Definition 13.3 (Rhythm-Pitch Threshold)
-  </div>
-  <div class="block-body"><p>The <strong>rhythm-pitch threshold</strong> is the critical repetition rate, approximately 20 Hz (individual variation: 15–30 Hz), below which the auditory system perceives a periodic pulse as a <strong>rhythm</strong> (individual events are counted), and above which it perceives the pulse as a <strong>pitch</strong> (a continuous tone at that frequency).</p>
-<p>This threshold is a property of auditory processing, not of the signal itself. The mathematical structure — a periodic sequence with period <span class="math-inline" data-latex="1/f"></span> — is identical on both sides of the boundary.</p>
+<div class=definition-block id=definition-13.3>
+<div class=block-label>
+Definition 13.3 (Rhythm-Pitch Threshold)
+</div>
+<div class=block-body><p>The <strong>rhythm-pitch threshold</strong> is the critical repetition rate, approximately 20 Hz (individual variation: 15–30 Hz), below which the auditory system perceives a periodic pulse as a <strong>rhythm</strong> (individual events are counted), and above which it perceives the pulse as a <strong>pitch</strong> (a continuous tone at that frequency).</p>
+<p>This threshold is a property of auditory processing, not of the signal itself. The mathematical structure — a periodic sequence with period <span class=math-inline data-latex=1/f></span> — is identical on both sides of the boundary.</p>
 </div>
 </div>
-
-
-
-<div class="definition-block" id="definition-13.4">
-  <div class="block-label">
-    Definition 13.4 (Spectral Consonance (Helmholtz))
-  </div>
-  <div class="block-body"><p>Given two periodic signals with frequencies <span class="math-inline" data-latex="f_1"></span> and <span class="math-inline" data-latex="f_2"></span> in ratio <span class="math-inline" data-latex="m:n"></span> (lowest terms), their <strong>combined waveform</strong> repeats with period <span class="math-inline" data-latex="T = \text{lcm}(m, n) / f_1"></span>. The <strong>Helmholtz consonance</strong> of the interval is defined as the repetition frequency of the combined waveform:</p>
-<div class="math-display" data-latex="C = \frac{f_1}{\text{lcm}(m, n)} = \frac{1}{T}"></div>
-<p>Higher <span class="math-inline" data-latex="C"></span> (i.e., smaller <span class="math-inline" data-latex="\text{lcm}(m, n)"></span>, i.e., simpler integer ratio) corresponds to greater consonance.</p>
+<div class=definition-block id=definition-13.4>
+<div class=block-label>
+Definition 13.4 (Spectral Consonance (Helmholtz))
+</div>
+<div class=block-body><p>Given two periodic signals with frequencies <span class=math-inline data-latex=f_1></span> and <span class=math-inline data-latex=f_2></span> in ratio <span class=math-inline data-latex=m:n></span> (lowest terms), their <strong>combined waveform</strong> repeats with period <span class=math-inline data-latex="T = \text{lcm}(m, n) / f_1"></span>. The <strong>Helmholtz consonance</strong> of the interval is defined as the repetition frequency of the combined waveform:</p>
+<p><span class=math-display data-latex="C = \frac{f_1}{\text{lcm}(m, n)} = \frac{1}{T}"></span></p>
+<p>Higher <span class=math-inline data-latex=C></span> (i.e., smaller <span class=math-inline data-latex="\text{lcm}(m, n)"></span>, i.e., simpler integer ratio) corresponds to greater consonance.</p>
 </div>
 </div>
-
 <hr>
-<h2 id="main-theorems">Main Theorems</h2>
-
-
-<div class="theorem-block" id="theorem-13.1">
-  <div class="block-label">
-    Theorem 13.1 (LCM Periodicity Theorem)
-  </div>
-  <div class="block-body"><p>In a polyrhythm <span class="math-inline" data-latex="m:n"></span>, the two rhythmic streams <strong>realign</strong> (both streams have a beat onset simultaneously) for the first time after exactly <span class="math-inline" data-latex="\text{lcm}(m, n)"></span> minimal grid subdivisions, and then periodically every <span class="math-inline" data-latex="\text{lcm}(m, n)"></span> subdivisions thereafter.</p>
-<p>For Jacob Collier&rsquo;s five-layer polyrhythm <span class="math-inline" data-latex="2:3:4:5:6"></span>:</p>
-<div class="math-display" data-latex="\text{lcm}(2, 3, 4, 5, 6) = 60"></div>
+<h2 id=main-theorems>Main Theorems</h2>
+<div class=theorem-block id=theorem-13.1>
+<div class=block-label>
+Theorem 13.1 (LCM Periodicity Theorem)
+</div>
+<div class=block-body><p>In a polyrhythm <span class=math-inline data-latex=m:n></span>, the two rhythmic streams <strong>realign</strong> (both streams have a beat onset simultaneously) for the first time after exactly <span class=math-inline data-latex="\text{lcm}(m, n)"></span> minimal grid subdivisions, and then periodically every <span class=math-inline data-latex="\text{lcm}(m, n)"></span> subdivisions thereafter.</p>
+<p>For Jacob Collier&rsquo;s five-layer polyrhythm <span class=math-inline data-latex=2:3:4:5:6></span>:</p>
+<p><span class=math-display data-latex="\text{lcm}(2, 3, 4, 5, 6) = 60"></span></p>
 <p>A complete cycle requires 60 minimal subdivisions.</p>
 </div>
 </div>
-
-<div class="proof-block">
-  <div class="block-label">Proof.</div>
-  <div class="block-body"><p>Let the minimal subdivision have duration <span class="math-inline" data-latex="\delta = T/\text{lcm}(m,n)"></span>. Stream <span class="math-inline" data-latex="m"></span> places beats at positions <span class="math-inline" data-latex="0, \text{lcm}(m,n)/m, 2\cdot\text{lcm}(m,n)/m, \ldots"></span>, and stream <span class="math-inline" data-latex="n"></span> at <span class="math-inline" data-latex="0, \text{lcm}(m,n)/n, 2\cdot\text{lcm}(m,n)/n, \ldots"></span> — all integers, since <span class="math-inline" data-latex="m \mid \text{lcm}(m,n)"></span> and <span class="math-inline" data-latex="n \mid \text{lcm}(m,n)"></span>.</p>
-<p>The first positive position where both streams align is the smallest positive integer <span class="math-inline" data-latex="k"></span> with <span class="math-inline" data-latex="m \mid k"></span> and <span class="math-inline" data-latex="n \mid k"></span>, which by definition is <span class="math-inline" data-latex="\text{lcm}(m, n)"></span>. All subsequent alignments occur at integer multiples of <span class="math-inline" data-latex="\text{lcm}(m,n)"></span>.</p>
-<p>For the five-layer case: <span class="math-inline" data-latex="\text{lcm}(2,3) = 6"></span>, <span class="math-inline" data-latex="\text{lcm}(6,4) = 12"></span>, <span class="math-inline" data-latex="\text{lcm}(12,5) = 60"></span>, <span class="math-inline" data-latex="\text{lcm}(60,6) = 60"></span>. <span class="math-inline" data-latex="\square"></span></p>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><p>Let the minimal subdivision have duration <span class=math-inline data-latex="\delta = T/\text{lcm}(m,n)"></span>. Stream <span class=math-inline data-latex=m></span> places beats at positions <span class=math-inline data-latex="0, \text{lcm}(m,n)/m, 2\cdot\text{lcm}(m,n)/m, \ldots"></span>, and stream <span class=math-inline data-latex=n></span> at <span class=math-inline data-latex="0, \text{lcm}(m,n)/n, 2\cdot\text{lcm}(m,n)/n, \ldots"></span> — all integers, since <span class=math-inline data-latex="m \mid \text{lcm}(m,n)"></span> and <span class=math-inline data-latex="n \mid \text{lcm}(m,n)"></span>.</p>
+<p>The first positive position where both streams align is the smallest positive integer <span class=math-inline data-latex=k></span> with <span class=math-inline data-latex="m \mid k"></span> and <span class=math-inline data-latex="n \mid k"></span>, which by definition is <span class=math-inline data-latex="\text{lcm}(m, n)"></span>. All subsequent alignments occur at integer multiples of <span class=math-inline data-latex=\text{lcm}(m,n)></span>.</p>
+<p>For the five-layer case: <span class=math-inline data-latex="\text{lcm}(2,3) = 6"></span>, <span class=math-inline data-latex="\text{lcm}(6,4) = 12"></span>, <span class=math-inline data-latex="\text{lcm}(12,5) = 60"></span>, <span class=math-inline data-latex="\text{lcm}(60,6) = 60"></span>. <span class=math-inline data-latex=\square></span></p>
 </div>
 </div>
-
-
-
-<div class="theorem-block" id="theorem-13.2">
-  <div class="block-label">
-    Theorem 13.2 (GCD Irreducibility Theorem)
-  </div>
-  <div class="block-body"><p>A polyrhythm <span class="math-inline" data-latex="m:n"></span> is <strong>irreducible</strong> (cannot be simplified to a coarser polyrhythm) if and only if <span class="math-inline" data-latex="\gcd(m, n) = 1"></span>.</p>
-<p>If <span class="math-inline" data-latex="\gcd(m, n) = d &gt; 1"></span>, then <span class="math-inline" data-latex="m:n = (m/d):(n/d)"></span>, a simpler polyrhythm with the same structure repeated <span class="math-inline" data-latex="d"></span> times.</p>
-<p>Furthermore, the <strong>complexity</strong> of the polyrhythm — measured by <span class="math-inline" data-latex="\text{lcm}(m, n) / \min(m, n)"></span> — is maximized when <span class="math-inline" data-latex="\gcd(m, n) = 1"></span>.</p>
+<div class=theorem-block id=theorem-13.2>
+<div class=block-label>
+Theorem 13.2 (GCD Irreducibility Theorem)
+</div>
+<div class=block-body><p>A polyrhythm <span class=math-inline data-latex=m:n></span> is <strong>irreducible</strong> (cannot be simplified to a coarser polyrhythm) if and only if <span class=math-inline data-latex="\gcd(m, n) = 1"></span>.</p>
+<p>If <span class=math-inline data-latex="\gcd(m, n) = d > 1"></span>, then <span class=math-inline data-latex="m:n = (m/d):(n/d)"></span>, a simpler polyrhythm with the same structure repeated <span class=math-inline data-latex=d></span> times.</p>
+<p>Furthermore, the <strong>complexity</strong> of the polyrhythm — measured by <span class=math-inline data-latex="\text{lcm}(m, n) / \min(m, n)"></span> — is maximized when <span class=math-inline data-latex="\gcd(m, n) = 1"></span>.</p>
 </div>
 </div>
-
-<div class="proof-block">
-  <div class="block-label">Proof.</div>
-  <div class="block-body"><p>Write <span class="math-inline" data-latex="m = d \cdot m&#39;"></span> and <span class="math-inline" data-latex="n = d \cdot n&#39;"></span> with <span class="math-inline" data-latex="\gcd(m&#39;, n&#39;) = 1"></span>. Then <span class="math-inline" data-latex="\text{lcm}(m, n) = d \cdot \text{lcm}(m&#39;, n&#39;) = d \cdot m&#39; n&#39;"></span>. The polyrhythm <span class="math-inline" data-latex="m:n"></span> consists of <span class="math-inline" data-latex="d"></span> complete repetitions of the irreducible polyrhythm <span class="math-inline" data-latex="m&#39;:n&#39;"></span>, each of duration <span class="math-inline" data-latex="T/d"></span>.</p>
-<p>When <span class="math-inline" data-latex="\gcd(m, n) = 1"></span>: <span class="math-inline" data-latex="\text{lcm}(m, n) = mn"></span>, the maximum possible value. No simplification exists.</p>
-<p>Connection to EP12: there, <span class="math-inline" data-latex="\gcd(7, 12) = 1"></span> ensured that adding 7 semitones repeatedly visited all 12 pitch classes before returning to the start — the generator of <span class="math-inline" data-latex="\mathbb{Z}_{12}"></span>. Here, <span class="math-inline" data-latex="\gcd(m, n) = 1"></span> ensures the polyrhythm visits all <span class="math-inline" data-latex="mn"></span> grid positions before repeating. Same theorem, different domain. <span class="math-inline" data-latex="\square"></span></p>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><p>Write <span class=math-inline data-latex="m = d \cdot m'"></span> and <span class=math-inline data-latex="n = d \cdot n'"></span> with <span class=math-inline data-latex="\gcd(m', n') = 1"></span>. Then <span class=math-inline data-latex="\text{lcm}(m, n) = d \cdot \text{lcm}(m', n') = d \cdot m' n'"></span>. The polyrhythm <span class=math-inline data-latex=m:n></span> consists of <span class=math-inline data-latex=d></span> complete repetitions of the irreducible polyrhythm <span class=math-inline data-latex="m':n'"></span>, each of duration <span class=math-inline data-latex=T/d></span>.</p>
+<p>When <span class=math-inline data-latex="\gcd(m, n) = 1"></span>: <span class=math-inline data-latex="\text{lcm}(m, n) = mn"></span>, the maximum possible value. No simplification exists.</p>
+<p>Connection to EP12: there, <span class=math-inline data-latex="\gcd(7, 12) = 1"></span> ensured that adding 7 semitones repeatedly visited all 12 pitch classes before returning to the start — the generator of <span class=math-inline data-latex=\mathbb{Z}_{12}></span>. Here, <span class=math-inline data-latex="\gcd(m, n) = 1"></span> ensures the polyrhythm visits all <span class=math-inline data-latex=mn></span> grid positions before repeating. Same theorem, different domain. <span class=math-inline data-latex=\square></span></p>
 </div>
 </div>
-
-
-
-<div class="theorem-block" id="theorem-13.3">
-  <div class="block-label">
-    Theorem 13.3 (Rhythm-Pitch Duality)
-  </div>
-  <div class="block-body"><p>Let <span class="math-inline" data-latex="R_{m,n}(f)"></span> denote the rhythmic sequence produced by two streams at repetition rates <span class="math-inline" data-latex="m \cdot f"></span> and <span class="math-inline" data-latex="n \cdot f"></span> Hz. As <span class="math-inline" data-latex="f"></span> increases:</p>
+<div class=theorem-block id=theorem-13.3>
+<div class=block-label>
+Theorem 13.3 (Rhythm-Pitch Duality)
+</div>
+<div class=block-body><p>Let <span class=math-inline data-latex=R_{m,n}(f)></span> denote the rhythmic sequence produced by two streams at repetition rates <span class=math-inline data-latex="m \cdot f"></span> and <span class=math-inline data-latex="n \cdot f"></span> Hz. As <span class=math-inline data-latex=f></span> increases:</p>
 <ul>
-<li>For <span class="math-inline" data-latex="f \ll 20 \text{ Hz}"></span>: the auditory system perceives two independent rhythmic streams with ratio <span class="math-inline" data-latex="m:n"></span>.</li>
-<li>For <span class="math-inline" data-latex="f \gg 20 \text{ Hz}"></span>: the auditory system perceives two simultaneous pitches at frequencies <span class="math-inline" data-latex="m \cdot f"></span> and <span class="math-inline" data-latex="n \cdot f"></span> Hz, forming the musical interval with frequency ratio <span class="math-inline" data-latex="m:n"></span>.</li>
+<li>For <span class=math-inline data-latex="f \ll 20 \text{ Hz}"></span>: the auditory system perceives two independent rhythmic streams with ratio <span class=math-inline data-latex=m:n></span>.</li>
+<li>For <span class=math-inline data-latex="f \gg 20 \text{ Hz}"></span>: the auditory system perceives two simultaneous pitches at frequencies <span class=math-inline data-latex="m \cdot f"></span> and <span class=math-inline data-latex="n \cdot f"></span> Hz, forming the musical interval with frequency ratio <span class=math-inline data-latex=m:n></span>.</li>
 </ul>
-<p>The mathematical structure is invariant under this perceptual transition: the ratio <span class="math-inline" data-latex="m:n"></span> is preserved. The transition is a property of auditory processing, not of the acoustic signal.</p>
-<p><strong>Corollary</strong>: The polyrhythm <span class="math-inline" data-latex="2:3"></span> at <span class="math-inline" data-latex="f = 100\,\text{Hz}"></span> produces pitches at 200 Hz and 300 Hz — a perfect fifth (<span class="math-inline" data-latex="3:2"></span> frequency ratio, approximately 702 cents).</p>
+<p>The mathematical structure is invariant under this perceptual transition: the ratio <span class=math-inline data-latex=m:n></span> is preserved. The transition is a property of auditory processing, not of the acoustic signal.</p>
+<p><strong>Corollary</strong>: The polyrhythm <span class=math-inline data-latex=2:3></span> at <span class=math-inline data-latex="f = 100\,\text{Hz}"></span> produces pitches at 200 Hz and 300 Hz — a perfect fifth (<span class=math-inline data-latex=3:2></span> frequency ratio, approximately 702 cents).</p>
 </div>
 </div>
-
-<div class="proof-block">
-  <div class="block-label">Proof.</div>
-  <div class="block-body"><p>The two pulse trains have frequencies <span class="math-inline" data-latex="m \cdot f"></span> and <span class="math-inline" data-latex="n \cdot f"></span>. Their Fourier spectra have energy concentrated at integer multiples of <span class="math-inline" data-latex="m \cdot f"></span> and <span class="math-inline" data-latex="n \cdot f"></span> respectively.</p>
-<p>When <span class="math-inline" data-latex="m \cdot f &lt; 20"></span> Hz: the inter-onset interval <span class="math-inline" data-latex="1/(m \cdot f) &gt; 50"></span> ms. The auditory system&rsquo;s temporal resolution (~1–5 ms) can track individual onsets, and the brain counts discrete events as rhythm.</p>
-<p>When <span class="math-inline" data-latex="m \cdot f &gt; 20"></span> Hz: the inter-onset interval <span class="math-inline" data-latex="1/(m \cdot f) &lt; 50"></span> ms. The auditory system integrates the pulse train as a continuous periodic signal (pitch fusion). The perceived pitch corresponds to the repetition frequency <span class="math-inline" data-latex="m \cdot f"></span>.</p>
-<p>The frequency ratio <span class="math-inline" data-latex="m \cdot f : n \cdot f = m:n"></span> is identical in both regimes. The perceptual change is a consequence of the auditory system&rsquo;s temporal integration window, not a mathematical discontinuity. <span class="math-inline" data-latex="\square"></span></p>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><p>The two pulse trains have frequencies <span class=math-inline data-latex="m \cdot f"></span> and <span class=math-inline data-latex="n \cdot f"></span>. Their Fourier spectra have energy concentrated at integer multiples of <span class=math-inline data-latex="m \cdot f"></span> and <span class=math-inline data-latex="n \cdot f"></span> respectively.</p>
+<p>When <span class=math-inline data-latex="m \cdot f < 20"></span> Hz: the inter-onset interval <span class=math-inline data-latex="1/(m \cdot f) > 50"></span> ms. The auditory system&rsquo;s temporal resolution (~1–5 ms) can track individual onsets, and the brain counts discrete events as rhythm.</p>
+<p>When <span class=math-inline data-latex="m \cdot f > 20"></span> Hz: the inter-onset interval <span class=math-inline data-latex="1/(m \cdot f) < 50"></span> ms. The auditory system integrates the pulse train as a continuous periodic signal (pitch fusion). The perceived pitch corresponds to the repetition frequency <span class=math-inline data-latex="m \cdot f"></span>.</p>
+<p>The frequency ratio <span class=math-inline data-latex="m \cdot f : n \cdot f = m:n"></span> is identical in both regimes. The perceptual change is a consequence of the auditory system&rsquo;s temporal integration window, not a mathematical discontinuity. <span class=math-inline data-latex=\square></span></p>
 </div>
 </div>
-
-
-
-<div class="proposition-block" id="prop-13.1">
-  <div class="block-label">
-    Prop 13.1 (Harmonic Series from Integer Ratios)
-  </div>
-  <div class="block-body"><p>Let <span class="math-inline" data-latex="f_0 &gt; 0"></span> be a fundamental frequency. The integer multiples <span class="math-inline" data-latex="2f_0, 3f_0, 4f_0, 5f_0, 6f_0"></span> (the second through sixth harmonics) form the frequency ratios <span class="math-inline" data-latex="2:3:4:5:6"></span>.</p>
+<div class=proposition-block id=prop-13.1>
+<div class=block-label>
+Prop 13.1 (Harmonic Series from Integer Ratios)
+</div>
+<div class=block-body><p>Let <span class=math-inline data-latex="f_0 > 0"></span> be a fundamental frequency. The integer multiples <span class=math-inline data-latex="2f_0, 3f_0, 4f_0, 5f_0, 6f_0"></span> (the second through sixth harmonics) form the frequency ratios <span class=math-inline data-latex=2:3:4:5:6></span>.</p>
 <p>These ratios correspond to:</p>
 <ul>
-<li><span class="math-inline" data-latex="4:5"></span> — major third (386 cents just intonation)</li>
-<li><span class="math-inline" data-latex="4:6 = 2:3"></span> — perfect fifth (702 cents)</li>
-<li><span class="math-inline" data-latex="4:5:6"></span> — just major triad</li>
-<li><span class="math-inline" data-latex="2:3:4:5:6"></span> — the same integer sequence that defines Jacob Collier&rsquo;s five-layer polyrhythm.</li>
+<li><span class=math-inline data-latex=4:5></span> — major third (386 cents just intonation)</li>
+<li><span class=math-inline data-latex="4:6 = 2:3"></span> — perfect fifth (702 cents)</li>
+<li><span class=math-inline data-latex=4:5:6></span> — just major triad</li>
+<li><span class=math-inline data-latex=2:3:4:5:6></span> — the same integer sequence that defines Jacob Collier&rsquo;s five-layer polyrhythm.</li>
 </ul>
-<p>Consequently, accelerating a <span class="math-inline" data-latex="2:3:4:5:6"></span> polyrhythm past 20 Hz yields a just major chord above <span class="math-inline" data-latex="2f_0"></span>.</p>
+<p>Consequently, accelerating a <span class=math-inline data-latex=2:3:4:5:6></span> polyrhythm past 20 Hz yields a just major chord above <span class=math-inline data-latex=2f_0></span>.</p>
 </div>
 </div>
-
-<div class="proof-block">
-  <div class="block-label">Proof.</div>
-  <div class="block-body">Direct calculation. The ratios within <span class="math-inline" data-latex="\{2, 3, 4, 5, 6\}"></span>: <span class="math-inline" data-latex="5/4 = 1.25"></span> (major third, just value), <span class="math-inline" data-latex="6/4 = 3/2 = 1.5"></span> (perfect fifth, just value), <span class="math-inline" data-latex="6/5 = 1.2"></span> (minor third, just value). The triad <span class="math-inline" data-latex="\{4, 5, 6\}"></span> has all three of these — a just major triad. The Helmholtz consonance of the combined waveform of <span class="math-inline" data-latex="\{2f_0, 3f_0, 4f_0, 5f_0, 6f_0\}"></span> is <span class="math-inline" data-latex="f_0 / \text{lcm}(2,3,4,5,6) = f_0/60"></span>. <span class="math-inline" data-latex="\square"></span></div>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body>Direct calculation. The ratios within <span class=math-inline data-latex="\{2, 3, 4, 5, 6\}"></span>: <span class=math-inline data-latex="5/4 = 1.25"></span> (major third, just value), <span class=math-inline data-latex="6/4 = 3/2 = 1.5"></span> (perfect fifth, just value), <span class=math-inline data-latex="6/5 = 1.2"></span> (minor third, just value). The triad <span class=math-inline data-latex="\{4, 5, 6\}"></span> has all three of these — a just major triad. The Helmholtz consonance of the combined waveform of <span class=math-inline data-latex="\{2f_0, 3f_0, 4f_0, 5f_0, 6f_0\}"></span> is <span class=math-inline data-latex="f_0 / \text{lcm}(2,3,4,5,6) = f_0/60"></span>. <span class=math-inline data-latex=\square></span></div>
 </div>
-
 <hr>
-<h2 id="the-collier-limit-3031">The Collier Limit: 30:31</h2>
-<p>Jacob Collier performs a <span class="math-inline" data-latex="30:31"></span> polyrhythm. This is an extreme edge case:</p>
-<div class="math-display" data-latex="\text{lcm}(30, 31) = 930 \quad (\text{since } \gcd(30, 31) = 1)"></div>
+<h2 id=the-collier-limit-3031>The Collier Limit: 30:31</h2>
+<p>Jacob Collier performs a <span class=math-inline data-latex=30:31></span> polyrhythm. This is an extreme edge case:</p>
+<span class=math-display data-latex="\text{lcm}(30, 31) = 930 \quad (\text{since } \gcd(30, 31) = 1)"></span>
 <p>A full cycle requires 930 minimal subdivisions — near the limit of human temporal tracking. The perceptual effect resembles irrational ratios without actually being irrational.</p>
-<p>Compare to the result from EP11: <span class="math-inline" data-latex="\log_2 3"></span> is irrational, so the sequence <span class="math-inline" data-latex="\{2^m : m \in \mathbb{Z}\} \cap \{3^n : n \in \mathbb{Z}\} = \{1\}"></span> — powers of 2 and powers of 3 never coincide (except at 1). A true <span class="math-inline" data-latex="\sqrt{2}:1"></span> polyrhythm would <strong>never</strong> realign.</p>
-<p>The ratio <span class="math-inline" data-latex="30:31"></span> is rational (realigns after 930 units) but approximates the perceptual experience of irrationality. This is an aesthetic strategy: maintain mathematical controllability while approaching the boundary of perceptual chaos.</p>
+<p>Compare to the result from EP11: <span class=math-inline data-latex="\log_2 3"></span> is irrational, so the sequence <span class=math-inline data-latex="\{2^m : m \in \mathbb{Z}\} \cap \{3^n : n \in \mathbb{Z}\} = \{1\}"></span> — powers of 2 and powers of 3 never coincide (except at 1). A true <span class=math-inline data-latex=\sqrt{2}:1></span> polyrhythm would <strong>never</strong> realign.</p>
+<p>The ratio <span class=math-inline data-latex=30:31></span> is rational (realigns after 930 units) but approximates the perceptual experience of irrationality. This is an aesthetic strategy: maintain mathematical controllability while approaching the boundary of perceptual chaos.</p>
 <blockquote>
 <p><em>中文:</em> &ldquo;他在整数比的世界里，寻找最接近无理数感觉的配置。这就是他的策略：保持理性结构的可控性，同时推向复杂性的极限。&rdquo;</p>
 </blockquote>
 <hr>
-<h2 id="musical-connection">Musical Connection</h2>
-<div class="music-block">
-  <div class="block-label">音乐联系</div>
-  <div class="block-body"><p><strong>The <span class="math-inline" data-latex="\mathbb{Z}_{12}"></span> Arc in Four Perspectives</strong></p>
-<p>This episode closes a four-part arc on the mathematics of <span class="math-inline" data-latex="\mathbb{Z}_{12}"></span>:</p>
+<h2 id=musical-connection>Musical Connection</h2>
+<div class=music-block>
+<div class=block-label>音乐联系</div>
+<div class=block-body><p><strong>The <span class=math-inline data-latex=\mathbb{Z}_{12}></span> Arc in Four Perspectives</strong></p>
+<p>This episode closes a four-part arc on the mathematics of <span class=math-inline data-latex=\mathbb{Z}_{12}></span>:</p>
 <ul>
 <li><strong>EP10</strong>: Symmetry — the reflection and rotation group of the twelve-tone system.</li>
-<li><strong>EP11</strong>: Incommensurability — the Pythagorean comma; <span class="math-inline" data-latex="\log_2 3"></span> irrational.</li>
-<li><strong>EP12</strong>: Generation — <span class="math-inline" data-latex="\gcd(7, 12) = 1"></span> generates all of <span class="math-inline" data-latex="\mathbb{Z}_{12}"></span> from a single element.</li>
+<li><strong>EP11</strong>: Incommensurability — the Pythagorean comma; <span class=math-inline data-latex="\log_2 3"></span> irrational.</li>
+<li><strong>EP12</strong>: Generation — <span class=math-inline data-latex="\gcd(7, 12) = 1"></span> generates all of <span class=math-inline data-latex=\mathbb{Z}_{12}></span> from a single element.</li>
 <li><strong>EP13</strong>: Scale invariance — the same integer ratios appear in rhythm (below 20 Hz) and pitch (above 20 Hz).</li>
 </ul>
-<p>Jacob Collier does not use two separate skills — harmonic fluency and rhythmic complexity. He uses one skill: perceiving integer ratios as structures invariant across time scales. The LCM that governs when two rhythmic streams align is the inverse of the Helmholtz consonance that governs how smooth a musical interval sounds. The GCD that makes <span class="math-inline" data-latex="\gcd(7,12) = 1"></span> the generator of the circle of fifths is the same GCD that makes <span class="math-inline" data-latex="\gcd(2,3) = 1"></span> the signature of hemiola&rsquo;s maximal complexity.</p>
-<p><strong>Euclidean Rhythms</strong> (connection to EP12): Distribute <span class="math-inline" data-latex="k"></span> beats as evenly as possible among <span class="math-inline" data-latex="n"></span> subdivisions. The Bjorklund algorithm for this distribution is mathematically equivalent to the Euclidean algorithm for computing <span class="math-inline" data-latex="\gcd(k, n)"></span> — the same algorithm that establishes the generator property in EP12. African bell patterns, Cuban clave, and the bossa nova pattern are all Euclidean rhythms.</p>
-<p><strong>Rhythmic canons</strong>: Tiling <span class="math-inline" data-latex="\mathbb{Z}_n"></span> with a pattern and its translates is a number-theoretic problem. A rhythm <span class="math-inline" data-latex="R \subset \mathbb{Z}_n"></span> <strong>tiles</strong> <span class="math-inline" data-latex="\mathbb{Z}_n"></span> if there exists a set <span class="math-inline" data-latex="S"></span> such that every element of <span class="math-inline" data-latex="\mathbb{Z}_n"></span> is covered by exactly one translate <span class="math-inline" data-latex="R &#43; s"></span>, <span class="math-inline" data-latex="s \in S"></span>. This is equivalent to a factorization <span class="math-inline" data-latex="\mathbb{Z}_n = R \oplus S"></span> of the cyclic group — directly related to EP04&rsquo;s group structure.</p>
+<p>Jacob Collier does not use two separate skills — harmonic fluency and rhythmic complexity. He uses one skill: perceiving integer ratios as structures invariant across time scales. The LCM that governs when two rhythmic streams align is the inverse of the Helmholtz consonance that governs how smooth a musical interval sounds. The GCD that makes <span class=math-inline data-latex="\gcd(7,12) = 1"></span> the generator of the circle of fifths is the same GCD that makes <span class=math-inline data-latex="\gcd(2,3) = 1"></span> the signature of hemiola&rsquo;s maximal complexity.</p>
+<p><strong>Euclidean Rhythms</strong> (connection to EP12): Distribute <span class=math-inline data-latex=k></span> beats as evenly as possible among <span class=math-inline data-latex=n></span> subdivisions. The Bjorklund algorithm for this distribution is mathematically equivalent to the Euclidean algorithm for computing <span class=math-inline data-latex="\gcd(k, n)"></span> — the same algorithm that establishes the generator property in EP12. African bell patterns, Cuban clave, and the bossa nova pattern are all Euclidean rhythms.</p>
+<p><strong>Rhythmic canons</strong>: Tiling <span class=math-inline data-latex=\mathbb{Z}_n></span> with a pattern and its translates is a number-theoretic problem. A rhythm <span class=math-inline data-latex="R \subset \mathbb{Z}_n"></span> <strong>tiles</strong> <span class=math-inline data-latex=\mathbb{Z}_n></span> if there exists a set <span class=math-inline data-latex=S></span> such that every element of <span class=math-inline data-latex=\mathbb{Z}_n></span> is covered by exactly one translate <span class=math-inline data-latex="R + s"></span>, <span class=math-inline data-latex="s \in S"></span>. This is equivalent to a factorization <span class=math-inline data-latex="\mathbb{Z}_n = R \oplus S"></span> of the cyclic group — directly related to EP04&rsquo;s group structure.</p>
 </div>
 </div>
-
 <hr>
-<h2 id="limits-and-open-questions">Limits and Open Questions</h2>
+<h2 id=limits-and-open-questions>Limits and Open Questions</h2>
 <ol>
 <li>
 <p><strong>The 20 Hz threshold is not sharp.</strong> Individual variation spans approximately 15–30 Hz. The &ldquo;boundary&rdquo; is a statistical description of population-level auditory processing, not a physical constant. Some listeners with absolute pitch or musical training may perceive rhythm-to-pitch transitions earlier.</p>
@@ -1034,270 +360,83 @@ document.addEventListener('DOMContentLoaded', function() {
 <p><strong>Euclidean rhythms and the Toussaint conjecture.</strong> Godfried Toussaint conjectured (2005) that all &ldquo;good&rdquo; rhythms used in world music are Euclidean rhythms. While many examples are confirmed, a complete classification of &ldquo;good rhythms&rdquo; remains open.</p>
 </li>
 <li>
-<p><strong>Rhythmic canons and the Fuglede conjecture.</strong> Determining which subsets of <span class="math-inline" data-latex="\mathbb{Z}_n"></span> can tile the group (rhythmic canons) is connected to spectral properties of the set via the discrete Fourier transform. Fuglede&rsquo;s conjecture (1974) proposed an equivalence between tiling and spectrality; it was disproved in <span class="math-inline" data-latex="\mathbb{R}^d"></span> for <span class="math-inline" data-latex="d \geq 3"></span> but remains open in <span class="math-inline" data-latex="\mathbb{Z}"></span> and <span class="math-inline" data-latex="\mathbb{R}^d"></span> for <span class="math-inline" data-latex="d \leq 2"></span>.</p>
+<p><strong>Rhythmic canons and the Fuglede conjecture.</strong> Determining which subsets of <span class=math-inline data-latex=\mathbb{Z}_n></span> can tile the group (rhythmic canons) is connected to spectral properties of the set via the discrete Fourier transform. Fuglede&rsquo;s conjecture (1974) proposed an equivalence between tiling and spectrality; it was disproved in <span class=math-inline data-latex=\mathbb{R}^d></span> for <span class=math-inline data-latex="d \geq 3"></span> but remains open in <span class=math-inline data-latex=\mathbb{Z}></span> and <span class=math-inline data-latex=\mathbb{R}^d></span> for <span class=math-inline data-latex="d \leq 2"></span>.</p>
 </li>
 <li>
-<p><strong>Cognitive limits of polyrhythm tracking.</strong> Jacob Collier&rsquo;s <span class="math-inline" data-latex="30:31"></span> has <span class="math-inline" data-latex="\text{lcm} = 930"></span>. The cognitive limit for simultaneous rhythmic tracking is not well established theoretically. Empirical studies suggest 3–4 independent rhythmic streams as a working memory limit, but virtuosic performance (Collier, Nancarrow) routinely exceeds this — suggesting different neural mechanisms than explicit beat counting.</p>
+<p><strong>Cognitive limits of polyrhythm tracking.</strong> Jacob Collier&rsquo;s <span class=math-inline data-latex=30:31></span> has <span class=math-inline data-latex="\text{lcm} = 930"></span>. The cognitive limit for simultaneous rhythmic tracking is not well established theoretically. Empirical studies suggest 3–4 independent rhythmic streams as a working memory limit, but virtuosic performance (Collier, Nancarrow) routinely exceeds this — suggesting different neural mechanisms than explicit beat counting.</p>
 </li>
 <li>
-<p><strong>Forward to EP26.</strong> The power spectral density of rhythmic patterns and the <span class="math-inline" data-latex="1/f"></span> fractal structure of musical rhythm (Hurst exponent analysis) generalize these ideas. A fractal rhythm is self-similar across time scales — the rhythm-pitch duality of this episode is the limiting case of that self-similarity as scale goes to zero.</p>
+<p><strong>Forward to EP26.</strong> The power spectral density of rhythmic patterns and the <span class=math-inline data-latex=1/f></span> fractal structure of musical rhythm (Hurst exponent analysis) generalize these ideas. A fractal rhythm is self-similar across time scales — the rhythm-pitch duality of this episode is the limiting case of that self-similarity as scale goes to zero.</p>
 </li>
 </ol>
 <hr>
-<h2 id="academic-references">Academic References</h2>
+<h2 id=academic-references>Academic References</h2>
 <ol>
 <li>
 <p>Toussaint, G. T. (2013). <em>The Geometry of Musical Rhythm</em>. CRC Press. — Euclidean rhythms, Bjorklund algorithm, tiling problems.</p>
 </li>
 <li>
-<p>Helmholtz, H. von (1863). <em>On the Sensations of Tone</em> (trans. A. J. Ellis, 1954). Dover. — Consonance as repetition frequency of the combined waveform; <span class="math-inline" data-latex="C = 1/\text{lcm}(m,n)"></span>.</p>
+<p>Helmholtz, H. von (1863). <em>On the Sensations of Tone</em> (trans. A. J. Ellis, 1954). Dover. — Consonance as repetition frequency of the combined waveform; <span class=math-inline data-latex="C = 1/\text{lcm}(m,n)"></span>.</p>
 </li>
 <li>
-<p>Risset, J.-C., &amp; Wessel, D. L. (1999). Exploration of timbre by analysis and synthesis. In <em>The Psychology of Music</em> (2nd ed.), ed. Deutsch. Ch. 5. — Rhythm-to-pitch continuum; auditory streaming and temporal resolution.</p>
+<p>Risset, J.-C., & Wessel, D. L. (1999). Exploration of timbre by analysis and synthesis. In <em>The Psychology of Music</em> (2nd ed.), ed. Deutsch. Ch. 5. — Rhythm-to-pitch continuum; auditory streaming and temporal resolution.</p>
 </li>
 <li>
-<p>Vuust, P., &amp; Witek, M. A. G. (2014). Rhythmic complexity and predictive coding: A novel approach to modeling rhythm and meter perception in music. <em>Frontiers in Psychology</em>, 5, 1111. — Cognitive models of polyrhythm perception.</p>
+<p>Vuust, P., & Witek, M. A. G. (2014). Rhythmic complexity and predictive coding: A novel approach to modeling rhythm and meter perception in music. <em>Frontiers in Psychology</em>, 5, 1111. — Cognitive models of polyrhythm perception.</p>
 </li>
 <li>
-<p>Lerdahl, F., &amp; Jackendoff, R. (1983). <em>A Generative Theory of Tonal Music</em>. MIT Press. — Metric hierarchy and grouping structure.</p>
+<p>Lerdahl, F., & Jackendoff, R. (1983). <em>A Generative Theory of Tonal Music</em>. MIT Press. — Metric hierarchy and grouping structure.</p>
 </li>
 <li>
 <p>Bjorklund, E. (2003). The theory of rep-rate pattern generation in the SNS timing system. <em>Los Alamos National Laboratory Report</em> SNS-NOTE-CNTRL-99. — Original algorithm for Euclidean rhythms (discovered independently; also Toussaint 2005).</p>
 </li>
 <li>
-<p>Tymoczko, D. (2011). <em>A Geometry of Music</em>. Oxford University Press. Ch. 2 — Voice leading and pitch-class intervals as elements of <span class="math-inline" data-latex="\mathbb{Z}_{12}"></span>; connections to EP04.</p>
+<p>Tymoczko, D. (2011). <em>A Geometry of Music</em>. Oxford University Press. Ch. 2 — Voice leading and pitch-class intervals as elements of <span class=math-inline data-latex=\mathbb{Z}_{12}></span>; connections to EP04.</p>
 </li>
 </ol>
-
-    </div>
-
-    
-    <nav class="ep-nav">
-      
-      
-      
-      
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-      
-      <a href="https://amath390.sibeliusp.com/episodes/ep12/" class="ep-nav-prev">
-        ← EP12: The Circle of Fifths as a Folded Spiral
-      </a>
-      
-      
-      <a href="https://amath390.sibeliusp.com/episodes/ep14/" class="ep-nav-next">
-        EP14: Tonnetz Hodge Duality →
-      </a>
-      
-    </nav>
-  </article>
-
-  
-  
-  
-  <aside class="ep-toc-aside">
-    <div class="ep-toc-sticky">
-      <div class="ep-toc-label">本页目录</div>
-      <nav id="TableOfContents">
-  <ul>
-    <li><a href="#overview">Overview</a></li>
-    <li><a href="#prerequisites">Prerequisites</a></li>
-    <li><a href="#definitions">Definitions</a></li>
-    <li><a href="#main-theorems">Main Theorems</a></li>
-    <li><a href="#the-collier-limit-3031">The Collier Limit: 30:31</a></li>
-    <li><a href="#musical-connection">Musical Connection</a></li>
-    <li><a href="#limits-and-open-questions">Limits and Open Questions</a></li>
-    <li><a href="#academic-references">Academic References</a></li>
-  </ul>
-</nav>
-    </div>
-  </aside>
-  
 </div>
-
-      <footer class="site-footer">
-  <div class="footer-content">
-    <a href="https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f" target="_blank" rel="noopener" class="footer-avatar-link">
-      <img src="/images/avatar.png" alt="Sibelius P." class="footer-avatar">
-    </a>
-    <div class="footer-text">
-      <span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
-      <span class="footer-sep">·</span>
-      <a href="https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f" target="_blank" rel="noopener">小红书</a>
-      <span class="footer-sep">·</span>
-      <span>Built with <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> + KaTeX</span>
-    </div>
-  </div>
+<nav class=ep-nav>
+<a href=https://amath390.sibeliusp.com/episodes/ep12/ class=ep-nav-prev>
+← EP12: The Circle of Fifths as a Folded Spiral
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-nav-next>
+EP14: Tonnetz Hodge Duality →
+</a>
+</nav>
+</article>
+<aside class=ep-toc-aside>
+<div class=ep-toc-sticky>
+<div class=ep-toc-label>本页目录</div>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#overview>Overview</a></li>
+<li><a href=#prerequisites>Prerequisites</a></li>
+<li><a href=#definitions>Definitions</a></li>
+<li><a href=#main-theorems>Main Theorems</a></li>
+<li><a href=#the-collier-limit-3031>The Collier Limit: 30:31</a></li>
+<li><a href=#musical-connection>Musical Connection</a></li>
+<li><a href=#limits-and-open-questions>Limits and Open Questions</a></li>
+<li><a href=#academic-references>Academic References</a></li>
+</ul>
+</nav>
+</div>
+</aside>
+</div>
+<footer class=site-footer>
+<div class=footer-content>
+<a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link>
+<img src=/images/avatar.png alt="Sibelius P." class=footer-avatar>
+</a>
+<div class=footer-text>
+<span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
+<span class=footer-sep>·</span>
+<a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener>小红书</a>
+<span class=footer-sep>·</span>
+<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span>
+</div>
+</div>
 </footer>
-
-    </main>
-  </div>
+</main>
+</div>
 </body>
 </html>

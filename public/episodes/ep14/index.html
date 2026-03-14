@@ -1,898 +1,258 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
+<!doctype html><html lang=zh-cn>
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
 <title>EP14: Tonnetz Hodge Duality | AMATH 390 数学与音乐</title>
-<meta name="description" content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('[data-latex]').forEach(function(el) {
-    try {
-      katex.render(el.getAttribute('data-latex'), el, {
-        displayMode: el.classList.contains('math-display'),
-        throwOnError: false
-      });
-    } catch(e) { console.warn('KaTeX:', e.message, el); }
-  });
-});
-</script>
-
-
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
-
-<link rel="stylesheet" href="/css/amath390.css">
-
+<meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script>
+<script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('[data-latex]').forEach(function(a){try{katex.render(a.getAttribute('data-latex'),a,{displayMode:a.classList.contains('math-display'),throwOnError:!1})}catch(b){console.warn('KaTeX:',b.message,a)}})})</script>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16.png>
+<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+<link rel=stylesheet href=/css/amath390.css>
 </head>
 <body>
-  <div class="layout-wrapper">
-    
-
-
-<nav class="sidebar">
-  <div class="sidebar-header">
-    <a href="/" class="sidebar-title">AMATH 390</a>
-    <div class="sidebar-subtitle">数学与音乐</div>
-  </div>
-
-  
-
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">数学基础篇</div>
-        
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep01/"
-               class="ep-link">
-              <span class="ep-num">01</span>
-              <span class="ep-title">Chord Space and the Torus</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep02/"
-               class="ep-link">
-              <span class="ep-num">02</span>
-              <span class="ep-title">String Vibration and the Wave Equation</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep03/"
-               class="ep-link">
-              <span class="ep-num">03</span>
-              <span class="ep-title">Bach and Graph Connectivity</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep04/"
-               class="ep-link">
-              <span class="ep-num">04</span>
-              <span class="ep-title">All-Interval Rows and ℤ₁₂</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep05/"
-               class="ep-link">
-              <span class="ep-num">05</span>
-              <span class="ep-title">Turán&#39;s Theorem and Counterpoint</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep06/"
-               class="ep-link">
-              <span class="ep-num">06</span>
-              <span class="ep-title">Graph Coloring and Voice Assignment</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep07/"
-               class="ep-link">
-              <span class="ep-num">07</span>
-              <span class="ep-title">Information Entropy and All-Interval Rows</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep08/"
-               class="ep-link">
-              <span class="ep-num">08</span>
-              <span class="ep-title">Shepard Tones and the Tritone Paradox</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep09/"
-               class="ep-link">
-              <span class="ep-num">09</span>
-              <span class="ep-title">Combination Tones and Nonlinear Acoustics</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">Jacob Collier 系列</div>
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep10/"
-               class="ep-link">
-              <span class="ep-num">10</span>
-              <span class="ep-title">Negative Harmony and the Dihedral Group D₁₂</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep11/"
-               class="ep-link">
-              <span class="ep-num">11</span>
-              <span class="ep-title">Comma Drift and the Impossibility of Perfect Tuning</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep12/"
-               class="ep-link">
-              <span class="ep-num">12</span>
-              <span class="ep-title">The Circle of Fifths as a Folded Spiral</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep13/"
-               class="ep-link">
-              <span class="ep-num">13</span>
-              <span class="ep-title">Polyrhythm and Rhythm-Pitch Duality</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">拓扑数学专篇</div>
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep14/"
-               class="ep-link active">
-              <span class="ep-num">14</span>
-              <span class="ep-title">Tonnetz Hodge Duality</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">歌剧系列</div>
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep15/"
-               class="ep-link">
-              <span class="ep-num">15</span>
-              <span class="ep-title">Opera Acoustics and the Singer&#39;s Formant</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep16/"
-               class="ep-link">
-              <span class="ep-num">16</span>
-              <span class="ep-title">Rossini&#39;s Code — Budden, Gossett, and the Convention System</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep17/"
-               class="ep-link">
-              <span class="ep-num">17</span>
-              <span class="ep-title">Leitmotif Networks — Wagner&#39;s Ring Cycle</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-
-  <div class="sidebar-footer">
-    <a href="/theorems/">定理索引</a>
-    <a href="/domains/">数学领域</a>
-    <a href="/about/">关于</a>
-  </div>
-</nav>
-
-    <main class="main-content">
-      
-
-
-
-<div class="episode-layout">
-  <article class="episode-page">
-    <header class="episode-header">
-  <div class="ep-badge">EP14</div>
-  <h1 class="ep-main-title">EP14: Tonnetz Hodge Duality</h1>
-  <div class="ep-subtitle">Simplicial Complexes, Hodge Star, and the Decomposition of Harmony</div>
-
-  <div class="ep-meta">
-    
-    <span class="meta-item">
-      <span class="meta-icon">▶</span> 16:27
-    </span>
-    
-    
-    <span class="meta-item domains">
-      <span class="domain-chip">Topology</span><span class="domain-chip">Linear Algebra</span><span class="domain-chip">Harmonic Analysis</span>
-    </span>
-    
-  </div>
-</header>
-
-    
-
-
-<div class="cross-refs">
-  <h3 class="cross-refs-title">前置知识</h3>
-  <div class="ref-cards">
-    
-      
-      
-      
-      
-        <a href="https://amath390.sibeliusp.com/episodes/ep01/" class="ref-card callback">
-          <span class="ref-ep">EP01</span>
-          <span class="ref-title">Chord Space and the Torus</span>
-        </a>
-      
-    
-      
-      
-      
-      
-        <a href="https://amath390.sibeliusp.com/episodes/ep02/" class="ref-card callback">
-          <span class="ref-ep">EP02</span>
-          <span class="ref-title">String Vibration and the Wave Equation</span>
-        </a>
-      
-    
-      
-      
-      
-      
-        <a href="https://amath390.sibeliusp.com/episodes/ep04/" class="ref-card callback">
-          <span class="ref-ep">EP04</span>
-          <span class="ref-title">All-Interval Rows and ℤ₁₂</span>
-        </a>
-      
-    
-  </div>
+<div class=layout-wrapper>
+<nav class=sidebar>
+<div class=sidebar-header>
+<a href=/ class=sidebar-title>AMATH 390</a>
+<div class=sidebar-subtitle>数学与音乐</div>
 </div>
-
-
-
-
-
-
-
-
-    
-
-
-    <div class="episode-content content">
-      <h2 id="overview">Overview</h2>
+<div class=arc-group>
+<div class=arc-label>数学基础篇</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link>
+<span class=ep-num>01</span>
+<span class=ep-title>Chord Space and the Torus</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep02/ class=ep-link>
+<span class=ep-num>02</span>
+<span class=ep-title>String Vibration and the Wave Equation</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link>
+<span class=ep-num>03</span>
+<span class=ep-title>Bach and Graph Connectivity</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link>
+<span class=ep-num>04</span>
+<span class=ep-title>All-Interval Rows and ℤ₁₂</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link>
+<span class=ep-num>05</span>
+<span class=ep-title>Turán's Theorem and Counterpoint</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-link>
+<span class=ep-num>06</span>
+<span class=ep-title>Graph Coloring and Voice Assignment</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-link>
+<span class=ep-num>07</span>
+<span class=ep-title>Information Entropy and All-Interval Rows</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-link>
+<span class=ep-num>08</span>
+<span class=ep-title>Shepard Tones and the Tritone Paradox</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link>
+<span class=ep-num>09</span>
+<span class=ep-title>Combination Tones and Nonlinear Acoustics</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>Jacob Collier 系列</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep10/ class=ep-link>
+<span class=ep-num>10</span>
+<span class=ep-title>Negative Harmony and the Dihedral Group D₁₂</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link>
+<span class=ep-num>11</span>
+<span class=ep-title>Comma Drift and the Impossibility of Perfect Tuning</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep12/ class=ep-link>
+<span class=ep-num>12</span>
+<span class=ep-title>The Circle of Fifths as a Folded Spiral</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-link>
+<span class=ep-num>13</span>
+<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>拓扑数学专篇</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep14/ class="ep-link active">
+<span class=ep-num>14</span>
+<span class=ep-title>Tonnetz Hodge Duality</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>歌剧系列</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-link>
+<span class=ep-num>15</span>
+<span class=ep-title>Opera Acoustics and the Singer's Formant</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link>
+<span class=ep-num>16</span>
+<span class=ep-title>Rossini's Code — Budden, Gossett, and the Convention System</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-link>
+<span class=ep-num>17</span>
+<span class=ep-title>Leitmotif Networks — Wagner's Ring Cycle</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-link>
+<span class=ep-num>18</span>
+<span class=ep-title>Game Theory in Operatic Duets</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link>
+<span class=ep-num>19</span>
+<span class=ep-title>Vibrato as FM Synthesis</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-link>
+<span class=ep-num>20</span>
+<span class=ep-title>Character Interaction Networks in Opera</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>AI 音乐三部曲</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-link>
+<span class=ep-num>21</span>
+<span class=ep-title>From Markov to Diffusion — Sixty Years of AI Composition</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-link>
+<span class=ep-num>22</span>
+<span class=ep-title>How AI Writes Music — EnCodec and RVQ</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-link>
+<span class=ep-num>23</span>
+<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span>
+</a>
+</div>
+<div class=sidebar-footer>
+<a href=/theorems/>定理索引</a>
+<a href=/domains/>数学领域</a>
+<a href=/about/>关于</a>
+</div>
+</nav>
+<main class=main-content>
+<div class=episode-layout>
+<article class=episode-page>
+<header class=episode-header>
+<div class=ep-badge>EP14</div>
+<h1 class=ep-main-title>EP14: Tonnetz Hodge Duality</h1>
+<div class=ep-subtitle>Simplicial Complexes, Hodge Star, and the Decomposition of Harmony</div>
+<div class=ep-meta>
+<span class=meta-item>
+<span class=meta-icon>▶</span> 16:27
+</span>
+<span class="meta-item domains">
+<span class=domain-chip>Topology</span><span class=domain-chip>Linear Algebra</span><span class=domain-chip>Harmonic Analysis</span>
+</span>
+</div>
+</header>
+<div class=cross-refs>
+<h3 class=cross-refs-title>前置知识</h3>
+<div class=ref-cards>
+<a href=https://amath390.sibeliusp.com/episodes/ep01/ class="ref-card callback">
+<span class=ref-ep>EP01</span>
+<span class=ref-title>Chord Space and the Torus</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep02/ class="ref-card callback">
+<span class=ref-ep>EP02</span>
+<span class=ref-title>String Vibration and the Wave Equation</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep04/ class="ref-card callback">
+<span class=ref-ep>EP04</span>
+<span class=ref-title>All-Interval Rows and ℤ₁₂</span>
+</a>
+</div>
+</div>
+<div class=cross-refs>
+<h3 class=cross-refs-title>后续拓展</h3>
+<div class=ref-cards>
+<a href=https://amath390.sibeliusp.com/episodes/ep23/ class="ref-card forward">
+<span class=ref-ep>EP23</span>
+<span class=ref-title>Can AI Understand Music? Latent Space and Information Bottleneck</span>
+</a>
+</div>
+</div>
+<div class="episode-content content">
+<h2 id=overview>Overview</h2>
 <p>The Tonnetz — Euler&rsquo;s 1739 interval lattice, rediscovered by neo-Riemannian theorists — is not merely a picture of chord relationships. It is a <strong>simplicial complex triangulating a torus</strong>, and every chord progression on it is a cochain that decomposes, uniquely and orthogonally, into three mathematically distinct components.</p>
 <p>This episode applies <strong>discrete Hodge theory</strong> (Eckmann 1944; Lim 2020) to the Tonnetz. The central result:</p>
 <blockquote>
 <p><em>Any 1-cochain on the Tonnetz torus decomposes as:</em>
-<div class="math-display" data-latex="\omega = \omega_{\text{exact}} \;&#43;\; \omega_{\text{coexact}} \;&#43;\; \omega_{\text{harmonic}}"></div>
+<span class=math-display data-latex="\omega = \omega_{\text{exact}} \;+\; \omega_{\text{coexact}} \;+\; \omega_{\text{harmonic}}"></span>
 <em>where the three summands are pairwise orthogonal and uniquely determined.</em></p>
 </blockquote>
 <p>The three components correspond — as testable hypotheses — to functional cadences, chromatic PLR cycles, and remote modulations along the torus topology.</p>
 <hr>
-<h2 id="prerequisites">Prerequisites</h2>
+<h2 id=prerequisites>Prerequisites</h2>
 <ul>
 <li>
-
-
-
-<a href="https://amath390.sibeliusp.com/episodes/ep01/" class="episode-ref-link">Chord Space as Torus (EP01)</a>
-
- — Tonnetz and PLR transformations</li>
+<a href=https://amath390.sibeliusp.com/episodes/ep01/ class=episode-ref-link>Chord Space as Torus (EP01)</a>
+— Tonnetz and PLR transformations</li>
 <li>
-
-
-
-<a href="https://amath390.sibeliusp.com/episodes/ep02/" class="episode-ref-link">Wave equation and Fourier series (EP02)</a>
-
- — analogy with heat diffusion on manifolds</li>
+<a href=https://amath390.sibeliusp.com/episodes/ep02/ class=episode-ref-link>Wave equation and Fourier series (EP02)</a>
+— analogy with heat diffusion on manifolds</li>
 <li>
-
-
-
-<a href="https://amath390.sibeliusp.com/episodes/ep04/" class="episode-ref-link">All-Interval Rows and ℤ₁₂ (EP04)</a>
-
- — cyclic group structure underlying pitch classes</li>
+<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=episode-ref-link>All-Interval Rows and ℤ₁₂ (EP04)</a>
+— cyclic group structure underlying pitch classes</li>
 </ul>
 <hr>
-<h2 id="preamble-what-is-a-hole-building-homology-from-scratch">Preamble: What Is a &ldquo;Hole&rdquo;? Building Homology from Scratch</h2>
-<p><em>Who this is for</em>: You have watched the video and understand the setup (boundary matrices, chain groups, Betti numbers), but the definition <span class="math-inline" data-latex="H_k = \ker(\partial_k)/\operatorname{im}(\partial_{k&#43;1})"></span> feels like a formula dropped from the sky. This preamble builds it from a single question: <em>what actually is a hole?</em></p>
-<h3 id="p1--the-naive-question">P.1 — The Naive Question</h3>
+<h2 id=preamble-what-is-a-hole-building-homology-from-scratch>Preamble: What Is a &ldquo;Hole&rdquo;? Building Homology from Scratch</h2>
+<p><em>Who this is for</em>: You have watched the video and understand the setup (boundary matrices, chain groups, Betti numbers), but the definition <span class=math-inline data-latex="H_k = \ker(\partial_k)/\operatorname{im}(\partial_{k+1})"></span> feels like a formula dropped from the sky. This preamble builds it from a single question: <em>what actually is a hole?</em></p>
+<h3 id=p1--the-naive-question>P.1 — The Naive Question</h3>
 <p>A doughnut has one hole. A pretzel has two. A solid ball has none.</p>
-<p>First attempt: <em>&ldquo;a hole is a region with nothing in it.&quot;</em> That doesn&rsquo;t work — the inside of a sphere is also &ldquo;nothing,&rdquo; but a sphere doesn&rsquo;t have the same kind of hole as a torus.</p>
-<p>Second attempt: <em>&ldquo;a hole is something you can stick a finger through.&quot;</em> That&rsquo;s dimension-specific and requires 3D embedding.</p>
+<p>First attempt: <em>&ldquo;a hole is a region with nothing in it."</em> That doesn&rsquo;t work — the inside of a sphere is also &ldquo;nothing,&rdquo; but a sphere doesn&rsquo;t have the same kind of hole as a torus.</p>
+<p>Second attempt: <em>&ldquo;a hole is something you can stick a finger through."</em> That&rsquo;s dimension-specific and requires 3D embedding.</p>
 <p>The algebraic topology approach sidesteps all of this. Instead of defining what a hole <em>is</em>, we define what a hole <em>does</em>: <strong>it obstructs you from filling in a closed curve.</strong></p>
-<h3 id="p2--the-loop-test">P.2 — The Loop Test</h3>
+<h3 id=p2--the-loop-test>P.2 — The Loop Test</h3>
 <p>Draw a closed loop on a surface. Try to &ldquo;fill it in&rdquo; — can you find a 2-dimensional patch whose boundary is exactly that loop?</p>
 <p>On the <strong>sphere</strong>: every closed loop bounds a disk — no obstruction.</p>
 <p>On the <strong>torus</strong>: the loop going <em>through</em> the hole cannot bound any patch. The hole <em>is</em> that obstruction.</p>
-<p><strong>The algebraic challenge</strong>: detect this without geometry or deformation. The answer is the boundary operator <span class="math-inline" data-latex="\partial"></span>.</p>
-<p><img src="img/LoopTestScene_ManimCE_v0.19.1.png" alt="Loop test: which loops can be filled in?"></p>
-<p><img src="img/LoopShrinkGif.gif" alt="Loops that cannot shrink to a point on the torus"></p>
-<h3 id="p3--chains-the-algebraic-skeleton">P.3 — Chains: The Algebraic Skeleton</h3>
-<p>Replace the geometric surface with an oriented combinatorial skeleton. Work with <strong>formal linear combinations</strong> over <span class="math-inline" data-latex="\mathbb{R}"></span>:</p>
+<p><strong>The algebraic challenge</strong>: detect this without geometry or deformation. The answer is the boundary operator <span class=math-inline data-latex=\partial></span>.</p>
+<p><img src=img/LoopTestScene_ManimCE_v0.19.1.png alt="Loop test: which loops can be filled in?"></p>
+<p><img src=img/LoopShrinkGif.gif alt="Loops that cannot shrink to a point on the torus"></p>
+<h3 id=p3--chains-the-algebraic-skeleton>P.3 — Chains: The Algebraic Skeleton</h3>
+<p>Replace the geometric surface with an oriented combinatorial skeleton. Work with <strong>formal linear combinations</strong> over <span class=math-inline data-latex=\mathbb{R}></span>:</p>
 <ul>
-<li>A <strong>0-chain</strong>: <span class="math-inline" data-latex="3A - 2B &#43; C"></span> — weighted vertices.</li>
-<li>A <strong>1-chain</strong>: <span class="math-inline" data-latex="[A,B] &#43; 2[B,C] - [A,C]"></span> — weighted oriented edges.</li>
-<li>A <strong>2-chain</strong>: <span class="math-inline" data-latex="[A,B,C] - [D,E,F]"></span> — weighted oriented triangles.</li>
+<li>A <strong>0-chain</strong>: <span class=math-inline data-latex="3A - 2B + C"></span> — weighted vertices.</li>
+<li>A <strong>1-chain</strong>: <span class=math-inline data-latex="[A,B] + 2[B,C] - [A,C]"></span> — weighted oriented edges.</li>
+<li>A <strong>2-chain</strong>: <span class=math-inline data-latex="[A,B,C] - [D,E,F]"></span> — weighted oriented triangles.</li>
 </ul>
-<p>Orientation: <span class="math-inline" data-latex="[B,A] = -[A,B]"></span>. These form real vector spaces <span class="math-inline" data-latex="C_0, C_1, C_2, \ldots"></span></p>
-<h3 id="p4--the-boundary-operator-hahahugoshortcode-s12-hbhb">P.4 — The Boundary Operator <span class="math-inline" data-latex="\partial"></span></h3>
-<p><span class="math-inline" data-latex="\partial_k"></span> takes a <span class="math-inline" data-latex="k"></span>-chain and returns its <span class="math-inline" data-latex="(k-1)"></span>-dimensional boundary:</p>
-<div class="math-display" data-latex="\partial_0(A) = 0, \qquad \partial_1([A,B]) = B - A"></div>
-<div class="math-display" data-latex="\partial_2([A,B,C]) = [B,C] - [A,C] &#43; [A,B]"></div>
+<p>Orientation: <span class=math-inline data-latex="[B,A] = -[A,B]"></span>. These form real vector spaces <span class=math-inline data-latex="C_0, C_1, C_2, \ldots"></span></p>
+<h3 id=p4--the-boundary-operator->P.4 — The Boundary Operator ∂</h3>
+<p><span class=math-inline data-latex=\partial_k></span> takes a <span class=math-inline data-latex=k></span>-chain and returns its <span class=math-inline data-latex=(k-1)></span>-dimensional boundary:</p>
+<span class=math-display data-latex="\partial_0(A) = 0, \qquad \partial_1([A,B]) = B - A"></span>
+<span class=math-display data-latex="\partial_2([A,B,C]) = [B,C] - [A,C] + [A,B]"></span>
 <p>Sign rule: delete each vertex in turn, alternating signs — the result is the counterclockwise perimeter.</p>
-<p><img src="img/BoundaryScene_ManimCE_v0.19.1.png" alt="Boundary operator: triangle → its three edges"></p>
-<h3 id="p5--hahahugoshortcode-s18-hbhb-the-fundamental-identity">P.5 — <span class="math-inline" data-latex="\partial^2 = 0"></span>: The Fundamental Identity</h3>
-
-
-<div class="theorem-block" id="theorem-p.1">
-  <div class="block-label">
-    Theorem P.1 (Boundary of a Boundary Vanishes)
-  </div>
-  <div class="block-body">For any simplicial complex, <span class="math-inline" data-latex="\partial_k \circ \partial_{k&#43;1} = 0"></span>.</div>
+<p><img src=img/BoundaryScene_ManimCE_v0.19.1.png alt="Boundary operator: triangle → its three edges"></p>
+<h3 id=p5----0-the-fundamental-identity>P.5 — ∂² = 0: The Fundamental Identity</h3>
+<div class=theorem-block id=theorem-p.1>
+<div class=block-label>
+Theorem P.1 (Boundary of a Boundary Vanishes)
 </div>
-
-<div class="proof-block">
-  <div class="block-label">Proof.</div>
-  <div class="block-body"><p>Compute <span class="math-inline" data-latex="\partial_1(\partial_2([A,B,C]))"></span>:</p>
-<div class="math-display" data-latex="\partial_1\bigl([B,C] - [A,C] &#43; [A,B]\bigr) = (C-B) - (C-A) &#43; (B-A) = 0 \;\checkmark"></div>
-<p>In general, applying <span class="math-inline" data-latex="\partial_{k-1}"></span> to <span class="math-inline" data-latex="\partial_k[v_0,\ldots,v_k] = \sum_i (-1)^i [v_0,\ldots,\hat{v}_i,\ldots,v_k]"></span> and collecting terms by pairs <span class="math-inline" data-latex="(i,j)"></span> with <span class="math-inline" data-latex="i &lt; j"></span> shows every pair cancels with opposite sign. <span class="math-inline" data-latex="\square"></span></p>
+<div class=block-body>For any simplicial complex, <span class=math-inline data-latex="\partial_k \circ \partial_{k+1} = 0"></span>.</div>
+</div>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><p>Compute <span class=math-inline data-latex=\partial_1(\partial_2([A,B,C]))></span>:
+<span class=math-display data-latex="\partial_1\bigl([B,C] - [A,C] + [A,B]\bigr) = (C-B) - (C-A) + (B-A) = 0 \;\checkmark"></span></p>
+<p>In general, applying <span class=math-inline data-latex=\partial_{k-1}></span> to <span class=math-inline data-latex="\partial_k[v_0,\ldots,v_k] = \sum_i (-1)^i [v_0,\ldots,\hat{v}_i,\ldots,v_k]"></span> and collecting terms by pairs <span class=math-inline data-latex=(i,j)></span> with <span class=math-inline data-latex="i < j"></span> shows every pair cancels with opposite sign. <span class=math-inline data-latex=\square></span></p>
 </div>
 </div>
-
 <p><em>Geometric meaning</em>: The boundary of a solid region is a closed surface — which has no boundary itself. Algebraic signs enforce this cancellation. <strong>This one identity is what makes all of homology work.</strong></p>
-<p><img src="img/BoundarySquaredScene_ManimCE_v0.19.1.png" alt="Boundary-squared = 0: opposite boundary edges cancel"></p>
-<h3 id="p6--cycles-boundaries-and-the-definition-of-a-hole">P.6 — Cycles, Boundaries, and the Definition of a Hole</h3>
-
-
-<div class="definition-block" id="definition-p.1">
-  <div class="block-label">
-    Definition P.1 (Cycles and Boundaries)
-  </div>
-  <div class="block-body"><p>A <strong><span class="math-inline" data-latex="k"></span>-cycle</strong> is a <span class="math-inline" data-latex="k"></span>-chain with zero boundary: <span class="math-inline" data-latex="Z_k = \ker(\partial_k)"></span>.</p>
-<p>A <strong><span class="math-inline" data-latex="k"></span>-boundary</strong> is a <span class="math-inline" data-latex="k"></span>-chain in <span class="math-inline" data-latex="\operatorname{im}(\partial_{k&#43;1})"></span>.</p>
-<p>Since <span class="math-inline" data-latex="\partial^2 = 0"></span>: every boundary is automatically a cycle:</p>
-<div class="math-display" data-latex="B_k \;\subseteq\; Z_k \;\subseteq\; C_k"></div>
+<p><img src=img/BoundarySquaredScene_ManimCE_v0.19.1.png alt="Boundary-squared = 0: opposite boundary edges cancel"></p>
+<h3 id=p6--cycles-boundaries-and-the-definition-of-a-hole>P.6 — Cycles, Boundaries, and the Definition of a Hole</h3>
+<div class=definition-block id=definition-p.1>
+<div class=block-label>
+Definition P.1 (Cycles and Boundaries)
+</div>
+<div class=block-body><p>A <strong><span class=math-inline data-latex=k></span>-cycle</strong> is a <span class=math-inline data-latex=k></span>-chain with zero boundary: <span class=math-inline data-latex="Z_k = \ker(\partial_k)"></span>.</p>
+<p>A <strong><span class=math-inline data-latex=k></span>-boundary</strong> is a <span class=math-inline data-latex=k></span>-chain in <span class=math-inline data-latex=\operatorname{im}(\partial_{k+1})></span>.</p>
+<p>Since <span class=math-inline data-latex="\partial^2 = 0"></span>: every boundary is automatically a cycle:
+<span class=math-display data-latex="B_k \;\subseteq\; Z_k \;\subseteq\; C_k"></span></p>
 </div>
 </div>
-
 <table>
 <thead>
 <tr>
@@ -903,12 +263,12 @@ document.addEventListener('DOMContentLoaded', function() {
 </thead>
 <tbody>
 <tr>
-<td>Open path <span class="math-inline" data-latex="[A,B]"></span></td>
+<td>Open path <span class=math-inline data-latex=[A,B]></span></td>
 <td>No</td>
 <td>—</td>
 </tr>
 <tr>
-<td>Triangle perimeter <span class="math-inline" data-latex="\partial_2[A,B,C]"></span></td>
+<td>Triangle perimeter <span class=math-inline data-latex=\partial_2[A,B,C]></span></td>
 <td>Yes</td>
 <td>Yes</td>
 </tr>
@@ -919,39 +279,35 @@ document.addEventListener('DOMContentLoaded', function() {
 </tr>
 </tbody>
 </table>
-<p><img src="img/CycleScene_ManimCE_v0.19.1.png" alt="Cycles vs boundaries: which loops can be filled?"></p>
+<p><img src=img/CycleScene_ManimCE_v0.19.1.png alt="Cycles vs boundaries: which loops can be filled?"></p>
 <blockquote>
-<p><strong>A <span class="math-inline" data-latex="k"></span>-dimensional hole is a <span class="math-inline" data-latex="k"></span>-cycle that is NOT the boundary of any <span class="math-inline" data-latex="(k&#43;1)"></span>-chain.</strong></p>
+<p><strong>A <span class=math-inline data-latex=k></span>-dimensional hole is a <span class=math-inline data-latex=k></span>-cycle that is NOT the boundary of any <span class=math-inline data-latex=(k+1)></span>-chain.</strong></p>
 </blockquote>
-<p><img src="img/HoleScene_ManimCE_v0.19.1.png" alt="Holes as obstructions to filling: the algebraic picture"></p>
-<p>Two cycles are <strong>homologous</strong> if they differ by a boundary: <span class="math-inline" data-latex="c_1 \sim c_2 \iff c_1 - c_2 \in B_k"></span>.</p>
-<p><img src="img/VennScene_ManimCE_v0.19.1.png" alt="Venn diagram: <span class="math-inline" data-latex="B_k \subseteq Z_k \subseteq C_k"></span>"></p>
-
-
-<div class="definition-block" id="definition-p.2">
-  <div class="block-label">
-    Definition P.2 (Homology Groups and Betti Numbers)
-  </div>
-  <div class="block-body"><div class="math-display" data-latex="H_k = Z_k / B_k = \ker(\partial_k) \,/\, \operatorname{im}(\partial_{k&#43;1})"></div>
-<p>The <strong><span class="math-inline" data-latex="k"></span>-th Betti number</strong> <span class="math-inline" data-latex="\beta_k = \dim(H_k)"></span> counts independent <span class="math-inline" data-latex="k"></span>-dimensional holes.</div>
+<p><img src=img/HoleScene_ManimCE_v0.19.1.png alt="Holes as obstructions to filling: the algebraic picture"></p>
+<p>Two cycles are <strong>homologous</strong> if they differ by a boundary: <span class=math-inline data-latex="c_1 \sim c_2 \iff c_1 - c_2 \in B_k"></span>.</p>
+<p><img src=img/VennScene_ManimCE_v0.19.1.png alt="Venn diagram: <span class=" math-inline" data-latex="B_k \subseteq Z_k \subseteq C_k"></span>"></p>
+<div class=definition-block id=definition-p.2>
+<div class=block-label>
+Definition P.2 (Homology Groups and Betti Numbers)
 </div>
-
-<h3 id="p7--connecting-to-the-tonnetz-numbers">P.7 — Connecting to the Tonnetz Numbers</h3>
-<p>The video computes <span class="math-inline" data-latex="\dim(\ker \partial_1) = 25"></span> and <span class="math-inline" data-latex="\operatorname{rank}(\partial_2) = 23"></span>. Therefore:
-<div class="math-display" data-latex="\beta_1 = 25 - 23 = 2"></div></p>
+<div class=block-body><p><span class=math-display data-latex="H_k = Z_k / B_k = \ker(\partial_k) \,/\, \operatorname{im}(\partial_{k+1})"></span></p>
+<p>The <strong><span class=math-inline data-latex=k></span>-th Betti number</strong> <span class=math-inline data-latex="\beta_k = \dim(H_k)"></span> counts independent <span class=math-inline data-latex=k></span>-dimensional holes.</p>
+</div>
+</div>
+<h3 id=p7--connecting-to-the-tonnetz-numbers>P.7 — Connecting to the Tonnetz Numbers</h3>
+<p>The video computes <span class=math-inline data-latex="\dim(\ker \partial_1) = 25"></span> and <span class=math-inline data-latex="\operatorname{rank}(\partial_2) = 23"></span>. Therefore:
+<span class=math-display data-latex="\beta_1 = 25 - 23 = 2"></span></p>
 <p>Of 25 closed loops, 23 can be filled by triangles (fake holes). The remaining <strong>2 equivalence classes</strong> are genuine: one along the circle of fifths, one along the major third cycle. These two holes are why the harmonic component of the Hodge decomposition is non-trivial.</p>
-<p><em>Water-flow analogy</em>: Boundaries <span class="math-inline" data-latex="B_k"></span> are currents driven by a potential — remove the pump and they stop. Non-boundary cycles are currents with no source, no sink, no pump — they persist because the topology allows it. <span class="math-inline" data-latex="H_k = Z_k/B_k"></span> is the space of &ldquo;eternal currents.&rdquo;</p>
-<p><img src="img/QuotientScene_ManimCE_v0.19.1.png" alt="Quotient construction: <span class="math-inline" data-latex="H_k = Z_k / B_k"></span>, homologous cycles identified"></p>
-<p><img src="img/ExamplesABScene_ManimCE_v0.19.1.png" alt="Two homologous cycles on the torus: same hole, different paths"></p>
+<p><em>Water-flow analogy</em>: Boundaries <span class=math-inline data-latex=B_k></span> are currents driven by a potential — remove the pump and they stop. Non-boundary cycles are currents with no source, no sink, no pump — they persist because the topology allows it. <span class=math-inline data-latex="H_k = Z_k/B_k"></span> is the space of &ldquo;eternal currents.&rdquo;</p>
+<p><img src=img/QuotientScene_ManimCE_v0.19.1.png alt="Quotient construction: <span class=" math-inline" data-latex="H_k = Z_k / B_k"></span>, homologous cycles identified"></p>
+<p><img src=img/ExamplesABScene_ManimCE_v0.19.1.png alt="Two homologous cycles on the torus: same hole, different paths"></p>
 <hr>
-<h2 id="the-tonnetz-as-a-simplicial-complex">The Tonnetz as a Simplicial Complex</h2>
-
-
-<div class="definition-block" id="definition-0.1">
-  <div class="block-label">
-    Definition 0.1 (Tonnetz Simplicial Complex)
-  </div>
-  <div class="block-body"><p>The <strong>Tonnetz</strong> is a simplicial complex <span class="math-inline" data-latex="K"></span> triangulating the torus <span class="math-inline" data-latex="T^2 = S^1 \times S^1"></span>:</p>
+<h2 id=the-tonnetz-as-a-simplicial-complex>The Tonnetz as a Simplicial Complex</h2>
+<div class=definition-block id=definition-0.1>
+<div class=block-label>
+Definition 0.1 (Tonnetz Simplicial Complex)
+</div>
+<div class=block-body><p>The <strong>Tonnetz</strong> is a simplicial complex <span class=math-inline data-latex=K></span> triangulating the torus <span class=math-inline data-latex="T^2 = S^1 \times S^1"></span>:</p>
 <table>
 <thead>
 <tr>
@@ -964,7 +320,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <tbody>
 <tr>
 <td>0 (vertices)</td>
-<td>Pitch classes <span class="math-inline" data-latex="\{C, C\sharp, \ldots, B\}"></span></td>
+<td>Pitch classes <span class=math-inline data-latex="\{C, C\sharp, \ldots, B\}"></span></td>
 <td>12</td>
 <td>Individual notes</td>
 </tr>
@@ -982,54 +338,52 @@ document.addEventListener('DOMContentLoaded', function() {
 </tr>
 </tbody>
 </table>
-<p>Euler characteristic: <span class="math-inline" data-latex="\chi(K) = 12 - 36 &#43; 24 = 0"></span>. Since <span class="math-inline" data-latex="\chi = 2 - 2g"></span> for orientable closed surfaces, <span class="math-inline" data-latex="g = 1"></span> — confirming the torus.</p>
+<p>Euler characteristic: <span class=math-inline data-latex="\chi(K) = 12 - 36 + 24 = 0"></span>. Since <span class=math-inline data-latex="\chi = 2 - 2g"></span> for orientable closed surfaces, <span class=math-inline data-latex="g = 1"></span> — confirming the torus.</p>
 </div>
 </div>
-
-<div class="music-block">
-  <div class="block-label">音乐联系</div>
-  <div class="block-body"><p><em>中文:</em> &ldquo;Tonnetz 的顶点是十二个音高类，边是音程，三角形是三和弦。整个结构是一个三角剖分的环面。&rdquo;</p>
-<p>The 36 edges are exactly the consonant intervals of Western voice leading: perfect fifths (3:2), major thirds (5:4), minor thirds (6:5). Going up 12 perfect fifths returns to the starting pitch class mod 12; going up 4 major thirds does the same (<span class="math-inline" data-latex="4 \times 3 = 12"></span> semitones). Both directions &ldquo;close up,&rdquo; forcing the torus topology.</p>
+<div class=music-block>
+<div class=block-label>音乐联系</div>
+<div class=block-body><p><em>中文:</em> &ldquo;Tonnetz 的顶点是十二个音高类，边是音程，三角形是三和弦。整个结构是一个三角剖分的环面。&rdquo;</p>
+<p>The 36 edges are exactly the consonant intervals of Western voice leading: perfect fifths (3:2), major thirds (5:4), minor thirds (6:5). Going up 12 perfect fifths returns to the starting pitch class mod 12; going up 4 major thirds does the same (<span class=math-inline data-latex="4 \times 3 = 12"></span> semitones). Both directions &ldquo;close up,&rdquo; forcing the torus topology.</p>
 </div>
 </div>
-
-<p><strong>Betti numbers</strong> (from <span class="math-inline" data-latex="\operatorname{rank}(\partial_1) = 11"></span>, <span class="math-inline" data-latex="\operatorname{rank}(\partial_2) = 23"></span>):</p>
+<p><strong>Betti numbers</strong> (from <span class=math-inline data-latex="\operatorname{rank}(\partial_1) = 11"></span>, <span class=math-inline data-latex="\operatorname{rank}(\partial_2) = 23"></span>):</p>
 <table>
 <thead>
 <tr>
-<th><span class="math-inline" data-latex="\beta_k"></span></th>
+<th><span class=math-inline data-latex=\beta_k></span></th>
 <th>Value</th>
 <th>Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><span class="math-inline" data-latex="\beta_0 = 12 - 11"></span></td>
+<td><span class=math-inline data-latex="\beta_0 = 12 - 11"></span></td>
 <td>1</td>
 <td>Connected: all pitch classes in one piece</td>
 </tr>
 <tr>
-<td><span class="math-inline" data-latex="\beta_1 = 25 - 23"></span></td>
+<td><span class=math-inline data-latex="\beta_1 = 25 - 23"></span></td>
 <td>2</td>
 <td>Two non-contractible loops: circle of fifths + major third cycle</td>
 </tr>
 <tr>
-<td><span class="math-inline" data-latex="\beta_2 = 24 - 23"></span></td>
+<td><span class=math-inline data-latex="\beta_2 = 24 - 23"></span></td>
 <td>1</td>
 <td>One enclosed cavity (the torus encloses a void)</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<p><em>中文:</em> &ldquo;Betti 数 1, 2, 1 是环面 <span class="math-inline" data-latex="T^2"></span> 的拓扑签名。&rdquo;</p>
+<p><em>中文:</em> &ldquo;Betti 数 1, 2, 1 是环面 <span class=math-inline data-latex=T^2></span> 的拓扑签名。&rdquo;</p>
 </blockquote>
-<p><img src="img/TorusScene_ManimCE_v0.19.1.png" alt="The Tonnetz torus: two non-contractible loops, Betti numbers (1,2,1)"></p>
-<p><strong>The dual complex <span class="math-inline" data-latex="K^*"></span> (chicken-wire torus)</strong>: Reversing the roles of vertices and faces — each triangle of <span class="math-inline" data-latex="K"></span> becomes a vertex, each shared edge becomes an edge, each vertex becomes a hexagonal face — gives the <strong>Poincaré dual</strong> <span class="math-inline" data-latex="K^*"></span>:</p>
+<p><img src=img/TorusScene_ManimCE_v0.19.1.png alt="The Tonnetz torus: two non-contractible loops, Betti numbers (1,2,1)"></p>
+<p><strong>The dual complex <span class=math-inline data-latex=K^*></span> (chicken-wire torus)</strong>: Reversing the roles of vertices and faces — each triangle of <span class=math-inline data-latex=K></span> becomes a vertex, each shared edge becomes an edge, each vertex becomes a hexagonal face — gives the <strong>Poincaré dual</strong> <span class=math-inline data-latex=K^*></span>:</p>
 <table>
 <thead>
 <tr>
-<th>In <span class="math-inline" data-latex="K"></span></th>
-<th>In <span class="math-inline" data-latex="K^*"></span></th>
+<th>In <span class=math-inline data-latex=K></span></th>
+<th>In <span class=math-inline data-latex=K^*></span></th>
 </tr>
 </thead>
 <tbody>
@@ -1047,42 +401,35 @@ document.addEventListener('DOMContentLoaded', function() {
 </tr>
 </tbody>
 </table>
-<p><span class="math-inline" data-latex="\chi(K^*) = 0"></span> — still a torus. This is the <strong>chicken-wire torus</strong> of Douthett &amp; Steinbach (1998), where P, L, R transformations correspond to edges of <span class="math-inline" data-latex="K^*"></span>.</p>
-
-
-<div class="definition-block" id="definition-0.2">
-  <div class="block-label">
-    Definition 0.2 (k-Cochain)
-  </div>
-  <div class="block-body"><p>A <strong><span class="math-inline" data-latex="k"></span>-cochain</strong> <span class="math-inline" data-latex="\phi \in C^k(K)"></span> is a real-valued function on oriented <span class="math-inline" data-latex="k"></span>-simplices, satisfying <span class="math-inline" data-latex="\phi(-\sigma) = -\phi(\sigma)"></span>.</p>
+<p><span class=math-inline data-latex="\chi(K^*) = 0"></span> — still a torus. This is the <strong>chicken-wire torus</strong> of Douthett & Steinbach (1998), where P, L, R transformations correspond to edges of <span class=math-inline data-latex=K^*></span>.</p>
+<div class=definition-block id=definition-0.2>
+<div class=block-label>
+Definition 0.2 (k-Cochain)
+</div>
+<div class=block-body><p>A <strong><span class=math-inline data-latex=k></span>-cochain</strong> <span class=math-inline data-latex="\phi \in C^k(K)"></span> is a real-valued function on oriented <span class=math-inline data-latex=k></span>-simplices, satisfying <span class=math-inline data-latex="\phi(-\sigma) = -\phi(\sigma)"></span>.</p>
 <ul>
-<li><strong>0-cochain</strong> <span class="math-inline" data-latex="f \in C^0"></span>: a &ldquo;tonal weight&rdquo; on pitch classes. Example: <span class="math-inline" data-latex="f(C) = 1"></span>, <span class="math-inline" data-latex="f(G) = 0.8"></span>, …</li>
-<li><strong>1-cochain</strong> <span class="math-inline" data-latex="\omega \in C^1"></span>: a signed flow on directed intervals. Example: <span class="math-inline" data-latex="\omega([C,G]) = &#43;7"></span> (up a fifth), <span class="math-inline" data-latex="\omega([G,C]) = -7"></span>.</li>
-<li><strong>2-cochain</strong> <span class="math-inline" data-latex="g \in C^2"></span>: a signed weight on oriented triads.</li>
+<li><strong>0-cochain</strong> <span class=math-inline data-latex="f \in C^0"></span>: a &ldquo;tonal weight&rdquo; on pitch classes. Example: <span class=math-inline data-latex="f(C) = 1"></span>, <span class=math-inline data-latex="f(G) = 0.8"></span>, …</li>
+<li><strong>1-cochain</strong> <span class=math-inline data-latex="\omega \in C^1"></span>: a signed flow on directed intervals. Example: <span class=math-inline data-latex="\omega([C,G]) = +7"></span> (up a fifth), <span class=math-inline data-latex="\omega([G,C]) = -7"></span>.</li>
+<li><strong>2-cochain</strong> <span class=math-inline data-latex="g \in C^2"></span>: a signed weight on oriented triads.</li>
 </ul>
-<p>The <strong>coboundary</strong> <span class="math-inline" data-latex="\delta_k = \partial_{k&#43;1}^T : C^k \to C^{k&#43;1}"></span> satisfies <span class="math-inline" data-latex="\delta_k \circ \delta_{k-1} = 0"></span> — the cochain analogue of <span class="math-inline" data-latex="\partial^2 = 0"></span>.</p>
+<p>The <strong>coboundary</strong> <span class=math-inline data-latex="\delta_k = \partial_{k+1}^T : C^k \to C^{k+1}"></span> satisfies <span class=math-inline data-latex="\delta_k \circ \delta_{k-1} = 0"></span> — the cochain analogue of <span class=math-inline data-latex="\partial^2 = 0"></span>.</p>
 </div>
 </div>
-
-<p><img src="img/OneFormScene_ManimCE_v0.19.1.png" alt="A 1-form (cochain) assigns signed values to oriented edges of the Tonnetz"></p>
+<p><img src=img/OneFormScene_ManimCE_v0.19.1.png alt="A 1-form (cochain) assigns signed values to oriented edges of the Tonnetz"></p>
 <hr>
-<h2 id="section-1-the-hodge-star-operator-">Section 1: The Hodge Star Operator ★</h2>
+<h2 id=section-1-the-hodge-star-operator->Section 1: The Hodge Star Operator ★</h2>
 <blockquote>
-<p><em>中文:</em> &ldquo;离散 Hodge 星算子，记作 ★，是连接原始复形 <span class="math-inline" data-latex="K"></span> 和对偶复形 <span class="math-inline" data-latex="K^*"></span> 的代数算子。&rdquo;</p>
+<p><em>中文:</em> &ldquo;离散 Hodge 星算子，记作 ★，是连接原始复形 <span class=math-inline data-latex=K></span> 和对偶复形 <span class=math-inline data-latex=K^*></span> 的代数算子。&rdquo;</p>
 </blockquote>
-
-
-<div class="definition-block" id="definition-1.1">
-  <div class="block-label">
-    Definition 1.1 (Discrete Hodge Star)
-  </div>
-  <div class="block-body"><p>Let <span class="math-inline" data-latex="K"></span> triangulate an orientable closed <span class="math-inline" data-latex="n"></span>-manifold with dual <span class="math-inline" data-latex="K^*"></span>. The <strong>discrete Hodge star</strong> is the linear map</p>
-<div class="math-display" data-latex="\star_k : C^k(K) \to C^{n-k}(K^*)"></div>
-sending each basis <span class="math-inline" data-latex="k"></span>-cochain (dual to <span class="math-inline" data-latex="\sigma \in K"></span>) to the basis <span class="math-inline" data-latex="(n-k)"></span>-cochain (dual to <span class="math-inline" data-latex="\sigma^* \in K^*"></span>).
+<div class=definition-block id=definition-1.1>
+<div class=block-label>
+Definition 1.1 (Discrete Hodge Star)
 </div>
+<div class=block-body>Let <span class=math-inline data-latex=K></span> triangulate an orientable closed <span class=math-inline data-latex=n></span>-manifold with dual <span class=math-inline data-latex=K^*></span>. The <strong>discrete Hodge star</strong> is the linear map
+<span class=math-display data-latex="\star_k : C^k(K) \to C^{n-k}(K^*)"></span>
+sending each basis <span class=math-inline data-latex=k></span>-cochain (dual to <span class=math-inline data-latex="\sigma \in K"></span>) to the basis <span class=math-inline data-latex=(n-k)></span>-cochain (dual to <span class=math-inline data-latex="\sigma^* \in K^*"></span>).</div>
 </div>
-
-<p>For the Tonnetz torus (<span class="math-inline" data-latex="n = 2"></span>):</p>
+<p>For the Tonnetz torus (<span class=math-inline data-latex="n = 2"></span>):</p>
 <table>
 <thead>
 <tr>
@@ -1093,18 +440,18 @@ sending each basis <span class="math-inline" data-latex="k"></span>-cochain (dua
 </thead>
 <tbody>
 <tr>
-<td><span class="math-inline" data-latex="\star_0 : C^0(K) \to C^2(K^*)"></span></td>
-<td><span class="math-inline" data-latex="12 \to 12"></span></td>
+<td><span class=math-inline data-latex="\star_0 : C^0(K) \to C^2(K^*)"></span></td>
+<td><span class=math-inline data-latex="12 \to 12"></span></td>
 <td>Pitch-class weights → hexagonal face weights</td>
 </tr>
 <tr>
-<td><span class="math-inline" data-latex="\star_1 : C^1(K) \to C^1(K^*)"></span></td>
-<td><span class="math-inline" data-latex="36 \to 36"></span></td>
+<td><span class=math-inline data-latex="\star_1 : C^1(K) \to C^1(K^*)"></span></td>
+<td><span class=math-inline data-latex="36 \to 36"></span></td>
 <td>Interval flows ↔ PLR voice-leading flows</td>
 </tr>
 <tr>
-<td><span class="math-inline" data-latex="\star_2 : C^2(K) \to C^0(K^*)"></span></td>
-<td><span class="math-inline" data-latex="24 \to 24"></span></td>
+<td><span class=math-inline data-latex="\star_2 : C^2(K) \to C^0(K^*)"></span></td>
+<td><span class=math-inline data-latex="24 \to 24"></span></td>
 <td>Triad weights → dual vertex weights</td>
 </tr>
 </tbody>
@@ -1114,138 +461,110 @@ sending each basis <span class="math-inline" data-latex="k"></span>-cochain (dua
 </blockquote>
 <p><strong>Worked examples</strong>:</p>
 <ul>
-<li><strong><span class="math-inline" data-latex="\star_0"></span></strong>: <span class="math-inline" data-latex="f \in C^0"></span> with <span class="math-inline" data-latex="f(C)=1"></span>, all others $0$ → <span class="math-inline" data-latex="\star_0 f"></span> assigns $1$ to the hexagonal face of <span class="math-inline" data-latex="K^*"></span> surrounding <span class="math-inline" data-latex="C"></span>, bounded by the six triads containing <span class="math-inline" data-latex="C"></span>. Translates &ldquo;note C&rdquo; into &ldquo;hexagonal region of triadic space centered on C.&rdquo;</li>
-<li><strong><span class="math-inline" data-latex="\star_1"></span> (self-dual)</strong>: Flow <span class="math-inline" data-latex="&#43;1"></span> on edge <span class="math-inline" data-latex="[C,E]"></span> (major third) → the dual edge connects the two triads sharing <span class="math-inline" data-latex="C"></span> and <span class="math-inline" data-latex="E"></span>: C major and A minor. Translates &ldquo;interval flow&rdquo; into &ldquo;PLR voice-leading motion between the two triads sharing that interval.&rdquo;</li>
+<li><strong><span class=math-inline data-latex=\star_0></span></strong>: <span class=math-inline data-latex="f \in C^0"></span> with <span class=math-inline data-latex="f(C)=1"></span>, all others $0$ → <span class=math-inline data-latex="\star_0 f"></span> assigns $1$ to the hexagonal face of <span class=math-inline data-latex=K^*></span> surrounding <span class=math-inline data-latex=C></span>, bounded by the six triads containing <span class=math-inline data-latex=C></span>. Translates &ldquo;note C&rdquo; into &ldquo;hexagonal region of triadic space centered on C.&rdquo;</li>
+<li><strong><span class=math-inline data-latex=\star_1></span> (self-dual)</strong>: Flow <span class=math-inline data-latex=+1></span> on edge <span class=math-inline data-latex=[C,E]></span> (major third) → the dual edge connects the two triads sharing <span class=math-inline data-latex=C></span> and <span class=math-inline data-latex=E></span>: C major and A minor. Translates &ldquo;interval flow&rdquo; into &ldquo;PLR voice-leading motion between the two triads sharing that interval.&rdquo;</li>
 </ul>
-
-
-<div class="theorem-block" id="theorem-1.1">
-  <div class="block-label">
-    Theorem 1.1 (Poincaré Duality — Cell Count)
-  </div>
-  <div class="block-body">For an orientable closed <span class="math-inline" data-latex="n"></span>-manifold, the number of <span class="math-inline" data-latex="k"></span>-cells in <span class="math-inline" data-latex="K"></span> equals the number of <span class="math-inline" data-latex="(n-k)"></span>-cells in <span class="math-inline" data-latex="K^*"></span>. Consequently <span class="math-inline" data-latex="\star_k"></span> is a square matrix.</div>
+<div class=theorem-block id=theorem-1.1>
+<div class=block-label>
+Theorem 1.1 (Poincaré Duality — Cell Count)
 </div>
-
-<div class="proof-block">
-  <div class="block-label">Proof.</div>
-  <div class="block-body">The construction of <span class="math-inline" data-latex="K^*"></span> gives a bijection <span class="math-inline" data-latex="\sigma \mapsto \sigma^*"></span> between <span class="math-inline" data-latex="k"></span>-simplices of <span class="math-inline" data-latex="K"></span> and <span class="math-inline" data-latex="(n-k)"></span>-cells of <span class="math-inline" data-latex="K^*"></span>. Therefore <span class="math-inline" data-latex="\dim C^k(K) = \dim C^{n-k}(K^*)"></span>. <span class="math-inline" data-latex="\square"></span></div>
+<div class=block-body>For an orientable closed <span class=math-inline data-latex=n></span>-manifold, the number of <span class=math-inline data-latex=k></span>-cells in <span class=math-inline data-latex=K></span> equals the number of <span class=math-inline data-latex=(n-k)></span>-cells in <span class=math-inline data-latex=K^*></span>. Consequently <span class=math-inline data-latex=\star_k></span> is a square matrix.</div>
 </div>
-
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body>The construction of <span class=math-inline data-latex=K^*></span> gives a bijection <span class=math-inline data-latex="\sigma \mapsto \sigma^*"></span> between <span class=math-inline data-latex=k></span>-simplices of <span class=math-inline data-latex=K></span> and <span class=math-inline data-latex=(n-k)></span>-cells of <span class=math-inline data-latex=K^*></span>. Therefore <span class=math-inline data-latex="\dim C^k(K) = \dim C^{n-k}(K^*)"></span>. <span class=math-inline data-latex=\square></span></div>
+</div>
 <blockquote>
-<p><em>中文:</em> &ldquo;Poincaré 对偶保证原始 <span class="math-inline" data-latex="k"></span>-胞腔数等于对偶 <span class="math-inline" data-latex="n-k"></span> 胞腔数，所以 ★ 总是方阵。&rdquo;</p>
+<p><em>中文:</em> &ldquo;Poincaré 对偶保证原始 <span class=math-inline data-latex=k></span>-胞腔数等于对偶 <span class=math-inline data-latex=n-k></span> 胞腔数，所以 ★ 总是方阵。&rdquo;</p>
 </blockquote>
-<p><strong>Self-duality at the middle dimension</strong>: When <span class="math-inline" data-latex="k = n/2"></span>, <span class="math-inline" data-latex="\star_k"></span> maps a space to itself. For the Tonnetz torus (<span class="math-inline" data-latex="n=2"></span>, <span class="math-inline" data-latex="k=1"></span>): 1-cochains are self-dual. Same phenomenon: the electromagnetic field tensor <span class="math-inline" data-latex="F"></span> is a 2-form on Minkowski spacetime (<span class="math-inline" data-latex="n=4"></span>, <span class="math-inline" data-latex="k=2"></span>), and Maxwell&rsquo;s equations are <span class="math-inline" data-latex="dF = 0"></span>, <span class="math-inline" data-latex="d{\star}F = J"></span>.</p>
+<p><strong>Self-duality at the middle dimension</strong>: When <span class=math-inline data-latex="k = n/2"></span>, <span class=math-inline data-latex=\star_k></span> maps a space to itself. For the Tonnetz torus (<span class=math-inline data-latex="n=2"></span>, <span class=math-inline data-latex="k=1"></span>): 1-cochains are self-dual. Same phenomenon: the electromagnetic field tensor <span class=math-inline data-latex=F></span> is a 2-form on Minkowski spacetime (<span class=math-inline data-latex="n=4"></span>, <span class=math-inline data-latex="k=2"></span>), and Maxwell&rsquo;s equations are <span class=math-inline data-latex="dF = 0"></span>, <span class=math-inline data-latex="d{\star}F = J"></span>.</p>
 <blockquote>
-<p><em>中文:</em> &ldquo;其实 Maxwell 方程组可以写成两行：<span class="math-inline" data-latex="dF = 0"></span>，<span class="math-inline" data-latex="d\star F = J"></span>。整个电磁学就是外微分 <span class="math-inline" data-latex="d"></span> 和 Hodge 星的组合。&rdquo;</p>
+<p><em>中文:</em> &ldquo;其实 Maxwell 方程组可以写成两行：<span class=math-inline data-latex="dF = 0"></span>，<span class=math-inline data-latex="d\star F = J"></span>。整个电磁学就是外微分 <span class=math-inline data-latex=d></span> 和 Hodge 星的组合。&rdquo;</p>
 </blockquote>
 <hr>
-<h2 id="section-2-inner-product-and-adjoint-operators">Section 2: Inner Product and Adjoint Operators</h2>
-
-
-<div class="definition-block" id="definition-2.1">
-  <div class="block-label">
-    Definition 2.1 (Standard Inner Product on Cochain Spaces)
-  </div>
-  <div class="block-body"><p>Equip <span class="math-inline" data-latex="C^k"></span> with the inner product declaring all basis <span class="math-inline" data-latex="k"></span>-simplices orthonormal:</p>
-<div class="math-display" data-latex="\langle e_i, e_j \rangle = \delta_{ij}"></div>
+<h2 id=section-2-inner-product-and-adjoint-operators>Section 2: Inner Product and Adjoint Operators</h2>
+<div class=definition-block id=definition-2.1>
+<div class=block-label>
+Definition 2.1 (Standard Inner Product on Cochain Spaces)
 </div>
+<div class=block-body>Equip <span class=math-inline data-latex=C^k></span> with the inner product declaring all basis <span class=math-inline data-latex=k></span>-simplices orthonormal:
+<span class=math-display data-latex="\langle e_i, e_j \rangle = \delta_{ij}"></span></div>
 </div>
-
 <blockquote>
-<p><em>中文:</em> &ldquo;我们给链空间 <span class="math-inline" data-latex="C_k"></span> 装一个标准内积，声明基底正交归一。&rdquo;</p>
+<p><em>中文:</em> &ldquo;我们给链空间 <span class=math-inline data-latex=C_k></span> 装一个标准内积，声明基底正交归一。&rdquo;</p>
 </blockquote>
-<p>The inner product identifies chains with cochains canonically, and gives us the <strong>adjoint</strong> of <span class="math-inline" data-latex="\partial"></span> — the key ingredient for the Hodge Laplacian.</p>
-
-
-<div class="definition-block" id="definition-2.2">
-  <div class="block-label">
-    Definition 2.2 (Coboundary (Adjoint) Operator)
-  </div>
-  <div class="block-body"><p>The <strong>coboundary</strong> <span class="math-inline" data-latex="\delta_k := \partial_{k&#43;1}^T : C^k \to C^{k&#43;1}"></span> is the transpose of the boundary operator. It runs in the opposite direction:</p>
-<div class="math-display" data-latex="C_2 \xrightarrow{\partial_2} C_1 \xrightarrow{\partial_1} C_0 \qquad \text{(boundary, downward)}"></div>
-<div class="math-display" data-latex="C^0 \xrightarrow{\delta_0 = \partial_1^T} C^1 \xrightarrow{\delta_1 = \partial_2^T} C^2 \qquad \text{(coboundary, upward)}"></div>
-The adjoint property: <span class="math-inline" data-latex="\langle \partial_{k&#43;1}\beta, \alpha \rangle = \langle \beta, \delta_k \alpha \rangle"></span>.
+<p>The inner product identifies chains with cochains canonically, and gives us the <strong>adjoint</strong> of <span class=math-inline data-latex=\partial></span> — the key ingredient for the Hodge Laplacian.</p>
+<div class=definition-block id=definition-2.2>
+<div class=block-label>
+Definition 2.2 (Coboundary (Adjoint) Operator)
 </div>
+<div class=block-body>The <strong>coboundary</strong> <span class=math-inline data-latex="\delta_k := \partial_{k+1}^T : C^k \to C^{k+1}"></span> is the transpose of the boundary operator. It runs in the opposite direction:
+<span class=math-display data-latex="C_2 \xrightarrow{\partial_2} C_1 \xrightarrow{\partial_1} C_0 \qquad \text{(boundary, downward)}"></span>
+<span class=math-display data-latex="C^0 \xrightarrow{\delta_0 = \partial_1^T} C^1 \xrightarrow{\delta_1 = \partial_2^T} C^2 \qquad \text{(coboundary, upward)}"></span>
+The adjoint property: <span class=math-inline data-latex="\langle \partial_{k+1}\beta, \alpha \rangle = \langle \beta, \delta_k \alpha \rangle"></span>.</div>
 </div>
-
 <blockquote>
-<p><em>中文:</em> &ldquo;伴随算子的方向和 <span class="math-inline" data-latex="\partial"></span> 相反。<span class="math-inline" data-latex="\partial"></span> 从高维到低维，它的转置从低维到高维。&rdquo;</p>
+<p><em>中文:</em> &ldquo;伴随算子的方向和 <span class=math-inline data-latex=\partial></span> 相反。<span class=math-inline data-latex=\partial></span> 从高维到低维，它的转置从低维到高维。&rdquo;</p>
 </blockquote>
-<p><strong>Worked example (<span class="math-inline" data-latex="\delta_0"></span> — discrete gradient)</strong>: Let <span class="math-inline" data-latex="f \in C^0"></span> have <span class="math-inline" data-latex="f(C) = 1"></span>, <span class="math-inline" data-latex="f = 0"></span> elsewhere. Then <span class="math-inline" data-latex="(\delta_0 f)([C,E]) = f(E) - f(C) = -1"></span> and <span class="math-inline" data-latex="(\delta_0 f)([G,C]) = f(C) - f(G) = &#43;1"></span>. So <span class="math-inline" data-latex="\delta_0 f"></span> assigns <span class="math-inline" data-latex="-1"></span> to every edge <em>leaving</em> <span class="math-inline" data-latex="C"></span> and <span class="math-inline" data-latex="&#43;1"></span> to every edge <em>arriving</em> at <span class="math-inline" data-latex="C"></span> — a discrete gradient converging toward the high-potential note.</p>
-
-
-<div class="proposition-block" id="prop-2.1">
-  <div class="block-label">
-    Prop 2.1 (Coboundary Squared = 0)
-  </div>
-  <div class="block-body"><span class="math-inline" data-latex="\delta_k \circ \delta_{k-1} = 0"></span>.</div>
+<p><strong>Worked example (<span class=math-inline data-latex=\delta_0></span> — discrete gradient)</strong>: Let <span class=math-inline data-latex="f \in C^0"></span> have <span class=math-inline data-latex="f(C) = 1"></span>, <span class=math-inline data-latex="f = 0"></span> elsewhere. Then <span class=math-inline data-latex="(\delta_0 f)([C,E]) = f(E) - f(C) = -1"></span> and <span class=math-inline data-latex="(\delta_0 f)([G,C]) = f(C) - f(G) = +1"></span>. So <span class=math-inline data-latex="\delta_0 f"></span> assigns <span class=math-inline data-latex=-1></span> to every edge <em>leaving</em> <span class=math-inline data-latex=C></span> and <span class=math-inline data-latex=+1></span> to every edge <em>arriving</em> at <span class=math-inline data-latex=C></span> — a discrete gradient converging toward the high-potential note.</p>
+<div class=proposition-block id=prop-2.1>
+<div class=block-label>
+Prop 2.1 (Coboundary Squared = 0)
 </div>
-
-<div class="proof-block">
-  <div class="block-label">Proof.</div>
-  <div class="block-body"><span class="math-inline" data-latex="\delta_k \circ \delta_{k-1} = \partial_{k&#43;1}^T \circ \partial_k^T = (\partial_k \circ \partial_{k&#43;1})^T = 0^T = 0"></span>. <span class="math-inline" data-latex="\square"></span></div>
+<div class=block-body><span class=math-inline data-latex="\delta_k \circ \delta_{k-1} = 0"></span>.</div>
 </div>
-
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><span class=math-inline data-latex="\delta_k \circ \delta_{k-1} = \partial_{k+1}^T \circ \partial_k^T = (\partial_k \circ \partial_{k+1})^T = 0^T = 0"></span>. <span class=math-inline data-latex=\square></span></div>
+</div>
 <hr>
-<h2 id="section-3-the-hodge-laplacian">Section 3: The Hodge Laplacian</h2>
+<h2 id=section-3-the-hodge-laplacian>Section 3: The Hodge Laplacian</h2>
 <blockquote>
-<p><em>中文:</em> &ldquo;<span class="math-inline" data-latex="L_k"></span> 的两个矩阵项分别检测两类&rsquo;非调和&rsquo;分量。<span class="math-inline" data-latex="\partial_k^T \partial_k"></span> 检测非零梯度，<span class="math-inline" data-latex="\partial_{k&#43;1} \partial_{k&#43;1}^T"></span> 检测非零旋度。&rdquo;</p>
+<p><em>中文:</em> &ldquo;<span class=math-inline data-latex=L_k></span> 的两个矩阵项分别检测两类&rsquo;非调和&rsquo;分量。<span class=math-inline data-latex="\partial_k^T \partial_k"></span> 检测非零梯度，<span class=math-inline data-latex="\partial_{k+1} \partial_{k+1}^T"></span> 检测非零旋度。&rdquo;</p>
 </blockquote>
-
-
-<div class="definition-block" id="definition-3.1">
-  <div class="block-label">
-    Definition 3.1 (Hodge Laplacian)
-  </div>
-  <div class="block-body"><p>The <strong><span class="math-inline" data-latex="k"></span>-th Hodge Laplacian</strong> is the self-adjoint operator <span class="math-inline" data-latex="L_k : C^k \to C^k"></span>:</p>
-<div class="math-display" data-latex="L_k = \partial_k^T \partial_k &#43; \partial_{k&#43;1} \partial_{k&#43;1}^T"></div>
+<div class=definition-block id=definition-3.1>
+<div class=block-label>
+Definition 3.1 (Hodge Laplacian)
+</div>
+<div class=block-body><p>The <strong><span class=math-inline data-latex=k></span>-th Hodge Laplacian</strong> is the self-adjoint operator <span class=math-inline data-latex="L_k : C^k \to C^k"></span>:
+<span class=math-display data-latex="L_k = \partial_k^T \partial_k + \partial_{k+1} \partial_{k+1}^T"></span></p>
 <ul>
-<li><span class="math-inline" data-latex="\partial_k^T \partial_k"></span> (down-up): penalizes non-zero divergence (sources/sinks at vertices).</li>
-<li><span class="math-inline" data-latex="\partial_{k&#43;1} \partial_{k&#43;1}^T"></span> (up-down): penalizes non-zero curl (circulation around faces).</li>
+<li><span class=math-inline data-latex="\partial_k^T \partial_k"></span> (down-up): penalizes non-zero divergence (sources/sinks at vertices).</li>
+<li><span class=math-inline data-latex="\partial_{k+1} \partial_{k+1}^T"></span> (up-down): penalizes non-zero curl (circulation around faces).</li>
 </ul>
-<p><span class="math-inline" data-latex="L_1 \omega = 0"></span> means the 1-cochain <span class="math-inline" data-latex="\omega"></span> has <em>neither</em> sources/sinks <em>nor</em> local whirlpools.</p>
+<p><span class=math-inline data-latex="L_1 \omega = 0"></span> means the 1-cochain <span class=math-inline data-latex=\omega></span> has <em>neither</em> sources/sinks <em>nor</em> local whirlpools.</p>
 </div>
 </div>
-
-<p><strong>Heat diffusion analogy</strong>: Imagine edge flows as temperatures on a donut-shaped pipe network. <span class="math-inline" data-latex="L_1 \omega"></span> measures how far <span class="math-inline" data-latex="\omega"></span> is from thermal equilibrium. The equilibrium states — where no gradient wants to push heat downhill and no eddy stirs heat in circles — are the <strong>harmonic forms</strong>.</p>
-
-
-<div class="proposition-block" id="prop-3.1">
-  <div class="block-label">
-    Prop 3.1 (Hodge Laplacian is PSD)
-  </div>
-  <div class="block-body"><span class="math-inline" data-latex="L_k"></span> is symmetric and positive semi-definite: <span class="math-inline" data-latex="\langle L_k \omega, \omega \rangle = \|\partial_k \omega\|^2 &#43; \|\partial_{k&#43;1}^T \omega\|^2 \geq 0"></span>.</div>
+<p><strong>Heat diffusion analogy</strong>: Imagine edge flows as temperatures on a donut-shaped pipe network. <span class=math-inline data-latex="L_1 \omega"></span> measures how far <span class=math-inline data-latex=\omega></span> is from thermal equilibrium. The equilibrium states — where no gradient wants to push heat downhill and no eddy stirs heat in circles — are the <strong>harmonic forms</strong>.</p>
+<div class=proposition-block id=prop-3.1>
+<div class=block-label>
+Prop 3.1 (Hodge Laplacian is PSD)
 </div>
-
-<div class="proof-block">
-  <div class="block-label">Proof.</div>
-  <div class="block-body"><span class="math-inline" data-latex="\langle L_k \omega, \omega \rangle = \langle \partial_k^T \partial_k \omega, \omega \rangle &#43; \langle \partial_{k&#43;1} \partial_{k&#43;1}^T \omega, \omega \rangle = \|\partial_k \omega\|^2 &#43; \|\partial_{k&#43;1}^T \omega\|^2 \geq 0"></span>. <span class="math-inline" data-latex="\square"></span></div>
+<div class=block-body><span class=math-inline data-latex=L_k></span> is symmetric and positive semi-definite: <span class=math-inline data-latex="\langle L_k \omega, \omega \rangle = \|\partial_k \omega\|^2 + \|\partial_{k+1}^T \omega\|^2 \geq 0"></span>.</div>
 </div>
-
-
-
-<div class="theorem-block" id="theorem-3.1">
-  <div class="block-label">
-    Theorem 3.1 (Discrete Hodge Theorem)
-  </div>
-  <div class="block-body"><p>For any finite simplicial complex <span class="math-inline" data-latex="K"></span> with the standard inner product:</p>
-<div class="math-display" data-latex="\ker(L_k) \cong H^k(K;\mathbb{R}), \qquad \dim(\ker L_k) = \beta_k"></div>
-Elements of <span class="math-inline" data-latex="\ker(L_k)"></span> are called **harmonic forms** (调和形式).
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><span class=math-inline data-latex="\langle L_k \omega, \omega \rangle = \langle \partial_k^T \partial_k \omega, \omega \rangle + \langle \partial_{k+1} \partial_{k+1}^T \omega, \omega \rangle = \|\partial_k \omega\|^2 + \|\partial_{k+1}^T \omega\|^2 \geq 0"></span>. <span class=math-inline data-latex=\square></span></div>
 </div>
+<div class=theorem-block id=theorem-3.1>
+<div class=block-label>
+Theorem 3.1 (Discrete Hodge Theorem)
 </div>
-
-<div class="proof-block">
-  <div class="block-label">Proof.</div>
-  <div class="block-body"><p>Since <span class="math-inline" data-latex="L_k"></span> is PSD:</p>
-<div class="math-display" data-latex="\omega \in \ker(L_k) \iff \langle L_k \omega, \omega \rangle = 0 \iff \|\partial_k \omega\|^2 &#43; \|\partial_{k&#43;1}^T \omega\|^2 = 0"></div>
-<div class="math-display" data-latex="\iff \partial_k \omega = 0 \;\;\text{AND}\;\; \partial_{k&#43;1}^T \omega = 0"></div>
-<p>So <span class="math-inline" data-latex="\ker(L_k) = \ker(\partial_k) \cap \ker(\partial_{k&#43;1}^T)"></span> — the set of <span class="math-inline" data-latex="k"></span>-cycles that are orthogonal to all boundaries.</p>
-<p>Since <span class="math-inline" data-latex="Z^k = B^k \oplus (Z^k \cap (B^k)^\perp)"></span> (orthogonal decomposition), we have <span class="math-inline" data-latex="H^k = Z^k/B^k \cong Z^k \cap (B^k)^\perp = \ker(L_k)"></span>. Therefore <span class="math-inline" data-latex="\dim \ker(L_k) = \beta_k"></span>. <span class="math-inline" data-latex="\square"></span></p>
+<div class=block-body>For any finite simplicial complex <span class=math-inline data-latex=K></span> with the standard inner product:
+<span class=math-display data-latex="\ker(L_k) \cong H^k(K;\mathbb{R}), \qquad \dim(\ker L_k) = \beta_k"></span>
+Elements of <span class=math-inline data-latex=\ker(L_k)></span> are called <strong>harmonic forms</strong> (调和形式).</div>
+</div>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><p>Since <span class=math-inline data-latex=L_k></span> is PSD:
+<span class=math-display data-latex="\omega \in \ker(L_k) \iff \langle L_k \omega, \omega \rangle = 0 \iff \|\partial_k \omega\|^2 + \|\partial_{k+1}^T \omega\|^2 = 0"></span>
+<span class=math-display data-latex="\iff \partial_k \omega = 0 \;\;\text{AND}\;\; \partial_{k+1}^T \omega = 0"></span></p>
+<p>So <span class=math-inline data-latex="\ker(L_k) = \ker(\partial_k) \cap \ker(\partial_{k+1}^T)"></span> — the set of <span class=math-inline data-latex=k></span>-cycles that are orthogonal to all boundaries.</p>
+<p>Since <span class=math-inline data-latex="Z^k = B^k \oplus (Z^k \cap (B^k)^\perp)"></span> (orthogonal decomposition), we have <span class=math-inline data-latex="H^k = Z^k/B^k \cong Z^k \cap (B^k)^\perp = \ker(L_k)"></span>. Therefore <span class=math-inline data-latex="\dim \ker(L_k) = \beta_k"></span>. <span class=math-inline data-latex=\square></span></p>
 </div>
 </div>
-
 <blockquote>
-<p><em>中文:</em> &ldquo;Hodge 定理说，<span class="math-inline" data-latex="L_k"></span> 的 kernel 同构于第 <span class="math-inline" data-latex="k"></span> 个上同调群。kernel 里的元素叫调和形式。&rdquo;</p>
+<p><em>中文:</em> &ldquo;Hodge 定理说，<span class=math-inline data-latex=L_k></span> 的 kernel 同构于第 <span class=math-inline data-latex=k></span> 个上同调群。kernel 里的元素叫调和形式。&rdquo;</p>
 </blockquote>
 <p><strong>Concrete numbers for the Tonnetz</strong>:</p>
 <table>
@@ -1253,79 +572,75 @@ Elements of <span class="math-inline" data-latex="\ker(L_k)"></span> are called 
 <tr>
 <th>Laplacian</th>
 <th>Size</th>
-<th><span class="math-inline" data-latex="\ker"></span> dimension</th>
+<th><span class=math-inline data-latex=\ker></span> dimension</th>
 <th>Musical interpretation</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><span class="math-inline" data-latex="L_0"></span></td>
-<td><span class="math-inline" data-latex="12\times 12"></span></td>
-<td><span class="math-inline" data-latex="\beta_0 = 1"></span></td>
+<td><span class=math-inline data-latex=L_0></span></td>
+<td><span class=math-inline data-latex="12\times 12"></span></td>
+<td><span class=math-inline data-latex="\beta_0 = 1"></span></td>
 <td>One constant harmonic function (connected)</td>
 </tr>
 <tr>
-<td><span class="math-inline" data-latex="L_1"></span></td>
-<td><span class="math-inline" data-latex="36\times 36"></span></td>
-<td><span class="math-inline" data-latex="\beta_1 = 2"></span></td>
+<td><span class=math-inline data-latex=L_1></span></td>
+<td><span class=math-inline data-latex="36\times 36"></span></td>
+<td><span class=math-inline data-latex="\beta_1 = 2"></span></td>
 <td>Two independent harmonic interval flows</td>
 </tr>
 <tr>
-<td><span class="math-inline" data-latex="L_2"></span></td>
-<td><span class="math-inline" data-latex="24\times 24"></span></td>
-<td><span class="math-inline" data-latex="\beta_2 = 1"></span></td>
+<td><span class=math-inline data-latex=L_2></span></td>
+<td><span class=math-inline data-latex="24\times 24"></span></td>
+<td><span class=math-inline data-latex="\beta_2 = 1"></span></td>
 <td>One harmonic 2-cochain (volume form)</td>
 </tr>
 </tbody>
 </table>
-<p>The two harmonic 1-cochains in <span class="math-inline" data-latex="\ker(L_1)"></span> correspond to:</p>
+<p>The two harmonic 1-cochains in <span class=math-inline data-latex=\ker(L_1)></span> correspond to:</p>
 <ol>
 <li>The <strong>circle of fifths direction</strong>: C→G→D→A→E→B→F♯→C♯→A♭→E♭→B♭→F→C</li>
 <li>The <strong>major third direction</strong>: C→E→G♯→C</li>
 </ol>
-<p>These are the only non-zero flows on the torus that are simultaneously divergence-free and curl-free. A sphere (<span class="math-inline" data-latex="\beta_1 = 0"></span>) would have no such flows; a double torus (<span class="math-inline" data-latex="\beta_1 = 4"></span>) would have four.</p>
+<p>These are the only non-zero flows on the torus that are simultaneously divergence-free and curl-free. A sphere (<span class=math-inline data-latex="\beta_1 = 0"></span>) would have no such flows; a double torus (<span class=math-inline data-latex="\beta_1 = 4"></span>) would have four.</p>
 <blockquote>
-<p><em>中文:</em> &ldquo;对 Tonnetz 上的 1-上链来说，调和空间的维度等于 <span class="math-inline" data-latex="\beta_1 = 2"></span>，对应五度圈方向和大三度方向的两个独立全局循环。&rdquo;</p>
+<p><em>中文:</em> &ldquo;对 Tonnetz 上的 1-上链来说，调和空间的维度等于 <span class=math-inline data-latex="\beta_1 = 2"></span>，对应五度圈方向和大三度方向的两个独立全局循环。&rdquo;</p>
 </blockquote>
 <hr>
-<h2 id="section-4-the-hodge-decomposition-theorem">Section 4: The Hodge Decomposition Theorem</h2>
+<h2 id=section-4-the-hodge-decomposition-theorem>Section 4: The Hodge Decomposition Theorem</h2>
 <blockquote>
-<p><em>中文:</em> &ldquo;任意 <span class="math-inline" data-latex="k"></span> 维上链都可以唯一正交分解为三个分量。&rdquo;</p>
+<p><em>中文:</em> &ldquo;任意 <span class=math-inline data-latex=k></span> 维上链都可以唯一正交分解为三个分量。&rdquo;</p>
 </blockquote>
-
-
-<div class="theorem-block" id="theorem-4.1">
-  <div class="block-label">
-    Theorem 4.1 (Discrete Hodge Decomposition)
-  </div>
-  <div class="block-body"><p>For any finite simplicial complex <span class="math-inline" data-latex="K"></span> with standard inner product, the cochain space <span class="math-inline" data-latex="C^k"></span> admits an <strong>orthogonal direct sum decomposition</strong>:</p>
-<div class="math-display" data-latex="C^k = \operatorname{im}(\partial_k^T) \;\oplus\; \operatorname{im}(\partial_{k&#43;1}) \;\oplus\; \ker(L_k)"></div>
-<p>Every <span class="math-inline" data-latex="\omega \in C^k"></span> has a <strong>unique</strong> decomposition:</p>
-<div class="math-display" data-latex="\omega = \underbrace{\omega_{\text{exact}}}_{\in\,\operatorname{im}(\partial_k^T)} \;&#43;\; \underbrace{\omega_{\text{coexact}}}_{\in\,\operatorname{im}(\partial_{k&#43;1})} \;&#43;\; \underbrace{\omega_{\text{harmonic}}}_{\in\,\ker(L_k)}"></div>
-<p>Moreover: <span class="math-inline" data-latex="\|\omega\|^2 = \|\omega_\text{exact}\|^2 &#43; \|\omega_\text{coexact}\|^2 &#43; \|\omega_\text{harmonic}\|^2"></span> (Pythagorean theorem for orthogonal components).</p>
+<div class=theorem-block id=theorem-4.1>
+<div class=block-label>
+Theorem 4.1 (Discrete Hodge Decomposition)
+</div>
+<div class=block-body><p>For any finite simplicial complex <span class=math-inline data-latex=K></span> with standard inner product, the cochain space <span class=math-inline data-latex=C^k></span> admits an <strong>orthogonal direct sum decomposition</strong>:
+<span class=math-display data-latex="C^k = \operatorname{im}(\partial_k^T) \;\oplus\; \operatorname{im}(\partial_{k+1}) \;\oplus\; \ker(L_k)"></span></p>
+<p>Every <span class=math-inline data-latex="\omega \in C^k"></span> has a <strong>unique</strong> decomposition:
+<span class=math-display data-latex="\omega = \underbrace{\omega_{\text{exact}}}_{\in\,\operatorname{im}(\partial_k^T)} \;+\; \underbrace{\omega_{\text{coexact}}}_{\in\,\operatorname{im}(\partial_{k+1})} \;+\; \underbrace{\omega_{\text{harmonic}}}_{\in\,\ker(L_k)}"></span></p>
+<p>Moreover: <span class=math-inline data-latex="\|\omega\|^2 = \|\omega_\text{exact}\|^2 + \|\omega_\text{coexact}\|^2 + \|\omega_\text{harmonic}\|^2"></span> (Pythagorean theorem for orthogonal components).</p>
 </div>
 </div>
-
-<div class="proof-block">
-  <div class="block-label">Proof.</div>
-  <div class="block-body"><p><strong>Step 1: Pairwise orthogonality.</strong></p>
-<p><strong>(a) <span class="math-inline" data-latex="\operatorname{im}(\partial_k^T) \perp \operatorname{im}(\partial_{k&#43;1})"></span></strong>: For <span class="math-inline" data-latex="u = \partial_k^T \alpha"></span> and <span class="math-inline" data-latex="v = \partial_{k&#43;1}\beta"></span>:</p>
-<div class="math-display" data-latex="\langle u, v \rangle = \langle \partial_k^T \alpha, \partial_{k&#43;1}\beta \rangle = \langle \alpha, \partial_k \partial_{k&#43;1}\beta \rangle = \langle \alpha, 0 \rangle = 0 \;\checkmark"></div>
-<p><strong>(b) <span class="math-inline" data-latex="\operatorname{im}(\partial_k^T) \perp \ker(L_k)"></span></strong>: For <span class="math-inline" data-latex="u = \partial_k^T \alpha"></span> and <span class="math-inline" data-latex="\omega \in \ker(L_k)"></span> (which gives <span class="math-inline" data-latex="\partial_k \omega = 0"></span>):</p>
-<div class="math-display" data-latex="\langle u, \omega \rangle = \langle \partial_k^T \alpha, \omega \rangle = \langle \alpha, \partial_k \omega \rangle = 0 \;\checkmark"></div>
-<p><strong>(c) <span class="math-inline" data-latex="\operatorname{im}(\partial_{k&#43;1}) \perp \ker(L_k)"></span></strong>: For <span class="math-inline" data-latex="v = \partial_{k&#43;1}\beta"></span> and <span class="math-inline" data-latex="\omega \in \ker(L_k)"></span> (which gives <span class="math-inline" data-latex="\partial_{k&#43;1}^T \omega = 0"></span>):</p>
-<div class="math-display" data-latex="\langle v, \omega \rangle = \langle \partial_{k&#43;1}\beta, \omega \rangle = \langle \beta, \partial_{k&#43;1}^T \omega \rangle = 0 \;\checkmark"></div>
-<p><strong>Step 2: The three subspaces span <span class="math-inline" data-latex="C^k"></span>.</strong></p>
-<p>We show <span class="math-inline" data-latex="\dim(\operatorname{im}(\partial_k^T)) &#43; \dim(\operatorname{im}(\partial_{k&#43;1})) &#43; \dim(\ker(L_k)) = \dim(C^k)"></span>.</p>
-<p>Since <span class="math-inline" data-latex="\partial_{k&#43;1}^T \partial_k^T = (\partial_k \partial_{k&#43;1})^T = 0"></span>, the cross-term in <span class="math-inline" data-latex="L_k"></span> vanishes when <span class="math-inline" data-latex="L_k"></span> acts on <span class="math-inline" data-latex="\operatorname{im}(\partial_k^T)"></span>: for <span class="math-inline" data-latex="u = \partial_k^T \alpha"></span>, <span class="math-inline" data-latex="L_k u = \partial_k^T \partial_k \partial_k^T \alpha"></span>. One verifies <span class="math-inline" data-latex="L_k"></span> acts injectively (and thus surjectively) on each of <span class="math-inline" data-latex="\operatorname{im}(\partial_k^T)"></span> and <span class="math-inline" data-latex="\operatorname{im}(\partial_{k&#43;1})"></span> separately. Therefore <span class="math-inline" data-latex="\operatorname{im}(L_k) = \operatorname{im}(\partial_k^T) \oplus \operatorname{im}(\partial_{k&#43;1})"></span>, and by rank-nullity:</p>
-<div class="math-display" data-latex="\dim(\operatorname{im}(\partial_k^T)) &#43; \dim(\operatorname{im}(\partial_{k&#43;1})) &#43; \dim(\ker(L_k)) = \dim(\operatorname{im}(L_k)) &#43; \dim(\ker(L_k)) = \dim(C^k) \;\square"></div>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><p><strong>Step 1: Pairwise orthogonality.</strong></p>
+<p><strong>(a) <span class=math-inline data-latex="\operatorname{im}(\partial_k^T) \perp \operatorname{im}(\partial_{k+1})"></span></strong>: For <span class=math-inline data-latex="u = \partial_k^T \alpha"></span> and <span class=math-inline data-latex="v = \partial_{k+1}\beta"></span>:
+<span class=math-display data-latex="\langle u, v \rangle = \langle \partial_k^T \alpha, \partial_{k+1}\beta \rangle = \langle \alpha, \partial_k \partial_{k+1}\beta \rangle = \langle \alpha, 0 \rangle = 0 \;\checkmark"></span></p>
+<p><strong>(b) <span class=math-inline data-latex="\operatorname{im}(\partial_k^T) \perp \ker(L_k)"></span></strong>: For <span class=math-inline data-latex="u = \partial_k^T \alpha"></span> and <span class=math-inline data-latex="\omega \in \ker(L_k)"></span> (which gives <span class=math-inline data-latex="\partial_k \omega = 0"></span>):
+<span class=math-display data-latex="\langle u, \omega \rangle = \langle \partial_k^T \alpha, \omega \rangle = \langle \alpha, \partial_k \omega \rangle = 0 \;\checkmark"></span></p>
+<p><strong>(c) <span class=math-inline data-latex="\operatorname{im}(\partial_{k+1}) \perp \ker(L_k)"></span></strong>: For <span class=math-inline data-latex="v = \partial_{k+1}\beta"></span> and <span class=math-inline data-latex="\omega \in \ker(L_k)"></span> (which gives <span class=math-inline data-latex="\partial_{k+1}^T \omega = 0"></span>):
+<span class=math-display data-latex="\langle v, \omega \rangle = \langle \partial_{k+1}\beta, \omega \rangle = \langle \beta, \partial_{k+1}^T \omega \rangle = 0 \;\checkmark"></span></p>
+<p><strong>Step 2: The three subspaces span <span class=math-inline data-latex=C^k></span>.</strong></p>
+<p>We show <span class=math-inline data-latex="\dim(\operatorname{im}(\partial_k^T)) + \dim(\operatorname{im}(\partial_{k+1})) + \dim(\ker(L_k)) = \dim(C^k)"></span>.</p>
+<p>Since <span class=math-inline data-latex="\partial_{k+1}^T \partial_k^T = (\partial_k \partial_{k+1})^T = 0"></span>, the cross-term in <span class=math-inline data-latex=L_k></span> vanishes when <span class=math-inline data-latex=L_k></span> acts on <span class=math-inline data-latex=\operatorname{im}(\partial_k^T)></span>: for <span class=math-inline data-latex="u = \partial_k^T \alpha"></span>, <span class=math-inline data-latex="L_k u = \partial_k^T \partial_k \partial_k^T \alpha"></span>. One verifies <span class=math-inline data-latex=L_k></span> acts injectively (and thus surjectively) on each of <span class=math-inline data-latex=\operatorname{im}(\partial_k^T)></span> and <span class=math-inline data-latex=\operatorname{im}(\partial_{k+1})></span> separately. Therefore <span class=math-inline data-latex="\operatorname{im}(L_k) = \operatorname{im}(\partial_k^T) \oplus \operatorname{im}(\partial_{k+1})"></span>, and by rank-nullity:
+<span class=math-display data-latex="\dim(\operatorname{im}(\partial_k^T)) + \dim(\operatorname{im}(\partial_{k+1})) + \dim(\ker(L_k)) = \dim(\operatorname{im}(L_k)) + \dim(\ker(L_k)) = \dim(C^k) \;\square"></span></p>
 </div>
 </div>
-
 <blockquote>
 <p><em>中文:</em> &ldquo;这不是近似，是精确的数学定理。&rdquo;</p>
 </blockquote>
-<p><strong>Dimension count for <span class="math-inline" data-latex="k=1"></span> on the Tonnetz</strong>:</p>
+<p><strong>Dimension count for <span class=math-inline data-latex="k=1"></span> on the Tonnetz</strong>:</p>
 <table>
 <thead>
 <tr>
@@ -1336,23 +651,23 @@ Elements of <span class="math-inline" data-latex="\ker(L_k)"></span> are called 
 </thead>
 <tbody>
 <tr>
-<td>Exact <span class="math-inline" data-latex="\omega_\text{exact} = \partial_1^T f"></span></td>
-<td><span class="math-inline" data-latex="\operatorname{im}(\partial_1^T)"></span></td>
-<td><span class="math-inline" data-latex="11 = \operatorname{rank}(\partial_1)"></span></td>
+<td>Exact <span class=math-inline data-latex="\omega_\text{exact} = \partial_1^T f"></span></td>
+<td><span class=math-inline data-latex=\operatorname{im}(\partial_1^T)></span></td>
+<td><span class=math-inline data-latex="11 = \operatorname{rank}(\partial_1)"></span></td>
 </tr>
 <tr>
-<td>Coexact <span class="math-inline" data-latex="\omega_\text{coexact} = \partial_2 g"></span></td>
-<td><span class="math-inline" data-latex="\operatorname{im}(\partial_2)"></span></td>
-<td><span class="math-inline" data-latex="23 = \operatorname{rank}(\partial_2)"></span></td>
+<td>Coexact <span class=math-inline data-latex="\omega_\text{coexact} = \partial_2 g"></span></td>
+<td><span class=math-inline data-latex=\operatorname{im}(\partial_2)></span></td>
+<td><span class=math-inline data-latex="23 = \operatorname{rank}(\partial_2)"></span></td>
 </tr>
 <tr>
 <td>Harmonic</td>
-<td><span class="math-inline" data-latex="\ker(L_1)"></span></td>
-<td><span class="math-inline" data-latex="2 = \beta_1"></span></td>
+<td><span class=math-inline data-latex=\ker(L_1)></span></td>
+<td><span class=math-inline data-latex="2 = \beta_1"></span></td>
 </tr>
 <tr>
 <td><strong>Total</strong></td>
-<td><span class="math-inline" data-latex="C^1"></span></td>
+<td><span class=math-inline data-latex=C^1></span></td>
 <td><strong>36</strong> ✓</td>
 </tr>
 </tbody>
@@ -1370,19 +685,19 @@ Elements of <span class="math-inline" data-latex="\ker(L_k)"></span> are called 
 <tbody>
 <tr>
 <td><strong>Exact</strong></td>
-<td><span class="math-inline" data-latex="\partial_1^T f"></span></td>
-<td>Gradient <span class="math-inline" data-latex="\nabla f"></span></td>
-<td>Acyclic; flow on <span class="math-inline" data-latex="[u,v]"></span> is <span class="math-inline" data-latex="f(v)-f(u)"></span></td>
+<td><span class=math-inline data-latex="\partial_1^T f"></span></td>
+<td>Gradient <span class=math-inline data-latex="\nabla f"></span></td>
+<td>Acyclic; flow on <span class=math-inline data-latex=[u,v]></span> is <span class=math-inline data-latex=f(v)-f(u)></span></td>
 </tr>
 <tr>
 <td><strong>Coexact</strong></td>
-<td><span class="math-inline" data-latex="\partial_2 g"></span></td>
-<td>Curl <span class="math-inline" data-latex="\nabla \times \mathbf{A}"></span></td>
+<td><span class=math-inline data-latex="\partial_2 g"></span></td>
+<td>Curl <span class=math-inline data-latex="\nabla \times \mathbf{A}"></span></td>
 <td>Circulates locally around triangular faces</td>
 </tr>
 <tr>
 <td><strong>Harmonic</strong></td>
-<td><span class="math-inline" data-latex="L_1 \omega = 0"></span></td>
+<td><span class=math-inline data-latex="L_1 \omega = 0"></span></td>
 <td>Harmonic function</td>
 <td>Divergence-free AND curl-free simultaneously</td>
 </tr>
@@ -1420,56 +735,47 @@ Elements of <span class="math-inline" data-latex="\ker(L_k)"></span> are called 
 </table>
 <p>The decomposition is <strong>orthogonal</strong> — the three types never interfere.</p>
 <p><strong>Computing the decomposition</strong> (for implementation): The orthogonal projections use Moore–Penrose pseudoinverses:
-<div class="math-display" data-latex="\omega_\text{exact} = \partial_1^T(\partial_1 \partial_1^T)^\dagger \partial_1 \omega, \quad \omega_\text{coexact} = \partial_2(\partial_2^T \partial_2)^\dagger \partial_2^T \omega, \quad \omega_\text{harmonic} = \omega - \omega_\text{exact} - \omega_\text{coexact}"></div></p>
+<span class=math-display data-latex="\omega_\text{exact} = \partial_1^T(\partial_1 \partial_1^T)^\dagger \partial_1 \omega, \quad \omega_\text{coexact} = \partial_2(\partial_2^T \partial_2)^\dagger \partial_2^T \omega, \quad \omega_\text{harmonic} = \omega - \omega_\text{exact} - \omega_\text{coexact}"></span></p>
 <hr>
-<h2 id="section-5-three-musical-hypotheses">Section 5: Three Musical Hypotheses</h2>
+<h2 id=section-5-three-musical-hypotheses>Section 5: Three Musical Hypotheses</h2>
 <blockquote>
 <p><em>中文:</em> &ldquo;Hodge 分解是定理。接下来我们提出三个可检验的音乐假设。&rdquo;</p>
 </blockquote>
-<p><strong>Encoding a chord progression</strong>: Assign weights to Tonnetz edges traversed (e.g., proportional to interval activation duration). Apply the decomposition. The energy ratios <span class="math-inline" data-latex="E_\text{exact}/\|w\|^2"></span>, <span class="math-inline" data-latex="E_\text{coexact}/\|w\|^2"></span>, <span class="math-inline" data-latex="E_\text{harmonic}/\|w\|^2"></span> give the harmonic profile.</p>
-
-
-<div class="conjecture-block" id="conjecture">
-  <div class="block-label">
-    Conjecture (H1: Exact Energy ≈ Cadential Harmony)
-  </div>
-  <div class="block-body"><p>A passage with high <span class="math-inline" data-latex="E_\text{exact}/\|w\|^2"></span> tends to exhibit strong cadences and functional harmony.</p>
-<p><strong>Reasoning</strong>: <span class="math-inline" data-latex="\omega_\text{exact} = \partial_1^T f"></span> means flow on edge <span class="math-inline" data-latex="[u,v]"></span> equals <span class="math-inline" data-latex="f(v) - f(u)"></span>: the progression flows from high-potential to low-potential pitch classes. Dominant (high potential) → tonic (low potential) is exactly this gradient structure. The exact component is automatically acyclic — consistent with goal-directed harmonic motion.</p>
-<p><strong>Example</strong>: Final bars of Bach chorale BWV 269. The cadence ii⁶–V–V⁷–I is almost pure gradient flow: <span class="math-inline" data-latex="f(D) &gt; f(G) &gt; f(C)"></span>, monotonically descending to the tonic.</p>
-<p><strong>Falsification</strong>: Find high <span class="math-inline" data-latex="E_\text{exact}"></span> with no cadential structure.</p>
+<p><strong>Encoding a chord progression</strong>: Assign weights to Tonnetz edges traversed (e.g., proportional to interval activation duration). Apply the decomposition. The energy ratios <span class=math-inline data-latex=E_\text{exact}/\|w\|^2></span>, <span class=math-inline data-latex=E_\text{coexact}/\|w\|^2></span>, <span class=math-inline data-latex=E_\text{harmonic}/\|w\|^2></span> give the harmonic profile.</p>
+<div class=conjecture-block id=conjecture>
+<div class=block-label>
+Conjecture (H1: Exact Energy ≈ Cadential Harmony)
+</div>
+<div class=block-body><p>A passage with high <span class=math-inline data-latex=E_\text{exact}/\|w\|^2></span> tends to exhibit strong cadences and functional harmony.</p>
+<p><strong>Reasoning</strong>: <span class=math-inline data-latex="\omega_\text{exact} = \partial_1^T f"></span> means flow on edge <span class=math-inline data-latex=[u,v]></span> equals <span class=math-inline data-latex="f(v) - f(u)"></span>: the progression flows from high-potential to low-potential pitch classes. Dominant (high potential) → tonic (low potential) is exactly this gradient structure. The exact component is automatically acyclic — consistent with goal-directed harmonic motion.</p>
+<p><strong>Example</strong>: Final bars of Bach chorale BWV 269. The cadence ii⁶–V–V⁷–I is almost pure gradient flow: <span class=math-inline data-latex="f(D) > f(G) > f(C)"></span>, monotonically descending to the tonic.</p>
+<p><strong>Falsification</strong>: Find high <span class=math-inline data-latex=E_\text{exact}></span> with no cadential structure.</p>
 </div>
 </div>
-
-
-
-<div class="conjecture-block" id="conjecture">
-  <div class="block-label">
-    Conjecture (H2: Coexact Energy ≈ Chromatic Cycles (PLR))
-  </div>
-  <div class="block-body"><p>A passage with high <span class="math-inline" data-latex="E_\text{coexact}/\|w\|^2"></span> tends to exhibit PLR-type short cycles and chromatic voice leading.</p>
-<p><strong>Reasoning</strong>: <span class="math-inline" data-latex="\omega_\text{coexact} = \partial_2 g"></span> is a sum of triangle boundaries — local circulation around triads. Neo-Riemannian P, L, R transformations create short cycles wrapping around adjacent triangles (each step moves one voice by a semitone or whole tone).</p>
-<p><strong>Example</strong>: Opening of Brahms Intermezzo Op. 119 No. 1 — chains of third-related triads (B min → D maj → F♯ min → A maj → …), each a P or R step, locally circular with no global modulation. The hexatonic cycle (C maj → C min → A♭ maj → A♭ min → E maj → E min → C maj) lies entirely in <span class="math-inline" data-latex="\operatorname{im}(\partial_2)"></span>.</p>
-<p><strong>Falsification</strong>: Find high <span class="math-inline" data-latex="E_\text{coexact}"></span> with no chromatic activity.</p>
+<div class=conjecture-block id=conjecture>
+<div class=block-label>
+Conjecture (H2: Coexact Energy ≈ Chromatic Cycles (PLR))
+</div>
+<div class=block-body><p>A passage with high <span class=math-inline data-latex=E_\text{coexact}/\|w\|^2></span> tends to exhibit PLR-type short cycles and chromatic voice leading.</p>
+<p><strong>Reasoning</strong>: <span class=math-inline data-latex="\omega_\text{coexact} = \partial_2 g"></span> is a sum of triangle boundaries — local circulation around triads. Neo-Riemannian P, L, R transformations create short cycles wrapping around adjacent triangles (each step moves one voice by a semitone or whole tone).</p>
+<p><strong>Example</strong>: Opening of Brahms Intermezzo Op. 119 No. 1 — chains of third-related triads (B min → D maj → F♯ min → A maj → …), each a P or R step, locally circular with no global modulation. The hexatonic cycle (C maj → C min → A♭ maj → A♭ min → E maj → E min → C maj) lies entirely in <span class=math-inline data-latex=\operatorname{im}(\partial_2)></span>.</p>
+<p><strong>Falsification</strong>: Find high <span class=math-inline data-latex=E_\text{coexact}></span> with no chromatic activity.</p>
 </div>
 </div>
-
-
-
-<div class="conjecture-block" id="conjecture">
-  <div class="block-label">
-    Conjecture (H3: Harmonic Energy ≈ Remote Modulation)
-  </div>
-  <div class="block-body"><p>A passage with high <span class="math-inline" data-latex="E_\text{harmonic}/\|w\|^2"></span> corresponds to modulation along the torus topology — the tonal center migrates globally.</p>
-<p><strong>Reasoning</strong>: <span class="math-inline" data-latex="\omega_\text{harmonic} \in \ker(L_1)"></span> means simultaneously divergence-free (<span class="math-inline" data-latex="\partial_1 \omega = 0"></span>) and curl-free (<span class="math-inline" data-latex="\partial_2^T \omega = 0"></span>). The only non-zero flows on a torus satisfying both are those along the two non-contractible loops: circle of fifths or major third axis. The tonal center itself migrates — no local potential drop or eddy explains it; the flow is topological.</p>
+<div class=conjecture-block id=conjecture>
+<div class=block-label>
+Conjecture (H3: Harmonic Energy ≈ Remote Modulation)
+</div>
+<div class=block-body><p>A passage with high <span class=math-inline data-latex=E_\text{harmonic}/\|w\|^2></span> corresponds to modulation along the torus topology — the tonal center migrates globally.</p>
+<p><strong>Reasoning</strong>: <span class=math-inline data-latex="\omega_\text{harmonic} \in \ker(L_1)"></span> means simultaneously divergence-free (<span class=math-inline data-latex="\partial_1 \omega = 0"></span>) and curl-free (<span class=math-inline data-latex="\partial_2^T \omega = 0"></span>). The only non-zero flows on a torus satisfying both are those along the two non-contractible loops: circle of fifths or major third axis. The tonal center itself migrates — no local potential drop or eddy explains it; the flow is topological.</p>
 <p><strong>Examples</strong>:</p>
 <ul>
 <li>Development of Schubert&rsquo;s String Quintet D. 956, mvt. 2: E maj → F min → chain of major-third related keys — traverses the major-third non-contractible loop.</li>
-<li>Development of Beethoven&rsquo;s &ldquo;Waldstein&rdquo; Sonata Op. 53: C → E → A♭ → C, a complete circle of major thirds — one generator of <span class="math-inline" data-latex="H_1"></span>.</li>
+<li>Development of Beethoven&rsquo;s &ldquo;Waldstein&rdquo; Sonata Op. 53: C → E → A♭ → C, a complete circle of major thirds — one generator of <span class=math-inline data-latex=H_1></span>.</li>
 </ul>
-<p><strong>Falsification</strong>: Find high <span class="math-inline" data-latex="E_\text{harmonic}"></span> with only nearby key relations.</p>
+<p><strong>Falsification</strong>: Find high <span class=math-inline data-latex=E_\text{harmonic}></span> with only nearby key relations.</p>
 </div>
 </div>
-
 <p><strong>Caveats</strong>:</p>
 <blockquote>
 <p><em>中文:</em> &ldquo;三个分量是结构性分解，不是价值判断。Exact 不等于&rsquo;好'，harmonic 不等于&rsquo;高级'。&rdquo;</p>
@@ -1483,56 +789,48 @@ Elements of <span class="math-inline" data-latex="\ker(L_k)"></span> are called 
 <p><em>中文:</em> &ldquo;验证需要在真实音乐语料库上做统计检验。&rdquo;</p>
 </blockquote>
 <hr>
-<h2 id="section-6-langlands-duality-and-the-tonnetz">Section 6: Langlands Duality and the Tonnetz</h2>
+<h2 id=section-6-langlands-duality-and-the-tonnetz>Section 6: Langlands Duality and the Tonnetz</h2>
 <blockquote>
 <p><em>中文:</em> &ldquo;数学中的 Langlands 对偶，交换根与余根，恰好对应音乐中的大小调对偶。这是一个严格的结构性对应，不是松散类比。&rdquo;</p>
 </blockquote>
-<p>The standard Tonnetz triangulates the torus <span class="math-inline" data-latex="T^2 = \mathbb{R}^2 / \Lambda"></span>, where <span class="math-inline" data-latex="\Lambda"></span> is the <strong><span class="math-inline" data-latex="A_2"></span> root lattice</strong> — the lattice generated by the simple roots of the Lie algebra <span class="math-inline" data-latex="\mathfrak{sl}(3)"></span>.</p>
-
-
-<div class="definition-block" id="definition-6.1">
-  <div class="block-label">
-    Definition 6.1 (Langlands Dual (Root System Level))
-  </div>
-  <div class="block-body"><p>For a semisimple Lie algebra <span class="math-inline" data-latex="\mathfrak{g}"></span> with root system <span class="math-inline" data-latex="\Phi"></span>, the <strong>coroot</strong> of <span class="math-inline" data-latex="\alpha \in \Phi"></span> is <span class="math-inline" data-latex="\alpha^\vee = 2\alpha / \langle \alpha, \alpha \rangle"></span>. The <strong>Langlands dual</strong> <span class="math-inline" data-latex="\mathfrak{g}^\vee"></span> is obtained by <span class="math-inline" data-latex="\Phi \leftrightarrow \Phi^\vee"></span>.</p>
-<p>For the <span class="math-inline" data-latex="A_2"></span> root system (which is simply laced — all roots have the same length), roots and coroots differ only by uniform scaling, so <span class="math-inline" data-latex="A_2"></span> is <strong>self-dual</strong>.</p>
+<p>The standard Tonnetz triangulates the torus <span class=math-inline data-latex="T^2 = \mathbb{R}^2 / \Lambda"></span>, where <span class=math-inline data-latex=\Lambda></span> is the <strong><span class=math-inline data-latex=A_2></span> root lattice</strong> — the lattice generated by the simple roots of the Lie algebra <span class=math-inline data-latex=\mathfrak{sl}(3)></span>.</p>
+<div class=definition-block id=definition-6.1>
+<div class=block-label>
+Definition 6.1 (Langlands Dual (Root System Level))
+</div>
+<div class=block-body><p>For a semisimple Lie algebra <span class=math-inline data-latex=\mathfrak{g}></span> with root system <span class=math-inline data-latex=\Phi></span>, the <strong>coroot</strong> of <span class=math-inline data-latex="\alpha \in \Phi"></span> is <span class=math-inline data-latex="\alpha^\vee = 2\alpha / \langle \alpha, \alpha \rangle"></span>. The <strong>Langlands dual</strong> <span class=math-inline data-latex=\mathfrak{g}^\vee></span> is obtained by <span class=math-inline data-latex="\Phi \leftrightarrow \Phi^\vee"></span>.</p>
+<p>For the <span class=math-inline data-latex=A_2></span> root system (which is simply laced — all roots have the same length), roots and coroots differ only by uniform scaling, so <span class=math-inline data-latex=A_2></span> is <strong>self-dual</strong>.</p>
 </div>
 </div>
-
-
-
-<div class="theorem-block" id="theorem-6.1">
-  <div class="block-label">
-    Theorem 6.1 (Langlands Duality = Major/Minor Duality)
-  </div>
-  <div class="block-body"><em>(Rietsch, 2024)</em> On the <span class="math-inline" data-latex="A_2"></span> Tonnetz, the Langlands involution — interchange of roots and coroots — structurally corresponds to major/minor duality: every major triad maps to its parallel minor.</div>
+<div class=theorem-block id=theorem-6.1>
+<div class=block-label>
+Theorem 6.1 (Langlands Duality = Major/Minor Duality)
 </div>
-
-<div class="proof-block">
-  <div class="block-label">Proof.</div>
-  <div class="block-body"><em>(Sketch — see Rietsch 2024 §3.)</em> The two simple root directions in the <span class="math-inline" data-latex="A_2"></span> lattice correspond to the major third axis (<span class="math-inline" data-latex="&#43;4"></span> semitones) and the minor third axis (<span class="math-inline" data-latex="&#43;3"></span> semitones) of the Tonnetz. Swapping roots with coroots exchanges these two axes. In the Tonnetz, edge <span class="math-inline" data-latex="C \to E"></span> (major third, <span class="math-inline" data-latex="&#43;4"></span>) maps to <span class="math-inline" data-latex="C \to E\flat"></span> (minor third, <span class="math-inline" data-latex="&#43;3"></span>), and edge <span class="math-inline" data-latex="E \to G"></span> (minor third, <span class="math-inline" data-latex="&#43;3"></span>) maps to <span class="math-inline" data-latex="E\flat \to G"></span> (major third, <span class="math-inline" data-latex="&#43;4"></span>). The triangle <span class="math-inline" data-latex="\{C, E, G\}"></span> (C major) maps to <span class="math-inline" data-latex="\{C, E\flat, G\}"></span> (C minor). This involution acts globally on the entire <span class="math-inline" data-latex="A_2"></span> lattice simultaneously, yielding the parallel-minor operation across all 24 triads. <span class="math-inline" data-latex="\square"></span></div>
+<div class=block-body><em>(Rietsch, 2024)</em> On the <span class=math-inline data-latex=A_2></span> Tonnetz, the Langlands involution — interchange of roots and coroots — structurally corresponds to major/minor duality: every major triad maps to its parallel minor.</div>
 </div>
-
-<div class="music-block">
-  <div class="block-label">音乐联系</div>
-  <div class="block-body"><p><strong>Euler 1739 → Rietsch 2024: A 285-year arc</strong></p>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><em>(Sketch — see Rietsch 2024 §3.)</em> The two simple root directions in the <span class=math-inline data-latex=A_2></span> lattice correspond to the major third axis (<span class=math-inline data-latex=+4></span> semitones) and the minor third axis (<span class=math-inline data-latex=+3></span> semitones) of the Tonnetz. Swapping roots with coroots exchanges these two axes. In the Tonnetz, edge <span class=math-inline data-latex="C \to E"></span> (major third, <span class=math-inline data-latex=+4></span>) maps to <span class=math-inline data-latex="C \to E\flat"></span> (minor third, <span class=math-inline data-latex=+3></span>), and edge <span class=math-inline data-latex="E \to G"></span> (minor third, <span class=math-inline data-latex=+3></span>) maps to <span class=math-inline data-latex="E\flat \to G"></span> (major third, <span class=math-inline data-latex=+4></span>). The triangle <span class=math-inline data-latex="\{C, E, G\}"></span> (C major) maps to <span class=math-inline data-latex="\{C, E\flat, G\}"></span> (C minor). This involution acts globally on the entire <span class=math-inline data-latex=A_2></span> lattice simultaneously, yielding the parallel-minor operation across all 24 triads. <span class=math-inline data-latex=\square></span></div>
+</div>
+<div class=music-block>
+<div class=block-label>音乐联系</div>
+<div class=block-body><p><strong>Euler 1739 → Rietsch 2024: A 285-year arc</strong></p>
 <blockquote>
 <p><em>中文:</em> &ldquo;Euler 在 1739 年画了一张音程网格。285 年后，我们才认出它里面藏着的代数拓扑结构。&rdquo;</p>
 </blockquote>
 <p>Euler drew his interval lattice as a tuning tool with no concept of simplicial homology, differential forms, or root systems. Yet the structure he wrote down is recognizable, 285 years later, as:</p>
 <ol>
-<li>A simplicial triangulation of a torus with Betti numbers <span class="math-inline" data-latex="(1,2,1)"></span></li>
+<li>A simplicial triangulation of a torus with Betti numbers <span class=math-inline data-latex=(1,2,1)></span></li>
 <li>A space where the Hodge decomposition gives a tripartite analysis of harmony: gradients (cadences) + curls (PLR cycles) + topological flows (modulations)</li>
-<li>A quotient of the <span class="math-inline" data-latex="A_2"></span> root lattice — making its major/minor duality an instance of Langlands duality</li>
+<li>A quotient of the <span class=math-inline data-latex=A_2></span> root lattice — making its major/minor duality an instance of Langlands duality</li>
 </ol>
-<p>The Hodge decomposition yields testable predictions: Bach chorales should have high <span class="math-inline" data-latex="E_\text{exact}"></span> (strong cadences); Brahms intermezzos high <span class="math-inline" data-latex="E_\text{coexact}"></span> (chromatic PLR); late Schubert high <span class="math-inline" data-latex="E_\text{harmonic}"></span> (third-relation modulations). Whether these energy ratios outperform simpler tonal-distance metrics is an open empirical question — but the mathematical structure is exact.</p>
-<p><strong>Additional results</strong> (Rietsch 2024): A Tonnetz on a <em>sphere</em> encoding all major ninth chords; the transformation group of the seventh-chord Tonnetz is <span class="math-inline" data-latex="S_5 \times \mathbb{Z}_{12}^4"></span>.</p>
-<p><strong>Scope note</strong>: The &ldquo;Langlands duality&rdquo; here operates at the level of root systems of <span class="math-inline" data-latex="A_2"></span> — a very special case. It does not claim connections to the full Langlands program in number theory. The correspondence is precise but limited: a structural coincidence at the <span class="math-inline" data-latex="A_2"></span> lattice level that turns out to have musical meaning.</p>
+<p>The Hodge decomposition yields testable predictions: Bach chorales should have high <span class=math-inline data-latex=E_\text{exact}></span> (strong cadences); Brahms intermezzos high <span class=math-inline data-latex=E_\text{coexact}></span> (chromatic PLR); late Schubert high <span class=math-inline data-latex=E_\text{harmonic}></span> (third-relation modulations). Whether these energy ratios outperform simpler tonal-distance metrics is an open empirical question — but the mathematical structure is exact.</p>
+<p><strong>Additional results</strong> (Rietsch 2024): A Tonnetz on a <em>sphere</em> encoding all major ninth chords; the transformation group of the seventh-chord Tonnetz is <span class=math-inline data-latex="S_5 \times \mathbb{Z}_{12}^4"></span>.</p>
+<p><strong>Scope note</strong>: The &ldquo;Langlands duality&rdquo; here operates at the level of root systems of <span class=math-inline data-latex=A_2></span> — a very special case. It does not claim connections to the full Langlands program in number theory. The correspondence is precise but limited: a structural coincidence at the <span class=math-inline data-latex=A_2></span> lattice level that turns out to have musical meaning.</p>
 </div>
 </div>
-
 <hr>
-<h2 id="historical-timeline">Historical Timeline</h2>
+<h2 id=historical-timeline>Historical Timeline</h2>
 <table>
 <thead>
 <tr>
@@ -1560,17 +858,17 @@ Elements of <span class="math-inline" data-latex="\ker(L_k)"></span> are called 
 <tr>
 <td>1998</td>
 <td>Chicken-wire torus from parsimonious voice leading</td>
-<td>Douthett &amp; Steinbach</td>
+<td>Douthett & Steinbach</td>
 </tr>
 <tr>
 <td>2011</td>
 <td>HodgeRank: Hodge decomposition for statistical ranking</td>
-<td>Jiang, Lim, Yao &amp; Ye</td>
+<td>Jiang, Lim, Yao & Ye</td>
 </tr>
 <tr>
 <td>2013</td>
 <td>Tonnetz as simplicial complex; computational homology</td>
-<td>Bigo &amp; Andreatta</td>
+<td>Bigo & Andreatta</td>
 </tr>
 <tr>
 <td>2020</td>
@@ -1584,366 +882,119 @@ Elements of <span class="math-inline" data-latex="\ker(L_k)"></span> are called 
 </tr>
 <tr>
 <td>2024</td>
-<td>Langlands duality = major/minor duality on <span class="math-inline" data-latex="A_2"></span> Tonnetz</td>
+<td>Langlands duality = major/minor duality on <span class=math-inline data-latex=A_2></span> Tonnetz</td>
 <td>Konstanze Rietsch</td>
 </tr>
 </tbody>
 </table>
 <hr>
-<h2 id="extended-reading">Extended Reading</h2>
-<div class="yt-container">
-  <div class="yt-embed">
-    
-    
-    
-    
-    <iframe
-      src="https://www.youtube.com/embed/5xLe77iTHuQ?start=14"
-      title="What is algebraic topology?"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen>
-    </iframe>
-  </div>
-  <p class="yt-caption">A visual introduction to algebraic topology: holes, loops, and how algebra captures what geometry cannot. The conceptual foundation for the homology groups H_k and Betti numbers used throughout EP14.</p>
+<h2 id=extended-reading>Extended Reading</h2>
+<div class=yt-container>
+<div class=yt-embed>
+<iframe src="https://www.youtube.com/embed/5xLe77iTHuQ?start=14" title="What is algebraic topology?" frameborder=0 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy=strict-origin-when-cross-origin allowfullscreen></iframe>
 </div>
-
-<div class="yt-container">
-  <div class="yt-embed">
-    
-    
-    
-    
-    <iframe
-      src="https://www.youtube.com/embed/MflpyJwhMhQ"
-      title="Simplicial homology explained"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen>
-    </iframe>
-  </div>
-  <p class="yt-caption">Simplicial complexes, boundary operators, and homology groups built from scratch — the mathematical machinery behind the Tonnetz Betti numbers β₀=1, β₁=2, β₂=1.</p>
+<p class=yt-caption>A visual introduction to algebraic topology: holes, loops, and how algebra captures what geometry cannot. The conceptual foundation for the homology groups H_k and Betti numbers used throughout EP14.</p>
 </div>
-
-<div class="yt-container">
-  <div class="yt-embed">
-    
-    
-    
-    
-    <iframe
-      src="https://www.youtube.com/embed/IDcw33YRgpY?start=11"
-      title="Visualizing the Hodge decomposition"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen>
-    </iframe>
-  </div>
-  <p class="yt-caption">The Hodge decomposition on graphs: exact (gradient), coexact (curl), and harmonic components visualized as water flows. The EP14 musical interpretation (cadences/PLR cycles/modulations) maps directly onto these three flow types.</p>
+<div class=yt-container>
+<div class=yt-embed>
+<iframe src=https://www.youtube.com/embed/MflpyJwhMhQ title="Simplicial homology explained" frameborder=0 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy=strict-origin-when-cross-origin allowfullscreen></iframe>
 </div>
-
-<div class="yt-container">
-  <div class="yt-embed">
-    
-    
-    
-    
-    <iframe
-      src="https://www.youtube.com/embed/2ptFnIj71SM?start=78"
-      title="The derivative isn&#39;t what you think"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen>
-    </iframe>
-  </div>
-  <p class="yt-caption">3Blue1Brown on exterior derivatives and differential forms — the continuous analogue of the coboundary operator δ used in EP14&#39;s discrete Hodge theory.</p>
+<p class=yt-caption>Simplicial complexes, boundary operators, and homology groups built from scratch — the mathematical machinery behind the Tonnetz Betti numbers β₀=1, β₁=2, β₂=1.</p>
 </div>
-
-<div class="yt-container">
-  <div class="yt-embed">
-    
-    
-    
-    
-    <iframe
-      src="https://www.youtube.com/embed/IQqtsm-bBRU?start=279"
-      title="The open hole problem"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen>
-    </iframe>
-  </div>
-  <p class="yt-caption">An exploration of holes in topology — why the loop test (can you fill this closed curve?) is the right definition of a hole, connecting to the Tonnetz&#39;s two non-contractible loops.</p>
+<div class=yt-container>
+<div class=yt-embed>
+<iframe src="https://www.youtube.com/embed/IDcw33YRgpY?start=11" title="Visualizing the Hodge decomposition" frameborder=0 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy=strict-origin-when-cross-origin allowfullscreen></iframe>
 </div>
-
-<h2 id="academic-references">Academic References</h2>
+<p class=yt-caption>The Hodge decomposition on graphs: exact (gradient), coexact (curl), and harmonic components visualized as water flows. The EP14 musical interpretation (cadences/PLR cycles/modulations) maps directly onto these three flow types.</p>
+</div>
+<div class=yt-container>
+<div class=yt-embed>
+<iframe src="https://www.youtube.com/embed/2ptFnIj71SM?start=78" title="The derivative isn't what you think" frameborder=0 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy=strict-origin-when-cross-origin allowfullscreen></iframe>
+</div>
+<p class=yt-caption>3Blue1Brown on exterior derivatives and differential forms — the continuous analogue of the coboundary operator δ used in EP14's discrete Hodge theory.</p>
+</div>
+<div class=yt-container>
+<div class=yt-embed>
+<iframe src="https://www.youtube.com/embed/IQqtsm-bBRU?start=279" title="The open hole problem" frameborder=0 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy=strict-origin-when-cross-origin allowfullscreen></iframe>
+</div>
+<p class=yt-caption>An exploration of holes in topology — why the loop test (can you fill this closed curve?) is the right definition of a hole, connecting to the Tonnetz's two non-contractible loops.</p>
+</div>
+<h2 id=academic-references>Academic References</h2>
 <ol>
 <li>Euler, L. (1739). <em>Tentamen novae theoriae musicae</em>. St. Petersburg.</li>
 <li>Hodge, W.V.D. (1941). <em>The Theory and Applications of Harmonic Integrals</em>. Cambridge University Press.</li>
 <li>Eckmann, B. (1944). &ldquo;Harmonische Funktionen und Randwertaufgaben in einem Komplex.&rdquo; <em>Commentarii Mathematici Helvetici</em> 17, 240–255.</li>
-<li>Douthett, J. &amp; Steinbach, P. (1998). &ldquo;Parsimonious Graphs: A Study in Parsimony, Contextual Transformations, and Modes of Limited Transposition.&rdquo; <em>Journal of Music Theory</em> 42(2), 241–263.</li>
+<li>Douthett, J. & Steinbach, P. (1998). &ldquo;Parsimonious Graphs: A Study in Parsimony, Contextual Transformations, and Modes of Limited Transposition.&rdquo; <em>Journal of Music Theory</em> 42(2), 241–263.</li>
 <li>Friedman, J. (1998). &ldquo;Computing Betti Numbers via Combinatorial Laplacians.&rdquo; <em>Algorithmica</em> 21(4), 331–346.</li>
-<li>Hatcher, A. (2002). <em>Algebraic Topology</em>. Cambridge University Press. Free PDF: <a href="https://pi.math.cornell.edu/~hatcher/AT/ATpage.html">https://pi.math.cornell.edu/~hatcher/AT/ATpage.html</a></li>
-<li>Edelsbrunner, H. &amp; Harer, J. (2010). <em>Computational Topology: An Introduction</em>. AMS.</li>
-<li>Jiang, X., Lim, L.-H., Yao, Y. &amp; Ye, Y. (2011). &ldquo;Statistical Ranking and Combinatorial Hodge Theory.&rdquo; <em>Mathematical Programming</em> 127, 203–244.</li>
-<li>Bigo, L. &amp; Andreatta, M. (2013). &ldquo;Computation and Visualization of Musical Structures in Chord-Based Simplicial Complexes.&rdquo; <em>MCM 2013</em>.</li>
+<li>Hatcher, A. (2002). <em>Algebraic Topology</em>. Cambridge University Press. Free PDF: <a href=https://pi.math.cornell.edu/~hatcher/AT/ATpage.html>https://pi.math.cornell.edu/~hatcher/AT/ATpage.html</a></li>
+<li>Edelsbrunner, H. & Harer, J. (2010). <em>Computational Topology: An Introduction</em>. AMS.</li>
+<li>Jiang, X., Lim, L.-H., Yao, Y. & Ye, Y. (2011). &ldquo;Statistical Ranking and Combinatorial Hodge Theory.&rdquo; <em>Mathematical Programming</em> 127, 203–244.</li>
+<li>Bigo, L. & Andreatta, M. (2013). &ldquo;Computation and Visualization of Musical Structures in Chord-Based Simplicial Complexes.&rdquo; <em>MCM 2013</em>.</li>
 <li>Frankel, T. (2012). <em>The Geometry of Physics</em>, 3rd ed. Cambridge University Press. Ch. 14.</li>
-<li>Cannas, S. &amp; Andreatta, M. (2018). &ldquo;A Generalized Dual of the Tonnetz for Seventh Chords.&rdquo; <em>Bridges 2018</em>, 301–308.</li>
-<li>Lim, L.-H. (2020). &ldquo;Hodge Laplacians on Graphs.&rdquo; <em>SIAM Review</em> 62(3), 685–715. DOI: 10.1137/18M1223101. Free PDF: <a href="https://www.stat.uchicago.edu/~lekheng/work/hodge-graph.pdf">https://www.stat.uchicago.edu/~lekheng/work/hodge-graph.pdf</a> — <em>Primary reference for all discrete Hodge theory in EP14.</em></li>
+<li>Cannas, S. & Andreatta, M. (2018). &ldquo;A Generalized Dual of the Tonnetz for Seventh Chords.&rdquo; <em>Bridges 2018</em>, 301–308.</li>
+<li>Lim, L.-H. (2020). &ldquo;Hodge Laplacians on Graphs.&rdquo; <em>SIAM Review</em> 62(3), 685–715. DOI: 10.1137/18M1223101. Free PDF: <a href=https://www.stat.uchicago.edu/~lekheng/work/hodge-graph.pdf>https://www.stat.uchicago.edu/~lekheng/work/hodge-graph.pdf</a> — <em>Primary reference for all discrete Hodge theory in EP14.</em></li>
 <li>Yust, J. (2020). &ldquo;Generalized Tonnetze and Zeitnetze, and the Topology of Music Concepts.&rdquo; <em>Journal of Mathematics and Music</em> 14(2), 170–203.</li>
 <li>Humphreys, J. (1972). <em>Introduction to Lie Algebras and Representation Theory</em>. Springer GTM 9.</li>
 <li>Rietsch, K. (2024). &ldquo;Generalisations of Euler&rsquo;s Tonnetz on Triangulated Surfaces.&rdquo; <em>Journal of Mathematics and Music</em>. DOI: 10.1080/17459737.2024.2362132</li>
 </ol>
-
-    </div>
-
-    
-    <nav class="ep-nav">
-      
-      
-      
-      
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-      
-      <a href="https://amath390.sibeliusp.com/episodes/ep13/" class="ep-nav-prev">
-        ← EP13: Polyrhythm and Rhythm-Pitch Duality
-      </a>
-      
-      
-      <a href="https://amath390.sibeliusp.com/episodes/ep15/" class="ep-nav-next">
-        EP15: Opera Acoustics and the Singer&#39;s Formant →
-      </a>
-      
-    </nav>
-  </article>
-
-  
-  
-  
-  <aside class="ep-toc-aside">
-    <div class="ep-toc-sticky">
-      <div class="ep-toc-label">本页目录</div>
-      <nav id="TableOfContents">
-  <ul>
-    <li><a href="#overview">Overview</a></li>
-    <li><a href="#prerequisites">Prerequisites</a></li>
-    <li><a href="#preamble-what-is-a-hole-building-homology-from-scratch">Preamble: What Is a &ldquo;Hole&rdquo;? Building Homology from Scratch</a>
-      <ul>
-        <li><a href="#p1--the-naive-question">P.1 — The Naive Question</a></li>
-        <li><a href="#p2--the-loop-test">P.2 — The Loop Test</a></li>
-        <li><a href="#p3--chains-the-algebraic-skeleton">P.3 — Chains: The Algebraic Skeleton</a></li>
-        <li><a href="#p4--the-boundary-operator-hahahugoshortcode-s12-hbhb">P.4 — The Boundary Operator HAHAHUGOSHORTCODE-s12-HBHB</a></li>
-        <li><a href="#p5--hahahugoshortcode-s18-hbhb-the-fundamental-identity">P.5 — HAHAHUGOSHORTCODE-s18-HBHB: The Fundamental Identity</a></li>
-        <li><a href="#p6--cycles-boundaries-and-the-definition-of-a-hole">P.6 — Cycles, Boundaries, and the Definition of a Hole</a></li>
-        <li><a href="#p7--connecting-to-the-tonnetz-numbers">P.7 — Connecting to the Tonnetz Numbers</a></li>
-      </ul>
-    </li>
-    <li><a href="#the-tonnetz-as-a-simplicial-complex">The Tonnetz as a Simplicial Complex</a></li>
-    <li><a href="#section-1-the-hodge-star-operator-">Section 1: The Hodge Star Operator ★</a></li>
-    <li><a href="#section-2-inner-product-and-adjoint-operators">Section 2: Inner Product and Adjoint Operators</a></li>
-    <li><a href="#section-3-the-hodge-laplacian">Section 3: The Hodge Laplacian</a></li>
-    <li><a href="#section-4-the-hodge-decomposition-theorem">Section 4: The Hodge Decomposition Theorem</a></li>
-    <li><a href="#section-5-three-musical-hypotheses">Section 5: Three Musical Hypotheses</a></li>
-    <li><a href="#section-6-langlands-duality-and-the-tonnetz">Section 6: Langlands Duality and the Tonnetz</a></li>
-    <li><a href="#historical-timeline">Historical Timeline</a></li>
-    <li><a href="#extended-reading">Extended Reading</a></li>
-    <li><a href="#academic-references">Academic References</a></li>
-  </ul>
-</nav>
-    </div>
-  </aside>
-  
 </div>
-
-      <footer class="site-footer">
-  <div class="footer-content">
-    <a href="https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f" target="_blank" rel="noopener" class="footer-avatar-link">
-      <img src="/images/avatar.png" alt="Sibelius P." class="footer-avatar">
-    </a>
-    <div class="footer-text">
-      <span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
-      <span class="footer-sep">·</span>
-      <a href="https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f" target="_blank" rel="noopener">小红书</a>
-      <span class="footer-sep">·</span>
-      <span>Built with <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> + KaTeX</span>
-    </div>
-  </div>
+<nav class=ep-nav>
+<a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-nav-prev>
+← EP13: Polyrhythm and Rhythm-Pitch Duality
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-nav-next>
+EP15: Opera Acoustics and the Singer's Formant →
+</a>
+</nav>
+</article>
+<aside class=ep-toc-aside>
+<div class=ep-toc-sticky>
+<div class=ep-toc-label>本页目录</div>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#overview>Overview</a></li>
+<li><a href=#prerequisites>Prerequisites</a></li>
+<li><a href=#preamble-what-is-a-hole-building-homology-from-scratch>Preamble: What Is a &ldquo;Hole&rdquo;? Building Homology from Scratch</a>
+<ul>
+<li><a href=#p1--the-naive-question>P.1 — The Naive Question</a></li>
+<li><a href=#p2--the-loop-test>P.2 — The Loop Test</a></li>
+<li><a href=#p3--chains-the-algebraic-skeleton>P.3 — Chains: The Algebraic Skeleton</a></li>
+<li><a href=#p4--the-boundary-operator->P.4 — The Boundary Operator ∂</a></li>
+<li><a href=#p5----0-the-fundamental-identity>P.5 — ∂² = 0: The Fundamental Identity</a></li>
+<li><a href=#p6--cycles-boundaries-and-the-definition-of-a-hole>P.6 — Cycles, Boundaries, and the Definition of a Hole</a></li>
+<li><a href=#p7--connecting-to-the-tonnetz-numbers>P.7 — Connecting to the Tonnetz Numbers</a></li>
+</ul>
+</li>
+<li><a href=#the-tonnetz-as-a-simplicial-complex>The Tonnetz as a Simplicial Complex</a></li>
+<li><a href=#section-1-the-hodge-star-operator->Section 1: The Hodge Star Operator ★</a></li>
+<li><a href=#section-2-inner-product-and-adjoint-operators>Section 2: Inner Product and Adjoint Operators</a></li>
+<li><a href=#section-3-the-hodge-laplacian>Section 3: The Hodge Laplacian</a></li>
+<li><a href=#section-4-the-hodge-decomposition-theorem>Section 4: The Hodge Decomposition Theorem</a></li>
+<li><a href=#section-5-three-musical-hypotheses>Section 5: Three Musical Hypotheses</a></li>
+<li><a href=#section-6-langlands-duality-and-the-tonnetz>Section 6: Langlands Duality and the Tonnetz</a></li>
+<li><a href=#historical-timeline>Historical Timeline</a></li>
+<li><a href=#extended-reading>Extended Reading</a></li>
+<li><a href=#academic-references>Academic References</a></li>
+</ul>
+</nav>
+</div>
+</aside>
+</div>
+<footer class=site-footer>
+<div class=footer-content>
+<a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link>
+<img src=/images/avatar.png alt="Sibelius P." class=footer-avatar>
+</a>
+<div class=footer-text>
+<span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
+<span class=footer-sep>·</span>
+<a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener>小红书</a>
+<span class=footer-sep>·</span>
+<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span>
+</div>
+</div>
 </footer>
-
-    </main>
-  </div>
+</main>
+</div>
 </body>
 </html>

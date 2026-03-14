@@ -1,802 +1,181 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
+<!doctype html><html lang=zh-cn>
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EP17: Leitmotif Networks — Wagner&#39;s Ring Cycle | AMATH 390 数学与音乐</title>
-<meta name="description" content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('[data-latex]').forEach(function(el) {
-    try {
-      katex.render(el.getAttribute('data-latex'), el, {
-        displayMode: el.classList.contains('math-display'),
-        throwOnError: false
-      });
-    } catch(e) { console.warn('KaTeX:', e.message, el); }
-  });
-});
-</script>
-
-
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
-
-<link rel="stylesheet" href="/css/amath390.css">
-
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>EP17: Leitmotif Networks — Wagner's Ring Cycle | AMATH 390 数学与音乐</title>
+<meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script>
+<script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('[data-latex]').forEach(function(a){try{katex.render(a.getAttribute('data-latex'),a,{displayMode:a.classList.contains('math-display'),throwOnError:!1})}catch(b){console.warn('KaTeX:',b.message,a)}})})</script>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16.png>
+<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+<link rel=stylesheet href=/css/amath390.css>
 </head>
 <body>
-  <div class="layout-wrapper">
-    
-
-
-<nav class="sidebar">
-  <div class="sidebar-header">
-    <a href="/" class="sidebar-title">AMATH 390</a>
-    <div class="sidebar-subtitle">数学与音乐</div>
-  </div>
-
-  
-
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">数学基础篇</div>
-        
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep01/"
-               class="ep-link">
-              <span class="ep-num">01</span>
-              <span class="ep-title">Chord Space and the Torus</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep02/"
-               class="ep-link">
-              <span class="ep-num">02</span>
-              <span class="ep-title">String Vibration and the Wave Equation</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep03/"
-               class="ep-link">
-              <span class="ep-num">03</span>
-              <span class="ep-title">Bach and Graph Connectivity</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep04/"
-               class="ep-link">
-              <span class="ep-num">04</span>
-              <span class="ep-title">All-Interval Rows and ℤ₁₂</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep05/"
-               class="ep-link">
-              <span class="ep-num">05</span>
-              <span class="ep-title">Turán&#39;s Theorem and Counterpoint</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep06/"
-               class="ep-link">
-              <span class="ep-num">06</span>
-              <span class="ep-title">Graph Coloring and Voice Assignment</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep07/"
-               class="ep-link">
-              <span class="ep-num">07</span>
-              <span class="ep-title">Information Entropy and All-Interval Rows</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep08/"
-               class="ep-link">
-              <span class="ep-num">08</span>
-              <span class="ep-title">Shepard Tones and the Tritone Paradox</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep09/"
-               class="ep-link">
-              <span class="ep-num">09</span>
-              <span class="ep-title">Combination Tones and Nonlinear Acoustics</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">Jacob Collier 系列</div>
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep10/"
-               class="ep-link">
-              <span class="ep-num">10</span>
-              <span class="ep-title">Negative Harmony and the Dihedral Group D₁₂</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep11/"
-               class="ep-link">
-              <span class="ep-num">11</span>
-              <span class="ep-title">Comma Drift and the Impossibility of Perfect Tuning</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep12/"
-               class="ep-link">
-              <span class="ep-num">12</span>
-              <span class="ep-title">The Circle of Fifths as a Folded Spiral</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep13/"
-               class="ep-link">
-              <span class="ep-num">13</span>
-              <span class="ep-title">Polyrhythm and Rhythm-Pitch Duality</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">拓扑数学专篇</div>
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep14/"
-               class="ep-link">
-              <span class="ep-num">14</span>
-              <span class="ep-title">Tonnetz Hodge Duality</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">歌剧系列</div>
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep15/"
-               class="ep-link">
-              <span class="ep-num">15</span>
-              <span class="ep-title">Opera Acoustics and the Singer&#39;s Formant</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep16/"
-               class="ep-link">
-              <span class="ep-num">16</span>
-              <span class="ep-title">Rossini&#39;s Code — Budden, Gossett, and the Convention System</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep17/"
-               class="ep-link active">
-              <span class="ep-num">17</span>
-              <span class="ep-title">Leitmotif Networks — Wagner&#39;s Ring Cycle</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-
-  <div class="sidebar-footer">
-    <a href="/theorems/">定理索引</a>
-    <a href="/domains/">数学领域</a>
-    <a href="/about/">关于</a>
-  </div>
-</nav>
-
-    <main class="main-content">
-      
-
-
-
-<div class="episode-layout">
-  <article class="episode-page">
-    <header class="episode-header">
-  <div class="ep-badge">EP17</div>
-  <h1 class="ep-main-title">EP17: Leitmotif Networks — Wagner&#39;s Ring Cycle</h1>
-  <div class="ep-subtitle">Graph Structure, Klein V₄ Callback, and Network Analysis of Der Ring des Nibelungen</div>
-
-  <div class="ep-meta">
-    
-    <span class="meta-item">
-      <span class="meta-icon">▶</span> 6:51
-    </span>
-    
-    
-    <span class="meta-item domains">
-      <span class="domain-chip">Graph Theory</span><span class="domain-chip">Abstract Algebra</span><span class="domain-chip">Network Science</span>
-    </span>
-    
-  </div>
-</header>
-
-    
-
-
-<div class="cross-refs">
-  <h3 class="cross-refs-title">前置知识</h3>
-  <div class="ref-cards">
-    
-      
-      
-      
-      
-        <a href="https://amath390.sibeliusp.com/episodes/ep03/" class="ref-card callback">
-          <span class="ref-ep">EP03</span>
-          <span class="ref-title">Bach and Graph Connectivity</span>
-        </a>
-      
-    
-      
-      
-      
-      
-        <a href="https://amath390.sibeliusp.com/episodes/ep04/" class="ref-card callback">
-          <span class="ref-ep">EP04</span>
-          <span class="ref-title">All-Interval Rows and ℤ₁₂</span>
-        </a>
-      
-    
-      
-      
-      
-      
-        <a href="https://amath390.sibeliusp.com/episodes/ep16/" class="ref-card callback">
-          <span class="ref-ep">EP16</span>
-          <span class="ref-title">Rossini&#39;s Code — Budden, Gossett, and the Convention System</span>
-        </a>
-      
-    
-  </div>
+<div class=layout-wrapper>
+<nav class=sidebar>
+<div class=sidebar-header>
+<a href=/ class=sidebar-title>AMATH 390</a>
+<div class=sidebar-subtitle>数学与音乐</div>
 </div>
-
-
-
-
-
-
-
-
-    
-
-
-    <div class="episode-content content">
-      <h2 id="overview">Overview</h2>
+<div class=arc-group>
+<div class=arc-label>数学基础篇</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link>
+<span class=ep-num>01</span>
+<span class=ep-title>Chord Space and the Torus</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep02/ class=ep-link>
+<span class=ep-num>02</span>
+<span class=ep-title>String Vibration and the Wave Equation</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link>
+<span class=ep-num>03</span>
+<span class=ep-title>Bach and Graph Connectivity</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link>
+<span class=ep-num>04</span>
+<span class=ep-title>All-Interval Rows and ℤ₁₂</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link>
+<span class=ep-num>05</span>
+<span class=ep-title>Turán's Theorem and Counterpoint</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-link>
+<span class=ep-num>06</span>
+<span class=ep-title>Graph Coloring and Voice Assignment</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-link>
+<span class=ep-num>07</span>
+<span class=ep-title>Information Entropy and All-Interval Rows</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-link>
+<span class=ep-num>08</span>
+<span class=ep-title>Shepard Tones and the Tritone Paradox</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link>
+<span class=ep-num>09</span>
+<span class=ep-title>Combination Tones and Nonlinear Acoustics</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>Jacob Collier 系列</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep10/ class=ep-link>
+<span class=ep-num>10</span>
+<span class=ep-title>Negative Harmony and the Dihedral Group D₁₂</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link>
+<span class=ep-num>11</span>
+<span class=ep-title>Comma Drift and the Impossibility of Perfect Tuning</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep12/ class=ep-link>
+<span class=ep-num>12</span>
+<span class=ep-title>The Circle of Fifths as a Folded Spiral</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-link>
+<span class=ep-num>13</span>
+<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>拓扑数学专篇</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-link>
+<span class=ep-num>14</span>
+<span class=ep-title>Tonnetz Hodge Duality</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>歌剧系列</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-link>
+<span class=ep-num>15</span>
+<span class=ep-title>Opera Acoustics and the Singer's Formant</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link>
+<span class=ep-num>16</span>
+<span class=ep-title>Rossini's Code — Budden, Gossett, and the Convention System</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep17/ class="ep-link active">
+<span class=ep-num>17</span>
+<span class=ep-title>Leitmotif Networks — Wagner's Ring Cycle</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-link>
+<span class=ep-num>18</span>
+<span class=ep-title>Game Theory in Operatic Duets</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link>
+<span class=ep-num>19</span>
+<span class=ep-title>Vibrato as FM Synthesis</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-link>
+<span class=ep-num>20</span>
+<span class=ep-title>Character Interaction Networks in Opera</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>AI 音乐三部曲</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-link>
+<span class=ep-num>21</span>
+<span class=ep-title>From Markov to Diffusion — Sixty Years of AI Composition</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-link>
+<span class=ep-num>22</span>
+<span class=ep-title>How AI Writes Music — EnCodec and RVQ</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-link>
+<span class=ep-num>23</span>
+<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span>
+</a>
+</div>
+<div class=sidebar-footer>
+<a href=/theorems/>定理索引</a>
+<a href=/domains/>数学领域</a>
+<a href=/about/>关于</a>
+</div>
+</nav>
+<main class=main-content>
+<div class=episode-layout>
+<article class=episode-page>
+<header class=episode-header>
+<div class=ep-badge>EP17</div>
+<h1 class=ep-main-title>EP17: Leitmotif Networks — Wagner's Ring Cycle</h1>
+<div class=ep-subtitle>Graph Structure, Klein V₄ Callback, and Network Analysis of Der Ring des Nibelungen</div>
+<div class=ep-meta>
+<span class=meta-item>
+<span class=meta-icon>▶</span> 6:51
+</span>
+<span class="meta-item domains">
+<span class=domain-chip>Graph Theory</span><span class=domain-chip>Abstract Algebra</span><span class=domain-chip>Network Science</span>
+</span>
+</div>
+</header>
+<div class=cross-refs>
+<h3 class=cross-refs-title>前置知识</h3>
+<div class=ref-cards>
+<a href=https://amath390.sibeliusp.com/episodes/ep03/ class="ref-card callback">
+<span class=ref-ep>EP03</span>
+<span class=ref-title>Bach and Graph Connectivity</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep04/ class="ref-card callback">
+<span class=ref-ep>EP04</span>
+<span class=ref-title>All-Interval Rows and ℤ₁₂</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep16/ class="ref-card callback">
+<span class=ref-ep>EP16</span>
+<span class=ref-title>Rossini's Code — Budden, Gossett, and the Convention System</span>
+</a>
+</div>
+</div>
+<div class=cross-refs>
+<h3 class=cross-refs-title>后续拓展</h3>
+<div class=ref-cards>
+<a href=https://amath390.sibeliusp.com/episodes/ep20/ class="ref-card forward">
+<span class=ref-ep>EP20</span>
+<span class=ref-title>Character Interaction Networks in Opera</span>
+</a>
+</div>
+</div>
+<div class="episode-content content">
+<h2 id=overview>Overview</h2>
 <p>You have heard this melody before. But in the <em>Ring</em> cycle&rsquo;s sixteen hours, it returns in dozens of different forms — transposed, inverted, reversed, fragmented. Scholars have catalogued over a hundred such motifs. Wagner did not write melodies — he wrote an <strong>operating system</strong>.</p>
 <blockquote>
 <p><em>中文:</em> &ldquo;瓦格纳没有写旋律——他写了一个操作系统。这期我们来拆解这个系统的网络结构。&rdquo;</p>
@@ -804,58 +183,40 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>This episode analyzes Wagner&rsquo;s leitmotif system through three mathematical lenses:</p>
 <ol>
 <li>
-<p><strong>Abstract algebra</strong>: The four basic motivic transformations — original, retrograde, inversion, retrograde-inversion — form the <strong>Klein four-group</strong> <span class="math-inline" data-latex="V_4 \cong \mathbb{Z}_2 \times \mathbb{Z}_2"></span>, the same algebraic structure we encountered in 
-
-
-
-<a href="https://amath390.sibeliusp.com/episodes/ep04/" class="episode-ref-link">EP04</a>
-
+<p><strong>Abstract algebra</strong>: The four basic motivic transformations — original, retrograde, inversion, retrograde-inversion — form the <strong>Klein four-group</strong> <span class=math-inline data-latex="V_4 \cong \mathbb{Z}_2 \times \mathbb{Z}_2"></span>, the same algebraic structure we encountered in
+<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=episode-ref-link>EP04</a>
 &rsquo;s analysis of Schoenberg&rsquo;s twelve-tone rows.</p>
 </li>
 <li>
-<p><strong>Graph theory</strong>: Treating motifs as nodes and their relationships (transformation, co-occurrence) as edges produces a network <span class="math-inline" data-latex="G = (V, E)"></span> whose structure evolves across the four operas.</p>
+<p><strong>Graph theory</strong>: Treating motifs as nodes and their relationships (transformation, co-occurrence) as edges produces a network <span class=math-inline data-latex="G = (V, E)"></span> whose structure evolves across the four operas.</p>
 </li>
 <li>
 <p><strong>Network science</strong>: Degree centrality, clustering coefficients, and community structure reveal which motifs are structural hubs and how the network compresses sixteen hours of drama into a coherent whole.</p>
 </li>
 </ol>
 <hr>
-<h2 id="prerequisites">Prerequisites</h2>
+<h2 id=prerequisites>Prerequisites</h2>
 <ul>
 <li>
-
-
-
-<a href="https://amath390.sibeliusp.com/episodes/ep03/" class="episode-ref-link">Graph Theory and Euler Paths (EP03)</a>
-
- — graph fundamentals, vertices, edges, paths</li>
+<a href=https://amath390.sibeliusp.com/episodes/ep03/ class=episode-ref-link>Graph Theory and Euler Paths (EP03)</a>
+— graph fundamentals, vertices, edges, paths</li>
 <li>
-
-
-
-<a href="https://amath390.sibeliusp.com/episodes/ep04/" class="episode-ref-link">All-Interval Rows and ℤ₁₂ (EP04)</a>
-
- — pitch-class arithmetic, Klein four-group, twelve-tone operations</li>
+<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=episode-ref-link>All-Interval Rows and ℤ₁₂ (EP04)</a>
+— pitch-class arithmetic, Klein four-group, twelve-tone operations</li>
 <li>
-
-
-
-<a href="https://amath390.sibeliusp.com/episodes/ep16/" class="episode-ref-link">Rossini's Code and Context-Free Grammar (EP16)</a>
-
- — the tree-structured alternative to network-structured opera</li>
+<a href=https://amath390.sibeliusp.com/episodes/ep16/ class=episode-ref-link>Rossini's Code and Context-Free Grammar (EP16)</a>
+— the tree-structured alternative to network-structured opera</li>
 </ul>
 <hr>
-<h2 id="definitions">Definitions</h2>
-
-
-<div class="definition-block" id="definition-17.1">
-  <div class="block-label">
-    Definition 17.1 (Leitmotif)
-  </div>
-  <div class="block-body"><p>A <strong>leitmotif</strong> (<em>Leitmotiv</em>) is a short musical phrase associated with a specific dramatic entity — a character, object, emotion, or concept — that recurs and transforms throughout a musical drama.</p>
+<h2 id=definitions>Definitions</h2>
+<div class=definition-block id=definition-17.1>
+<div class=block-label>
+Definition 17.1 (Leitmotif)
+</div>
+<div class=block-body><p>A <strong>leitmotif</strong> (<em>Leitmotiv</em>) is a short musical phrase associated with a specific dramatic entity — a character, object, emotion, or concept — that recurs and transforms throughout a musical drama.</p>
 <p>Formally, a leitmotif is a mapping:</p>
-<div class="math-display" data-latex="\ell: \text{Label} \to \text{PitchSequence}"></div>
-<p>where <span class="math-inline" data-latex="\text{Label}"></span> is a semantic tag (e.g., &ldquo;Sword,&rdquo; &ldquo;Valhalla,&rdquo; &ldquo;Ring,&rdquo; &ldquo;Curse,&rdquo; &ldquo;Rhine&rdquo;) and <span class="math-inline" data-latex="\text{PitchSequence}"></span> is a sequence of pitch classes in <span class="math-inline" data-latex="\mathbb{Z}_{12}"></span>.</p>
+<p><span class=math-display data-latex="\ell: \text{Label} \to \text{PitchSequence}"></span></p>
+<p>where <span class=math-inline data-latex=\text{Label}></span> is a semantic tag (e.g., &ldquo;Sword,&rdquo; &ldquo;Valhalla,&rdquo; &ldquo;Ring,&rdquo; &ldquo;Curse,&rdquo; &ldquo;Rhine&rdquo;) and <span class=math-inline data-latex=\text{PitchSequence}></span> is a sequence of pitch classes in <span class=math-inline data-latex=\mathbb{Z}_{12}></span>.</p>
 <p><strong>Examples from the <em>Ring</em></strong>:</p>
 <table>
 <thead>
@@ -870,13 +231,13 @@ document.addEventListener('DOMContentLoaded', function() {
 <tr>
 <td>Sword</td>
 <td>Hero&rsquo;s power</td>
-<td><span class="math-inline" data-latex="(0, 4, 7)"></span> — ascending major triad arpeggio</td>
+<td><span class=math-inline data-latex="(0, 4, 7)"></span> — ascending major triad arpeggio</td>
 <td>Ascending C major</td>
 </tr>
 <tr>
 <td>Valhalla</td>
 <td>Home of the gods</td>
-<td>Majestic <span class="math-inline" data-latex="D\flat"></span> major progression</td>
+<td>Majestic <span class=math-inline data-latex=D\flat></span> major progression</td>
 <td>Stately, broad</td>
 </tr>
 <tr>
@@ -894,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <tr>
 <td>Rhine</td>
 <td>Nature&rsquo;s origin</td>
-<td><span class="math-inline" data-latex="E\flat"></span> major arpeggiation</td>
+<td><span class=math-inline data-latex=E\flat></span> major arpeggiation</td>
 <td>Flowing, primordial</td>
 </tr>
 </tbody>
@@ -902,56 +263,38 @@ document.addEventListener('DOMContentLoaded', function() {
 <p><strong>Scale</strong>: Conservative estimates identify ~60 core leitmotifs; broader catalogues exceed 200. The AudioLabs Erlangen team computationally annotated over 2,000 occurrences in the full score.</p>
 </div>
 </div>
-
-<div class="yt-container">
-  <div class="yt-embed">
-    
-    
-    
-    
-    <iframe
-      src="https://www.youtube.com/embed/gdba1jgwr7k"
-      title="Das Rheingold — Vorspiel"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen>
-    </iframe>
-  </div>
-  <p class="yt-caption">The Prelude to Das Rheingold: 136 bars on a single E♭ major chord, from which the Rhine motif emerges — the primordial origin of the entire Ring network.</p>
+<div class=yt-container>
+<div class=yt-embed>
+<iframe src=https://www.youtube.com/embed/gdba1jgwr7k title="Das Rheingold — Vorspiel" frameborder=0 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy=strict-origin-when-cross-origin allowfullscreen></iframe>
 </div>
-
-
-
-<div class="definition-block" id="definition-17.2">
-  <div class="block-label">
-    Definition 17.2 (Pitch-Class Encoding)
-  </div>
-  <div class="block-body"><p>Each pitch name is encoded as an integer in <span class="math-inline" data-latex="\mathbb{Z}_{12}"></span>:</p>
-<div class="math-display" data-latex="C = 0,\; C\sharp = 1,\; D = 2,\; \ldots,\; B = 11"></div>
-<p>A leitmotif with <span class="math-inline" data-latex="k"></span> notes becomes a vector <span class="math-inline" data-latex="\mathbf{m} = (m_1, m_2, \ldots, m_k) \in \mathbb{Z}_{12}^k"></span>.</p>
-<p>This encoding is the same <span class="math-inline" data-latex="\mathbb{Z}_{12}"></span> arithmetic used in EP04 for twelve-tone rows. The difference: Schoenberg&rsquo;s rows use all 12 pitch classes exactly once; Wagner&rsquo;s motifs are short fragments (typically 3–8 notes) that may repeat pitch classes.</p>
+<p class=yt-caption>The Prelude to Das Rheingold: 136 bars on a single E♭ major chord, from which the Rhine motif emerges — the primordial origin of the entire Ring network.</p>
+</div>
+<div class=definition-block id=definition-17.2>
+<div class=block-label>
+Definition 17.2 (Pitch-Class Encoding)
+</div>
+<div class=block-body><p>Each pitch name is encoded as an integer in <span class=math-inline data-latex=\mathbb{Z}_{12}></span>:</p>
+<p><span class=math-display data-latex="C = 0,\; C\sharp = 1,\; D = 2,\; \ldots,\; B = 11"></span></p>
+<p>A leitmotif with <span class=math-inline data-latex=k></span> notes becomes a vector <span class=math-inline data-latex="\mathbf{m} = (m_1, m_2, \ldots, m_k) \in \mathbb{Z}_{12}^k"></span>.</p>
+<p>This encoding is the same <span class=math-inline data-latex=\mathbb{Z}_{12}></span> arithmetic used in EP04 for twelve-tone rows. The difference: Schoenberg&rsquo;s rows use all 12 pitch classes exactly once; Wagner&rsquo;s motifs are short fragments (typically 3–8 notes) that may repeat pitch classes.</p>
 </div>
 </div>
-
-
-
-<div class="definition-block" id="definition-17.3">
-  <div class="block-label">
-    Definition 17.3 (Motivic Transformations)
-  </div>
-  <div class="block-body"><p>Wagner applies four fundamental transformations to leitmotifs. Given a motif <span class="math-inline" data-latex="\mathbf{m} = (m_1, m_2, \ldots, m_k)"></span>:</p>
-<p><strong>1. Transposition</strong> <span class="math-inline" data-latex="T_n"></span> (pitch shift):</p>
-<div class="math-display" data-latex="T_n(\mathbf{m}) = (m_1 &#43; n, \; m_2 &#43; n, \; \ldots, \; m_k &#43; n) \pmod{12}"></div>
-The Sword motif transposed from C to E: all pitch classes increase by 4 semitones. Interval relationships are preserved.
-<p><strong>2. Retrograde</strong> <span class="math-inline" data-latex="R"></span> (time reversal):</p>
-<div class="math-display" data-latex="R(\mathbf{m}) = (m_k, \; m_{k-1}, \; \ldots, \; m_1)"></div>
-The motif played backwards. The last note becomes the first.
-<p><strong>3. Inversion</strong> <span class="math-inline" data-latex="I"></span> (pitch reflection):</p>
-<div class="math-display" data-latex="I(\mathbf{m}) = (-m_1, \; -m_2, \; \ldots, \; -m_k) \pmod{12}"></div>
-Ascending intervals become descending; an upward leap of 4 semitones becomes a downward leap of 4 semitones.
-<p><strong>4. Retrograde-Inversion</strong> <span class="math-inline" data-latex="RI = R \circ I"></span> (both):</p>
-<div class="math-display" data-latex="RI(\mathbf{m}) = (-m_k, \; -m_{k-1}, \; \ldots, \; -m_1) \pmod{12}"></div>
+<div class=definition-block id=definition-17.3>
+<div class=block-label>
+Definition 17.3 (Motivic Transformations)
+</div>
+<div class=block-body><p>Wagner applies four fundamental transformations to leitmotifs. Given a motif <span class=math-inline data-latex="\mathbf{m} = (m_1, m_2, \ldots, m_k)"></span>:</p>
+<p><strong>1. Transposition</strong> <span class=math-inline data-latex=T_n></span> (pitch shift):
+<span class=math-display data-latex="T_n(\mathbf{m}) = (m_1 + n, \; m_2 + n, \; \ldots, \; m_k + n) \pmod{12}"></span>
+The Sword motif transposed from C to E: all pitch classes increase by 4 semitones. Interval relationships are preserved.</p>
+<p><strong>2. Retrograde</strong> <span class=math-inline data-latex=R></span> (time reversal):
+<span class=math-display data-latex="R(\mathbf{m}) = (m_k, \; m_{k-1}, \; \ldots, \; m_1)"></span>
+The motif played backwards. The last note becomes the first.</p>
+<p><strong>3. Inversion</strong> <span class=math-inline data-latex=I></span> (pitch reflection):
+<span class=math-display data-latex="I(\mathbf{m}) = (-m_1, \; -m_2, \; \ldots, \; -m_k) \pmod{12}"></span>
+Ascending intervals become descending; an upward leap of 4 semitones becomes a downward leap of 4 semitones.</p>
+<p><strong>4. Retrograde-Inversion</strong> <span class=math-inline data-latex="RI = R \circ I"></span> (both):
+<span class=math-display data-latex="RI(\mathbf{m}) = (-m_k, \; -m_{k-1}, \; \ldots, \; -m_1) \pmod{12}"></span></p>
 <p><strong>Additional transformations</strong> (non-algebraic):</p>
 <ul>
 <li><strong>Augmentation</strong>: multiply all durations by 2 (e.g., the Fate motif in <em>Rheingold</em> uses quarter notes; in <em>Götterdämmerung</em> it uses whole notes).</li>
@@ -960,93 +303,76 @@ Ascending intervals become descending; an upward leap of 4 semitones becomes a d
 </ul>
 </div>
 </div>
-
-<div class="yt-container">
-  <div class="yt-embed">
-    
-    
-    
-    
-    <iframe
-      src="https://www.youtube.com/embed/0ocnhbhwzni"
-      title="Die Walküre — Ein Schwert verhieß mir der Vater"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen>
-    </iframe>
-  </div>
-  <p class="yt-caption">Siegmund discovers the Sword motif embedded in the World Ash Tree. The ascending major triad arpeggio — the same pitch-class pattern as Definition 17.1 — appears here in its heroic, unaltered form.</p>
+<div class=yt-container>
+<div class=yt-embed>
+<iframe src=https://www.youtube.com/embed/0ocnhbhwzni title="Die Walküre — Ein Schwert verhieß mir der Vater" frameborder=0 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy=strict-origin-when-cross-origin allowfullscreen></iframe>
 </div>
-
+<p class=yt-caption>Siegmund discovers the Sword motif embedded in the World Ash Tree. The ascending major triad arpeggio — the same pitch-class pattern as Definition 17.1 — appears here in its heroic, unaltered form.</p>
+</div>
 <hr>
-<h2 id="main-theorems">Main Theorems</h2>
-
-
-<div class="theorem-block" id="theorem-17.1">
-  <div class="block-label">
-    Theorem 17.1 (Klein Four-Group Structure of Motivic Transformations)
-  </div>
-  <div class="block-body"><p>The four operations <span class="math-inline" data-latex="\{P, R, I, RI\}"></span> (where <span class="math-inline" data-latex="P"></span> = original/prime) form the <strong>Klein four-group</strong> <span class="math-inline" data-latex="V_4"></span> under composition:</p>
+<h2 id=main-theorems>Main Theorems</h2>
+<div class=theorem-block id=theorem-17.1>
+<div class=block-label>
+Theorem 17.1 (Klein Four-Group Structure of Motivic Transformations)
+</div>
+<div class=block-body><p>The four operations <span class=math-inline data-latex="\{P, R, I, RI\}"></span> (where <span class=math-inline data-latex=P></span> = original/prime) form the <strong>Klein four-group</strong> <span class=math-inline data-latex=V_4></span> under composition:</p>
 <table>
 <thead>
 <tr>
-<th><span class="math-inline" data-latex="\circ"></span></th>
-<th><span class="math-inline" data-latex="P"></span></th>
-<th><span class="math-inline" data-latex="R"></span></th>
-<th><span class="math-inline" data-latex="I"></span></th>
-<th><span class="math-inline" data-latex="RI"></span></th>
+<th><span class=math-inline data-latex=\circ></span></th>
+<th><span class=math-inline data-latex=P></span></th>
+<th><span class=math-inline data-latex=R></span></th>
+<th><span class=math-inline data-latex=I></span></th>
+<th><span class=math-inline data-latex=RI></span></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><span class="math-inline" data-latex="P"></span></td>
-<td><span class="math-inline" data-latex="P"></span></td>
-<td><span class="math-inline" data-latex="R"></span></td>
-<td><span class="math-inline" data-latex="I"></span></td>
-<td><span class="math-inline" data-latex="RI"></span></td>
+<td><span class=math-inline data-latex=P></span></td>
+<td><span class=math-inline data-latex=P></span></td>
+<td><span class=math-inline data-latex=R></span></td>
+<td><span class=math-inline data-latex=I></span></td>
+<td><span class=math-inline data-latex=RI></span></td>
 </tr>
 <tr>
-<td><span class="math-inline" data-latex="R"></span></td>
-<td><span class="math-inline" data-latex="R"></span></td>
-<td><span class="math-inline" data-latex="P"></span></td>
-<td><span class="math-inline" data-latex="RI"></span></td>
-<td><span class="math-inline" data-latex="I"></span></td>
+<td><span class=math-inline data-latex=R></span></td>
+<td><span class=math-inline data-latex=R></span></td>
+<td><span class=math-inline data-latex=P></span></td>
+<td><span class=math-inline data-latex=RI></span></td>
+<td><span class=math-inline data-latex=I></span></td>
 </tr>
 <tr>
-<td><span class="math-inline" data-latex="I"></span></td>
-<td><span class="math-inline" data-latex="I"></span></td>
-<td><span class="math-inline" data-latex="RI"></span></td>
-<td><span class="math-inline" data-latex="P"></span></td>
-<td><span class="math-inline" data-latex="R"></span></td>
+<td><span class=math-inline data-latex=I></span></td>
+<td><span class=math-inline data-latex=I></span></td>
+<td><span class=math-inline data-latex=RI></span></td>
+<td><span class=math-inline data-latex=P></span></td>
+<td><span class=math-inline data-latex=R></span></td>
 </tr>
 <tr>
-<td><span class="math-inline" data-latex="RI"></span></td>
-<td><span class="math-inline" data-latex="RI"></span></td>
-<td><span class="math-inline" data-latex="I"></span></td>
-<td><span class="math-inline" data-latex="R"></span></td>
-<td><span class="math-inline" data-latex="P"></span></td>
+<td><span class=math-inline data-latex=RI></span></td>
+<td><span class=math-inline data-latex=RI></span></td>
+<td><span class=math-inline data-latex=I></span></td>
+<td><span class=math-inline data-latex=R></span></td>
+<td><span class=math-inline data-latex=P></span></td>
 </tr>
 </tbody>
 </table>
-<p>Every element is its own inverse: <span class="math-inline" data-latex="R^2 = I^2 = (RI)^2 = P"></span>.</p>
-<p><span class="math-inline" data-latex="V_4 \cong \mathbb{Z}_2 \times \mathbb{Z}_2"></span> — the smallest non-cyclic group.</p>
+<p>Every element is its own inverse: <span class=math-inline data-latex="R^2 = I^2 = (RI)^2 = P"></span>.</p>
+<p><span class=math-inline data-latex="V_4 \cong \mathbb{Z}_2 \times \mathbb{Z}_2"></span> — the smallest non-cyclic group.</p>
 </div>
 </div>
-
-<div class="proof-block">
-  <div class="block-label">Proof.</div>
-  <div class="block-body"><p>This is exactly the same Cayley table computed in EP04 (Theorem 4.2) for Schoenberg&rsquo;s twelve-tone operations. The proof carries over unchanged:</p>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><p>This is exactly the same Cayley table computed in EP04 (Theorem 4.2) for Schoenberg&rsquo;s twelve-tone operations. The proof carries over unchanged:</p>
 <ul>
 <li><strong>Closure</strong>: the composition of any two operations produces one of the four.</li>
 <li><strong>Associativity</strong>: inherited from function composition.</li>
-<li><strong>Identity</strong>: <span class="math-inline" data-latex="P"></span> (apply no transformation).</li>
-<li><strong>Inverses</strong>: <span class="math-inline" data-latex="R \circ R = P"></span> (reversing twice recovers the original); <span class="math-inline" data-latex="I \circ I = P"></span> (inverting twice recovers the original); <span class="math-inline" data-latex="RI \circ RI = R \circ I \circ R \circ I = P"></span>.</li>
+<li><strong>Identity</strong>: <span class=math-inline data-latex=P></span> (apply no transformation).</li>
+<li><strong>Inverses</strong>: <span class=math-inline data-latex="R \circ R = P"></span> (reversing twice recovers the original); <span class=math-inline data-latex="I \circ I = P"></span> (inverting twice recovers the original); <span class=math-inline data-latex="RI \circ RI = R \circ I \circ R \circ I = P"></span>.</li>
 </ul>
-<p>That <span class="math-inline" data-latex="V_4 \cong \mathbb{Z}_2 \times \mathbb{Z}_2"></span> follows from the isomorphism <span class="math-inline" data-latex="R \mapsto (1,0)"></span>, <span class="math-inline" data-latex="I \mapsto (0,1)"></span>, <span class="math-inline" data-latex="RI \mapsto (1,1)"></span>, <span class="math-inline" data-latex="P \mapsto (0,0)"></span>. <span class="math-inline" data-latex="\square"></span></p>
+<p>That <span class=math-inline data-latex="V_4 \cong \mathbb{Z}_2 \times \mathbb{Z}_2"></span> follows from the isomorphism <span class=math-inline data-latex="R \mapsto (1,0)"></span>, <span class=math-inline data-latex="I \mapsto (0,1)"></span>, <span class=math-inline data-latex="RI \mapsto (1,1)"></span>, <span class=math-inline data-latex="P \mapsto (0,0)"></span>. <span class=math-inline data-latex=\square></span></p>
 </div>
 </div>
-
 <blockquote>
 <p><strong>Historical note</strong>: Schoenberg formalized these four operations as explicit compositional rules in 1923. But nearly seventy years earlier, Wagner was already applying the same transformations intuitively throughout the <em>Ring</em> (composed 1853–1874). The algebraic structure is identical; the degree of conscious formalization is completely different.</p>
 </blockquote>
@@ -1054,25 +380,23 @@ Ascending intervals become descending; an upward leap of 4 semitones becomes a d
 <p><em>中文:</em> &ldquo;变换类型相同，代数自觉完全不同。瓦格纳凭直觉在做代数，勋伯格才把直觉变成了系统。&rdquo;</p>
 </blockquote>
 <hr>
-
-
-<div class="definition-block" id="definition-17.4">
-  <div class="block-label">
-    Definition 17.4 (Leitmotif Network)
-  </div>
-  <div class="block-body"><p>The <strong>leitmotif network</strong> is a graph <span class="math-inline" data-latex="G = (V, E)"></span> where:</p>
+<div class=definition-block id=definition-17.4>
+<div class=block-label>
+Definition 17.4 (Leitmotif Network)
+</div>
+<div class=block-body><p>The <strong>leitmotif network</strong> is a graph <span class=math-inline data-latex="G = (V, E)"></span> where:</p>
 <ul>
 <li>
-<p><strong>Vertices</strong> <span class="math-inline" data-latex="V"></span>: each vertex represents a distinct leitmotif (<span class="math-inline" data-latex="|V| \approx 100"></span> for a medium-granularity catalogue).</p>
+<p><strong>Vertices</strong> <span class=math-inline data-latex=V></span>: each vertex represents a distinct leitmotif (<span class=math-inline data-latex="|V| \approx 100"></span> for a medium-granularity catalogue).</p>
 </li>
 <li>
-<p><strong>Edges</strong> <span class="math-inline" data-latex="E"></span>: two types of edges connect motifs:</p>
+<p><strong>Edges</strong> <span class=math-inline data-latex=E></span>: two types of edges connect motifs:</p>
 <ol>
 <li>
-<p><strong>Transformation edges</strong>: motif <span class="math-inline" data-latex="A"></span> and motif <span class="math-inline" data-latex="B"></span> are connected if <span class="math-inline" data-latex="B = T_n(A)"></span>, <span class="math-inline" data-latex="B = R(A)"></span>, <span class="math-inline" data-latex="B = I(A)"></span>, or <span class="math-inline" data-latex="B = RI(A)"></span> for some <span class="math-inline" data-latex="n"></span>. These edges represent <strong>algebraic</strong> relationships.</p>
+<p><strong>Transformation edges</strong>: motif <span class=math-inline data-latex=A></span> and motif <span class=math-inline data-latex=B></span> are connected if <span class=math-inline data-latex="B = T_n(A)"></span>, <span class=math-inline data-latex="B = R(A)"></span>, <span class=math-inline data-latex="B = I(A)"></span>, or <span class=math-inline data-latex="B = RI(A)"></span> for some <span class=math-inline data-latex=n></span>. These edges represent <strong>algebraic</strong> relationships.</p>
 </li>
 <li>
-<p><strong>Co-occurrence edges</strong>: motif <span class="math-inline" data-latex="A"></span> and motif <span class="math-inline" data-latex="B"></span> are connected if they appear within a short temporal window (e.g., 10 seconds) in the score. These edges represent <strong>dramatic</strong> relationships.</p>
+<p><strong>Co-occurrence edges</strong>: motif <span class=math-inline data-latex=A></span> and motif <span class=math-inline data-latex=B></span> are connected if they appear within a short temporal window (e.g., 10 seconds) in the score. These edges represent <strong>dramatic</strong> relationships.</p>
 </li>
 </ol>
 </li>
@@ -1086,68 +410,49 @@ Ascending intervals become descending; an upward leap of 4 semitones becomes a d
 </ul>
 </div>
 </div>
-
-
-
-<div class="definition-block" id="definition-17.5">
-  <div class="block-label">
-    Definition 17.5 (Degree Centrality and Clustering Coefficient)
-  </div>
-  <div class="block-body"><p>For a vertex <span class="math-inline" data-latex="v"></span> in graph <span class="math-inline" data-latex="G = (V, E)"></span>:</p>
-<p><strong>Degree centrality</strong>:</p>
-<div class="math-display" data-latex="d(v) = |\{u \in V : (u, v) \in E\}|"></div>
-The number of neighbors of <span class="math-inline" data-latex="v"></span>. High degree = hub motif. The Ring motif and the Fate motif have the highest degree — they co-occur with nearly every other motif.
-<p><strong>Clustering coefficient</strong>:</p>
-<div class="math-display" data-latex="C(v) = \frac{|\{(u, w) \in E : u, w \in N(v)\}|}{\binom{d(v)}{2}}"></div>
-The fraction of <span class="math-inline" data-latex="v"></span>'s neighbors that are also connected to each other. High <span class="math-inline" data-latex="C(v)"></span> means <span class="math-inline" data-latex="v"></span>'s neighborhood forms a clique — a tight dramatic community.
+<div class=definition-block id=definition-17.5>
+<div class=block-label>
+Definition 17.5 (Degree Centrality and Clustering Coefficient)
+</div>
+<div class=block-body><p>For a vertex <span class=math-inline data-latex=v></span> in graph <span class=math-inline data-latex="G = (V, E)"></span>:</p>
+<p><strong>Degree centrality</strong>:
+<span class=math-display data-latex="d(v) = |\{u \in V : (u, v) \in E\}|"></span>
+The number of neighbors of <span class=math-inline data-latex=v></span>. High degree = hub motif. The Ring motif and the Fate motif have the highest degree — they co-occur with nearly every other motif.</p>
+<p><strong>Clustering coefficient</strong>:
+<span class=math-display data-latex="C(v) = \frac{|\{(u, w) \in E : u, w \in N(v)\}|}{\binom{d(v)}{2}}"></span>
+The fraction of <span class=math-inline data-latex=v></span>&rsquo;s neighbors that are also connected to each other. High <span class=math-inline data-latex=C(v)></span> means <span class=math-inline data-latex=v></span>&rsquo;s neighborhood forms a clique — a tight dramatic community.</p>
 <p>The Valhalla motif has high clustering: its neighbors (gods, power, spear, Erda) are also densely interconnected. The Sword motif has lower clustering: it connects to both heroic and tragic communities that are otherwise separated.</p>
 </div>
 </div>
-
-
-
-<div class="theorem-block" id="theorem-17.2">
-  <div class="block-label">
-    Theorem 17.2 (Network Growth Across the Tetralogy)
-  </div>
-  <div class="block-body"><p>The leitmotif network <span class="math-inline" data-latex="G_t"></span> at stage <span class="math-inline" data-latex="t \in \{1, 2, 3, 4\}"></span> (corresponding to the four operas) satisfies:</p>
-<div class="math-display" data-latex="|V_1| &lt; |V_2| &lt; |V_3| &lt; |V_4|, \qquad |E_1| &lt; |E_2| &lt; |E_3| \ll |E_4|"></div>
+<div class=theorem-block id=theorem-17.2>
+<div class=block-label>
+Theorem 17.2 (Network Growth Across the Tetralogy)
+</div>
+<div class=block-body><p>The leitmotif network <span class=math-inline data-latex=G_t></span> at stage <span class=math-inline data-latex="t \in \{1, 2, 3, 4\}"></span> (corresponding to the four operas) satisfies:</p>
+<p><span class=math-display data-latex="|V_1| < |V_2| < |V_3| < |V_4|, \qquad |E_1| < |E_2| < |E_3| \ll |E_4|"></span></p>
 <p>The vertex count grows approximately linearly (new motifs are introduced at a roughly constant rate), but the edge count grows <strong>superlinearly</strong> in <em>Götterdämmerung</em> because returning motifs establish co-occurrence connections with motifs from all three previous operas.</p>
-<p>The network density <span class="math-inline" data-latex="\rho_t = |E_t| / \binom{|V_t|}{2}"></span> increases sharply in the final opera.</p>
+<p>The network density <span class=math-inline data-latex="\rho_t = |E_t| / \binom{|V_t|}{2}"></span> increases sharply in the final opera.</p>
 </div>
 </div>
-
 <hr>
-<h3 id="the-götterdämmerung-trajectory">The Götterdämmerung Trajectory</h3>
+<h3 id=the-götterdämmerung-trajectory>The Götterdämmerung Trajectory</h3>
 <p>The most powerful application of the network structure occurs in the finale of <em>Götterdämmerung</em>. As Brünnhilde mounts the funeral pyre, the music traverses the leitmotif network <strong>in reverse chronological order</strong>:</p>
-<p>Redemption motif → Valhalla motif → Ring motif → &hellip; → Rhine motif</p>
-<p>This is a <strong>walk</strong> <span class="math-inline" data-latex="\gamma(t)"></span> on the graph <span class="math-inline" data-latex="G"></span>, visiting core nodes from <em>Götterdämmerung</em> back to <em>Rheingold</em>&rsquo;s opening. Sixteen hours of music compressed into ten minutes of memory. The network provides the grammar of compression.</p>
+<p>Redemption motif → Valhalla motif → Ring motif → &mldr; → Rhine motif</p>
+<p>This is a <strong>walk</strong> <span class=math-inline data-latex=\gamma(t)></span> on the graph <span class=math-inline data-latex=G></span>, visiting core nodes from <em>Götterdämmerung</em> back to <em>Rheingold</em>&rsquo;s opening. Sixteen hours of music compressed into ten minutes of memory. The network provides the grammar of compression.</p>
 <blockquote>
 <p><em>中文:</em> &ldquo;十六小时的音乐压缩成十分钟的回忆。网络提供了压缩的语法。&rdquo;</p>
 </blockquote>
-<div class="yt-container">
-  <div class="yt-embed">
-    
-    
-    
-    
-    <iframe
-      src="https://www.youtube.com/embed/b24qmkkfk7w"
-      title="Die Walküre — Wotan&#39;s Farewell"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen>
-    </iframe>
-  </div>
-  <p class="yt-caption">Wotan&#39;s Farewell (&#39;Leb wohl, du kühnes, herrliches Kind&#39;): multiple leitmotifs weave together — the Fate motif, the Magic Fire motif, Brünnhilde&#39;s sleep motif — demonstrating the network&#39;s co-occurrence density.</p>
+<div class=yt-container>
+<div class=yt-embed>
+<iframe src=https://www.youtube.com/embed/b24qmkkfk7w title="Die Walküre — Wotan's Farewell" frameborder=0 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy=strict-origin-when-cross-origin allowfullscreen></iframe>
 </div>
-
+<p class=yt-caption>Wotan's Farewell ('Leb wohl, du kühnes, herrliches Kind'): multiple leitmotifs weave together — the Fate motif, the Magic Fire motif, Brünnhilde's sleep motif — demonstrating the network's co-occurrence density.</p>
+</div>
 <hr>
-<h2 id="rossini-vs-wagner-tree-vs-graph">Rossini vs. Wagner: Tree vs. Graph</h2>
-<div class="music-block">
-  <div class="block-label">音乐联系</div>
-  <div class="block-body"><p><strong>Two Architectures for Organizing Opera</strong></p>
+<h2 id=rossini-vs-wagner-tree-vs-graph>Rossini vs. Wagner: Tree vs. Graph</h2>
+<div class=music-block>
+<div class=block-label>音乐联系</div>
+<div class=block-body><p><strong>Two Architectures for Organizing Opera</strong></p>
 <p>EP16 and EP17 present two fundamentally different information architectures:</p>
 <table>
 <thead>
@@ -1186,14 +491,14 @@ The fraction of <span class="math-inline" data-latex="v"></span>'s neighbors tha
 <tr>
 <td><strong>Algebraic structure</strong></td>
 <td>Chomsky Type 2 (context-free)</td>
-<td>Klein <span class="math-inline" data-latex="V_4"></span> (group theory) + graph theory</td>
+<td>Klein <span class=math-inline data-latex=V_4></span> (group theory) + graph theory</td>
 </tr>
 </tbody>
 </table>
-<p><strong>The EP04 → EP17 callback</strong>: The Klein four-group <span class="math-inline" data-latex="V_4"></span> appeared in EP04 for Schoenberg&rsquo;s twelve-tone technique (1923). Here in EP17 it appears for Wagner&rsquo;s leitmotif transformations (1853–1874). The same Cayley table, the same colors, the same algebraic structure — but separated by seventy years of musical history.</p>
+<p><strong>The EP04 → EP17 callback</strong>: The Klein four-group <span class=math-inline data-latex=V_4></span> appeared in EP04 for Schoenberg&rsquo;s twelve-tone technique (1923). Here in EP17 it appears for Wagner&rsquo;s leitmotif transformations (1853–1874). The same Cayley table, the same colors, the same algebraic structure — but separated by seventy years of musical history.</p>
 <p><strong>Three eras, one algebra</strong>:</p>
 <ol>
-<li><strong>Wagner (1853)</strong>: applies <span class="math-inline" data-latex="\{P, R, I, RI\}"></span> intuitively, without algebraic awareness</li>
+<li><strong>Wagner (1853)</strong>: applies <span class=math-inline data-latex="\{P, R, I, RI\}"></span> intuitively, without algebraic awareness</li>
 <li><strong>Schoenberg (1923)</strong>: formalizes the same four operations as explicit compositional rules</li>
 <li><strong>AudioLabs Erlangen (2020s)</strong>: computationally analyzes the motif network using graph algorithms</li>
 </ol>
@@ -1202,9 +507,8 @@ The fraction of <span class="math-inline" data-latex="v"></span>'s neighbors tha
 </blockquote>
 </div>
 </div>
-
 <hr>
-<h2 id="limits-and-open-questions">Limits and Open Questions</h2>
+<h2 id=limits-and-open-questions>Limits and Open Questions</h2>
 <ol>
 <li>
 <p><strong>Leitmotif identification is subjective.</strong> Different scholars produce different catalogues (60–200+ motifs). The network structure depends heavily on which motifs are recognized as distinct entities vs. variants of a single motif. There is no universally accepted ground truth.</p>
@@ -1213,25 +517,22 @@ The fraction of <span class="math-inline" data-latex="v"></span>'s neighbors tha
 <p><strong>Co-occurrence window is arbitrary.</strong> The 10-second window for co-occurrence edges is a modeling choice. Changing it to 5 seconds or 20 seconds produces different networks with different community structures. The qualitative observations (hub motifs, increasing density) are robust, but quantitative metrics are window-dependent.</p>
 </li>
 <li>
-<p><strong>Augmentation and diminution are not group operations.</strong> Unlike <span class="math-inline" data-latex="R"></span> and <span class="math-inline" data-latex="I"></span>, which are involutions (self-inverse), augmentation by factor 2 is not self-inverse (its inverse is diminution by factor 2). The full set of Wagner&rsquo;s transformations — including rhythmic transformations — forms a richer algebraic structure than <span class="math-inline" data-latex="V_4"></span>, likely a semidirect product involving <span class="math-inline" data-latex="\mathbb{R}_{&gt;0}"></span> (the multiplicative group of positive reals for tempo scaling).</p>
+<p><strong>Augmentation and diminution are not group operations.</strong> Unlike <span class=math-inline data-latex=R></span> and <span class=math-inline data-latex=I></span>, which are involutions (self-inverse), augmentation by factor 2 is not self-inverse (its inverse is diminution by factor 2). The full set of Wagner&rsquo;s transformations — including rhythmic transformations — forms a richer algebraic structure than <span class=math-inline data-latex=V_4></span>, likely a semidirect product involving <span class=math-inline data-latex="\mathbb{R}_{>0}"></span> (the multiplicative group of positive reals for tempo scaling).</p>
 </li>
 <li>
 <p><strong>Network analysis is retrospective.</strong> Wagner did not think in terms of graphs, centrality measures, or community detection. The network perspective is an analytical tool applied after the fact. Whether it captures compositional intent or only emergent structure is an open musicological question.</p>
 </li>
 </ol>
-
-
-<div class="conjecture-block" id="conjecture">
-  <div class="block-label">
-    Conjecture (Small-World Property of the Leitmotif Network)
-  </div>
-  <div class="block-body"><p>The Ring leitmotif network exhibits <strong>small-world</strong> properties (Watts &amp; Strogatz 1998): high clustering coefficient (<span class="math-inline" data-latex="C \gg C_\text{random}"></span>) combined with short average path length (<span class="math-inline" data-latex="L \approx L_\text{random}"></span>). This would mean any two motifs can be connected through a short chain of transformations or co-occurrences — reflecting the dramatic unity of the entire tetralogy.</p>
+<div class=conjecture-block id=conjecture>
+<div class=block-label>
+Conjecture (Small-World Property of the Leitmotif Network)
+</div>
+<div class=block-body><p>The Ring leitmotif network exhibits <strong>small-world</strong> properties (Watts & Strogatz 1998): high clustering coefficient (<span class=math-inline data-latex="C \gg C_\text{random}"></span>) combined with short average path length (<span class=math-inline data-latex="L \approx L_\text{random}"></span>). This would mean any two motifs can be connected through a short chain of transformations or co-occurrences — reflecting the dramatic unity of the entire tetralogy.</p>
 <p><strong>Open question</strong>: Does the small-world property distinguish Wagner&rsquo;s network from a random network with the same degree distribution? If so, it would provide quantitative evidence for the structural coherence that listeners perceive intuitively.</p>
 </div>
 </div>
-
 <hr>
-<h2 id="academic-references">Academic References</h2>
+<h2 id=academic-references>Academic References</h2>
 <ol>
 <li>
 <p>Werman, D. S. (1987). The Leitmotif. In <em>Wagner: A Documentary Study</em>. Thames and Hudson.</p>
@@ -1240,16 +541,16 @@ The fraction of <span class="math-inline" data-latex="v"></span>'s neighbors tha
 <p>Bribitzer-Stull, M. (2015). <em>Understanding the Leitmotif: From Wagner to Hollywood Film Music</em>. Cambridge University Press.</p>
 </li>
 <li>
-<p>Müller, M., Konz, V., Jiang, N., &amp; Zalkow, F. (2021). Automated Analysis of Musical Themes with Applications to Wagner&rsquo;s Ring. <em>Transactions of the International Society for Music Information Retrieval</em>, 4(1), 15–30. — AudioLabs Erlangen computational motif analysis.</p>
+<p>Müller, M., Konz, V., Jiang, N., & Zalkow, F. (2021). Automated Analysis of Musical Themes with Applications to Wagner&rsquo;s Ring. <em>Transactions of the International Society for Music Information Retrieval</em>, 4(1), 15–30. — AudioLabs Erlangen computational motif analysis.</p>
 </li>
 <li>
 <p>Cohn, R. (1998). Introduction to Neo-Riemannian theory. <em>Journal of Music Theory</em>, 42(2), 167–180.</p>
 </li>
 <li>
-<p>Straus, J. N. (2005). <em>Introduction to Post-Tonal Theory</em> (3rd ed.). Prentice Hall. Ch. 2 — pitch-class operations <span class="math-inline" data-latex="T_n"></span>, <span class="math-inline" data-latex="I"></span>, group structure.</p>
+<p>Straus, J. N. (2005). <em>Introduction to Post-Tonal Theory</em> (3rd ed.). Prentice Hall. Ch. 2 — pitch-class operations <span class=math-inline data-latex=T_n></span>, <span class=math-inline data-latex=I></span>, group structure.</p>
 </li>
 <li>
-<p>Watts, D. J., &amp; Strogatz, S. H. (1998). Collective dynamics of &lsquo;small-world&rsquo; networks. <em>Nature</em>, 393(6684), 440–442.</p>
+<p>Watts, D. J., & Strogatz, S. H. (1998). Collective dynamics of &lsquo;small-world&rsquo; networks. <em>Nature</em>, 393(6684), 440–442.</p>
 </li>
 <li>
 <p>Newman, M. E. J. (2010). <em>Networks: An Introduction</em>. Oxford University Press. — Degree centrality, clustering coefficients, community detection.</p>
@@ -1264,235 +565,52 @@ The fraction of <span class="math-inline" data-latex="v"></span>'s neighbors tha
 <p>Millington, B. (ed.) (2001). <em>The Wagner Compendium</em>. Thames and Hudson. — Comprehensive leitmotif catalogue and analytical guide.</p>
 </li>
 </ol>
-
-    </div>
-
-    
-    <nav class="ep-nav">
-      
-      
-      
-      
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-      
-      <a href="https://amath390.sibeliusp.com/episodes/ep16/" class="ep-nav-prev">
-        ← EP16: Rossini&#39;s Code — Budden, Gossett, and the Convention System
-      </a>
-      
-      
-    </nav>
-  </article>
-
-  
-  
-  
-  <aside class="ep-toc-aside">
-    <div class="ep-toc-sticky">
-      <div class="ep-toc-label">本页目录</div>
-      <nav id="TableOfContents">
-  <ul>
-    <li><a href="#overview">Overview</a></li>
-    <li><a href="#prerequisites">Prerequisites</a></li>
-    <li><a href="#definitions">Definitions</a></li>
-    <li><a href="#main-theorems">Main Theorems</a>
-      <ul>
-        <li><a href="#the-götterdämmerung-trajectory">The Götterdämmerung Trajectory</a></li>
-      </ul>
-    </li>
-    <li><a href="#rossini-vs-wagner-tree-vs-graph">Rossini vs. Wagner: Tree vs. Graph</a></li>
-    <li><a href="#limits-and-open-questions">Limits and Open Questions</a></li>
-    <li><a href="#academic-references">Academic References</a></li>
-  </ul>
-</nav>
-    </div>
-  </aside>
-  
 </div>
-
-      <footer class="site-footer">
-  <div class="footer-content">
-    <a href="https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f" target="_blank" rel="noopener" class="footer-avatar-link">
-      <img src="/images/avatar.png" alt="Sibelius P." class="footer-avatar">
-    </a>
-    <div class="footer-text">
-      <span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
-      <span class="footer-sep">·</span>
-      <a href="https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f" target="_blank" rel="noopener">小红书</a>
-      <span class="footer-sep">·</span>
-      <span>Built with <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> + KaTeX</span>
-    </div>
-  </div>
+<nav class=ep-nav>
+<a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-nav-prev>
+← EP16: Rossini's Code — Budden, Gossett, and the Convention System
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-nav-next>
+EP18: Game Theory in Operatic Duets →
+</a>
+</nav>
+</article>
+<aside class=ep-toc-aside>
+<div class=ep-toc-sticky>
+<div class=ep-toc-label>本页目录</div>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#overview>Overview</a></li>
+<li><a href=#prerequisites>Prerequisites</a></li>
+<li><a href=#definitions>Definitions</a></li>
+<li><a href=#main-theorems>Main Theorems</a>
+<ul>
+<li><a href=#the-götterdämmerung-trajectory>The Götterdämmerung Trajectory</a></li>
+</ul>
+</li>
+<li><a href=#rossini-vs-wagner-tree-vs-graph>Rossini vs. Wagner: Tree vs. Graph</a></li>
+<li><a href=#limits-and-open-questions>Limits and Open Questions</a></li>
+<li><a href=#academic-references>Academic References</a></li>
+</ul>
+</nav>
+</div>
+</aside>
+</div>
+<footer class=site-footer>
+<div class=footer-content>
+<a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link>
+<img src=/images/avatar.png alt="Sibelius P." class=footer-avatar>
+</a>
+<div class=footer-text>
+<span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
+<span class=footer-sep>·</span>
+<a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener>小红书</a>
+<span class=footer-sep>·</span>
+<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span>
+</div>
+</div>
 </footer>
-
-    </main>
-  </div>
+</main>
+</div>
 </body>
 </html>

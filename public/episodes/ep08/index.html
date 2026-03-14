@@ -1,1058 +1,368 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
+<!doctype html><html lang=zh-cn>
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
 <title>EP08: Shepard Tones and the Tritone Paradox | AMATH 390 数学与音乐</title>
-<meta name="description" content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('[data-latex]').forEach(function(el) {
-    try {
-      katex.render(el.getAttribute('data-latex'), el, {
-        displayMode: el.classList.contains('math-display'),
-        throwOnError: false
-      });
-    } catch(e) { console.warn('KaTeX:', e.message, el); }
-  });
-});
-</script>
-
-
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
-
-<link rel="stylesheet" href="/css/amath390.css">
-
+<meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script>
+<script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('[data-latex]').forEach(function(a){try{katex.render(a.getAttribute('data-latex'),a,{displayMode:a.classList.contains('math-display'),throwOnError:!1})}catch(b){console.warn('KaTeX:',b.message,a)}})})</script>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16.png>
+<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+<link rel=stylesheet href=/css/amath390.css>
 </head>
 <body>
-  <div class="layout-wrapper">
-    
-
-
-<nav class="sidebar">
-  <div class="sidebar-header">
-    <a href="/" class="sidebar-title">AMATH 390</a>
-    <div class="sidebar-subtitle">数学与音乐</div>
-  </div>
-
-  
-
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">数学基础篇</div>
-        
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep01/"
-               class="ep-link">
-              <span class="ep-num">01</span>
-              <span class="ep-title">Chord Space and the Torus</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep02/"
-               class="ep-link">
-              <span class="ep-num">02</span>
-              <span class="ep-title">String Vibration and the Wave Equation</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep03/"
-               class="ep-link">
-              <span class="ep-num">03</span>
-              <span class="ep-title">Bach and Graph Connectivity</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep04/"
-               class="ep-link">
-              <span class="ep-num">04</span>
-              <span class="ep-title">All-Interval Rows and ℤ₁₂</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep05/"
-               class="ep-link">
-              <span class="ep-num">05</span>
-              <span class="ep-title">Turán&#39;s Theorem and Counterpoint</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep06/"
-               class="ep-link">
-              <span class="ep-num">06</span>
-              <span class="ep-title">Graph Coloring and Voice Assignment</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep07/"
-               class="ep-link">
-              <span class="ep-num">07</span>
-              <span class="ep-title">Information Entropy and All-Interval Rows</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep08/"
-               class="ep-link active">
-              <span class="ep-num">08</span>
-              <span class="ep-title">Shepard Tones and the Tritone Paradox</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep09/"
-               class="ep-link">
-              <span class="ep-num">09</span>
-              <span class="ep-title">Combination Tones and Nonlinear Acoustics</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">Jacob Collier 系列</div>
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep10/"
-               class="ep-link">
-              <span class="ep-num">10</span>
-              <span class="ep-title">Negative Harmony and the Dihedral Group D₁₂</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep11/"
-               class="ep-link">
-              <span class="ep-num">11</span>
-              <span class="ep-title">Comma Drift and the Impossibility of Perfect Tuning</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep12/"
-               class="ep-link">
-              <span class="ep-num">12</span>
-              <span class="ep-title">The Circle of Fifths as a Folded Spiral</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep13/"
-               class="ep-link">
-              <span class="ep-num">13</span>
-              <span class="ep-title">Polyrhythm and Rhythm-Pitch Duality</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">拓扑数学专篇</div>
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep14/"
-               class="ep-link">
-              <span class="ep-num">14</span>
-              <span class="ep-title">Tonnetz Hodge Duality</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">歌剧系列</div>
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep15/"
-               class="ep-link">
-              <span class="ep-num">15</span>
-              <span class="ep-title">Opera Acoustics and the Singer&#39;s Formant</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep16/"
-               class="ep-link">
-              <span class="ep-num">16</span>
-              <span class="ep-title">Rossini&#39;s Code — Budden, Gossett, and the Convention System</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep17/"
-               class="ep-link">
-              <span class="ep-num">17</span>
-              <span class="ep-title">Leitmotif Networks — Wagner&#39;s Ring Cycle</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-
-  <div class="sidebar-footer">
-    <a href="/theorems/">定理索引</a>
-    <a href="/domains/">数学领域</a>
-    <a href="/about/">关于</a>
-  </div>
+<div class=layout-wrapper>
+<nav class=sidebar>
+<div class=sidebar-header>
+<a href=/ class=sidebar-title>AMATH 390</a>
+<div class=sidebar-subtitle>数学与音乐</div>
+</div>
+<div class=arc-group>
+<div class=arc-label>数学基础篇</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link>
+<span class=ep-num>01</span>
+<span class=ep-title>Chord Space and the Torus</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep02/ class=ep-link>
+<span class=ep-num>02</span>
+<span class=ep-title>String Vibration and the Wave Equation</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link>
+<span class=ep-num>03</span>
+<span class=ep-title>Bach and Graph Connectivity</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link>
+<span class=ep-num>04</span>
+<span class=ep-title>All-Interval Rows and ℤ₁₂</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link>
+<span class=ep-num>05</span>
+<span class=ep-title>Turán's Theorem and Counterpoint</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-link>
+<span class=ep-num>06</span>
+<span class=ep-title>Graph Coloring and Voice Assignment</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-link>
+<span class=ep-num>07</span>
+<span class=ep-title>Information Entropy and All-Interval Rows</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep08/ class="ep-link active">
+<span class=ep-num>08</span>
+<span class=ep-title>Shepard Tones and the Tritone Paradox</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link>
+<span class=ep-num>09</span>
+<span class=ep-title>Combination Tones and Nonlinear Acoustics</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>Jacob Collier 系列</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep10/ class=ep-link>
+<span class=ep-num>10</span>
+<span class=ep-title>Negative Harmony and the Dihedral Group D₁₂</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link>
+<span class=ep-num>11</span>
+<span class=ep-title>Comma Drift and the Impossibility of Perfect Tuning</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep12/ class=ep-link>
+<span class=ep-num>12</span>
+<span class=ep-title>The Circle of Fifths as a Folded Spiral</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-link>
+<span class=ep-num>13</span>
+<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>拓扑数学专篇</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-link>
+<span class=ep-num>14</span>
+<span class=ep-title>Tonnetz Hodge Duality</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>歌剧系列</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-link>
+<span class=ep-num>15</span>
+<span class=ep-title>Opera Acoustics and the Singer's Formant</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link>
+<span class=ep-num>16</span>
+<span class=ep-title>Rossini's Code — Budden, Gossett, and the Convention System</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-link>
+<span class=ep-num>17</span>
+<span class=ep-title>Leitmotif Networks — Wagner's Ring Cycle</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-link>
+<span class=ep-num>18</span>
+<span class=ep-title>Game Theory in Operatic Duets</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link>
+<span class=ep-num>19</span>
+<span class=ep-title>Vibrato as FM Synthesis</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-link>
+<span class=ep-num>20</span>
+<span class=ep-title>Character Interaction Networks in Opera</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>AI 音乐三部曲</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-link>
+<span class=ep-num>21</span>
+<span class=ep-title>From Markov to Diffusion — Sixty Years of AI Composition</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-link>
+<span class=ep-num>22</span>
+<span class=ep-title>How AI Writes Music — EnCodec and RVQ</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-link>
+<span class=ep-num>23</span>
+<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span>
+</a>
+</div>
+<div class=sidebar-footer>
+<a href=/theorems/>定理索引</a>
+<a href=/domains/>数学领域</a>
+<a href=/about/>关于</a>
+</div>
 </nav>
-
-    <main class="main-content">
-      
-
-
-
-<div class="episode-layout">
-  <article class="episode-page">
-    <header class="episode-header">
-  <div class="ep-badge">EP08</div>
-  <h1 class="ep-main-title">EP08: Shepard Tones and the Tritone Paradox</h1>
-  <div class="ep-subtitle">音高螺旋S¹×ℝ, 圆形统计</div>
-
-  <div class="ep-meta">
-    
-    <span class="meta-item">
-      <span class="meta-icon">▶</span> 7:14
-    </span>
-    
-    
-    <span class="meta-item domains">
-      <span class="domain-chip">Topology</span><span class="domain-chip">Acoustics</span><span class="domain-chip">Cognitive Science</span>
-    </span>
-    
-  </div>
+<main class=main-content>
+<div class=episode-layout>
+<article class=episode-page>
+<header class=episode-header>
+<div class=ep-badge>EP08</div>
+<h1 class=ep-main-title>EP08: Shepard Tones and the Tritone Paradox</h1>
+<div class=ep-subtitle>音高螺旋S¹×ℝ, 圆形统计</div>
+<div class=ep-meta>
+<span class=meta-item>
+<span class=meta-icon>▶</span> 7:14
+</span>
+<span class="meta-item domains">
+<span class=domain-chip>Topology</span><span class=domain-chip>Acoustics</span><span class=domain-chip>Cognitive Science</span>
+</span>
+</div>
 </header>
-
-    
-
-
-<div class="cross-refs">
-  <h3 class="cross-refs-title">前置知识</h3>
-  <div class="ref-cards">
-    
-      
-      
-      
-      
-        <a href="https://amath390.sibeliusp.com/episodes/ep04/" class="ref-card callback">
-          <span class="ref-ep">EP04</span>
-          <span class="ref-title">All-Interval Rows and ℤ₁₂</span>
-        </a>
-      
-    
-      
-      
-      
-      
-        <a href="https://amath390.sibeliusp.com/episodes/ep02/" class="ref-card callback">
-          <span class="ref-ep">EP02</span>
-          <span class="ref-title">String Vibration and the Wave Equation</span>
-        </a>
-      
-    
-  </div>
+<div class=cross-refs>
+<h3 class=cross-refs-title>前置知识</h3>
+<div class=ref-cards>
+<a href=https://amath390.sibeliusp.com/episodes/ep04/ class="ref-card callback">
+<span class=ref-ep>EP04</span>
+<span class=ref-title>All-Interval Rows and ℤ₁₂</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep02/ class="ref-card callback">
+<span class=ref-ep>EP02</span>
+<span class=ref-title>String Vibration and the Wave Equation</span>
+</a>
 </div>
-
-
-
-
-
-
-
-
-    
-<div class="xhs-section">
-  <div class="xhs-section-header">
-    <span class="xhs-logo-badge">小红书</span>
-    <span class="xhs-section-title">Watch on 小红书</span>
-  </div>
-  <div class="xhs-cards">
-    
-    <a href="https://www.xiaohongshu.com/discovery/item/6989015d000000000a02ad79?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=AB_8Er4aRSb-Dj13iSHPiIrr710plosbKuxP080TPi5YQ=&amp;xsec_source=pc_share" target="_blank" rel="noopener" class="xhs-card">
-      <div class="xhs-card-inner">
-        <div class="xhs-card-icon">▶</div>
-        <div class="xhs-card-text">
-          <div class="xhs-card-title">巴赫骗了你的耳朵270年</div>
-          <div class="xhs-card-sub">xiaohongshu.com</div>
-        </div>
-        <div class="xhs-card-arrow">→</div>
-      </div>
-    </a>
-    
-  </div>
 </div>
-
-
-
-    <div class="episode-content content">
-      <h2 id="overview">Overview</h2>
+<div class=cross-refs>
+<h3 class=cross-refs-title>后续拓展</h3>
+<div class=ref-cards>
+<a href=https://amath390.sibeliusp.com/episodes/ep23/ class="ref-card forward">
+<span class=ref-ep>EP23</span>
+<span class=ref-title>Can AI Understand Music? Latent Space and Information Bottleneck</span>
+</a>
+</div>
+</div>
+<div class=xhs-section>
+<div class=xhs-section-header>
+<span class=xhs-logo-badge>小红书</span>
+<span class=xhs-section-title>Watch on 小红书</span>
+</div>
+<div class=xhs-cards>
+<a href="https://www.xiaohongshu.com/discovery/item/6989015d000000000a02ad79?source=webshare&xhsshare=pc_web&xsec_token=AB_8Er4aRSb-Dj13iSHPiIrr710plosbKuxP080TPi5YQ=&xsec_source=pc_share" target=_blank rel=noopener class=xhs-card>
+<div class=xhs-card-inner>
+<div class=xhs-card-icon>▶</div>
+<div class=xhs-card-text>
+<div class=xhs-card-title>巴赫骗了你的耳朵270年</div>
+<div class=xhs-card-sub>xiaohongshu.com</div>
+</div>
+<div class=xhs-card-arrow>→</div>
+</div>
+</a>
+</div>
+</div>
+<div class="episode-content content">
+<h2 id=overview>Overview</h2>
 <p>A tone rises through twelve semitones. Then it rises again. It has been rising for thirty seconds and is at exactly the same pitch it started on.</p>
-<p>This is not an acoustic trick — it is a topological fact. Roger Shepard&rsquo;s 1964 construction exploits the two-dimensional structure of human pitch perception: every pitch has a <strong>chroma</strong> (position on a circle, <span class="math-inline" data-latex="\mathbb{Z}_{12}"></span>) and a <strong>height</strong> (octave number, <span class="math-inline" data-latex="\mathbb{R}"></span>). Pitch lives on a helix <span class="math-inline" data-latex="S^1 \times \mathbb{R}"></span>. By smearing the spectral energy uniformly across octaves with a bell-shaped envelope, Shepard erases the height coordinate, leaving only the chroma circle <span class="math-inline" data-latex="S^1 \cong \mathbb{R}/12\mathbb{Z}"></span>.</p>
+<p>This is not an acoustic trick — it is a topological fact. Roger Shepard&rsquo;s 1964 construction exploits the two-dimensional structure of human pitch perception: every pitch has a <strong>chroma</strong> (position on a circle, <span class=math-inline data-latex=\mathbb{Z}_{12}></span>) and a <strong>height</strong> (octave number, <span class=math-inline data-latex=\mathbb{R}></span>). Pitch lives on a helix <span class=math-inline data-latex="S^1 \times \mathbb{R}"></span>. By smearing the spectral energy uniformly across octaves with a bell-shaped envelope, Shepard erases the height coordinate, leaving only the chroma circle <span class=math-inline data-latex="S^1 \cong \mathbb{R}/12\mathbb{Z}"></span>.</p>
 <p>Once height is ambiguous, the tritone (six semitones, diametrically opposite on the chroma circle) has no objective &ldquo;direction.&rdquo; Diana Deutsch&rsquo;s 1986 experiments revealed that listeners consistently hear the same Shepard tritone pair as ascending <em>or</em> descending depending on their linguistic background — specifically the tonal range of their native language. Your perception fills the missing dimension with cultural prior information.</p>
-<p>Mathematically this episode covers: quotient topology, the universal cover of <span class="math-inline" data-latex="S^1"></span>, and a capsule account of spherical harmonics for 3D audio.</p>
+<p>Mathematically this episode covers: quotient topology, the universal cover of <span class=math-inline data-latex=S^1></span>, and a capsule account of spherical harmonics for 3D audio.</p>
 <blockquote>
 <p><em>中文:</em> &ldquo;数学揭示了结构，感知填充了内容。当证据不够时，你听到的不是声音本身——而是你自己。&rdquo;</p>
 </blockquote>
 <hr>
-<h2 id="prerequisites">Prerequisites</h2>
+<h2 id=prerequisites>Prerequisites</h2>
 <ul>
 <li>
-
-
-
-<a href="https://amath390.sibeliusp.com/episodes/ep02/" class="episode-ref-link">Fourier Series and Timbre (EP02)</a>
-
- — Fourier decomposition of audio signals into sinusoidal partials</li>
+<a href=https://amath390.sibeliusp.com/episodes/ep02/ class=episode-ref-link>Fourier Series and Timbre (EP02)</a>
+— Fourier decomposition of audio signals into sinusoidal partials</li>
 <li>
-
-
-
-<a href="https://amath390.sibeliusp.com/episodes/ep04/" class="episode-ref-link">All-Interval Rows and <span class="math-inline" data-latex="\mathbb{Z}_{12}"></span> (EP04)</a>
-
- — the cyclic group structure of pitch classes</li>
+<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=episode-ref-link>All-Interval Rows and <span class=math-inline data-latex=\mathbb{Z}_{12}></span> (EP04)</a>
+— the cyclic group structure of pitch classes</li>
 </ul>
 <hr>
-<h2 id="definitions">Definitions</h2>
-
-
-<div class="definition-block" id="def-8.1">
-  <div class="block-label">
-    Def 8.1 (Pitch Helix)
-  </div>
-  <div class="block-body"><p>The <strong>pitch helix</strong> is the topological space</p>
-<div class="math-display" data-latex="\mathcal{H} = S^1 \times \mathbb{R}"></div>
+<h2 id=definitions>Definitions</h2>
+<div class=definition-block id=def-8.1>
+<div class=block-label>
+Def 8.1 (Pitch Helix)
+</div>
+<div class=block-body><p>The <strong>pitch helix</strong> is the topological space</p>
+<p><span class=math-display data-latex="\mathcal{H} = S^1 \times \mathbb{R}"></span></p>
 <p>parameterized by:</p>
 <ul>
-<li><strong>Chroma</strong> <span class="math-inline" data-latex="\theta \in S^1 \cong \mathbb{R}/\mathbb{Z}"></span>: the pitch class modulo octave equivalence, with <span class="math-inline" data-latex="\theta = k/12"></span> for semitone <span class="math-inline" data-latex="k \in \mathbb{Z}_{12}"></span></li>
-<li><strong>Height</strong> <span class="math-inline" data-latex="h \in \mathbb{R}"></span>: the octave number (e.g., <span class="math-inline" data-latex="h = 4"></span> for the octave containing middle C)</li>
+<li><strong>Chroma</strong> <span class=math-inline data-latex="\theta \in S^1 \cong \mathbb{R}/\mathbb{Z}"></span>: the pitch class modulo octave equivalence, with <span class=math-inline data-latex="\theta = k/12"></span> for semitone <span class=math-inline data-latex="k \in \mathbb{Z}_{12}"></span></li>
+<li><strong>Height</strong> <span class=math-inline data-latex="h \in \mathbb{R}"></span>: the octave number (e.g., <span class=math-inline data-latex="h = 4"></span> for the octave containing middle C)</li>
 </ul>
-<p>A physical tone with fundamental frequency <span class="math-inline" data-latex="f"></span> maps to the point with chroma <span class="math-inline" data-latex="\theta = \{12 \log_2(f/f_{\text{ref}})\}/12"></span> (fractional part, giving position on the circle) and height <span class="math-inline" data-latex="h = \lfloor \log_2(f/f_{\text{ref}}) \rfloor"></span>.</p>
+<p>A physical tone with fundamental frequency <span class=math-inline data-latex=f></span> maps to the point with chroma <span class=math-inline data-latex="\theta = \{12 \log_2(f/f_{\text{ref}})\}/12"></span> (fractional part, giving position on the circle) and height <span class=math-inline data-latex="h = \lfloor \log_2(f/f_{\text{ref}}) \rfloor"></span>.</p>
 <p>The helix projects onto two quotient spaces:</p>
 <ul>
-<li>Onto <span class="math-inline" data-latex="S^1"></span> (chroma circle) by forgetting height: <span class="math-inline" data-latex="(\theta, h) \mapsto \theta"></span></li>
-<li>Onto <span class="math-inline" data-latex="\mathbb{R}"></span> (height line) by forgetting chroma: <span class="math-inline" data-latex="(\theta, h) \mapsto h"></span></li>
+<li>Onto <span class=math-inline data-latex=S^1></span> (chroma circle) by forgetting height: <span class=math-inline data-latex="(\theta, h) \mapsto \theta"></span></li>
+<li>Onto <span class=math-inline data-latex=\mathbb{R}></span> (height line) by forgetting chroma: <span class=math-inline data-latex="(\theta, h) \mapsto h"></span></li>
 </ul>
 </div>
 </div>
-
-
-
-<div class="definition-block" id="def-8.2">
-  <div class="block-label">
-    Def 8.2 (Shepard Tone)
-  </div>
-  <div class="block-body"><p>A <strong>Shepard tone</strong> at chroma <span class="math-inline" data-latex="\theta"></span> is the superposition of pure sinusoids at all octaves of the corresponding pitch, weighted by a fixed bell-shaped (Gaussian) spectral envelope <span class="math-inline" data-latex="A: \mathbb{R} \to [0,1]"></span> centered at a fixed reference height <span class="math-inline" data-latex="h_0"></span>:</p>
-<div class="math-display" data-latex="S_\theta(t) = \sum_{n=-\infty}^{\infty} A(n &#43; h(\theta)) \cdot \sin\!\bigl(2\pi \cdot f_{\text{ref}} \cdot 2^{n &#43; \theta} \cdot t\bigr)"></div>
-<p>where <span class="math-inline" data-latex="h(\theta)"></span> selects the octave closest to the center of the envelope.</p>
-<p>The crucial property: the envelope <span class="math-inline" data-latex="A"></span> is <strong>the same for every chroma <span class="math-inline" data-latex="\theta"></span></strong>. Moving from <span class="math-inline" data-latex="\theta"></span> to <span class="math-inline" data-latex="\theta &#43; 1/12"></span> (one semitone) shifts every component up by one semitone: the highest partial fades out, a new lowest partial fades in. The overall spectral shape is preserved.</p>
+<div class=definition-block id=def-8.2>
+<div class=block-label>
+Def 8.2 (Shepard Tone)
+</div>
+<div class=block-body><p>A <strong>Shepard tone</strong> at chroma <span class=math-inline data-latex=\theta></span> is the superposition of pure sinusoids at all octaves of the corresponding pitch, weighted by a fixed bell-shaped (Gaussian) spectral envelope <span class=math-inline data-latex="A: \mathbb{R} \to [0,1]"></span> centered at a fixed reference height <span class=math-inline data-latex=h_0></span>:</p>
+<p><span class=math-display data-latex="S_\theta(t) = \sum_{n=-\infty}^{\infty} A(n + h(\theta)) \cdot \sin\!\bigl(2\pi \cdot f_{\text{ref}} \cdot 2^{n + \theta} \cdot t\bigr)"></span></p>
+<p>where <span class=math-inline data-latex=h(\theta)></span> selects the octave closest to the center of the envelope.</p>
+<p>The crucial property: the envelope <span class=math-inline data-latex=A></span> is <strong>the same for every chroma <span class=math-inline data-latex=\theta></span></strong>. Moving from <span class=math-inline data-latex=\theta></span> to <span class=math-inline data-latex="\theta + 1/12"></span> (one semitone) shifts every component up by one semitone: the highest partial fades out, a new lowest partial fades in. The overall spectral shape is preserved.</p>
 </div>
 </div>
-
-
-
-<div class="definition-block" id="def-8.3">
-  <div class="block-label">
-    Def 8.3 (Tritone)
-  </div>
-  <div class="block-body"><p>A <strong>tritone</strong> is the interval of six semitones — exactly half an octave. On the chroma circle <span class="math-inline" data-latex="S^1"></span>, two pitches <span class="math-inline" data-latex="\theta"></span> and <span class="math-inline" data-latex="\theta &#43; 1/2"></span> are <strong>antipodal</strong>: they are diametrically opposite, equidistant in both the clockwise and counterclockwise directions.</p>
+<div class=definition-block id=def-8.3>
+<div class=block-label>
+Def 8.3 (Tritone)
+</div>
+<div class=block-body><p>A <strong>tritone</strong> is the interval of six semitones — exactly half an octave. On the chroma circle <span class=math-inline data-latex=S^1></span>, two pitches <span class=math-inline data-latex=\theta></span> and <span class=math-inline data-latex="\theta + 1/2"></span> are <strong>antipodal</strong>: they are diametrically opposite, equidistant in both the clockwise and counterclockwise directions.</p>
 <p>The tritone was called <em>diabolus in musica</em> (the devil in music) in medieval counterpoint and was forbidden in strict voice-leading (see EP05).</p>
 </div>
 </div>
-
-
-
-<div class="definition-block" id="def-8.4">
-  <div class="block-label">
-    Def 8.4 (Quotient Topology and Universal Cover)
-  </div>
-  <div class="block-body"><p>The <strong>chroma circle</strong> <span class="math-inline" data-latex="S^1"></span> is the quotient space <span class="math-inline" data-latex="\mathbb{R}/\mathbb{Z}"></span> (the real line with integers identified): two real numbers <span class="math-inline" data-latex="x"></span> and <span class="math-inline" data-latex="y"></span> are identified iff <span class="math-inline" data-latex="x - y \in \mathbb{Z}"></span>.</p>
-<p>A continuous surjective map <span class="math-inline" data-latex="p: \mathbb{R} \to S^1"></span> defined by <span class="math-inline" data-latex="p(x) = e^{2\pi i x}"></span> is the <strong>universal covering map</strong>. The real line <span class="math-inline" data-latex="\mathbb{R}"></span> is the <strong>universal cover</strong> of <span class="math-inline" data-latex="S^1"></span>; it is simply connected (no holes), while <span class="math-inline" data-latex="S^1"></span> has fundamental group <span class="math-inline" data-latex="\pi_1(S^1) = \mathbb{Z}"></span>.</p>
-<p>In pitch perception: the full pitch continuum <span class="math-inline" data-latex="\mathbb{R}"></span> (ordered by frequency) is the universal cover of the chroma circle. Hearing a Shepard tone means perceiving only the chroma <span class="math-inline" data-latex="\theta \in S^1"></span> without being able to lift to a specific height in <span class="math-inline" data-latex="\mathbb{R}"></span>.</p>
+<div class=definition-block id=def-8.4>
+<div class=block-label>
+Def 8.4 (Quotient Topology and Universal Cover)
+</div>
+<div class=block-body><p>The <strong>chroma circle</strong> <span class=math-inline data-latex=S^1></span> is the quotient space <span class=math-inline data-latex=\mathbb{R}/\mathbb{Z}></span> (the real line with integers identified): two real numbers <span class=math-inline data-latex=x></span> and <span class=math-inline data-latex=y></span> are identified iff <span class=math-inline data-latex="x - y \in \mathbb{Z}"></span>.</p>
+<p>A continuous surjective map <span class=math-inline data-latex="p: \mathbb{R} \to S^1"></span> defined by <span class=math-inline data-latex="p(x) = e^{2\pi i x}"></span> is the <strong>universal covering map</strong>. The real line <span class=math-inline data-latex=\mathbb{R}></span> is the <strong>universal cover</strong> of <span class=math-inline data-latex=S^1></span>; it is simply connected (no holes), while <span class=math-inline data-latex=S^1></span> has fundamental group <span class=math-inline data-latex="\pi_1(S^1) = \mathbb{Z}"></span>.</p>
+<p>In pitch perception: the full pitch continuum <span class=math-inline data-latex=\mathbb{R}></span> (ordered by frequency) is the universal cover of the chroma circle. Hearing a Shepard tone means perceiving only the chroma <span class=math-inline data-latex="\theta \in S^1"></span> without being able to lift to a specific height in <span class=math-inline data-latex=\mathbb{R}></span>.</p>
 </div>
 </div>
-
 <hr>
-<h2 id="main-theorems">Main Theorems</h2>
-
-
-<div class="theorem-block" id="theorem-8.1">
-  <div class="block-label">
-    Theorem 8.1 (Shepard Tone Periodicity)
-  </div>
-  <div class="block-body">A Shepard scale ascending by semitones returns to the <em>exact same sound</em> after 12 steps. Formally: let <span class="math-inline" data-latex="S_k"></span> denote the Shepard tone at chroma class <span class="math-inline" data-latex="k \in \mathbb{Z}_{12}"></span>. Then <span class="math-inline" data-latex="S_k = S_{k&#43;12}"></span> as audio signals (the waveforms are identical), yet each step <span class="math-inline" data-latex="S_k \to S_{k&#43;1}"></span> contains only upward-moving partials.</div>
+<h2 id=main-theorems>Main Theorems</h2>
+<div class=theorem-block id=theorem-8.1>
+<div class=block-label>
+Theorem 8.1 (Shepard Tone Periodicity)
 </div>
-
-<div class="proof-block">
-  <div class="block-label">Proof.</div>
-  <div class="block-body"><p><strong>Step 1 (Individual steps go up):</strong> When chroma increases from <span class="math-inline" data-latex="k"></span> to <span class="math-inline" data-latex="k&#43;1"></span>, every partial <span class="math-inline" data-latex="\sin(2\pi f_n t)"></span> in <span class="math-inline" data-latex="S_k"></span> at frequency <span class="math-inline" data-latex="f_n = f_\text{ref} \cdot 2^{n &#43; k/12}"></span> maps to <span class="math-inline" data-latex="\sin(2\pi f_n&#39; t)"></span> in <span class="math-inline" data-latex="S_{k&#43;1}"></span> where <span class="math-inline" data-latex="f_n&#39; = f_\text{ref} \cdot 2^{n &#43; (k&#43;1)/12} &gt; f_n"></span>. Every partial rises.</p>
-<p><strong>Step 2 (Global spectrum is unchanged):</strong> The set of frequencies <span class="math-inline" data-latex="\{f_\text{ref} \cdot 2^{n&#43;k/12}\}_{n \in \mathbb{Z}}"></span> with the same envelope values <span class="math-inline" data-latex="A(n)"></span> is invariant under the shift <span class="math-inline" data-latex="k \to k&#43;12"></span> (equivalently <span class="math-inline" data-latex="k/12 \to k/12 &#43; 1"></span>), because this replaces <span class="math-inline" data-latex="2^{n &#43; k/12}"></span> by <span class="math-inline" data-latex="2^{n&#43;1&#43;k/12}"></span> — a relabeling <span class="math-inline" data-latex="n \mapsto n-1"></span> of the summation index, which preserves the sum (under appropriate convergence of the envelope).</p>
-<p><strong>Step 3 (Paradox):</strong> The listener hears individual partials rising (Step 1) but the global spectral envelope is unchanged (Step 2). The auditory system integrates the local motion cue (upward), producing the percept of continuous ascent, while lacking the information needed to track absolute height. After 12 steps, the identical signal repeats — the perception is of infinite ascent on a circle. <span class="math-inline" data-latex="\square"></span></p>
+<div class=block-body>A Shepard scale ascending by semitones returns to the <em>exact same sound</em> after 12 steps. Formally: let <span class=math-inline data-latex=S_k></span> denote the Shepard tone at chroma class <span class=math-inline data-latex="k \in \mathbb{Z}_{12}"></span>. Then <span class=math-inline data-latex="S_k = S_{k+12}"></span> as audio signals (the waveforms are identical), yet each step <span class=math-inline data-latex="S_k \to S_{k+1}"></span> contains only upward-moving partials.</div>
+</div>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><p><strong>Step 1 (Individual steps go up):</strong> When chroma increases from <span class=math-inline data-latex=k></span> to <span class=math-inline data-latex=k+1></span>, every partial <span class=math-inline data-latex="\sin(2\pi f_n t)"></span> in <span class=math-inline data-latex=S_k></span> at frequency <span class=math-inline data-latex="f_n = f_\text{ref} \cdot 2^{n + k/12}"></span> maps to <span class=math-inline data-latex="\sin(2\pi f_n' t)"></span> in <span class=math-inline data-latex=S_{k+1}></span> where <span class=math-inline data-latex="f_n' = f_\text{ref} \cdot 2^{n + (k+1)/12} > f_n"></span>. Every partial rises.</p>
+<p><strong>Step 2 (Global spectrum is unchanged):</strong> The set of frequencies <span class=math-inline data-latex="\{f_\text{ref} \cdot 2^{n+k/12}\}_{n \in \mathbb{Z}}"></span> with the same envelope values <span class=math-inline data-latex=A(n)></span> is invariant under the shift <span class=math-inline data-latex="k \to k+12"></span> (equivalently <span class=math-inline data-latex="k/12 \to k/12 + 1"></span>), because this replaces <span class=math-inline data-latex="2^{n + k/12}"></span> by <span class=math-inline data-latex=2^{n+1+k/12}></span> — a relabeling <span class=math-inline data-latex="n \mapsto n-1"></span> of the summation index, which preserves the sum (under appropriate convergence of the envelope).</p>
+<p><strong>Step 3 (Paradox):</strong> The listener hears individual partials rising (Step 1) but the global spectral envelope is unchanged (Step 2). The auditory system integrates the local motion cue (upward), producing the percept of continuous ascent, while lacking the information needed to track absolute height. After 12 steps, the identical signal repeats — the perception is of infinite ascent on a circle. <span class=math-inline data-latex=\square></span></p>
 </div>
 </div>
-
-
-
-<div class="theorem-block" id="theorem-8.2">
-  <div class="block-label">
-    Theorem 8.2 (Tritone Paradox — Ambiguity from Antipodality)
-  </div>
-  <div class="block-body"><p>Let <span class="math-inline" data-latex="\theta"></span> and <span class="math-inline" data-latex="\theta &#43; 1/2 \in S^1"></span> be antipodal chromas. A Shepard tone pair <span class="math-inline" data-latex="(S_\theta, S_{\theta&#43;1/2})"></span> presented in sequence carries no objective information about direction (ascending vs. descending) because the clockwise and counterclockwise arcs on <span class="math-inline" data-latex="S^1"></span> between <span class="math-inline" data-latex="\theta"></span> and <span class="math-inline" data-latex="\theta &#43; 1/2"></span> are equal in length.</p>
-<p>Formally: any continuous &ldquo;direction function&rdquo; <span class="math-inline" data-latex="d: S^1 \times S^1 \to \{&#43;1,-1\}"></span> that is antisymmetric (<span class="math-inline" data-latex="d(\theta, \phi) = -d(\phi, \theta)"></span>) and depends only on the circular arc length must satisfy <span class="math-inline" data-latex="d(\theta, \theta &#43; 1/2) = 0"></span>, which is not in <span class="math-inline" data-latex="\{&#43;1,-1\}"></span> — i.e., no such function can be defined at antipodal pairs.</p>
+<div class=theorem-block id=theorem-8.2>
+<div class=block-label>
+Theorem 8.2 (Tritone Paradox — Ambiguity from Antipodality)
+</div>
+<div class=block-body><p>Let <span class=math-inline data-latex=\theta></span> and <span class=math-inline data-latex="\theta + 1/2 \in S^1"></span> be antipodal chromas. A Shepard tone pair <span class=math-inline data-latex="(S_\theta, S_{\theta+1/2})"></span> presented in sequence carries no objective information about direction (ascending vs. descending) because the clockwise and counterclockwise arcs on <span class=math-inline data-latex=S^1></span> between <span class=math-inline data-latex=\theta></span> and <span class=math-inline data-latex="\theta + 1/2"></span> are equal in length.</p>
+<p>Formally: any continuous &ldquo;direction function&rdquo; <span class=math-inline data-latex="d: S^1 \times S^1 \to \{+1,-1\}"></span> that is antisymmetric (<span class=math-inline data-latex="d(\theta, \phi) = -d(\phi, \theta)"></span>) and depends only on the circular arc length must satisfy <span class=math-inline data-latex="d(\theta, \theta + 1/2) = 0"></span>, which is not in <span class=math-inline data-latex=\{+1,-1\}></span> — i.e., no such function can be defined at antipodal pairs.</p>
 </div>
 </div>
-
-<div class="proof-block">
-  <div class="block-label">Proof.</div>
-  <div class="block-body"><p>The circular distance between antipodal points <span class="math-inline" data-latex="\theta"></span> and <span class="math-inline" data-latex="\theta &#43; 1/2"></span> on <span class="math-inline" data-latex="S^1"></span> (normalized to circumference 1) is <span class="math-inline" data-latex="1/2"></span> in both directions. An antisymmetric function <span class="math-inline" data-latex="d"></span> satisfying <span class="math-inline" data-latex="d(\theta,\phi) = \text{sgn}(\phi - \theta \bmod 1 - 1/2)"></span> (i.e., <span class="math-inline" data-latex="&#43;1"></span> if the shorter clockwise arc is less than <span class="math-inline" data-latex="1/2"></span>, <span class="math-inline" data-latex="-1"></span> otherwise) is undefined (or must choose a convention) exactly when the arc lengths are equal, i.e., at separation <span class="math-inline" data-latex="1/2"></span>. There is no canonical choice of <span class="math-inline" data-latex="\pm 1"></span> at this degeneracy point. <span class="math-inline" data-latex="\square"></span></p>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><p>The circular distance between antipodal points <span class=math-inline data-latex=\theta></span> and <span class=math-inline data-latex="\theta + 1/2"></span> on <span class=math-inline data-latex=S^1></span> (normalized to circumference 1) is <span class=math-inline data-latex=1/2></span> in both directions. An antisymmetric function <span class=math-inline data-latex=d></span> satisfying <span class=math-inline data-latex="d(\theta,\phi) = \text{sgn}(\phi - \theta \bmod 1 - 1/2)"></span> (i.e., <span class=math-inline data-latex=+1></span> if the shorter clockwise arc is less than <span class=math-inline data-latex=1/2></span>, <span class=math-inline data-latex=-1></span> otherwise) is undefined (or must choose a convention) exactly when the arc lengths are equal, i.e., at separation <span class=math-inline data-latex=1/2></span>. There is no canonical choice of <span class=math-inline data-latex="\pm 1"></span> at this degeneracy point. <span class=math-inline data-latex=\square></span></p>
 <p><strong>Experimental consequence (Deutsch 1986):</strong> Since the sound itself is ambiguous, listeners' responses are determined by an internal prior — a learned &ldquo;height template&rdquo; mapping chroma to expected height. Deutsch found that this template correlates with the speaker&rsquo;s native language tonal range: speakers of tonal languages with high fundamental frequencies (e.g., Vietnamese) have templates peaked at different chroma values than speakers of non-tonal languages (e.g., California English). The template is calibrated in childhood by the statistical distribution of fundamental frequencies in ambient speech.</p>
 </div>
 </div>
-
-
-
-<div class="theorem-block" id="theorem-8.3">
-  <div class="block-label">
-    Theorem 8.3 (Chroma as a Quotient Group)
-  </div>
-  <div class="block-body"><p>The chroma circle is the quotient group <span class="math-inline" data-latex="\mathbb{R}/12\mathbb{Z}"></span> (real numbers modulo 12, corresponding to semitones modulo octave equivalence). The natural projection <span class="math-inline" data-latex="p: \mathbb{R} \to \mathbb{R}/12\mathbb{Z}"></span> is a group homomorphism with kernel <span class="math-inline" data-latex="12\mathbb{Z}"></span>.</p>
-<p>The pitch helix <span class="math-inline" data-latex="S^1 \times \mathbb{R}"></span> decomposes pitch into an element of the quotient group (chroma) and a coset representative (height). The Shepard construction projects out the coset representative, retaining only the quotient group element.</p>
+<div class=theorem-block id=theorem-8.3>
+<div class=block-label>
+Theorem 8.3 (Chroma as a Quotient Group)
+</div>
+<div class=block-body><p>The chroma circle is the quotient group <span class=math-inline data-latex=\mathbb{R}/12\mathbb{Z}></span> (real numbers modulo 12, corresponding to semitones modulo octave equivalence). The natural projection <span class=math-inline data-latex="p: \mathbb{R} \to \mathbb{R}/12\mathbb{Z}"></span> is a group homomorphism with kernel <span class=math-inline data-latex=12\mathbb{Z}></span>.</p>
+<p>The pitch helix <span class=math-inline data-latex="S^1 \times \mathbb{R}"></span> decomposes pitch into an element of the quotient group (chroma) and a coset representative (height). The Shepard construction projects out the coset representative, retaining only the quotient group element.</p>
 </div>
 </div>
-
-<div class="proof-block">
-  <div class="block-label">Proof.</div>
-  <div class="block-body"><p><span class="math-inline" data-latex="\mathbb{R}"></span> is an abelian group under addition. <span class="math-inline" data-latex="12\mathbb{Z} = \{12k : k \in \mathbb{Z}\}"></span> is a closed subgroup. The quotient group <span class="math-inline" data-latex="\mathbb{R}/12\mathbb{Z}"></span> has elements <span class="math-inline" data-latex="[x] = x &#43; 12\mathbb{Z}"></span>, and inherits addition <span class="math-inline" data-latex="[x] &#43; [y] = [x&#43;y]"></span>. Since <span class="math-inline" data-latex="12\mathbb{Z}"></span> is a discrete closed subgroup of <span class="math-inline" data-latex="\mathbb{R}"></span>, the quotient is a Lie group homeomorphic to <span class="math-inline" data-latex="S^1"></span>.</p>
-<p>Any <span class="math-inline" data-latex="x \in \mathbb{R}"></span> can be written uniquely as <span class="math-inline" data-latex="x = q &#43; r"></span> where <span class="math-inline" data-latex="q \in 12\mathbb{Z}"></span> (the height component, selecting the octave) and <span class="math-inline" data-latex="r = x \bmod 12 \in [0,12)"></span> (the chroma component). The projection <span class="math-inline" data-latex="p(x) = [x]"></span> forgets <span class="math-inline" data-latex="q"></span> and retains <span class="math-inline" data-latex="r"></span>. <span class="math-inline" data-latex="\square"></span></p>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><p><span class=math-inline data-latex=\mathbb{R}></span> is an abelian group under addition. <span class=math-inline data-latex="12\mathbb{Z} = \{12k : k \in \mathbb{Z}\}"></span> is a closed subgroup. The quotient group <span class=math-inline data-latex=\mathbb{R}/12\mathbb{Z}></span> has elements <span class=math-inline data-latex="[x] = x + 12\mathbb{Z}"></span>, and inherits addition <span class=math-inline data-latex="[x] + [y] = [x+y]"></span>. Since <span class=math-inline data-latex=12\mathbb{Z}></span> is a discrete closed subgroup of <span class=math-inline data-latex=\mathbb{R}></span>, the quotient is a Lie group homeomorphic to <span class=math-inline data-latex=S^1></span>.</p>
+<p>Any <span class=math-inline data-latex="x \in \mathbb{R}"></span> can be written uniquely as <span class=math-inline data-latex="x = q + r"></span> where <span class=math-inline data-latex="q \in 12\mathbb{Z}"></span> (the height component, selecting the octave) and <span class=math-inline data-latex="r = x \bmod 12 \in [0,12)"></span> (the chroma component). The projection <span class=math-inline data-latex="p(x) = [x]"></span> forgets <span class=math-inline data-latex=q></span> and retains <span class=math-inline data-latex=r></span>. <span class=math-inline data-latex=\square></span></p>
 </div>
 </div>
-
-
-
-<div class="proposition-block" id="prop-8.1">
-  <div class="block-label">
-    Prop 8.1 (Shepard Tone and Ambiguous Fundamental)
-  </div>
-  <div class="block-body">A Shepard tone is a signal with no single well-defined fundamental frequency. Every Shepard tone at chroma <span class="math-inline" data-latex="k"></span> is a harmonic series on a <em>virtual</em> fundamental <span class="math-inline" data-latex="f_0 = f_\text{ref} \cdot 2^{k/12}"></span>, but simultaneously also on all octave multiples <span class="math-inline" data-latex="f_0 \cdot 2^n"></span> for <span class="math-inline" data-latex="n \in \mathbb{Z}"></span>. The auditory system&rsquo;s pitch-extraction mechanism (which normally resolves fundamental frequency via harmonic template matching) receives equally strong evidence for every octave, and cannot resolve the ambiguity without additional height cues.</div>
+<div class=proposition-block id=prop-8.1>
+<div class=block-label>
+Prop 8.1 (Shepard Tone and Ambiguous Fundamental)
 </div>
-
+<div class=block-body>A Shepard tone is a signal with no single well-defined fundamental frequency. Every Shepard tone at chroma <span class=math-inline data-latex=k></span> is a harmonic series on a <em>virtual</em> fundamental <span class=math-inline data-latex="f_0 = f_\text{ref} \cdot 2^{k/12}"></span>, but simultaneously also on all octave multiples <span class=math-inline data-latex="f_0 \cdot 2^n"></span> for <span class=math-inline data-latex="n \in \mathbb{Z}"></span>. The auditory system&rsquo;s pitch-extraction mechanism (which normally resolves fundamental frequency via harmonic template matching) receives equally strong evidence for every octave, and cannot resolve the ambiguity without additional height cues.</div>
+</div>
 <blockquote>
 <p><em>Visual:</em> A helix drawn in 3D space: the vertical axis is height (octave), the circular axis is chroma. A Shepard tone &ldquo;flattens&rdquo; the helix onto the circle by making the vertical coordinate invisible. An animation shows pitches climbing the helix while the projection onto the circle cycles.</p>
 </blockquote>
 <hr>
-<h2 id="musical-connection">Musical Connection</h2>
-<div class="music-block">
-  <div class="block-label">音乐联系</div>
-  <div class="block-body"><p><strong>Bach&rsquo;s Canon per Tonos (1747) — a topological anticipation</strong></p>
+<h2 id=musical-connection>Musical Connection</h2>
+<div class=music-block>
+<div class=block-label>音乐联系</div>
+<div class=block-body><p><strong>Bach&rsquo;s Canon per Tonos (1747) — a topological anticipation</strong></p>
 <p>Bach&rsquo;s <em>Musical Offering</em> (BWV 1079) contains a modulating canon, <em>Canon per Tonos</em>, that ascends through all six whole-tone steps of the major scale before returning to the starting key — but one octave higher. Played in an infinite loop, it creates the same ascending-without-arriving sensation as a Shepard scale, 217 years before Shepard&rsquo;s experiment.</p>
-<p>The mathematical structure is identical: the canon traverses the quotient space <span class="math-inline" data-latex="\mathbb{Z}_6"></span> (six modulating steps) while the fundamental frequency shifts upward, making the &ldquo;height&rdquo; component grow without bound. The listener, if the performance starts and ends identically (which requires an implicit octave transposition), perceives a circular journey.</p>
+<p>The mathematical structure is identical: the canon traverses the quotient space <span class=math-inline data-latex=\mathbb{Z}_6></span> (six modulating steps) while the fundamental frequency shifts upward, making the &ldquo;height&rdquo; component grow without bound. The listener, if the performance starts and ends identically (which requires an implicit octave transposition), perceives a circular journey.</p>
 <p>Hofstadter&rsquo;s <em>Gödel, Escher, Bach</em> (1979) opens with this canon as an emblem of strange loops — self-referential structures that seem to ascend or descend while cycling back.</p>
 <p><strong>Hans Zimmer&rsquo;s Dunkirk (2017) — three layered Shepard scales</strong></p>
-<p>Christopher Nolan&rsquo;s <em>Dunkirk</em> uses Shepard tones composed by Hans Zimmer as a structural device: three interlocking Shepard scales at different tempos correspond to the film&rsquo;s three temporal scales (one hour, one day, one week). The perpetual ascending tension physically embodies the narrative&rsquo;s escalating dread. The mathematical structure (three independent loops in <span class="math-inline" data-latex="S^1"></span>, perceived as a single climbing line) mirrors the film&rsquo;s three narrative threads that independently cycle while the audience experiences them as linearly converging.</p>
+<p>Christopher Nolan&rsquo;s <em>Dunkirk</em> uses Shepard tones composed by Hans Zimmer as a structural device: three interlocking Shepard scales at different tempos correspond to the film&rsquo;s three temporal scales (one hour, one day, one week). The perpetual ascending tension physically embodies the narrative&rsquo;s escalating dread. The mathematical structure (three independent loops in <span class=math-inline data-latex=S^1></span>, perceived as a single climbing line) mirrors the film&rsquo;s three narrative threads that independently cycle while the audience experiences them as linearly converging.</p>
 <p><strong>Spatial audio extension: spherical harmonics</strong></p>
-<p>For 3D sound field representation (ambisonics), the two-dimensional <span class="math-inline" data-latex="S^1"></span> chroma circle generalizes to the sphere <span class="math-inline" data-latex="S^2"></span>. The analog of Fourier modes on <span class="math-inline" data-latex="S^1"></span> are <strong>spherical harmonics</strong>:</p>
-<div class="math-display" data-latex="Y_l^m(\theta, \phi) = \sqrt{\frac{(2l&#43;1)}{4\pi}\frac{(l-m)!}{(l&#43;m)!}} P_l^m(\cos\theta) e^{im\phi}"></div>
-<p>where <span class="math-inline" data-latex="P_l^m"></span> are associated Legendre polynomials, <span class="math-inline" data-latex="l \ge 0"></span> is the degree (angular frequency), and <span class="math-inline" data-latex="-l \le m \le l"></span> is the order. An order-<span class="math-inline" data-latex="N"></span> ambisonics system uses all <span class="math-inline" data-latex="(N&#43;1)^2"></span> spherical harmonics up to degree <span class="math-inline" data-latex="N"></span>, representing the 3D sound field as a finite spatial Fourier series on the sphere.</p>
+<p>For 3D sound field representation (ambisonics), the two-dimensional <span class=math-inline data-latex=S^1></span> chroma circle generalizes to the sphere <span class=math-inline data-latex=S^2></span>. The analog of Fourier modes on <span class=math-inline data-latex=S^1></span> are <strong>spherical harmonics</strong>:</p>
+<p><span class=math-display data-latex="Y_l^m(\theta, \phi) = \sqrt{\frac{(2l+1)}{4\pi}\frac{(l-m)!}{(l+m)!}} P_l^m(\cos\theta) e^{im\phi}"></span></p>
+<p>where <span class=math-inline data-latex=P_l^m></span> are associated Legendre polynomials, <span class=math-inline data-latex="l \ge 0"></span> is the degree (angular frequency), and <span class=math-inline data-latex="-l \le m \le l"></span> is the order. An order-<span class=math-inline data-latex=N></span> ambisonics system uses all <span class=math-inline data-latex=(N+1)^2></span> spherical harmonics up to degree <span class=math-inline data-latex=N></span>, representing the 3D sound field as a finite spatial Fourier series on the sphere.</p>
 </div>
 </div>
-
 <hr>
-<h2 id="limits-and-open-questions">Limits and Open Questions</h2>
+<h2 id=limits-and-open-questions>Limits and Open Questions</h2>
 <ol>
 <li>
 <p><strong>Individual differences in the tritone paradox.</strong> Deutsch&rsquo;s finding that native language predicts direction responses is robust across replication, but the mechanism (critical period learning of fundamental frequency statistics vs. genetic predisposition) is debated. A fully predictive mathematical model of the individual height template is an open problem in auditory neuroscience.</p>
 </li>
 <li>
-<p><strong>Continuous Shepard tones and glissandi.</strong> The discrete Shepard scale uses 12 steps. A continuous variant (Risset glissando, named after Jean-Claude Risset, 1969) uses a continuously varying chroma and produces a continuously ascending tone. The mathematical treatment requires the topology of path spaces on <span class="math-inline" data-latex="S^1"></span> — which paths lift to bounded paths in the universal cover <span class="math-inline" data-latex="\mathbb{R}"></span>?</p>
+<p><strong>Continuous Shepard tones and glissandi.</strong> The discrete Shepard scale uses 12 steps. A continuous variant (Risset glissando, named after Jean-Claude Risset, 1969) uses a continuously varying chroma and produces a continuously ascending tone. The mathematical treatment requires the topology of path spaces on <span class=math-inline data-latex=S^1></span> — which paths lift to bounded paths in the universal cover <span class=math-inline data-latex=\mathbb{R}></span>?</p>
 </li>
 <li>
 <p><strong>Pitch perception in other species.</strong> Shepard tone experiments have been conducted on macaques, rhesus monkeys, and some songbirds. Whether the tritone paradox (linguistically calibrated height template) generalizes to non-linguistic animals is an open question that would test the cultural vs. acoustic origin of the height prior.</p>
 </li>
 <li>
-<p><strong>Higher-dimensional pitch spaces.</strong> Tymoczko&rsquo;s voice-leading geometry and Balzano&rsquo;s (1980) group-theoretic model of tonal pitch space both propose spaces richer than <span class="math-inline" data-latex="S^1 \times \mathbb{R}"></span>. Whether there is a single &ldquo;correct&rdquo; mathematical model of pitch perception space, or whether different tasks (melody recognition, harmony, voice-leading) engage different geometric representations, is an active research question.</p>
+<p><strong>Higher-dimensional pitch spaces.</strong> Tymoczko&rsquo;s voice-leading geometry and Balzano&rsquo;s (1980) group-theoretic model of tonal pitch space both propose spaces richer than <span class=math-inline data-latex="S^1 \times \mathbb{R}"></span>. Whether there is a single &ldquo;correct&rdquo; mathematical model of pitch perception space, or whether different tasks (melody recognition, harmony, voice-leading) engage different geometric representations, is an active research question.</p>
 </li>
 <li>
-<p><strong>Persistent homology of pitch spaces.</strong> Topological data analysis (TDA) can be applied to chroma features of audio to detect the <span class="math-inline" data-latex="S^1"></span> topology of the pitch class distribution. Whether higher Betti numbers (<span class="math-inline" data-latex="\beta_2, \beta_3, \ldots"></span>) appear in the pitch space of complex harmonies (chords, polyphony) is an open application of computational topology.</p>
+<p><strong>Persistent homology of pitch spaces.</strong> Topological data analysis (TDA) can be applied to chroma features of audio to detect the <span class=math-inline data-latex=S^1></span> topology of the pitch class distribution. Whether higher Betti numbers (<span class=math-inline data-latex="\beta_2, \beta_3, \ldots"></span>) appear in the pitch space of complex harmonies (chords, polyphony) is an open application of computational topology.</p>
 </li>
 </ol>
 <hr>
-<h2 id="extended-reading">Extended Reading</h2>
-<div class="yt-container">
-  <div class="yt-embed">
-    
-    
-    
-    
-    <iframe
-      src="https://www.youtube.com/embed/oEW3F8B-lhU?start=302"
-      title="Shepard Tone — the auditory barber&#39;s pole"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen>
-    </iframe>
-  </div>
-  <p class="yt-caption">The classic Shepard tone demonstration: an endlessly ascending (or descending) pitch that never actually moves. The barber-pole analogy — the EP08 central metaphor — made visual and auditory.</p>
+<h2 id=extended-reading>Extended Reading</h2>
+<div class=yt-container>
+<div class=yt-embed>
+<iframe src="https://www.youtube.com/embed/oEW3F8B-lhU?start=302" title="Shepard Tone — the auditory barber's pole" frameborder=0 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy=strict-origin-when-cross-origin allowfullscreen></iframe>
 </div>
-
-<div class="yt-container">
-  <div class="yt-embed">
-    
-    
-    
-    
-    <iframe
-      src="https://www.youtube.com/embed/-ND-xtMaz0E"
-      title="Shepard-Risset Glissando"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen>
-    </iframe>
-  </div>
-  <p class="yt-caption">Risset&#39;s continuous variant: instead of discrete semitone steps, a smooth glissando that climbs forever. Compare to the discrete Shepard tone above — both exploit the same quotient topology of the pitch helix.</p>
+<p class=yt-caption>The classic Shepard tone demonstration: an endlessly ascending (or descending) pitch that never actually moves. The barber-pole analogy — the EP08 central metaphor — made visual and auditory.</p>
 </div>
-
-<div class="yt-container">
-  <div class="yt-embed">
-    
-    
-    
-    
-    <iframe
-      src="https://www.youtube.com/embed/LVWTQcZbLgY"
-      title="Tritone Paradox — Deutsch&#39;s experiment"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen>
-    </iframe>
-  </div>
-  <p class="yt-caption">Diana Deutsch&#39;s tritone paradox demonstration. The same tritone interval is heard as ascending by some listeners and descending by others, depending on the listener&#39;s language background — a direct perceptual consequence of the ambiguous projection from pitch helix to chroma circle.</p>
+<div class=yt-container>
+<div class=yt-embed>
+<iframe src=https://www.youtube.com/embed/-ND-xtMaz0E title="Shepard-Risset Glissando" frameborder=0 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy=strict-origin-when-cross-origin allowfullscreen></iframe>
 </div>
-
-<h2 id="academic-references">Academic References</h2>
+<p class=yt-caption>Risset's continuous variant: instead of discrete semitone steps, a smooth glissando that climbs forever. Compare to the discrete Shepard tone above — both exploit the same quotient topology of the pitch helix.</p>
+</div>
+<div class=yt-container>
+<div class=yt-embed>
+<iframe src=https://www.youtube.com/embed/LVWTQcZbLgY title="Tritone Paradox — Deutsch's experiment" frameborder=0 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy=strict-origin-when-cross-origin allowfullscreen></iframe>
+</div>
+<p class=yt-caption>Diana Deutsch's tritone paradox demonstration. The same tritone interval is heard as ascending by some listeners and descending by others, depending on the listener's language background — a direct perceptual consequence of the ambiguous projection from pitch helix to chroma circle.</p>
+</div>
+<h2 id=academic-references>Academic References</h2>
 <ol>
 <li>
 <p>Shepard, R. N. (1964). Circularity in judgments of relative pitch. <em>Journal of the Acoustical Society of America</em>, 36(12), 2346–2353. (The original Shepard tone paper.)</p>
@@ -1064,7 +374,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>Deutsch, D. (1986). A musical paradox. <em>Music Perception</em>, 3(3), 275–280. (First report of the tritone paradox.)</p>
 </li>
 <li>
-<p>Deutsch, D., Henthorn, T., &amp; Dolson, M. (2004). Absolute pitch, speech, and tone language: Some experiments and a proposed framework. <em>Music Perception</em>, 21(3), 339–356. (Language-pitch connection.)</p>
+<p>Deutsch, D., Henthorn, T., & Dolson, M. (2004). Absolute pitch, speech, and tone language: Some experiments and a proposed framework. <em>Music Perception</em>, 21(3), 339–356. (Language-pitch connection.)</p>
 </li>
 <li>
 <p>Risset, J.-C. (1969). Pitch control and pitch paradoxes demonstrated with computer-synthesized sounds. <em>Journal of the Acoustical Society of America</em>, 46(1A), 88. (The continuous Shepard / Risset glissando.)</p>
@@ -1076,242 +386,55 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>Tymoczko, D. (2011). <em>A Geometry of Music</em>. Oxford University Press. Ch. 2 (Pitch-class space as quotient).</p>
 </li>
 <li>
-<p>Hatcher, A. (2002). <em>Algebraic Topology</em>. Cambridge University Press. Ch. 1 (Covering spaces and the fundamental group of <span class="math-inline" data-latex="S^1"></span>).</p>
+<p>Hatcher, A. (2002). <em>Algebraic Topology</em>. Cambridge University Press. Ch. 1 (Covering spaces and the fundamental group of <span class=math-inline data-latex=S^1></span>).</p>
 </li>
 <li>
 <p>Ziemer, T. (2020). <em>Psychoacoustics: Auditory Display in Science and Technology</em>. Springer. Ch. 4 (Spatial audio and ambisonics).</p>
 </li>
 </ol>
-
-    </div>
-
-    
-    <nav class="ep-nav">
-      
-      
-      
-      
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-      
-      <a href="https://amath390.sibeliusp.com/episodes/ep07/" class="ep-nav-prev">
-        ← EP07: Information Entropy and All-Interval Rows
-      </a>
-      
-      
-      <a href="https://amath390.sibeliusp.com/episodes/ep09/" class="ep-nav-next">
-        EP09: Combination Tones and Nonlinear Acoustics →
-      </a>
-      
-    </nav>
-  </article>
-
-  
-  
-  
-  <aside class="ep-toc-aside">
-    <div class="ep-toc-sticky">
-      <div class="ep-toc-label">本页目录</div>
-      <nav id="TableOfContents">
-  <ul>
-    <li><a href="#overview">Overview</a></li>
-    <li><a href="#prerequisites">Prerequisites</a></li>
-    <li><a href="#definitions">Definitions</a></li>
-    <li><a href="#main-theorems">Main Theorems</a></li>
-    <li><a href="#musical-connection">Musical Connection</a></li>
-    <li><a href="#limits-and-open-questions">Limits and Open Questions</a></li>
-    <li><a href="#extended-reading">Extended Reading</a></li>
-    <li><a href="#academic-references">Academic References</a></li>
-  </ul>
-</nav>
-    </div>
-  </aside>
-  
 </div>
-
-      <footer class="site-footer">
-  <div class="footer-content">
-    <a href="https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f" target="_blank" rel="noopener" class="footer-avatar-link">
-      <img src="/images/avatar.png" alt="Sibelius P." class="footer-avatar">
-    </a>
-    <div class="footer-text">
-      <span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
-      <span class="footer-sep">·</span>
-      <a href="https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f" target="_blank" rel="noopener">小红书</a>
-      <span class="footer-sep">·</span>
-      <span>Built with <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> + KaTeX</span>
-    </div>
-  </div>
+<nav class=ep-nav>
+<a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-nav-prev>
+← EP07: Information Entropy and All-Interval Rows
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-nav-next>
+EP09: Combination Tones and Nonlinear Acoustics →
+</a>
+</nav>
+</article>
+<aside class=ep-toc-aside>
+<div class=ep-toc-sticky>
+<div class=ep-toc-label>本页目录</div>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#overview>Overview</a></li>
+<li><a href=#prerequisites>Prerequisites</a></li>
+<li><a href=#definitions>Definitions</a></li>
+<li><a href=#main-theorems>Main Theorems</a></li>
+<li><a href=#musical-connection>Musical Connection</a></li>
+<li><a href=#limits-and-open-questions>Limits and Open Questions</a></li>
+<li><a href=#extended-reading>Extended Reading</a></li>
+<li><a href=#academic-references>Academic References</a></li>
+</ul>
+</nav>
+</div>
+</aside>
+</div>
+<footer class=site-footer>
+<div class=footer-content>
+<a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link>
+<img src=/images/avatar.png alt="Sibelius P." class=footer-avatar>
+</a>
+<div class=footer-text>
+<span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
+<span class=footer-sep>·</span>
+<a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener>小红书</a>
+<span class=footer-sep>·</span>
+<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span>
+</div>
+</div>
 </footer>
-
-    </main>
-  </div>
+</main>
+</div>
 </body>
 </html>

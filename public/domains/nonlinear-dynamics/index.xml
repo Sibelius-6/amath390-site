@@ -1,33 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Nonlinear Dynamics on AMATH 390 数学与音乐</title>
-    <link>https://amath390.sibeliusp.com/domains/nonlinear-dynamics/</link>
-    <description>Recent content in Nonlinear Dynamics on AMATH 390 数学与音乐</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://amath390.sibeliusp.com/domains/nonlinear-dynamics/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>EP09: Combination Tones and Nonlinear Acoustics</title>
-      <link>https://amath390.sibeliusp.com/episodes/ep09/</link>
-      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://amath390.sibeliusp.com/episodes/ep09/</guid>
-      <description>Overview Play two pure tones — 200 Hz and 300 Hz. The spectrum shows exactly two lines. Yet some listeners perceive a faint 100 Hz drone that is not present in the air at all. It is manufactured inside the cochlea.
- 中文: &amp;ldquo;这个100赫兹不存在于空气中。它是你的耳蜗制造出来的。那它从哪来的？&amp;rdquo;
- This episode answers that question through the mathematics of nonlinear systems. A linear system passes both frequencies through unchanged. But the cochlea&amp;rsquo;s outer hair cells act as nonlinear amplifiers: their response curve is an S-shaped tanh function, not a straight line.</description>
-    </item>
-    
-    <item>
-      <title>EP26: The 1/f Law of Music</title>
-      <link>https://amath390.sibeliusp.com/episodes/ep26/</link>
-      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://amath390.sibeliusp.com/episodes/ep26/</guid>
-      <description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nonlinear Dynamics on AMATH 390 数学与音乐</title><link>https://amath390.sibeliusp.com/domains/nonlinear-dynamics/</link><description>Recent content in Nonlinear Dynamics on AMATH 390 数学与音乐</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://amath390.sibeliusp.com/domains/nonlinear-dynamics/index.xml" rel="self" type="application/rss+xml"/><item><title>EP09: Combination Tones and Nonlinear Acoustics</title><link>https://amath390.sibeliusp.com/episodes/ep09/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep09/</guid><description>Overview Play two pure tones — 200 Hz and 300 Hz. The spectrum shows exactly two lines. Yet some listeners perceive a faint 100 Hz drone that is not present in the air at all. It is manufactured inside the cochlea.
+中文: &amp;ldquo;这个100赫兹不存在于空气中。它是你的耳蜗制造出来的。那它从哪来的？&amp;rdquo;
+This episode answers that question through the mathematics of nonlinear systems. A linear system passes both frequencies through unchanged. But the cochlea&amp;rsquo;s outer hair cells act as nonlinear amplifiers: their response curve is an S-shaped tanh function, not a straight line.</description></item><item><title>EP26: The 1/f Law of Music</title><link>https://amath390.sibeliusp.com/episodes/ep26/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep26/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
 本集探讨：功率谱密度S(f)∝1/fᵅ, Hurst指数H, 分形维数。
-前置知识 定义 Definition (...)  &amp;hellip;  -- 主要定理 Theorem 26.1 (...)  &amp;hellip;  -- Proof. &amp;hellip;  -- 音乐联系 音乐联系 &amp;hellip;  -- 局限性与开放问题 参考文献  待补充  </description>
-    </item>
-    
-  </channel>
-</rss>
+前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 26.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item></channel></rss>

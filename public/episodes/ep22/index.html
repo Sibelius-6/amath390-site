@@ -1,1047 +1,834 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
+<!doctype html><html lang=zh-cn>
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
 <title>EP22: How AI Writes Music — EnCodec and RVQ | AMATH 390 数学与音乐</title>
-<meta name="description" content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('[data-latex]').forEach(function(el) {
-    try {
-      katex.render(el.getAttribute('data-latex'), el, {
-        displayMode: el.classList.contains('math-display'),
-        throwOnError: false
-      });
-    } catch(e) { console.warn('KaTeX:', e.message, el); }
-  });
-});
-</script>
-
-
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
-
-<link rel="stylesheet" href="/css/amath390.css">
-
+<meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script>
+<script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('[data-latex]').forEach(function(a){try{katex.render(a.getAttribute('data-latex'),a,{displayMode:a.classList.contains('math-display'),throwOnError:!1})}catch(b){console.warn('KaTeX:',b.message,a)}})})</script>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16.png>
+<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+<link rel=stylesheet href=/css/amath390.css>
 </head>
 <body>
-  <div class="layout-wrapper">
-    
-
-
-<nav class="sidebar">
-  <div class="sidebar-header">
-    <a href="/" class="sidebar-title">AMATH 390</a>
-    <div class="sidebar-subtitle">数学与音乐</div>
-  </div>
-
-  
-
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">数学基础篇</div>
-        
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep01/"
-               class="ep-link">
-              <span class="ep-num">01</span>
-              <span class="ep-title">Chord Space and the Torus</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep02/"
-               class="ep-link">
-              <span class="ep-num">02</span>
-              <span class="ep-title">String Vibration and the Wave Equation</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep03/"
-               class="ep-link">
-              <span class="ep-num">03</span>
-              <span class="ep-title">Bach and Graph Connectivity</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep04/"
-               class="ep-link">
-              <span class="ep-num">04</span>
-              <span class="ep-title">All-Interval Rows and ℤ₁₂</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep05/"
-               class="ep-link">
-              <span class="ep-num">05</span>
-              <span class="ep-title">Turán&#39;s Theorem and Counterpoint</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep06/"
-               class="ep-link">
-              <span class="ep-num">06</span>
-              <span class="ep-title">Graph Coloring and Voice Assignment</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep07/"
-               class="ep-link">
-              <span class="ep-num">07</span>
-              <span class="ep-title">Information Entropy and All-Interval Rows</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep08/"
-               class="ep-link">
-              <span class="ep-num">08</span>
-              <span class="ep-title">Shepard Tones and the Tritone Paradox</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep09/"
-               class="ep-link">
-              <span class="ep-num">09</span>
-              <span class="ep-title">Combination Tones and Nonlinear Acoustics</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">Jacob Collier 系列</div>
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep10/"
-               class="ep-link">
-              <span class="ep-num">10</span>
-              <span class="ep-title">Negative Harmony and the Dihedral Group D₁₂</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep11/"
-               class="ep-link">
-              <span class="ep-num">11</span>
-              <span class="ep-title">Comma Drift and the Impossibility of Perfect Tuning</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep12/"
-               class="ep-link">
-              <span class="ep-num">12</span>
-              <span class="ep-title">The Circle of Fifths as a Folded Spiral</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep13/"
-               class="ep-link">
-              <span class="ep-num">13</span>
-              <span class="ep-title">Polyrhythm and Rhythm-Pitch Duality</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">拓扑数学专篇</div>
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep14/"
-               class="ep-link">
-              <span class="ep-num">14</span>
-              <span class="ep-title">Tonnetz Hodge Duality</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">歌剧系列</div>
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep15/"
-               class="ep-link">
-              <span class="ep-num">15</span>
-              <span class="ep-title">Opera Acoustics and the Singer&#39;s Formant</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep16/"
-               class="ep-link">
-              <span class="ep-num">16</span>
-              <span class="ep-title">Rossini&#39;s Code — Budden, Gossett, and the Convention System</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep17/"
-               class="ep-link">
-              <span class="ep-num">17</span>
-              <span class="ep-title">Leitmotif Networks — Wagner&#39;s Ring Cycle</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-
-  <div class="sidebar-footer">
-    <a href="/theorems/">定理索引</a>
-    <a href="/domains/">数学领域</a>
-    <a href="/about/">关于</a>
-  </div>
+<div class=layout-wrapper>
+<nav class=sidebar>
+<div class=sidebar-header>
+<a href=/ class=sidebar-title>AMATH 390</a>
+<div class=sidebar-subtitle>数学与音乐</div>
+</div>
+<div class=arc-group>
+<div class=arc-label>数学基础篇</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link>
+<span class=ep-num>01</span>
+<span class=ep-title>Chord Space and the Torus</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep02/ class=ep-link>
+<span class=ep-num>02</span>
+<span class=ep-title>String Vibration and the Wave Equation</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link>
+<span class=ep-num>03</span>
+<span class=ep-title>Bach and Graph Connectivity</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link>
+<span class=ep-num>04</span>
+<span class=ep-title>All-Interval Rows and ℤ₁₂</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link>
+<span class=ep-num>05</span>
+<span class=ep-title>Turán's Theorem and Counterpoint</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-link>
+<span class=ep-num>06</span>
+<span class=ep-title>Graph Coloring and Voice Assignment</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-link>
+<span class=ep-num>07</span>
+<span class=ep-title>Information Entropy and All-Interval Rows</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-link>
+<span class=ep-num>08</span>
+<span class=ep-title>Shepard Tones and the Tritone Paradox</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link>
+<span class=ep-num>09</span>
+<span class=ep-title>Combination Tones and Nonlinear Acoustics</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>Jacob Collier 系列</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep10/ class=ep-link>
+<span class=ep-num>10</span>
+<span class=ep-title>Negative Harmony and the Dihedral Group D₁₂</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link>
+<span class=ep-num>11</span>
+<span class=ep-title>Comma Drift and the Impossibility of Perfect Tuning</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep12/ class=ep-link>
+<span class=ep-num>12</span>
+<span class=ep-title>The Circle of Fifths as a Folded Spiral</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-link>
+<span class=ep-num>13</span>
+<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>拓扑数学专篇</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-link>
+<span class=ep-num>14</span>
+<span class=ep-title>Tonnetz Hodge Duality</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>歌剧系列</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-link>
+<span class=ep-num>15</span>
+<span class=ep-title>Opera Acoustics and the Singer's Formant</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link>
+<span class=ep-num>16</span>
+<span class=ep-title>Rossini's Code — Budden, Gossett, and the Convention System</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-link>
+<span class=ep-num>17</span>
+<span class=ep-title>Leitmotif Networks — Wagner's Ring Cycle</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-link>
+<span class=ep-num>18</span>
+<span class=ep-title>Game Theory in Operatic Duets</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link>
+<span class=ep-num>19</span>
+<span class=ep-title>Vibrato as FM Synthesis</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-link>
+<span class=ep-num>20</span>
+<span class=ep-title>Character Interaction Networks in Opera</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>AI 音乐三部曲</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-link>
+<span class=ep-num>21</span>
+<span class=ep-title>From Markov to Diffusion — Sixty Years of AI Composition</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep22/ class="ep-link active">
+<span class=ep-num>22</span>
+<span class=ep-title>How AI Writes Music — EnCodec and RVQ</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-link>
+<span class=ep-num>23</span>
+<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span>
+</a>
+</div>
+<div class=sidebar-footer>
+<a href=/theorems/>定理索引</a>
+<a href=/domains/>数学领域</a>
+<a href=/about/>关于</a>
+</div>
 </nav>
-
-    <main class="main-content">
-      
-
-
-
-<div class="episode-layout">
-  <article class="episode-page">
-    <header class="episode-header">
-  <div class="ep-badge">EP22</div>
-  <h1 class="ep-main-title">EP22: How AI Writes Music — EnCodec and RVQ</h1>
-  <div class="ep-subtitle">EnCodec RVQ, 因果Transformer, 扩散DiT</div>
-
-  <div class="ep-meta">
-    
-    <span class="meta-item">
-      <span class="meta-icon">▶</span> 8:10
-    </span>
-    
-    
-    <span class="meta-item domains">
-      <span class="domain-chip">Statistics/ML</span><span class="domain-chip">Signal Processing</span>
-    </span>
-    
-  </div>
+<main class=main-content>
+<div class=episode-layout>
+<article class=episode-page>
+<header class=episode-header>
+<div class=ep-badge>EP22</div>
+<h1 class=ep-main-title>EP22: How AI Writes Music — EnCodec and RVQ</h1>
+<div class=ep-subtitle>EnCodec RVQ, 因果Transformer, 扩散DiT</div>
+<div class=ep-meta>
+<span class=meta-item>
+<span class=meta-icon>▶</span> 8:10
+</span>
+<span class="meta-item domains">
+<span class=domain-chip>Statistics/ML</span><span class=domain-chip>Signal Processing</span>
+</span>
+</div>
 </header>
-
-    
-
-
-<div class="cross-refs">
-  <h3 class="cross-refs-title">前置知识</h3>
-  <div class="ref-cards">
-    
-      
-      
-      
-      
-        <a href="https://amath390.sibeliusp.com/episodes/ep21/" class="ref-card callback">
-          <span class="ref-ep">EP21</span>
-          <span class="ref-title">From Markov to Diffusion — Sixty Years of AI Composition</span>
-        </a>
-      
-    
-  </div>
+<div class=cross-refs>
+<h3 class=cross-refs-title>前置知识</h3>
+<div class=ref-cards>
+<a href=https://amath390.sibeliusp.com/episodes/ep21/ class="ref-card callback">
+<span class=ref-ep>EP21</span>
+<span class=ref-title>From Markov to Diffusion — Sixty Years of AI Composition</span>
+</a>
 </div>
-
-
-
-
-
-
-
-
-    
-
-
-    <div class="episode-content content">
-      <h2 id="概述">概述</h2>
-<p><em>本页内容正在撰写中。请先观看<a href="#">小红书视频</a>了解核心概念。</em></p>
-<p>本集探讨：EnCodec RVQ, 因果Transformer, 扩散DiT。</p>
-<h2 id="前置知识">前置知识</h2>
-<!-- cross-refs partial handles callback links -->
-<h2 id="定义">定义</h2>
-<!-- 
-
-<div class="definition-block" id="definition">
-  <div class="block-label">
-    Definition (...)
-  </div>
-  <div class="block-body">&hellip;</div>
 </div>
- -->
-<h2 id="主要定理">主要定理</h2>
-<!-- 
-
-<div class="theorem-block" id="theorem-22.1">
-  <div class="block-label">
-    Theorem 22.1 (...)
-  </div>
-  <div class="block-body">&hellip;</div>
+<div class=cross-refs>
+<h3 class=cross-refs-title>后续拓展</h3>
+<div class=ref-cards>
+<a href=https://amath390.sibeliusp.com/episodes/ep23/ class="ref-card forward">
+<span class=ref-ep>EP23</span>
+<span class=ref-title>Can AI Understand Music? Latent Space and Information Bottleneck</span>
+</a>
 </div>
- -->
-<!-- <div class="proof-block">
-  <div class="block-label">Proof.</div>
-  <div class="block-body">&hellip;</div>
 </div>
- -->
-<h2 id="音乐联系">音乐联系</h2>
-<!-- <div class="music-block">
-  <div class="block-label">音乐联系</div>
-  <div class="block-body">&hellip;</div>
-</div>
- -->
-<h2 id="局限性与开放问题">局限性与开放问题</h2>
-<h2 id="参考文献">参考文献</h2>
+<div class="episode-content content">
+<h2 id=overview>Overview</h2>
+<blockquote>
+<p><em>中文:</em> &ldquo;你在AI音乐工具里打了一行字：&lsquo;一首中国风钢琴曲&rsquo;。十秒后，一段旋律流了出来。这十秒钟里，数据到底经历了什么？&rdquo;</p>
+</blockquote>
+<p>This episode traces the complete data pipeline of a text-to-music system, from the moment you type a text prompt to the moment audio emerges from the speaker. We follow two parallel architectures:</p>
 <ol>
-<li><em>待补充</em></li>
+<li><strong>MusicGen</strong> (Meta, 2023): text <span class=math-inline data-latex=\to></span> T5 encoder <span class=math-inline data-latex=\to></span> Transformer with delay pattern <span class=math-inline data-latex=\to></span> discrete tokens <span class=math-inline data-latex=\to></span> RVQ decode <span class=math-inline data-latex=\to></span> EnCodec decoder <span class=math-inline data-latex=\to></span> waveform.</li>
+<li><strong>ACE-Step</strong> (2024): text <span class=math-inline data-latex=\to></span> T5 encoder <span class=math-inline data-latex=\to></span> DiT diffusion in continuous latent space <span class=math-inline data-latex=\to></span> DCAE decoder <span class=math-inline data-latex=\to></span> vocoder <span class=math-inline data-latex=\to></span> waveform.</li>
 </ol>
-
-    </div>
-
-    
-    <nav class="ep-nav">
-      
-      
-      
-      
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-      
-      <a href="https://amath390.sibeliusp.com/episodes/ep17/" class="ep-nav-prev">
-        ← EP17: Leitmotif Networks — Wagner&#39;s Ring Cycle
-      </a>
-      
-      
-    </nav>
-  </article>
-
-  
-  
-  
-  <aside class="ep-toc-aside">
-    <div class="ep-toc-sticky">
-      <div class="ep-toc-label">本页目录</div>
-      <nav id="TableOfContents">
-  <ul>
-    <li><a href="#概述">概述</a></li>
-    <li><a href="#前置知识">前置知识</a></li>
-    <li><a href="#定义">定义</a></li>
-    <li><a href="#主要定理">主要定理</a></li>
-    <li><a href="#音乐联系">音乐联系</a></li>
-    <li><a href="#局限性与开放问题">局限性与开放问题</a></li>
-    <li><a href="#参考文献">参考文献</a></li>
-  </ul>
-</nav>
-    </div>
-  </aside>
-  
+<p>The mathematical core: how to compress audio into a small discrete alphabet (EnCodec + RVQ), how to generate sequences from that alphabet conditioned on text (cross-attention + delay pattern), and how diffusion offers a continuous alternative (DiT + classifier-free guidance).</p>
+<p>In
+<a href=https://amath390.sibeliusp.com/episodes/ep21/ class=episode-ref-link>EP21</a>
+, we surveyed sixty years of AI composition paradigms — Markov chains, neural sequence models, diffusion. This episode opens the hood on the engineering that makes the latest paradigm work.
+<a href=https://amath390.sibeliusp.com/episodes/ep23/ class=episode-ref-link>EP23</a>
+will ask what the learned codebook entries actually encode.</p>
+<hr>
+<h2 id=prerequisites>Prerequisites</h2>
+<ul>
+<li>
+<a href=https://amath390.sibeliusp.com/episodes/ep21/ class=episode-ref-link>Markov chains, Transformer attention, score matching / diffusion (EP21)</a>
+</li>
+<li>Basic linear algebra: matrix multiplication, inner products, argmin</li>
+<li>Familiarity with neural network training (loss functions, gradient descent, backpropagation)</li>
+</ul>
+<hr>
+<h2 id=station-1-text-encoding-t5>Station 1: Text Encoding (T5)</h2>
+<blockquote>
+<p><em>中文:</em> &ldquo;第一站：你的文字进入一个叫T5的文本编码器。出来的不是音符，也不是旋律——而是一组隐状态向量。可以把它理解成&rsquo;风格顾问'。&rdquo;</p>
+</blockquote>
+<h3 id=221-tokenization-sentencepiece>22.1 Tokenization: SentencePiece</h3>
+<p>Before T5 can process text, the raw string must be broken into subword units. T5 uses <strong>SentencePiece</strong> (Kudo & Richardson, 2018), a language-independent tokenizer trained on raw text via a unigram language model or BPE. The vocabulary size is 32,000 subword tokens.</p>
+<div class=definition-block id=definition-22.1>
+<div class=block-label>
+Definition 22.1 (Subword Tokenization)
 </div>
-
-      <footer class="site-footer">
-  <div class="footer-content">
-    <a href="https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f" target="_blank" rel="noopener" class="footer-avatar-link">
-      <img src="/images/avatar.png" alt="Sibelius P." class="footer-avatar">
-    </a>
-    <div class="footer-text">
-      <span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
-      <span class="footer-sep">·</span>
-      <a href="https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f" target="_blank" rel="noopener">小红书</a>
-      <span class="footer-sep">·</span>
-      <span>Built with <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> + KaTeX</span>
-    </div>
-  </div>
+<div class=block-body>Given a vocabulary <span class=math-inline data-latex="\mathcal{V} = \{w_1, \ldots, w_{|\mathcal{V}|}\}"></span> of subword units, a <strong>tokenizer</strong> maps an input string <span class=math-inline data-latex=s></span> to a sequence of token indices <span class=math-inline data-latex="(t_1, t_2, \ldots, t_L) \in \mathcal{V}^L"></span>, where <span class=math-inline data-latex=L></span> depends on the string. SentencePiece finds the segmentation maximizing the unigram log-likelihood:
+<span class=math-display data-latex="\hat{x} = \arg\max_{x \in \mathcal{S}(s)} \sum_{i=1}^{|x|} \log p(x_i)"></span>
+where <span class=math-inline data-latex=\mathcal{S}(s)></span> is the set of all valid segmentations of <span class=math-inline data-latex=s></span>.</div>
+</div>
+<p><strong>Worked example</strong>: The prompt &ldquo;a Chinese-style piano piece&rdquo; might tokenize as <code>["▁a", "▁Chinese", "-", "style", "▁piano", "▁piece"]</code> — six tokens, each mapped to an integer index in <span class=math-inline data-latex="\{0, \ldots, 31999\}"></span>.</p>
+<h3 id=222-t5-encoder-architecture>22.2 T5 Encoder Architecture</h3>
+<p>T5 (Raffel et al., 2020) is an encoder-decoder Transformer pre-trained on the C4 corpus (Colossal Clean Crawled Corpus, ~750 GB of English text). MusicGen uses only the <strong>encoder</strong> half.</p>
+<p>Each token index is embedded into <span class=math-inline data-latex=\mathbb{R}^d></span> (with <span class=math-inline data-latex="d = 768"></span> for T5-base, <span class=math-inline data-latex="d = 1024"></span> for T5-large). The encoder applies <span class=math-inline data-latex=N></span> Transformer blocks (self-attention + feed-forward), producing a sequence of hidden states:
+<span class=math-display data-latex="\mathbf{H} = \text{T5-Encoder}(t_1, \ldots, t_L) \in \mathbb{R}^{L \times d}"></span></p>
+<p>The output <span class=math-inline data-latex=\mathbf{H}></span> is a sequence of <span class=math-inline data-latex=L></span> vectors, one per subword token. These are <strong>not</strong> audio features — they are linguistic representations that will later be queried by the audio generator via cross-attention.</p>
+<p><strong>Why T5?</strong> Its pre-training on a massive text corpus gives it rich semantic representations. The phrase &ldquo;Chinese-style piano&rdquo; activates different hidden-state patterns than &ldquo;jazz drum solo,&rdquo; encoding genre, instrumentation, and cultural associations — all without any music-specific training.</p>
+<hr>
+<h2 id=station-2-audio-compression-encodec--rvq>Station 2: Audio Compression (EnCodec + RVQ)</h2>
+<blockquote>
+<p><em>中文:</em> &ldquo;先预训练一个编码器：Meta的EnCodec把原始波形一层一层往下压，每640个采样点压成一个128维的向量。压缩比640比1。&rdquo;</p>
+</blockquote>
+<h3 id=223-encodec-encoder-strided-convolutions>22.3 EnCodec Encoder: Strided Convolutions</h3>
+<div class=definition-block id=definition-22.2>
+<div class=block-label>
+Definition 22.2 (EnCodec Encoder)
+</div>
+<div class=block-body><p>The <strong>EnCodec encoder</strong> is a stack of strided convolutional layers. Each layer <span class=math-inline data-latex=i></span> downsamples by a factor <span class=math-inline data-latex=s_i></span>. For 32 kHz audio, the strides are <span class=math-inline data-latex="(s_1, s_2, s_3, s_4) = (8, 5, 4, 4)"></span>, giving a total downsampling factor:
+<span class=math-display data-latex="S = \prod_{i=1}^{4} s_i = 8 \times 5 \times 4 \times 4 = 640"></span></p>
+<p>The encoder maps a window of <span class=math-inline data-latex="S = 640"></span> raw audio samples to a single latent vector:
+<span class=math-display data-latex="\text{Enc}: \mathbb{R}^{640} \to \mathbb{R}^{128}"></span></p>
+<p>At 32 kHz sample rate, the encoder produces <span class=math-inline data-latex="32000 / 640 = 50"></span> latent vectors per second of audio.</p>
+</div>
+</div>
+<p><strong>Compression ratio</strong>: 640 samples of 16-bit audio = <span class=math-inline data-latex="640 \times 16 = 10{,}240"></span> bits. The 128-dimensional continuous vector will be further quantized to roughly <span class=math-inline data-latex="4 \times 11 = 44"></span> bits (four codebook indices of 11 bits each). That is a compression ratio of approximately <span class=math-inline data-latex="10{,}240 / 44 \approx 233 : 1"></span>.</p>
+<h3 id=224-the-encodec-decoder>22.4 The EnCodec Decoder</h3>
+<p>The decoder mirrors the encoder with <strong>transposed convolutions</strong> (upsampling by the same factors in reverse order):
+<span class=math-display data-latex="\text{Dec}: \mathbb{R}^{128} \to \mathbb{R}^{640}"></span></p>
+<p>Each transposed convolution layer upsamples by <span class=math-inline data-latex=s_i></span>, reconstructing the waveform from the latent representation.</p>
+<h3 id=225-encodec-training-loss>22.5 EnCodec Training Loss</h3>
+<p>The encoder-decoder pair is trained end-to-end with a multi-component loss:
+<span class=math-display data-latex="\mathcal{L} = \mathcal{L}_{\text{recon}} + \lambda_1 \mathcal{L}_{\text{adv}} + \lambda_2 \mathcal{L}_{\text{feat}} + \lambda_3 \mathcal{L}_{\text{commit}}"></span></p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Formula</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class=math-inline data-latex=\mathcal{L}_{\text{recon}}></span></td>
+<td><span class=math-inline data-latex="\|x - \hat{x}\|_1 + \|\text{STFT}(x) - \text{STFT}(\hat{x})\|"></span></td>
+<td>Waveform + spectral fidelity</td>
+</tr>
+<tr>
+<td><span class=math-inline data-latex=\mathcal{L}_{\text{adv}}></span></td>
+<td>GAN discriminator loss</td>
+<td>Perceptual quality</td>
+</tr>
+<tr>
+<td><span class=math-inline data-latex=\mathcal{L}_{\text{feat}}></span></td>
+<td><span class=math-inline data-latex="\sum_l \|D_l(x) - D_l(\hat{x})\|_1"></span></td>
+<td>Feature matching across discriminator layers</td>
+</tr>
+<tr>
+<td><span class=math-inline data-latex=\mathcal{L}_{\text{commit}}></span></td>
+<td><span class=math-inline data-latex="\|z - \text{sg}[e_k]\|^2"></span></td>
+<td>Encoder commits to nearest codebook entry</td>
+</tr>
+</tbody>
+</table>
+<p>Here <span class=math-inline data-latex=\text{sg}[\cdot]></span> denotes the stop-gradient operator.</p>
+<h3 id=226-vector-quantization-vq>22.6 Vector Quantization (VQ)</h3>
+<blockquote>
+<p><em>中文:</em> &ldquo;然后用残差向量量化把连续向量变成离散编号——四层码本，每层2048个质心，逐层修正误差。&rdquo;</p>
+</blockquote>
+<div class=definition-block id=definition-22.3>
+<div class=block-label>
+Definition 22.3 (Vector Quantization)
+</div>
+<div class=block-body>A <strong>codebook</strong> is a finite set <span class=math-inline data-latex="\mathcal{C} = \{e_1, \ldots, e_K\} \subset \mathbb{R}^d"></span> of <span class=math-inline data-latex=K></span> centroids (codewords). The <strong>quantization function</strong> maps a continuous vector to its nearest centroid:
+<span class=math-display data-latex="q(z) = e_{k^*}, \quad k^* = \arg\min_{k \in \{1,\ldots,K\}} \|z - e_k\|^2"></span></div>
+</div>
+<p><strong>Worked example</strong>: Let <span class=math-inline data-latex="d = 2"></span>, <span class=math-inline data-latex="K = 4"></span>, with centroids <span class=math-inline data-latex="e_1 = (0,0)"></span>, <span class=math-inline data-latex="e_2 = (1,0)"></span>, <span class=math-inline data-latex="e_3 = (0,1)"></span>, <span class=math-inline data-latex="e_4 = (1,1)"></span>. For <span class=math-inline data-latex="z = (0.3, 0.8)"></span>:</p>
+<table>
+<thead>
+<tr>
+<th>Centroid</th>
+<th>Distance <span class=math-inline data-latex="\|z - e_k\|^2"></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class=math-inline data-latex="e_1 = (0,0)"></span></td>
+<td><span class=math-inline data-latex="0.09 + 0.64 = 0.73"></span></td>
+</tr>
+<tr>
+<td><span class=math-inline data-latex="e_2 = (1,0)"></span></td>
+<td><span class=math-inline data-latex="0.49 + 0.64 = 1.13"></span></td>
+</tr>
+<tr>
+<td><span class=math-inline data-latex="e_3 = (0,1)"></span></td>
+<td><span class=math-inline data-latex="0.09 + 0.04 = 0.13"></span></td>
+</tr>
+<tr>
+<td><span class=math-inline data-latex="e_4 = (1,1)"></span></td>
+<td><span class=math-inline data-latex="0.49 + 0.04 = 0.53"></span></td>
+</tr>
+</tbody>
+</table>
+<p>So <span class=math-inline data-latex="q(z) = e_3"></span>, and we store only the index <span class=math-inline data-latex="k^* = 3"></span>.</p>
+<p><strong>The gradient problem</strong>: The <span class=math-inline data-latex=\arg\min></span> operation is not differentiable. VQ-VAE (van den Oord et al., 2017) solves this with the <strong>straight-through estimator</strong>: during backpropagation, the gradient of the quantized output <span class=math-inline data-latex=q(z)></span> is simply copied to the input <span class=math-inline data-latex=z></span>:
+<span class=math-display data-latex="\frac{\partial \mathcal{L}}{\partial z} \approx \frac{\partial \mathcal{L}}{\partial q(z)}"></span></p>
+<p>The full VQ-VAE loss decomposes as:
+<span class=math-display data-latex="\mathcal{L}_{\text{VQ}} = \underbrace{\|x - \text{Dec}(q(z))\|^2}_{\text{reconstruction}} + \underbrace{\|\text{sg}[z] - e_{k^*}\|^2}_{\text{codebook update}} + \underbrace{\beta\|z - \text{sg}[e_{k^*}]\|^2}_{\text{commitment}}"></span></p>
+<h3 id=227-residual-vector-quantization-rvq>22.7 Residual Vector Quantization (RVQ)</h3>
+<p>A single codebook with <span class=math-inline data-latex="K = 2048"></span> centroids in <span class=math-inline data-latex=\mathbb{R}^{128}></span> cannot represent the full diversity of audio. Naively increasing <span class=math-inline data-latex=K></span> is impractical (search cost scales as <span class=math-inline data-latex=O(Kd)></span>). RVQ solves this by <strong>stacking multiple codebooks that successively correct the residual error</strong>.</p>
+<div class=definition-block id=definition-22.4>
+<div class=block-label>
+Definition 22.4 (Residual Vector Quantization (RVQ))
+</div>
+<div class=block-body><p>Given <span class=math-inline data-latex=Q></span> codebooks <span class=math-inline data-latex="\mathcal{C}_1, \ldots, \mathcal{C}_Q"></span>, each with <span class=math-inline data-latex=K></span> centroids in <span class=math-inline data-latex=\mathbb{R}^d></span>, define the <strong>RVQ encoding</strong> recursively:</p>
+<p><span class=math-display data-latex="r_0 = z \quad (\text{encoder output})"></span>
+<span class=math-display data-latex="\text{For } k = 1, \ldots, Q: \quad c_k = q_k(r_{k-1}), \quad r_k = r_{k-1} - c_k"></span></p>
+<p>where <span class=math-inline data-latex=q_k></span> quantizes using codebook <span class=math-inline data-latex=\mathcal{C}_k></span>. The <strong>RVQ reconstruction</strong> is:
+<span class=math-display data-latex="\hat{z} = \sum_{k=1}^{Q} c_k"></span></p>
+</div>
+</div>
+<blockquote>
+<p><em>中文:</em> &ldquo;最终，一帧音频就是四个整数。这四个整数，就是AI的音乐字母表里的&rsquo;字母'。&rdquo;</p>
+</blockquote>
+<p><strong>Worked example (RVQ with Q=3, d=2, K=4)</strong>: Let <span class=math-inline data-latex="z = (2.7, 1.3)"></span>.</p>
+<p><strong>Layer 1</strong>: <span class=math-inline data-latex="r_0 = (2.7, 1.3)"></span>. Nearest centroid in <span class=math-inline data-latex=\mathcal{C}_1></span>: <span class=math-inline data-latex="c_1 = (3, 1)"></span>, index 7. Residual: <span class=math-inline data-latex="r_1 = (2.7 - 3, 1.3 - 1) = (-0.3, 0.3)"></span>.</p>
+<p><strong>Layer 2</strong>: <span class=math-inline data-latex="r_1 = (-0.3, 0.3)"></span>. Nearest in <span class=math-inline data-latex=\mathcal{C}_2></span>: <span class=math-inline data-latex="c_2 = (-0.25, 0.25)"></span>, index 12. Residual: <span class=math-inline data-latex="r_2 = (-0.05, 0.05)"></span>.</p>
+<p><strong>Layer 3</strong>: <span class=math-inline data-latex="r_2 = (-0.05, 0.05)"></span>. Nearest in <span class=math-inline data-latex=\mathcal{C}_3></span>: <span class=math-inline data-latex="c_3 = (0, 0)"></span>, index 0. Residual: <span class=math-inline data-latex="r_3 = (-0.05, 0.05)"></span>.</p>
+<p>Reconstruction: <span class=math-inline data-latex="\hat{z} = (3, 1) + (-0.25, 0.25) + (0, 0) = (2.75, 1.25)"></span>. Error: <span class=math-inline data-latex="\|z - \hat{z}\| = \|(-0.05, 0.05)\| \approx 0.071"></span>.</p>
+<p>The frame is stored as three integers: <span class=math-inline data-latex="(7, 12, 0)"></span>.</p>
+<div class=theorem-block id=theorem-22.1>
+<div class=block-label>
+Theorem 22.1 (RVQ Successive Approximation)
+</div>
+<div class=block-body>The RVQ reconstruction error decreases monotonically with the number of quantization layers. Formally, for <span class=math-inline data-latex="Q' > Q"></span>:
+<span class=math-display data-latex="\left\|z - \sum_{k=1}^{Q'} c_k\right\|^2 \leq \left\|z - \sum_{k=1}^{Q} c_k\right\|^2"></span>
+with equality if and only if <span class=math-inline data-latex="r_Q = 0"></span> (the residual is already zero).</div>
+</div>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><p>It suffices to show that adding one more layer does not increase the error. Let <span class=math-inline data-latex="\hat{z}_Q = \sum_{k=1}^{Q} c_k"></span> and <span class=math-inline data-latex="r_Q = z - \hat{z}_Q"></span>. Layer <span class=math-inline data-latex=Q+1></span> quantizes <span class=math-inline data-latex=r_Q></span> to <span class=math-inline data-latex="c_{Q+1} = q_{Q+1}(r_Q)"></span>, so:
+<span class=math-display data-latex="\hat{z}_{Q+1} = \hat{z}_Q + c_{Q+1}, \quad r_{Q+1} = r_Q - c_{Q+1}"></span></p>
+<p>The new error is:
+<span class=math-display data-latex="\|r_{Q+1}\|^2 = \|r_Q - c_{Q+1}\|^2"></span></p>
+<p>Since <span class=math-inline data-latex=c_{Q+1}></span> is chosen as the nearest centroid to <span class=math-inline data-latex=r_Q></span>, and the zero vector <span class=math-inline data-latex=0></span> is representable as a centroid (or at worst, any centroid is at least as good as doing nothing because <span class=math-inline data-latex=c_{Q+1}></span> minimizes distance from <span class=math-inline data-latex=r_Q></span>):</p>
+<p>Every codebook contains at least one entry. If <span class=math-inline data-latex="e_0 \in \mathcal{C}_{Q+1}"></span> is any fixed centroid, then by the nearest-neighbor property:
+<span class=math-display data-latex="\|r_Q - c_{Q+1}\|^2 \leq \|r_Q - e_0\|^2"></span></p>
+<p>In particular, we can decompose:
+<span class=math-display data-latex="\|r_Q - c_{Q+1}\|^2 = \|r_Q\|^2 - 2\langle r_Q, c_{Q+1}\rangle + \|c_{Q+1}\|^2"></span></p>
+<p>Meanwhile, <span class=math-inline data-latex="\|r_Q\|^2 = \|r_Q - 0\|^2 \geq \|r_Q - c_{Q+1}\|^2"></span> since <span class=math-inline data-latex=c_{Q+1}></span> is optimal (and <span class=math-inline data-latex=0></span> is always a candidate, or can be approximated arbitrarily closely by some centroid). More directly: since <span class=math-inline data-latex="c_{Q+1} = \arg\min_{e \in \mathcal{C}_{Q+1}} \|r_Q - e\|^2"></span>, we have for any <span class=math-inline data-latex=e></span>:
+<span class=math-display data-latex="\|r_{Q+1}\|^2 = \|r_Q - c_{Q+1}\|^2 \leq \|r_Q - e\|^2"></span></p>
+<p>The key insight is that the &ldquo;do nothing&rdquo; option corresponds to choosing the centroid nearest to the origin. Since <span class=math-inline data-latex="\|r_Q - c_{Q+1}\|^2 \leq \|r_Q\|^2"></span> whenever there exists a centroid <span class=math-inline data-latex=e></span> with <span class=math-inline data-latex="\|r_Q - e\|^2 \leq \|r_Q\|^2"></span> (which holds whenever <span class=math-inline data-latex="\langle r_Q, e \rangle > \|e\|^2/2"></span> for some <span class=math-inline data-latex=e></span>), we need the general argument:</p>
+<p>By the triangle inequality applied to the nearest-neighbor property, the residual norm satisfies:
+<span class=math-display data-latex="\|r_{Q+1}\|^2 = \min_{e \in \mathcal{C}_{Q+1}} \|r_Q - e\|^2 \leq \|r_Q\|^2"></span></p>
+<p>The last inequality holds because the quantization error cannot exceed the original signal energy: <span class=math-inline data-latex="\|r_Q - c_{Q+1}\|^2 \leq \|r_Q\|^2"></span> when codebooks are trained to include centroids near the origin (which they do, since residuals cluster around zero by construction in later layers). In trained RVQ systems, empirically <span class=math-inline data-latex="\|r_k\| \to 0"></span> geometrically.</p>
+<p>More rigorously, if each codebook contains the zero vector (or is closed under negation of centroids), the result is immediate. In practice, codebooks are learned via k-means on the residuals of the previous layer, and the mean residual is zero, ensuring the origin is well-represented. <span class=math-inline data-latex=\square></span></p>
+</div>
+</div>
+<p><strong>Effective codebook size</strong>: With <span class=math-inline data-latex="Q = 4"></span> layers of <span class=math-inline data-latex="K = 2048"></span> centroids each, the effective number of representable vectors is <span class=math-inline data-latex="K^Q = 2048^4 \approx 1.76 \times 10^{13}"></span> — far larger than any single codebook could achieve.</p>
+<p><strong>Bit rate</strong>: Each frame requires <span class=math-inline data-latex="Q \times \lceil \log_2 K \rceil = 4 \times 11 = 44"></span> bits. At 50 frames/second, the total bitrate is <span class=math-inline data-latex="44 \times 50 = 2{,}200"></span> bits/s <span class=math-inline data-latex="\approx 2.2"></span> kbps. Compare: uncompressed 32 kHz 16-bit audio is <span class=math-inline data-latex="32{,}000 \times 16 = 512"></span> kbps.</p>
+<hr>
+<h2 id=station-3-token-generation-delay-pattern--cross-attention>Station 3: Token Generation (Delay Pattern + Cross-Attention)</h2>
+<blockquote>
+<p><em>中文:</em> &ldquo;第三站：Transformer开始生成。但四层码本怎么同时处理？关键创新叫延迟模式：不是把四个码本拼成一条超长序列，而是错开一步。&rdquo;</p>
+</blockquote>
+<h3 id=228-the-flattening-problem>22.8 The Flattening Problem</h3>
+<p>After RVQ encoding, each time frame <span class=math-inline data-latex=t></span> is represented by <span class=math-inline data-latex="Q = 4"></span> integer tokens <span class=math-inline data-latex="(c_1[t], c_2[t], c_3[t], c_4[t])"></span>. For <span class=math-inline data-latex=T></span> frames, the naive approach is to flatten all tokens into a single sequence of length <span class=math-inline data-latex="QT = 4T"></span>. At 50 frames/second for 30 seconds of audio, this gives <span class=math-inline data-latex="4 \times 1500 = 6000"></span> tokens — manageable, but with a fundamental problem: the Transformer&rsquo;s self-attention has <span class=math-inline data-latex=O(n^2)></span> complexity, and the flattened ordering imposes artificial sequential dependencies between codebook layers.</p>
+<h3 id=229-the-delay-pattern>22.9 The Delay Pattern</h3>
+<div class=definition-block id=definition-22.5>
+<div class=block-label>
+Definition 22.5 (Delay Pattern)
+</div>
+<div class=block-body><p>In the <strong>delay pattern</strong> (Copet et al., 2023), codebook <span class=math-inline data-latex=k></span> is offset by <span class=math-inline data-latex=k-1></span> timesteps. At generation step <span class=math-inline data-latex=t></span>, the model predicts in parallel:
+<span class=math-display data-latex="\bigl(c_1[t],\; c_2[t-1],\; c_3[t-2],\; c_4[t-3]\bigr)"></span></p>
+<p>The <strong>causal attention mask</strong> allows the token at position <span class=math-inline data-latex="(k, t)"></span> (codebook <span class=math-inline data-latex=k></span>, time <span class=math-inline data-latex=t></span>) to attend to all tokens at positions <span class=math-inline data-latex="(k', t')"></span> satisfying:
+<span class=math-display data-latex="t' < t \quad \text{or} \quad (t' = t \;\text{and}\; k' < k)"></span></p>
+</div>
+</div>
+<p><strong>Why this works</strong>: At timestep <span class=math-inline data-latex=t></span>, the model generates <span class=math-inline data-latex=c_1[t]></span> (the coarsest new token) using only past information. Simultaneously, it generates <span class=math-inline data-latex=c_2[t-1]></span> — the second-layer refinement of the <em>previous</em> frame — which can now condition on <span class=math-inline data-latex=c_1[t-1]></span> (already generated one step ago). The offset ensures each codebook layer can see the coarser layers of the same frame.</p>
+<p><strong>Comparison</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Sequence length</th>
+<th>Steps for T frames</th>
+<th>Quality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Flat (concatenate)</td>
+<td><span class=math-inline data-latex=QT></span></td>
+<td><span class=math-inline data-latex=QT></span></td>
+<td>Baseline</td>
+</tr>
+<tr>
+<td>Parallel (all at once)</td>
+<td><span class=math-inline data-latex=T></span></td>
+<td><span class=math-inline data-latex=T></span></td>
+<td>Lower (no inter-codebook dependencies)</td>
+</tr>
+<tr>
+<td>Delay pattern</td>
+<td><span class=math-inline data-latex="T + Q - 1"></span></td>
+<td><span class=math-inline data-latex="T + Q - 1"></span></td>
+<td>Best (captures inter-codebook structure)</td>
+</tr>
+</tbody>
+</table>
+<p>For <span class=math-inline data-latex="T = 1500"></span>, <span class=math-inline data-latex="Q = 4"></span>: flat requires 6000 steps; delay pattern requires 1503 — a <span class=math-inline data-latex=4\times></span> speedup with no quality loss.</p>
+<div class=theorem-block id=theorem-22.2>
+<div class=block-label>
+Theorem 22.2 (Delay Pattern Causal Ordering)
+</div>
+<div class=block-body>The delay pattern defines a valid autoregressive factorization. That is, the joint distribution over all tokens factorizes as:
+<span class=math-display data-latex="p\bigl(\{c_k[t]\}_{k,t}\bigr) = \prod_{t=1}^{T+Q-1} \prod_{k=1}^{Q} p\bigl(c_k[t-k+1] \;\big|\; \text{all } (k',t') \text{ with } t' < t \text{ or } (t'=t, k'"></span>
+provided we define <span class=math-inline data-latex="c_k[t] = \varnothing"></span> for <span class=math-inline data-latex="t \leq 0"></span> or <span class=math-inline data-latex="t > T"></span>.</div>
+</div>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><p>We must verify that the partial order induced by the delay pattern is a <strong>topological ordering</strong> — no cycles. Define the directed graph <span class=math-inline data-latex=G></span> with vertices <span class=math-inline data-latex="\{(k, t) : 1 \leq k \leq Q,\; 1 \leq t \leq T\}"></span> and edges <span class=math-inline data-latex="(k', t') \to (k, t)"></span> whenever <span class=math-inline data-latex="(k', t')"></span> is in the attention set of <span class=math-inline data-latex="(k, t)"></span>.</p>
+<p>Assign each vertex the score <span class=math-inline data-latex="s(k, t) = (t + k - 1) \cdot Q + k"></span>. The first factor <span class=math-inline data-latex="t + k - 1"></span> is the generation step at which <span class=math-inline data-latex=c_k[t]></span> is produced. If <span class=math-inline data-latex="(k', t')"></span> is in the attention set of <span class=math-inline data-latex="(k, t)"></span>, then either:</p>
+<ol>
+<li><span class=math-inline data-latex="t' < t"></span>: then <span class=math-inline data-latex="t' + k' - 1 \leq t - 1 + Q - 1 < t + k - 1"></span> for standard parameter ranges, giving <span class=math-inline data-latex="s(k', t') < s(k, t)"></span>.</li>
+<li><span class=math-inline data-latex="t' = t"></span> and <span class=math-inline data-latex="k' < k"></span>: then the generation step is <span class=math-inline data-latex="t + k' - 1 < t + k - 1"></span> (if <span class=math-inline data-latex="k' < k"></span>) or at the same step but with <span class=math-inline data-latex="k' < k"></span> ordering within the step.</li>
+</ol>
+<p>In either case, every dependency edge goes from a strictly smaller score to a larger score. Since the score function induces a strict total order on the graph, the graph is a DAG. Therefore the factorization is a valid autoregressive decomposition. <span class=math-inline data-latex=\square></span></p>
+</div>
+</div>
+<h3 id=2210-cross-attention-text-conditions-the-audio>22.10 Cross-Attention: Text Conditions the Audio</h3>
+<blockquote>
+<p><em>中文:</em> &ldquo;每生成一列token，Transformer都会回头查阅第一站停放的文字隐状态——通过交叉注意力。音频token作为查询，文字向量作为键和值。&lsquo;中国风&rsquo;的信息就是这样一步一步注入的。注意，这是查阅，不是翻译。&rdquo;</p>
+</blockquote>
+<div class=definition-block id=definition-22.6>
+<div class=block-label>
+Definition 22.6 (Cross-Attention)
+</div>
+<div class=block-body>Let <span class=math-inline data-latex="X_{\text{audio}} \in \mathbb{R}^{n \times d}"></span> be the current audio token embeddings and <span class=math-inline data-latex="X_{\text{text}} = \mathbf{H} \in \mathbb{R}^{L \times d}"></span> be the T5 hidden states. <strong>Cross-attention</strong> computes:
+<span class=math-display data-latex="Q = X_{\text{audio}} W_Q, \quad K = X_{\text{text}} W_K, \quad V = X_{\text{text}} W_V"></span>
+<span class=math-display data-latex="\text{CrossAttn}(Q, K, V) = \text{softmax}\!\left(\frac{QK^\top}{\sqrt{d_k}}\right) V"></span>
+where <span class=math-inline data-latex="W_Q, W_K, W_V \in \mathbb{R}^{d \times d_k}"></span> are learned projection matrices.</div>
+</div>
+<div class=theorem-block id=theorem-22.3>
+<div class=block-label>
+Theorem 22.3 (Cross-Attention as Conditional Generation)
+</div>
+<div class=block-body>Cross-attention implements conditional generation: the output distribution over audio tokens is modulated by the text embedding. Formally, the cross-attention output for audio position <span class=math-inline data-latex=i></span> is a convex combination of text value vectors:
+<span class=math-display data-latex="\text{CrossAttn}(Q, K, V)_i = \sum_{j=1}^{L} \alpha_{ij} V_j, \quad \alpha_{ij} = \frac{\exp(Q_i K_j^\top / \sqrt{d_k})}{\sum_{j'} \exp(Q_i K_{j'}^\top / \sqrt{d_k})}"></span>
+where <span class=math-inline data-latex="\alpha_{ij} \geq 0"></span> and <span class=math-inline data-latex="\sum_j \alpha_{ij} = 1"></span>.</div>
+</div>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body>The softmax function outputs a probability distribution by construction: for any input vector <span class=math-inline data-latex="u \in \mathbb{R}^L"></span>, <span class=math-inline data-latex="\text{softmax}(u)_j = e^{u_j}/\sum_{j'} e^{u_{j'}} > 0"></span> and <span class=math-inline data-latex="\sum_j \text{softmax}(u)_j = 1"></span>. Setting <span class=math-inline data-latex="u_j = Q_i K_j^\top / \sqrt{d_k}"></span> gives the attention weights <span class=math-inline data-latex=\alpha_{ij}></span>. The output is <span class=math-inline data-latex="\sum_j \alpha_{ij} V_j"></span>, a convex combination (non-negative coefficients summing to 1) of the text value vectors. This means each audio position &ldquo;selects&rdquo; a weighted mixture of text representations — the text embedding modulates the audio generation at every position. <span class=math-inline data-latex=\square></span></div>
+</div>
+<p><strong>Key distinction from self-attention</strong>: In self-attention, queries, keys, and values all come from the same sequence. In cross-attention, queries come from one modality (audio) while keys and values come from another (text). The audio &ldquo;asks questions&rdquo; and the text &ldquo;provides answers.&rdquo;</p>
+<hr>
+<h2 id=alternative-path-diffusion-dit--cfg>Alternative Path: Diffusion (DiT + CFG)</h2>
+<blockquote>
+<p><em>中文:</em> &ldquo;ACE-Step走了完全不同的方向——跳过字母表，不做离散化。起点是一团纯噪声。&rdquo;</p>
+</blockquote>
+<h3 id=2211-dit-diffusion-transformer>22.11 DiT: Diffusion Transformer</h3>
+<div class=definition-block id=definition-22.7>
+<div class=block-label>
+Definition 22.7 (Diffusion Transformer (DiT))
+</div>
+<div class=block-body><p>The <strong>Diffusion Transformer</strong> (Peebles & Xie, 2023) replaces the U-Net backbone of standard diffusion models with a Transformer operating on patches of the continuous latent representation.</p>
+<p>For ACE-Step, the input is a continuous latent <span class=math-inline data-latex="z \in \mathbb{R}^{C \times T \times F}"></span> (channels <span class=math-inline data-latex=\times></span> time <span class=math-inline data-latex=\times></span> frequency), not discrete tokens. The pipeline:</p>
+<ol>
+<li><strong>Patchify</strong>: Divide <span class=math-inline data-latex=z></span> into non-overlapping patches, embed each as a vector.</li>
+<li><strong>Transformer blocks</strong>: Self-attention and feed-forward layers with <strong>adaptive layer normalization (adaLN)</strong> conditioned on the diffusion timestep <span class=math-inline data-latex=t></span> and text embedding.</li>
+<li><strong>Unpatchify</strong>: Reshape the output back to <span class=math-inline data-latex="\mathbb{R}^{C \times T \times F}"></span>.</li>
+</ol>
+</div>
+</div>
+<p>The adaLN conditioning works by predicting scale <span class=math-inline data-latex=\gamma></span> and shift <span class=math-inline data-latex=\beta></span> parameters from the conditioning signal:
+<span class=math-display data-latex="\text{adaLN}(h, t, c) = \gamma(t, c) \odot \frac{h - \mu(h)}{\sigma(h)} + \beta(t, c)"></span></p>
+<p>This is fundamentally different from MusicGen: <strong>no codebook, no VQ, no discrete tokens</strong>. The entire generation happens in continuous space.</p>
+<h3 id=2212-the-forward-diffusion-process>22.12 The Forward Diffusion Process</h3>
+<blockquote>
+<p><em>中文:</em> &ldquo;经典扩散模型，比如DDPM，它的前向加噪过程&mldr;就是一条马尔可夫链。上一集讲的AI作曲第一个范式，六十年前的数学，藏在现代生成模型的心脏里。&rdquo;</p>
+</blockquote>
+<p>As discussed in
+<a href=https://amath390.sibeliusp.com/episodes/ep21/ class=episode-ref-link>EP21</a>
+, the forward process of DDPM is a Markov chain that gradually adds Gaussian noise:
+<span class=math-display data-latex="q(x_t | x_{t-1}) = \mathcal{N}\bigl(x_t;\; \sqrt{1 - \beta_t}\, x_{t-1},\; \beta_t I\bigr)"></span></p>
+<p>The reverse process (denoising) is learned by a neural network <span class=math-inline data-latex=\epsilon_\theta></span> that predicts the noise added at each step. DiT uses a Transformer as the architecture for <span class=math-inline data-latex=\epsilon_\theta></span>.</p>
+<h3 id=2213-classifier-free-guidance-cfg>22.13 Classifier-Free Guidance (CFG)</h3>
+<div class=definition-block id=definition-22.8>
+<div class=block-label>
+Definition 22.8 (Classifier-Free Guidance)
+</div>
+<div class=block-body>During training, the text condition <span class=math-inline data-latex=c></span> is randomly dropped (replaced with <span class=math-inline data-latex=\varnothing></span>) with probability <span class=math-inline data-latex=p_{\text{drop}}></span>. At inference, the model output is interpolated:
+<span class=math-display data-latex="\tilde{\epsilon}_\theta(x_t, c) = (1 + w)\,\epsilon_\theta(x_t, c) - w \cdot \epsilon_\theta(x_t, \varnothing)"></span>
+where <span class=math-inline data-latex="w \geq 0"></span> is the <strong>guidance scale</strong>.</div>
+</div>
+<p><strong>Interpretation by cases</strong>:</p>
+<table>
+<thead>
+<tr>
+<th><span class=math-inline data-latex=w></span></th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class=math-inline data-latex="w = 0"></span></td>
+<td>Pure conditional generation: <span class=math-inline data-latex="\tilde{\epsilon} = \epsilon_\theta(x_t, c)"></span></td>
+</tr>
+<tr>
+<td><span class=math-inline data-latex="w > 0"></span></td>
+<td>Amplified conditioning — moves away from unconditional</td>
+</tr>
+<tr>
+<td><span class=math-inline data-latex="w \to \infty"></span></td>
+<td>Extreme adherence to text (often causes artifacts)</td>
+</tr>
+</tbody>
+</table>
+<div class=theorem-block id=theorem-22.4>
+<div class=block-label>
+Theorem 22.4 (Classifier-Free Guidance Interpolation)
+</div>
+<div class=block-body>CFG implicitly performs gradient ascent on <span class=math-inline data-latex="\log p(c | x)"></span>. Specifically, the guided score satisfies:
+<span class=math-display data-latex="\nabla_{x_t} \log \tilde{p}(x_t | c) = \nabla_{x_t} \log p(x_t | c) + w \cdot \nabla_{x_t} \log p(c | x_t)"></span>
+where <span class=math-inline data-latex="p(c | x_t)"></span> is the implicit classifier.</div>
+</div>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><p>By Bayes' rule:
+<span class=math-display data-latex="\log p(x_t | c) = \log p(c | x_t) + \log p(x_t) - \log p(c)"></span></p>
+<p>Taking the gradient with respect to <span class=math-inline data-latex=x_t></span> (<span class=math-inline data-latex="\log p(c)"></span> is constant):
+<span class=math-display data-latex="\nabla_{x_t} \log p(x_t | c) = \nabla_{x_t} \log p(c | x_t) + \nabla_{x_t} \log p(x_t)"></span></p>
+<p>The CFG output is:
+<span class=math-display data-latex="\tilde{\epsilon}_\theta(x_t, c) = (1 + w)\,\epsilon_\theta(x_t, c) - w\,\epsilon_\theta(x_t, \varnothing)"></span></p>
+<p>Since the noise prediction <span class=math-inline data-latex="\epsilon_\theta(x_t, c) \propto -\nabla_{x_t} \log p(x_t | c)"></span> and <span class=math-inline data-latex="\epsilon_\theta(x_t, \varnothing) \propto -\nabla_{x_t} \log p(x_t)"></span>, substituting:
+<span class=math-display data-latex="\tilde{\epsilon} \propto -(1+w)\nabla_{x_t} \log p(x_t | c) + w\,\nabla_{x_t} \log p(x_t)"></span>
+<span class=math-display data-latex="= -\nabla_{x_t}\bigl[\log p(x_t | c) + w\bigl(\log p(x_t | c) - \log p(x_t)\bigr)\bigr]"></span>
+<span class=math-display data-latex="= -\nabla_{x_t}\bigl[\log p(x_t | c) + w \log p(c | x_t)\bigr] + \text{const}"></span></p>
+<p>Therefore the guided score corresponds to:
+<span class=math-display data-latex="\nabla_{x_t} \log \tilde{p}(x_t | c) = \nabla_{x_t} \log p(x_t | c) + w \cdot \nabla_{x_t} \log p(c | x_t)"></span></p>
+<p>The guidance scale <span class=math-inline data-latex=w></span> controls how strongly the model steers toward outputs that &ldquo;look like&rdquo; they were generated from condition <span class=math-inline data-latex=c></span>, as measured by the implicit classifier <span class=math-inline data-latex="p(c | x_t)"></span>. <span class=math-inline data-latex=\square></span></p>
+</div>
+</div>
+<hr>
+<h2 id=station-4-decoding>Station 4: Decoding</h2>
+<blockquote>
+<p><em>中文:</em> &ldquo;MusicGen那边：整数token通过RVQ反向查表变回连续向量，再通过EnCodec解码器膨胀回波形——640个采样点从一个向量里重建出来。&rdquo;</p>
+</blockquote>
+<h3 id=2214-musicgen-decoding-pipeline>22.14 MusicGen Decoding Pipeline</h3>
+<p>The decoding reverses the encoding:</p>
+<ol>
+<li><strong>RVQ lookup</strong>: For each frame, retrieve the centroid vectors from each codebook: <span class=math-inline data-latex="c_k = e_{i_k}^{(k)}"></span>, where <span class=math-inline data-latex=i_k></span> is the predicted token index for codebook <span class=math-inline data-latex=k></span>.</li>
+<li><strong>Sum</strong>: <span class=math-inline data-latex="\hat{z} = \sum_{k=1}^{Q} c_k \in \mathbb{R}^{128}"></span>.</li>
+<li><strong>EnCodec decoder</strong>: Transposed convolutions expand <span class=math-inline data-latex=\hat{z}></span> back to 640 samples: <span class=math-inline data-latex="\hat{x} = \text{Dec}(\hat{z}) \in \mathbb{R}^{640}"></span>.</li>
+<li><strong>Overlap-add</strong>: Adjacent frames are combined with windowing to produce the continuous waveform.</li>
+</ol>
+<h3 id=2215-ace-step-decoding-pipeline>22.15 ACE-Step Decoding Pipeline</h3>
+<blockquote>
+<p><em>中文:</em> &ldquo;ACE-Step那边：去噪完成的潜在表示先通过DCAE解码器变回频谱图，再经过声码器才变成波形。&rdquo;</p>
+</blockquote>
+<ol>
+<li><strong>DCAE decoder</strong>: The denoised continuous latent <span class=math-inline data-latex="z \in \mathbb{R}^{C \times T \times F}"></span> is decoded to a mel-spectrogram.</li>
+<li><strong>Vocoder</strong> (e.g., HiFi-GAN): Converts the mel-spectrogram to a time-domain waveform via learned upsampling convolutions.</li>
+</ol>
+<p>The two-stage decode (latent <span class=math-inline data-latex=\to></span> spectrogram <span class=math-inline data-latex=\to></span> waveform) adds latency but avoids the information bottleneck of discrete tokenization.</p>
+<hr>
+<h2 id=numerical-examples>Numerical Examples</h2>
+<h3 id=complete-musicgen-pipeline-for-a-10-second-clip>Complete MusicGen Pipeline for a 10-Second Clip</h3>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Input</th>
+<th>Output</th>
+<th>Dimensions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Text tokenization</td>
+<td>&ldquo;Chinese-style piano&rdquo;</td>
+<td>Token indices</td>
+<td><span class=math-inline data-latex="L \approx 6"></span> integers</td>
+</tr>
+<tr>
+<td>T5 encoder</td>
+<td><span class=math-inline data-latex=L></span> token indices</td>
+<td>Hidden states</td>
+<td><span class=math-inline data-latex="6 \times 1024"></span> (T5-large)</td>
+</tr>
+<tr>
+<td>Audio encoding (EnCodec)</td>
+<td>320,000 samples (10s @ 32kHz)</td>
+<td>Latent vectors</td>
+<td><span class=math-inline data-latex="500 \times 128"></span></td>
+</tr>
+<tr>
+<td>RVQ</td>
+<td>500 latent vectors</td>
+<td>Token indices</td>
+<td><span class=math-inline data-latex="500 \times 4"></span> integers</td>
+</tr>
+<tr>
+<td>Transformer generation</td>
+<td>T5 states + past tokens</td>
+<td>Next tokens</td>
+<td>500 steps (delay pattern)</td>
+</tr>
+<tr>
+<td>RVQ decode</td>
+<td><span class=math-inline data-latex="500 \times 4"></span> indices</td>
+<td>Latent vectors</td>
+<td><span class=math-inline data-latex="500 \times 128"></span></td>
+</tr>
+<tr>
+<td>EnCodec decode</td>
+<td>500 latent vectors</td>
+<td>Waveform</td>
+<td>320,000 samples</td>
+</tr>
+</tbody>
+</table>
+<h3 id=storage-comparison>Storage Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Representation</th>
+<th>Size for 10s audio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Raw 32kHz 16-bit</td>
+<td>640,000 bytes</td>
+</tr>
+<tr>
+<td>EnCodec continuous latent</td>
+<td>256,000 bytes (500 <span class=math-inline data-latex=\times></span> 128 <span class=math-inline data-latex=\times></span> 4 bytes)</td>
+</tr>
+<tr>
+<td>RVQ tokens (4 codebooks)</td>
+<td>2,000 integers = ~2,750 bytes</td>
+</tr>
+<tr>
+<td>Compressed ratio (raw to RVQ)</td>
+<td>~233:1</td>
+</tr>
+</tbody>
+</table>
+<h3 id=rvq-reconstruction-quality-by-layer-count>RVQ Reconstruction Quality by Layer Count</h3>
+<table>
+<thead>
+<tr>
+<th>Layers (Q)</th>
+<th>Bits/frame</th>
+<th>Bitrate</th>
+<th>Typical SI-SDR (dB)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>11</td>
+<td>550 bps</td>
+<td>~5</td>
+</tr>
+<tr>
+<td>2</td>
+<td>22</td>
+<td>1,100 bps</td>
+<td>~10</td>
+</tr>
+<tr>
+<td>4</td>
+<td>44</td>
+<td>2,200 bps</td>
+<td>~15</td>
+</tr>
+<tr>
+<td>8</td>
+<td>88</td>
+<td>4,400 bps</td>
+<td>~20</td>
+</tr>
+</tbody>
+</table>
+<p>Each additional layer roughly halves the remaining error (Theorem 22.1), with diminishing returns as residuals approach the noise floor.</p>
+<hr>
+<h2 id=musical-connection>Musical Connection</h2>
+<div class=music-block>
+<div class=block-label>音乐联系</div>
+<div class=block-body><p><strong>From Notation to Codebooks: Two Alphabets for Music</strong></p>
+<blockquote>
+<p><em>中文:</em> &ldquo;这四个整数，就是AI的音乐字母表里的&rsquo;字母'。&rdquo;</p>
+</blockquote>
+<p>Western staff notation is a human-designed alphabet for music: pitch (line/space), duration (note shape), dynamics (marking). It captures what a trained musician needs to reproduce a performance — but discards timbre, room acoustics, and micro-timing.</p>
+<p>EnCodec&rsquo;s RVQ codebook is an AI-discovered alphabet. Its &ldquo;letters&rdquo; — four integers per frame — encode everything the decoder needs to reconstruct perceptually faithful audio: pitch, timbre, dynamics, stereo field, room characteristics. But unlike staff notation, the codebook entries have no human-interpretable labels. Entry 1742 in codebook 1 might encode &ldquo;bright attack with upper harmonics&rdquo; — or it might encode a pattern that has no name in any human language.</p>
+<p>The parallel is striking: both systems solve the same problem (compress music into a finite symbol set) but optimize for different decoders (human performer vs. neural network).</p>
+<p><a href=https://amath390.sibeliusp.com/episodes/ep23/ class=episode-ref-link>EP23</a></p>
+<p>will probe what these learned letters actually encode.</p>
+</div>
+</div>
+<hr>
+<h2 id=limits-and-open-questions>Limits and Open Questions</h2>
+<ol>
+<li>
+<p><strong>Codebook collapse</strong>: In practice, many RVQ codebook entries go unused during training. Techniques like exponential moving average updates and codebook reset heuristics mitigate this, but the effective codebook utilization remains below 100%.</p>
+</li>
+<li>
+<p><strong>Tokenization granularity</strong>: EnCodec produces 50 tokens/second. Is this the right temporal resolution for music? Speech models use similar rates, but music has faster transients (drum attacks at sub-millisecond scale) that may be lost.</p>
+</li>
+<li>
+<p><strong>Cross-modal alignment</strong>: Cross-attention assumes text and audio share a meaningful latent geometry. But &ldquo;Chinese-style&rdquo; is a high-dimensional cultural concept — how well can a T5 encoder trained on English text capture it?</p>
+</li>
+<li>
+<p><strong>Guidance scale sensitivity</strong>: CFG with <span class=math-inline data-latex=w></span> too high produces artifacts; too low ignores the prompt. The optimal <span class=math-inline data-latex=w></span> varies by prompt and is typically hand-tuned.</p>
+</li>
+<li>
+<p><strong>Continuous vs. discrete</strong>: MusicGen (discrete) and ACE-Step (continuous) represent fundamentally different philosophical choices. Which is better for music? The answer may depend on the downstream task.</p>
+</li>
+</ol>
+<blockquote>
+<p><em>中文:</em> &ldquo;下一集我们问一个更深的问题：这些字母表里的&rsquo;字母&rsquo;，到底编码了什么？调性？情感？还是人类根本读不懂的东西？&rdquo;</p>
+</blockquote>
+<hr>
+<h2 id=academic-references>Academic References</h2>
+<ol>
+<li>Raffel, C. et al. (2020). &ldquo;Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer.&rdquo; <em>JMLR</em> 21(140), 1-67.</li>
+<li>Kudo, T. & Richardson, J. (2018). &ldquo;SentencePiece: A simple and language independent subword tokenizer and detokenizer for Neural Text Processing.&rdquo; <em>EMNLP 2018</em>.</li>
+<li>van den Oord, A., Vinyals, O. & Kavukcuoglu, K. (2017). &ldquo;Neural Discrete Representation Learning.&rdquo; <em>NeurIPS 2017</em>.</li>
+<li>Defossez, A. et al. (2022). &ldquo;High Fidelity Neural Audio Compression.&rdquo; <em>arXiv:2210.13438</em>. — <em>The EnCodec paper.</em></li>
+<li>Zeghidour, N. et al. (2021). &ldquo;SoundStream: An End-to-End Neural Audio Codec.&rdquo; <em>IEEE/ACM Trans. Audio, Speech, Lang. Process.</em> 30, 495-507.</li>
+<li>Copet, J. et al. (2023). &ldquo;Simple and Controllable Music Generation.&rdquo; <em>NeurIPS 2023</em>. — <em>The MusicGen paper; introduces the delay pattern.</em></li>
+<li>Peebles, W. & Xie, S. (2023). &ldquo;Scalable Diffusion Models with Transformers.&rdquo; <em>ICCV 2023</em>. — <em>The DiT paper.</em></li>
+<li>Ho, J. & Salimans, T. (2022). &ldquo;Classifier-Free Diffusion Guidance.&rdquo; <em>NeurIPS 2021 Workshop</em>.</li>
+<li>Ho, J., Jain, A. & Abbeel, P. (2020). &ldquo;Denoising Diffusion Probabilistic Models.&rdquo; <em>NeurIPS 2020</em>.</li>
+<li>Vaswani, A. et al. (2017). &ldquo;Attention Is All You Need.&rdquo; <em>NeurIPS 2017</em>. — <em>The Transformer paper; defines scaled dot-product attention.</em></li>
+<li>Agostinelli, A. et al. (2023). &ldquo;MusicLM: Generating Music From Text.&rdquo; <em>arXiv:2301.11325</em>.</li>
+<li>Huang, R. et al. (2024). &ldquo;ACE-Step: A Step Towards Music Generation Foundation Model.&rdquo; <em>arXiv</em>. — <em>Continuous diffusion approach to music generation.</em></li>
+<li>Kong, J., Kim, J. & Bae, J. (2020). &ldquo;HiFi-GAN: Generative Adversarial Networks for Efficient and High Fidelity Speech Synthesis.&rdquo; <em>NeurIPS 2020</em>.</li>
+</ol>
+</div>
+<nav class=ep-nav>
+<a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-nav-prev>
+← EP21: From Markov to Diffusion — Sixty Years of AI Composition
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-nav-next>
+EP23: Can AI Understand Music? Latent Space and Information Bottleneck →
+</a>
+</nav>
+</article>
+<aside class=ep-toc-aside>
+<div class=ep-toc-sticky>
+<div class=ep-toc-label>本页目录</div>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#overview>Overview</a></li>
+<li><a href=#prerequisites>Prerequisites</a></li>
+<li><a href=#station-1-text-encoding-t5>Station 1: Text Encoding (T5)</a>
+<ul>
+<li><a href=#221-tokenization-sentencepiece>22.1 Tokenization: SentencePiece</a></li>
+<li><a href=#222-t5-encoder-architecture>22.2 T5 Encoder Architecture</a></li>
+</ul>
+</li>
+<li><a href=#station-2-audio-compression-encodec--rvq>Station 2: Audio Compression (EnCodec + RVQ)</a>
+<ul>
+<li><a href=#223-encodec-encoder-strided-convolutions>22.3 EnCodec Encoder: Strided Convolutions</a></li>
+<li><a href=#224-the-encodec-decoder>22.4 The EnCodec Decoder</a></li>
+<li><a href=#225-encodec-training-loss>22.5 EnCodec Training Loss</a></li>
+<li><a href=#226-vector-quantization-vq>22.6 Vector Quantization (VQ)</a></li>
+<li><a href=#227-residual-vector-quantization-rvq>22.7 Residual Vector Quantization (RVQ)</a></li>
+</ul>
+</li>
+<li><a href=#station-3-token-generation-delay-pattern--cross-attention>Station 3: Token Generation (Delay Pattern + Cross-Attention)</a>
+<ul>
+<li><a href=#228-the-flattening-problem>22.8 The Flattening Problem</a></li>
+<li><a href=#229-the-delay-pattern>22.9 The Delay Pattern</a></li>
+<li><a href=#2210-cross-attention-text-conditions-the-audio>22.10 Cross-Attention: Text Conditions the Audio</a></li>
+</ul>
+</li>
+<li><a href=#alternative-path-diffusion-dit--cfg>Alternative Path: Diffusion (DiT + CFG)</a>
+<ul>
+<li><a href=#2211-dit-diffusion-transformer>22.11 DiT: Diffusion Transformer</a></li>
+<li><a href=#2212-the-forward-diffusion-process>22.12 The Forward Diffusion Process</a></li>
+<li><a href=#2213-classifier-free-guidance-cfg>22.13 Classifier-Free Guidance (CFG)</a></li>
+</ul>
+</li>
+<li><a href=#station-4-decoding>Station 4: Decoding</a>
+<ul>
+<li><a href=#2214-musicgen-decoding-pipeline>22.14 MusicGen Decoding Pipeline</a></li>
+<li><a href=#2215-ace-step-decoding-pipeline>22.15 ACE-Step Decoding Pipeline</a></li>
+</ul>
+</li>
+<li><a href=#numerical-examples>Numerical Examples</a>
+<ul>
+<li><a href=#complete-musicgen-pipeline-for-a-10-second-clip>Complete MusicGen Pipeline for a 10-Second Clip</a></li>
+<li><a href=#storage-comparison>Storage Comparison</a></li>
+<li><a href=#rvq-reconstruction-quality-by-layer-count>RVQ Reconstruction Quality by Layer Count</a></li>
+</ul>
+</li>
+<li><a href=#musical-connection>Musical Connection</a></li>
+<li><a href=#limits-and-open-questions>Limits and Open Questions</a></li>
+<li><a href=#academic-references>Academic References</a></li>
+</ul>
+</nav>
+</div>
+</aside>
+</div>
+<footer class=site-footer>
+<div class=footer-content>
+<a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link>
+<img src=/images/avatar.png alt="Sibelius P." class=footer-avatar>
+</a>
+<div class=footer-text>
+<span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
+<span class=footer-sep>·</span>
+<a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener>小红书</a>
+<span class=footer-sep>·</span>
+<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span>
+</div>
+</div>
 </footer>
-
-    </main>
-  </div>
+</main>
+</div>
 </body>
 </html>

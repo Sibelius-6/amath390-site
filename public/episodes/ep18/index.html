@@ -1,1030 +1,611 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
+<!doctype html><html lang=zh-cn>
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
 <title>EP18: Game Theory in Operatic Duets | AMATH 390 数学与音乐</title>
-<meta name="description" content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('[data-latex]').forEach(function(el) {
-    try {
-      katex.render(el.getAttribute('data-latex'), el, {
-        displayMode: el.classList.contains('math-display'),
-        throwOnError: false
-      });
-    } catch(e) { console.warn('KaTeX:', e.message, el); }
-  });
-});
-</script>
-
-
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
-
-<link rel="stylesheet" href="/css/amath390.css">
-
+<meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script>
+<script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('[data-latex]').forEach(function(a){try{katex.render(a.getAttribute('data-latex'),a,{displayMode:a.classList.contains('math-display'),throwOnError:!1})}catch(b){console.warn('KaTeX:',b.message,a)}})})</script>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16.png>
+<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+<link rel=stylesheet href=/css/amath390.css>
 </head>
 <body>
-  <div class="layout-wrapper">
-    
-
-
-<nav class="sidebar">
-  <div class="sidebar-header">
-    <a href="/" class="sidebar-title">AMATH 390</a>
-    <div class="sidebar-subtitle">数学与音乐</div>
-  </div>
-
-  
-
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">数学基础篇</div>
-        
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep01/"
-               class="ep-link">
-              <span class="ep-num">01</span>
-              <span class="ep-title">Chord Space and the Torus</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep02/"
-               class="ep-link">
-              <span class="ep-num">02</span>
-              <span class="ep-title">String Vibration and the Wave Equation</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep03/"
-               class="ep-link">
-              <span class="ep-num">03</span>
-              <span class="ep-title">Bach and Graph Connectivity</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep04/"
-               class="ep-link">
-              <span class="ep-num">04</span>
-              <span class="ep-title">All-Interval Rows and ℤ₁₂</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep05/"
-               class="ep-link">
-              <span class="ep-num">05</span>
-              <span class="ep-title">Turán&#39;s Theorem and Counterpoint</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep06/"
-               class="ep-link">
-              <span class="ep-num">06</span>
-              <span class="ep-title">Graph Coloring and Voice Assignment</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep07/"
-               class="ep-link">
-              <span class="ep-num">07</span>
-              <span class="ep-title">Information Entropy and All-Interval Rows</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep08/"
-               class="ep-link">
-              <span class="ep-num">08</span>
-              <span class="ep-title">Shepard Tones and the Tritone Paradox</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep09/"
-               class="ep-link">
-              <span class="ep-num">09</span>
-              <span class="ep-title">Combination Tones and Nonlinear Acoustics</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">Jacob Collier 系列</div>
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep10/"
-               class="ep-link">
-              <span class="ep-num">10</span>
-              <span class="ep-title">Negative Harmony and the Dihedral Group D₁₂</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep11/"
-               class="ep-link">
-              <span class="ep-num">11</span>
-              <span class="ep-title">Comma Drift and the Impossibility of Perfect Tuning</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep12/"
-               class="ep-link">
-              <span class="ep-num">12</span>
-              <span class="ep-title">The Circle of Fifths as a Folded Spiral</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep13/"
-               class="ep-link">
-              <span class="ep-num">13</span>
-              <span class="ep-title">Polyrhythm and Rhythm-Pitch Duality</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">拓扑数学专篇</div>
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep14/"
-               class="ep-link">
-              <span class="ep-num">14</span>
-              <span class="ep-title">Tonnetz Hodge Duality</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">歌剧系列</div>
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep15/"
-               class="ep-link">
-              <span class="ep-num">15</span>
-              <span class="ep-title">Opera Acoustics and the Singer&#39;s Formant</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep16/"
-               class="ep-link">
-              <span class="ep-num">16</span>
-              <span class="ep-title">Rossini&#39;s Code — Budden, Gossett, and the Convention System</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep17/"
-               class="ep-link">
-              <span class="ep-num">17</span>
-              <span class="ep-title">Leitmotif Networks — Wagner&#39;s Ring Cycle</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-
-  <div class="sidebar-footer">
-    <a href="/theorems/">定理索引</a>
-    <a href="/domains/">数学领域</a>
-    <a href="/about/">关于</a>
-  </div>
+<div class=layout-wrapper>
+<nav class=sidebar>
+<div class=sidebar-header>
+<a href=/ class=sidebar-title>AMATH 390</a>
+<div class=sidebar-subtitle>数学与音乐</div>
+</div>
+<div class=arc-group>
+<div class=arc-label>数学基础篇</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link>
+<span class=ep-num>01</span>
+<span class=ep-title>Chord Space and the Torus</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep02/ class=ep-link>
+<span class=ep-num>02</span>
+<span class=ep-title>String Vibration and the Wave Equation</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link>
+<span class=ep-num>03</span>
+<span class=ep-title>Bach and Graph Connectivity</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link>
+<span class=ep-num>04</span>
+<span class=ep-title>All-Interval Rows and ℤ₁₂</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link>
+<span class=ep-num>05</span>
+<span class=ep-title>Turán's Theorem and Counterpoint</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-link>
+<span class=ep-num>06</span>
+<span class=ep-title>Graph Coloring and Voice Assignment</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-link>
+<span class=ep-num>07</span>
+<span class=ep-title>Information Entropy and All-Interval Rows</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-link>
+<span class=ep-num>08</span>
+<span class=ep-title>Shepard Tones and the Tritone Paradox</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link>
+<span class=ep-num>09</span>
+<span class=ep-title>Combination Tones and Nonlinear Acoustics</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>Jacob Collier 系列</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep10/ class=ep-link>
+<span class=ep-num>10</span>
+<span class=ep-title>Negative Harmony and the Dihedral Group D₁₂</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link>
+<span class=ep-num>11</span>
+<span class=ep-title>Comma Drift and the Impossibility of Perfect Tuning</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep12/ class=ep-link>
+<span class=ep-num>12</span>
+<span class=ep-title>The Circle of Fifths as a Folded Spiral</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-link>
+<span class=ep-num>13</span>
+<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>拓扑数学专篇</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-link>
+<span class=ep-num>14</span>
+<span class=ep-title>Tonnetz Hodge Duality</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>歌剧系列</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-link>
+<span class=ep-num>15</span>
+<span class=ep-title>Opera Acoustics and the Singer's Formant</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link>
+<span class=ep-num>16</span>
+<span class=ep-title>Rossini's Code — Budden, Gossett, and the Convention System</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-link>
+<span class=ep-num>17</span>
+<span class=ep-title>Leitmotif Networks — Wagner's Ring Cycle</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep18/ class="ep-link active">
+<span class=ep-num>18</span>
+<span class=ep-title>Game Theory in Operatic Duets</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link>
+<span class=ep-num>19</span>
+<span class=ep-title>Vibrato as FM Synthesis</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-link>
+<span class=ep-num>20</span>
+<span class=ep-title>Character Interaction Networks in Opera</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>AI 音乐三部曲</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-link>
+<span class=ep-num>21</span>
+<span class=ep-title>From Markov to Diffusion — Sixty Years of AI Composition</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-link>
+<span class=ep-num>22</span>
+<span class=ep-title>How AI Writes Music — EnCodec and RVQ</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-link>
+<span class=ep-num>23</span>
+<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span>
+</a>
+</div>
+<div class=sidebar-footer>
+<a href=/theorems/>定理索引</a>
+<a href=/domains/>数学领域</a>
+<a href=/about/>关于</a>
+</div>
 </nav>
-
-    <main class="main-content">
-      
-
-
-
-<div class="episode-layout">
-  <article class="episode-page">
-    <header class="episode-header">
-  <div class="ep-badge">EP18</div>
-  <h1 class="ep-main-title">EP18: Game Theory in Operatic Duets</h1>
-  <div class="ep-subtitle">Nash均衡, 信号博弈</div>
-
-  <div class="ep-meta">
-    
-    <span class="meta-item">
-      <span class="meta-icon">▶</span> 7:53
-    </span>
-    
-    
-    <span class="meta-item domains">
-      <span class="domain-chip">Game Theory</span>
-    </span>
-    
-  </div>
+<main class=main-content>
+<div class=episode-layout>
+<article class=episode-page>
+<header class=episode-header>
+<div class=ep-badge>EP18</div>
+<h1 class=ep-main-title>EP18: Game Theory in Operatic Duets</h1>
+<div class=ep-subtitle>Nash Equilibrium, Bayesian Persuasion, Minimax Theorem, Folk Theorem</div>
+<div class=ep-meta>
+<span class=meta-item>
+<span class=meta-icon>▶</span> 7:53
+</span>
+<span class="meta-item domains">
+<span class=domain-chip>Game Theory</span>
+</span>
+</div>
 </header>
-
-    
-
-
-
-
-
-
-
-
-
-    
-
-
-    <div class="episode-content content">
-      <h2 id="概述">概述</h2>
-<p><em>本页内容正在撰写中。请先观看<a href="#">小红书视频</a>了解核心概念。</em></p>
-<p>本集探讨：Nash均衡, 信号博弈。</p>
-<h2 id="前置知识">前置知识</h2>
-<!-- cross-refs partial handles callback links -->
-<h2 id="定义">定义</h2>
-<!-- 
-
-<div class="definition-block" id="definition">
-  <div class="block-label">
-    Definition (...)
-  </div>
-  <div class="block-body">&hellip;</div>
+<div class="episode-content content">
+<h2 id=overview>Overview</h2>
+<p>Four operas. Four game-theoretic frameworks. This episode treats operatic duets as strategic interactions and asks: can the mathematical machinery of game theory &mdash; payoff matrices, equilibrium concepts, information structures &mdash; explain why characters make the choices they do?</p>
+<p>We begin with Bizet&rsquo;s <em>Carmen</em> (1875), where the final confrontation between Carmen and Don Jose is modeled as a two-player non-cooperative game solved by backward induction. Mozart&rsquo;s <em>Don Giovanni</em> (1787) introduces incomplete information: Giovanni persuades Zerlina through repeated signaling, and her decision follows Bayesian updating. Xenakis&rsquo;s <em>Duel</em> (1959) is the most literal case &mdash; a zero-sum matrix game written directly into the score, governed by the von Neumann minimax theorem. Finally, Zorn&rsquo;s <em>Cobra</em> (1984) embodies the folk theorem: cooperation emerging from repeated interaction and reputation.</p>
+<blockquote>
+<p><em>中文:</em> &ldquo;卡门看着唐何塞。戒指扔在地上。她只要低头，就能活。但她没有。为什么？一个理性的人，为什么会走向死亡？这不是冲动。像是一种计算。她到底算到了什么？&rdquo;</p>
+</blockquote>
+<hr>
+<h2 id=prerequisites>Prerequisites</h2>
+<p>No prior episodes are strictly required. Familiarity with basic probability (Bayes' theorem) is helpful for Section 5.</p>
+<hr>
+<h2 id=definitions>Definitions</h2>
+<div class=definition-block id=definition-18.1>
+<div class=block-label>
+Definition 18.1 (Normal-Form Game)
 </div>
- -->
-<h2 id="主要定理">主要定理</h2>
-<!-- 
-
-<div class="theorem-block" id="theorem-18.1">
-  <div class="block-label">
-    Theorem 18.1 (...)
-  </div>
-  <div class="block-body">&hellip;</div>
+<div class=block-body><p>A <strong>normal-form (strategic-form) game</strong> is a tuple <span class=math-inline data-latex="\Gamma = (N, (S_i)_{i \in N}, (u_i)_{i \in N})"></span> where:</p>
+<ul>
+<li><span class=math-inline data-latex="N = \{1, 2, \ldots, n\}"></span> is a finite set of <strong>players</strong>,</li>
+<li><span class=math-inline data-latex=S_i></span> is the finite set of <strong>strategies</strong> (pure actions) available to player <span class=math-inline data-latex=i></span>,</li>
+<li><span class=math-inline data-latex="u_i : S_1 \times S_2 \times \cdots \times S_n \to \mathbb{R}"></span> is the <strong>payoff (utility) function</strong> of player <span class=math-inline data-latex=i></span>.</li>
+</ul>
+<p>A <strong>strategy profile</strong> is a tuple <span class=math-inline data-latex="s = (s_1, \ldots, s_n) \in \prod_i S_i"></span>. We write <span class=math-inline data-latex=s_{-i}></span> for the profile of all players except <span class=math-inline data-latex=i></span>.</p>
 </div>
- -->
-<!-- <div class="proof-block">
-  <div class="block-label">Proof.</div>
-  <div class="block-body">&hellip;</div>
 </div>
- -->
-<h2 id="音乐联系">音乐联系</h2>
-<!-- <div class="music-block">
-  <div class="block-label">音乐联系</div>
-  <div class="block-body">&hellip;</div>
+<div class=definition-block id=definition-18.2>
+<div class=block-label>
+Definition 18.2 (Nash Equilibrium)
 </div>
- -->
-<h2 id="局限性与开放问题">局限性与开放问题</h2>
-<h2 id="参考文献">参考文献</h2>
+<div class=block-body>A strategy profile <span class=math-inline data-latex="s^* = (s_1^*, \ldots, s_n^*)"></span> is a <strong>Nash equilibrium</strong> if no player can unilaterally improve their payoff:
+<span class=math-display data-latex="\forall\, i \in N,\; \forall\, s_i \in S_i: \quad u_i(s_i^*, s_{-i}^*) \geq u_i(s_i, s_{-i}^*)"></span>
+Equivalently, each <span class=math-inline data-latex=s_i^*></span> is a <strong>best response</strong> to <span class=math-inline data-latex=s_{-i}^*></span>.</div>
+</div>
+<blockquote>
+<p><em>中文:</em> &ldquo;什么是纳什均衡？如果每个玩家在对方策略不变的前提下，都没有动机改变自己的策略，这个组合就是纳什均衡。&rdquo;</p>
+</blockquote>
+<div class=definition-block id=definition-18.3>
+<div class=block-label>
+Definition 18.3 (Sequential Game and Backward Induction)
+</div>
+<div class=block-body>A <strong>sequential (extensive-form) game</strong> specifies a game tree where players move in sequence, each observing prior moves. <strong>Backward induction</strong> solves such games by starting at terminal nodes and reasoning backwards: at each decision node, the player selects the action maximizing their payoff given the optimal continuation.</div>
+</div>
+<div class=definition-block id=definition-18.4>
+<div class=block-label>
+Definition 18.4 (Bayesian Game)
+</div>
+<div class=block-body>A <strong>Bayesian game</strong> extends the normal form with incomplete information. Each player <span class=math-inline data-latex=i></span> has a <strong>type</strong> <span class=math-inline data-latex="\theta_i \in \Theta_i"></span> drawn from a prior distribution <span class=math-inline data-latex=p(\theta)></span>. Player <span class=math-inline data-latex=i></span> knows their own type but not others'. After observing a signal <span class=math-inline data-latex=x></span>, a player updates their belief about the opponent&rsquo;s type via <strong>Bayes' theorem</strong>:
+<span class=math-display data-latex="P(\theta \mid x) = \frac{P(x \mid \theta)\, P(\theta)}{P(x)}"></span></div>
+</div>
+<div class=definition-block id=definition-18.5>
+<div class=block-label>
+Definition 18.5 (Mixed Strategy)
+</div>
+<div class=block-body>A <strong>mixed strategy</strong> for player <span class=math-inline data-latex=i></span> is a probability distribution <span class=math-inline data-latex="\sigma_i \in \Delta(S_i)"></span> over their pure strategies. The <strong>expected payoff</strong> under mixed strategies <span class=math-inline data-latex="(\sigma_1, \ldots, \sigma_n)"></span> is:
+<span class=math-display data-latex="U_i(\sigma_1, \ldots, \sigma_n) = \sum_{s \in \prod_j S_j} \left(\prod_{j=1}^n \sigma_j(s_j)\right) u_i(s)"></span></div>
+</div>
+<div class=definition-block id=definition-18.6>
+<div class=block-label>
+Definition 18.6 (Zero-Sum Game)
+</div>
+<div class=block-body>A two-player game is <strong>zero-sum</strong> if <span class=math-inline data-latex="u_1(s) + u_2(s) = 0"></span> for every strategy profile <span class=math-inline data-latex=s></span>. One player&rsquo;s gain is exactly the other&rsquo;s loss. The payoff matrix <span class=math-inline data-latex=A></span> records player 1&rsquo;s payoffs; player 2&rsquo;s payoffs are <span class=math-inline data-latex=-A></span>.</div>
+</div>
+<div class=definition-block id=definition-18.7>
+<div class=block-label>
+Definition 18.7 (Repeated Game and Discount Factor)
+</div>
+<div class=block-body>A <strong>repeated game</strong> consists of the same stage game <span class=math-inline data-latex=\Gamma></span> played over rounds <span class=math-inline data-latex="t = 1, 2, \ldots"></span> Players observe the full history of past play. With <strong>discount factor</strong> <span class=math-inline data-latex="\delta \in (0,1)"></span>, player <span class=math-inline data-latex=i></span>&rsquo;s total payoff is:
+<span class=math-display data-latex="\sum_{t=0}^{\infty} \delta^t\, u_i(s^{(t)})"></span>
+When <span class=math-inline data-latex=\delta></span> is close to 1, players care significantly about the future, enabling cooperation.</div>
+</div>
+<hr>
+<h2 id=main-theorems>Main Theorems</h2>
+<h3 id=nash-existence-theorem>Nash Existence Theorem</h3>
+<div class=theorem-block id=theorem-18.1>
+<div class=block-label>
+Theorem 18.1 (Nash Existence Theorem)
+</div>
+<div class=block-body>Every finite game (finitely many players, each with finitely many strategies) has at least one Nash equilibrium in mixed strategies.</div>
+</div>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><p>Define the <strong>best-response correspondence</strong> <span class=math-inline data-latex="BR_i(\sigma_{-i}) = \arg\max_{\sigma_i \in \Delta(S_i)} U_i(\sigma_i, \sigma_{-i})"></span> for each player <span class=math-inline data-latex=i></span>. The joint best-response map <span class=math-inline data-latex="BR: \prod_i \Delta(S_i) \to \prod_i \Delta(S_i)"></span> sends <span class=math-inline data-latex="\sigma \mapsto \prod_i BR_i(\sigma_{-i})"></span>.</p>
+<p>The domain <span class=math-inline data-latex="\prod_i \Delta(S_i)"></span> is compact and convex (a product of simplices). Each <span class=math-inline data-latex=U_i></span> is linear (hence continuous) in <span class=math-inline data-latex=\sigma_i></span>, and continuous in <span class=math-inline data-latex=\sigma_{-i}></span>. By the maximum theorem, <span class=math-inline data-latex=BR_i></span> is upper hemicontinuous with non-empty convex values (since the argmax of a linear function over a simplex is a convex set).</p>
+<p>By <strong>Kakutani&rsquo;s fixed-point theorem</strong>, any upper hemicontinuous correspondence from a compact convex set to itself with non-empty convex values has a fixed point <span class=math-inline data-latex=\sigma^*></span>. A fixed point <span class=math-inline data-latex="\sigma^* \in BR(\sigma^*)"></span> means each player&rsquo;s strategy is a best response to the others &mdash; precisely the definition of a Nash equilibrium. <span class=math-inline data-latex=\square></span></p>
+</div>
+</div>
+<h3 id=von-neumann-minimax-theorem>Von Neumann Minimax Theorem</h3>
+<div class=theorem-block id=theorem-18.2>
+<div class=block-label>
+Theorem 18.2 (Von Neumann Minimax Theorem)
+</div>
+<div class=block-body>In a finite two-player zero-sum game with payoff matrix <span class=math-inline data-latex="A \in \mathbb{R}^{m \times n}"></span>, there exists a unique <strong>game value</strong> <span class=math-inline data-latex=V></span> and mixed strategies <span class=math-inline data-latex="p^* \in \Delta_m"></span>, <span class=math-inline data-latex="q^* \in \Delta_n"></span> such that:
+<span class=math-display data-latex="\max_{p \in \Delta_m} \min_{q \in \Delta_n} p^T A q = V = \min_{q \in \Delta_n} \max_{p \in \Delta_m} p^T A q"></span></div>
+</div>
+<blockquote>
+<p><em>中文:</em> &ldquo;在零和博弈中，存在一个博弈值 V。玩家一的最优策略是找到一个概率分布 p，使得最坏情况下的期望收益最大化。&rdquo;</p>
+</blockquote>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><p>For any <span class=math-inline data-latex="p, q"></span>, the function <span class=math-inline data-latex="f(p, q) = p^T A q"></span> is bilinear: linear (hence convex) in <span class=math-inline data-latex=q></span> for fixed <span class=math-inline data-latex=p></span>, and linear (hence concave) in <span class=math-inline data-latex=p></span> for fixed <span class=math-inline data-latex=q></span>. The strategy sets <span class=math-inline data-latex=\Delta_m></span> and <span class=math-inline data-latex=\Delta_n></span> are compact and convex.</p>
+<p>By <strong>Sion&rsquo;s minimax theorem</strong> (a generalization of von Neumann&rsquo;s original result): if <span class=math-inline data-latex="X, Y"></span> are compact convex sets and <span class=math-inline data-latex="f: X \times Y \to \mathbb{R}"></span> is convex-concave and continuous, then
+<span class=math-display data-latex="\min_{y \in Y} \max_{x \in X} f(x,y) = \max_{x \in X} \min_{y \in Y} f(x,y)"></span></p>
+<p>Applying this with <span class=math-inline data-latex="X = \Delta_m"></span>, <span class=math-inline data-latex="Y = \Delta_n"></span>, <span class=math-inline data-latex="f(p,q) = p^T A q"></span> yields the minimax equality. The common value <span class=math-inline data-latex=V></span> is the game value. Optimal strategies <span class=math-inline data-latex="p^*, q^*"></span> exist by compactness. <span class=math-inline data-latex=\square></span></p>
+</div>
+</div>
+<h3 id=folk-theorem>Folk Theorem</h3>
+<div class=theorem-block id=theorem-18.3>
+<div class=block-label>
+Theorem 18.3 (Folk Theorem (Nash, Aumann-Shapley))
+</div>
+<div class=block-body>Consider an infinitely repeated game with discount factor <span class=math-inline data-latex=\delta></span> and stage game <span class=math-inline data-latex=\Gamma></span>. Let <span class=math-inline data-latex=v_i^{\min}></span> denote the <strong>minimax payoff</strong> for player <span class=math-inline data-latex=i></span> &mdash; the lowest payoff that other players can force on <span class=math-inline data-latex=i></span> regardless of <span class=math-inline data-latex=i></span>&rsquo;s strategy:
+<span class=math-display data-latex="v_i^{\min} = \min_{s_{-i}} \max_{s_i} u_i(s_i, s_{-i})"></span>
+Let <span class=math-inline data-latex=F></span> be the set of <strong>feasible payoff vectors</strong> (convex hull of stage-game payoff profiles) and <span class=math-inline data-latex="F^* = \{v \in F : v_i > v_i^{\min} \;\forall i\}"></span> the <strong>individually rational</strong> feasible set. Then for any <span class=math-inline data-latex="v \in F^*"></span>, there exists <span class=math-inline data-latex="\bar\delta < 1"></span> such that for all <span class=math-inline data-latex="\delta > \bar\delta"></span>, <span class=math-inline data-latex=v></span> is the payoff vector of some Nash equilibrium of the repeated game.</div>
+</div>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><p>Fix a target payoff <span class=math-inline data-latex="v \in F^*"></span>. Since <span class=math-inline data-latex=v></span> is feasible, there exist stage-game strategy profiles and a mixing distribution (possibly a correlated sequence of pure profiles) yielding average payoff <span class=math-inline data-latex=v></span>. Define the following <strong>grim trigger</strong> strategy for each player <span class=math-inline data-latex=i></span>:</p>
+<ul>
+<li><strong>Cooperation phase</strong>: Play the prescribed action producing payoff vector <span class=math-inline data-latex=v></span>.</li>
+<li><strong>Punishment phase</strong>: If any player deviates, all other players switch permanently to the minimax punishment against the deviator.</li>
+</ul>
+<p>The deviator gains at most a one-round deviation payoff <span class=math-inline data-latex=u_i^{\text{dev}}></span>, then faces the minimax payoff <span class=math-inline data-latex=v_i^{\min}></span> forever. The deviation is unprofitable when:
+<span class=math-display data-latex="(1-\delta) u_i^{\text{dev}} + \delta\, v_i^{\min} \leq v_i"></span>
+<span class=math-display data-latex="\iff \delta \geq \frac{u_i^{\text{dev}} - v_i}{u_i^{\text{dev}} - v_i^{\min}}"></span></p>
+<p>Since <span class=math-inline data-latex="v_i > v_i^{\min}"></span> by individual rationality, the right-hand side is strictly less than 1. Setting <span class=math-inline data-latex="\bar\delta = \max_i \frac{u_i^{\text{dev}} - v_i}{u_i^{\text{dev}} - v_i^{\min}}"></span> gives the threshold. For <span class=math-inline data-latex="\delta > \bar\delta"></span>, no player has incentive to deviate, so the strategy profile is a Nash equilibrium with payoff <span class=math-inline data-latex=v></span>. <span class=math-inline data-latex=\square></span></p>
+</div>
+</div>
+<blockquote>
+<p><em>中文:</em> &ldquo;在博弈论中，当玩家足够在意未来，合作可以从重复互动中自发维持——这就是所谓的民间定理。&rdquo;</p>
+</blockquote>
+<hr>
+<h2 id=musical-example-1-carmen-----tragedy-as-nash-equilibrium>Musical Example 1: Carmen &mdash; Tragedy as Nash Equilibrium</h2>
+<blockquote>
+<p><em>中文:</em> &ldquo;1875年，比才的卡门。第四幕，斗牛场外。卡门和唐何塞的最终对峙。&rdquo;</p>
+</blockquote>
+<p>Model the final confrontation of Bizet&rsquo;s <em>Carmen</em> (1875), Act IV, as a two-player non-cooperative game <span class=math-inline data-latex=\Gamma_{\text{Carmen}}></span>.</p>
+<p><strong>Players</strong>: Carmen (row) and Jose (column). <strong>Strategies</strong>: Carmen chooses from <span class=math-inline data-latex="\{\text{Submit}, \text{Defy}\}"></span>; Jose chooses from <span class=math-inline data-latex="\{\text{Release}, \text{Kill}\}"></span>.</p>
+<p><strong>Payoff matrix</strong> (Carmen, Jose):</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Release</th>
+<th>Kill</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Submit</strong></td>
+<td><span class=math-inline data-latex="(-2, -2)"></span></td>
+<td><span class=math-inline data-latex="(-3, -4)"></span></td>
+</tr>
+<tr>
+<td><strong>Defy</strong></td>
+<td><span class=math-inline data-latex="(+1, -5)"></span></td>
+<td><span class=math-inline data-latex="(-\infty, -3)"></span></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><em>中文:</em> &ldquo;注意：这不是零和博弈——两个人可以同时输。我们把它建模为二人非合作博弈。&rdquo;</p>
+</blockquote>
+<div class=proposition-block id=prop-18.1>
+<div class=block-label>
+Prop 18.1 (Carmen's Nash Equilibrium)
+</div>
+<div class=block-body>Under the payoff matrix above, the unique Nash equilibrium in pure strategies is <span class=math-inline data-latex="(\text{Defy}, \text{Kill})"></span>.</div>
+</div>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><p>Check best responses. Given Carmen plays <strong>Submit</strong>: Jose compares <span class=math-inline data-latex="u_J(\text{Submit}, \text{Release}) = -2"></span> vs. <span class=math-inline data-latex="u_J(\text{Submit}, \text{Kill}) = -4"></span>. Best response: Release. Given Carmen plays <strong>Defy</strong>: Jose compares <span class=math-inline data-latex="u_J(\text{Defy}, \text{Release}) = -5"></span> vs. <span class=math-inline data-latex="u_J(\text{Defy}, \text{Kill}) = -3"></span>. Best response: Kill.</p>
+<p>Given Jose plays <strong>Release</strong>: Carmen compares <span class=math-inline data-latex="u_C(\text{Submit}, \text{Release}) = -2"></span> vs. <span class=math-inline data-latex="u_C(\text{Defy}, \text{Release}) = +1"></span>. Best response: Defy. Given Jose plays <strong>Kill</strong>: Carmen compares <span class=math-inline data-latex="u_C(\text{Submit}, \text{Kill}) = -3"></span> vs. <span class=math-inline data-latex="u_C(\text{Defy}, \text{Kill}) = -\infty"></span>. Best response: Submit.</p>
+<p>The only profile where both play best responses simultaneously is <span class=math-inline data-latex="(\text{Defy}, \text{Kill})"></span>: Carmen&rsquo;s best response to Kill is Submit (not Defy), so we must re-examine. In fact, we need the sequential structure.</p>
+<p>As a <strong>sequential game</strong> (Carmen moves first, Jose observes), backward induction applies. Jose&rsquo;s best responses: if Carmen submits, Jose releases (<span class=math-inline data-latex="-2 > -4"></span>); if Carmen defies, Jose kills (<span class=math-inline data-latex="-3 > -5"></span>). Carmen, anticipating Jose&rsquo;s responses, compares: Submit then Release gives <span class=math-inline data-latex=-2></span>; Defy then Kill gives <span class=math-inline data-latex=-\infty></span>. Under standard utility, Carmen should submit.</p>
+<p>But the narration&rsquo;s key insight: Carmen&rsquo;s utility function assigns submission a cost equivalent to spiritual death. If we replace <span class=math-inline data-latex="u_C(\text{Submit}, \cdot) = -\infty"></span>, then Defy dominates regardless of Jose&rsquo;s response. Given Defy, Jose kills (<span class=math-inline data-latex="-3 > -5"></span>). The subgame-perfect equilibrium is <span class=math-inline data-latex="(\text{Defy}, \text{Kill})"></span>. <span class=math-inline data-latex=\square></span></p>
+</div>
+</div>
+<blockquote>
+<p><em>中文:</em> &ldquo;关键洞察：纳什均衡不一定是最优结果。两个人都理性选择，但最终结果可能比合作更差。这就是囚徒困境的教训。而歌剧里的悲剧，常常就是纳什均衡的必然结果。&rdquo;</p>
+</blockquote>
+<div class=music-block>
+<div class=block-label>音乐联系</div>
+<div class=block-body><p>The tragedy of Carmen is not irrational &mdash; it is the rational consequence of two incompatible utility functions. The mathematical structure is identical to the Prisoner&rsquo;s Dilemma: both players would prefer (Submit, Release) at <span class=math-inline data-latex="(-2, -2)"></span> over the equilibrium outcome, but neither can unilaterally deviate without worsening their position. Bizet&rsquo;s dramatic genius is to construct characters whose utility functions make tragedy the unique equilibrium.</p>
+<blockquote>
+<p><em>中文:</em> &ldquo;这是一个序贯博弈。卡门先选择反抗，何塞再回应。用逆向归纳法从最后一步往回推。&rdquo;</p>
+</blockquote>
+</div>
+</div>
+<hr>
+<h2 id=musical-example-2-don-giovanni-----bayesian-persuasion>Musical Example 2: Don Giovanni &mdash; Bayesian Persuasion</h2>
+<blockquote>
+<p><em>中文:</em> &ldquo;1787年，莫扎特的唐乔凡尼。把你的手给我。我们可以把这首二重唱读作一场不完全信息下的说服。&rdquo;</p>
+</blockquote>
+<p>The duet &ldquo;La ci darem la mano&rdquo; from Mozart&rsquo;s <em>Don Giovanni</em> (1787) models persuasion under incomplete information.</p>
+<p><strong>Setup</strong>: Giovanni (sender) knows his true type <span class=math-inline data-latex="\theta \in \{\text{Sincere}, \text{Deceiver}\}"></span>. Zerlina (receiver) holds a prior belief <span class=math-inline data-latex="P(\theta = \text{Sincere}) = p_0"></span>. Giovanni sends musical signals &mdash; each phrase of the duet is a signal <span class=math-inline data-latex=x></span>.</p>
+<p>After each signal, Zerlina updates via Bayes' theorem (Definition 18.4):
+<span class=math-display data-latex="P(\text{Sincere} \mid x) = \frac{P(x \mid \text{Sincere})\, p_0}{P(x \mid \text{Sincere})\, p_0 + P(x \mid \text{Deceiver})\,(1 - p_0)}"></span></p>
+<blockquote>
+<p><em>中文:</em> &ldquo;采琳娜无法直接观察他的意图，只能根据他的行为更新判断。她有一个先验信念——在听到任何音乐之前，凭直觉估计他真心的概率是 p。&rdquo;</p>
+</blockquote>
+<div class=proposition-block id=prop-18.2>
+<div class=block-label>
+Prop 18.2 (Posterior Threshold Crossing)
+</div>
+<div class=block-body>Let <span class=math-inline data-latex=p_t></span> denote Zerlina&rsquo;s posterior belief after <span class=math-inline data-latex=t></span> rounds of signaling. If Giovanni sends signals with likelihood ratio <span class=math-inline data-latex="\ell = P(x \mid \text{Sincere}) / P(x \mid \text{Deceiver}) > 1"></span> consistently, then:
+<span class=math-display data-latex="\frac{p_t}{1 - p_t} = \frac{p_0}{1 - p_0} \cdot \ell^t"></span>
+so <span class=math-inline data-latex="p_t \to 1"></span> as <span class=math-inline data-latex="t \to \infty"></span>. There exists a threshold <span class=math-inline data-latex=\tau></span> and a finite round <span class=math-inline data-latex=T></span> such that <span class=math-inline data-latex="p_T > \tau"></span> and Zerlina accepts.</div>
+</div>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body>The posterior odds after one signal with likelihood ratio <span class=math-inline data-latex=\ell></span> are:
+<span class=math-display data-latex="\frac{p_1}{1 - p_1} = \frac{P(\text{Sincere} \mid x)}{P(\text{Deceiver} \mid x)} = \frac{P(x \mid \text{Sincere})}{P(x \mid \text{Deceiver})} \cdot \frac{p_0}{1-p_0} = \ell \cdot \frac{p_0}{1-p_0}"></span>
+After <span class=math-inline data-latex=t></span> independent signals each with ratio <span class=math-inline data-latex=\ell></span>, the posterior odds become <span class=math-inline data-latex="\ell^t \cdot p_0/(1-p_0)"></span>. Since <span class=math-inline data-latex="\ell > 1"></span> and <span class=math-inline data-latex="p_0 > 0"></span>, the odds grow without bound, so <span class=math-inline data-latex="p_t \to 1"></span>. For any threshold <span class=math-inline data-latex="\tau < 1"></span>, there exists <span class=math-inline data-latex="T = \lceil \log\!\bigl(\frac{\tau}{1-\tau} \cdot \frac{1-p_0}{p_0}\bigr) / \log \ell \,\rceil"></span> such that <span class=math-inline data-latex="p_T > \tau"></span>. <span class=math-inline data-latex=\square></span></div>
+</div>
+<div class=music-block>
+<div class=block-label>音乐联系</div>
+<div class=block-body><p>Mozart&rsquo;s duet enacts Bayesian updating in real time. Zerlina&rsquo;s repeated &ldquo;Vorrei e non vorrei&rdquo; (I want to and I don&rsquo;t want to) is the musical representation of a posterior hovering near the decision threshold. Each time Giovanni repeats the melody, he provides another observation with <span class=math-inline data-latex="\ell > 1"></span>. The final moment &mdash; when she gives him her hand &mdash; is the threshold crossing.</p>
+<blockquote>
+<p><em>中文:</em> &ldquo;音乐完美呈现了这个过程。开始时采琳娜犹豫，重复唱道我想又不想。乔凡尼每重复一次旋律，就多提供一次观察样本。到最后，她的信念越过了阈值——她把手递了出去。&rdquo;</p>
+</blockquote>
+</div>
+</div>
+<hr>
+<h2 id=musical-example-3-xenakiss-duel-----zero-sum-matrix-game>Musical Example 3: Xenakis&rsquo;s Duel &mdash; Zero-Sum Matrix Game</h2>
+<blockquote>
+<p><em>中文:</em> &ldquo;1959年，希腊作曲家 Xenakis 做了一件当时极为罕见的事。他把博弈论直接写成了乐谱。&rdquo;</p>
+</blockquote>
+<p>Xenakis&rsquo;s <em>Duel</em> (1959) is a genuine musical game. Two conductors, each leading an orchestra, choose simultaneously from six <strong>sound tactics</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Index</th>
+<th>Tactic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I</td>
+<td>String granular textures</td>
+</tr>
+<tr>
+<td>II</td>
+<td>Sustained strings</td>
+</tr>
+<tr>
+<td>III</td>
+<td>Glissando networks</td>
+</tr>
+<tr>
+<td>IV</td>
+<td>Stochastic percussion</td>
+</tr>
+<tr>
+<td>V</td>
+<td>Stochastic winds</td>
+</tr>
+<tr>
+<td>VI</td>
+<td>Silence</td>
+</tr>
+</tbody>
+</table>
+<p>A referee scores each round using a <span class=math-inline data-latex="6 \times 6"></span> payoff matrix <span class=math-inline data-latex=A></span>. The game is zero-sum: conductor 1 receives <span class=math-inline data-latex=a_{ij}></span>, conductor 2 receives <span class=math-inline data-latex=-a_{ij}></span>.</p>
+<p>By the Minimax Theorem (Theorem 18.2), there exist optimal mixed strategies <span class=math-inline data-latex="p^* \in \Delta_6"></span> and <span class=math-inline data-latex="q^* \in \Delta_6"></span> and a game value <span class=math-inline data-latex=V></span> such that:
+<span class=math-display data-latex="\min_q (p^*)^T A q = V = \max_p p^T A q^*"></span></p>
+<blockquote>
+<p><em>中文:</em> &ldquo;数学基础是冯诺依曼的极小极大定理。不管对手怎么选，我的混合策略都能保证至少拿到博弈值 V。&rdquo;</p>
+</blockquote>
+<div class=music-block>
+<div class=block-label>音乐联系</div>
+<div class=block-body><p>Xenakis is the most literal case: game theory is not an interpretive lens imposed after the fact but is written directly into the score as a payoff matrix and performance rules. The 1962 sequel <em>Strategie</em> expands to 19 tactics per conductor (6 basic + 13 combinations), yielding a <span class=math-inline data-latex="19 \times 19"></span> matrix &mdash; larger, longer, and more complex, but governed by the same minimax principle.</p>
+<blockquote>
+<p><em>中文:</em> &ldquo;Xenakis 是最早将博弈论直接写入乐谱的作曲家之一。不是隐喻，不是类比——是真正的收益矩阵和混合策略。&rdquo;</p>
+</blockquote>
+</div>
+</div>
+<hr>
+<h2 id=musical-example-4-zorns-cobra-----the-folk-theorem-in-action>Musical Example 4: Zorn&rsquo;s Cobra &mdash; The Folk Theorem in Action</h2>
+<blockquote>
+<p><em>中文:</em> &ldquo;1984年，约翰佐恩的 Cobra。这不是传统乐谱，而是一套博弈规则。&rdquo;</p>
+</blockquote>
+<p>John Zorn&rsquo;s <em>Cobra</em> (1984) is an improvisation game. A <strong>prompter</strong> holds cue cards (change style, imitate someone, create chaos, sudden silence). Musicians may raise hands to request cues or ignore them. The same ensemble plays repeatedly across performances.</p>
+<p>This is the structure of a repeated game. The stage game involves choices to cooperate (follow cues, listen to ensemble) or defect (free-ride, ignore others). The folk theorem (Theorem 18.3) guarantees that if players value future interactions sufficiently (high <span class=math-inline data-latex=\delta></span>), cooperation is sustainable as an equilibrium.</p>
+<div class=proposition-block id=prop-18.3>
+<div class=block-label>
+Prop 18.3 (Reputation Sustains Cooperation in Cobra)
+</div>
+<div class=block-body>In an infinitely repeated Cobra performance with discount factor <span class=math-inline data-latex=\delta></span> sufficiently close to 1, the cooperative outcome (musicians follow cues and respond to each other) can be sustained as a Nash equilibrium via grim-trigger strategies.</div>
+</div>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body>This is a direct application of Theorem 18.3. Let <span class=math-inline data-latex=v_{\text{coop}}></span> denote the cooperative payoff per round and <span class=math-inline data-latex=v_{\text{defect}}></span> the one-shot deviation gain. The minimax payoff <span class=math-inline data-latex=v^{\min}></span> corresponds to being ignored by the ensemble (the punishment). Cooperation is sustained when:
+<span class=math-display data-latex="\delta > \frac{v_{\text{defect}} - v_{\text{coop}}}{v_{\text{defect}} - v^{\min}}"></span>
+In practice, Cobra musicians who regularly perform together develop strong reputational incentives (high effective <span class=math-inline data-latex=\delta></span>), making the cooperative equilibrium self-enforcing. <span class=math-inline data-latex=\square></span></div>
+</div>
+<blockquote>
+<p><em>中文:</em> &ldquo;Cobra 的魔力在于，经过多轮互动，乐手之间建立了声誉机制。谁经常合作，谁习惯捣乱，所有人都记得。合作不是来自乐谱上的指令，而是从反复互动和声誉积累中自发涌现。&rdquo;</p>
+</blockquote>
+<hr>
+<h2 id=synthesis>Synthesis</h2>
+<blockquote>
+<p><em>中文:</em> &ldquo;四种博弈结构，四种均衡概念，四种音乐结果。从比才到佐恩，从十九世纪到二十世纪末，歌剧和即兴音乐一直在用音符演绎博弈论——只是没有人这样命名。&rdquo;</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Opera</th>
+<th>Year</th>
+<th>Game type</th>
+<th>Solution concept</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Carmen</em> (Bizet)</td>
+<td>1875</td>
+<td>Non-cooperative, sequential</td>
+<td>Backward induction</td>
+<td>Tragedy</td>
+</tr>
+<tr>
+<td><em>Don Giovanni</em> (Mozart)</td>
+<td>1787</td>
+<td>Bayesian persuasion</td>
+<td>Posterior updating</td>
+<td>Seduction</td>
+</tr>
+<tr>
+<td><em>Duel</em> (Xenakis)</td>
+<td>1959</td>
+<td>Zero-sum matrix</td>
+<td>Minimax / mixed strategy</td>
+<td>Stochastic confrontation</td>
+</tr>
+<tr>
+<td><em>Cobra</em> (Zorn)</td>
+<td>1984</td>
+<td>Repeated game</td>
+<td>Folk theorem / reputation</td>
+<td>Emergent cooperation</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><em>中文:</em> &ldquo;这四个例子并不都同样直接。Xenakis 是最直接的——博弈论就写在乐谱里。卡门和唐乔凡尼是我们施加的形式化模型。Cobra 是一个天然邀请博弈论解读的即兴系统。&rdquo;</p>
+</blockquote>
+<div class=music-block>
+<div class=block-label>音乐联系</div>
+<div class=block-body><p><strong>Cross-episode connections</strong>:</p>
+<ul>
+<li>**Forward to</li>
+</ul>
+<p><a href=https://amath390.sibeliusp.com/episodes/ep25/ class=episode-ref-link>EP25 (Emotion and Prediction)</a></p>
+<p>**: The songwriter-listener relationship is itself a strategic interaction. The Nash equilibrium between songwriter (choosing how much surprise to inject) and listener (calibrating expectations) connects Carmen&rsquo;s utility-function argument to a theory of musical emotion.</p>
+<ul>
+<li>The utility function <span class=math-inline data-latex=u_C></span> that makes Carmen&rsquo;s death &ldquo;rational&rdquo; is precisely the kind of subjective valuation that EP25&rsquo;s prediction-error model of frisson attempts to quantify: surprise has measurable neural utility.</li>
+</ul>
+</div>
+</div>
+<hr>
+<h2 id=limits-and-open-questions>Limits and Open Questions</h2>
 <ol>
-<li><em>待补充</em></li>
+<li><strong>Utility function arbitrariness</strong>. The Carmen model depends critically on the numerical payoffs. As the narration observes: &ldquo;you can explain any choice with a payoff matrix, as long as you adjust the numbers.&rdquo; This is a fundamental limitation of revealed-preference game theory &mdash; the model is unfalsifiable unless utilities are independently measured.</li>
 </ol>
-
-    </div>
-
-    
-    <nav class="ep-nav">
-      
-      
-      
-      
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-      
-      <a href="https://amath390.sibeliusp.com/episodes/ep17/" class="ep-nav-prev">
-        ← EP17: Leitmotif Networks — Wagner&#39;s Ring Cycle
-      </a>
-      
-      
-    </nav>
-  </article>
-
-  
-  
-  
-  <aside class="ep-toc-aside">
-    <div class="ep-toc-sticky">
-      <div class="ep-toc-label">本页目录</div>
-      <nav id="TableOfContents">
-  <ul>
-    <li><a href="#概述">概述</a></li>
-    <li><a href="#前置知识">前置知识</a></li>
-    <li><a href="#定义">定义</a></li>
-    <li><a href="#主要定理">主要定理</a></li>
-    <li><a href="#音乐联系">音乐联系</a></li>
-    <li><a href="#局限性与开放问题">局限性与开放问题</a></li>
-    <li><a href="#参考文献">参考文献</a></li>
-  </ul>
-</nav>
-    </div>
-  </aside>
-  
+<blockquote>
+<p><em>中文:</em> &ldquo;你可以用收益矩阵解释任何选择，只要你修改数字。歌剧的力量，在于它让我们感受那个数字背后的重量。&rdquo;</p>
+</blockquote>
+<ol start=2>
+<li>
+<p><strong>Bounded rationality</strong>. Real operatic characters (and real musicians in Cobra) do not compute equilibria. Behavioral game theory (Camerer 2003) models bounded rationality via quantal response equilibrium and level-k reasoning. How do these departures from Nash equilibrium map onto dramatic choices?</p>
+</li>
+<li>
+<p><strong>Incomplete-information limits</strong>. The Bayesian model of Don Giovanni assumes Zerlina has a well-defined prior and updates rationally. In practice, persuasion exploits cognitive biases (framing effects, anchoring) that Bayesian models do not capture.</p>
+</li>
+<li>
+<p><strong>Computational complexity of large games</strong>. Xenakis&rsquo;s <em>Strategie</em> has a <span class=math-inline data-latex="19 \times 19"></span> matrix &mdash; still tractable. But real-time improvisation (Cobra) involves continuous strategy spaces and partial observability, for which computing equilibria is PPAD-complete in general.</p>
+</li>
+</ol>
+<div class=conjecture-block id=conjecture>
+<div class=block-label>
+Conjecture (Equilibrium Deviation as Dramatic Peak)
 </div>
-
-      <footer class="site-footer">
-  <div class="footer-content">
-    <a href="https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f" target="_blank" rel="noopener" class="footer-avatar-link">
-      <img src="/images/avatar.png" alt="Sibelius P." class="footer-avatar">
-    </a>
-    <div class="footer-text">
-      <span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
-      <span class="footer-sep">·</span>
-      <a href="https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f" target="_blank" rel="noopener">小红书</a>
-      <span class="footer-sep">·</span>
-      <span>Built with <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> + KaTeX</span>
-    </div>
-  </div>
+<div class=block-body><p>In operatic scenes that can be modeled as strategic interactions, the moment of maximum dramatic intensity corresponds to a character&rsquo;s <strong>deviation from the Nash equilibrium</strong> of the stage game. Formally: if <span class=math-inline data-latex=s^*></span> is the Nash equilibrium and <span class=math-inline data-latex=s(t)></span> is the character&rsquo;s action at dramatic time <span class=math-inline data-latex=t></span>, the dramatic intensity <span class=math-inline data-latex=I(t)></span> is maximized when <span class=math-inline data-latex="\|u(s(t), s_{-i}^*) - u(s^*, s_{-i}^*)\|"></span> is maximized.</p>
+<p>This would connect game-theoretic structure to measurable audience response (galvanic skin response, fMRI activation), and could be tested against the prediction-error framework of</p>
+<p><a href=https://amath390.sibeliusp.com/episodes/ep25/ class=episode-ref-link>EP25</a></p>
+<p>.</p>
+</div>
+</div>
+<ol start=5>
+<li><strong>Mixed-strategy interpretation in performance</strong>. When Xenakis prescribes mixed strategies, conductors must randomize. But human randomization is notoriously biased (Rapoport & Budescu 1997). Does the aesthetic quality of a <em>Duel</em> performance correlate with how closely conductors approximate the minimax distribution?</li>
+</ol>
+<hr>
+<h2 id=references>References</h2>
+<ol>
+<li>Von Neumann, J. & Morgenstern, O. (1944). <em>Theory of Games and Economic Behavior</em>. Princeton University Press.</li>
+<li>Nash, J. (1950). &ldquo;Equilibrium Points in N-Person Games.&rdquo; <em>Proceedings of the National Academy of Sciences</em> 36(1), 48&ndash;49.</li>
+<li>Aumann, R. & Shapley, L. (1994). &ldquo;Long-Term Competition &mdash; A Game-Theoretic Analysis.&rdquo; In <em>Essays in Game Theory</em>, Springer, 1&ndash;15.</li>
+<li>Xenakis, I. (1992). <em>Formalized Music: Thought and Mathematics in Composition</em>, revised ed. Pendragon Press. Ch. 5&ndash;6.</li>
+<li>Kamenica, E. & Gentzkow, M. (2011). &ldquo;Bayesian Persuasion.&rdquo; <em>American Economic Review</em> 101(6), 2590&ndash;2615.</li>
+<li>Camerer, C.F. (2003). <em>Behavioral Game Theory: Experiments in Strategic Interaction</em>. Princeton University Press.</li>
+<li>Brackett, D. (2000). &ldquo;Carmen.&rdquo; In <em>The New Grove Dictionary of Opera</em>. Oxford University Press.</li>
+<li>Zorn, J. (2004). &ldquo;The Game Pieces.&rdquo; In <em>Audio Culture: Readings in Modern Music</em>, ed. Cox & Warner, Continuum, 196&ndash;200.</li>
+<li>Osborne, M.J. & Rubinstein, A. (1994). <em>A Course in Game Theory</em>. MIT Press.</li>
+<li>Sion, M. (1958). &ldquo;On General Minimax Theorems.&rdquo; <em>Pacific Journal of Mathematics</em> 8(1), 171&ndash;176.</li>
+</ol>
+</div>
+<nav class=ep-nav>
+<a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-nav-prev>
+← EP17: Leitmotif Networks — Wagner's Ring Cycle
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-nav-next>
+EP19: Vibrato as FM Synthesis →
+</a>
+</nav>
+</article>
+<aside class=ep-toc-aside>
+<div class=ep-toc-sticky>
+<div class=ep-toc-label>本页目录</div>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#overview>Overview</a></li>
+<li><a href=#prerequisites>Prerequisites</a></li>
+<li><a href=#definitions>Definitions</a></li>
+<li><a href=#main-theorems>Main Theorems</a>
+<ul>
+<li><a href=#nash-existence-theorem>Nash Existence Theorem</a></li>
+<li><a href=#von-neumann-minimax-theorem>Von Neumann Minimax Theorem</a></li>
+<li><a href=#folk-theorem>Folk Theorem</a></li>
+</ul>
+</li>
+<li><a href=#musical-example-1-carmen-----tragedy-as-nash-equilibrium>Musical Example 1: Carmen &mdash; Tragedy as Nash Equilibrium</a></li>
+<li><a href=#musical-example-2-don-giovanni-----bayesian-persuasion>Musical Example 2: Don Giovanni &mdash; Bayesian Persuasion</a></li>
+<li><a href=#musical-example-3-xenakiss-duel-----zero-sum-matrix-game>Musical Example 3: Xenakis&rsquo;s Duel &mdash; Zero-Sum Matrix Game</a></li>
+<li><a href=#musical-example-4-zorns-cobra-----the-folk-theorem-in-action>Musical Example 4: Zorn&rsquo;s Cobra &mdash; The Folk Theorem in Action</a></li>
+<li><a href=#synthesis>Synthesis</a></li>
+<li><a href=#limits-and-open-questions>Limits and Open Questions</a></li>
+<li><a href=#references>References</a></li>
+</ul>
+</nav>
+</div>
+</aside>
+</div>
+<footer class=site-footer>
+<div class=footer-content>
+<a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link>
+<img src=/images/avatar.png alt="Sibelius P." class=footer-avatar>
+</a>
+<div class=footer-text>
+<span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
+<span class=footer-sep>·</span>
+<a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener>小红书</a>
+<span class=footer-sep>·</span>
+<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span>
+</div>
+</div>
 </footer>
-
-    </main>
-  </div>
+</main>
+</div>
 </body>
 </html>

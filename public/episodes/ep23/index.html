@@ -1,1067 +1,663 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
+<!doctype html><html lang=zh-cn>
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
 <title>EP23: Can AI Understand Music? Latent Space and Information Bottleneck | AMATH 390 数学与音乐</title>
-<meta name="description" content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('[data-latex]').forEach(function(el) {
-    try {
-      katex.render(el.getAttribute('data-latex'), el, {
-        displayMode: el.classList.contains('math-display'),
-        throwOnError: false
-      });
-    } catch(e) { console.warn('KaTeX:', e.message, el); }
-  });
-});
-</script>
-
-
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
-
-<link rel="stylesheet" href="/css/amath390.css">
-
+<meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script>
+<script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('[data-latex]').forEach(function(a){try{katex.render(a.getAttribute('data-latex'),a,{displayMode:a.classList.contains('math-display'),throwOnError:!1})}catch(b){console.warn('KaTeX:',b.message,a)}})})</script>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16.png>
+<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+<link rel=stylesheet href=/css/amath390.css>
 </head>
 <body>
-  <div class="layout-wrapper">
-    
-
-
-<nav class="sidebar">
-  <div class="sidebar-header">
-    <a href="/" class="sidebar-title">AMATH 390</a>
-    <div class="sidebar-subtitle">数学与音乐</div>
-  </div>
-
-  
-
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">数学基础篇</div>
-        
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep01/"
-               class="ep-link">
-              <span class="ep-num">01</span>
-              <span class="ep-title">Chord Space and the Torus</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep02/"
-               class="ep-link">
-              <span class="ep-num">02</span>
-              <span class="ep-title">String Vibration and the Wave Equation</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep03/"
-               class="ep-link">
-              <span class="ep-num">03</span>
-              <span class="ep-title">Bach and Graph Connectivity</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep04/"
-               class="ep-link">
-              <span class="ep-num">04</span>
-              <span class="ep-title">All-Interval Rows and ℤ₁₂</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep05/"
-               class="ep-link">
-              <span class="ep-num">05</span>
-              <span class="ep-title">Turán&#39;s Theorem and Counterpoint</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep06/"
-               class="ep-link">
-              <span class="ep-num">06</span>
-              <span class="ep-title">Graph Coloring and Voice Assignment</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep07/"
-               class="ep-link">
-              <span class="ep-num">07</span>
-              <span class="ep-title">Information Entropy and All-Interval Rows</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep08/"
-               class="ep-link">
-              <span class="ep-num">08</span>
-              <span class="ep-title">Shepard Tones and the Tritone Paradox</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep09/"
-               class="ep-link">
-              <span class="ep-num">09</span>
-              <span class="ep-title">Combination Tones and Nonlinear Acoustics</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">Jacob Collier 系列</div>
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep10/"
-               class="ep-link">
-              <span class="ep-num">10</span>
-              <span class="ep-title">Negative Harmony and the Dihedral Group D₁₂</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep11/"
-               class="ep-link">
-              <span class="ep-num">11</span>
-              <span class="ep-title">Comma Drift and the Impossibility of Perfect Tuning</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep12/"
-               class="ep-link">
-              <span class="ep-num">12</span>
-              <span class="ep-title">The Circle of Fifths as a Folded Spiral</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep13/"
-               class="ep-link">
-              <span class="ep-num">13</span>
-              <span class="ep-title">Polyrhythm and Rhythm-Pitch Duality</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">拓扑数学专篇</div>
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep14/"
-               class="ep-link">
-              <span class="ep-num">14</span>
-              <span class="ep-title">Tonnetz Hodge Duality</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-      
-      <div class="arc-group">
-        <div class="arc-label">歌剧系列</div>
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep15/"
-               class="ep-link">
-              <span class="ep-num">15</span>
-              <span class="ep-title">Opera Acoustics and the Singer&#39;s Formant</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep16/"
-               class="ep-link">
-              <span class="ep-num">16</span>
-              <span class="ep-title">Rossini&#39;s Code — Budden, Gossett, and the Convention System</span>
-            </a>
-          
-        
-          
-          
-            <a href="https://amath390.sibeliusp.com/episodes/ep17/"
-               class="ep-link">
-              <span class="ep-num">17</span>
-              <span class="ep-title">Leitmotif Networks — Wagner&#39;s Ring Cycle</span>
-            </a>
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </div>
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-
-  <div class="sidebar-footer">
-    <a href="/theorems/">定理索引</a>
-    <a href="/domains/">数学领域</a>
-    <a href="/about/">关于</a>
-  </div>
+<div class=layout-wrapper>
+<nav class=sidebar>
+<div class=sidebar-header>
+<a href=/ class=sidebar-title>AMATH 390</a>
+<div class=sidebar-subtitle>数学与音乐</div>
+</div>
+<div class=arc-group>
+<div class=arc-label>数学基础篇</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link>
+<span class=ep-num>01</span>
+<span class=ep-title>Chord Space and the Torus</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep02/ class=ep-link>
+<span class=ep-num>02</span>
+<span class=ep-title>String Vibration and the Wave Equation</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link>
+<span class=ep-num>03</span>
+<span class=ep-title>Bach and Graph Connectivity</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link>
+<span class=ep-num>04</span>
+<span class=ep-title>All-Interval Rows and ℤ₁₂</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link>
+<span class=ep-num>05</span>
+<span class=ep-title>Turán's Theorem and Counterpoint</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-link>
+<span class=ep-num>06</span>
+<span class=ep-title>Graph Coloring and Voice Assignment</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-link>
+<span class=ep-num>07</span>
+<span class=ep-title>Information Entropy and All-Interval Rows</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-link>
+<span class=ep-num>08</span>
+<span class=ep-title>Shepard Tones and the Tritone Paradox</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link>
+<span class=ep-num>09</span>
+<span class=ep-title>Combination Tones and Nonlinear Acoustics</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>Jacob Collier 系列</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep10/ class=ep-link>
+<span class=ep-num>10</span>
+<span class=ep-title>Negative Harmony and the Dihedral Group D₁₂</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link>
+<span class=ep-num>11</span>
+<span class=ep-title>Comma Drift and the Impossibility of Perfect Tuning</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep12/ class=ep-link>
+<span class=ep-num>12</span>
+<span class=ep-title>The Circle of Fifths as a Folded Spiral</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-link>
+<span class=ep-num>13</span>
+<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>拓扑数学专篇</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-link>
+<span class=ep-num>14</span>
+<span class=ep-title>Tonnetz Hodge Duality</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>歌剧系列</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-link>
+<span class=ep-num>15</span>
+<span class=ep-title>Opera Acoustics and the Singer's Formant</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link>
+<span class=ep-num>16</span>
+<span class=ep-title>Rossini's Code — Budden, Gossett, and the Convention System</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-link>
+<span class=ep-num>17</span>
+<span class=ep-title>Leitmotif Networks — Wagner's Ring Cycle</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-link>
+<span class=ep-num>18</span>
+<span class=ep-title>Game Theory in Operatic Duets</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link>
+<span class=ep-num>19</span>
+<span class=ep-title>Vibrato as FM Synthesis</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-link>
+<span class=ep-num>20</span>
+<span class=ep-title>Character Interaction Networks in Opera</span>
+</a>
+</div>
+<div class=arc-group>
+<div class=arc-label>AI 音乐三部曲</div>
+<a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-link>
+<span class=ep-num>21</span>
+<span class=ep-title>From Markov to Diffusion — Sixty Years of AI Composition</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-link>
+<span class=ep-num>22</span>
+<span class=ep-title>How AI Writes Music — EnCodec and RVQ</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep23/ class="ep-link active">
+<span class=ep-num>23</span>
+<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span>
+</a>
+</div>
+<div class=sidebar-footer>
+<a href=/theorems/>定理索引</a>
+<a href=/domains/>数学领域</a>
+<a href=/about/>关于</a>
+</div>
 </nav>
-
-    <main class="main-content">
-      
-
-
-
-<div class="episode-layout">
-  <article class="episode-page">
-    <header class="episode-header">
-  <div class="ep-badge">EP23</div>
-  <h1 class="ep-main-title">EP23: Can AI Understand Music? Latent Space and Information Bottleneck</h1>
-  <div class="ep-subtitle">潜空间几何, 码本探测, 信息瓶颈</div>
-
-  <div class="ep-meta">
-    
-    <span class="meta-item">
-      <span class="meta-icon">▶</span> 7:48
-    </span>
-    
-    
-    <span class="meta-item domains">
-      <span class="domain-chip">Statistics/ML</span><span class="domain-chip">Information Theory</span>
-    </span>
-    
-  </div>
+<main class=main-content>
+<div class=episode-layout>
+<article class=episode-page>
+<header class=episode-header>
+<div class=ep-badge>EP23</div>
+<h1 class=ep-main-title>EP23: Can AI Understand Music? Latent Space and Information Bottleneck</h1>
+<div class=ep-subtitle>潜空间几何, 码本探测, 信息瓶颈</div>
+<div class=ep-meta>
+<span class=meta-item>
+<span class=meta-icon>▶</span> 7:48
+</span>
+<span class="meta-item domains">
+<span class=domain-chip>Statistics/ML</span><span class=domain-chip>Information Theory</span>
+</span>
+</div>
 </header>
-
-    
-
-
-<div class="cross-refs">
-  <h3 class="cross-refs-title">前置知识</h3>
-  <div class="ref-cards">
-    
-      
-      
-      
-      
-        <a href="https://amath390.sibeliusp.com/episodes/ep08/" class="ref-card callback">
-          <span class="ref-ep">EP08</span>
-          <span class="ref-title">Shepard Tones and the Tritone Paradox</span>
-        </a>
-      
-    
-      
-      
-      
-      
-        <a href="https://amath390.sibeliusp.com/episodes/ep14/" class="ref-card callback">
-          <span class="ref-ep">EP14</span>
-          <span class="ref-title">Tonnetz Hodge Duality</span>
-        </a>
-      
-    
-      
-      
-      
-      
-        <a href="https://amath390.sibeliusp.com/episodes/ep21/" class="ref-card callback">
-          <span class="ref-ep">EP21</span>
-          <span class="ref-title">From Markov to Diffusion — Sixty Years of AI Composition</span>
-        </a>
-      
-    
-  </div>
+<div class=cross-refs>
+<h3 class=cross-refs-title>前置知识</h3>
+<div class=ref-cards>
+<a href=https://amath390.sibeliusp.com/episodes/ep04/ class="ref-card callback">
+<span class=ref-ep>EP04</span>
+<span class=ref-title>All-Interval Rows and ℤ₁₂</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep08/ class="ref-card callback">
+<span class=ref-ep>EP08</span>
+<span class=ref-title>Shepard Tones and the Tritone Paradox</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep14/ class="ref-card callback">
+<span class=ref-ep>EP14</span>
+<span class=ref-title>Tonnetz Hodge Duality</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep21/ class="ref-card callback">
+<span class=ref-ep>EP21</span>
+<span class=ref-title>From Markov to Diffusion — Sixty Years of AI Composition</span>
+</a>
+<a href=https://amath390.sibeliusp.com/episodes/ep22/ class="ref-card callback">
+<span class=ref-ep>EP22</span>
+<span class=ref-title>How AI Writes Music — EnCodec and RVQ</span>
+</a>
 </div>
-
-
-
-
-
-
-
-
-    
-
-
-    <div class="episode-content content">
-      <h2 id="概述">概述</h2>
-<p><em>本页内容正在撰写中。请先观看<a href="#">小红书视频</a>了解核心概念。</em></p>
-<p>本集探讨：潜空间几何, 码本探测, 信息瓶颈。</p>
-<h2 id="前置知识">前置知识</h2>
-<!-- cross-refs partial handles callback links -->
-<h2 id="定义">定义</h2>
-<!-- 
-
-<div class="definition-block" id="definition">
-  <div class="block-label">
-    Definition (...)
-  </div>
-  <div class="block-body">&hellip;</div>
 </div>
- -->
-<h2 id="主要定理">主要定理</h2>
-<!-- 
-
-<div class="theorem-block" id="theorem-23.1">
-  <div class="block-label">
-    Theorem 23.1 (...)
-  </div>
-  <div class="block-body">&hellip;</div>
-</div>
- -->
-<!-- <div class="proof-block">
-  <div class="block-label">Proof.</div>
-  <div class="block-body">&hellip;</div>
-</div>
- -->
-<h2 id="音乐联系">音乐联系</h2>
-<!-- <div class="music-block">
-  <div class="block-label">音乐联系</div>
-  <div class="block-body">&hellip;</div>
-</div>
- -->
-<h2 id="局限性与开放问题">局限性与开放问题</h2>
-<h2 id="参考文献">参考文献</h2>
+<div class="episode-content content">
+<h2 id=overview>Overview</h2>
+<blockquote>
+<p><em>中文:</em> &ldquo;数学能量出形状，量不出意义。&rdquo;</p>
+</blockquote>
+<p>The previous episode (
+<a href=https://amath390.sibeliusp.com/episodes/ep22/ class=episode-ref-link>EP22</a>
+) showed how EnCodec compresses audio into a discrete codebook of 2048 vectors in <span class=math-inline data-latex=\mathbb{R}^{128}></span>. This episode asks the next question: <strong>what did the model learn to encode?</strong> Tonal structure? Rhythmic patterns? Something humans cannot name?</p>
+<p>We develop three mathematical frameworks to answer this:</p>
 <ol>
-<li><em>待补充</em></li>
+<li><strong>t-SNE</strong> reduces the 128-dimensional codebook to a 2D map, revealing that codewords cluster by musical key &mdash; without any supervision.</li>
+<li><strong>Linear probes</strong> formalize the notion of &ldquo;linearly decodable information&rdquo; in learned representations.</li>
+<li><strong>Information Bottleneck theory</strong> explains <em>why</em> a model forced to compress discovers musically meaningful structure: it must discard irrelevant detail while preserving predictive content.</li>
 </ol>
-
-    </div>
-
-    
-    <nav class="ep-nav">
-      
-      
-      
-      
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-        
-        
-        
-      
-      
-      <a href="https://amath390.sibeliusp.com/episodes/ep17/" class="ep-nav-prev">
-        ← EP17: Leitmotif Networks — Wagner&#39;s Ring Cycle
-      </a>
-      
-      
-    </nav>
-  </article>
-
-  
-  
-  
-  <aside class="ep-toc-aside">
-    <div class="ep-toc-sticky">
-      <div class="ep-toc-label">本页目录</div>
-      <nav id="TableOfContents">
-  <ul>
-    <li><a href="#概述">概述</a></li>
-    <li><a href="#前置知识">前置知识</a></li>
-    <li><a href="#定义">定义</a></li>
-    <li><a href="#主要定理">主要定理</a></li>
-    <li><a href="#音乐联系">音乐联系</a></li>
-    <li><a href="#局限性与开放问题">局限性与开放问题</a></li>
-    <li><a href="#参考文献">参考文献</a></li>
-  </ul>
-</nav>
-    </div>
-  </aside>
-  
+<p>The episode closes with Adam Neely&rsquo;s challenge: even if the geometry is real, <strong>structure is not meaning</strong>. Jazz cannot be interpolated from blues and ragtime, and individually generated music cannot replace communal listening. The central thesis:</p>
+<blockquote>
+<p><strong>AI learns the geometric structure of music. Whether that constitutes understanding depends on what we mean by the word.</strong></p>
+</blockquote>
+<hr>
+<h2 id=prerequisites>Prerequisites</h2>
+<ul>
+<li>
+<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=episode-ref-link>All-Interval Rows and <span class=math-inline data-latex=\mathbb{Z}_{12}></span> (EP04)</a>
+&mdash; cyclic group of pitch classes, circle of fifths</li>
+<li>
+<a href=https://amath390.sibeliusp.com/episodes/ep08/ class=episode-ref-link>Entropy and Information (EP08)</a>
+&mdash; Shannon entropy, KL divergence</li>
+<li>
+<a href=https://amath390.sibeliusp.com/episodes/ep14/ class=episode-ref-link>Tonnetz Hodge Duality (EP14)</a>
+&mdash; Tonnetz topology, torus structure of pitch space</li>
+<li>
+<a href=https://amath390.sibeliusp.com/episodes/ep21/ class=episode-ref-link>From Markov to Diffusion (EP21)</a>
+&mdash; attention mechanism, Transformer architecture</li>
+<li>
+<a href=https://amath390.sibeliusp.com/episodes/ep22/ class=episode-ref-link>EnCodec and RVQ (EP22)</a>
+&mdash; codebook vectors, residual vector quantization</li>
+</ul>
+<hr>
+<h2 id=part-i-probing-the-codebook>Part I: Probing the Codebook</h2>
+<h3 id=231-t-sne-visualizing-high-dimensional-structure>23.1 t-SNE: Visualizing High-Dimensional Structure</h3>
+<blockquote>
+<p><em>中文:</em> &ldquo;人眼看不见128维空间，但有一种叫t分布随机近邻嵌入的方法，可以把高维向量投影到一张二维图上。&rdquo;</p>
+</blockquote>
+<p>The EnCodec codebook consists of <span class=math-inline data-latex="N = 2048"></span> vectors in <span class=math-inline data-latex=\mathbb{R}^{128}></span>. We need a method that faithfully represents local neighborhood relationships in two dimensions.</p>
+<div class=definition-block id=definition-23.1>
+<div class=block-label>
+Definition 23.1 (Pairwise Affinity (High-Dimensional))
 </div>
-
-      <footer class="site-footer">
-  <div class="footer-content">
-    <a href="https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f" target="_blank" rel="noopener" class="footer-avatar-link">
-      <img src="/images/avatar.png" alt="Sibelius P." class="footer-avatar">
-    </a>
-    <div class="footer-text">
-      <span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
-      <span class="footer-sep">·</span>
-      <a href="https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f" target="_blank" rel="noopener">小红书</a>
-      <span class="footer-sep">·</span>
-      <span>Built with <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> + KaTeX</span>
-    </div>
-  </div>
+<div class=block-body><p>Given points <span class=math-inline data-latex="x_1, \ldots, x_N \in \mathbb{R}^{128}"></span>, define the conditional similarity of <span class=math-inline data-latex=x_j></span> to <span class=math-inline data-latex=x_i></span> as</p>
+<p><span class=math-display data-latex="p_{j|i} = \frac{\exp\!\bigl(-\|x_i - x_j\|^2 / 2\sigma_i^2\bigr)}{\sum_{k \neq i} \exp\!\bigl(-\|x_i - x_k\|^2 / 2\sigma_i^2\bigr)}"></span></p>
+<p>where <span class=math-inline data-latex=\sigma_i></span> is chosen so that the perplexity of the conditional distribution <span class=math-inline data-latex=P_i></span> equals a user-specified target (typically 5&ndash;50). The <strong>symmetrized affinity</strong> is</p>
+<p><span class=math-display data-latex="p_{ij} = \frac{p_{j|i} + p_{i|j}}{2N}"></span></p>
+<p><strong>Worked example.</strong> Suppose <span class=math-inline data-latex="N = 4"></span> points with <span class=math-inline data-latex="\sigma_i = 1"></span> for all <span class=math-inline data-latex=i></span>. If <span class=math-inline data-latex="\|x_1 - x_2\| = 1"></span>, <span class=math-inline data-latex="\|x_1 - x_3\| = 5"></span>, <span class=math-inline data-latex="\|x_1 - x_4\| = 5"></span>, then</p>
+<p><span class=math-display data-latex="p_{2|1} = \frac{e^{-1/2}}{e^{-1/2} + 2e^{-25/2}} \approx \frac{0.607}{0.607 + 2(3.7 \times 10^{-6})} \approx 1.000"></span></p>
+<p>Nearly all probability mass concentrates on the nearest neighbor. This is precisely the &ldquo;local neighborhood preservation&rdquo; property.</p>
+</div>
+</div>
+<div class=definition-block id=definition-23.2>
+<div class=block-label>
+Definition 23.2 (Pairwise Affinity (Low-Dimensional))
+</div>
+<div class=block-body><p>For the embedding coordinates <span class=math-inline data-latex="y_1, \ldots, y_N \in \mathbb{R}^2"></span>, define</p>
+<p><span class=math-display data-latex="q_{ij} = \frac{(1 + \|y_i - y_j\|^2)^{-1}}{\sum_{k \neq l} (1 + \|y_k - y_l\|^2)^{-1}}"></span></p>
+<p>This is a <strong>Student-t distribution with 1 degree of freedom</strong> (i.e., a Cauchy kernel).</p>
+<p><strong>Worked example.</strong> If <span class=math-inline data-latex="\|y_1 - y_2\| = 1"></span>, then the numerator is <span class=math-inline data-latex="(1 + 1)^{-1} = 0.5"></span>. If <span class=math-inline data-latex="\|y_1 - y_3\| = 10"></span>, the numerator is <span class=math-inline data-latex="(1 + 100)^{-1} \approx 0.0099"></span>. The heavy tail of the Student-t means that moderately distant points in high dimensions can be pushed far apart in 2D without paying a large cost &mdash; solving the <strong>crowding problem</strong>.</p>
+</div>
+</div>
+<div class=definition-block id=definition-23.3>
+<div class=block-label>
+Definition 23.3 (Perplexity)
+</div>
+<div class=block-body><p>The <strong>perplexity</strong> of the conditional distribution <span class=math-inline data-latex=P_i></span> is</p>
+<p><span class=math-display data-latex="\mathrm{Perp}(P_i) = 2^{H(P_i)} = 2^{-\sum_j p_{j|i} \log_2 p_{j|i}}"></span></p>
+<p>It can be interpreted as the effective number of neighbors. Setting perplexity = 30 means each point &ldquo;sees&rdquo; roughly 30 neighbors. The bandwidth <span class=math-inline data-latex=\sigma_i></span> is found by binary search so that <span class=math-inline data-latex=\mathrm{Perp}(P_i)></span> matches the target.</p>
+</div>
+</div>
+<div class=theorem-block id=theorem-23.1>
+<div class=block-label>
+Theorem 23.1 (t-SNE KL Minimization)
+</div>
+<div class=block-body><p>The t-SNE embedding <span class=math-inline data-latex="y_1, \ldots, y_N"></span> minimizes the Kullback&ndash;Leibler divergence</p>
+<p><span class=math-display data-latex="\mathcal{C} = \mathrm{KL}(P \| Q) = \sum_{i \neq j} p_{ij} \log \frac{p_{ij}}{q_{ij}}"></span></p>
+<p>where <span class=math-inline data-latex="P = \{p_{ij}\}"></span> is fixed from the high-dimensional data and <span class=math-inline data-latex="Q = \{q_{ij}\}"></span> depends on the embedding coordinates.</p>
+</div>
+</div>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><p>The gradient with respect to embedding point <span class=math-inline data-latex=y_i></span> is</p>
+<p><span class=math-display data-latex="\frac{\partial \mathcal{C}}{\partial y_i} = 4 \sum_{j \neq i} (p_{ij} - q_{ij})(1 + \|y_i - y_j\|^2)^{-1}(y_i - y_j)"></span></p>
+<p>To derive this, write <span class=math-inline data-latex="\mathcal{C} = \sum_{i \neq j} p_{ij} \log p_{ij} - \sum_{i \neq j} p_{ij} \log q_{ij}"></span>. The first term is constant. For the second, substitute <span class=math-inline data-latex="q_{ij} = (1 + \|y_i - y_j\|^2)^{-1} / Z"></span> where <span class=math-inline data-latex="Z = \sum_{k \neq l}(1 + \|y_k - y_l\|^2)^{-1}"></span>, and differentiate both the numerator and the normalizer <span class=math-inline data-latex=Z></span> with respect to <span class=math-inline data-latex=y_i></span>. The chain rule through <span class=math-inline data-latex="\|y_i - y_j\|^2"></span> contributes the factor <span class=math-inline data-latex="2(y_i - y_j)"></span>, the Cauchy kernel contributes <span class=math-inline data-latex="(1 + \|y_i - y_j\|^2)^{-1}"></span>, and combining with the normalizer terms yields the stated gradient.</p>
+<p>Optimization proceeds by gradient descent (with momentum and early exaggeration). Since <span class=math-inline data-latex=\mathcal{C}></span> is bounded below by 0 (achieved when <span class=math-inline data-latex="Q = P"></span>) and the gradient is well-defined for distinct points, the procedure converges to a local minimum. <span class=math-inline data-latex=\square></span></p>
+</div>
+</div>
+<p><strong>Why Student-t instead of Gaussian?</strong> In high dimensions, the volume of a thin spherical shell grows as <span class=math-inline data-latex=r^{d-1}></span>, so most neighbors of a point are at nearly the same distance. Mapping these to 2D with a Gaussian kernel forces moderately-distant points into a crowded annulus. The heavy tail of the Student-t kernel <span class=math-inline data-latex="(1 + \|y_i - y_j\|^2)^{-1}"></span> decays as <span class=math-inline data-latex="\|y_i - y_j\|^{-2}"></span> rather than exponentially, providing room for moderately-distant points to spread out while keeping true neighbors close.</p>
+<h3 id=232-tonal-clusters-in-the-codebook>23.2 Tonal Clusters in the Codebook</h3>
+<blockquote>
+<p><em>中文:</em> &ldquo;统计每个码字更常出现在哪些调性的音频片段里，然后按调性给点上色。C大调标红，G大调标蓝，D小调标绿。&rdquo;</p>
+</blockquote>
+<p>The procedure: (1) run t-SNE on the 2048 codebook vectors; (2) for each codeword, count which musical keys it most frequently encodes; (3) color by dominant key.</p>
+<blockquote>
+<p><em>中文:</em> &ldquo;结果很有意思：同一调性的码字，更容易落在相邻区域。&rdquo;</p>
+</blockquote>
+<p>The observation is that codewords associated with the same key form contiguous clusters in the t-SNE map. Moreover, the neighborhood structure echoes the circle of fifths from
+<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=episode-ref-link>EP04</a>
+: keys separated by a fifth (e.g., C major and G major) tend to have adjacent clusters, while tritone-related keys (e.g., C and F<span class=math-inline data-latex=\sharp></span>) are distant.</p>
+<blockquote>
+<p><em>中文:</em> &ldquo;没有人告诉模型什么是大调小调。它只是在压缩音频的过程中，自己发现了调性的几何结构。&rdquo;</p>
+</blockquote>
+<h3 id=233-linear-probes-testing-what-is-linearly-decodable>23.3 Linear Probes: Testing What Is Linearly Decodable</h3>
+<div class=definition-block id=definition-23.4>
+<div class=block-label>
+Definition 23.4 (Linear Probe)
+</div>
+<div class=block-body><p>Given a frozen encoder producing representations <span class=math-inline data-latex="h_i \in \mathbb{R}^d"></span> for input <span class=math-inline data-latex=x_i></span> with label <span class=math-inline data-latex="y_i \in \{1, \ldots, K\}"></span>, a <strong>linear probe</strong> is a classifier <span class=math-inline data-latex="(W, b)"></span> with <span class=math-inline data-latex="W \in \mathbb{R}^{K \times d}"></span>, <span class=math-inline data-latex="b \in \mathbb{R}^K"></span> trained by</p>
+<p><span class=math-display data-latex="\min_{W, b} \sum_{i=1}^{n} \mathcal{L}\!\bigl(\mathrm{softmax}(W h_i + b),\; y_i\bigr)"></span></p>
+<p>where <span class=math-inline data-latex=\mathcal{L}></span> is the cross-entropy loss. The encoder weights are <strong>not updated</strong> during probe training.</p>
+<p><strong>Worked example.</strong> For a key-detection probe with <span class=math-inline data-latex="K = 24"></span> (12 major + 12 minor keys) and <span class=math-inline data-latex="d = 128"></span>, we train a matrix <span class=math-inline data-latex="W \in \mathbb{R}^{24 \times 128}"></span> and bias <span class=math-inline data-latex="b \in \mathbb{R}^{24}"></span>. If the probe achieves 85% accuracy on held-out data, we conclude that key information is <strong>linearly separable</strong> in the codebook space.</p>
+</div>
+</div>
+<div class=theorem-block id=theorem-23.2>
+<div class=block-label>
+Theorem 23.2 (Linear Probe Sufficiency)
+</div>
+<div class=block-body>If a linear probe achieves accuracy <span class=math-inline data-latex=\alpha></span> on task <span class=math-inline data-latex=Y></span> from representation <span class=math-inline data-latex="h = f(x)"></span>, then there exists a hyperplane arrangement in <span class=math-inline data-latex=\mathbb{R}^d></span> that separates the classes with error rate <span class=math-inline data-latex="1 - \alpha"></span>. The information about <span class=math-inline data-latex=Y></span> is <strong>linearly decodable</strong> from the representation.</div>
+</div>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body>The softmax classifier <span class=math-inline data-latex="\hat{y} = \arg\max_k (Wh + b)_k"></span> partitions <span class=math-inline data-latex=\mathbb{R}^d></span> into <span class=math-inline data-latex=K></span> convex polyhedral regions <span class=math-inline data-latex="R_k = \{h : (w_k - w_j)^\top h + (b_k - b_j) \geq 0 \;\forall j \neq k\}"></span>, where <span class=math-inline data-latex=w_k></span> is the <span class=math-inline data-latex=k></span>-th row of <span class=math-inline data-latex=W></span>. Each boundary is a hyperplane <span class=math-inline data-latex="\{h : (w_k - w_j)^\top h + (b_k - b_j) = 0\}"></span>. The probe accuracy <span class=math-inline data-latex="\alpha = \Pr[\hat{y} = y]"></span> directly measures the fraction of representations correctly classified by this hyperplane arrangement. <span class=math-inline data-latex=\square></span></div>
+</div>
+<p><strong>Important caveat.</strong> A low probe accuracy does <strong>not</strong> imply the information is absent. It may be encoded non-linearly. A representation could store key information in the <em>norms</em> of subvectors or in <em>interactions</em> between dimensions &mdash; patterns invisible to a linear classifier but accessible to a nonlinear one. Linear probes test a sufficient condition, not a necessary one.</p>
+<hr>
+<h2 id=part-ii-emergent-specialization>Part II: Emergent Specialization</h2>
+<h3 id=234-attention-head-specialization>23.4 Attention Head Specialization</h3>
+<blockquote>
+<p><em>中文:</em> &ldquo;注意力权重是一个矩阵，每一行告诉你当前位置关注了哪些历史位置。&rdquo;</p>
+</blockquote>
+<p>Recall from
+<a href=https://amath390.sibeliusp.com/episodes/ep21/ class=episode-ref-link>EP21</a>
+that a Transformer layer computes attention weights <span class=math-inline data-latex="A \in \mathbb{R}^{T \times T}"></span> with <span class=math-inline data-latex="A_{ij} = \mathrm{softmax}_j(q_i^\top k_j / \sqrt{d_k})"></span>. In multi-head attention, each head <span class=math-inline data-latex=h_\ell></span> has its own projection matrices <span class=math-inline data-latex="W_Q^{(\ell)}, W_K^{(\ell)}, W_V^{(\ell)}"></span> and thus its own attention pattern.</p>
+<blockquote>
+<p><em>中文:</em> &ldquo;不同的注意力头自动分了工。有些头的权重呈现周期性——每隔固定步数就高一些——像在数拍子。另一些头对和声变化特别敏感。&rdquo;</p>
+</blockquote>
+<div class=definition-block id=definition-23.5>
+<div class=block-label>
+Definition 23.5 (Emergent Specialization)
+</div>
+<div class=block-body>A multi-head attention model exhibits <strong>emergent specialization</strong> if, after training on a single undifferentiated loss (e.g., next-token prediction), individual attention heads develop statistically distinct response profiles to different input features (rhythm, harmony, timbre, etc.) without any explicit supervision for those features.</div>
+</div>
+<div class=theorem-block id=theorem-23.3>
+<div class=block-label>
+Theorem 23.3 (Emergent Specialization under Prediction Loss)
+</div>
+<div class=block-body><p>Let <span class=math-inline data-latex="\mathcal{L}(\theta) = -\mathbb{E}[\log p_\theta(x_{t+1} | x_{\leq t})]"></span> be the next-token prediction loss. If the data distribution decomposes as a mixture of independent generative factors <span class=math-inline data-latex="x = g(z_1, z_2, \ldots, z_m)"></span> where <span class=math-inline data-latex=z_k></span> are statistically independent, then the gradient signal</p>
+<p><span class=math-display data-latex="\frac{\partial \mathcal{L}}{\partial W^{(\ell)}} = -\mathbb{E}\!\left[\frac{\partial \log p_\theta(x_{t+1} | x_{\leq t})}{\partial W^{(\ell)}}\right]"></span></p>
+<p>decomposes into contributions from each factor. In an overparameterized network, gradient descent tends to assign different heads to different factors, producing modular internal structure.</p>
+</div>
+</div>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><p>Write <span class=math-inline data-latex="x_{t+1} = g(z_1^{(t+1)}, \ldots, z_m^{(t+1)})"></span>. By the chain rule of mutual information and the independence of the <span class=math-inline data-latex=z_k></span>, predicting <span class=math-inline data-latex=x_{t+1}></span> requires capturing <span class=math-inline data-latex="I(x_{\leq t}; z_k^{(t+1)})"></span> for each factor <span class=math-inline data-latex=k></span> separately. The gradient <span class=math-inline data-latex="\partial \mathcal{L}/\partial W^{(\ell)}"></span> is a sum over contributions from each factor:</p>
+<p><span class=math-display data-latex="\frac{\partial \mathcal{L}}{\partial W^{(\ell)}} = \sum_{k=1}^{m} \underbrace{\frac{\partial \mathcal{L}}{\partial z_k} \cdot \frac{\partial z_k}{\partial W^{(\ell)}}}_{\text{factor } k \text{ contribution}}"></span></p>
+<p>In an overparameterized regime, heads that are randomly initialized near the gradient direction of factor <span class=math-inline data-latex=k></span> will specialize toward that factor, because the loss landscape admits many solutions and gradient descent follows the path of least resistance. This is analogous to the <strong>lottery ticket hypothesis</strong> (Frankle & Carlin, 2019): the overparameterized network contains sparse subnetworks, each specialized to a factor, and training selects them.</p>
+<p>The specialization is not guaranteed to be clean or complete &mdash; heads may partially respond to multiple factors &mdash; but the statistical tendency toward modular decomposition is observed empirically across architectures. <span class=math-inline data-latex=\square></span></p>
+</div>
+</div>
+<blockquote>
+<p><em>中文:</em> &ldquo;没有人在训练时标注过&rsquo;这是节奏'，或者&rsquo;这是和声'。模型只有一个目标：预测下一个离散码元。从这一个目标出发，它自动涌现出了功能分化的内部结构。&rdquo;</p>
+</blockquote>
+<p><strong>Phase transitions in specialization.</strong> Empirically, specialization does not emerge gradually. There is evidence of <strong>phase transitions</strong>: during training, heads remain unspecialized until the loss drops below a critical threshold, at which point distinct functional roles crystallize rapidly. This parallels phase transitions in statistical physics and may be related to the information-theoretic framework of Part III.</p>
+<hr>
+<h2 id=part-iii-information-bottleneck-theory>Part III: Information Bottleneck Theory</h2>
+<h3 id=235-mutual-information>23.5 Mutual Information</h3>
+<div class=definition-block id=definition-23.6>
+<div class=block-label>
+Definition 23.6 (Mutual Information)
+</div>
+<div class=block-body><p>For random variables <span class=math-inline data-latex=X></span> and <span class=math-inline data-latex=Y></span> with joint distribution <span class=math-inline data-latex="p(x, y)"></span>, the <strong>mutual information</strong> is</p>
+<p><span class=math-display data-latex="I(X; Y) = H(X) - H(X|Y) = H(Y) - H(Y|X) = \sum_{x,y} p(x,y) \log \frac{p(x,y)}{p(x)p(y)}"></span></p>
+<p>Equivalently, <span class=math-inline data-latex="I(X; Y) = \mathrm{KL}(p(x,y) \| p(x)p(y))"></span> &mdash; the divergence between the joint and the product of marginals.</p>
+<p><strong>Worked example.</strong> Let <span class=math-inline data-latex=X></span> = audio frame (continuous), <span class=math-inline data-latex=Y></span> = musical key (discrete, 24 values). If knowing the key reduces uncertainty about the audio spectrum by 2 bits, then <span class=math-inline data-latex="I(X; Y) = 2"></span> bits.</p>
+</div>
+</div>
+<div class=proposition-block id=prop-23.1>
+<div class=block-label>
+Prop 23.1 (Data Processing Inequality)
+</div>
+<div class=block-body><p>For any Markov chain <span class=math-inline data-latex="X \to T \to Y"></span> (i.e., <span class=math-inline data-latex=T></span> is a function of <span class=math-inline data-latex=X></span> and <span class=math-inline data-latex=Y></span> depends on <span class=math-inline data-latex=X></span> only through <span class=math-inline data-latex=T></span>):</p>
+<p><span class=math-display data-latex="I(X; Y) \geq I(T; Y)"></span></p>
+<p>Processing cannot create information. If <span class=math-inline data-latex=\hat{Y}></span> is a further function of <span class=math-inline data-latex=T></span>, then <span class=math-inline data-latex="I(X; Y) \geq I(T; Y) \geq I(\hat{Y}; Y)"></span>.</p>
+</div>
+</div>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body>By the chain rule: <span class=math-inline data-latex="I(X; Y | T) \geq 0"></span> (mutual information is non-negative). Expanding: <span class=math-inline data-latex="I(X; Y | T) = I(X, T; Y) - I(T; Y)"></span>. Since <span class=math-inline data-latex="X \to T \to Y"></span> forms a Markov chain, <span class=math-inline data-latex="I(X; Y | T) = 0"></span>. Therefore <span class=math-inline data-latex="I(X; Y) = I(X, T; Y) \geq I(T; Y)"></span>, where the inequality uses <span class=math-inline data-latex="I(X, T; Y) \geq I(T; Y)"></span> (conditioning reduces entropy). For the Markov chain case, we actually get equality: <span class=math-inline data-latex="I(X; Y) \geq I(T; Y)"></span> with equality iff <span class=math-inline data-latex=T></span> is a sufficient statistic for <span class=math-inline data-latex=Y></span> given <span class=math-inline data-latex=X></span>. The second inequality follows by applying the same argument to <span class=math-inline data-latex="T \to \hat{Y} \to Y"></span>. <span class=math-inline data-latex=\square></span></div>
+</div>
+<h3 id=236-the-information-bottleneck>23.6 The Information Bottleneck</h3>
+<div class=definition-block id=definition-23.7>
+<div class=block-label>
+Definition 23.7 (Information Bottleneck)
+</div>
+<div class=block-body><p>Given a Markov chain <span class=math-inline data-latex="X \to T \to Y"></span>, the <strong>Information Bottleneck (IB) objective</strong> seeks a stochastic mapping <span class=math-inline data-latex=p(t|x)></span> that solves</p>
+<p><span class=math-display data-latex="\min_{p(t|x)} \; I(X; T) - \beta \, I(T; Y)"></span></p>
+<p>where:</p>
+<ul>
+<li><span class=math-inline data-latex="I(X; T)"></span> = <strong>compression term</strong>: how much of the raw input is retained.</li>
+<li><span class=math-inline data-latex="I(T; Y)"></span> = <strong>prediction term</strong>: how much predictive information about the target is preserved.</li>
+<li><span class=math-inline data-latex="\beta > 0"></span> = <strong>Lagrange multiplier</strong> controlling the trade-off.</li>
+</ul>
+<p><strong>Worked example.</strong> For EnCodec: <span class=math-inline data-latex=X></span> = raw audio waveform, <span class=math-inline data-latex=T></span> = quantized codebook index, <span class=math-inline data-latex=Y></span> = next audio frame. The codec must compress (small <span class=math-inline data-latex="I(X; T)"></span> means fewer bits) while preserving enough to reconstruct/predict (large <span class=math-inline data-latex="I(T; Y)"></span>). At <span class=math-inline data-latex="\beta \to 0"></span>, the optimal <span class=math-inline data-latex=T></span> is trivial (one cluster). At <span class=math-inline data-latex="\beta \to \infty"></span>, <span class=math-inline data-latex=T></span> retains everything about <span class=math-inline data-latex=Y></span>.</p>
+</div>
+</div>
+<div class=theorem-block id=theorem-23.4>
+<div class=block-label>
+Theorem 23.4 (Information Bottleneck Optimality)
+</div>
+<div class=block-body><p>The optimal IB solution satisfies the self-consistent equations:</p>
+<p><span class=math-display data-latex="p(t|x) = \frac{p(t)}{Z(x, \beta)} \exp\!\bigl(-\beta \, \mathrm{KL}(p(y|x) \| p(y|t))\bigr)"></span></p>
+<p>where <span class=math-inline data-latex="Z(x, \beta)"></span> is a normalizing constant. As <span class=math-inline data-latex=\beta></span> varies, the optimal solutions trace the <strong>IB curve</strong> in the <span class=math-inline data-latex="(I(X;T), I(T;Y))"></span> plane. This curve is concave and monotonically non-decreasing.</p>
+</div>
+</div>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><p>Introduce the Lagrangian with the constraint that <span class=math-inline data-latex=p(t|x)></span> is a valid conditional distribution:</p>
+<p><span class=math-display data-latex="\mathcal{F} = I(X; T) - \beta \, I(T; Y) + \sum_x \lambda(x)\!\left(\sum_t p(t|x) - 1\right)"></span></p>
+<p>Taking the functional derivative <span class=math-inline data-latex="\delta \mathcal{F} / \delta p(t|x) = 0"></span>:</p>
+<p><span class=math-display data-latex="\frac{\partial}{\partial p(t|x)}\!\left[\sum_{x'} p(x') \sum_{t'} p(t'|x') \log \frac{p(t'|x')}{p(t')}\right] - \beta \frac{\partial}{\partial p(t|x)}\!\left[\sum_{t'} p(t') \sum_y p(y|t') \log \frac{p(y|t')}{p(y)}\right] + \lambda(x) = 0"></span></p>
+<p>The first term gives <span class=math-inline data-latex="p(x)[\log p(t|x) - \log p(t) + 1]"></span>. For the second term, since <span class=math-inline data-latex="p(y|t) = \sum_x p(y|x) p(x|t)"></span> and <span class=math-inline data-latex="p(t) = \sum_x p(t|x)p(x)"></span> both depend on <span class=math-inline data-latex=p(t|x)></span>, the variational derivative yields <span class=math-inline data-latex="\beta \, p(x) \sum_y p(y|x) \log[p(y|t)/p(y)]"></span> after applying Bayes' rule. Combining and solving:</p>
+<p><span class=math-display data-latex="\log p(t|x) = \log p(t) + \beta \sum_y p(y|x) \log \frac{p(y|t)}{p(y)} - 1 - \frac{\lambda(x)}{p(x)}"></span></p>
+<p>Recognizing <span class=math-inline data-latex="\sum_y p(y|x) \log[p(y|t)/p(y)] = -\mathrm{KL}(p(y|x) \| p(y|t)) + \text{const}"></span> (the constant is <span class=math-inline data-latex="\sum_y p(y|x) \log[p(y|x)/p(y)]"></span>, independent of <span class=math-inline data-latex=t></span>), and absorbing constants into the normalizer:</p>
+<p><span class=math-display data-latex="p(t|x) = \frac{p(t)}{Z(x,\beta)} \exp\!\bigl(-\beta \, \mathrm{KL}(p(y|x) \| p(y|t))\bigr)"></span></p>
+<p>The concavity of the IB curve follows from the concavity of mutual information in the channel <span class=math-inline data-latex=p(t|x)></span> (a standard result in information theory). Monotonicity: increasing <span class=math-inline data-latex=\beta></span> increases the weight on preserving <span class=math-inline data-latex=I(T;Y)></span>, so the optimal <span class=math-inline data-latex=I(T;Y)></span> is non-decreasing in <span class=math-inline data-latex=\beta></span>. <span class=math-inline data-latex=\square></span></p>
+</div>
+</div>
+<p><strong>Connection to rate-distortion theory.</strong> The IB framework generalizes Shannon&rsquo;s rate-distortion theory. In rate-distortion, the objective is <span class=math-inline data-latex="R(D) = \min_{p(t|x) : \mathbb{E}[d(x,t)] \leq D} I(X; T)"></span>, where <span class=math-inline data-latex=d></span> is a distortion measure. The IB replaces the explicit distortion constraint with <span class=math-inline data-latex="I(T; Y)"></span>, making the &ldquo;relevant&rdquo; aspects of <span class=math-inline data-latex=X></span> task-dependent rather than reconstruction-dependent.</p>
+<p><strong>Why this explains tonal clustering.</strong> When the model compresses audio (minimizing <span class=math-inline data-latex=I(X;T)></span>) while preserving predictability of future audio (maximizing <span class=math-inline data-latex=I(T;Y)></span>), the optimal codebook groups acoustically different signals that make the same predictions about what comes next. Signals in the same key share harmonic expectations &mdash; so key information is retained, while irrelevant timbral details are discarded. The tonal clusters in the t-SNE map are a visible consequence of this information-theoretic trade-off.</p>
+<hr>
+<h2 id=part-iv-the-meaning-gap>Part IV: The Meaning Gap</h2>
+<h3 id=237-the-convex-hull-argument>23.7 The Convex Hull Argument</h3>
+<blockquote>
+<p><em>中文:</em> &ldquo;如果爵士乐从未存在过，你能用布鲁斯和拉格泰姆的数据，让AI提示出爵士乐吗？不可能。&rdquo;</p>
+</blockquote>
+<div class=definition-block id=definition-23.8>
+<div class=block-label>
+Definition 23.8 (Convex Hull of a Distribution)
+</div>
+<div class=block-body><p>Let <span class=math-inline data-latex="F : \mathcal{X} \to \mathbb{R}^d"></span> be a feature map (e.g., a neural network encoder). The <strong>convex hull</strong> of the training distribution <span class=math-inline data-latex=P_{\text{data}}></span> in feature space is</p>
+<p><span class=math-display data-latex="\mathrm{conv}(P_{\text{data}}) = \left\{\sum_{i=1}^{n} \lambda_i F(x_i) : x_i \in \mathrm{supp}(P_{\text{data}}),\; \lambda_i \geq 0,\; \sum_i \lambda_i = 1 \right\}"></span></p>
+<p>Generative models that interpolate in latent space produce samples whose representations lie in or near <span class=math-inline data-latex=\mathrm{conv}(P_{\text{data}})></span>.</p>
+</div>
+</div>
+<div class=theorem-block id=theorem-23.5>
+<div class=block-label>
+Theorem 23.5 (Neely's Jazz Impossibility (Convex Hull Formulation))
+</div>
+<div class=block-body><p>Let <span class=math-inline data-latex=P_{\text{blues}}></span> and <span class=math-inline data-latex=P_{\text{ragtime}}></span> be training distributions and <span class=math-inline data-latex=F></span> any feature map learned from this data. If jazz involves structural innovations &mdash; harmonic substitutions (tritone subs), polyrhythmic superposition, modal interchange &mdash; that are not expressible as convex combinations of blues and ragtime features, then</p>
+<p><span class=math-display data-latex="F(\text{jazz}) \notin \mathrm{conv}\!\bigl(\{F(x) : x \in \mathrm{supp}(P_{\text{blues}}) \cup \mathrm{supp}(P_{\text{ragtime}})\}\bigr)"></span></p>
+<p>No amount of interpolation or prompting can produce jazz from a model trained only on blues and ragtime.</p>
+</div>
+</div>
+<div class=proof-block>
+<div class=block-label>Proof.</div>
+<div class=block-body><p>The proof proceeds by contradiction. Suppose <span class=math-inline data-latex="F(\text{jazz}) = \sum_i \lambda_i F(x_i)"></span> for some <span class=math-inline data-latex="x_i \in \mathrm{supp}(P_{\text{blues}} \cup P_{\text{ragtime}})"></span>, <span class=math-inline data-latex="\lambda_i \geq 0"></span>, <span class=math-inline data-latex="\sum_i \lambda_i = 1"></span>.</p>
+<p>Consider the feature dimension corresponding to tritone substitution frequency. In blues and ragtime, the tritone substitution is either absent or extremely rare, so <span class=math-inline data-latex="F_{\text{tri}}(x_i) \approx 0"></span> for all training points. Then <span class=math-inline data-latex="F_{\text{tri}}(\text{jazz}) = \sum_i \lambda_i F_{\text{tri}}(x_i) \approx 0"></span>. But bebop jazz uses tritone substitutions systematically (e.g., substituting D<span class=math-inline data-latex=\flat></span>7 for G7 in a ii-V-I), so <span class=math-inline data-latex="F_{\text{tri}}(\text{jazz}) \gg 0"></span>. Contradiction.</p>
+<p>The argument generalizes: any structural feature absent from the training corpus that is present in the target genre creates a coordinate direction along which the target lies outside the convex hull. Since the convex hull is a closed convex set, the separating hyperplane theorem guarantees a linear functional that separates the target from the hull. <span class=math-inline data-latex=\square></span></p>
+</div>
+</div>
+<p>This formalizes Neely&rsquo;s intuition: new musical genres are not interpolations &mdash; they are <strong>cultural jumps</strong> to points outside the convex hull of existing data.</p>
+<h3 id=238-structure-versus-meaning>23.8 Structure versus Meaning</h3>
+<blockquote>
+<p><em>中文:</em> &ldquo;模型内部有几何结构，没有问题。但如果没有人在真正地聆听、比较、传承——那结构和意义之间，就有一道鸿沟。&rdquo;</p>
+</blockquote>
+<div class=definition-block id=definition-23.9>
+<div class=block-label>
+Definition 23.9 (Syntactic Structure vs. Semantic Meaning)
+</div>
+<div class=block-body><ul>
+<li><strong>Syntactic structure</strong>: measurable geometric properties of representations &mdash; distances, clusters, spectral gaps, curvatures. Formally: any property computable from the metric space <span class=math-inline data-latex="(Z, d)"></span> where <span class=math-inline data-latex=Z></span> is the latent space and <span class=math-inline data-latex=d></span> is a distance.</li>
+<li><strong>Semantic meaning</strong>: requires grounding in embodied experience, social context, and cultural memory. Not computable from geometric properties alone.</li>
+</ul>
+<p>This distinction echoes <strong>Searle&rsquo;s Chinese Room argument</strong> (1980): a system that manipulates symbols according to syntactic rules may pass any behavioral test for understanding, yet possess no semantic comprehension. Applied to music: a model that clusters keys, separates rhythms, and predicts the next token is performing syntactic operations on acoustic symbols &mdash; operations that are geometrically sophisticated but semantically ungrounded.</div>
+</div>
+<blockquote>
+<p><em>中文:</em> &ldquo;意义不住在向量里。意义住在共同体、传统和聆听里。&rdquo;</p>
+</blockquote>
+<blockquote>
+<p><em>中文:</em> &ldquo;我会继续为自己和社区创作音乐，因为它让我快乐。但我害怕，它再也无法像以前那样，和别人产生联结。&rdquo;</p>
+</blockquote>
+<p>The <strong>grounding problem</strong> asks: can statistical co-occurrence alone give meaning? The IB framework shows that the model captures all the <em>predictively useful</em> structure. But predictive utility is not the same as meaning. A weather model captures the structure of atmospheric dynamics without understanding what rain feels like.</p>
+<blockquote>
+<p><em>中文:</em> &ldquo;和几千个陌生人一起唱过同一首歌？尼利说，当每个人消费的音乐都完全个性化，这种体验就消失了。&rdquo;</p>
+</blockquote>
+<p>Neely&rsquo;s deeper point is sociological: music&rsquo;s meaning emerges from <strong>shared experience</strong>. A concert where thousands sing the same melody creates a collective state that no individually generated playlist can replicate. The information-theoretic framework captures the structure of music but not the structure of community. This is not a failure of mathematics &mdash; it is a boundary condition on what mathematical formalism can express.</p>
+<hr>
+<h2 id=numerical-examples>Numerical Examples</h2>
+<p><strong>Example 23.1: t-SNE on a toy codebook.</strong> Consider <span class=math-inline data-latex="N = 6"></span> points in <span class=math-inline data-latex=\mathbb{R}^3></span> representing codewords from two keys:</p>
+<table>
+<thead>
+<tr>
+<th>Codeword</th>
+<th>Vector</th>
+<th>Key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class=math-inline data-latex=c_1></span></td>
+<td><span class=math-inline data-latex="(1, 0, 0)"></span></td>
+<td>C major</td>
+</tr>
+<tr>
+<td><span class=math-inline data-latex=c_2></span></td>
+<td><span class=math-inline data-latex="(1.1, 0.2, 0)"></span></td>
+<td>C major</td>
+</tr>
+<tr>
+<td><span class=math-inline data-latex=c_3></span></td>
+<td><span class=math-inline data-latex="(0.9, -0.1, 0.1)"></span></td>
+<td>C major</td>
+</tr>
+<tr>
+<td><span class=math-inline data-latex=c_4></span></td>
+<td><span class=math-inline data-latex="(0, 1, 0)"></span></td>
+<td>F<span class=math-inline data-latex=\sharp></span> major</td>
+</tr>
+<tr>
+<td><span class=math-inline data-latex=c_5></span></td>
+<td><span class=math-inline data-latex="(0.1, 1.1, -0.1)"></span></td>
+<td>F<span class=math-inline data-latex=\sharp></span> major</td>
+</tr>
+<tr>
+<td><span class=math-inline data-latex=c_6></span></td>
+<td><span class=math-inline data-latex="(-0.1, 0.9, 0.2)"></span></td>
+<td>F<span class=math-inline data-latex=\sharp></span> major</td>
+</tr>
+</tbody>
+</table>
+<p>Within-cluster distances: <span class=math-inline data-latex="\|c_1 - c_2\| = \sqrt{0.01 + 0.04} \approx 0.22"></span>.
+Between-cluster distances: <span class=math-inline data-latex="\|c_1 - c_4\| = \sqrt{1 + 1} \approx 1.41"></span>.</p>
+<p>With <span class=math-inline data-latex="\sigma = 0.5"></span>, the high-dimensional affinity <span class=math-inline data-latex="p_{2|1} \propto e^{-0.22^2/0.5} \approx e^{-0.097} \approx 0.91"></span>, while <span class=math-inline data-latex="p_{4|1} \propto e^{-1.41^2/0.5} \approx e^{-3.98} \approx 0.019"></span>. t-SNE will place <span class=math-inline data-latex="c_1, c_2, c_3"></span> close together and <span class=math-inline data-latex="c_4, c_5, c_6"></span> far away, reproducing the key-based clustering.</p>
+<p><strong>Example 23.2: IB trade-off.</strong> Suppose <span class=math-inline data-latex=X></span> has <span class=math-inline data-latex="H(X) = 10"></span> bits (raw audio complexity) and <span class=math-inline data-latex=Y></span> has <span class=math-inline data-latex="H(Y) = 4"></span> bits (next-frame prediction). By the data processing inequality, <span class=math-inline data-latex="I(T; Y) \leq I(X; Y) \leq 4"></span> bits. A codebook with <span class=math-inline data-latex="\log_2 2048 = 11"></span> bits of capacity can afford <span class=math-inline data-latex="I(X; T) \leq 11"></span> bits. The IB curve shows that with <span class=math-inline data-latex="I(X; T) \approx 6"></span> bits (substantial compression from 11), one can still achieve <span class=math-inline data-latex="I(T; Y) \approx 3.5"></span> bits &mdash; retaining most predictive information while discarding 5 bits of irrelevant detail (noise, exact timbre, recording artifacts).</p>
+<p><strong>Example 23.3: Convex hull failure.</strong> In <span class=math-inline data-latex=\mathbb{R}^2></span>, let blues = <span class=math-inline data-latex="\{(1,0), (2,0), (1.5, 0.5)\}"></span> and ragtime = <span class=math-inline data-latex="\{(0,1), (0,2), (0.5, 1.5)\}"></span>. Their convex hull is the union of two triangles near the axes. Jazz at <span class=math-inline data-latex="(2, 2)"></span> is outside: any convex combination <span class=math-inline data-latex="\sum \lambda_i v_i"></span> with <span class=math-inline data-latex="\sum \lambda_i = 1"></span> satisfies <span class=math-inline data-latex="x + y \leq \max(x_i + y_i) = 2.5"></span> for training points, but <span class=math-inline data-latex="2 + 2 = 4 > 2.5"></span>.</p>
+<hr>
+<h2 id=musical-connection>Musical Connection</h2>
+<div class=music-block>
+<div class=block-label>音乐联系</div>
+<div class=block-body><p><strong>From the Tonnetz to the Codebook: The Geometry Persists</strong></p>
+<p>The tonal clusters discovered by t-SNE in the EnCodec codebook echo the topological structure of the Tonnetz studied in</p>
+<p><a href=https://amath390.sibeliusp.com/episodes/ep14/ class=episode-ref-link>EP14</a></p>
+<p>. In EP14, the twelve pitch classes form a simplicial complex on a torus, with Betti numbers <span class=math-inline data-latex="(1, 2, 1)"></span> encoding two independent non-contractible loops: the circle of fifths and the major-third cycle. In the codebook, the same neighborhood relationships reappear: keys a fifth apart cluster nearby, and the circular ordering of key clusters reproduces the <span class=math-inline data-latex=\mathbb{Z}_{12}></span> cyclic group structure from</p>
+<p><a href=https://amath390.sibeliusp.com/episodes/ep04/ class=episode-ref-link>EP04</a></p>
+<p>.</p>
+<blockquote>
+<p><em>中文:</em> &ldquo;码本里浮现出来的局部邻居结构，和五度圈有相似之处。&rdquo;</p>
+</blockquote>
+<p>The circle of fifths defines an adjacency relation on keys: C is &ldquo;near&rdquo; G and F, &ldquo;far&rdquo; from F<span class=math-inline data-latex=\sharp></span>. This same relation &mdash; which</p>
+<p><a href=https://amath390.sibeliusp.com/episodes/ep04/ class=episode-ref-link>EP04</a></p>
+<p>identified as a generator of <span class=math-inline data-latex=\mathbb{Z}_{12}></span> &mdash; emerges unsupervised in the codebook geometry. The model has rediscovered, through compression alone, a structure that took Western music theory centuries to articulate.</p>
+<p>But the critical difference: the Tonnetz is a mathematical construction with known topology. The codebook geometry is empirical and depends on the training data, the architecture, and the compression rate. Whether the codebook consistently recovers the full torus topology (both generators, the correct Betti numbers) across different models and datasets is an open empirical question that connects to</p>
+<p><a href=https://amath390.sibeliusp.com/episodes/ep25/ class=episode-ref-link>EP25</a></p>
+<p>&rsquo;s study of robustness.</p>
+<p><strong>The five-degree connection.</strong> In EP14, two pitch classes connected by an edge of the Tonnetz are separated by a consonant interval (perfect fifth, major third, or minor third). The codebook t-SNE map recovers primarily the fifth-based adjacency. This is consistent with the IB framework: the perfect fifth (frequency ratio 3:2) is the strongest harmonic relationship after the octave, so it carries the most predictive information about harmonic context. The major-third axis (frequency ratio 5:4) is weaker, and its recovery in the codebook is less consistent &mdash; a quantitative prediction that could be tested by measuring probe accuracy for fifth-related versus third-related key pairs.</p>
+<p><strong>Attention heads as discrete differential operators.</strong> In EP14, the Hodge Laplacian <span class=math-inline data-latex=L_1></span> decomposed interval flows into gradient, curl, and harmonic components. Speculatively, the specialized attention heads of Part II may perform an analogous decomposition: rhythm heads detect periodic structure (analogous to divergence), harmony heads detect chord transitions (analogous to curl), and global context heads track large-scale tonal motion (analogous to harmonic flow). This analogy is suggestive but unproven.</p>
+</div>
+</div>
+<hr>
+<h2 id=limits-and-open-questions>Limits and Open Questions</h2>
+<div class=conjecture-block id=conjecture>
+<div class=block-label>
+Conjecture (Codebook Topology Conjecture)
+</div>
+<div class=block-body><p>For any audio codec trained with sufficient capacity on tonal music, the first codebook&rsquo;s t-SNE embedding recovers a neighborhood graph homeomorphic to a quotient of the circle of fifths. That is, the topological structure is <strong>not</strong> an artifact of a particular model but an inevitable consequence of the IB trade-off applied to tonal music.</p>
+<p><strong>Status</strong>: Unresolved. Requires systematic comparison across codecs (EnCodec, SoundStream, DAC) and training corpora.</p>
+</div>
+</div>
+<div class=conjecture-block id=conjecture>
+<div class=block-label>
+Conjecture (Specialization Phase Transition Conjecture)
+</div>
+<div class=block-body><p>In a Transformer trained on music tokens, there exists a critical training loss <span class=math-inline data-latex=\mathcal{L}^*></span> such that for <span class=math-inline data-latex="\mathcal{L} > \mathcal{L}^*"></span>, no attention head shows statistically significant specialization, while for <span class=math-inline data-latex="\mathcal{L} < \mathcal{L}^*"></span>, at least <span class=math-inline data-latex=m></span> heads specialize to distinct musical features (where <span class=math-inline data-latex=m></span> is the number of independent generative factors). The transition is sharp in the sense that the mutual information between head attention patterns and musical features has a discontinuous derivative at <span class=math-inline data-latex=\mathcal{L}^*></span>.</p>
+<p><strong>Status</strong>: Partially supported by visualization studies. Formal proof requires a tractable model of the training dynamics.</p>
+</div>
+</div>
+<p><strong>Open questions</strong>:</p>
+<ol>
+<li>
+<p><strong>Non-linear probing</strong>: If a linear probe fails but a two-layer MLP succeeds, what is the minimal geometric complexity of the encoding? Can we characterize this by the intrinsic dimension of the feature manifold?</p>
+</li>
+<li>
+<p><strong>IB tightness</strong>: How close do real codecs come to the IB curve? Is there a measurable gap, and does closing it improve downstream music generation quality?</p>
+</li>
+<li>
+<p><strong>Grounding beyond syntax</strong>: Can a model that interacts with embodied agents (e.g., a robot musician responding to audience reactions) develop something closer to semantic understanding? Or is the grounding problem fundamentally unsolvable for statistical models?</p>
+</li>
+<li>
+<p><strong>Convex hull escape</strong>: Are there architectures (e.g., neuro-symbolic systems, models with explicit rule-learning modules) that can generate samples outside the convex hull of their training data? What mathematical framework captures &ldquo;genuine novelty&rdquo; as opposed to interpolation? Forward reference:
+<a href=https://amath390.sibeliusp.com/episodes/ep25/ class=episode-ref-link>EP25</a>
+explores related questions about generalization bounds.</p>
+</li>
+<li>
+<p><strong>Perplexity sensitivity</strong>: t-SNE visualizations depend strongly on the perplexity parameter. Do tonal clusters persist across the full range <span class=math-inline data-latex="\mathrm{Perp} \in [5, 50]"></span>? If clusters fragment at low perplexity and merge at high perplexity, the &ldquo;true&rdquo; cluster structure may be scale-dependent, requiring persistent homology (a tool from topological data analysis) to resolve.</p>
+</li>
+<li>
+<p><strong>Cross-cultural codebooks</strong>: The tonal clustering discussed here assumes Western tonal music. For music based on maqam (Arabic), raga (Indian), or pentatonic scales (Chinese), does the codebook geometry reflect the relevant scale structure? The <span class=math-inline data-latex=\mathbb{Z}_{12}></span> circle of fifths is not universal &mdash; other tuning systems would produce different geometric signatures.</p>
+</li>
+</ol>
+<hr>
+<h2 id=academic-references>Academic References</h2>
+<ol>
+<li>van der Maaten, L. & Hinton, G. (2008). &ldquo;Visualizing Data using t-SNE.&rdquo; <em>Journal of Machine Learning Research</em> 9, 2579&ndash;2605.</li>
+<li>Tishby, N., Pereira, F. & Bialek, W. (2000). &ldquo;The Information Bottleneck Method.&rdquo; <em>Proceedings of the 37th Allerton Conference</em>, 368&ndash;377.</li>
+<li>Tishby, N. & Zaslavsky, N. (2015). &ldquo;Deep Learning and the Information Bottleneck Principle.&rdquo; <em>IEEE Information Theory Workshop (ITW)</em>, 1&ndash;5.</li>
+<li>Alain, G. & Bengio, Y. (2017). &ldquo;Understanding Intermediate Layers Using Linear Classifier Probes.&rdquo; <em>ICLR Workshop</em>.</li>
+<li>Searle, J. (1980). &ldquo;Minds, Brains, and Programs.&rdquo; <em>Behavioral and Brain Sciences</em> 3(3), 417&ndash;424.</li>
+<li>Frankle, J. & Carlin, M. (2019). &ldquo;The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks.&rdquo; <em>ICLR 2019</em>.</li>
+<li>Voita, E., Talbot, D., Moiseev, F., Sennrich, R. & Titov, I. (2019). &ldquo;Analyzing Multi-Head Self-Attention: Specialized Heads Do the Heavy Lifting, the Rest Can Be Pruned.&rdquo; <em>ACL 2019</em>, 5797&ndash;5808.</li>
+<li>Castellon, R., Donahue, C. & Liang, P. (2021). &ldquo;Codified Audio Language Modeling Learns Useful Representations for Music Information Retrieval.&rdquo; <em>ISMIR 2021</em>.</li>
+<li>Defossez, A., Copet, J., Synnaeve, G. & Adi, Y. (2023). &ldquo;High Fidelity Neural Audio Compression.&rdquo; <em>ICLR 2023</em>.</li>
+<li>Neely, A. (2024). &ldquo;The Death of Music.&rdquo; YouTube. Accessed 2026-02-20.</li>
+<li>Shannon, C. (1959). &ldquo;Coding Theorems for a Discrete Source with a Fidelity Criterion.&rdquo; <em>IRE National Convention Record</em> 7(4), 142&ndash;163.</li>
+<li>Cover, T. & Thomas, J. (2006). <em>Elements of Information Theory</em>, 2nd ed. Wiley.</li>
+<li>Shwartz-Ziv, R. & Tishby, N. (2017). &ldquo;Opening the Black Box of Deep Neural Networks via Information.&rdquo; <em>arXiv:1703.00810</em>.</li>
+<li>Zeghidour, N., Luebs, A., Omran, A., Skoglund, J. & Tagliasacchi, M. (2022). &ldquo;SoundStream: An End-to-End Neural Audio Codec.&rdquo; <em>IEEE/ACM Transactions on Audio, Speech, and Language Processing</em> 30, 495&ndash;507.</li>
+</ol>
+</div>
+<nav class=ep-nav>
+<a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-nav-prev>
+← EP22: How AI Writes Music — EnCodec and RVQ
+</a>
+</nav>
+</article>
+<aside class=ep-toc-aside>
+<div class=ep-toc-sticky>
+<div class=ep-toc-label>本页目录</div>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#overview>Overview</a></li>
+<li><a href=#prerequisites>Prerequisites</a></li>
+<li><a href=#part-i-probing-the-codebook>Part I: Probing the Codebook</a>
+<ul>
+<li><a href=#231-t-sne-visualizing-high-dimensional-structure>23.1 t-SNE: Visualizing High-Dimensional Structure</a></li>
+<li><a href=#232-tonal-clusters-in-the-codebook>23.2 Tonal Clusters in the Codebook</a></li>
+<li><a href=#233-linear-probes-testing-what-is-linearly-decodable>23.3 Linear Probes: Testing What Is Linearly Decodable</a></li>
+</ul>
+</li>
+<li><a href=#part-ii-emergent-specialization>Part II: Emergent Specialization</a>
+<ul>
+<li><a href=#234-attention-head-specialization>23.4 Attention Head Specialization</a></li>
+</ul>
+</li>
+<li><a href=#part-iii-information-bottleneck-theory>Part III: Information Bottleneck Theory</a>
+<ul>
+<li><a href=#235-mutual-information>23.5 Mutual Information</a></li>
+<li><a href=#236-the-information-bottleneck>23.6 The Information Bottleneck</a></li>
+</ul>
+</li>
+<li><a href=#part-iv-the-meaning-gap>Part IV: The Meaning Gap</a>
+<ul>
+<li><a href=#237-the-convex-hull-argument>23.7 The Convex Hull Argument</a></li>
+<li><a href=#238-structure-versus-meaning>23.8 Structure versus Meaning</a></li>
+</ul>
+</li>
+<li><a href=#numerical-examples>Numerical Examples</a></li>
+<li><a href=#musical-connection>Musical Connection</a></li>
+<li><a href=#limits-and-open-questions>Limits and Open Questions</a></li>
+<li><a href=#academic-references>Academic References</a></li>
+</ul>
+</nav>
+</div>
+</aside>
+</div>
+<footer class=site-footer>
+<div class=footer-content>
+<a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link>
+<img src=/images/avatar.png alt="Sibelius P." class=footer-avatar>
+</a>
+<div class=footer-text>
+<span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
+<span class=footer-sep>·</span>
+<a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener>小红书</a>
+<span class=footer-sep>·</span>
+<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span>
+</div>
+</div>
 </footer>
-
-    </main>
-  </div>
+</main>
+</div>
 </body>
 </html>

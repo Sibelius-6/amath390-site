@@ -1,65 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Information Theory on AMATH 390 数学与音乐</title>
-    <link>https://amath390.sibeliusp.com/domains/information-theory/</link>
-    <description>Recent content in Information Theory on AMATH 390 数学与音乐</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://amath390.sibeliusp.com/domains/information-theory/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>EP07: Information Entropy and All-Interval Rows</title>
-      <link>https://amath390.sibeliusp.com/episodes/ep07/</link>
-      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://amath390.sibeliusp.com/episodes/ep07/</guid>
-      <description>Overview A listener hears two melodies and judges the second as &amp;ldquo;more chaotic.&amp;rdquo; But when you measure the distribution of adjacent intervals, the second melody is mathematically more uniform — its Shannon entropy is higher, not lower. The discomfort comes not from disorder but from the absence of the familiar concentrated pattern that tonal music trains the brain to expect.
-This episode builds Shannon&amp;rsquo;s entropy from first principles and applies it to music.</description>
-    </item>
-    
-    <item>
-      <title>EP21: From Markov to Diffusion — Sixty Years of AI Composition</title>
-      <link>https://amath390.sibeliusp.com/episodes/ep21/</link>
-      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://amath390.sibeliusp.com/episodes/ep21/</guid>
-      <description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
-本集探讨：Markov链, Transformer注意力, 分数匹配/扩散。
-前置知识 定义 Definition (...)  &amp;hellip;  -- 主要定理 Theorem 21.1 (...)  &amp;hellip;  -- Proof. &amp;hellip;  -- 音乐联系 音乐联系 &amp;hellip;  -- 局限性与开放问题 参考文献  待补充  </description>
-    </item>
-    
-    <item>
-      <title>EP23: Can AI Understand Music? Latent Space and Information Bottleneck</title>
-      <link>https://amath390.sibeliusp.com/episodes/ep23/</link>
-      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://amath390.sibeliusp.com/episodes/ep23/</guid>
-      <description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
-本集探讨：潜空间几何, 码本探测, 信息瓶颈。
-前置知识 定义 Definition (...)  &amp;hellip;  -- 主要定理 Theorem 23.1 (...)  &amp;hellip;  -- Proof. &amp;hellip;  -- 音乐联系 音乐联系 &amp;hellip;  -- 局限性与开放问题 参考文献  待补充  </description>
-    </item>
-    
-    <item>
-      <title>EP24: The Information Code of Pop Music</title>
-      <link>https://amath390.sibeliusp.com/episodes/ep24/</link>
-      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://amath390.sibeliusp.com/episodes/ep24/</guid>
-      <description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Information Theory on AMATH 390 数学与音乐</title><link>https://amath390.sibeliusp.com/domains/information-theory/</link><description>Recent content in Information Theory on AMATH 390 数学与音乐</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://amath390.sibeliusp.com/domains/information-theory/index.xml" rel="self" type="application/rss+xml"/><item><title>EP07: Information Entropy and All-Interval Rows</title><link>https://amath390.sibeliusp.com/episodes/ep07/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep07/</guid><description>Overview A listener hears two melodies and judges the second as &amp;ldquo;more chaotic.&amp;rdquo; But when you measure the distribution of adjacent intervals, the second melody is mathematically more uniform — its Shannon entropy is higher, not lower. The discomfort comes not from disorder but from the absence of the familiar concentrated pattern that tonal music trains the brain to expect.
+This episode builds Shannon&amp;rsquo;s entropy from first principles and applies it to music.</description></item><item><title>EP21: From Markov to Diffusion — Sixty Years of AI Composition</title><link>https://amath390.sibeliusp.com/episodes/ep21/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep21/</guid><description>Overview Three mathematical frameworks have dominated algorithmic music composition over sixty years: Markov chains (1957), Transformer attention (2017), and diffusion models (2020). Each replaces its predecessor not by discarding the core idea — sampling from a learned probability distribution over musical events — but by changing which probability distribution and how it is parameterized.
+中文: &amp;ldquo;它们在解同一个数学问题。这个问题的答案，七十年里只换了三次。从骰子，到注意力，到噪声。&amp;rdquo;
+This companion page formalizes the mathematics the video sketches: transition matrices on , the softmax attention mechanism as a content-dependent stochastic matrix, and the DDPM forward/reverse processes with score matching.</description></item><item><title>EP23: Can AI Understand Music? Latent Space and Information Bottleneck</title><link>https://amath390.sibeliusp.com/episodes/ep23/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep23/</guid><description>Overview 中文: &amp;ldquo;数学能量出形状，量不出意义。&amp;rdquo;
+The previous episode ( EP22 ) showed how EnCodec compresses audio into a discrete codebook of 2048 vectors in . This episode asks the next question: what did the model learn to encode? Tonal structure? Rhythmic patterns? Something humans cannot name?
+We develop three mathematical frameworks to answer this:
+t-SNE reduces the 128-dimensional codebook to a 2D map, revealing that codewords cluster by musical key &amp;mdash; without any supervision.</description></item><item><title>EP24: The Information Code of Pop Music</title><link>https://amath390.sibeliusp.com/episodes/ep24/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep24/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
 本集探讨：Shannon熵H(X), LZ压缩, Kolmogorov复杂度。
-前置知识 定义 Definition (...)  &amp;hellip;  -- 主要定理 Theorem 24.1 (...)  &amp;hellip;  -- Proof. &amp;hellip;  -- 音乐联系 音乐联系 &amp;hellip;  -- 局限性与开放问题 参考文献  待补充  </description>
-    </item>
-    
-    <item>
-      <title>EP27: Answering Viral Critics with Mathematics</title>
-      <link>https://amath390.sibeliusp.com/episodes/ep27/</link>
-      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://amath390.sibeliusp.com/episodes/ep27/</guid>
-      <description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
+前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 24.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item><item><title>EP27: Answering Viral Critics with Mathematics</title><link>https://amath390.sibeliusp.com/episodes/ep27/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep27/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
 本集探讨：EP24–26工具综合应用, surprisal方差。
-前置知识 定义 Definition (...)  &amp;hellip;  -- 主要定理 Theorem 27.1 (...)  &amp;hellip;  -- Proof. &amp;hellip;  -- 音乐联系 音乐联系 &amp;hellip;  -- 局限性与开放问题 参考文献  待补充  </description>
-    </item>
-    
-  </channel>
-</rss>
+前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 27.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item></channel></rss>

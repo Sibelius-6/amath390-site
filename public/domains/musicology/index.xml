@@ -1,22 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Musicology on AMATH 390 数学与音乐</title>
-    <link>https://amath390.sibeliusp.com/domains/musicology/</link>
-    <description>Recent content in Musicology on AMATH 390 数学与音乐</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://amath390.sibeliusp.com/domains/musicology/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>EP16: Rossini&#39;s Code — Budden, Gossett, and the Convention System</title>
-      <link>https://amath390.sibeliusp.com/episodes/ep16/</link>
-      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://amath390.sibeliusp.com/episodes/ep16/</guid>
-      <description>Overview Thirty-four operas in thirteen years. An average of one every five months — while his contemporaries typically took two to three years per opera. Rossini was not merely talented; he had discovered a system.
- 中文: &amp;ldquo;罗西尼不是天才，他找到了一套方法。这期我们来拆解 Budden 所说的罗西尼法典。&amp;rdquo;
- This episode is primarily musicology, with math appearing only as a toolbox at the end. The core story belongs to two scholars: the musicologist Julian Budden, who named the system &amp;ldquo;Code Rossini&amp;rdquo; (deliberately evoking the Code Napoléon), and Philip Gossett, who analyzed it as a convention framework — a set of shared dramatic expectations between composer and audience.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Musicology on AMATH 390 数学与音乐</title><link>https://amath390.sibeliusp.com/domains/musicology/</link><description>Recent content in Musicology on AMATH 390 数学与音乐</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://amath390.sibeliusp.com/domains/musicology/index.xml" rel="self" type="application/rss+xml"/><item><title>EP16: Rossini's Code — Budden, Gossett, and the Convention System</title><link>https://amath390.sibeliusp.com/episodes/ep16/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep16/</guid><description>Overview Thirty-four operas in thirteen years. An average of one every five months — while his contemporaries typically took two to three years per opera. Rossini was not merely talented; he had discovered a system.
+中文: &amp;ldquo;罗西尼不是天才，他找到了一套方法。这期我们来拆解 Budden 所说的罗西尼法典。&amp;rdquo;
+This episode is primarily musicology, with math appearing only as a toolbox at the end. The core story belongs to two scholars: the musicologist Julian Budden, who named the system &amp;ldquo;Code Rossini&amp;rdquo; (deliberately evoking the Code Napoléon), and Philip Gossett, who analyzed it as a convention framework — a set of shared dramatic expectations between composer and audience.</description></item></channel></rss>
