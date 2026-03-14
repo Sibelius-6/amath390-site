@@ -546,7 +546,7 @@ Definition 21.13 (Continuous Diffusion Generative Model)
 <tr>
 <th>Approach</th>
 <th>Representation</th>
-<th>Mathematical framework</th>
+<th>Framework</th>
 <th>Examples</th>
 </tr>
 </thead>
@@ -554,18 +554,20 @@ Definition 21.13 (Continuous Diffusion Generative Model)
 <tr>
 <td><strong>Token-based</strong></td>
 <td>Discrete tokens (MIDI, audio codecs)</td>
-<td>Autoregressive: <span class=math-inline data-latex="p(x_1, \ldots, x_n) = \prod_i p(x_i \mid x_{"></span></td>
+<td>Autoregressive</td>
 <td>MusicLM, MusicGen</td>
 </tr>
 <tr>
 <td><strong>Continuous</strong></td>
 <td>Spectrograms, latent vectors</td>
-<td>Diffusion: reverse a noising Markov chain</td>
+<td>Diffusion</td>
 <td>Riffusion, Stable Audio, ACE-Step</td>
 </tr>
 </tbody>
 </table>
-<p>The token-based approach factors the joint distribution as a product of conditionals and predicts one token at a time. The continuous approach treats the entire musical signal as a point in a high-dimensional space and sculpts it from noise. Both are valid factorizations of the same underlying probability <span class=math-inline data-latex=p(x)></span>.</p>
+<p>The token-based approach factors the joint distribution as a product of conditionals:</p>
+<p><span class=math-display data-latex="p(x_1, \ldots, x_n) = \prod_{i=1}^{n} p(x_i \mid x_{"></span></p>
+<p>and predicts one token at a time. The continuous approach treats the entire musical signal as a point in a high-dimensional space and sculpts it from noise by reversing a Markov chain. Both are valid factorizations of the same underlying probability <span class=math-inline data-latex=p(x)></span>.</p>
 <blockquote>
 <p><em>中文:</em> &ldquo;Riffusion：先把声音变成频谱图——一张二维的图片。然后用图片扩散模型去生成新的频谱图&mldr;&rdquo;</p>
 </blockquote>

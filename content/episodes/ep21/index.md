@@ -354,12 +354,16 @@ Take one pixel of a mel-spectrogram: {{< m >}}x_0 = 3.0{{< /m >}} (log-amplitude
 
 > *中文:* "今天的模型大战，本质是表示大战——音乐到底该写成token，还是雕成连续潜空间？"
 
-| Approach | Representation | Mathematical framework | Examples |
-|----------|---------------|----------------------|----------|
-| **Token-based** | Discrete tokens (MIDI, audio codecs) | Autoregressive: {{< m >}}p(x_1, \ldots, x_n) = \prod_i p(x_i \mid x_{<i}){{< /m >}} | MusicLM, MusicGen |
-| **Continuous** | Spectrograms, latent vectors | Diffusion: reverse a noising Markov chain | Riffusion, Stable Audio, ACE-Step |
+| Approach | Representation | Framework | Examples |
+|----------|---------------|-----------|----------|
+| **Token-based** | Discrete tokens (MIDI, audio codecs) | Autoregressive | MusicLM, MusicGen |
+| **Continuous** | Spectrograms, latent vectors | Diffusion | Riffusion, Stable Audio, ACE-Step |
 
-The token-based approach factors the joint distribution as a product of conditionals and predicts one token at a time. The continuous approach treats the entire musical signal as a point in a high-dimensional space and sculpts it from noise. Both are valid factorizations of the same underlying probability {{< m >}}p(x){{< /m >}}.
+The token-based approach factors the joint distribution as a product of conditionals:
+
+{{< dm >}}p(x_1, \ldots, x_n) = \prod_{i=1}^{n} p(x_i \mid x_{<i}){{< /dm >}}
+
+and predicts one token at a time. The continuous approach treats the entire musical signal as a point in a high-dimensional space and sculpts it from noise by reversing a Markov chain. Both are valid factorizations of the same underlying probability {{< m >}}p(x){{< /m >}}.
 
 > *中文:* "Riffusion：先把声音变成频谱图——一张二维的图片。然后用图片扩散模型去生成新的频谱图..."
 
