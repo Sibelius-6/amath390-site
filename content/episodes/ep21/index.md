@@ -361,7 +361,7 @@ Take one pixel of a mel-spectrogram: {{< m >}}x_0 = 3.0{{< /m >}} (log-amplitude
 
 The token-based approach factors the joint distribution as a product of conditionals:
 
-{{< dm >}}p(x_1, \ldots, x_n) = \prod_{i=1}^{n} p(x_i \mid x_{<i}){{< /dm >}}
+{{< dm >}}p(x_1, \ldots, x_n) = \prod_{i=1}^{n} p(x_i \mid x_1, \ldots, x_{i-1}){{< /dm >}}
 
 and predicts one token at a time. The continuous approach treats the entire musical signal as a point in a high-dimensional space and sculpts it from noise by reversing a Markov chain. Both are valid factorizations of the same underlying probability {{< m >}}p(x){{< /m >}}.
 
