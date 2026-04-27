@@ -1,4 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Network Science on AMATH 390 数学与音乐</title><link>https://amath390.sibeliusp.com/domains/network-science/</link><description>Recent content in Network Science on AMATH 390 数学与音乐</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://amath390.sibeliusp.com/domains/network-science/index.xml" rel="self" type="application/rss+xml"/><item><title>EP17: Leitmotif Networks — Wagner's Ring Cycle</title><link>https://amath390.sibeliusp.com/episodes/ep17/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep17/</guid><description>Overview You have heard this melody before. But in the Ring cycle&amp;rsquo;s sixteen hours, it returns in dozens of different forms — transposed, inverted, reversed, fragmented. Scholars have catalogued over a hundred such motifs. Wagner did not write melodies — he wrote an operating system.
-中文: &amp;ldquo;瓦格纳没有写旋律——他写了一个操作系统。这期我们来拆解这个系统的网络结构。&amp;rdquo;
-This episode analyzes Wagner&amp;rsquo;s leitmotif system through three mathematical lenses:
-Abstract algebra: The four basic motivic transformations — original, retrograde, inversion, retrograde-inversion — form the Klein four-group , the same algebraic structure we encountered in EP04 &amp;rsquo;s analysis of Schoenberg&amp;rsquo;s twelve-tone rows.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Network Science on AMATH 390 数学与音乐</title><link>https://amath390.sibeliusp.com/domains/network-science/</link><description>Recent content in Network Science on AMATH 390 数学与音乐</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://amath390.sibeliusp.com/domains/network-science/index.xml" rel="self" type="application/rss+xml"/><item><title>EP17: Leitmotif Networks — Wagner's Ring Cycle</title><link>https://amath390.sibeliusp.com/episodes/ep17/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep17/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>You have heard this melody before. But in the &lt;em>Ring&lt;/em> cycle&amp;rsquo;s sixteen hours, it returns in dozens of different forms — transposed, inverted, reversed, fragmented. Scholars have catalogued over a hundred such motifs. Wagner did not write melodies — he wrote an &lt;strong>operating system&lt;/strong>.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>中文:&lt;/em> &amp;ldquo;瓦格纳没有写旋律——他写了一个操作系统。这期我们来拆解这个系统的网络结构。&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>This episode analyzes Wagner&amp;rsquo;s leitmotif system through three mathematical lenses:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>Abstract algebra&lt;/strong>: The four basic motivic transformations — original, retrograde, inversion, retrograde-inversion — form the &lt;strong>Klein four-group&lt;/strong> &lt;span class="math-inline" data-latex="V_4 \cong \mathbb{Z}_2 \times \mathbb{Z}_2">&lt;/span>, the same algebraic structure we encountered in 
+
+
+
+&lt;a href="https://amath390.sibeliusp.com/episodes/ep04/" class="episode-ref-link">EP04&lt;/a>
+
+&amp;rsquo;s analysis of Schoenberg&amp;rsquo;s twelve-tone rows.&lt;/p></description></item></channel></rss>

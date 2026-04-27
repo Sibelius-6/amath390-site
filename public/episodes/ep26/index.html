@@ -1,218 +1,74 @@
-<!doctype html><html lang=zh-cn>
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<title>EP26: The 1/f Law of Music | AMATH 390 数学与音乐</title>
-<meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
-<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous>
-<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script>
-<script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('[data-latex]').forEach(function(a){try{katex.render(a.getAttribute('data-latex'),a,{displayMode:a.classList.contains('math-display'),throwOnError:!1})}catch(b){console.warn('KaTeX:',b.message,a)}})})</script>
-<link rel=icon type=image/png sizes=32x32 href=/favicon-32.png>
-<link rel=icon type=image/png sizes=16x16 href=/favicon-16.png>
-<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
-<link rel=stylesheet href=/css/amath390.css>
-</head>
-<body>
-<div class=layout-wrapper>
-<nav class=sidebar>
-<div class=sidebar-header>
-<a href=/ class=sidebar-title>AMATH 390</a>
-<div class=sidebar-subtitle>数学与音乐</div>
-</div>
-<div class=arc-group>
-<div class=arc-label>数学基础篇</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link>
-<span class=ep-num>01</span>
+<!doctype html><html lang=zh-cn><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>EP26: The 1/f Law of Music | AMATH 390 数学与音乐</title><meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music"><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script><script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("[data-latex]").forEach(function(e){try{katex.render(e.getAttribute("data-latex"),e,{displayMode:e.classList.contains("math-display"),throwOnError:!1})}catch(t){console.warn("KaTeX:",t.message,e)}})})</script><link rel=icon type=image/png sizes=32x32 href=/favicon-32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=stylesheet href=/css/amath390.css></head><body><div class=layout-wrapper><nav class=sidebar><div class=sidebar-header><a href=/ class=sidebar-title>AMATH 390</a><div class=sidebar-subtitle>数学与音乐</div></div><div class=arc-group><div class=arc-label>数学基础篇</div><a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link><span class=ep-num>01</span>
 <span class=ep-title>Chord Space and the Torus</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep02/ class=ep-link>
-<span class=ep-num>02</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep02/ class=ep-link><span class=ep-num>02</span>
 <span class=ep-title>String Vibration and the Wave Equation</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link>
-<span class=ep-num>03</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link><span class=ep-num>03</span>
 <span class=ep-title>Bach and Graph Connectivity</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link>
-<span class=ep-num>04</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link><span class=ep-num>04</span>
 <span class=ep-title>All-Interval Rows and ℤ₁₂</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link>
-<span class=ep-num>05</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link><span class=ep-num>05</span>
 <span class=ep-title>Turán's Theorem and Counterpoint</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-link>
-<span class=ep-num>06</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-link><span class=ep-num>06</span>
 <span class=ep-title>Graph Coloring and Voice Assignment</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-link>
-<span class=ep-num>07</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-link><span class=ep-num>07</span>
 <span class=ep-title>Information Entropy and All-Interval Rows</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-link>
-<span class=ep-num>08</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-link><span class=ep-num>08</span>
 <span class=ep-title>Shepard Tones and the Tritone Paradox</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link>
-<span class=ep-num>09</span>
-<span class=ep-title>Combination Tones and Nonlinear Acoustics</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>Jacob Collier 系列</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep10/ class=ep-link>
-<span class=ep-num>10</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link><span class=ep-num>09</span>
+<span class=ep-title>Combination Tones and Nonlinear Acoustics</span></a></div><div class=arc-group><div class=arc-label>Jacob Collier 系列</div><a href=https://amath390.sibeliusp.com/episodes/ep10/ class=ep-link><span class=ep-num>10</span>
 <span class=ep-title>Negative Harmony and the Dihedral Group D₁₂</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link>
-<span class=ep-num>11</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link><span class=ep-num>11</span>
 <span class=ep-title>Comma Drift and the Impossibility of Perfect Tuning</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep12/ class=ep-link>
-<span class=ep-num>12</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep12/ class=ep-link><span class=ep-num>12</span>
 <span class=ep-title>The Circle of Fifths as a Folded Spiral</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-link>
-<span class=ep-num>13</span>
-<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>拓扑数学专篇</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-link>
-<span class=ep-num>14</span>
-<span class=ep-title>Tonnetz Hodge Duality</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>歌剧系列</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-link>
-<span class=ep-num>15</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-link><span class=ep-num>13</span>
+<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span></a></div><div class=arc-group><div class=arc-label>拓扑数学专篇</div><a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-link><span class=ep-num>14</span>
+<span class=ep-title>Tonnetz Hodge Duality</span></a></div><div class=arc-group><div class=arc-label>歌剧系列</div><a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-link><span class=ep-num>15</span>
 <span class=ep-title>Opera Acoustics and the Singer's Formant</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link>
-<span class=ep-num>16</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link><span class=ep-num>16</span>
 <span class=ep-title>Rossini's Code — Budden, Gossett, and the Convention System</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-link>
-<span class=ep-num>17</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-link><span class=ep-num>17</span>
 <span class=ep-title>Leitmotif Networks — Wagner's Ring Cycle</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-link>
-<span class=ep-num>18</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-link><span class=ep-num>18</span>
 <span class=ep-title>Game Theory in Operatic Duets</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link>
-<span class=ep-num>19</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link><span class=ep-num>19</span>
 <span class=ep-title>Vibrato as FM Synthesis</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-link>
-<span class=ep-num>20</span>
-<span class=ep-title>Character Interaction Networks in Opera</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>AI 音乐三部曲</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-link>
-<span class=ep-num>21</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-link><span class=ep-num>20</span>
+<span class=ep-title>Character Interaction Networks in Opera</span></a></div><div class=arc-group><div class=arc-label>AI 音乐三部曲</div><a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-link><span class=ep-num>21</span>
 <span class=ep-title>From Markov to Diffusion — Sixty Years of AI Composition</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-link>
-<span class=ep-num>22</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-link><span class=ep-num>22</span>
 <span class=ep-title>How AI Writes Music — EnCodec and RVQ</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-link>
-<span class=ep-num>23</span>
-<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span>
-</a>
-</div>
-<div class=sidebar-footer>
-<a href=/theorems/>定理索引</a>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-link><span class=ep-num>23</span>
+<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span></a></div><div class=arc-group><div class=arc-label>流行音乐 × 数学</div><a href=https://amath390.sibeliusp.com/episodes/ep24/ class=ep-link><span class=ep-num>24</span>
+<span class=ep-title>The Information Code of Pop Music</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep25/ class=ep-link><span class=ep-num>25</span>
+<span class=ep-title>Why Music Gives You Goosebumps — Prediction Error and Frisson</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep26/ class="ep-link active"><span class=ep-num>26</span>
+<span class=ep-title>The 1/f Law of Music</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep27/ class=ep-link><span class=ep-num>27</span>
+<span class=ep-title>Answering Viral Critics with Mathematics</span></a></div><div class=arc-group><div class=arc-label>音乐技术系列</div><a href=https://amath390.sibeliusp.com/episodes/ep28/ class=ep-link><span class=ep-num>28</span>
+<span class=ep-title>Your Microphone Is a Damped Oscillator</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep29/ class=ep-link><span class=ep-num>29</span>
+<span class=ep-title>Primes in the Studio — Standing Waves and QRD Diffusers</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep30/ class=ep-link><span class=ep-num>30</span>
+<span class=ep-title>The Sampling Theorem Is Not What You Think</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep31/ class=ep-link><span class=ep-num>31</span>
+<span class=ep-title>The Warmth of Moog Has an Equation</span></a></div><div class=sidebar-footer><a href=/theorems/>定理索引</a>
 <a href=/domains/>数学领域</a>
-<a href=/about/>关于</a>
-</div>
-</nav>
-<main class=main-content>
-<div class=episode-layout>
-<article class=episode-page>
-<header class=episode-header>
-<div class=ep-badge>EP26</div>
-<h1 class=ep-main-title>EP26: The 1/f Law of Music</h1>
-<div class=ep-subtitle>功率谱密度S(f)∝1/fᵅ, Hurst指数H, 分形维数</div>
-<div class=ep-meta>
-<span class=meta-item>
-<span class=meta-icon>▶</span> 6:55
-</span>
-<span class="meta-item domains">
-<span class=domain-chip>Harmonic Analysis</span><span class=domain-chip>Nonlinear Dynamics</span>
-</span>
-</div>
-</header>
-<div class=cross-refs>
-<h3 class=cross-refs-title>前置知识</h3>
-<div class=ref-cards>
-<a href=https://amath390.sibeliusp.com/episodes/ep02/ class="ref-card callback">
-<span class=ref-ep>EP02</span>
+<a href=/about/>关于</a></div></nav><main class=main-content><div class=episode-layout><article class=episode-page><header class=episode-header><div class=ep-badge>EP26</div><h1 class=ep-main-title>EP26: The 1/f Law of Music</h1><div class=ep-subtitle>Power spectral density S(f)∝1/fᵅ, Hurst exponent H, fractal dimension</div><div class=ep-meta><span class=meta-item><span class=meta-icon>▶</span> 6:55
+</span><span class="meta-item domains"><span class=domain-chip>Harmonic Analysis</span><span class=domain-chip>Nonlinear Dynamics</span></span></div></header><div class=cross-refs><h3 class=cross-refs-title>前置知识</h3><div class=ref-cards><a href=https://amath390.sibeliusp.com/episodes/ep02/ class="ref-card callback"><span class=ref-ep>EP02</span>
 <span class=ref-title>String Vibration and the Wave Equation</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep13/ class="ref-card callback">
-<span class=ref-ep>EP13</span>
-<span class=ref-title>Polyrhythm and Rhythm-Pitch Duality</span>
-</a>
-</div>
-</div>
-<div class="episode-content content">
-<h2 id=概述>概述</h2>
-<p><em>本页内容正在撰写中。请先观看<a href=#>小红书视频</a>了解核心概念。</em></p>
-<p>本集探讨：功率谱密度S(f)∝1/fᵅ, Hurst指数H, 分形维数。</p>
-<h2 id=前置知识>前置知识</h2>
-<h2 id=定义>定义</h2>
-<h2 id=主要定理>主要定理</h2>
-<h2 id=音乐联系>音乐联系</h2>
-<h2 id=局限性与开放问题>局限性与开放问题</h2>
-<h2 id=参考文献>参考文献</h2>
-<ol>
-<li><em>待补充</em></li>
-</ol>
-</div>
-<nav class=ep-nav>
-<a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-nav-prev>
-← EP23: Can AI Understand Music? Latent Space and Information Bottleneck
-</a>
-</nav>
-</article>
-<aside class=ep-toc-aside>
-<div class=ep-toc-sticky>
-<div class=ep-toc-label>本页目录</div>
-<nav id=TableOfContents>
-<ul>
-<li><a href=#概述>概述</a></li>
-<li><a href=#前置知识>前置知识</a></li>
-<li><a href=#定义>定义</a></li>
-<li><a href=#主要定理>主要定理</a></li>
-<li><a href=#音乐联系>音乐联系</a></li>
-<li><a href=#局限性与开放问题>局限性与开放问题</a></li>
-<li><a href=#参考文献>参考文献</a></li>
-</ul>
-</nav>
-</div>
-</aside>
-</div>
-<footer class=site-footer>
-<div class=footer-content>
-<a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link>
-<img src=/images/avatar.png alt="Sibelius P." class=footer-avatar>
-</a>
-<div class=footer-text>
-<span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep13/ class="ref-card callback"><span class=ref-ep>EP13</span>
+<span class=ref-title>Polyrhythm and Rhythm-Pitch Duality</span></a></div></div><div class=cross-refs><h3 class=cross-refs-title>后续拓展</h3><div class=ref-cards><a href=https://amath390.sibeliusp.com/episodes/ep27/ class="ref-card forward"><span class=ref-ep>EP27</span>
+<span class=ref-title>Answering Viral Critics with Mathematics</span></a></div></div><div class="episode-content content"><h2 id=overview>Overview</h2><p>Take Bach, Jay Chou, Taylor Swift, and a segment of random noise, and feed all four through a spectrum analyser. Three centuries of stylistic difference nearly vanish in a single graph. That is the counterintuitive fact at the centre of this episode: across wildly different genres and eras, the <em>power spectral density</em> of pitch sequences tends to fall off as <span class=math-inline data-latex="S(f) \propto 1/f^\alpha"></span> with <span class=math-inline data-latex="\alpha \approx 1"></span>. It is not an iron law, but it is a statistical regularity that recurs with striking consistency.</p><p>This episode derives the mathematical machinery needed to make that statement precise. Starting from the Wiener–Khinchin theorem — the bridge between autocorrelation and power spectrum established in
+<a href=https://amath390.sibeliusp.com/episodes/ep02/ class=episode-ref-link>EP02 (Fourier analysis)</a>
+— we define the spectral exponent <span class=math-inline data-latex=\alpha></span>, connect it to the Hurst exponent <span class=math-inline data-latex=H></span> of fractional Brownian motion, and interpret the fractal dimension <span class=math-inline data-latex="D = 2 - H"></span> in the context of melodic curves. We close with the 1991 PNAS result of Hsu & Hsu, who showed that Bach&rsquo;s C-major invention exhibits self-similarity across three distinct time scales. The episode builds on the fractal and long-range-dependence ideas introduced in
+<a href=https://amath390.sibeliusp.com/episodes/ep13/ class=episode-ref-link>EP13 (fractal rhythm and polyrhythm)</a>
+.</p><blockquote><p><em>中文:</em> &ldquo;把巴赫、周杰伦、Taylor Swift，和一段随机噪声，一起送进频谱分析器。你会看到一件反直觉的事：三百年的风格差异，几乎消失了。&rdquo;</p></blockquote><hr><h2 id=prerequisites>Prerequisites</h2><ul><li><a href=https://amath390.sibeliusp.com/episodes/ep02/ class=episode-ref-link>Fourier transform and power spectrum (EP02)</a>
+— continuous and discrete Fourier transform, Parseval&rsquo;s identity</li><li><a href=https://amath390.sibeliusp.com/episodes/ep13/ class=episode-ref-link>Fractal rhythm and polyrhythm (EP13)</a>
+— Cantor set, fractal dimension, introduction to the Hurst exponent</li></ul><hr><h2 id=definitions>Definitions</h2><div class=definition-block id=definition-26.1><div class=block-label>Definition 26.1 (Power Spectral Density)</div><div class=block-body><p>Let <span class=math-inline data-latex=x(t)></span> be a wide-sense stationary random process with <strong>autocorrelation function</strong></p><p><span class=math-display data-latex="R(\tau) = \mathbb{E}[x(t+\tau)\, x(t)]"></span></p><p>The <strong>power spectral density</strong> (PSD) of the process is defined as the Fourier transform of <span class=math-inline data-latex=R(\tau)></span>:</p><p><span class=math-display data-latex="S(f) = \int_{-\infty}^{\infty} R(\tau)\, e^{-2\pi i f \tau}\, d\tau"></span></p><p>If <span class=math-inline data-latex="\log S(f)"></span> is linear in <span class=math-inline data-latex="\log f"></span> on a log-log plot, i.e.,</p><p><span class=math-display data-latex="S(f) \propto \frac{1}{f^\alpha}, \quad f > 0"></span></p><p>then the process is called a <strong>power-law spectral process</strong>, and the slope <span class=math-inline data-latex=\alpha></span> is called the <strong>spectral exponent</strong>.</p><p><strong>Three canonical cases:</strong></p><ul><li><span class=math-inline data-latex="\alpha = 0"></span>: white noise — equal energy at all frequencies</li><li><span class=math-inline data-latex="\alpha = 1"></span>: pink noise (1/f noise)</li><li><span class=math-inline data-latex="\alpha = 2"></span>: Brownian (red) noise</li></ul></div></div><p><strong>Working example — constructing the PSD of a pitch sequence:</strong> Take a melody and map pitches to an integer sequence in semitones <span class=math-inline data-latex="x_1, x_2, \ldots, x_N"></span>. Compute the discrete Fourier transform <span class=math-inline data-latex="\hat{x}_k = \sum_{n=0}^{N-1} x_n e^{-2\pi i kn/N}"></span>, and estimate the power spectrum as <span class=math-inline data-latex="\hat{S}(f_k) = |\hat{x}_k|^2 / N"></span>, where <span class=math-inline data-latex="f_k = k/N"></span> Hz (assuming one note per sample). Perform linear regression on <span class=math-inline data-latex="(\log f_k, \log \hat{S}(f_k))"></span> on a log-log plot; the negative of the slope is the estimate <span class=math-inline data-latex=\hat{\alpha}></span>.</p><blockquote><p><em>中文:</em> &ldquo;真正像音乐的，常常落在中间那个刚好的区间……很多音乐里，阿尔法接近一。它不是绝对法则，却是被频繁观察到的统计倾向。&rdquo;</p></blockquote><p>The following script reproduces the three noise PSD curves on a single log-log plot, making the slope difference between white, pink, and brown noise immediately visible.</p><figure><img src=/images/ep26/fig01_power_spectral_density_sf_1fᵅ_white_pink_brown_noise.png alt="Power Spectral Density S(f) ∝ 1/fᵅ — white, pink, brown noise" style=max-width:100%;border-radius:4px><figcaption>Power Spectral Density S(f) ∝ 1/fᵅ — white, pink, brown noise</figcaption></figure><hr><div class=definition-block id=definition-26.2><div class=block-label>Definition 26.2 (Hurst Exponent)</div><div class=block-body><p>Let <span class=math-inline data-latex="\{X(t)\}_{t \geq 0}"></span> be a stochastic process. If for all <span class=math-inline data-latex="c > 0"></span> the process satisfies <strong>self-similarity</strong>:</p><p><span class=math-display data-latex="\{X(ct)\} \stackrel{d}{=} \{c^H X(t)\}"></span></p><p>(equality in distribution), then <span class=math-inline data-latex="H \in (0, 1)"></span> is called the <strong>Hurst exponent</strong> of the process.</p><ul><li><span class=math-inline data-latex="H = 1/2"></span>: standard Brownian motion (independent increments, no memory)</li><li><span class=math-inline data-latex="H > 1/2"></span>: <strong>persistent</strong> — a past upward trend makes a future upward trend more likely</li><li><span class=math-inline data-latex="H < 1/2"></span>: <strong>anti-persistent</strong> — a past upward trend makes a future downward trend more likely</li></ul></div></div><p><strong>Working example — empirical estimation via R/S analysis:</strong> For a time series of length <span class=math-inline data-latex=N></span>, divide the series into <span class=math-inline data-latex=m></span> segments, compute the ratio of the range <span class=math-inline data-latex=R></span> to the standard deviation <span class=math-inline data-latex=S></span> for each segment, so that <span class=math-inline data-latex="\mathbb{E}[R/S] \sim c \cdot m^H"></span>. Regress <span class=math-inline data-latex=\log(R/S)></span> on <span class=math-inline data-latex="\log m"></span>; the slope is the estimate <span class=math-inline data-latex=\hat{H}></span>. A typical value for Bach&rsquo;s melodies is <span class=math-inline data-latex="\hat{H} \approx 0.7"></span>, while white noise gives <span class=math-inline data-latex="\hat{H} \approx 0.5"></span>.</p><p>The following script implements R/S analysis on three simulated pitch sequences and visualises both the log-log regression lines and the <span class=math-inline data-latex="\alpha = 2H - 1"></span> relationship.</p><figure><img src=/images/ep26/fig02_hurst_exponent_estimation_via_rs_analysis_on_a_melodic_pitch.png alt="Hurst exponent estimation via R/S analysis on a melodic pitch sequence" style=max-width:100%;border-radius:4px><figcaption>Hurst exponent estimation via R/S analysis on a melodic pitch sequence</figcaption></figure><hr><div class=definition-block id=definition-26.3><div class=block-label>Definition 26.3 (Fractional Brownian Motion)</div><div class=block-body><p><strong>Fractional Brownian motion</strong> (fBm) <span class=math-inline data-latex=B_H(t)></span> is a zero-mean Gaussian process satisfying</p><p><span class=math-display data-latex="\mathbb{E}[B_H(t) B_H(s)] = \frac{1}{2}\left(|t|^{2H} + |s|^{2H} - |t-s|^{2H}\right)"></span></p><p>Its increments <span class=math-inline data-latex="B_H(t) - B_H(s)"></span> follow a normal distribution with variance <span class=math-inline data-latex=|t-s|^{2H}></span>. When <span class=math-inline data-latex="H = 1/2"></span> the process reduces to standard Brownian motion.</p></div></div><hr><div class=definition-block id=definition-26.4><div class=block-label>Definition 26.4 (Long-Memory Autocorrelation Decay)</div><div class=block-body><p>For a stationary-increment process, define the autocorrelation function at discrete lag <span class=math-inline data-latex=k></span> as</p><p><span class=math-display data-latex="C(k) = \mathrm{Corr}(X_{t+k} - X_t,\; X_1 - X_0)"></span></p><p>If <span class=math-inline data-latex="C(k) \sim c \cdot k^{2H-2}"></span> as <span class=math-inline data-latex="k \to \infty"></span>, then the process is said to have <strong>long memory</strong> (long-range dependence). Note:</p><ul><li>When <span class=math-inline data-latex="H > 1/2"></span>, <span class=math-inline data-latex="2H-2 > -1"></span>, and the series <span class=math-inline data-latex="\sum_{k=1}^\infty C(k)"></span> diverges — genuine long memory</li><li>When <span class=math-inline data-latex="H = 1/2"></span>, <span class=math-inline data-latex="C(k) = 0"></span> for all <span class=math-inline data-latex="k \geq 1"></span> — no memory (white noise)</li><li>When <span class=math-inline data-latex="H < 1/2"></span>, <span class=math-inline data-latex="\sum_{k=1}^\infty C(k)"></span> converges to a negative value — short memory, anti-persistent</li></ul></div></div><hr><h2 id=main-theorems>Main Theorems</h2><div class=theorem-block id=theorem-26.1><div class=block-label>Theorem 26.1 (Wiener–Khinchin Theorem)</div><div class=block-body><p>Let <span class=math-inline data-latex=x(t)></span> be a mean-square integrable wide-sense stationary random process whose autocorrelation function <span class=math-inline data-latex="R(\tau) = \mathbb{E}[x(t+\tau)x(t)]"></span> is absolutely integrable. Then the Fourier transform of <span class=math-inline data-latex=R(\tau)></span> exists and equals the power spectral density:</p><p><span class=math-display data-latex="S(f) = \mathcal{F}\{R\}(f) = \int_{-\infty}^{\infty} R(\tau) e^{-2\pi i f \tau} d\tau \geq 0"></span></p><p>The inverse transform recovers the autocorrelation:</p><p><span class=math-display data-latex="R(\tau) = \int_{-\infty}^{\infty} S(f) e^{2\pi i f \tau} df"></span></p><p>In particular, the total power satisfies <span class=math-inline data-latex="R(0) = \mathbb{E}[x(t)^2] = \int_{-\infty}^{\infty} S(f) df"></span>.</p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p><strong>Non-negativity:</strong> For any finite-energy function <span class=math-inline data-latex=g(t)></span>,</p><p><span class=math-display data-latex="0 \leq \mathbb{E}\left[\left|\int g(t) x(t) dt\right|^2\right] = \int\int g(t)\overline{g(s)} R(t-s)\, dt\, ds = \int |\hat{g}(f)|^2 S(f)\, df"></span></p><p>where the last step uses the convolution theorem. Since the expression is non-negative for any <span class=math-inline data-latex=\hat{g}></span>, it follows that <span class=math-inline data-latex="S(f) \geq 0"></span> a.e.</p><p><strong>Transform pair:</strong> By the absolute integrability of <span class=math-inline data-latex=R(\tau)></span>, the Fourier transform</p><p><span class=math-display data-latex="S(f) = \int_{-\infty}^{\infty} R(\tau) e^{-2\pi i f \tau} d\tau"></span></p><p>exists and is continuous (Riemann–Lebesgue lemma). The inverse Fourier transform gives</p><p><span class=math-display data-latex="R(\tau) = \int_{-\infty}^{\infty} S(f) e^{2\pi i f \tau} df"></span></p><p>Setting <span class=math-inline data-latex="\tau = 0"></span>: <span class=math-inline data-latex="R(0) = \int S(f) df"></span>, i.e., total power equals the integral of the spectral density. <span class=math-inline data-latex=\square></span></p></div></div><hr><div class=theorem-block id=theorem-26.2><div class=block-label>Theorem 26.2 (Power Spectral Density of Fractional Brownian Motion)</div><div class=block-body><p>The power spectral density of the increment process <span class=math-inline data-latex="Y(t) = B_H(t+1) - B_H(t)"></span> (fractional Gaussian noise) of fractional Brownian motion <span class=math-inline data-latex=B_H(t)></span> satisfies</p><p><span class=math-display data-latex="S_Y(f) \propto \frac{1}{|f|^{2H-1}}, \quad f \neq 0"></span></p><p>i.e., the spectral exponent is <span class=math-inline data-latex="\alpha = 2H - 1"></span>, and the relationship between the Hurst exponent and the spectral exponent is</p><p><span class=math-display data-latex="H = \frac{\alpha + 1}{2}"></span></p><p>For the three canonical cases:</p><ul><li><span class=math-inline data-latex="\alpha = 0"></span> (white noise): <span class=math-inline data-latex="H = 1/2"></span></li><li><span class=math-inline data-latex="\alpha = 1"></span> (pink noise): <span class=math-inline data-latex="H = 1"></span> (boundary case; see note in proof)</li><li><span class=math-inline data-latex="\alpha = 2"></span> (Brownian noise): <span class=math-inline data-latex="H = 3/2"></span> (corresponds to fBm itself, not its increments)</li></ul></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p><strong>Covariance computation:</strong> The covariance of fractional Gaussian noise <span class=math-inline data-latex="Y_k = B_H(k+1) - B_H(k)"></span> is</p><p><span class=math-display data-latex="\mathrm{Cov}(Y_0, Y_k) = \frac{1}{2}\left(|k+1|^{2H} - 2|k|^{2H} + |k-1|^{2H}\right)"></span></p><p>For <span class=math-inline data-latex="k \geq 2"></span>, Taylor expansion gives</p><p><span class=math-display data-latex="|k+1|^{2H} - 2|k|^{2H} + |k-1|^{2H} \approx 2H(2H-1)k^{2H-2}"></span></p><p>so <span class=math-inline data-latex="\mathrm{Cov}(Y_0, Y_k) \sim H(2H-1) k^{2H-2}"></span> as <span class=math-inline data-latex="k \to \infty"></span> (this is precisely the long-memory decay of Definition 26.4).</p><p><strong>Fourier transform (continuous approximation):</strong> Substituting the continuous version of the covariance function <span class=math-inline data-latex="C(\tau) \sim c |\tau|^{2H-2}"></span> into the Wiener–Khinchin theorem and using the Fourier transform formula for fractional powers,</p><p><span class=math-display data-latex="\mathcal{F}\{|\tau|^{\beta}\}(f) = \frac{2\Gamma(\beta+1)\sin\!\left(\frac{\pi(\beta+1)}{2}\right)}{|2\pi f|^{\beta+1}}"></span></p><p>with <span class=math-inline data-latex="\beta = 2H - 2"></span> (valid for <span class=math-inline data-latex="H \neq 1/2"></span> and <span class=math-inline data-latex="H \neq 1"></span>), we obtain</p><p><span class=math-display data-latex="S_Y(f) \propto |f|^{-(2H-1)}"></span></p><p>i.e., <span class=math-inline data-latex="\alpha = 2H - 1"></span>, hence <span class=math-inline data-latex="H = (\alpha+1)/2"></span>.</p><p><strong>Boundary case note:</strong> As <span class=math-inline data-latex="H \to 1"></span>, <span class=math-inline data-latex="\alpha \to 1"></span>, but <span class=math-inline data-latex="H = 1"></span> strictly corresponds to a degenerate process (linear trend) with perfect positive correlation. In music analysis, one typically works with <span class=math-inline data-latex="H \in (0.6, 0.9)"></span>, corresponding to <span class=math-inline data-latex="\alpha \in (0.2, 0.8)"></span>; the pink-noise regime <span class=math-inline data-latex="\alpha \approx 1"></span> corresponds to values of <span class=math-inline data-latex=H></span> near this boundary. <span class=math-inline data-latex=\square></span></p></div></div><hr><div class=theorem-block id=theorem-26.3><div class=block-label>Theorem 26.3 (Long-Memory Autocorrelation Decay)</div><div class=block-body><p>Let <span class=math-inline data-latex="Y_k = B_H(k+1) - B_H(k)"></span> be fractional Gaussian noise with <span class=math-inline data-latex="H \in (1/2, 1)"></span>. Then the normalised autocorrelation function satisfies</p><p><span class=math-display data-latex="C(k) = \mathrm{Corr}(Y_0, Y_k) \sim H(2H-1)\, k^{2H-2}, \quad k \to \infty"></span></p><p>The series <span class=math-inline data-latex="\sum_{k=1}^\infty C(k) = +\infty"></span> (long memory), and</p><p><span class=math-display data-latex="\sum_{k=-\infty}^{\infty} C(k) = S_Y(0) = +\infty"></span></p><p>i.e., the spectral density diverges at <span class=math-inline data-latex="f = 0"></span> — low frequencies dominate and large-scale structure persists.</p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p><strong>Decay rate:</strong> From the proof of Theorem 26.2, <span class=math-inline data-latex="\mathrm{Cov}(Y_0, Y_k) = \frac{1}{2}[(k+1)^{2H} - 2k^{2H} + (k-1)^{2H}]"></span>. Applying the second-order Taylor expansion <span class=math-inline data-latex="f(k \pm 1) \approx f(k) \pm f'(k) + \frac{1}{2}f''(k)"></span> to <span class=math-inline data-latex="f(k) = k^{2H}"></span> as <span class=math-inline data-latex="k \to \infty"></span>:</p><p><span class=math-display data-latex="(k+1)^{2H} - 2k^{2H} + (k-1)^{2H} \approx f''(k) = 2H(2H-1)k^{2H-2}"></span></p><p>Hence <span class=math-inline data-latex="\mathrm{Cov}(Y_0, Y_k) \sim H(2H-1)k^{2H-2}"></span>, and after normalisation <span class=math-inline data-latex="C(k) \sim H(2H-1)k^{2H-2}"></span> (when the variance is finite).</p><p><strong>Series divergence:</strong> For <span class=math-inline data-latex="H \in (1/2, 1)"></span>, the exponent <span class=math-inline data-latex="2H-2 \in (-1, 0)"></span>, so by comparison with the integral:</p><p><span class=math-display data-latex="\sum_{k=1}^\infty k^{2H-2} \sim \int_1^\infty k^{2H-2}\, dk = \frac{k^{2H-1}}{2H-1}\Big|_1^\infty = +\infty"></span></p><p>By the comparison test, <span class=math-inline data-latex="\sum_{k=1}^\infty C(k) = +\infty"></span>. <span class=math-inline data-latex=\square></span></p></div></div><hr><div class=theorem-block id=theorem-26.4><div class=block-label>Theorem 26.4 (Fractal Dimension and the Hurst Exponent)</div><div class=block-body><p>The Hausdorff dimension of the trajectory of fractional Brownian motion <span class=math-inline data-latex=B_H(t)></span> on <span class=math-inline data-latex=[0,1]></span>, viewed as a planar curve, is</p><p><span class=math-display data-latex="D = 2 - H"></span></p><p>Specifically:</p><ul><li><span class=math-inline data-latex="H \to 0^+"></span>: <span class=math-inline data-latex="D \to 2"></span>, the path almost fills the plane (extremely rough)</li><li><span class=math-inline data-latex="H = 1/2"></span>: <span class=math-inline data-latex="D = 3/2"></span>, the path of standard Brownian motion</li><li><span class=math-inline data-latex="H \to 1^-"></span>: <span class=math-inline data-latex="D \to 1"></span>, the path approaches a smooth curve (nearly regular)</li></ul></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p><strong>Sketch proof (via box-counting dimension):</strong></p><p>Cover the trajectory <span class=math-inline data-latex="\{(t, B_H(t)) : t \in [0,1]\}"></span> with boxes of side length <span class=math-inline data-latex=\varepsilon></span>.</p><p>Divide <span class=math-inline data-latex=[0,1]></span> into <span class=math-inline data-latex="N = 1/\varepsilon"></span> segments each of length <span class=math-inline data-latex=\varepsilon></span>. In the <span class=math-inline data-latex=j></span>-th segment, the typical vertical variation is</p><p><span class=math-display data-latex="\mathbb{E}[|B_H((j+1)\varepsilon) - B_H(j\varepsilon)|] \sim \varepsilon^H"></span></p><p>(by the self-similarity <span class=math-inline data-latex="\{B_H(ct)\} \stackrel{d}{=} c^H B_H(t)"></span> of fBm).</p><p>The number of vertical boxes needed to cover the <span class=math-inline data-latex=j></span>-th segment of the trajectory is approximately <span class=math-inline data-latex="\varepsilon^H / \varepsilon = \varepsilon^{H-1}"></span>. The total box count is therefore</p><p><span class=math-display data-latex="N(\varepsilon) \sim \frac{1}{\varepsilon} \cdot \varepsilon^{H-1} = \varepsilon^{H-2}"></span></p><p>By the definition of box-counting dimension, <span class=math-inline data-latex="D = \lim_{\varepsilon \to 0} \frac{\log N(\varepsilon)}{\log(1/\varepsilon)} = \lim_{\varepsilon \to 0} \frac{(2-H)\log(1/\varepsilon)}{\log(1/\varepsilon)} = 2 - H"></span>.</p><p>For the rigorous proof matching the upper and lower Hausdorff dimension bounds, see Falconer (1990) §16.1. <span class=math-inline data-latex=\square></span></p></div></div><hr><h2 id=numerical-examples>Numerical Examples</h2><p><strong>Intuitive comparison of the three noise types:</strong></p><table><thead><tr><th>Noise type</th><th><span class=math-inline data-latex=\alpha></span></th><th><span class=math-inline data-latex=H></span></th><th><span class=math-inline data-latex=D></span></th><th>Musical analogy</th></tr></thead><tbody><tr><td>White noise</td><td>0</td><td>1/2</td><td>3/2</td><td>Each note completely random, like rolling a die</td></tr><tr><td>Pink noise</td><td>1</td><td>≈1</td><td>≈1</td><td>Slow-varying structure coexisting with rapid detail</td></tr><tr><td>Brownian noise</td><td>2</td><td>3/2</td><td>1/2</td><td>Drunkard&rsquo;s walk, slow drift, no sense of direction</td></tr></tbody></table><p><strong>Spectral exponent estimation (Voss & Clarke 1975 style):</strong> For a melody of <span class=math-inline data-latex="N = 512"></span> notes, treat MIDI pitch numbers as a time series. A white-noise melody yields a regression slope of approximately <span class=math-inline data-latex="\hat{\alpha} \approx 0.0"></span>; Bach fugues give estimates in the range <span class=math-inline data-latex="\hat{\alpha} \in [0.8, 1.2]"></span>; pop music gives approximately <span class=math-inline data-latex="\hat{\alpha} \in [0.9, 1.3]"></span>.</p><p><strong>Hsu & Hsu (1991) three-scale self-similarity:</strong> For Bach&rsquo;s C-major invention:</p><ul><li><strong>Scale 1 (adjacent notes):</strong> Pitch fluctuation from note to note, standard deviation ≈ 2.1 semitones</li><li><strong>Scale 2 (within a phrase):</strong> Fluctuation of grouped note averages within a phrase, standard deviation ≈ 2.0 semitones (after rescaling)</li><li><strong>Scale 3 (section level):</strong> Contour of averaged sections, standard deviation ≈ 1.9 semitones (after rescaling)</li></ul><p>The statistical shape at all three scales is nearly identical — empirical evidence of fractal self-similarity.</p><p>The following script synthesises a 1/f pitch sequence and renders its profile at three nested temporal scales, reproducing the Hsu & Hsu self-similarity observation.</p><figure><img src=/images/ep26/fig03_self_similar_pitch_profile_at_three_temporal_scales_hsu_hsu_.png alt="Self-similar pitch profile at three temporal scales (Hsu & Hsu 1991)" style=max-width:100%;border-radius:4px><figcaption>Self-similar pitch profile at three temporal scales (Hsu & Hsu 1991)</figcaption></figure><blockquote><p><em>中文:</em> &ldquo;把时间轴先拉近，你看到相邻音符之间有起伏。再退远一点，一个乐句内部的起伏，看起来仍然像刚才那张轮廓。再退到更大的段落层级，整体走势居然还保留着类似的粗糙感。&rdquo;</p></blockquote><hr><h2 id=musical-connection>Musical Connection</h2><div class=music-block><div class=block-label>音乐联系</div><div class=block-body><p><strong>The balance between order and novelty</strong></p><p>Why is <span class=math-inline data-latex="\alpha \approx 1"></span> the &ldquo;sweet spot&rdquo; musically? From the autocorrelation perspective:</p><ul><li>When <span class=math-inline data-latex="\alpha = 0"></span>, <span class=math-inline data-latex="C(k) = 0"></span> for all <span class=math-inline data-latex="k \geq 1"></span> — the past has no influence on the future; the melody is like rolling a die and the listener cannot follow a direction</li><li>When <span class=math-inline data-latex="\alpha = 2"></span>, <span class=math-inline data-latex=C(k)></span> decays very slowly and the past almost determines the future — the melody drifts indefinitely and loses the possibility of meaningful turns</li><li>When <span class=math-inline data-latex="\alpha \approx 1"></span>, <span class=math-inline data-latex="C(k) \sim k^{-1}"></span> — the past leaves a trace, but its influence decays as a power law with lag; the listener can feel both &ldquo;continuation&rdquo; and &ldquo;that the turn was meaningful&rdquo;</li></ul><p>This balance point recurs across composers, styles, and instrumentation, suggesting it may reflect an intrinsic preference of the human cognitive system for sequential prediction — which is precisely the direction that</p><p><a href=https://amath390.sibeliusp.com/episodes/ep25/ class=episode-ref-link>EP25&rsquo;s prediction-error framework</a></p><p>and</p><p><a href=https://amath390.sibeliusp.com/episodes/ep27/ class=episode-ref-link>EP27&rsquo;s applied analysis</a></p><p>continue to explore.</p><p><strong>Contrast with fractal rhythm (EP13)</strong></p><p><a href=https://amath390.sibeliusp.com/episodes/ep13/ class=episode-ref-link>EP13&rsquo;s fractal rhythm</a></p><p>studied self-similarity in percussive time series — structures such as the Clave rhythm and the Cantor set repeating along the time axis. This episode studies self-similarity in melodic pitch sequences. Both use the same mathematical tools (Hurst exponent, fractal dimension), but they act on different signal dimensions: EP13 concerns <em>when</em> a sound occurs, while EP26 concerns <em>which</em> sound occurs.</p><p><strong>Historical significance of Voss & Clarke and Hsu & Hsu</strong></p><p>Voss & Clarke (1975) were the first to report the 1/f spectral characteristic of music in <em>Nature</em>, analysing the loudness and pitch of classical radio broadcasts. Hsu & Hsu (1991) subsequently introduced the fBm framework into single-piece analysis and demonstrated the three-scale self-similarity of Bach&rsquo;s invention. These two works established the research tradition of &ldquo;physicists analysing music,&rdquo; and their conclusions were further corroborated in later large-corpus studies (Levitin et al. 2012).</p></div></div><hr><h2 id=limitations-and-open-questions>Limitations and Open Questions</h2><ol><li><p><strong>Robustness of spectral exponent estimation:</strong> Log-log linear regression is sensitive to low-frequency noise. For short sequences (<span class=math-inline data-latex="N < 200"></span> notes) the estimation variance is large, and reported <span class=math-inline data-latex=\hat{\alpha}></span> values in the literature span a wide interval (0.5 to 1.5). Welch&rsquo;s method or multitaper spectral estimation can improve robustness, but no widely accepted standard practice has emerged for musical sequences.</p></li><li><p><strong>Dependence on pitch sequence definition:</strong> Quantising a melody to discrete MIDI integers discards microtonal information. For Indian classical music or Arabic maqam music, the standard equal-temperament quantisation scheme is itself a distortion, and the measured <span class=math-inline data-latex=\hat{\alpha}></span> cannot be directly compared with values from Western music.</p></li><li><p><strong>Is the 1/f spectrum sufficient or merely necessary?</strong> <span class=math-inline data-latex="\alpha \approx 1"></span> is a statistical tendency observed in good music, but not a sufficient condition — one can synthesise a melody with <span class=math-inline data-latex="\alpha = 1"></span> that is completely devoid of musical quality. The spectral exponent captures only second-order statistics (variance structure) and says nothing about tonality, rhythm, or harmonic organisation.</p></li><li><p><strong>Causal interpretation of cross-scale self-similarity:</strong> The three-scale result of Hsu & Hsu is descriptive, not mechanistic. Whether this reflects a deliberate compositional strategy (a cognitive phenomenon) or the natural outcome of some generative process (a physical phenomenon) remains unresolved.</p></li><li><p><strong>Rhythm sequences vs pitch sequences:</strong> Most studies in the literature target pitch sequences; 1/f analysis of inter-onset interval sequences is less common and results are inconsistent (Rankin et al. 2009 found that rhythmic sequences are closer to white noise).</p></li></ol><div class=conjecture-block id=conjecture><div class=block-label>Conjecture (Cross-Cultural Universality of 1/f Statistics)</div><div class=block-body><p>After controlling for scale structure (i.e., fixing the modal discretisation scheme), the spectral exponents <span class=math-inline data-latex=\hat{\alpha}></span> of melodic pitch sequences from musical traditions around the world (West African polyrhythm, Indian classical, Arabic maqam, Japanese gagaku) will concentrate in the interval <span class=math-inline data-latex="[0.7, 1.3]"></span>, and will differ significantly from the null hypotheses of white noise (<span class=math-inline data-latex="\alpha = 0"></span>) and Brownian noise (<span class=math-inline data-latex="\alpha = 2"></span>).</p><p><strong>Falsifiability criterion:</strong> If <span class=math-inline data-latex=\hat{\alpha}></span> is found to fall statistically significantly outside <span class=math-inline data-latex="[0.5, 1.5]"></span> for any tradition, or if the distribution peaks differ by more than 0.5 across traditions, the conjecture is falsified.</p></div></div><hr><h2 id=references>References</h2><ol><li><p>Voss, R. F., & Clarke, J. (1975). &ldquo;1/f noise&rdquo; in music and speech. <em>Nature</em>, 258(5533), 317–318.</p></li><li><p>Voss, R. F., & Clarke, J. (1978). &ldquo;1/f noise&rdquo; in music: music from 1/f noise. <em>Journal of the Acoustical Society of America</em>, 63(1), 258–263.</p></li><li><p>Hsu, K. J., & Hsu, A. J. (1991). Self-similarity of the &ldquo;1/f noise&rdquo; called music. <em>Proceedings of the National Academy of Sciences</em>, 88(8), 3507–3509.</p></li><li><p>Mandelbrot, B. B., & Van Ness, J. W. (1968). Fractional Brownian motions, fractional noises and applications. <em>SIAM Review</em>, 10(4), 422–437.</p></li><li><p>Falconer, K. (1990). <em>Fractal Geometry: Mathematical Foundations and Applications</em>. Wiley. §16 (Dimensions of graphs and fractional Brownian motion).</p></li><li><p>Beran, J. (1994). <em>Statistics for Long-Memory Processes</em>. Chapman & Hall. Ch. 2 (Spectral analysis and self-similar processes).</p></li><li><p>Levitin, D. J., Chordia, P., & Menon, V. (2012). Musical rhythm spectra from Bach to Joplin obey a 1/f power law. <em>Proceedings of the National Academy of Sciences</em>, 109(10), 3716–3720.</p></li><li><p>Rankin, S. K., Large, E. W., & Fink, P. W. (2009). Fractal tempo fluctuation and pulse prediction. <em>Music Perception</em>, 26(5), 401–413.</p></li><li><p>Wiener, N. (1930). Generalized harmonic analysis. <em>Acta Mathematica</em>, 55, 117–258.</p></li><li><p>Khinchin, A. (1934). Korrelationstheorie der stationären stochastischen Prozesse. <em>Mathematische Annalen</em>, 109(1), 604–615.</p></li><li><p>Lowen, S. B., & Teich, M. C. (1993). Fractal renewal processes generate 1/f noise. <em>Physical Review E</em>, 47(2), 992–1001.</p></li><li><p>Bak, P., Tang, C., & Wiesenfeld, K. (1987). Self-organized criticality: an explanation of 1/f noise. <em>Physical Review Letters</em>, 59(4), 381–384.</p></li><li><p>Müller, M. (2015). <em>Fundamentals of Music Processing</em>. Springer. Ch. 3 (Music synchronization and tempo).</p></li></ol></div><nav class=ep-nav><a href=https://amath390.sibeliusp.com/episodes/ep25/ class=ep-nav-prev>← EP25: Why Music Gives You Goosebumps — Prediction Error and Frisson
+</a><a href=https://amath390.sibeliusp.com/episodes/ep27/ class=ep-nav-next>EP27: Answering Viral Critics with Mathematics →</a></nav></article><aside class=ep-toc-aside><div class=ep-toc-sticky><div class=ep-toc-label>本页目录</div><nav id=TableOfContents><ul><li><a href=#overview>Overview</a></li><li><a href=#prerequisites>Prerequisites</a></li><li><a href=#definitions>Definitions</a></li><li><a href=#main-theorems>Main Theorems</a></li><li><a href=#numerical-examples>Numerical Examples</a></li><li><a href=#musical-connection>Musical Connection</a></li><li><a href=#limitations-and-open-questions>Limitations and Open Questions</a></li><li><a href=#references>References</a></li></ul></nav></div></aside></div><footer class=site-footer><div class=footer-content><a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link><img src=/images/avatar.png alt="Sibelius P." class=footer-avatar></a><div class=footer-text><span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
 <span class=footer-sep>·</span>
 <a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener>小红书</a>
 <span class=footer-sep>·</span>
-<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span>
-</div>
-</div>
-</footer>
-</main>
-</div>
-</body>
-</html>
+<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span></div></div></footer></main></div></body></html>

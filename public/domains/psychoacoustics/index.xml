@@ -1,8 +1,52 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Psychoacoustics on AMATH 390 数学与音乐</title><link>https://amath390.sibeliusp.com/domains/psychoacoustics/</link><description>Recent content in Psychoacoustics on AMATH 390 数学与音乐</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://amath390.sibeliusp.com/domains/psychoacoustics/index.xml" rel="self" type="application/rss+xml"/><item><title>EP15: Opera Acoustics and the Singer's Formant</title><link>https://amath390.sibeliusp.com/episodes/ep15/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep15/</guid><description>Overview An opera singer has no microphone. A single voice must cut through 110 orchestral instruments in a live hall. This episode asks: how?
-中文: &amp;ldquo;答案藏在——3000赫兹。乐队能量在这里暴跌18分贝。这是歌手唯一的窗口——或者被淹没，或者穿透。&amp;rdquo;
-The answer is not louder singing. It is frequency targeting: the singer concentrates acoustic energy precisely where the orchestra is weakest, where the human ear is most sensitive, and where the physics of the vocal tract allows a structural resonance enhancement.
-This episode develops a three-layer quantitative model:</description></item><item><title>EP19: Vibrato as FM Synthesis</title><link>https://amath390.sibeliusp.com/episodes/ep19/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep19/</guid><description>Overview A pure A4 (440 Hz) and a gently trembling A4. The strange thing is — the trembling one sounds more stable, more vivid.
-中文: &amp;ldquo;这就是颤音，vibrato。每个歌剧歌手都在用它，但很少有人意识到，它背后的数学和雅马哈 DX7 合成器完全一样。&amp;rdquo;
-Vibrato is periodic modulation of the carrier frequency — one sine wave nested inside another. On the surface, only one pitch is wobbling. But the Jacobi-Anger expansion reveals a hidden spectral structure: symmetric sidebands appear on both sides of the carrier, each with amplitude governed by the Bessel function .</description></item><item><title>EP39: How Spotify Knows You Are Too Loud — The LUFS Algorithm</title><link>https://amath390.sibeliusp.com/episodes/ep39/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep39/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
-本集探讨：ITU-R BS.1770 K加权双二阶, 双门限, 真峰值。
-前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 39.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Psychoacoustics on AMATH 390 数学与音乐</title><link>https://amath390.sibeliusp.com/domains/psychoacoustics/</link><description>Recent content in Psychoacoustics on AMATH 390 数学与音乐</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://amath390.sibeliusp.com/domains/psychoacoustics/index.xml" rel="self" type="application/rss+xml"/><item><title>EP15: Opera Acoustics and the Singer's Formant</title><link>https://amath390.sibeliusp.com/episodes/ep15/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep15/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>An opera singer has no microphone. A single voice must cut through 110 orchestral instruments in a live hall. This episode asks: how?&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>中文:&lt;/em> &amp;ldquo;答案藏在——3000赫兹。乐队能量在这里暴跌18分贝。这是歌手唯一的窗口——或者被淹没，或者穿透。&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>The answer is not louder singing. It is &lt;strong>frequency targeting&lt;/strong>: the singer concentrates acoustic energy precisely where the orchestra is weakest, where the human ear is most sensitive, and where the physics of the vocal tract allows a structural resonance enhancement.&lt;/p>
+&lt;p>This episode develops a three-layer quantitative model:&lt;/p></description></item><item><title>EP19: Vibrato as FM Synthesis</title><link>https://amath390.sibeliusp.com/episodes/ep19/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep19/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>A pure A4 (440 Hz) and a gently trembling A4. The strange thing is — the trembling one sounds more stable, more vivid.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>中文:&lt;/em> &amp;ldquo;这就是颤音，vibrato。每个歌剧歌手都在用它，但很少有人意识到，它背后的数学和雅马哈 DX7 合成器完全一样。&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>Vibrato is periodic modulation of the carrier frequency — one sine wave nested inside another. On the surface, only one pitch is wobbling. But the Jacobi-Anger expansion reveals a hidden spectral structure: symmetric sidebands appear on both sides of the carrier, each with amplitude governed by the Bessel function &lt;span class="math-inline" data-latex="J_n(\beta)">&lt;/span>. As the modulation index &lt;span class="math-inline" data-latex="\beta">&lt;/span> grows from small to large, the sound evolves from vibrato into an entirely new timbre — a discovery John Chowning made at Stanford in 1967, which gave birth to the DX7 synthesizer and the sound of an entire decade.&lt;/p></description></item><item><title>EP39: How Spotify Knows You Are Too Loud — The LUFS Algorithm</title><link>https://amath390.sibeliusp.com/episodes/ep39/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep39/</guid><description>&lt;h2 id="概述">概述&lt;/h2>
+&lt;p>&lt;em>本页内容正在撰写中。请先观看&lt;a href="#">小红书视频&lt;/a>了解核心概念。&lt;/em>&lt;/p>
+&lt;p>本集探讨：ITU-R BS.1770 K加权双二阶, 双门限, 真峰值。&lt;/p>
+&lt;h2 id="前置知识">前置知识&lt;/h2>
+&lt;!-- cross-refs partial handles callback links -->
+&lt;h2 id="定义">定义&lt;/h2>
+&lt;!-- 
+
+&lt;div class="definition-block" id="definition">
+ &lt;div class="block-label">
+ Definition (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="主要定理">主要定理&lt;/h2>
+&lt;!-- 
+
+&lt;div class="theorem-block" id="theorem-39.1">
+ &lt;div class="block-label">
+ Theorem 39.1 (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;!-- &lt;div class="proof-block">
+ &lt;div class="block-label">Proof.&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="音乐联系">音乐联系&lt;/h2>
+&lt;!-- &lt;div class="music-block">
+ &lt;div class="block-label">音乐联系&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="局限性与开放问题">局限性与开放问题&lt;/h2>
+&lt;h2 id="参考文献">参考文献&lt;/h2>
+&lt;ol>
+&lt;li>&lt;em>待补充&lt;/em>&lt;/li>
+&lt;/ol></description></item></channel></rss>

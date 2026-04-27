@@ -1,16 +1,121 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Statistics/ML on AMATH 390 数学与音乐</title><link>https://amath390.sibeliusp.com/domains/statistics/ml/</link><description>Recent content in Statistics/ML on AMATH 390 数学与音乐</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://amath390.sibeliusp.com/domains/statistics/ml/index.xml" rel="self" type="application/rss+xml"/><item><title>EP21: From Markov to Diffusion — Sixty Years of AI Composition</title><link>https://amath390.sibeliusp.com/episodes/ep21/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep21/</guid><description>Overview Three mathematical frameworks have dominated algorithmic music composition over sixty years: Markov chains (1957), Transformer attention (2017), and diffusion models (2020). Each replaces its predecessor not by discarding the core idea — sampling from a learned probability distribution over musical events — but by changing which probability distribution and how it is parameterized.
-中文: &amp;ldquo;它们在解同一个数学问题。这个问题的答案，七十年里只换了三次。从骰子，到注意力，到噪声。&amp;rdquo;
-This companion page formalizes the mathematics the video sketches: transition matrices on , the softmax attention mechanism as a content-dependent stochastic matrix, and the DDPM forward/reverse processes with score matching.</description></item><item><title>EP22: How AI Writes Music — EnCodec and RVQ</title><link>https://amath390.sibeliusp.com/episodes/ep22/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep22/</guid><description>Overview 中文: &amp;ldquo;你在AI音乐工具里打了一行字：&amp;lsquo;一首中国风钢琴曲&amp;rsquo;。十秒后，一段旋律流了出来。这十秒钟里，数据到底经历了什么？&amp;rdquo;
-This episode traces the complete data pipeline of a text-to-music system, from the moment you type a text prompt to the moment audio emerges from the speaker. We follow two parallel architectures:
-MusicGen (Meta, 2023): text T5 encoder Transformer with delay pattern discrete tokens RVQ decode EnCodec decoder waveform. ACE-Step (2024): text T5 encoder DiT diffusion in continuous latent space DCAE decoder vocoder waveform.</description></item><item><title>EP23: Can AI Understand Music? Latent Space and Information Bottleneck</title><link>https://amath390.sibeliusp.com/episodes/ep23/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep23/</guid><description>Overview 中文: &amp;ldquo;数学能量出形状，量不出意义。&amp;rdquo;
-The previous episode ( EP22 ) showed how EnCodec compresses audio into a discrete codebook of 2048 vectors in . This episode asks the next question: what did the model learn to encode? Tonal structure? Rhythmic patterns? Something humans cannot name?
-We develop three mathematical frameworks to answer this:
-t-SNE reduces the 128-dimensional codebook to a 2D map, revealing that codewords cluster by musical key &amp;mdash; without any supervision.</description></item><item><title>EP25: Why Music Gives You Goosebumps — Prediction Error and Frisson</title><link>https://amath390.sibeliusp.com/episodes/ep25/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep25/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
-本集探讨：预测误差δ=r+γV(s')−V(s), 贝叶斯更新。
-前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 25.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item><item><title>EP41: The Mathematics of Source Separation — NMF to Demucs</title><link>https://amath390.sibeliusp.com/episodes/ep41/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep41/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
-本集探讨：NMF V≈WH乘法更新规则, Wiener掩模MMSE最优性, U-Net, HTDemucs, SDR指标。
-前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 41.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item><item><title>EP42: Chord Recognition — From Chroma Vectors to Viterbi Decoding</title><link>https://amath390.sibeliusp.com/episodes/ep42/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep42/</guid><description>概述 你播放一首歌，App 在零点一秒内报出和弦名。这不是凭感觉猜测，也不是查数据库。 背后是一个隐马尔可夫模型（Hidden Markov Model, HMM），和一个格形图上的最短路径算法（Viterbi）。
-本集从信号处理（STFT 色度向量）出发，经过模板匹配，建立 HMM 的三要素， 最终用 Viterbi 动态规划在 时间内精确解码最优和弦序列。
-前置知识 STFT 与相位声码器（EP35） — 短时傅里叶变换 全音程列与 （EP04） — 十二音类循环群结构 马尔可夫链与 AI 作曲（EP21） — 离散 Markov 链 人声分离（EP41） — 上游信号分离流程 定义 Definition 42.1 (色度特征向量) 设音频帧的短时傅里叶变换幅度谱为 ，。 色度向量 的第 分量（）定义为
-其中 ， 为第 个频率箱的中心频率， 为参考频率（通常取 C0 = 16.35 Hz）。
-色度向量将所有八度的能量折叠到 上， 实现八度等价： 汇聚了 C4、C5、C6 等所有八度上音名为 的能量。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Statistics/ML on AMATH 390 数学与音乐</title><link>https://amath390.sibeliusp.com/domains/statistics/ml/</link><description>Recent content in Statistics/ML on AMATH 390 数学与音乐</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://amath390.sibeliusp.com/domains/statistics/ml/index.xml" rel="self" type="application/rss+xml"/><item><title>EP21: From Markov to Diffusion — Sixty Years of AI Composition</title><link>https://amath390.sibeliusp.com/episodes/ep21/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep21/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Three mathematical frameworks have dominated algorithmic music composition over sixty years: &lt;strong>Markov chains&lt;/strong> (1957), &lt;strong>Transformer attention&lt;/strong> (2017), and &lt;strong>diffusion models&lt;/strong> (2020). Each replaces its predecessor not by discarding the core idea — sampling from a learned probability distribution over musical events — but by changing &lt;em>which&lt;/em> probability distribution and &lt;em>how&lt;/em> it is parameterized.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>中文:&lt;/em> &amp;ldquo;它们在解同一个数学问题。这个问题的答案，七十年里只换了三次。从骰子，到注意力，到噪声。&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>This companion page formalizes the mathematics the video sketches: transition matrices on &lt;span class="math-inline" data-latex="\mathbb{Z}_{12}">&lt;/span>, the softmax attention mechanism as a content-dependent stochastic matrix, and the DDPM forward/reverse processes with score matching.&lt;/p></description></item><item><title>EP22: How AI Writes Music — EnCodec and RVQ</title><link>https://amath390.sibeliusp.com/episodes/ep22/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep22/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;blockquote>
+&lt;p>&lt;em>中文:&lt;/em> &amp;ldquo;你在AI音乐工具里打了一行字：&amp;lsquo;一首中国风钢琴曲&amp;rsquo;。十秒后，一段旋律流了出来。这十秒钟里，数据到底经历了什么？&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>This episode traces the complete data pipeline of a text-to-music system, from the moment you type a text prompt to the moment audio emerges from the speaker. We follow two parallel architectures:&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>MusicGen&lt;/strong> (Meta, 2023): text &lt;span class="math-inline" data-latex="\to">&lt;/span> T5 encoder &lt;span class="math-inline" data-latex="\to">&lt;/span> Transformer with delay pattern &lt;span class="math-inline" data-latex="\to">&lt;/span> discrete tokens &lt;span class="math-inline" data-latex="\to">&lt;/span> RVQ decode &lt;span class="math-inline" data-latex="\to">&lt;/span> EnCodec decoder &lt;span class="math-inline" data-latex="\to">&lt;/span> waveform.&lt;/li>
+&lt;li>&lt;strong>ACE-Step&lt;/strong> (2024): text &lt;span class="math-inline" data-latex="\to">&lt;/span> T5 encoder &lt;span class="math-inline" data-latex="\to">&lt;/span> DiT diffusion in continuous latent space &lt;span class="math-inline" data-latex="\to">&lt;/span> DCAE decoder &lt;span class="math-inline" data-latex="\to">&lt;/span> vocoder &lt;span class="math-inline" data-latex="\to">&lt;/span> waveform.&lt;/li>
+&lt;/ol>
+&lt;p>The mathematical core: how to compress audio into a small discrete alphabet (EnCodec + RVQ), how to generate sequences from that alphabet conditioned on text (cross-attention + delay pattern), and how diffusion offers a continuous alternative (DiT + classifier-free guidance).&lt;/p></description></item><item><title>EP23: Can AI Understand Music? Latent Space and Information Bottleneck</title><link>https://amath390.sibeliusp.com/episodes/ep23/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep23/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;blockquote>
+&lt;p>&lt;em>中文:&lt;/em> &amp;ldquo;数学能量出形状，量不出意义。&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>The previous episode (
+
+
+
+&lt;a href="https://amath390.sibeliusp.com/episodes/ep22/" class="episode-ref-link">EP22&lt;/a>
+
+) showed how EnCodec compresses audio into a discrete codebook of 2048 vectors in &lt;span class="math-inline" data-latex="\mathbb{R}^{128}">&lt;/span>. This episode asks the next question: &lt;strong>what did the model learn to encode?&lt;/strong> Tonal structure? Rhythmic patterns? Something humans cannot name?&lt;/p>
+&lt;p>We develop three mathematical frameworks to answer this:&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>t-SNE&lt;/strong> reduces the 128-dimensional codebook to a 2D map, revealing that codewords cluster by musical key &amp;mdash; without any supervision.&lt;/li>
+&lt;li>&lt;strong>Linear probes&lt;/strong> formalize the notion of &amp;ldquo;linearly decodable information&amp;rdquo; in learned representations.&lt;/li>
+&lt;li>&lt;strong>Information Bottleneck theory&lt;/strong> explains &lt;em>why&lt;/em> a model forced to compress discovers musically meaningful structure: it must discard irrelevant detail while preserving predictive content.&lt;/li>
+&lt;/ol>
+&lt;p>The episode closes with Adam Neely&amp;rsquo;s challenge: even if the geometry is real, &lt;strong>structure is not meaning&lt;/strong>. Jazz cannot be interpolated from blues and ragtime, and individually generated music cannot replace communal listening. The central thesis:&lt;/p></description></item><item><title>EP25: Why Music Gives You Goosebumps — Prediction Error and Frisson</title><link>https://amath390.sibeliusp.com/episodes/ep25/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep25/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>方大同&amp;rsquo;s &lt;em>BB88&lt;/em> opens with eight bars of strings that never resolve. You know the tonic is coming — you have been waiting for it since bar two. When it finally arrives, the harmony is almost unsurprising (you predicted it). But the instrumentation is not: the strings vanish, and piano and vocals enter simultaneously. That collision between confirmed harmonic prediction and violated timbral prediction produces something measurable in the body: goosebumps, a catch in the breath, a surge that researchers call &lt;strong>frisson&lt;/strong>.&lt;/p></description></item><item><title>EP41: The Mathematics of Source Separation — NMF to Demucs</title><link>https://amath390.sibeliusp.com/episodes/ep41/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep41/</guid><description>&lt;h2 id="概述">概述&lt;/h2>
+&lt;p>&lt;em>本页内容正在撰写中。请先观看&lt;a href="#">小红书视频&lt;/a>了解核心概念。&lt;/em>&lt;/p>
+&lt;p>本集探讨：NMF V≈WH乘法更新规则, Wiener掩模MMSE最优性, U-Net, HTDemucs, SDR指标。&lt;/p>
+&lt;h2 id="前置知识">前置知识&lt;/h2>
+&lt;!-- cross-refs partial handles callback links -->
+&lt;h2 id="定义">定义&lt;/h2>
+&lt;!-- 
+
+&lt;div class="definition-block" id="definition">
+ &lt;div class="block-label">
+ Definition (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="主要定理">主要定理&lt;/h2>
+&lt;!-- 
+
+&lt;div class="theorem-block" id="theorem-41.1">
+ &lt;div class="block-label">
+ Theorem 41.1 (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;!-- &lt;div class="proof-block">
+ &lt;div class="block-label">Proof.&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="音乐联系">音乐联系&lt;/h2>
+&lt;!-- &lt;div class="music-block">
+ &lt;div class="block-label">音乐联系&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="局限性与开放问题">局限性与开放问题&lt;/h2>
+&lt;h2 id="参考文献">参考文献&lt;/h2>
+&lt;ol>
+&lt;li>&lt;em>待补充&lt;/em>&lt;/li>
+&lt;/ol></description></item><item><title>EP42: Chord Recognition — From Chroma Vectors to Viterbi Decoding</title><link>https://amath390.sibeliusp.com/episodes/ep42/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep42/</guid><description>&lt;h2 id="概述">概述&lt;/h2>
+&lt;p>你播放一首歌，App 在零点一秒内报出和弦名。这不是凭感觉猜测，也不是查数据库。
+背后是一个&lt;strong>隐马尔可夫模型&lt;/strong>（Hidden Markov Model, HMM），和一个格形图上的&lt;strong>最短路径算法&lt;/strong>（Viterbi）。&lt;/p>
+&lt;p>本集从信号处理（STFT 色度向量）出发，经过模板匹配，建立 HMM 的三要素，
+最终用 Viterbi 动态规划在 &lt;span class="math-inline" data-latex="O(T \cdot N^2)">&lt;/span> 时间内精确解码最优和弦序列。&lt;/p>
+&lt;hr>
+&lt;h2 id="前置知识">前置知识&lt;/h2>
+&lt;ul>
+&lt;li>
+
+
+
+&lt;a href="https://amath390.sibeliusp.com/episodes/ep35/" class="episode-ref-link">STFT 与相位声码器（EP35）&lt;/a>
+
+ — 短时傅里叶变换&lt;/li>
+&lt;li>
+
+
+
+&lt;a href="https://amath390.sibeliusp.com/episodes/ep04/" class="episode-ref-link">全音程列与 &lt;span class="math-inline" data-latex="\mathbb{Z}_{12}">&lt;/span>（EP04）&lt;/a>
+
+ — 十二音类循环群结构&lt;/li>
+&lt;li>
+
+
+
+&lt;a href="https://amath390.sibeliusp.com/episodes/ep21/" class="episode-ref-link">马尔可夫链与 AI 作曲（EP21）&lt;/a>
+
+ — 离散 Markov 链&lt;/li>
+&lt;li>
+
+
+
+&lt;a href="https://amath390.sibeliusp.com/episodes/ep41/" class="episode-ref-link">人声分离（EP41）&lt;/a>
+
+ — 上游信号分离流程&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="定义">定义&lt;/h2>
+
+
+&lt;div class="definition-block" id="definition-42.1">
+ &lt;div class="block-label">
+ Definition 42.1 (色度特征向量)
+ &lt;/div>
+ &lt;div class="block-body">&lt;p>设音频帧的短时傅里叶变换幅度谱为 &lt;span class="math-inline" data-latex="|X[k]|">&lt;/span>，&lt;span class="math-inline" data-latex="k = 0, 1, \ldots, K-1">&lt;/span>。
+&lt;strong>色度向量&lt;/strong> &lt;span class="math-inline" data-latex="\mathbf{c} \in \mathbb{R}^{12}">&lt;/span> 的第 &lt;span class="math-inline" data-latex="p">&lt;/span> 分量（&lt;span class="math-inline" data-latex="p \in \mathbb{Z}_{12}">&lt;/span>）定义为&lt;/p>
+&lt;p>&lt;span class="math-display" data-latex="c_p = \sum_{\substack{k : \, \text{pitch-class}(k) = p}} |X[k]|^2">&lt;/span>&lt;/p>
+&lt;p>其中 &lt;span class="math-inline" data-latex="\text{pitch-class}(k) = \lfloor 12 \log_2(f_k / f_{\text{ref}}) \rfloor \bmod 12">&lt;/span>，&lt;span class="math-inline" data-latex="f_k">&lt;/span> 为第 &lt;span class="math-inline" data-latex="k">&lt;/span> 个频率箱的中心频率，&lt;span class="math-inline" data-latex="f_{\text{ref}}">&lt;/span> 为参考频率（通常取 C0 = 16.35 Hz）。&lt;/p></description></item></channel></rss>

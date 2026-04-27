@@ -1,218 +1,74 @@
-<!doctype html><html lang=zh-cn>
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<title>EP29: Primes in the Studio — Standing Waves and QRD Diffusers | AMATH 390 数学与音乐</title>
-<meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
-<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous>
-<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script>
-<script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('[data-latex]').forEach(function(a){try{katex.render(a.getAttribute('data-latex'),a,{displayMode:a.classList.contains('math-display'),throwOnError:!1})}catch(b){console.warn('KaTeX:',b.message,a)}})})</script>
-<link rel=icon type=image/png sizes=32x32 href=/favicon-32.png>
-<link rel=icon type=image/png sizes=16x16 href=/favicon-16.png>
-<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
-<link rel=stylesheet href=/css/amath390.css>
-</head>
-<body>
-<div class=layout-wrapper>
-<nav class=sidebar>
-<div class=sidebar-header>
-<a href=/ class=sidebar-title>AMATH 390</a>
-<div class=sidebar-subtitle>数学与音乐</div>
-</div>
-<div class=arc-group>
-<div class=arc-label>数学基础篇</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link>
-<span class=ep-num>01</span>
+<!doctype html><html lang=zh-cn><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>EP29: Primes in the Studio — Standing Waves and QRD Diffusers | AMATH 390 数学与音乐</title><meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music"><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script><script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("[data-latex]").forEach(function(e){try{katex.render(e.getAttribute("data-latex"),e,{displayMode:e.classList.contains("math-display"),throwOnError:!1})}catch(t){console.warn("KaTeX:",t.message,e)}})})</script><link rel=icon type=image/png sizes=32x32 href=/favicon-32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=stylesheet href=/css/amath390.css></head><body><div class=layout-wrapper><nav class=sidebar><div class=sidebar-header><a href=/ class=sidebar-title>AMATH 390</a><div class=sidebar-subtitle>数学与音乐</div></div><div class=arc-group><div class=arc-label>数学基础篇</div><a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link><span class=ep-num>01</span>
 <span class=ep-title>Chord Space and the Torus</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep02/ class=ep-link>
-<span class=ep-num>02</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep02/ class=ep-link><span class=ep-num>02</span>
 <span class=ep-title>String Vibration and the Wave Equation</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link>
-<span class=ep-num>03</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link><span class=ep-num>03</span>
 <span class=ep-title>Bach and Graph Connectivity</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link>
-<span class=ep-num>04</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link><span class=ep-num>04</span>
 <span class=ep-title>All-Interval Rows and ℤ₁₂</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link>
-<span class=ep-num>05</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link><span class=ep-num>05</span>
 <span class=ep-title>Turán's Theorem and Counterpoint</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-link>
-<span class=ep-num>06</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-link><span class=ep-num>06</span>
 <span class=ep-title>Graph Coloring and Voice Assignment</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-link>
-<span class=ep-num>07</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-link><span class=ep-num>07</span>
 <span class=ep-title>Information Entropy and All-Interval Rows</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-link>
-<span class=ep-num>08</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-link><span class=ep-num>08</span>
 <span class=ep-title>Shepard Tones and the Tritone Paradox</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link>
-<span class=ep-num>09</span>
-<span class=ep-title>Combination Tones and Nonlinear Acoustics</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>Jacob Collier 系列</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep10/ class=ep-link>
-<span class=ep-num>10</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link><span class=ep-num>09</span>
+<span class=ep-title>Combination Tones and Nonlinear Acoustics</span></a></div><div class=arc-group><div class=arc-label>Jacob Collier 系列</div><a href=https://amath390.sibeliusp.com/episodes/ep10/ class=ep-link><span class=ep-num>10</span>
 <span class=ep-title>Negative Harmony and the Dihedral Group D₁₂</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link>
-<span class=ep-num>11</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link><span class=ep-num>11</span>
 <span class=ep-title>Comma Drift and the Impossibility of Perfect Tuning</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep12/ class=ep-link>
-<span class=ep-num>12</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep12/ class=ep-link><span class=ep-num>12</span>
 <span class=ep-title>The Circle of Fifths as a Folded Spiral</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-link>
-<span class=ep-num>13</span>
-<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>拓扑数学专篇</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-link>
-<span class=ep-num>14</span>
-<span class=ep-title>Tonnetz Hodge Duality</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>歌剧系列</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-link>
-<span class=ep-num>15</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-link><span class=ep-num>13</span>
+<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span></a></div><div class=arc-group><div class=arc-label>拓扑数学专篇</div><a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-link><span class=ep-num>14</span>
+<span class=ep-title>Tonnetz Hodge Duality</span></a></div><div class=arc-group><div class=arc-label>歌剧系列</div><a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-link><span class=ep-num>15</span>
 <span class=ep-title>Opera Acoustics and the Singer's Formant</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link>
-<span class=ep-num>16</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link><span class=ep-num>16</span>
 <span class=ep-title>Rossini's Code — Budden, Gossett, and the Convention System</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-link>
-<span class=ep-num>17</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-link><span class=ep-num>17</span>
 <span class=ep-title>Leitmotif Networks — Wagner's Ring Cycle</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-link>
-<span class=ep-num>18</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-link><span class=ep-num>18</span>
 <span class=ep-title>Game Theory in Operatic Duets</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link>
-<span class=ep-num>19</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link><span class=ep-num>19</span>
 <span class=ep-title>Vibrato as FM Synthesis</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-link>
-<span class=ep-num>20</span>
-<span class=ep-title>Character Interaction Networks in Opera</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>AI 音乐三部曲</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-link>
-<span class=ep-num>21</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-link><span class=ep-num>20</span>
+<span class=ep-title>Character Interaction Networks in Opera</span></a></div><div class=arc-group><div class=arc-label>AI 音乐三部曲</div><a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-link><span class=ep-num>21</span>
 <span class=ep-title>From Markov to Diffusion — Sixty Years of AI Composition</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-link>
-<span class=ep-num>22</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-link><span class=ep-num>22</span>
 <span class=ep-title>How AI Writes Music — EnCodec and RVQ</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-link>
-<span class=ep-num>23</span>
-<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span>
-</a>
-</div>
-<div class=sidebar-footer>
-<a href=/theorems/>定理索引</a>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-link><span class=ep-num>23</span>
+<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span></a></div><div class=arc-group><div class=arc-label>流行音乐 × 数学</div><a href=https://amath390.sibeliusp.com/episodes/ep24/ class=ep-link><span class=ep-num>24</span>
+<span class=ep-title>The Information Code of Pop Music</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep25/ class=ep-link><span class=ep-num>25</span>
+<span class=ep-title>Why Music Gives You Goosebumps — Prediction Error and Frisson</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep26/ class=ep-link><span class=ep-num>26</span>
+<span class=ep-title>The 1/f Law of Music</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep27/ class=ep-link><span class=ep-num>27</span>
+<span class=ep-title>Answering Viral Critics with Mathematics</span></a></div><div class=arc-group><div class=arc-label>音乐技术系列</div><a href=https://amath390.sibeliusp.com/episodes/ep28/ class=ep-link><span class=ep-num>28</span>
+<span class=ep-title>Your Microphone Is a Damped Oscillator</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep29/ class="ep-link active"><span class=ep-num>29</span>
+<span class=ep-title>Primes in the Studio — Standing Waves and QRD Diffusers</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep30/ class=ep-link><span class=ep-num>30</span>
+<span class=ep-title>The Sampling Theorem Is Not What You Think</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep31/ class=ep-link><span class=ep-num>31</span>
+<span class=ep-title>The Warmth of Moog Has an Equation</span></a></div><div class=sidebar-footer><a href=/theorems/>定理索引</a>
 <a href=/domains/>数学领域</a>
-<a href=/about/>关于</a>
-</div>
-</nav>
-<main class=main-content>
-<div class=episode-layout>
-<article class=episode-page>
-<header class=episode-header>
-<div class=ep-badge>EP29</div>
-<h1 class=ep-main-title>EP29: Primes in the Studio — Standing Waves and QRD Diffusers</h1>
-<div class=ep-subtitle>房间模态, Helmholtz共鸣器, 二次剩余模素数, Gauss和</div>
-<div class=ep-meta>
-<span class=meta-item>
-<span class=meta-icon>▶</span> 4:48
-</span>
-<span class="meta-item domains">
-<span class=domain-chip>Physics/Acoustics</span><span class=domain-chip>Number Theory</span>
-</span>
-</div>
-</header>
-<div class=cross-refs>
-<h3 class=cross-refs-title>前置知识</h3>
-<div class=ref-cards>
-<a href=https://amath390.sibeliusp.com/episodes/ep04/ class="ref-card callback">
-<span class=ref-ep>EP04</span>
+<a href=/about/>关于</a></div></nav><main class=main-content><div class=episode-layout><article class=episode-page><header class=episode-header><div class=ep-badge>EP29</div><h1 class=ep-main-title>EP29: Primes in the Studio — Standing Waves and QRD Diffusers</h1><div class=ep-subtitle>房间模态, Helmholtz共鸣器, 二次剩余模素数, Gauss和</div><div class=ep-meta><span class=meta-item><span class=meta-icon>▶</span> 4:48
+</span><span class="meta-item domains"><span class=domain-chip>Physics/Acoustics</span><span class=domain-chip>Number Theory</span></span></div></header><div class=cross-refs><h3 class=cross-refs-title>前置知识</h3><div class=ref-cards><a href=https://amath390.sibeliusp.com/episodes/ep04/ class="ref-card callback"><span class=ref-ep>EP04</span>
 <span class=ref-title>All-Interval Rows and ℤ₁₂</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep28/ class="ref-card callback">
-<span class=ref-ep>EP28</span>
-<span class=ref-title>Your Microphone Is a Damped Oscillator</span>
-</a>
-</div>
-</div>
-<div class="episode-content content">
-<h2 id=概述>概述</h2>
-<p><em>本页内容正在撰写中。请先观看<a href=#>小红书视频</a>了解核心概念。</em></p>
-<p>本集探讨：房间模态, Helmholtz共鸣器, 二次剩余模素数, Gauss和。</p>
-<h2 id=前置知识>前置知识</h2>
-<h2 id=定义>定义</h2>
-<h2 id=主要定理>主要定理</h2>
-<h2 id=音乐联系>音乐联系</h2>
-<h2 id=局限性与开放问题>局限性与开放问题</h2>
-<h2 id=参考文献>参考文献</h2>
-<ol>
-<li><em>待补充</em></li>
-</ol>
-</div>
-<nav class=ep-nav>
-<a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-nav-prev>
-← EP23: Can AI Understand Music? Latent Space and Information Bottleneck
-</a>
-</nav>
-</article>
-<aside class=ep-toc-aside>
-<div class=ep-toc-sticky>
-<div class=ep-toc-label>本页目录</div>
-<nav id=TableOfContents>
-<ul>
-<li><a href=#概述>概述</a></li>
-<li><a href=#前置知识>前置知识</a></li>
-<li><a href=#定义>定义</a></li>
-<li><a href=#主要定理>主要定理</a></li>
-<li><a href=#音乐联系>音乐联系</a></li>
-<li><a href=#局限性与开放问题>局限性与开放问题</a></li>
-<li><a href=#参考文献>参考文献</a></li>
-</ul>
-</nav>
-</div>
-</aside>
-</div>
-<footer class=site-footer>
-<div class=footer-content>
-<a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link>
-<img src=/images/avatar.png alt="Sibelius P." class=footer-avatar>
-</a>
-<div class=footer-text>
-<span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep28/ class="ref-card callback"><span class=ref-ep>EP28</span>
+<span class=ref-title>Your Microphone Is a Damped Oscillator</span></a></div></div><div class="episode-content content"><h2 id=overview>Overview</h2><p>The wooden slots on the back wall of a professional recording studio — varying depths 0, 8.5, 34, 17, 17, 34, 8.5 mm — are not decorative. They are a number-theoretic construction dating to Manfred Schroeder&rsquo;s 1979 paper: a <strong>Quadratic Residue Diffuser (QRD)</strong>. Its slot depths are proportional to <span class=math-inline data-latex="n^2 \bmod p"></span> for a prime <span class=math-inline data-latex=p></span>, and its design guarantee is that the discrete Fourier transform of the resulting phase sequence has perfectly flat magnitude — an assertion that reduces to the Gauss sum <span class=math-inline data-latex="|\sum_{n=0}^{p-1} e^{2\pi i n^2/p}| = \sqrt{p}"></span>.</p><p>Before reaching the diffuser, this episode explains why a room has problematic resonances in the first place. The wave equation with Neumann boundary conditions quantises standing-wave frequencies into a discrete spectrum; the crossover between countable low-frequency modes and statistical high-frequency diffuse fields is the Schroeder frequency. Below it, a Helmholtz resonator — governed by the identical second-order ODE from
+<a href=https://amath390.sibeliusp.com/episodes/ep28/ class=episode-ref-link>EP28</a>
+— absorbs targeted bass nodes. Above it, the QRD diffuser scatters energy uniformly using quadratic residues mod a prime, connecting back to the group theory of
+<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=episode-ref-link>EP04</a>
+.</p><blockquote><p><em>中文:</em> &ldquo;录音棚墙上这些深浅不一的木槽，深度是零、一、四、二、二、四、一毫米。声学工程师说这能让反射声均匀散开。但为什么偏偏是这七个数，不是别的排列？这不是拍脑袋，不是审美，背后有一个原因。&rdquo;</p></blockquote><hr><h2 id=prerequisites>Prerequisites</h2><ul><li><a href=https://amath390.sibeliusp.com/episodes/ep02/ class=episode-ref-link>波动方程与傅里叶分析（EP02）</a>
+— the wave equation and its standing-wave solutions; DFT and frequency-domain representation</li><li><a href=https://amath390.sibeliusp.com/episodes/ep04/ class=episode-ref-link>全音程列与 <span class=math-inline data-latex=\mathbb{Z}_{12}></span>（EP04）</a>
+— modular arithmetic and group structure; quadratic residues arise naturally from the multiplicative group <span class=math-inline data-latex=(\mathbb{Z}/p\mathbb{Z})^\times></span></li><li><a href=https://amath390.sibeliusp.com/episodes/ep28/ class=episode-ref-link>Your Microphone Is a Damped Oscillator（EP28）</a>
+— the damped harmonic oscillator ODE; Helmholtz resonator reuses the same equation</li></ul><hr><h2 id=definitions>Definitions</h2><div class=definition-block id=definition-29.1><div class=block-label>Definition 29.1 (Room Mode (Standing Wave))</div><div class=block-body><p>Consider a rectangular room with dimensions <span class=math-inline data-latex="L_x \times L_y \times L_z"></span> (meters) and rigid walls. The pressure field satisfies the wave equation <span class=math-inline data-latex="\nabla^2 p = (1/c^2)\ddot{p}"></span> with Neumann boundary conditions <span class=math-inline data-latex="\partial p/\partial n = 0"></span> on each wall (rigid walls: zero normal velocity). The general solution separable in Cartesian coordinates is a product of cosines; the allowed <strong>room mode frequencies</strong> are</p><p><span class=math-display data-latex="f_{l,m,n} = \frac{c}{2}\sqrt{\left(\frac{l}{L_x}\right)^2 + \left(\frac{m}{L_y}\right)^2 + \left(\frac{n}{L_z}\right)^2}"></span></p><p>where <span class=math-inline data-latex="(l, m, n) \in \mathbb{Z}_{\geq 0}^3 \setminus \{(0,0,0)\}"></span> are the <strong>mode indices</strong> and <span class=math-inline data-latex="c \approx 343"></span> m/s is the speed of sound. Modes are classified as axial (one non-zero index), tangential (two non-zero), or oblique (three non-zero).</p></div></div><p><strong>Worked example.</strong> A typical home studio is 4 m × 3 m × 2.5 m. The lowest axial mode along the longest dimension is <span class=math-inline data-latex="f_{1,0,0} = 343/(2 \times 4) = 42.9"></span> Hz. The mode <span class=math-inline data-latex="f_{1,1,0} = (343/2)\sqrt{(1/4)^2 + (1/3)^2} = 171.5 \times \sqrt{0.0625+0.111} = 171.5 \times 0.418 \approx 71.7"></span> Hz. In the range 40–200 Hz these modes are sparse and individually audible — the notorious &ldquo;room bass boom.&rdquo;</p><p>The following script computes and plots every room mode below 400 Hz for a typical home studio, with the Schroeder frequency shown as a reference line:</p><figure><img src=/images/ep29/fig01_room_modal_frequencies_for_a_typical_home_studio.png alt="Room modal frequencies for a typical home studio" style=max-width:100%;border-radius:4px><figcaption>Room modal frequencies for a typical home studio</figcaption></figure><div class=definition-block id=definition-29.2><div class=block-label>Definition 29.2 (Schroeder Frequency)</div><div class=block-body><p>The <strong>modal overlap</strong> of a room (ratio of average mode half-bandwidth to average inter-mode spacing) increases with frequency. When modal overlap reaches approximately 3, individual modes can no longer be distinguished and the field becomes statistically diffuse. The crossover frequency is the <strong>Schroeder frequency</strong>:</p><p><span class=math-display data-latex="f_s \approx 2000\sqrt{\frac{T_{60}}{V}}"></span></p><p>where <span class=math-inline data-latex=T_{60}></span> (seconds) is the reverberation time (time for the sound level to decay 60 dB) and <span class=math-inline data-latex=V></span> (cubic meters) is the room volume. Below <span class=math-inline data-latex=f_s></span>: discrete modes, treated individually. Above <span class=math-inline data-latex=f_s></span>: statistical energy diffusion, treated with geometric/wave-diffusion models.</p></div></div><p><strong>Worked example.</strong> A bedroom recording studio: <span class=math-inline data-latex="V = 4 \times 3 \times 2.5 = 30"></span> m³, <span class=math-inline data-latex="T_{60} = 0.4"></span> s (moderately treated). Then <span class=math-inline data-latex="f_s \approx 2000\sqrt{0.4/30} = 2000 \times 0.115 \approx 231"></span> Hz. Below 231 Hz: room modes must be handled individually (bass traps, Helmholtz resonators). Above 231 Hz: diffuse-field treatment (absorption panels, QRD diffusers).</p><div class=definition-block id=definition-29.3><div class=block-label>Definition 29.3 (Helmholtz Resonator)</div><div class=block-body><p>A <strong>Helmholtz resonator</strong> consists of a rigid-walled cavity of volume <span class=math-inline data-latex=V_c></span> connected to the room by a neck of cross-sectional area <span class=math-inline data-latex=A></span> and effective length <span class=math-inline data-latex=L_{\text{eff}}></span> (geometric length plus end corrections). The air in the neck (mass <span class=math-inline data-latex="\rho A L_{\text{eff}}"></span>) acts as a lumped mass; the air in the cavity (bulk modulus <span class=math-inline data-latex="\rho c^2"></span>) acts as a spring of stiffness <span class=math-inline data-latex="k_H = \rho c^2 A^2 / V_c"></span>.</p><p>The natural resonance frequency is</p><p><span class=math-display data-latex="f_0 = \frac{c}{2\pi}\sqrt{\frac{A}{V_c\,L_{\text{eff}}}}"></span></p><p>The dynamics of the neck air column obey the same damped harmonic oscillator ODE as the microphone membrane in</p><p><a href=https://amath390.sibeliusp.com/episodes/ep28/ class=episode-ref-link>EP28</a></p><p>, with the substitution:</p><ul><li><span class=math-inline data-latex="m \leftarrow \rho A L_{\text{eff}}"></span> (air mass)</li><li><span class=math-inline data-latex="k \leftarrow \rho c^2 A^2 / V_c"></span> (compressibility spring)</li><li><span class=math-inline data-latex="c_{\text{damp}} \leftarrow"></span> viscous losses at neck walls</li></ul></div></div><p><strong>Worked example.</strong> Design a Helmholtz trap for the 43 Hz mode (<span class=math-inline data-latex="f_0 = 43"></span> Hz). Choose cavity volume <span class=math-inline data-latex="V_c = 0.02"></span> m³ (roughly a 27-cm cube). Required neck geometry: <span class=math-inline data-latex="A / (V_c L_{\text{eff}}) = (2\pi f_0/c)^2 = (2\pi \times 43/343)^2 \approx 0.0624"></span> m⁻². Set <span class=math-inline data-latex="L_{\text{eff}} = 0.1"></span> m (10 cm neck); then <span class=math-inline data-latex="A = 0.0624 \times 0.02 \times 0.1 = 0.000125"></span> m², giving neck diameter <span class=math-inline data-latex="d = \sqrt{4A/\pi} \approx 1.26"></span> cm. A practical 43 Hz bass trap.</p><div class=definition-block id=definition-29.4><div class=block-label>Definition 29.4 (Quadratic Residues Modulo a Prime)</div><div class=block-body><p>Let <span class=math-inline data-latex=p></span> be an odd prime. The <strong>quadratic residue sequence</strong> modulo <span class=math-inline data-latex=p></span> is</p><p><span class=math-display data-latex="s(n) = n^2 \bmod p, \quad n = 0, 1, 2, \ldots, p-1"></span></p><p>The corresponding <strong>QRD slot depth sequence</strong> scaled to maximum depth <span class=math-inline data-latex=d_{\max}></span> is</p><p><span class=math-display data-latex="d_n = \frac{s(n)}{p-1} \cdot d_{\max}"></span></p><p>The QRD panel consists of <span class=math-inline data-latex=p></span> slots of equal width <span class=math-inline data-latex="w = \lambda_{\min}/2"></span> (where <span class=math-inline data-latex=\lambda_{\min}></span> is the wavelength at the design upper frequency), with depths <span class=math-inline data-latex="d_0, d_1, \ldots, d_{p-1}"></span>.</p></div></div><p><strong>Worked example.</strong> For <span class=math-inline data-latex="p = 7"></span>:</p><table><thead><tr><th><span class=math-inline data-latex=n></span></th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr></thead><tbody><tr><td><span class=math-inline data-latex=n^2></span></td><td>0</td><td>1</td><td>4</td><td>9</td><td>16</td><td>25</td><td>36</td></tr><tr><td><span class=math-inline data-latex="s(n) = n^2 \bmod 7"></span></td><td>0</td><td>1</td><td>4</td><td>2</td><td>2</td><td>4</td><td>1</td></tr></tbody></table><p>Maximum value is <span class=math-inline data-latex="s_{\max} = 4"></span> (not <span class=math-inline data-latex="p-1 = 6"></span>). With design maximum depth <span class=math-inline data-latex="d_{\max} = 34"></span> mm (corresponding to quarter-wavelength at design frequency):</p><span class=math-display data-latex="d_n = \frac{s(n)}{6} \times 34\,\text{mm}"></span><p>Depths: 0, 5.67, 22.67, 11.33, 11.33, 22.67, 5.67 mm. (If instead normalised to <span class=math-inline data-latex="s_{\max} = 4"></span> as in the narration: 0, 8.5, 34, 17, 17, 34, 8.5 mm. This is the physically common convention.) The sequence is palindromic: <span class=math-inline data-latex="s(n) = s(p-n)"></span> since <span class=math-inline data-latex="(p-n)^2 = p^2 - 2pn + n^2 \equiv n^2 \pmod{p}"></span>.</p><div class=definition-block id=definition-29.5><div class=block-label>Definition 29.5 (Gauss Sum)</div><div class=block-body><p>For an odd prime <span class=math-inline data-latex=p></span>, the <strong>quadratic Gauss sum</strong> is</p><p><span class=math-display data-latex="G(p) = \sum_{n=0}^{p-1} e^{2\pi i \, n^2 / p}"></span></p><p>This is a sum of <span class=math-inline data-latex=p></span> unit complex numbers at angles <span class=math-inline data-latex="2\pi n^2/p"></span>, which appear to scatter randomly on the unit circle but have a precisely determined resultant magnitude.</p></div></div><p>The following script visualises the seven unit-vector terms of <span class=math-inline data-latex=G(7)></span> on the complex plane and the corresponding QRD slot depths side by side:</p><figure><img src=/images/ep29/fig02_quadratic_residues_mod_7_on_the_unit_circle_gauss_sum_visual.png alt="Quadratic residues mod 7 on the unit circle — Gauss sum visualization" style=max-width:100%;border-radius:4px><figcaption>Quadratic residues mod 7 on the unit circle — Gauss sum visualization</figcaption></figure><hr><h2 id=main-theorems>Main Theorems</h2><div class=theorem-block id=theorem-29.1><div class=block-label>Theorem 29.1 (Room Mode Frequency Formula)</div><div class=block-body><p>In a rigid rectangular room of dimensions <span class=math-inline data-latex="L_x, L_y, L_z"></span>, the complete set of resonance frequencies of the pressure field is</p><p><span class=math-display data-latex="f_{l,m,n} = \frac{c}{2}\sqrt{\left(\frac{l}{L_x}\right)^2 + \left(\frac{m}{L_y}\right)^2 + \left(\frac{n}{L_z}\right)^2}, \quad (l,m,n) \in \mathbb{Z}_{\geq 0}^3 \setminus \{(0,0,0)\}"></span></p><p>with <span class=math-inline data-latex=c></span> the speed of sound. No other frequencies can be standing waves in this room under rigid-wall (Neumann) conditions.</p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p>The acoustic pressure <span class=math-inline data-latex="p(\mathbf{r}, t)"></span> satisfies the wave equation:</p><p><span class=math-display data-latex="\nabla^2 p = \frac{1}{c^2}\frac{\partial^2 p}{\partial t^2}"></span></p><p>Seek separable solutions <span class=math-inline data-latex="p = X(x)Y(y)Z(z)T(t)"></span>. Substituting and dividing by <span class=math-inline data-latex=XYZT></span>:</p><p><span class=math-display data-latex="\frac{X''}{X} + \frac{Y''}{Y} + \frac{Z''}{Z} = \frac{1}{c^2}\frac{T''}{T} = -k^2"></span></p><p>where <span class=math-inline data-latex=k^2></span> is a separation constant (positive for oscillating solutions). This splits into four ODEs. For time: <span class=math-inline data-latex="T'' + \omega^2 T = 0"></span> with <span class=math-inline data-latex="\omega = kc"></span>.</p><p>For the <span class=math-inline data-latex=x></span>-direction: <span class=math-inline data-latex="X'' + k_x^2 X = 0"></span>, where <span class=math-inline data-latex="k_x^2 + k_y^2 + k_z^2 = k^2"></span>. The Neumann boundary condition <span class=math-inline data-latex="\partial p/\partial x|_{x=0} = 0"></span> forces <span class=math-inline data-latex="X'(0) = 0"></span>, selecting the cosine solution <span class=math-inline data-latex="X = \cos(k_x x)"></span>. The condition at <span class=math-inline data-latex="x = L_x"></span>: <span class=math-inline data-latex="X'(L_x) = -k_x\sin(k_x L_x) = 0"></span> requires <span class=math-inline data-latex="k_x L_x = l\pi"></span> for integer <span class=math-inline data-latex="l \geq 0"></span>, hence <span class=math-inline data-latex="k_x = l\pi/L_x"></span>.</p><p>By the same argument in <span class=math-inline data-latex=y></span> and <span class=math-inline data-latex=z></span>: <span class=math-inline data-latex="k_y = m\pi/L_y"></span>, <span class=math-inline data-latex="k_z = n\pi/L_z"></span>. The total wave number is</p><p><span class=math-display data-latex="k_{l,m,n} = \pi\sqrt{\left(\frac{l}{L_x}\right)^2 + \left(\frac{m}{L_y}\right)^2 + \left(\frac{n}{L_z}\right)^2}"></span></p><p>Converting to frequency <span class=math-inline data-latex="f = \omega/(2\pi) = kc/(2\pi)"></span> and noting <span class=math-inline data-latex="f = kc/(2\pi) = k_{l,m,n}\,c/(2\pi)"></span>:</p><p><span class=math-display data-latex="f_{l,m,n} = \frac{k_{l,m,n}\,c}{2\pi} = \frac{c}{2}\sqrt{\left(\frac{l}{L_x}\right)^2 + \left(\frac{m}{L_y}\right)^2 + \left(\frac{n}{L_z}\right)^2}"></span></p><p>The case <span class=math-inline data-latex="l=m=n=0"></span> gives <span class=math-inline data-latex="k=0"></span> (uniform static pressure, excluded as it carries no acoustic energy). All other triples yield distinct resonance frequencies. <span class=math-inline data-latex=\square></span></p></div></div><div class=theorem-block id=theorem-29.2><div class=block-label>Theorem 29.2 (Helmholtz Resonator Natural Frequency)</div><div class=block-body><p>The air plug in the neck of a Helmholtz resonator of cavity volume <span class=math-inline data-latex=V_c></span>, neck area <span class=math-inline data-latex=A></span>, and effective neck length <span class=math-inline data-latex=L_{\text{eff}}></span> performs simple harmonic motion at natural frequency</p><p><span class=math-display data-latex="f_0 = \frac{c}{2\pi}\sqrt{\frac{A}{V_c\,L_{\text{eff}}}}"></span></p><p>This is identical in form to the natural frequency <span class=math-inline data-latex="\omega_0 = \sqrt{k/m}"></span> from</p><p><a href=https://amath390.sibeliusp.com/episodes/ep28/ class=episode-ref-link>EP28</a></p><p>, with the identifications <span class=math-inline data-latex="m_{\text{eff}} = \rho A L_{\text{eff}}"></span> and <span class=math-inline data-latex="k_{\text{eff}} = \rho c^2 A^2 / V_c"></span>.</p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p>Let <span class=math-inline data-latex=\xi(t)></span> be the displacement of the air column in the neck (positive outward). The volume of the neck element is <span class=math-inline data-latex=A\,\xi></span>, so the fractional volume change of the cavity is <span class=math-inline data-latex="\Delta V / V_c = A\xi/V_c"></span>.</p><p><strong>Restoring force.</strong> For an adiabatic compression, the excess pressure is <span class=math-inline data-latex="\Delta p = -\rho c^2 (\Delta V / V_c) = -\rho c^2 A\xi / V_c"></span>. The restoring force on the neck air plug is</p><p><span class=math-display data-latex="F_{\text{spring}} = A\,\Delta p = -\frac{\rho c^2 A^2}{V_c}\,\xi"></span></p><p>This is a Hooke&rsquo;s-law force with spring constant <span class=math-inline data-latex="k_{\text{eff}} = \rho c^2 A^2 / V_c"></span>.</p><p><strong>Inertial term.</strong> The neck air mass is <span class=math-inline data-latex="m_{\text{eff}} = \rho A L_{\text{eff}}"></span>. Newton&rsquo;s second law (ignoring losses for the natural frequency calculation):</p><p><span class=math-display data-latex="\rho A L_{\text{eff}}\,\ddot{\xi} = -\frac{\rho c^2 A^2}{V_c}\,\xi"></span></p><p>Dividing by <span class=math-inline data-latex="\rho A L_{\text{eff}}"></span>:</p><p><span class=math-display data-latex="\ddot{\xi} + \frac{c^2 A}{V_c L_{\text{eff}}}\,\xi = 0"></span></p><p>This is the undamped harmonic oscillator with <span class=math-inline data-latex="\omega_0^2 = c^2 A / (V_c L_{\text{eff}})"></span>, giving</p><p><span class=math-display data-latex="f_0 = \frac{\omega_0}{2\pi} = \frac{c}{2\pi}\sqrt{\frac{A}{V_c\,L_{\text{eff}}}}"></span> <span class=math-inline data-latex=\square></span></p></div></div><div class=theorem-block id=theorem-29.3><div class=block-label>Theorem 29.3 (Flat DFT Magnitude of the QRD Sequence (Gauss Sum))</div><div class=block-body><p>Let <span class=math-inline data-latex=p></span> be an odd prime and let <span class=math-inline data-latex="s(n) = n^2 \bmod p"></span> for <span class=math-inline data-latex="n = 0, \ldots, p-1"></span>. Define the unit-complex phase sequence</p><p><span class=math-display data-latex="z(n) = e^{2\pi i\, s(n)/p} = e^{2\pi i\, n^2/p}"></span></p><p>Its discrete Fourier transform is</p><p><span class=math-display data-latex="\hat{z}(k) = \sum_{n=0}^{p-1} z(n)\,e^{-2\pi i\, nk/p} = \sum_{n=0}^{p-1} e^{2\pi i\,(n^2 - nk)/p}"></span></p><p>Then for all <span class=math-inline data-latex="k = 0, 1, \ldots, p-1"></span>:</p><p><span class=math-display data-latex="|\hat{z}(k)|^2 = p"></span></p><p>Equivalently, <span class=math-inline data-latex="|\hat{z}(k)| = \sqrt{p}"></span> for all <span class=math-inline data-latex=k></span>. In particular, setting <span class=math-inline data-latex="k = 0"></span>: <span class=math-inline data-latex="|G(p)| = \sqrt{p}"></span>.</p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p><strong>Step 1: Complete the square.</strong> For each <span class=math-inline data-latex=k></span>,</p><p><span class=math-display data-latex="n^2 - nk = \left(n - \frac{k}{2}\right)^2 - \frac{k^2}{4}"></span></p><p>In <span class=math-inline data-latex=\mathbb{Z}/p\mathbb{Z}></span>, division by 2 is the multiplication by the inverse of 2 modulo <span class=math-inline data-latex=p></span> (which exists since <span class=math-inline data-latex=p></span> is an odd prime). Let <span class=math-inline data-latex="m = n - k \cdot 2^{-1} \pmod{p}"></span>. As <span class=math-inline data-latex=n></span> ranges over <span class=math-inline data-latex="\{0, \ldots, p-1\}"></span>, so does <span class=math-inline data-latex=m></span> (a bijection modulo <span class=math-inline data-latex=p></span>). Therefore:</p><p><span class=math-display data-latex="\hat{z}(k) = e^{-2\pi i\,(k/2)^2/p}\sum_{m=0}^{p-1} e^{2\pi i\,m^2/p} = e^{-\pi i\, k^2/p} \cdot G(p)"></span></p><p><strong>Step 2: Compute <span class=math-inline data-latex=|\hat{z}(k)|></span>.</strong> Since <span class=math-inline data-latex="|e^{-\pi i k^2/p}| = 1"></span>:</p><p><span class=math-display data-latex="|\hat{z}(k)| = |G(p)| \quad \text{for all } k"></span></p><p>This shows that all DFT coefficients have equal magnitude — the DFT is &ldquo;flat&rdquo; — and the common value is exactly <span class=math-inline data-latex=|G(p)|></span>.</p><p><strong>Step 3: Evaluate <span class=math-inline data-latex=|G(p)|^2></span>.</strong> Use Parseval&rsquo;s theorem (or direct computation):</p><p><span class=math-display data-latex="|G(p)|^2 = G(p)\,\overline{G(p)} = \sum_{n=0}^{p-1}\sum_{m=0}^{p-1} e^{2\pi i(n^2-m^2)/p}"></span></p><p>Substitute <span class=math-inline data-latex="j = n-m \pmod{p}"></span>:</p><p><span class=math-display data-latex="|G(p)|^2 = \sum_{j=0}^{p-1}\sum_{m=0}^{p-1} e^{2\pi i(j^2 + 2jm)/p} = \sum_{j=0}^{p-1} e^{2\pi i j^2/p}\sum_{m=0}^{p-1} e^{2\pi i(2jm)/p}"></span></p><p>The inner sum <span class=math-inline data-latex="\sum_{m=0}^{p-1} e^{2\pi i (2j)m/p}"></span> is a complete geometric sum. Since <span class=math-inline data-latex=p></span> is prime and <span class=math-inline data-latex="2j \not\equiv 0 \pmod{p}"></span> for <span class=math-inline data-latex="j \neq 0"></span>, it equals <span class=math-inline data-latex=p></span> when <span class=math-inline data-latex="j = 0"></span> and <span class=math-inline data-latex=0></span> otherwise (sum of all <span class=math-inline data-latex=p></span>-th roots of unity). Therefore:</p><p><span class=math-display data-latex="|G(p)|^2 = e^{0} \cdot p = p"></span></p><p>Hence <span class=math-inline data-latex="|G(p)| = \sqrt{p}"></span> and <span class=math-inline data-latex="|\hat{z}(k)| = \sqrt{p}"></span> for all <span class=math-inline data-latex=k></span>. <span class=math-inline data-latex=\square></span></p></div></div><div class=proposition-block id=prop-29.1><div class=block-label>Prop 29.1 (Palindrome Symmetry of QRD Sequence)</div><div class=block-body><p>For odd prime <span class=math-inline data-latex=p></span>, the sequence <span class=math-inline data-latex="s(n) = n^2 \bmod p"></span> is palindromic:</p><p><span class=math-display data-latex="s(p - n) = s(n) \quad \text{for all } n = 0, 1, \ldots, p-1"></span></p><p>In particular, the QRD slot-depth panel has bilateral mirror symmetry about its centre.</p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p><span class=math-display data-latex="s(p-n) = (p-n)^2 \bmod p = (p^2 - 2pn + n^2) \bmod p = n^2 \bmod p = s(n)"></span></p><p>since <span class=math-inline data-latex=p^2></span> and <span class=math-inline data-latex=2pn></span> are both multiples of <span class=math-inline data-latex=p></span>. <span class=math-inline data-latex=\square></span></p></div></div><hr><h2 id=numerical-examples>Numerical Examples</h2><p><strong>Room modes for a home studio (4 m × 3 m × 2.5 m).</strong></p><p>The five lowest mode frequencies:</p><table><thead><tr><th>Mode <span class=math-inline data-latex=(l,m,n)></span></th><th>Type</th><th><span class=math-inline data-latex=f_{l,m,n}></span> (Hz)</th></tr></thead><tbody><tr><td>(1,0,0)</td><td>axial</td><td>42.9</td></tr><tr><td>(0,1,0)</td><td>axial</td><td>57.2</td></tr><tr><td>(0,0,1)</td><td>axial</td><td>68.6</td></tr><tr><td>(1,1,0)</td><td>tangential</td><td>71.6</td></tr><tr><td>(2,0,0)</td><td>axial</td><td>85.8</td></tr></tbody></table><p>These modes are spaced 10–30 Hz apart — clearly audible as distinct &ldquo;boomy&rdquo; frequencies. Above 231 Hz (Schroeder) the modes exceed <span class=math-inline data-latex="N(f) \approx (4\pi V/3)(f/c)^3"></span> and their density renders them statistically manageable.</p><p><strong>Schroeder frequency sensitivity.</strong> Doubling the treatment (<span class=math-inline data-latex="T_{60} \to 0.2"></span> s): <span class=math-inline data-latex="f_s \approx 2000\sqrt{0.2/30} \approx 163"></span> Hz — a better-treated room has a lower Schroeder frequency and fewer individual modes to address.</p><p><strong>Full QRD calculation for <span class=math-inline data-latex="p = 7"></span>.</strong> Sequence <span class=math-inline data-latex="s = [0, 1, 4, 2, 2, 4, 1]"></span>. Phase angles <span class=math-inline data-latex="\phi_n = 2\pi s(n)/7"></span> (radians):</p><table><thead><tr><th><span class=math-inline data-latex=n></span></th><th><span class=math-inline data-latex=s(n)></span></th><th><span class=math-inline data-latex=\phi_n></span> (rad)</th><th><span class=math-inline data-latex=\text{Re}(e^{i\phi_n})></span></th><th><span class=math-inline data-latex=\text{Im}(e^{i\phi_n})></span></th></tr></thead><tbody><tr><td>0</td><td>0</td><td>0</td><td>1.000</td><td>0.000</td></tr><tr><td>1</td><td>1</td><td>0.898</td><td>0.623</td><td>0.782</td></tr><tr><td>2</td><td>4</td><td>3.590</td><td>−0.901</td><td>−0.434</td></tr><tr><td>3</td><td>2</td><td>1.795</td><td>−0.223</td><td>0.975</td></tr><tr><td>4</td><td>2</td><td>1.795</td><td>−0.223</td><td>0.975</td></tr><tr><td>5</td><td>4</td><td>3.590</td><td>−0.901</td><td>−0.434</td></tr><tr><td>6</td><td>1</td><td>0.898</td><td>0.623</td><td>0.782</td></tr></tbody></table><p>Sum (Gauss sum <span class=math-inline data-latex=G(7)></span>): <span class=math-inline data-latex="\text{Re} = 1 + 2(0.623) + 2(-0.901) + 2(-0.223) = 1 + 1.246 - 1.802 - 0.446 = -0.002 \approx 0"></span>; <span class=math-inline data-latex="\text{Im} = 0 + 2(0.782) + 2(-0.434) + 2(0.975) = 0 + 1.564 - 0.868 + 1.950 = 2.646"></span>. So <span class=math-inline data-latex="G(7) \approx 0 + 2.646i"></span>, and <span class=math-inline data-latex="|G(7)| = 2.646 \approx \sqrt{7} = 2.6458"></span>. The theorem is verified numerically to three decimal places.</p><p>Now verify the DFT flatness for <span class=math-inline data-latex="k = 1"></span>:</p><span class=math-display data-latex="\hat{z}(1) = e^{-\pi i/7} \cdot G(7), \qquad |\hat{z}(1)| = |G(7)| = \sqrt{7}"></span><p>The flat magnitude <span class=math-inline data-latex=\sqrt{7}></span> holds for all seven DFT bins. In terms of acoustic power this means the scattered intensity is equal in all directions — the QRD panel scatters uniformly.</p><p>The following script computes the DFT of the QRD phase sequence numerically and confirms that all non-DC bins have magnitude exactly <span class=math-inline data-latex=\sqrt{7}></span>:</p><figure><img src=/images/ep29/fig03_dft_of_qrd_sequence_flat_magnitude_confirms_uniform_scatteri.png alt="DFT of QRD sequence — flat magnitude confirms uniform scattering" style=max-width:100%;border-radius:4px><figcaption>DFT of QRD sequence — flat magnitude confirms uniform scattering</figcaption></figure><p><strong>Slot depths for a 1 kHz design frequency.</strong> Upper design frequency <span class=math-inline data-latex="f_{\max} = 2000"></span> Hz; corresponding half-wavelength: <span class=math-inline data-latex="\lambda/2 = 343/(2 \times 2000) = 85.75"></span> mm. Maximum slot depth <span class=math-inline data-latex="d_{\max} = \lambda_{\min}/2 = 85.75"></span> mm. Normalised to <span class=math-inline data-latex="s_{\max} = 4"></span>: slot depths = <span class=math-inline data-latex="[0, 21.4, 85.8, 42.9, 42.9, 85.8, 21.4]"></span> mm.</p><hr><h2 id=musical-connection>Musical Connection</h2><div class=music-block><div class=block-label>音乐联系</div><div class=block-body><p><strong>Number theory hanging on a wall.</strong></p><p>The QRD diffuser makes number theory tangible: the sequence <span class=math-inline data-latex="[0, 1, 4, 2, 2, 4, 1]"></span> cut into wooden slots is a direct physical instantiation of <span class=math-inline data-latex="n^2 \bmod 7"></span>. What makes it work is not intuition about acoustic scattering but the algebraic structure of <span class=math-inline data-latex="(\mathbb{Z}/7\mathbb{Z}, \times)"></span>: when <span class=math-inline data-latex=p></span> is prime, the multiplicative group is cyclic of order <span class=math-inline data-latex=p-1></span>, and the quadratic residues form a specific subgroup that — through the Gauss sum — guarantees flat-power Fourier representation. This is the same group-theoretic architecture explored in</p><p><a href=https://amath390.sibeliusp.com/episodes/ep04/ class=episode-ref-link>EP04</a></p><p>for the all-interval twelve-tone row in <span class=math-inline data-latex=\mathbb{Z}_{12}></span>.</p><p><strong>The two-tool toolkit.</strong> Every serious recording studio divides its acoustic treatment at the Schroeder frequency:</p><ul><li><em>Below <span class=math-inline data-latex=f_s></span></em>: discrete modes → tuned Helmholtz resonators (each a damped oscillator from</li></ul><p><a href=https://amath390.sibeliusp.com/episodes/ep28/ class=episode-ref-link>EP28</a></p><p>), designed with low <span class=math-inline data-latex=Q></span> to absorb a band rather than a single frequency</p><ul><li><em>Above <span class=math-inline data-latex=f_s></span></em>: statistical diffuse field → QRD panels scatter energy uniformly using quadratic residues</li></ul><p>The listener&rsquo;s subjective experience of a well-treated room is not silence but naturalness: the sound comes from everywhere and nowhere, without identifiable &ldquo;hot&rdquo; or &ldquo;dead&rdquo; spots.</p><p><strong>Connection forward.</strong> The Hadamard matrix used in feedback-delay-network reverb algorithms (</p><p><a href=https://amath390.sibeliusp.com/episodes/ep38/ class=episode-ref-link>EP38</a></p><p>) is a close cousin of the QRD construction: both are built from <span class=math-inline data-latex="\pm 1"></span> or unit-complex sequences whose DFT has flat magnitude, ensuring energy is distributed equally across all delay lines. The mathematical thread — flat-magnitude Fourier sequences from algebraic constructions — runs from Gauss (1801) through Schroeder (1979) into the digital reverb algorithms running on every modern DAW.</p></div></div><hr><h2 id=limits-and-open-questions>Limits and Open Questions</h2><ol><li><p><strong>Non-rectangular rooms.</strong> Theorem 29.1 holds only for rectangular enclosures with rigid walls. Real studios have non-parallel walls, sloped ceilings, and absorptive surfaces. Modal frequencies then require numerical finite-element methods (FEM); the closed-form <span class=math-inline data-latex=f_{l,m,n}></span> formula is only a first approximation. Non-rectangular rooms can break up the regular modal distribution, which is sometimes deliberately exploited to avoid mode clustering.</p></li><li><p><strong>Finite-bandwidth QRD performance.</strong> The flat-DFT guarantee of Theorem 29.3 is exact only at the design frequency and its harmonics up to <span class=math-inline data-latex=f_{\max}></span>. At intermediate frequencies, slot resonances interact and the scattered pattern deviates. Numerical simulations (Boundary Element Method) show the actual diffusion coefficient degrades smoothly outside the design band but the theoretical guarantee is sharp only at the design points.</p></li><li><p><strong>Periodic vs aperiodic QRD tiling.</strong> A single QRD panel of width <span class=math-inline data-latex="p \cdot w"></span> produces the flat-scatter property. When panels are tiled side by side (as in a full wall), the grating lobes reappear at angles <span class=math-inline data-latex="\theta_k = \arcsin(k\lambda / (p\,w))"></span>. Removing the periodicity requires either random sequencing (at the cost of the Gauss-sum guarantee) or primitive-root-based sequences with longer periods.</p></li><li><p><strong>Helmholtz Q optimisation.</strong> A very low-<span class=math-inline data-latex=Q></span> Helmholtz resonator absorbs over a wide band but with less peak absorption; a high-<span class=math-inline data-latex=Q></span> resonator achieves near-perfect absorption at one frequency but leaves adjacent modes untouched. The optimum <span class=math-inline data-latex=Q></span> for broadband low-frequency treatment in a given room is a constrained optimisation problem that depends on the modal density and the maximum allowed physical depth of the cavity.</p></li><li><p><strong>Psychoacoustic target functions.</strong> Theorem 29.3 guarantees equal scattered power per DFT bin, which is a mathematical (Fourier) uniformity. Whether equal scattered power corresponds to equal perceptual diffuseness is an open psychoacoustic question. Listeners may judge diffuseness using interaural cross-correlation (IACC) rather than purely the energy distribution, and the relationship between IACC and QRD flat-DFT performance has not been fully characterised.</p></li></ol><div class=conjecture-block id=conjecture><div class=block-label>Conjecture (Optimal Prime for Studio QRD)</div><div class=block-body>For a given studio volume <span class=math-inline data-latex=V></span> and Schroeder frequency <span class=math-inline data-latex=f_s></span>, there exists an optimal prime <span class=math-inline data-latex=p^*></span> such that a <span class=math-inline data-latex=p^*></span>-slot QRD panel maximises the diffusion coefficient (ISO 17497-2) integrated over the frequency band <span class=math-inline data-latex="[f_s, 4f_s]"></span>, subject to the constraint that the total panel width does not exceed a fixed budget <span class=math-inline data-latex=W_{\max}></span>. The conjecture is that <span class=math-inline data-latex=p^*></span> depends non-trivially on both <span class=math-inline data-latex=f_s></span> and the room&rsquo;s aspect ratios, and does not reduce to simply &ldquo;use the largest prime that fits.&rdquo; <strong>Falsification criteria</strong>: numerically compute the ISO diffusion coefficient for all primes <span class=math-inline data-latex="p \in \{5, 7, 11, 13, 17, 19, 23\}"></span> in a BEM simulation of a representative home studio; if the highest diffusion coefficient is always achieved by the largest feasible prime, the conjecture is falsified.</div></div><hr><h2 id=academic-references>Academic References</h2><ol><li><p>Schroeder, M. R. (1979). Binaural dissimilarity and optimum ceilings for concert halls: More lateral sound diffusion. <em>Journal of the Acoustical Society of America</em>, 65(4), 958–963. (Original QRD paper.)</p></li><li><p>Schroeder, M. R. (1975). Diffuse sound reflection by maximum-length sequences. <em>Journal of the Acoustical Society of America</em>, 57(1), 149–150. (Precursor: MLS diffusers.)</p></li><li><p>Cox, T. J., & D&rsquo;Antonio, P. (2009). <em>Acoustic Absorbers and Diffusers: Theory, Design and Application</em> (2nd ed.). Taylor & Francis. (Definitive textbook on room acoustics treatment including QRD design.)</p></li><li><p>Morse, P. M., & Ingard, K. U. (1968). <em>Theoretical Acoustics</em>. McGraw-Hill. Ch. 9 (room modes, standing waves, boundary conditions).</p></li><li><p>Schroeder, M. R. (1984). <em>Number Theory in Science and Communication</em> (1st ed.). Springer. Ch. 13 (Gauss sums and acoustic diffusers). (Schroeder&rsquo;s own account connecting number theory to room acoustics.)</p></li><li><p>Ireland, K., & Rosen, M. (1990). <em>A Classical Introduction to Modern Number Theory</em> (2nd ed.). Springer. Ch. 5–6 (quadratic residues and Gauss sums).</p></li><li><p>Beranek, L. L. (1996). <em>Concert and Opera Halls: How They Sound</em>. Acoustical Society of America. (Real-world application of Schroeder frequency and diffusion design in professional spaces.)</p></li><li><p>Kuttruff, H. (2016). <em>Room Acoustics</em> (6th ed.). CRC Press. Ch. 3 (normal modes of a rectangular room), Ch. 7 (statistical room acoustics above Schroeder frequency).</p></li><li><p>Bolt, R. H. (1946). Note on normal frequency statistics for rectangular rooms. <em>Journal of the Acoustical Society of America</em>, 18(1), 130–133. (Early derivation of modal density and the precursor to Schroeder&rsquo;s crossover formula.)</p></li><li><p>Gauss, C. F. (1801). <em>Disquisitiones Arithmeticae</em>. Translated by Clarke, A. A. (1966), Yale University Press. Art. 356. (Original proof that <span class=math-inline data-latex="|G(p)| = \sqrt{p}"></span> for prime <span class=math-inline data-latex=p></span>, completed 1805.)</p></li><li><p>D&rsquo;Antonio, P., & Konnert, J. H. (1984). The reflection phase grating diffusor: Design theory and application. <em>Journal of the Audio Engineering Society</em>, 32(4), 228–238. (Engineering implementation of QRD panels.)</p></li><li><p>Dalenback, B.-I. L., Kleiner, M., & Svensson, P. (1994). A macroscopic view of diffuse reflection. <em>Journal of the Audio Engineering Society</em>, 42(10), 793–806. (Empirical verification of QRD diffusion coefficient.)</p></li></ol></div><nav class=ep-nav><a href=https://amath390.sibeliusp.com/episodes/ep28/ class=ep-nav-prev>← EP28: Your Microphone Is a Damped Oscillator
+</a><a href=https://amath390.sibeliusp.com/episodes/ep30/ class=ep-nav-next>EP30: The Sampling Theorem Is Not What You Think →</a></nav></article><aside class=ep-toc-aside><div class=ep-toc-sticky><div class=ep-toc-label>本页目录</div><nav id=TableOfContents><ul><li><a href=#overview>Overview</a></li><li><a href=#prerequisites>Prerequisites</a></li><li><a href=#definitions>Definitions</a></li><li><a href=#main-theorems>Main Theorems</a></li><li><a href=#numerical-examples>Numerical Examples</a></li><li><a href=#musical-connection>Musical Connection</a></li><li><a href=#limits-and-open-questions>Limits and Open Questions</a></li><li><a href=#academic-references>Academic References</a></li></ul></nav></div></aside></div><footer class=site-footer><div class=footer-content><a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link><img src=/images/avatar.png alt="Sibelius P." class=footer-avatar></a><div class=footer-text><span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
 <span class=footer-sep>·</span>
 <a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener>小红书</a>
 <span class=footer-sep>·</span>
-<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span>
-</div>
-</div>
-</footer>
-</main>
-</div>
-</body>
-</html>
+<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span></div></div></footer></main></div></body></html>

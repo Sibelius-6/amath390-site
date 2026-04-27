@@ -1,475 +1,70 @@
-<!doctype html><html lang=zh-cn>
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<title>EP12: The Circle of Fifths as a Folded Spiral | AMATH 390 数学与音乐</title>
-<meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
-<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous>
-<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script>
-<script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('[data-latex]').forEach(function(a){try{katex.render(a.getAttribute('data-latex'),a,{displayMode:a.classList.contains('math-display'),throwOnError:!1})}catch(b){console.warn('KaTeX:',b.message,a)}})})</script>
-<link rel=icon type=image/png sizes=32x32 href=/favicon-32.png>
-<link rel=icon type=image/png sizes=16x16 href=/favicon-16.png>
-<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
-<link rel=stylesheet href=/css/amath390.css>
-</head>
-<body>
-<div class=layout-wrapper>
-<nav class=sidebar>
-<div class=sidebar-header>
-<a href=/ class=sidebar-title>AMATH 390</a>
-<div class=sidebar-subtitle>数学与音乐</div>
-</div>
-<div class=arc-group>
-<div class=arc-label>数学基础篇</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link>
-<span class=ep-num>01</span>
+<!doctype html><html lang=zh-cn><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>EP12: The Circle of Fifths as a Folded Spiral | AMATH 390 数学与音乐</title><meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music"><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script><script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("[data-latex]").forEach(function(e){try{katex.render(e.getAttribute("data-latex"),e,{displayMode:e.classList.contains("math-display"),throwOnError:!1})}catch(t){console.warn("KaTeX:",t.message,e)}})})</script><link rel=icon type=image/png sizes=32x32 href=/favicon-32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=stylesheet href=/css/amath390.css></head><body><div class=layout-wrapper><nav class=sidebar><div class=sidebar-header><a href=/ class=sidebar-title>AMATH 390</a><div class=sidebar-subtitle>数学与音乐</div></div><div class=arc-group><div class=arc-label>数学基础篇</div><a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link><span class=ep-num>01</span>
 <span class=ep-title>Chord Space and the Torus</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep02/ class=ep-link>
-<span class=ep-num>02</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep02/ class=ep-link><span class=ep-num>02</span>
 <span class=ep-title>String Vibration and the Wave Equation</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link>
-<span class=ep-num>03</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link><span class=ep-num>03</span>
 <span class=ep-title>Bach and Graph Connectivity</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link>
-<span class=ep-num>04</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link><span class=ep-num>04</span>
 <span class=ep-title>All-Interval Rows and ℤ₁₂</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link>
-<span class=ep-num>05</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link><span class=ep-num>05</span>
 <span class=ep-title>Turán's Theorem and Counterpoint</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-link>
-<span class=ep-num>06</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-link><span class=ep-num>06</span>
 <span class=ep-title>Graph Coloring and Voice Assignment</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-link>
-<span class=ep-num>07</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-link><span class=ep-num>07</span>
 <span class=ep-title>Information Entropy and All-Interval Rows</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-link>
-<span class=ep-num>08</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-link><span class=ep-num>08</span>
 <span class=ep-title>Shepard Tones and the Tritone Paradox</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link>
-<span class=ep-num>09</span>
-<span class=ep-title>Combination Tones and Nonlinear Acoustics</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>Jacob Collier 系列</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep10/ class=ep-link>
-<span class=ep-num>10</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link><span class=ep-num>09</span>
+<span class=ep-title>Combination Tones and Nonlinear Acoustics</span></a></div><div class=arc-group><div class=arc-label>Jacob Collier 系列</div><a href=https://amath390.sibeliusp.com/episodes/ep10/ class=ep-link><span class=ep-num>10</span>
 <span class=ep-title>Negative Harmony and the Dihedral Group D₁₂</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link>
-<span class=ep-num>11</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link><span class=ep-num>11</span>
 <span class=ep-title>Comma Drift and the Impossibility of Perfect Tuning</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep12/ class="ep-link active">
-<span class=ep-num>12</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep12/ class="ep-link active"><span class=ep-num>12</span>
 <span class=ep-title>The Circle of Fifths as a Folded Spiral</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-link>
-<span class=ep-num>13</span>
-<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>拓扑数学专篇</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-link>
-<span class=ep-num>14</span>
-<span class=ep-title>Tonnetz Hodge Duality</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>歌剧系列</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-link>
-<span class=ep-num>15</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-link><span class=ep-num>13</span>
+<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span></a></div><div class=arc-group><div class=arc-label>拓扑数学专篇</div><a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-link><span class=ep-num>14</span>
+<span class=ep-title>Tonnetz Hodge Duality</span></a></div><div class=arc-group><div class=arc-label>歌剧系列</div><a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-link><span class=ep-num>15</span>
 <span class=ep-title>Opera Acoustics and the Singer's Formant</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link>
-<span class=ep-num>16</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link><span class=ep-num>16</span>
 <span class=ep-title>Rossini's Code — Budden, Gossett, and the Convention System</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-link>
-<span class=ep-num>17</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-link><span class=ep-num>17</span>
 <span class=ep-title>Leitmotif Networks — Wagner's Ring Cycle</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-link>
-<span class=ep-num>18</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-link><span class=ep-num>18</span>
 <span class=ep-title>Game Theory in Operatic Duets</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link>
-<span class=ep-num>19</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link><span class=ep-num>19</span>
 <span class=ep-title>Vibrato as FM Synthesis</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-link>
-<span class=ep-num>20</span>
-<span class=ep-title>Character Interaction Networks in Opera</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>AI 音乐三部曲</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-link>
-<span class=ep-num>21</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-link><span class=ep-num>20</span>
+<span class=ep-title>Character Interaction Networks in Opera</span></a></div><div class=arc-group><div class=arc-label>AI 音乐三部曲</div><a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-link><span class=ep-num>21</span>
 <span class=ep-title>From Markov to Diffusion — Sixty Years of AI Composition</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-link>
-<span class=ep-num>22</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-link><span class=ep-num>22</span>
 <span class=ep-title>How AI Writes Music — EnCodec and RVQ</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-link>
-<span class=ep-num>23</span>
-<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span>
-</a>
-</div>
-<div class=sidebar-footer>
-<a href=/theorems/>定理索引</a>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-link><span class=ep-num>23</span>
+<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span></a></div><div class=arc-group><div class=arc-label>流行音乐 × 数学</div><a href=https://amath390.sibeliusp.com/episodes/ep24/ class=ep-link><span class=ep-num>24</span>
+<span class=ep-title>The Information Code of Pop Music</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep25/ class=ep-link><span class=ep-num>25</span>
+<span class=ep-title>Why Music Gives You Goosebumps — Prediction Error and Frisson</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep26/ class=ep-link><span class=ep-num>26</span>
+<span class=ep-title>The 1/f Law of Music</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep27/ class=ep-link><span class=ep-num>27</span>
+<span class=ep-title>Answering Viral Critics with Mathematics</span></a></div><div class=arc-group><div class=arc-label>音乐技术系列</div><a href=https://amath390.sibeliusp.com/episodes/ep28/ class=ep-link><span class=ep-num>28</span>
+<span class=ep-title>Your Microphone Is a Damped Oscillator</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep29/ class=ep-link><span class=ep-num>29</span>
+<span class=ep-title>Primes in the Studio — Standing Waves and QRD Diffusers</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep30/ class=ep-link><span class=ep-num>30</span>
+<span class=ep-title>The Sampling Theorem Is Not What You Think</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep31/ class=ep-link><span class=ep-num>31</span>
+<span class=ep-title>The Warmth of Moog Has an Equation</span></a></div><div class=sidebar-footer><a href=/theorems/>定理索引</a>
 <a href=/domains/>数学领域</a>
-<a href=/about/>关于</a>
-</div>
-</nav>
-<main class=main-content>
-<div class=episode-layout>
-<article class=episode-page>
-<header class=episode-header>
-<div class=ep-badge>EP12</div>
-<h1 class=ep-main-title>EP12: The Circle of Fifths as a Folded Spiral</h1>
-<div class=ep-subtitle>gcd(7,12)=1, Cyclic Generators, Shepard Helix, 12-TET as Approximation</div>
-<div class=ep-meta>
-<span class=meta-item>
-<span class=meta-icon>▶</span> 7:48
-</span>
-<span class="meta-item domains">
-<span class=domain-chip>Number Theory</span><span class=domain-chip>Abstract Algebra</span>
-</span>
-</div>
-</header>
-<div class=cross-refs>
-<h3 class=cross-refs-title>前置知识</h3>
-<div class=ref-cards>
-<a href=https://amath390.sibeliusp.com/episodes/ep11/ class="ref-card callback">
-<span class=ref-ep>EP11</span>
+<a href=/about/>关于</a></div></nav><main class=main-content><div class=episode-layout><article class=episode-page><header class=episode-header><div class=ep-badge>EP12</div><h1 class=ep-main-title>EP12: The Circle of Fifths as a Folded Spiral</h1><div class=ep-subtitle>gcd(7,12)=1, Cyclic Generators, Shepard Helix, 12-TET as Approximation</div><div class=ep-meta><span class=meta-item><span class=meta-icon>▶</span> 7:48
+</span><span class="meta-item domains"><span class=domain-chip>Number Theory</span><span class=domain-chip>Abstract Algebra</span></span></div></header><div class=cross-refs><h3 class=cross-refs-title>前置知识</h3><div class=ref-cards><a href=https://amath390.sibeliusp.com/episodes/ep11/ class="ref-card callback"><span class=ref-ep>EP11</span>
 <span class=ref-title>Comma Drift and the Impossibility of Perfect Tuning</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep04/ class="ref-card callback">
-<span class=ref-ep>EP04</span>
-<span class=ref-title>All-Interval Rows and ℤ₁₂</span>
-</a>
-</div>
-</div>
-<div class=xhs-section>
-<div class=xhs-section-header>
-<span class=xhs-logo-badge>小红书</span>
-<span class=xhs-section-title>Watch on 小红书</span>
-</div>
-<div class=xhs-cards>
-<a href="https://www.xiaohongshu.com/discovery/item/69974625000000000a02f44c?source=webshare&xhsshare=pc_web&xsec_token=ABXqV7Kny044IgKKVXQGWtmKbRgY8ma5osjAu20YrCiSk=&xsec_source=pc_share" target=_blank rel=noopener class=xhs-card>
-<div class=xhs-card-inner>
-<div class=xhs-card-icon>▶</div>
-<div class=xhs-card-text>
-<div class=xhs-card-title>超超超超超级Lydian，Jacob的无限音阶</div>
-<div class=xhs-card-sub>xiaohongshu.com</div>
-</div>
-<div class=xhs-card-arrow>→</div>
-</div>
-</a>
-</div>
-</div>
-<div class="episode-content content">
-<h2 id=overview>Overview</h2>
-<p>Jacob Collier&rsquo;s &ldquo;Super Ultra Hyper Mega Meta Lydian&rdquo; is not just a joke. It describes a real mathematical structure: an infinite chain of Lydian tetrachords ascending the circle of fifths, never stopping, never repeating. But on a piano — which uses 12-TET — the spiral is forced into a circle, and after 12 steps you return to the same key.</p>
-<blockquote>
-<p><em>中文:</em> &ldquo;圆是钢琴的近似。螺旋是数学的真实。SUM的永不停步，恰好映射了这条螺旋。&rdquo;</p>
-</blockquote>
-<p>The key mathematical fact is <span class=math-inline data-latex="\gcd(7, 12) = 1"></span>: the interval of a fifth (7 semitones) generates the entire group <span class=math-inline data-latex=\mathbb{Z}_{12}></span> because 7 and 12 are coprime. This is why the circle of fifths visits all 12 pitch classes before returning. Any step size <span class=math-inline data-latex=k></span> with <span class=math-inline data-latex="\gcd(k, 12) > 1"></span> would only visit a proper subgroup of pitch classes — a smaller cycle, not the full circle.</p>
-<p>This episode is the third in the Jacob Collier arc. The spiral/circle duality (EP11&rsquo;s irrational <span class=math-inline data-latex=\log_2(3/2)></span> forced into rational approximation by 12-TET) is now recast as a topological and algebraic fact: the true pitch space is a helix <span class=math-inline data-latex=\mathbb{R}></span>, the chromatic circle is its quotient <span class=math-inline data-latex=\mathbb{R}/12\mathbb{Z}></span>, and the circle of fifths is a different traversal of the same quotient.</p>
-<hr>
-<h2 id=prerequisites>Prerequisites</h2>
-<ul>
-<li>
-<a href=https://amath390.sibeliusp.com/episodes/ep11/ class=episode-ref-link>Comma Drift and Tuning (EP11)</a>
-— <span class=math-inline data-latex=\log_2(3/2)></span> irrational, spiral of fifths</li>
-<li>
-<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=episode-ref-link>The All-Interval Row and <span class=math-inline data-latex=\mathbb{Z}_{12}></span> (EP04)</a>
-— <span class=math-inline data-latex=\mathbb{Z}_{12}></span>, subgroups, generators</li>
-<li>Number theory: <span class=math-inline data-latex=\gcd></span>, Bezout&rsquo;s theorem, cyclic groups</li>
-<li>Elementary topology: quotient spaces (informal level sufficient)</li>
-</ul>
-<hr>
-<h2 id=definitions>Definitions</h2>
-<div class=definition-block id=definition-12.1>
-<div class=block-label>
-Definition 12.1 (Generator of ℤₙ)
-</div>
-<div class=block-body><p>An element <span class=math-inline data-latex="k \in \mathbb{Z}_n"></span> is a <strong>generator</strong> of <span class=math-inline data-latex=\mathbb{Z}_n></span> if the cyclic subgroup <span class=math-inline data-latex="\langle k \rangle = \{0, k, 2k, \ldots\} \pmod n"></span> equals all of <span class=math-inline data-latex=\mathbb{Z}_n></span>.</p>
-<p><strong>Theorem (standard):</strong> <span class=math-inline data-latex=k></span> generates <span class=math-inline data-latex=\mathbb{Z}_n></span> if and only if <span class=math-inline data-latex="\gcd(k, n) = 1"></span>.</p>
-<p><strong>Proof sketch:</strong> If <span class=math-inline data-latex="d = \gcd(k,n) > 1"></span>, then <span class=math-inline data-latex="jk \equiv 0 \pmod{d}"></span> for all <span class=math-inline data-latex=j></span>, so <span class=math-inline data-latex="\langle k \rangle \subseteq \{0, d, 2d, \ldots\}"></span>, a proper subgroup of size <span class=math-inline data-latex="n/d < n"></span>. Conversely, if <span class=math-inline data-latex="\gcd(k,n)=1"></span>, Bezout&rsquo;s theorem gives integers <span class=math-inline data-latex="a, b"></span> with <span class=math-inline data-latex="ak + bn = 1"></span>, so <span class=math-inline data-latex="ak \equiv 1 \pmod n"></span>, meaning <span class=math-inline data-latex=k></span> has a multiplicative inverse and <span class=math-inline data-latex="\langle k \rangle = \mathbb{Z}_n"></span>. <span class=math-inline data-latex=\square></span></p>
-</div>
-</div>
-<div class=definition-block id=definition-12.2>
-<div class=block-label>
-Definition 12.2 (Circle of Fifths)
-</div>
-<div class=block-body><p>The <strong>circle of fifths</strong> is the sequence of pitch classes generated by repeated transposition by 7 semitones (a perfect fifth in 12-TET) in <span class=math-inline data-latex=\mathbb{Z}_{12}></span>:</p>
-<p><span class=math-display data-latex="C \to G \to D \to A \to E \to B \to F\sharp \to C\sharp \to A\flat \to E\flat \to B\flat \to F \to C"></span></p>
-<p>In <span class=math-inline data-latex=\mathbb{Z}_{12}></span>: <span class=math-inline data-latex="0 \to 7 \to 2 \to 9 \to 4 \to 11 \to 6 \to 1 \to 8 \to 3 \to 10 \to 5 \to 0"></span>.</p>
-<p>Since <span class=math-inline data-latex="\gcd(7, 12) = 1"></span> (as 7 is prime and does not divide 12), 7 generates <span class=math-inline data-latex=\mathbb{Z}_{12}></span>, and the sequence visits all 12 pitch classes before returning to the start. This is the mathematical content of &ldquo;the circle of fifths is a circle and not a shorter cycle.&rdquo;</p>
-</div>
-</div>
-<div class=definition-block id=definition-12.3>
-<div class=block-label>
-Definition 12.3 (Shepard–Risset Pitch Helix)
-</div>
-<div class=block-body><p>The <strong>Shepard–Risset pitch helix</strong> embeds pitch into <span class=math-inline data-latex=\mathbb{R}^3></span> as a helix, capturing both chroma (position on the chromatic circle) and height (octave register):</p>
-<p><span class=math-display data-latex="\mathbf{p}(f) = \bigl(r\cos(2\pi \cdot \text{chroma}(f)/12),\; r\sin(2\pi \cdot \text{chroma}(f)/12),\; h \cdot \log_2(f/f_0)\bigr)"></span></p>
-<p>where <span class=math-inline data-latex="\text{chroma}(f) = 12\log_2(f/f_0) \bmod 12 \in [0, 12)"></span>, <span class=math-inline data-latex="r > 0"></span> is the helix radius, <span class=math-inline data-latex="h > 0"></span> is the vertical pitch height scale, and <span class=math-inline data-latex=f_0></span> is a reference frequency.</p>
-<ul>
-<li><strong>Projection onto the <span class=math-inline data-latex=xy></span>-plane</strong> (the horizontal circle): gives chroma only — octave equivalence, the chromatic circle <span class=math-inline data-latex=\mathbb{Z}_{12}></span>.</li>
-<li><strong>Projection onto the <span class=math-inline data-latex=z></span>-axis</strong> (vertical): gives octave height only — chroma equivalence.</li>
-<li><strong>The full helix</strong>: represents the two-dimensional structure of pitch: chroma <span class=math-inline data-latex=\times></span> register.</li>
-</ul>
-<p>A Shepard tone is a superposition of sinusoids at all octaves of a given chroma, with a bell-curve amplitude envelope. It sits at a single point on the chromatic circle but is spread vertically along the helix — hence the paradox of indefinitely ascending/descending pitch without change of perceived height.</p>
-</div>
-</div>
-<div class=definition-block id=definition-12.4>
-<div class=block-label>
-Definition 12.4 (Subgroups of ℤ₁₂)
-</div>
-<div class=block-body><p>The subgroups of <span class=math-inline data-latex=\mathbb{Z}_{12}></span> correspond bijectively to the divisors of 12:</p>
-<table>
-<thead>
-<tr>
-<th>Divisor <span class=math-inline data-latex=d></span></th>
-<th>Subgroup</th>
-<th>Generator</th>
-<th>Musical object</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td><span class=math-inline data-latex=\{0\}></span></td>
-<td>—</td>
-<td>Unison</td>
-</tr>
-<tr>
-<td>2</td>
-<td><span class=math-inline data-latex="\{0, 6\}"></span></td>
-<td>6</td>
-<td>Tritone pair</td>
-</tr>
-<tr>
-<td>3</td>
-<td><span class=math-inline data-latex="\{0, 4, 8\}"></span></td>
-<td>4</td>
-<td>Augmented triad</td>
-</tr>
-<tr>
-<td>4</td>
-<td><span class=math-inline data-latex="\{0, 3, 6, 9\}"></span></td>
-<td>3</td>
-<td>Diminished seventh</td>
-</tr>
-<tr>
-<td>6</td>
-<td><span class=math-inline data-latex="\{0, 2, 4, 6, 8, 10\}"></span></td>
-<td>2</td>
-<td>Whole-tone scale</td>
-</tr>
-<tr>
-<td>12</td>
-<td><span class=math-inline data-latex=\mathbb{Z}_{12}></span></td>
-<td>1 or 7</td>
-<td>Chromatic scale / circle of fifths</td>
-</tr>
-</tbody>
-</table>
-<p>The richness of 12&rsquo;s factor structure (<span class=math-inline data-latex="12 = 2^2 \cdot 3"></span>, with divisors <span class=math-inline data-latex=\{1,2,3,4,6,12\}></span>) directly corresponds to the diversity of symmetric chords in 12-TET: each proper subgroup is a maximally even, symmetric chord or scale.</p>
-</div>
-</div>
-<hr>
-<h2 id=main-theorems>Main Theorems</h2>
-<div class=theorem-block id=theorem-12.1>
-<div class=block-label>
-Theorem 12.1 (7 Generates ℤ₁₂)
-</div>
-<div class=block-body><p>The element 7 generates <span class=math-inline data-latex=\mathbb{Z}_{12}></span>: <span class=math-inline data-latex="\langle 7 \rangle = \mathbb{Z}_{12}"></span>.</p>
-<p>Moreover, the generators of <span class=math-inline data-latex=\mathbb{Z}_{12}></span> are exactly the elements coprime to 12: <span class=math-inline data-latex="\{1, 5, 7, 11\}"></span>, and <span class=math-inline data-latex="|\text{Aut}(\mathbb{Z}_{12})| = \phi(12) = 4"></span>.</p>
-</div>
-</div>
-<div class=proof-block>
-<div class=block-label>Proof.</div>
-<div class=block-body><p><span class=math-inline data-latex="\gcd(7, 12) = \gcd(7, 12)"></span>. Since <span class=math-inline data-latex="12 = 1 \times 7 + 5"></span> and <span class=math-inline data-latex="7 = 1 \times 5 + 2"></span> and <span class=math-inline data-latex="5 = 2 \times 2 + 1"></span>, we get <span class=math-inline data-latex="\gcd(7,12) = 1"></span>. By Definition 12.1, <span class=math-inline data-latex="\langle 7 \rangle = \mathbb{Z}_{12}"></span>.</p>
-<p>The elements coprime to 12 are those not divisible by 2 or 3: <span class=math-inline data-latex="\{1, 5, 7, 11\}"></span>. Euler&rsquo;s totient <span class=math-inline data-latex="\phi(12) = \phi(4)\phi(3) = 2 \times 2 = 4"></span> counts these, confirming 4 generators. <span class=math-inline data-latex=\square></span></p>
-<blockquote>
-<p><em>中文:</em> &ldquo;7 和 12 的最大公约数等于 1——7 和 12 互质。这保证了 7 能生成 ℤ₁₂ 的全部元素。其他步长，只要和 12 不互质，就只能在一个子集里转圈。只有最大公约数等于 1，才能遍历全部。秘密就是这一个条件。&rdquo;</p>
-</blockquote>
-</div>
-</div>
-<div class=theorem-block id=theorem-12.2>
-<div class=block-label>
-Theorem 12.2 (Circle of Fifths as Quotient of the Spiral)
-</div>
-<div class=block-body><p>In exact (just) intonation, the pitch space is <span class=math-inline data-latex=\mathbb{R}></span> (the real line of log-frequencies). The &ldquo;spiral of fifths&rdquo; is the infinite sequence</p>
-<p><span class=math-display data-latex="\ldots, \tfrac{3}{2}\cdot p,\; p,\; \tfrac{3}{2}p,\; \left(\tfrac{3}{2}\right)^2 p,\; \ldots"></span></p>
-<p>which, by Theorem 11.3, never repeats. In 12-TET, this spiral is projected onto the quotient <span class=math-inline data-latex=\mathbb{R}/(12\mathbb{Z})></span> (identifying pitches that differ by an octave and rounding each fifth to <span class=math-inline data-latex=2^{7/12}></span>). The resulting image is exactly <span class=math-inline data-latex=\mathbb{Z}_{12}></span>, traversed by the generator 7 — the circle of fifths.</p>
-<p>Formally, the map <span class=math-inline data-latex="\phi: n \mapsto 7n \pmod{12}"></span> is the bijection <span class=math-inline data-latex="\mathbb{Z}_{12} \xrightarrow{\sim} \mathbb{Z}_{12}"></span> that converts &ldquo;step number in the fifth sequence&rdquo; to &ldquo;pitch class.&rdquo;</p>
-</div>
-</div>
-<div class=proof-block>
-<div class=block-label>Proof.</div>
-<div class=block-body><p>The projection map is <span class=math-inline data-latex="\pi: \mathbb{R} \to \mathbb{R}/(12\mathbb{Z})"></span>, where we identify <span class=math-inline data-latex="\mathbb{R}/(12\mathbb{Z}) \cong \mathbb{Z}_{12}"></span> by <span class=math-inline data-latex="x \mapsto \lfloor x \rfloor \pmod{12}"></span> (measuring in semitones).</p>
-<p>In just intonation, the <span class=math-inline data-latex=n></span>-th fifth above <span class=math-inline data-latex=p></span> (at log-frequency 0) is at log-frequency <span class=math-inline data-latex="n \times \log_2(3/2) \approx n \times 0.585"></span> octaves <span class=math-inline data-latex="= n \times 7.02"></span> semitones.</p>
-<p>In 12-TET, this is rounded to <span class=math-inline data-latex="n \times 7"></span> semitones. The image <span class=math-inline data-latex="\pi(7n) = 7n \pmod{12}"></span> is the circle of fifths sequence.</p>
-<p>Since <span class=math-inline data-latex="\gcd(7,12)=1"></span>, <span class=math-inline data-latex="\phi: n \mapsto 7n \pmod{12}"></span> is a bijection on <span class=math-inline data-latex=\mathbb{Z}_{12}></span> (Theorem 12.1), confirming the circle visits all 12 pitch classes. <span class=math-inline data-latex=\square></span></p>
-<p><strong>The key approximation:</strong> The true fifth is <span class=math-inline data-latex="\log_2(3/2) \approx 7.0196"></span> semitones; 12-TET rounds this to exactly 7. The error is 0.0196 semitones <span class=math-inline data-latex="= 1.955"></span> cents per fifth. After 12 fifths, the accumulated error is <span class=math-inline data-latex="12 \times 1.955 = 23.46"></span> cents — the Pythagorean comma. 12-TET distributes this error uniformly, one fifth at a time, forcing the spiral into a circle.</p>
-</div>
-</div>
-<div class=theorem-block id=theorem-12.3>
-<div class=block-label>
-Theorem 12.3 (Unique Factorization and Good EDOs)
-</div>
-<div class=block-body><p>An <span class=math-inline data-latex=n></span>-tone equal division of the octave (<span class=math-inline data-latex=n></span>-EDO) approximates the just fifth if and only if <span class=math-inline data-latex="k = \lfloor n \cdot \log_2(3/2) \rceil"></span> satisfies <span class=math-inline data-latex="\gcd(k, n) = 1"></span>, where <span class=math-inline data-latex="\lfloor \cdot \rceil"></span> denotes the nearest integer. If <span class=math-inline data-latex="\gcd(k,n) > 1"></span>, the &ldquo;circle of fifths&rdquo; in <span class=math-inline data-latex=n></span>-EDO does not generate all <span class=math-inline data-latex=n></span> pitch classes.</p>
-<p>The best-approximating EDOs with <span class=math-inline data-latex="\gcd(k,n)=1"></span> are precisely the denominators of the convergents of <span class=math-inline data-latex="\log_2(3/2) = [0;1,1,2,2,3,1,5,2,23,\ldots]"></span>, namely <span class=math-inline data-latex="n \in \{1, 2, 5, 12, 29, 41, 53, \ldots\}"></span>.</p>
-</div>
-</div>
-<div class=proof-block>
-<div class=block-label>Proof.</div>
-<div class=block-body><p>For <span class=math-inline data-latex=n></span>-EDO, each step is <span class=math-inline data-latex=1/n></span> octave. The fifth is approximated by <span class=math-inline data-latex=k></span> steps where <span class=math-inline data-latex="k = \lfloor n\log_2(3/2) \rceil"></span>. The circle of fifths in <span class=math-inline data-latex=n></span>-EDO generates the subgroup <span class=math-inline data-latex="\langle k \rangle \subseteq \mathbb{Z}_n"></span>, which equals all of <span class=math-inline data-latex=\mathbb{Z}_n></span> iff <span class=math-inline data-latex="\gcd(k,n)=1"></span> (Definition 12.1).</p>
-<p>For 12-EDO: <span class=math-inline data-latex="k = \lfloor 12 \times 0.58496 \rceil = \lfloor 7.02 \rceil = 7"></span>, <span class=math-inline data-latex="\gcd(7,12) = 1"></span>. Good.</p>
-<p>For 5-EDO: <span class=math-inline data-latex="k = \lfloor 5 \times 0.58496 \rceil = \lfloor 2.92 \rceil = 3"></span>, <span class=math-inline data-latex="\gcd(3,5) = 1"></span>. Good (but very coarse).</p>
-<p>For 6-EDO: <span class=math-inline data-latex="k = \lfloor 6 \times 0.58496 \rceil = \lfloor 3.51 \rceil = 4"></span>, <span class=math-inline data-latex="\gcd(4,6) = 2 \neq 1"></span>. The &ldquo;fifth&rdquo; in 6-EDO only generates a 3-element subgroup — not all 6 pitch classes.</p>
-<p>For 53-EDO: <span class=math-inline data-latex="k = \lfloor 53 \times 0.58496 \rceil = \lfloor 31.00 \rceil = 31"></span>, <span class=math-inline data-latex="\gcd(31,53) = 1"></span> (both prime, and <span class=math-inline data-latex="31 \neq 53"></span>). Good and very accurate (<span class=math-inline data-latex="\approx 0.07"></span> cents error per fifth). <span class=math-inline data-latex=\square></span></p>
-</div>
-</div>
-<div class=proposition-block id=prop-12.1>
-<div class=block-label>
-Prop 12.1 (Lydian Tetrachord Chain (SUM) as a Coset Sequence)
-</div>
-<div class=block-body>The Super Ultra Hyper Mega Meta Lydian (SUM) structure of Jacob Collier is the sequence of Lydian tetrachord roots <span class=math-inline data-latex="\{C, G, D, A, E, B, F\sharp, \ldots\}"></span>, which is the orbit of 0 under repeated addition of 7 in <span class=math-inline data-latex=\mathbb{Z}_{12}></span> (or <span class=math-inline data-latex=\mathbb{Z}></span> before reduction). In 12-TET (the circle), the sequence closes after 12 steps. In just intonation (the spiral), it never closes: each G is a true <span class=math-inline data-latex="(3/2)^n \cdot C"></span>, lying at a different height on the pitch helix, and the chain is an infinite ascending structure.</div>
-</div>
-<hr>
-<h2 id=numerical-example-why-12-and-not-7-or-11>Numerical Example: Why 12 and Not 7 or 11?</h2>
-<p>Consider alternative chromatic universes:</p>
-<p><strong>7-EDO</strong> (7 equal divisions): <span class=math-inline data-latex="k = \lfloor 7 \times 0.585 \rceil = 4"></span>. <span class=math-inline data-latex="\gcd(4,7)=1"></span>, so a &ldquo;fifth&rdquo; of 4 steps generates all 7 pitch classes. But the fifth is <span class=math-inline data-latex=4/7></span> octave <span class=math-inline data-latex="\approx 685.7"></span> cents — 16 cents flat. No perfect approximation of the major third exists (no <span class=math-inline data-latex=n></span> with <span class=math-inline data-latex="4n/7 \approx 386/1200"></span>). 7-EDO works for pentatonic/heptatonic music but lacks the interval richness of 12-TET.</p>
-<p><strong>12-EDO</strong>: As shown, <span class=math-inline data-latex="\gcd(7,12)=1"></span>, fifth error <span class=math-inline data-latex="\approx 2"></span> cents, major third error <span class=math-inline data-latex="\approx 14"></span> cents. The compromise that Western tonal practice settled on.</p>
-<p><strong>19-EDO</strong>: <span class=math-inline data-latex="k = \lfloor 19 \times 0.585 \rceil = 11"></span>, <span class=math-inline data-latex="\gcd(11,19)=1"></span>. Fifth error <span class=math-inline data-latex="\approx 7"></span> cents (worse than 12-TET!), but major third <span class=math-inline data-latex="= 6/19"></span> octave <span class=math-inline data-latex="\approx 378"></span> cents — 8 cents flat, actually closer to just than 12-TET&rsquo;s 14 cents sharp. Used in some microtonal compositions for its smoother thirds.</p>
-<p><strong>53-EDO</strong>: <span class=math-inline data-latex="k=31"></span>, <span class=math-inline data-latex="\gcd(31,53)=1"></span>. Fifth error <span class=math-inline data-latex="< 0.1"></span> cents, major third error <span class=math-inline data-latex="< 0.3"></span> cents. Nearly perfect 5-limit just intonation, but with 53 keys per octave — impractical for keyboard instruments, though used in some theoretical works (Mercator, 1670s; Tanaka, 1890).</p>
-<blockquote>
-<p><em>中文:</em> &ldquo;12不是随意的——它的因子结构恰好对应了西方调性音乐常用的对称数量。24太多——虽然中东音乐在用——7太少，因为它是素数，没有真子群。对于十二平均律体系，12是一个有效的选择。&rdquo;</p>
-</blockquote>
-<hr>
-<h2 id=musical-connection>Musical Connection</h2>
-<div class=music-block>
-<div class=block-label>音乐联系</div>
-<div class=block-body><p><strong>The circle of fifths as a group-theoretic object</strong></p>
-<p>The circle of fifths is not merely a mnemonic for key signatures. It is the orbit of any pitch class under the group automorphism <span class=math-inline data-latex="\phi: x \mapsto x + 7 \pmod{12}"></span>, which has order 12 (since <span class=math-inline data-latex="12 \times 7 \equiv 0 \pmod{12}"></span> and no smaller multiple works). The circle of fifths and the chromatic scale are two different generating sequences of the same group <span class=math-inline data-latex=\mathbb{Z}_{12}></span> — one with generator 1 (ascending by semitones), the other with generator 7 (ascending by fifths).</p>
-<p><strong>Tonal brightness as direction on the spiral</strong></p>
-<p>Collier&rsquo;s observation that &ldquo;going sharp&rdquo; (adding fifths in the direction <span class=math-inline data-latex="C \to G \to D \to \ldots"></span>) sounds &ldquo;brighter&rdquo; is a perceptual reflection of the acoustic fact that the low-numbered partials of a tone at frequency <span class=math-inline data-latex=f></span> are <span class=math-inline data-latex="f, 2f, 3f, \ldots"></span>. A fifth up means moving toward the 3rd partial, which is acoustically close to the fundamental. A fourth up (adding flats, going <span class=math-inline data-latex="C \to F \to B\flat \to \ldots"></span>) means moving away from the fundamental&rsquo;s low partials.</p>
-<blockquote>
-<p><em>中文:</em> &ldquo;为什么五度方向更亮？纯律五度等于三比二——就是泛音列的第3个分音。加7方向就是沿着低序数泛音堆叠，和基音更亲近。明与暗，就是你在五度圈上的方向。&rdquo;</p>
-</blockquote>
-<p><strong>The Shepard–Risset paradox and musical meaning</strong></p>
-<p>Shepard tones (Definition 12.3) exploit the helix structure: by spreading amplitude across all octaves of a chroma with a bell envelope, they create the illusion of a tone with chroma but no register — a &ldquo;pure&rdquo; position on the chromatic circle without height. Shepard-Risset glissandi create the paradox of continuous ascent without arriving higher — the chromatic circle rotates continuously, but the vertical helix position stays fixed.</p>
-<p>Collier&rsquo;s SUM is the philosophical inverse: it insists on the helix, refusing the projection. On a piano (which forces <span class=math-inline data-latex=\mathbb{Z}_{12}></span>), SUM closes after 12 steps. In just intonation, or in the voice (which can access any frequency), it never closes — it ascends the spiral indefinitely.</p>
-<blockquote>
-<p><em>中文:</em> &ldquo;五度圈是一个优美的谎言——代价是每个五度损失2音分的真实，收益是12个调式的平等。正是这个谎言，让转调成为可能。&rdquo;</p>
-</blockquote>
-<p><strong>Subgroup structure and symmetric chords</strong></p>
-<p>Definition 12.4 shows that <span class=math-inline data-latex=\mathbb{Z}_{12}></span>&rsquo;s subgroups correspond to the most structurally symmetric objects in 12-TET: the tritone pair, augmented triad, diminished seventh chord, and whole-tone scale. These are exactly the chords whose transpositional symmetry makes them &ldquo;tonally unstable&rdquo; — they sound unresolved because they belong equally to multiple keys. The augmented triad is the unique chord invariant under transposition by a major third (<span class=math-inline data-latex=T_4></span>); the diminished seventh is invariant under <span class=math-inline data-latex=T_3></span>. Their ambiguity is a direct consequence of being proper subgroups of <span class=math-inline data-latex=\mathbb{Z}_{12}></span>.</p>
-</div>
-</div>
-<hr>
-<h2 id=limits-and-open-questions>Limits and Open Questions</h2>
-<ol>
-<li>
-<p><strong>Multidimensional pitch spaces.</strong> The Shepard helix is one-dimensional in chroma (a circle) with one height dimension. Krumhansl&rsquo;s (1983) multidimensional scaling experiments suggest that the perceptual space of keys is better modeled as a <strong>torus</strong> (circle of major keys × circle of minor keys) embedded in a higher-dimensional space. The torus is the product of two <span class=math-inline data-latex=\mathbb{Z}_{12}></span> circles (one major, one minor), connected by relative and parallel relationships. This structure cannot be captured by a single helix.</p>
-</li>
-<li>
-<p><strong>Optimal EDOs for extended just intonation.</strong> Theorem 12.3 characterizes good EDOs for 5-limit just intonation (primes 2, 3, 5). For 7-limit (adding 7:4), the optimal EDOs change: 31-EDO and 72-EDO become attractive. The general question — &ldquo;what is the best <span class=math-inline data-latex=n></span>-EDO for <span class=math-inline data-latex=p></span>-limit just intonation?&rdquo; — is an active research area in mathematical music theory.</p>
-</li>
-<li>
-<p><strong>The SUM structure in continuous pitch space.</strong> Collier&rsquo;s SUM, if extended indefinitely in just intonation, is an infinite ascending sequence in <span class=math-inline data-latex=\mathbb{R}></span> (the pitch helix). The question of whether a composition can make musical sense while its tonal center spirals to arbitrarily high pitch is open. Pauline Oliveros&rsquo;s deep listening work and La Monte Young&rsquo;s sustained-tone pieces approach this question experientially, but no formal compositional framework for &ldquo;infinite spiral form&rdquo; exists.</p>
-</li>
-<li>
-<p><strong>Tuning and spectral composition.</strong> Sethares (2005) showed that inharmonic timbres can be made consonant with non-12-TET scales by matching the instrument&rsquo;s partial series to the EDO&rsquo;s intervals. This raises the converse question: if the &ldquo;circle of fifths&rdquo; and the subgroup structure of <span class=math-inline data-latex=\mathbb{Z}_n></span> depend on <span class=math-inline data-latex=n></span>, and the consonance of intervals depends on the timbre, is there a joint optimization of (<span class=math-inline data-latex=n></span>-EDO, timbre) that produces a richer harmonic world than 12-TET with harmonic timbres?</p>
-</li>
-</ol>
-<hr>
-<h2 id=academic-references>Academic References</h2>
-<ol>
-<li>
-<p>Shepard, R. N. (1964). Circularity in judgments of relative pitch. <em>Journal of the Acoustical Society of America</em>, 36(12), 2346–2353.</p>
-</li>
-<li>
-<p>Risset, J.-C. (1969). <em>An Introductory Catalogue of Computer-Synthesized Sounds</em>. Bell Telephone Laboratories.</p>
-</li>
-<li>
-<p>Krumhansl, C. L., & Kessler, E. J. (1982). Tracing the dynamic changes in perceived tonal organization in a spatial representation of musical keys. <em>Psychological Review</em>, 89(4), 334–368.</p>
-</li>
-<li>
-<p>Balzano, G. J. (1980). The group-theoretic description of 12-fold and microtonal pitch systems. <em>Computer Music Journal</em>, 4(4), 66–84.</p>
-</li>
-<li>
-<p>Clough, J., & Douthett, J. (1991). Maximally even sets. <em>Journal of Music Theory</em>, 35(1/2), 93–173.</p>
-</li>
-<li>
-<p>Amiot, E. (2016). <em>Music Through Fourier Space: Discrete Fourier Transform in Music Theory</em>. Springer.</p>
-</li>
-<li>
-<p>Milne, A., Sethares, W. A., & Plamondon, J. (2007). Isomorphic controllers and dynamic tuning. <em>Computer Music Journal</em>, 31(4), 15–32.</p>
-</li>
-<li>
-<p>Hardy, G. H., & Wright, E. M. (2008). <em>An Introduction to the Theory of Numbers</em> (6th ed.). Oxford University Press. Ch. 5 (Congruences and residues).</p>
-</li>
-</ol>
-</div>
-<nav class=ep-nav>
-<a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-nav-prev>
-← EP11: Comma Drift and the Impossibility of Perfect Tuning
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-nav-next>
-EP13: Polyrhythm and Rhythm-Pitch Duality →
-</a>
-</nav>
-</article>
-<aside class=ep-toc-aside>
-<div class=ep-toc-sticky>
-<div class=ep-toc-label>本页目录</div>
-<nav id=TableOfContents>
-<ul>
-<li><a href=#overview>Overview</a></li>
-<li><a href=#prerequisites>Prerequisites</a></li>
-<li><a href=#definitions>Definitions</a></li>
-<li><a href=#main-theorems>Main Theorems</a></li>
-<li><a href=#numerical-example-why-12-and-not-7-or-11>Numerical Example: Why 12 and Not 7 or 11?</a></li>
-<li><a href=#musical-connection>Musical Connection</a></li>
-<li><a href=#limits-and-open-questions>Limits and Open Questions</a></li>
-<li><a href=#academic-references>Academic References</a></li>
-</ul>
-</nav>
-</div>
-</aside>
-</div>
-<footer class=site-footer>
-<div class=footer-content>
-<a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link>
-<img src=/images/avatar.png alt="Sibelius P." class=footer-avatar>
-</a>
-<div class=footer-text>
-<span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep04/ class="ref-card callback"><span class=ref-ep>EP04</span>
+<span class=ref-title>All-Interval Rows and ℤ₁₂</span></a></div></div><div class=xhs-section><div class=xhs-section-header><span class=xhs-logo-badge>小红书</span>
+<span class=xhs-section-title>Watch on 小红书</span></div><div class=xhs-cards><a href="https://www.xiaohongshu.com/discovery/item/69974625000000000a02f44c?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABXqV7Kny044IgKKVXQGWtmKbRgY8ma5osjAu20YrCiSk=&amp;xsec_source=pc_share" target=_blank rel=noopener class=xhs-card><div class=xhs-card-inner><div class=xhs-card-icon>▶</div><div class=xhs-card-text><div class=xhs-card-title>超超超超超级Lydian，Jacob的无限音阶</div><div class=xhs-card-sub>xiaohongshu.com</div></div><div class=xhs-card-arrow>→</div></div></a></div></div><div class="episode-content content"><h2 id=overview>Overview</h2><p>Jacob Collier&rsquo;s &ldquo;Super Ultra Hyper Mega Meta Lydian&rdquo; is not just a joke. It describes a real mathematical structure: an infinite chain of Lydian tetrachords ascending the circle of fifths, never stopping, never repeating. But on a piano — which uses 12-TET — the spiral is forced into a circle, and after 12 steps you return to the same key.</p><blockquote><p><em>中文:</em> &ldquo;圆是钢琴的近似。螺旋是数学的真实。SUM的永不停步，恰好映射了这条螺旋。&rdquo;</p></blockquote><p>The key mathematical fact is <span class=math-inline data-latex="\gcd(7, 12) = 1"></span>: the interval of a fifth (7 semitones) generates the entire group <span class=math-inline data-latex=\mathbb{Z}_{12}></span> because 7 and 12 are coprime. This is why the circle of fifths visits all 12 pitch classes before returning. Any step size <span class=math-inline data-latex=k></span> with <span class=math-inline data-latex="\gcd(k, 12) > 1"></span> would only visit a proper subgroup of pitch classes — a smaller cycle, not the full circle.</p><p>This episode is the third in the Jacob Collier arc. The spiral/circle duality (EP11&rsquo;s irrational <span class=math-inline data-latex=\log_2(3/2)></span> forced into rational approximation by 12-TET) is now recast as a topological and algebraic fact: the true pitch space is a helix <span class=math-inline data-latex=\mathbb{R}></span>, the chromatic circle is its quotient <span class=math-inline data-latex=\mathbb{R}/12\mathbb{Z}></span>, and the circle of fifths is a different traversal of the same quotient.</p><hr><h2 id=prerequisites>Prerequisites</h2><ul><li><a href=https://amath390.sibeliusp.com/episodes/ep11/ class=episode-ref-link>Comma Drift and Tuning (EP11)</a>
+— <span class=math-inline data-latex=\log_2(3/2)></span> irrational, spiral of fifths</li><li><a href=https://amath390.sibeliusp.com/episodes/ep04/ class=episode-ref-link>The All-Interval Row and <span class=math-inline data-latex=\mathbb{Z}_{12}></span> (EP04)</a>
+— <span class=math-inline data-latex=\mathbb{Z}_{12}></span>, subgroups, generators</li><li>Number theory: <span class=math-inline data-latex=\gcd></span>, Bezout&rsquo;s theorem, cyclic groups</li><li>Elementary topology: quotient spaces (informal level sufficient)</li></ul><hr><h2 id=definitions>Definitions</h2><div class=definition-block id=definition-12.1><div class=block-label>Definition 12.1 (Generator of ℤₙ)</div><div class=block-body><p>An element <span class=math-inline data-latex="k \in \mathbb{Z}_n"></span> is a <strong>generator</strong> of <span class=math-inline data-latex=\mathbb{Z}_n></span> if the cyclic subgroup <span class=math-inline data-latex="\langle k \rangle = \{0, k, 2k, \ldots\} \pmod n"></span> equals all of <span class=math-inline data-latex=\mathbb{Z}_n></span>.</p><p><strong>Theorem (standard):</strong> <span class=math-inline data-latex=k></span> generates <span class=math-inline data-latex=\mathbb{Z}_n></span> if and only if <span class=math-inline data-latex="\gcd(k, n) = 1"></span>.</p><p><strong>Proof sketch:</strong> If <span class=math-inline data-latex="d = \gcd(k,n) > 1"></span>, then <span class=math-inline data-latex="jk \equiv 0 \pmod{d}"></span> for all <span class=math-inline data-latex=j></span>, so <span class=math-inline data-latex="\langle k \rangle \subseteq \{0, d, 2d, \ldots\}"></span>, a proper subgroup of size <span class=math-inline data-latex="n/d < n"></span>. Conversely, if <span class=math-inline data-latex="\gcd(k,n)=1"></span>, Bezout&rsquo;s theorem gives integers <span class=math-inline data-latex="a, b"></span> with <span class=math-inline data-latex="ak + bn = 1"></span>, so <span class=math-inline data-latex="ak \equiv 1 \pmod n"></span>, meaning <span class=math-inline data-latex=k></span> has a multiplicative inverse and <span class=math-inline data-latex="\langle k \rangle = \mathbb{Z}_n"></span>. <span class=math-inline data-latex=\square></span></p></div></div><div class=definition-block id=definition-12.2><div class=block-label>Definition 12.2 (Circle of Fifths)</div><div class=block-body><p>The <strong>circle of fifths</strong> is the sequence of pitch classes generated by repeated transposition by 7 semitones (a perfect fifth in 12-TET) in <span class=math-inline data-latex=\mathbb{Z}_{12}></span>:</p><p><span class=math-display data-latex="C \to G \to D \to A \to E \to B \to F\sharp \to C\sharp \to A\flat \to E\flat \to B\flat \to F \to C"></span></p><p>In <span class=math-inline data-latex=\mathbb{Z}_{12}></span>: <span class=math-inline data-latex="0 \to 7 \to 2 \to 9 \to 4 \to 11 \to 6 \to 1 \to 8 \to 3 \to 10 \to 5 \to 0"></span>.</p><p>Since <span class=math-inline data-latex="\gcd(7, 12) = 1"></span> (as 7 is prime and does not divide 12), 7 generates <span class=math-inline data-latex=\mathbb{Z}_{12}></span>, and the sequence visits all 12 pitch classes before returning to the start. This is the mathematical content of &ldquo;the circle of fifths is a circle and not a shorter cycle.&rdquo;</p></div></div><div class=definition-block id=definition-12.3><div class=block-label>Definition 12.3 (Shepard–Risset Pitch Helix)</div><div class=block-body><p>The <strong>Shepard–Risset pitch helix</strong> embeds pitch into <span class=math-inline data-latex=\mathbb{R}^3></span> as a helix, capturing both chroma (position on the chromatic circle) and height (octave register):</p><p><span class=math-display data-latex="\mathbf{p}(f) = \bigl(r\cos(2\pi \cdot \text{chroma}(f)/12),\; r\sin(2\pi \cdot \text{chroma}(f)/12),\; h \cdot \log_2(f/f_0)\bigr)"></span></p><p>where <span class=math-inline data-latex="\text{chroma}(f) = 12\log_2(f/f_0) \bmod 12 \in [0, 12)"></span>, <span class=math-inline data-latex="r > 0"></span> is the helix radius, <span class=math-inline data-latex="h > 0"></span> is the vertical pitch height scale, and <span class=math-inline data-latex=f_0></span> is a reference frequency.</p><ul><li><strong>Projection onto the <span class=math-inline data-latex=xy></span>-plane</strong> (the horizontal circle): gives chroma only — octave equivalence, the chromatic circle <span class=math-inline data-latex=\mathbb{Z}_{12}></span>.</li><li><strong>Projection onto the <span class=math-inline data-latex=z></span>-axis</strong> (vertical): gives octave height only — chroma equivalence.</li><li><strong>The full helix</strong>: represents the two-dimensional structure of pitch: chroma <span class=math-inline data-latex=\times></span> register.</li></ul><p>A Shepard tone is a superposition of sinusoids at all octaves of a given chroma, with a bell-curve amplitude envelope. It sits at a single point on the chromatic circle but is spread vertically along the helix — hence the paradox of indefinitely ascending/descending pitch without change of perceived height.</p></div></div><div class=definition-block id=definition-12.4><div class=block-label>Definition 12.4 (Subgroups of ℤ₁₂)</div><div class=block-body><p>The subgroups of <span class=math-inline data-latex=\mathbb{Z}_{12}></span> correspond bijectively to the divisors of 12:</p><table><thead><tr><th>Divisor <span class=math-inline data-latex=d></span></th><th>Subgroup</th><th>Generator</th><th>Musical object</th></tr></thead><tbody><tr><td>1</td><td><span class=math-inline data-latex=\{0\}></span></td><td>—</td><td>Unison</td></tr><tr><td>2</td><td><span class=math-inline data-latex="\{0, 6\}"></span></td><td>6</td><td>Tritone pair</td></tr><tr><td>3</td><td><span class=math-inline data-latex="\{0, 4, 8\}"></span></td><td>4</td><td>Augmented triad</td></tr><tr><td>4</td><td><span class=math-inline data-latex="\{0, 3, 6, 9\}"></span></td><td>3</td><td>Diminished seventh</td></tr><tr><td>6</td><td><span class=math-inline data-latex="\{0, 2, 4, 6, 8, 10\}"></span></td><td>2</td><td>Whole-tone scale</td></tr><tr><td>12</td><td><span class=math-inline data-latex=\mathbb{Z}_{12}></span></td><td>1 or 7</td><td>Chromatic scale / circle of fifths</td></tr></tbody></table><p>The richness of 12&rsquo;s factor structure (<span class=math-inline data-latex="12 = 2^2 \cdot 3"></span>, with divisors <span class=math-inline data-latex=\{1,2,3,4,6,12\}></span>) directly corresponds to the diversity of symmetric chords in 12-TET: each proper subgroup is a maximally even, symmetric chord or scale.</p></div></div><hr><h2 id=main-theorems>Main Theorems</h2><div class=theorem-block id=theorem-12.1><div class=block-label>Theorem 12.1 (7 Generates ℤ₁₂)</div><div class=block-body><p>The element 7 generates <span class=math-inline data-latex=\mathbb{Z}_{12}></span>: <span class=math-inline data-latex="\langle 7 \rangle = \mathbb{Z}_{12}"></span>.</p><p>Moreover, the generators of <span class=math-inline data-latex=\mathbb{Z}_{12}></span> are exactly the elements coprime to 12: <span class=math-inline data-latex="\{1, 5, 7, 11\}"></span>, and <span class=math-inline data-latex="|\text{Aut}(\mathbb{Z}_{12})| = \phi(12) = 4"></span>.</p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p><span class=math-inline data-latex="\gcd(7, 12) = \gcd(7, 12)"></span>. Since <span class=math-inline data-latex="12 = 1 \times 7 + 5"></span> and <span class=math-inline data-latex="7 = 1 \times 5 + 2"></span> and <span class=math-inline data-latex="5 = 2 \times 2 + 1"></span>, we get <span class=math-inline data-latex="\gcd(7,12) = 1"></span>. By Definition 12.1, <span class=math-inline data-latex="\langle 7 \rangle = \mathbb{Z}_{12}"></span>.</p><p>The elements coprime to 12 are those not divisible by 2 or 3: <span class=math-inline data-latex="\{1, 5, 7, 11\}"></span>. Euler&rsquo;s totient <span class=math-inline data-latex="\phi(12) = \phi(4)\phi(3) = 2 \times 2 = 4"></span> counts these, confirming 4 generators. <span class=math-inline data-latex=\square></span></p><blockquote><p><em>中文:</em> &ldquo;7 和 12 的最大公约数等于 1——7 和 12 互质。这保证了 7 能生成 ℤ₁₂ 的全部元素。其他步长，只要和 12 不互质，就只能在一个子集里转圈。只有最大公约数等于 1，才能遍历全部。秘密就是这一个条件。&rdquo;</p></blockquote></div></div><div class=theorem-block id=theorem-12.2><div class=block-label>Theorem 12.2 (Circle of Fifths as Quotient of the Spiral)</div><div class=block-body><p>In exact (just) intonation, the pitch space is <span class=math-inline data-latex=\mathbb{R}></span> (the real line of log-frequencies). The &ldquo;spiral of fifths&rdquo; is the infinite sequence</p><p><span class=math-display data-latex="\ldots, \tfrac{3}{2}\cdot p,\; p,\; \tfrac{3}{2}p,\; \left(\tfrac{3}{2}\right)^2 p,\; \ldots"></span></p><p>which, by Theorem 11.3, never repeats. In 12-TET, this spiral is projected onto the quotient <span class=math-inline data-latex=\mathbb{R}/(12\mathbb{Z})></span> (identifying pitches that differ by an octave and rounding each fifth to <span class=math-inline data-latex=2^{7/12}></span>). The resulting image is exactly <span class=math-inline data-latex=\mathbb{Z}_{12}></span>, traversed by the generator 7 — the circle of fifths.</p><p>Formally, the map <span class=math-inline data-latex="\phi: n \mapsto 7n \pmod{12}"></span> is the bijection <span class=math-inline data-latex="\mathbb{Z}_{12} \xrightarrow{\sim} \mathbb{Z}_{12}"></span> that converts &ldquo;step number in the fifth sequence&rdquo; to &ldquo;pitch class.&rdquo;</p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p>The projection map is <span class=math-inline data-latex="\pi: \mathbb{R} \to \mathbb{R}/(12\mathbb{Z})"></span>, where we identify <span class=math-inline data-latex="\mathbb{R}/(12\mathbb{Z}) \cong \mathbb{Z}_{12}"></span> by <span class=math-inline data-latex="x \mapsto \lfloor x \rfloor \pmod{12}"></span> (measuring in semitones).</p><p>In just intonation, the <span class=math-inline data-latex=n></span>-th fifth above <span class=math-inline data-latex=p></span> (at log-frequency 0) is at log-frequency <span class=math-inline data-latex="n \times \log_2(3/2) \approx n \times 0.585"></span> octaves <span class=math-inline data-latex="= n \times 7.02"></span> semitones.</p><p>In 12-TET, this is rounded to <span class=math-inline data-latex="n \times 7"></span> semitones. The image <span class=math-inline data-latex="\pi(7n) = 7n \pmod{12}"></span> is the circle of fifths sequence.</p><p>Since <span class=math-inline data-latex="\gcd(7,12)=1"></span>, <span class=math-inline data-latex="\phi: n \mapsto 7n \pmod{12}"></span> is a bijection on <span class=math-inline data-latex=\mathbb{Z}_{12}></span> (Theorem 12.1), confirming the circle visits all 12 pitch classes. <span class=math-inline data-latex=\square></span></p><p><strong>The key approximation:</strong> The true fifth is <span class=math-inline data-latex="\log_2(3/2) \approx 7.0196"></span> semitones; 12-TET rounds this to exactly 7. The error is 0.0196 semitones <span class=math-inline data-latex="= 1.955"></span> cents per fifth. After 12 fifths, the accumulated error is <span class=math-inline data-latex="12 \times 1.955 = 23.46"></span> cents — the Pythagorean comma. 12-TET distributes this error uniformly, one fifth at a time, forcing the spiral into a circle.</p></div></div><div class=theorem-block id=theorem-12.3><div class=block-label>Theorem 12.3 (Unique Factorization and Good EDOs)</div><div class=block-body><p>An <span class=math-inline data-latex=n></span>-tone equal division of the octave (<span class=math-inline data-latex=n></span>-EDO) approximates the just fifth if and only if <span class=math-inline data-latex="k = \lfloor n \cdot \log_2(3/2) \rceil"></span> satisfies <span class=math-inline data-latex="\gcd(k, n) = 1"></span>, where <span class=math-inline data-latex="\lfloor \cdot \rceil"></span> denotes the nearest integer. If <span class=math-inline data-latex="\gcd(k,n) > 1"></span>, the &ldquo;circle of fifths&rdquo; in <span class=math-inline data-latex=n></span>-EDO does not generate all <span class=math-inline data-latex=n></span> pitch classes.</p><p>The best-approximating EDOs with <span class=math-inline data-latex="\gcd(k,n)=1"></span> are precisely the denominators of the convergents of <span class=math-inline data-latex="\log_2(3/2) = [0;1,1,2,2,3,1,5,2,23,\ldots]"></span>, namely <span class=math-inline data-latex="n \in \{1, 2, 5, 12, 29, 41, 53, \ldots\}"></span>.</p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p>For <span class=math-inline data-latex=n></span>-EDO, each step is <span class=math-inline data-latex=1/n></span> octave. The fifth is approximated by <span class=math-inline data-latex=k></span> steps where <span class=math-inline data-latex="k = \lfloor n\log_2(3/2) \rceil"></span>. The circle of fifths in <span class=math-inline data-latex=n></span>-EDO generates the subgroup <span class=math-inline data-latex="\langle k \rangle \subseteq \mathbb{Z}_n"></span>, which equals all of <span class=math-inline data-latex=\mathbb{Z}_n></span> iff <span class=math-inline data-latex="\gcd(k,n)=1"></span> (Definition 12.1).</p><p>For 12-EDO: <span class=math-inline data-latex="k = \lfloor 12 \times 0.58496 \rceil = \lfloor 7.02 \rceil = 7"></span>, <span class=math-inline data-latex="\gcd(7,12) = 1"></span>. Good.</p><p>For 5-EDO: <span class=math-inline data-latex="k = \lfloor 5 \times 0.58496 \rceil = \lfloor 2.92 \rceil = 3"></span>, <span class=math-inline data-latex="\gcd(3,5) = 1"></span>. Good (but very coarse).</p><p>For 6-EDO: <span class=math-inline data-latex="k = \lfloor 6 \times 0.58496 \rceil = \lfloor 3.51 \rceil = 4"></span>, <span class=math-inline data-latex="\gcd(4,6) = 2 \neq 1"></span>. The &ldquo;fifth&rdquo; in 6-EDO only generates a 3-element subgroup — not all 6 pitch classes.</p><p>For 53-EDO: <span class=math-inline data-latex="k = \lfloor 53 \times 0.58496 \rceil = \lfloor 31.00 \rceil = 31"></span>, <span class=math-inline data-latex="\gcd(31,53) = 1"></span> (both prime, and <span class=math-inline data-latex="31 \neq 53"></span>). Good and very accurate (<span class=math-inline data-latex="\approx 0.07"></span> cents error per fifth). <span class=math-inline data-latex=\square></span></p></div></div><div class=proposition-block id=prop-12.1><div class=block-label>Prop 12.1 (Lydian Tetrachord Chain (SUM) as a Coset Sequence)</div><div class=block-body>The Super Ultra Hyper Mega Meta Lydian (SUM) structure of Jacob Collier is the sequence of Lydian tetrachord roots <span class=math-inline data-latex="\{C, G, D, A, E, B, F\sharp, \ldots\}"></span>, which is the orbit of 0 under repeated addition of 7 in <span class=math-inline data-latex=\mathbb{Z}_{12}></span> (or <span class=math-inline data-latex=\mathbb{Z}></span> before reduction). In 12-TET (the circle), the sequence closes after 12 steps. In just intonation (the spiral), it never closes: each G is a true <span class=math-inline data-latex="(3/2)^n \cdot C"></span>, lying at a different height on the pitch helix, and the chain is an infinite ascending structure.</div></div><hr><h2 id=numerical-example-why-12-and-not-7-or-11>Numerical Example: Why 12 and Not 7 or 11?</h2><p>Consider alternative chromatic universes:</p><p><strong>7-EDO</strong> (7 equal divisions): <span class=math-inline data-latex="k = \lfloor 7 \times 0.585 \rceil = 4"></span>. <span class=math-inline data-latex="\gcd(4,7)=1"></span>, so a &ldquo;fifth&rdquo; of 4 steps generates all 7 pitch classes. But the fifth is <span class=math-inline data-latex=4/7></span> octave <span class=math-inline data-latex="\approx 685.7"></span> cents — 16 cents flat. No perfect approximation of the major third exists (no <span class=math-inline data-latex=n></span> with <span class=math-inline data-latex="4n/7 \approx 386/1200"></span>). 7-EDO works for pentatonic/heptatonic music but lacks the interval richness of 12-TET.</p><p><strong>12-EDO</strong>: As shown, <span class=math-inline data-latex="\gcd(7,12)=1"></span>, fifth error <span class=math-inline data-latex="\approx 2"></span> cents, major third error <span class=math-inline data-latex="\approx 14"></span> cents. The compromise that Western tonal practice settled on.</p><p><strong>19-EDO</strong>: <span class=math-inline data-latex="k = \lfloor 19 \times 0.585 \rceil = 11"></span>, <span class=math-inline data-latex="\gcd(11,19)=1"></span>. Fifth error <span class=math-inline data-latex="\approx 7"></span> cents (worse than 12-TET!), but major third <span class=math-inline data-latex="= 6/19"></span> octave <span class=math-inline data-latex="\approx 378"></span> cents — 8 cents flat, actually closer to just than 12-TET&rsquo;s 14 cents sharp. Used in some microtonal compositions for its smoother thirds.</p><p><strong>53-EDO</strong>: <span class=math-inline data-latex="k=31"></span>, <span class=math-inline data-latex="\gcd(31,53)=1"></span>. Fifth error <span class=math-inline data-latex="< 0.1"></span> cents, major third error <span class=math-inline data-latex="< 0.3"></span> cents. Nearly perfect 5-limit just intonation, but with 53 keys per octave — impractical for keyboard instruments, though used in some theoretical works (Mercator, 1670s; Tanaka, 1890).</p><blockquote><p><em>中文:</em> &ldquo;12不是随意的——它的因子结构恰好对应了西方调性音乐常用的对称数量。24太多——虽然中东音乐在用——7太少，因为它是素数，没有真子群。对于十二平均律体系，12是一个有效的选择。&rdquo;</p></blockquote><hr><h2 id=musical-connection>Musical Connection</h2><div class=music-block><div class=block-label>音乐联系</div><div class=block-body><p><strong>The circle of fifths as a group-theoretic object</strong></p><p>The circle of fifths is not merely a mnemonic for key signatures. It is the orbit of any pitch class under the group automorphism <span class=math-inline data-latex="\phi: x \mapsto x + 7 \pmod{12}"></span>, which has order 12 (since <span class=math-inline data-latex="12 \times 7 \equiv 0 \pmod{12}"></span> and no smaller multiple works). The circle of fifths and the chromatic scale are two different generating sequences of the same group <span class=math-inline data-latex=\mathbb{Z}_{12}></span> — one with generator 1 (ascending by semitones), the other with generator 7 (ascending by fifths).</p><p><strong>Tonal brightness as direction on the spiral</strong></p><p>Collier&rsquo;s observation that &ldquo;going sharp&rdquo; (adding fifths in the direction <span class=math-inline data-latex="C \to G \to D \to \ldots"></span>) sounds &ldquo;brighter&rdquo; is a perceptual reflection of the acoustic fact that the low-numbered partials of a tone at frequency <span class=math-inline data-latex=f></span> are <span class=math-inline data-latex="f, 2f, 3f, \ldots"></span>. A fifth up means moving toward the 3rd partial, which is acoustically close to the fundamental. A fourth up (adding flats, going <span class=math-inline data-latex="C \to F \to B\flat \to \ldots"></span>) means moving away from the fundamental&rsquo;s low partials.</p><blockquote><p><em>中文:</em> &ldquo;为什么五度方向更亮？纯律五度等于三比二——就是泛音列的第3个分音。加7方向就是沿着低序数泛音堆叠，和基音更亲近。明与暗，就是你在五度圈上的方向。&rdquo;</p></blockquote><p><strong>The Shepard–Risset paradox and musical meaning</strong></p><p>Shepard tones (Definition 12.3) exploit the helix structure: by spreading amplitude across all octaves of a chroma with a bell envelope, they create the illusion of a tone with chroma but no register — a &ldquo;pure&rdquo; position on the chromatic circle without height. Shepard-Risset glissandi create the paradox of continuous ascent without arriving higher — the chromatic circle rotates continuously, but the vertical helix position stays fixed.</p><p>Collier&rsquo;s SUM is the philosophical inverse: it insists on the helix, refusing the projection. On a piano (which forces <span class=math-inline data-latex=\mathbb{Z}_{12}></span>), SUM closes after 12 steps. In just intonation, or in the voice (which can access any frequency), it never closes — it ascends the spiral indefinitely.</p><blockquote><p><em>中文:</em> &ldquo;五度圈是一个优美的谎言——代价是每个五度损失2音分的真实，收益是12个调式的平等。正是这个谎言，让转调成为可能。&rdquo;</p></blockquote><p><strong>Subgroup structure and symmetric chords</strong></p><p>Definition 12.4 shows that <span class=math-inline data-latex=\mathbb{Z}_{12}></span>&rsquo;s subgroups correspond to the most structurally symmetric objects in 12-TET: the tritone pair, augmented triad, diminished seventh chord, and whole-tone scale. These are exactly the chords whose transpositional symmetry makes them &ldquo;tonally unstable&rdquo; — they sound unresolved because they belong equally to multiple keys. The augmented triad is the unique chord invariant under transposition by a major third (<span class=math-inline data-latex=T_4></span>); the diminished seventh is invariant under <span class=math-inline data-latex=T_3></span>. Their ambiguity is a direct consequence of being proper subgroups of <span class=math-inline data-latex=\mathbb{Z}_{12}></span>.</p></div></div><hr><h2 id=limits-and-open-questions>Limits and Open Questions</h2><ol><li><p><strong>Multidimensional pitch spaces.</strong> The Shepard helix is one-dimensional in chroma (a circle) with one height dimension. Krumhansl&rsquo;s (1983) multidimensional scaling experiments suggest that the perceptual space of keys is better modeled as a <strong>torus</strong> (circle of major keys × circle of minor keys) embedded in a higher-dimensional space. The torus is the product of two <span class=math-inline data-latex=\mathbb{Z}_{12}></span> circles (one major, one minor), connected by relative and parallel relationships. This structure cannot be captured by a single helix.</p></li><li><p><strong>Optimal EDOs for extended just intonation.</strong> Theorem 12.3 characterizes good EDOs for 5-limit just intonation (primes 2, 3, 5). For 7-limit (adding 7:4), the optimal EDOs change: 31-EDO and 72-EDO become attractive. The general question — &ldquo;what is the best <span class=math-inline data-latex=n></span>-EDO for <span class=math-inline data-latex=p></span>-limit just intonation?&rdquo; — is an active research area in mathematical music theory.</p></li><li><p><strong>The SUM structure in continuous pitch space.</strong> Collier&rsquo;s SUM, if extended indefinitely in just intonation, is an infinite ascending sequence in <span class=math-inline data-latex=\mathbb{R}></span> (the pitch helix). The question of whether a composition can make musical sense while its tonal center spirals to arbitrarily high pitch is open. Pauline Oliveros&rsquo;s deep listening work and La Monte Young&rsquo;s sustained-tone pieces approach this question experientially, but no formal compositional framework for &ldquo;infinite spiral form&rdquo; exists.</p></li><li><p><strong>Tuning and spectral composition.</strong> Sethares (2005) showed that inharmonic timbres can be made consonant with non-12-TET scales by matching the instrument&rsquo;s partial series to the EDO&rsquo;s intervals. This raises the converse question: if the &ldquo;circle of fifths&rdquo; and the subgroup structure of <span class=math-inline data-latex=\mathbb{Z}_n></span> depend on <span class=math-inline data-latex=n></span>, and the consonance of intervals depends on the timbre, is there a joint optimization of (<span class=math-inline data-latex=n></span>-EDO, timbre) that produces a richer harmonic world than 12-TET with harmonic timbres?</p></li></ol><hr><h2 id=academic-references>Academic References</h2><ol><li><p>Shepard, R. N. (1964). Circularity in judgments of relative pitch. <em>Journal of the Acoustical Society of America</em>, 36(12), 2346–2353.</p></li><li><p>Risset, J.-C. (1969). <em>An Introductory Catalogue of Computer-Synthesized Sounds</em>. Bell Telephone Laboratories.</p></li><li><p>Krumhansl, C. L., & Kessler, E. J. (1982). Tracing the dynamic changes in perceived tonal organization in a spatial representation of musical keys. <em>Psychological Review</em>, 89(4), 334–368.</p></li><li><p>Balzano, G. J. (1980). The group-theoretic description of 12-fold and microtonal pitch systems. <em>Computer Music Journal</em>, 4(4), 66–84.</p></li><li><p>Clough, J., & Douthett, J. (1991). Maximally even sets. <em>Journal of Music Theory</em>, 35(1/2), 93–173.</p></li><li><p>Amiot, E. (2016). <em>Music Through Fourier Space: Discrete Fourier Transform in Music Theory</em>. Springer.</p></li><li><p>Milne, A., Sethares, W. A., & Plamondon, J. (2007). Isomorphic controllers and dynamic tuning. <em>Computer Music Journal</em>, 31(4), 15–32.</p></li><li><p>Hardy, G. H., & Wright, E. M. (2008). <em>An Introduction to the Theory of Numbers</em> (6th ed.). Oxford University Press. Ch. 5 (Congruences and residues).</p></li></ol></div><nav class=ep-nav><a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-nav-prev>← EP11: Comma Drift and the Impossibility of Perfect Tuning
+</a><a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-nav-next>EP13: Polyrhythm and Rhythm-Pitch Duality →</a></nav></article><aside class=ep-toc-aside><div class=ep-toc-sticky><div class=ep-toc-label>本页目录</div><nav id=TableOfContents><ul><li><a href=#overview>Overview</a></li><li><a href=#prerequisites>Prerequisites</a></li><li><a href=#definitions>Definitions</a></li><li><a href=#main-theorems>Main Theorems</a></li><li><a href=#numerical-example-why-12-and-not-7-or-11>Numerical Example: Why 12 and Not 7 or 11?</a></li><li><a href=#musical-connection>Musical Connection</a></li><li><a href=#limits-and-open-questions>Limits and Open Questions</a></li><li><a href=#academic-references>Academic References</a></li></ul></nav></div></aside></div><footer class=site-footer><div class=footer-content><a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link><img src=/images/avatar.png alt="Sibelius P." class=footer-avatar></a><div class=footer-text><span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
 <span class=footer-sep>·</span>
 <a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener>小红书</a>
 <span class=footer-sep>·</span>
-<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span>
-</div>
-</div>
-</footer>
-</main>
-</div>
-</body>
-</html>
+<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span></div></div></footer></main></div></body></html>

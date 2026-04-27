@@ -1,79 +1,581 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>集数索引 on AMATH 390 数学与音乐</title><link>https://amath390.sibeliusp.com/episodes/</link><description>Recent content in 集数索引 on AMATH 390 数学与音乐</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://amath390.sibeliusp.com/episodes/index.xml" rel="self" type="application/rss+xml"/><item><title>EP01: Chord Space and the Torus</title><link>https://amath390.sibeliusp.com/episodes/ep01/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep01/</guid><description>Overview If I told you that moving from a C major chord to an A minor chord takes exactly one step in a certain geometric space — and that this space has the shape of a donut — would you believe it?
-This episode develops the mathematical backbone of Neo-Riemannian theory: three involutory chord transformations (P, L, R) that generate a dihedral group acting on 24 major/minor triads, a torus-shaped visualization called the Tonnetz, and Dmitri Tymoczko&amp;rsquo;s general theory of voice-leading orbifolds.</description></item><item><title>EP02: String Vibration and the Wave Equation</title><link>https://amath390.sibeliusp.com/episodes/ep02/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep02/</guid><description>Overview When you pluck a guitar string, why does it produce a rich spectrum of overtones rather than a single pure tone? The answer lies in a second-order partial differential equation derived by d&amp;rsquo;Alembert in 1747 and the separation-of-variables technique that Fourier refined in the early 19th century.
-This episode derives the 1D wave equation from Newton&amp;rsquo;s second law, establishes d&amp;rsquo;Alembert&amp;rsquo;s general solution as a superposition of traveling waves, and then reframes everything as Fourier series — infinite sums of standing-wave modes whose frequencies form the integer harmonic series</description></item><item><title>EP03: Bach and Graph Connectivity</title><link>https://amath390.sibeliusp.com/episodes/ep03/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep03/</guid><description>Overview Bach&amp;rsquo;s Fugue in C Major (BWV 846) has four independent voices: soprano, alto, tenor, bass. Delete any one of them and the remaining three still form a coherent harmonic structure. Why? The mathematical answer is graph connectivity: the voice-structure of polyphonic music forms a 2-connected graph with no cut vertices, while homophonic music (melody + accompaniment) is at best 1-connected, with the melody as a potential cut vertex.
-This episode develops the theory of graph connectivity — cut vertices, bridges, -connectivity — and applies it to a Bach chorale model.</description></item><item><title>EP04: All-Interval Rows and ℤ₁₂</title><link>https://amath390.sibeliusp.com/episodes/ep04/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep04/</guid><description>Overview Among the (nearly half a billion) permutations of the 12 chromatic pitch classes, exactly 1928 have the property that their 11 consecutive intervals are all distinct — covering every interval from 1 to 11 semitones exactly once. These are the all-interval rows.
-This episode builds the algebraic infrastructure to understand why: as the group of pitch classes, the four row operations as the Klein four-group , and the orbit-stabilizer theorem and Burnside&amp;rsquo;s lemma as tools for counting chord types under symmetry.</description></item><item><title>EP05: Turán's Theorem and Counterpoint</title><link>https://amath390.sibeliusp.com/episodes/ep05/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep05/</guid><description>Overview How many simultaneous intervals can a polyphonic texture contain before forbidden structures inevitably appear? In 1941, the Hungarian mathematician Pál Turán gave a precise answer to the general question: given vertices and no complete subgraph , the maximum number of edges is achieved by a unique graph called the Turán graph .
-This episode applies Turán&amp;rsquo;s theorem to Western counterpoint. Model the twelve pitch classes as vertices and &amp;ldquo;permitted simultaneous intervals&amp;rdquo; as edges.</description></item><item><title>EP06: Graph Coloring and Voice Assignment</title><link>https://amath390.sibeliusp.com/episodes/ep06/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep06/</guid><description>Overview Beethoven&amp;rsquo;s Fifth Symphony, fourth movement, deploys over twenty orchestral staves. Collapse all octave doublings, and the climax still demands more than ten distinct pitch heights simultaneously — more than two human hands can play. How do you reduce a full orchestra to a piano score without destroying the harmonic structure? And what is the minimum number of voices absolutely required?
-This episode answers both questions with graph coloring. Model each note as a vertex; connect two vertices when their sounding intervals overlap in time.</description></item><item><title>EP07: Information Entropy and All-Interval Rows</title><link>https://amath390.sibeliusp.com/episodes/ep07/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep07/</guid><description>Overview A listener hears two melodies and judges the second as &amp;ldquo;more chaotic.&amp;rdquo; But when you measure the distribution of adjacent intervals, the second melody is mathematically more uniform — its Shannon entropy is higher, not lower. The discomfort comes not from disorder but from the absence of the familiar concentrated pattern that tonal music trains the brain to expect.
-This episode builds Shannon&amp;rsquo;s entropy from first principles and applies it to music.</description></item><item><title>EP08: Shepard Tones and the Tritone Paradox</title><link>https://amath390.sibeliusp.com/episodes/ep08/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep08/</guid><description>Overview A tone rises through twelve semitones. Then it rises again. It has been rising for thirty seconds and is at exactly the same pitch it started on.
-This is not an acoustic trick — it is a topological fact. Roger Shepard&amp;rsquo;s 1964 construction exploits the two-dimensional structure of human pitch perception: every pitch has a chroma (position on a circle, ) and a height (octave number, ). Pitch lives on a helix .</description></item><item><title>EP09: Combination Tones and Nonlinear Acoustics</title><link>https://amath390.sibeliusp.com/episodes/ep09/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep09/</guid><description>Overview Play two pure tones — 200 Hz and 300 Hz. The spectrum shows exactly two lines. Yet some listeners perceive a faint 100 Hz drone that is not present in the air at all. It is manufactured inside the cochlea.
-中文: &amp;ldquo;这个100赫兹不存在于空气中。它是你的耳蜗制造出来的。那它从哪来的？&amp;rdquo;
-This episode answers that question through the mathematics of nonlinear systems. A linear system passes both frequencies through unchanged. But the cochlea&amp;rsquo;s outer hair cells act as nonlinear amplifiers: their response curve is an S-shaped tanh function, not a straight line.</description></item><item><title>EP10: Negative Harmony and the Dihedral Group D₁₂</title><link>https://amath390.sibeliusp.com/episodes/ep10/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep10/</guid><description>Overview The perfect authentic cadence — dominant seventh to tonic — has been the gravitational engine of Western tonal music for four centuries. It pulls inward: the leading tone rises to , the tritone – contracts, the bass falls a fifth.
-中文: &amp;ldquo;但是，如果我告诉你，它有一个&amp;rsquo;镜像版本'——同样平滑，同样到达，但引力方向完全相反——你会相信吗？&amp;rdquo;
-This mirror version is negative harmony: a reflection of the chromatic circle that preserves every voice-leading distance while reversing every harmonic direction. The operation is not a curiosity — it is one of the 12 reflections in the dihedral group , the full symmetry group of the regular 12-gon.</description></item><item><title>EP11: Comma Drift and the Impossibility of Perfect Tuning</title><link>https://amath390.sibeliusp.com/episodes/ep11/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep11/</guid><description>Overview Jacob Collier calls the piano&amp;rsquo;s major third a &amp;ldquo;cheat.&amp;rdquo; He is right, in a precise mathematical sense: the equal-tempered major third is 14 cents wider than the just major third. And the reason this discrepancy can never be eliminated — not by any tuning system, however ingeniously constructed — is a theorem in number theory.
-中文: &amp;ldquo;Jacob说，钢琴的大三度比纯律高了14音分——他把这叫做骗局。他选择用耳朵去调律，追求纯律的融合。但这个选择有代价：调性会漂移。这集，我们从数学角度解释：为什么纯净必然导致漂移？因为三个素数，永不相交。&amp;rdquo;
-The core result is that is irrational — no power of a perfect fifth (3:2) equals any power of an octave (2:1).</description></item><item><title>EP12: The Circle of Fifths as a Folded Spiral</title><link>https://amath390.sibeliusp.com/episodes/ep12/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep12/</guid><description>Overview Jacob Collier&amp;rsquo;s &amp;ldquo;Super Ultra Hyper Mega Meta Lydian&amp;rdquo; is not just a joke. It describes a real mathematical structure: an infinite chain of Lydian tetrachords ascending the circle of fifths, never stopping, never repeating. But on a piano — which uses 12-TET — the spiral is forced into a circle, and after 12 steps you return to the same key.
-中文: &amp;ldquo;圆是钢琴的近似。螺旋是数学的真实。SUM的永不停步，恰好映射了这条螺旋。&amp;rdquo;
-The key mathematical fact is : the interval of a fifth (7 semitones) generates the entire group because 7 and 12 are coprime.</description></item><item><title>EP13: Polyrhythm and Rhythm-Pitch Duality</title><link>https://amath390.sibeliusp.com/episodes/ep13/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep13/</guid><description>Overview This is Episode 4 of 4 in the Jacob Collier series — the finale of the arc.
-Jacob Collier&amp;rsquo;s mastery of both rhythm and harmony looks like two separate gifts. This episode argues it is one: the ability to perceive integer ratios across all time scales. A polyrhythm of and a perfect fifth are mathematically identical — the ratio — separated only by a perceptual threshold near 20 Hz.</description></item><item><title>EP14: Tonnetz Hodge Duality</title><link>https://amath390.sibeliusp.com/episodes/ep14/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep14/</guid><description>Overview The Tonnetz — Euler&amp;rsquo;s 1739 interval lattice, rediscovered by neo-Riemannian theorists — is not merely a picture of chord relationships. It is a simplicial complex triangulating a torus, and every chord progression on it is a cochain that decomposes, uniquely and orthogonally, into three mathematically distinct components.
-This episode applies discrete Hodge theory (Eckmann 1944; Lim 2020) to the Tonnetz. The central result:
-Any 1-cochain on the Tonnetz torus decomposes as: where the three summands are pairwise orthogonal and uniquely determined.</description></item><item><title>EP15: Opera Acoustics and the Singer's Formant</title><link>https://amath390.sibeliusp.com/episodes/ep15/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep15/</guid><description>Overview An opera singer has no microphone. A single voice must cut through 110 orchestral instruments in a live hall. This episode asks: how?
-中文: &amp;ldquo;答案藏在——3000赫兹。乐队能量在这里暴跌18分贝。这是歌手唯一的窗口——或者被淹没，或者穿透。&amp;rdquo;
-The answer is not louder singing. It is frequency targeting: the singer concentrates acoustic energy precisely where the orchestra is weakest, where the human ear is most sensitive, and where the physics of the vocal tract allows a structural resonance enhancement.
-This episode develops a three-layer quantitative model:</description></item><item><title>EP16: Rossini's Code — Budden, Gossett, and the Convention System</title><link>https://amath390.sibeliusp.com/episodes/ep16/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep16/</guid><description>Overview Thirty-four operas in thirteen years. An average of one every five months — while his contemporaries typically took two to three years per opera. Rossini was not merely talented; he had discovered a system.
-中文: &amp;ldquo;罗西尼不是天才，他找到了一套方法。这期我们来拆解 Budden 所说的罗西尼法典。&amp;rdquo;
-This episode is primarily musicology, with math appearing only as a toolbox at the end. The core story belongs to two scholars: the musicologist Julian Budden, who named the system &amp;ldquo;Code Rossini&amp;rdquo; (deliberately evoking the Code Napoléon), and Philip Gossett, who analyzed it as a convention framework — a set of shared dramatic expectations between composer and audience.</description></item><item><title>EP17: Leitmotif Networks — Wagner's Ring Cycle</title><link>https://amath390.sibeliusp.com/episodes/ep17/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep17/</guid><description>Overview You have heard this melody before. But in the Ring cycle&amp;rsquo;s sixteen hours, it returns in dozens of different forms — transposed, inverted, reversed, fragmented. Scholars have catalogued over a hundred such motifs. Wagner did not write melodies — he wrote an operating system.
-中文: &amp;ldquo;瓦格纳没有写旋律——他写了一个操作系统。这期我们来拆解这个系统的网络结构。&amp;rdquo;
-This episode analyzes Wagner&amp;rsquo;s leitmotif system through three mathematical lenses:
-Abstract algebra: The four basic motivic transformations — original, retrograde, inversion, retrograde-inversion — form the Klein four-group , the same algebraic structure we encountered in EP04 &amp;rsquo;s analysis of Schoenberg&amp;rsquo;s twelve-tone rows.</description></item><item><title>EP18: Game Theory in Operatic Duets</title><link>https://amath390.sibeliusp.com/episodes/ep18/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep18/</guid><description>Overview Four operas. Four game-theoretic frameworks. This episode treats operatic duets as strategic interactions and asks: can the mathematical machinery of game theory &amp;mdash; payoff matrices, equilibrium concepts, information structures &amp;mdash; explain why characters make the choices they do?
-We begin with Bizet&amp;rsquo;s Carmen (1875), where the final confrontation between Carmen and Don Jose is modeled as a two-player non-cooperative game solved by backward induction. Mozart&amp;rsquo;s Don Giovanni (1787) introduces incomplete information: Giovanni persuades Zerlina through repeated signaling, and her decision follows Bayesian updating.</description></item><item><title>EP19: Vibrato as FM Synthesis</title><link>https://amath390.sibeliusp.com/episodes/ep19/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep19/</guid><description>Overview A pure A4 (440 Hz) and a gently trembling A4. The strange thing is — the trembling one sounds more stable, more vivid.
-中文: &amp;ldquo;这就是颤音，vibrato。每个歌剧歌手都在用它，但很少有人意识到，它背后的数学和雅马哈 DX7 合成器完全一样。&amp;rdquo;
-Vibrato is periodic modulation of the carrier frequency — one sine wave nested inside another. On the surface, only one pitch is wobbling. But the Jacobi-Anger expansion reveals a hidden spectral structure: symmetric sidebands appear on both sides of the carrier, each with amplitude governed by the Bessel function .</description></item><item><title>EP20: Character Interaction Networks in Opera</title><link>https://amath390.sibeliusp.com/episodes/ep20/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep20/</guid><description>Overview 中文: &amp;ldquo;瓦格纳的《指环》四联剧，三十四个角色。谁最重要？直觉会说沃坦，因为他认识最多人。但如果看图论，答案未必是王，而可能是桥。&amp;rdquo;
-When Wagner&amp;rsquo;s Ring cycle is encoded as a graph &amp;mdash; 34 characters as vertices, direct interactions as edges &amp;mdash; the question &amp;ldquo;who is the most important character?&amp;rdquo; becomes a question about centrality measures on finite graphs. Degree centrality identifies the most visible node (Wotan), but betweenness centrality identifies the most structurally indispensable one (Loge), and cut-vertex analysis reveals whose removal shatters the network entirely. These are distinct mathematical concepts with distinct dramaturgical consequences.</description></item><item><title>EP21: From Markov to Diffusion — Sixty Years of AI Composition</title><link>https://amath390.sibeliusp.com/episodes/ep21/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep21/</guid><description>Overview Three mathematical frameworks have dominated algorithmic music composition over sixty years: Markov chains (1957), Transformer attention (2017), and diffusion models (2020). Each replaces its predecessor not by discarding the core idea — sampling from a learned probability distribution over musical events — but by changing which probability distribution and how it is parameterized.
-中文: &amp;ldquo;它们在解同一个数学问题。这个问题的答案，七十年里只换了三次。从骰子，到注意力，到噪声。&amp;rdquo;
-This companion page formalizes the mathematics the video sketches: transition matrices on , the softmax attention mechanism as a content-dependent stochastic matrix, and the DDPM forward/reverse processes with score matching.</description></item><item><title>EP22: How AI Writes Music — EnCodec and RVQ</title><link>https://amath390.sibeliusp.com/episodes/ep22/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep22/</guid><description>Overview 中文: &amp;ldquo;你在AI音乐工具里打了一行字：&amp;lsquo;一首中国风钢琴曲&amp;rsquo;。十秒后，一段旋律流了出来。这十秒钟里，数据到底经历了什么？&amp;rdquo;
-This episode traces the complete data pipeline of a text-to-music system, from the moment you type a text prompt to the moment audio emerges from the speaker. We follow two parallel architectures:
-MusicGen (Meta, 2023): text T5 encoder Transformer with delay pattern discrete tokens RVQ decode EnCodec decoder waveform. ACE-Step (2024): text T5 encoder DiT diffusion in continuous latent space DCAE decoder vocoder waveform.</description></item><item><title>EP23: Can AI Understand Music? Latent Space and Information Bottleneck</title><link>https://amath390.sibeliusp.com/episodes/ep23/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep23/</guid><description>Overview 中文: &amp;ldquo;数学能量出形状，量不出意义。&amp;rdquo;
-The previous episode ( EP22 ) showed how EnCodec compresses audio into a discrete codebook of 2048 vectors in . This episode asks the next question: what did the model learn to encode? Tonal structure? Rhythmic patterns? Something humans cannot name?
-We develop three mathematical frameworks to answer this:
-t-SNE reduces the 128-dimensional codebook to a 2D map, revealing that codewords cluster by musical key &amp;mdash; without any supervision.</description></item><item><title>EP24: The Information Code of Pop Music</title><link>https://amath390.sibeliusp.com/episodes/ep24/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep24/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
-本集探讨：Shannon熵H(X), LZ压缩, Kolmogorov复杂度。
-前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 24.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item><item><title>EP25: Why Music Gives You Goosebumps — Prediction Error and Frisson</title><link>https://amath390.sibeliusp.com/episodes/ep25/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep25/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
-本集探讨：预测误差δ=r+γV(s')−V(s), 贝叶斯更新。
-前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 25.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item><item><title>EP26: The 1/f Law of Music</title><link>https://amath390.sibeliusp.com/episodes/ep26/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep26/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
-本集探讨：功率谱密度S(f)∝1/fᵅ, Hurst指数H, 分形维数。
-前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 26.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item><item><title>EP27: Answering Viral Critics with Mathematics</title><link>https://amath390.sibeliusp.com/episodes/ep27/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep27/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
-本集探讨：EP24–26工具综合应用, surprisal方差。
-前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 27.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item><item><title>EP28: Your Microphone Is a Damped Oscillator</title><link>https://amath390.sibeliusp.com/episodes/ep28/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep28/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
-本集探讨：阻尼谐振子ODE, Bode图, Q因子, 极坐标指向性。
-前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 28.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item><item><title>EP29: Primes in the Studio — Standing Waves and QRD Diffusers</title><link>https://amath390.sibeliusp.com/episodes/ep29/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep29/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
-本集探讨：房间模态, Helmholtz共鸣器, 二次剩余模素数, Gauss和。
-前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 29.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item><item><title>EP30: The Sampling Theorem Is Not What You Think</title><link>https://amath390.sibeliusp.com/episodes/ep30/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep30/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
-本集探讨：sinc重建, 量化SNR, TPDF抖动, 噪声整形NTF(z)。
-前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 30.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item><item><title>EP31: The Warmth of Moog Has an Equation</title><link>https://amath390.sibeliusp.com/episodes/ep31/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep31/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
-本集探讨：4极级联H(s), Barkhausen准则, tanh→奇次谐波。
-前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 31.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item><item><title>EP32: Chebyshev Waveshaping — Buchla and West Coast Synthesis</title><link>https://amath390.sibeliusp.com/episodes/ep32/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep32/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
-本集探讨：Chebyshev多项式T_n, 波形整形, 谐波控制。
-前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 32.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item><item><title>EP33: One Delay Line, One String — Physical Modeling</title><link>https://amath390.sibeliusp.com/episodes/ep33/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep33/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
-本集探讨：Karplus-Strong, d&amp;rsquo;Alembert行波, 数字波导。
-前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 33.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item><item><title>EP34: The Bessel Secret of the DX7 — FM Synthesis Mathematics</title><link>https://amath390.sibeliusp.com/episodes/ep34/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep34/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
-本集探讨：Bessel旁频展开J_n(I), Carson带宽公式, 算子反馈分岔。
-前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 34.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item><item><title>EP35: The Phase Vocoder — Mathematics of Pitch Shifting</title><link>https://amath390.sibeliusp.com/episodes/ep35/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep35/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
-本集探讨：STFT相位展开, COLA条件, 重叠相加, 音高移位。
-前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 35.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item><item><title>EP36: Quanta of Sound — Gabor and the Uncertainty Principle</title><link>https://amath390.sibeliusp.com/episodes/ep36/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep36/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
-本集探讨：Heisenberg-Gabor σ_t·σ_f≥1/(4π), Gabor原子, Balian-Low定理。
-前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 36.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item><item><title>EP37: Your EQ Moves Poles — Biquad Filters</title><link>https://amath390.sibeliusp.com/episodes/ep37/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep37/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
-本集探讨：双二阶H(z), 双线性变换, 极零点迁移。
-前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 37.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item><item><title>EP38: Reverberation Is Matrix Multiplication</title><link>https://amath390.sibeliusp.com/episodes/ep38/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep38/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
-本集探讨：卷积混响, FDN反馈矩阵, Hadamard正交性, 互质延迟。
-前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 38.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item><item><title>EP39: How Spotify Knows You Are Too Loud — The LUFS Algorithm</title><link>https://amath390.sibeliusp.com/episodes/ep39/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep39/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
-本集探讨：ITU-R BS.1770 K加权双二阶, 双门限, 真峰值。
-前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 39.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item><item><title>EP40: What MP3 Deletes — Psychoacoustics and MDCT</title><link>https://amath390.sibeliusp.com/episodes/ep40/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep40/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
-本集探讨：心理声学掩蔽(Bark尺度), MDCT核, TDAC定理, Huffman编码。
-前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 40.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item><item><title>EP41: The Mathematics of Source Separation — NMF to Demucs</title><link>https://amath390.sibeliusp.com/episodes/ep41/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep41/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
-本集探讨：NMF V≈WH乘法更新规则, Wiener掩模MMSE最优性, U-Net, HTDemucs, SDR指标。
-前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 41.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item><item><title>EP42: Chord Recognition — From Chroma Vectors to Viterbi Decoding</title><link>https://amath390.sibeliusp.com/episodes/ep42/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep42/</guid><description>概述 你播放一首歌，App 在零点一秒内报出和弦名。这不是凭感觉猜测，也不是查数据库。 背后是一个隐马尔可夫模型（Hidden Markov Model, HMM），和一个格形图上的最短路径算法（Viterbi）。
-本集从信号处理（STFT 色度向量）出发，经过模板匹配，建立 HMM 的三要素， 最终用 Viterbi 动态规划在 时间内精确解码最优和弦序列。
-前置知识 STFT 与相位声码器（EP35） — 短时傅里叶变换 全音程列与 （EP04） — 十二音类循环群结构 马尔可夫链与 AI 作曲（EP21） — 离散 Markov 链 人声分离（EP41） — 上游信号分离流程 定义 Definition 42.1 (色度特征向量) 设音频帧的短时傅里叶变换幅度谱为 ，。 色度向量 的第 分量（）定义为
-其中 ， 为第 个频率箱的中心频率， 为参考频率（通常取 C0 = 16.35 Hz）。
-色度向量将所有八度的能量折叠到 上， 实现八度等价： 汇聚了 C4、C5、C6 等所有八度上音名为 的能量。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>集数索引 on AMATH 390 数学与音乐</title><link>https://amath390.sibeliusp.com/episodes/</link><description>Recent content in 集数索引 on AMATH 390 数学与音乐</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://amath390.sibeliusp.com/episodes/index.xml" rel="self" type="application/rss+xml"/><item><title>EP01: Chord Space and the Torus</title><link>https://amath390.sibeliusp.com/episodes/ep01/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep01/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>If I told you that moving from a C major chord to an A minor chord takes exactly one step in a certain geometric space — and that this space has the shape of a donut — would you believe it?&lt;/p>
+&lt;p>This episode develops the mathematical backbone of &lt;strong>Neo-Riemannian theory&lt;/strong>: three involutory chord transformations (P, L, R) that generate a dihedral group acting on 24 major/minor triads, a torus-shaped visualization called the &lt;strong>Tonnetz&lt;/strong>, and Dmitri Tymoczko&amp;rsquo;s general theory of &lt;strong>voice-leading orbifolds&lt;/strong>.&lt;/p></description></item><item><title>EP02: String Vibration and the Wave Equation</title><link>https://amath390.sibeliusp.com/episodes/ep02/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep02/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>When you pluck a guitar string, why does it produce a rich spectrum of overtones rather than a single pure tone? The answer lies in a second-order partial differential equation derived by d&amp;rsquo;Alembert in 1747 and the separation-of-variables technique that Fourier refined in the early 19th century.&lt;/p>
+&lt;p>This episode derives the &lt;strong>1D wave equation&lt;/strong> from Newton&amp;rsquo;s second law, establishes &lt;strong>d&amp;rsquo;Alembert&amp;rsquo;s general solution&lt;/strong> as a superposition of traveling waves, and then reframes everything as &lt;strong>Fourier series&lt;/strong> — infinite sums of standing-wave modes whose frequencies form the integer harmonic series &lt;span class="math-inline" data-latex="f_1, 2f_1, 3f_1, \ldots">&lt;/span>&lt;/p></description></item><item><title>EP03: Bach and Graph Connectivity</title><link>https://amath390.sibeliusp.com/episodes/ep03/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep03/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Bach&amp;rsquo;s Fugue in C Major (BWV 846) has four independent voices: soprano, alto, tenor, bass. Delete any one of them and the remaining three still form a coherent harmonic structure. Why? The mathematical answer is &lt;strong>graph connectivity&lt;/strong>: the voice-structure of polyphonic music forms a &lt;em>2-connected&lt;/em> graph with no cut vertices, while homophonic music (melody + accompaniment) is at best 1-connected, with the melody as a potential cut vertex.&lt;/p>
+&lt;p>This episode develops the theory of graph connectivity — cut vertices, bridges, &lt;span class="math-inline" data-latex="k">&lt;/span>-connectivity — and applies it to a Bach chorale model. We also introduce Tarjan&amp;rsquo;s linear-time algorithm for finding cut vertices via depth-first search, and sketch the topological extension using simplicial complexes and Betti numbers.&lt;/p></description></item><item><title>EP04: All-Interval Rows and ℤ₁₂</title><link>https://amath390.sibeliusp.com/episodes/ep04/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep04/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Among the &lt;span class="math-inline" data-latex="12! = 479{,}001{,}600">&lt;/span> (nearly half a billion) permutations of the 12 chromatic pitch classes, exactly &lt;strong>1928&lt;/strong> have the property that their 11 consecutive intervals are all distinct — covering every interval from 1 to 11 semitones exactly once. These are the &lt;strong>all-interval rows&lt;/strong>.&lt;/p>
+&lt;p>This episode builds the algebraic infrastructure to understand why: &lt;span class="math-inline" data-latex="\mathbb{Z}_{12}">&lt;/span> as the group of pitch classes, the four row operations as the Klein four-group &lt;span class="math-inline" data-latex="V_4 = \mathbb{Z}_2 \times \mathbb{Z}_2">&lt;/span>, and the orbit-stabilizer theorem and Burnside&amp;rsquo;s lemma as tools for counting chord types under symmetry.&lt;/p></description></item><item><title>EP05: Turán's Theorem and Counterpoint</title><link>https://amath390.sibeliusp.com/episodes/ep05/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep05/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>How many simultaneous intervals can a polyphonic texture contain before forbidden structures inevitably appear? In 1941, the Hungarian mathematician Pál Turán gave a precise answer to the general question: given &lt;span class="math-inline" data-latex="n">&lt;/span> vertices and no complete subgraph &lt;span class="math-inline" data-latex="K_{r&amp;#43;1}">&lt;/span>, the maximum number of edges is achieved by a unique graph called the &lt;strong>Turán graph&lt;/strong> &lt;span class="math-inline" data-latex="T(n,r)">&lt;/span>.&lt;/p>
+&lt;p>This episode applies Turán&amp;rsquo;s theorem to Western counterpoint. Model the twelve pitch classes as vertices and &amp;ldquo;permitted simultaneous intervals&amp;rdquo; as edges. Forbidden parallels (parallel fifths, parallel octaves) and unstable intervals translate directly into forbidden cliques. Turán&amp;rsquo;s bound then governs the maximum &lt;em>polyphonic density&lt;/em> achievable under any given set of contrapuntal rules — and the historical evolution from medieval organum to Renaissance polyphony traces a path along a rising Turán bound.&lt;/p></description></item><item><title>EP06: Graph Coloring and Voice Assignment</title><link>https://amath390.sibeliusp.com/episodes/ep06/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep06/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Beethoven&amp;rsquo;s Fifth Symphony, fourth movement, deploys over twenty orchestral staves. Collapse all octave doublings, and the climax still demands more than ten distinct pitch heights simultaneously — more than two human hands can play. How do you reduce a full orchestra to a piano score without destroying the harmonic structure? And what is the &lt;em>minimum&lt;/em> number of voices absolutely required?&lt;/p>
+&lt;p>This episode answers both questions with graph coloring. Model each note as a vertex; connect two vertices when their sounding intervals overlap in time. The resulting &lt;strong>interval graph&lt;/strong> encodes all simultaneity conflicts. The &lt;strong>chromatic number&lt;/strong> &lt;span class="math-inline" data-latex="\chi(G)">&lt;/span> of this graph is the minimum number of voices (colors) needed so that no two simultaneously-sounding notes share a voice. The &lt;strong>Perfect Graph Theorem&lt;/strong> (Lovász, 1972) guarantees that for interval graphs &lt;span class="math-inline" data-latex="\chi = \omega">&lt;/span> — the chromatic number equals the clique number, i.e., the maximum number of notes sounding at once. A single greedy pass along the time axis achieves this bound in linear time.&lt;/p></description></item><item><title>EP07: Information Entropy and All-Interval Rows</title><link>https://amath390.sibeliusp.com/episodes/ep07/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep07/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>A listener hears two melodies and judges the second as &amp;ldquo;more chaotic.&amp;rdquo; But when you measure the distribution of adjacent intervals, the second melody is mathematically &lt;em>more uniform&lt;/em> — its Shannon entropy is higher, not lower. The discomfort comes not from disorder but from the absence of the familiar concentrated pattern that tonal music trains the brain to expect.&lt;/p>
+&lt;p>This episode builds Shannon&amp;rsquo;s entropy from first principles and applies it to music. The central object is the &lt;strong>all-interval row&lt;/strong> on &lt;span class="math-inline" data-latex="\mathbb{Z}_{12}">&lt;/span>: a 12-tone sequence whose 11 adjacent intervals hit every value in &lt;span class="math-inline" data-latex="\{1,\ldots,11\}">&lt;/span> exactly once. This uniform distribution achieves the theoretical entropy maximum &lt;span class="math-inline" data-latex="H = \log_2 11 \approx 3.46">&lt;/span> bits. In contrast, a Bach prelude&amp;rsquo;s interval distribution concentrates on steps and thirds, yielding &lt;span class="math-inline" data-latex="H \approx 3.1">&lt;/span> bits.&lt;/p></description></item><item><title>EP08: Shepard Tones and the Tritone Paradox</title><link>https://amath390.sibeliusp.com/episodes/ep08/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep08/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>A tone rises through twelve semitones. Then it rises again. It has been rising for thirty seconds and is at exactly the same pitch it started on.&lt;/p>
+&lt;p>This is not an acoustic trick — it is a topological fact. Roger Shepard&amp;rsquo;s 1964 construction exploits the two-dimensional structure of human pitch perception: every pitch has a &lt;strong>chroma&lt;/strong> (position on a circle, &lt;span class="math-inline" data-latex="\mathbb{Z}_{12}">&lt;/span>) and a &lt;strong>height&lt;/strong> (octave number, &lt;span class="math-inline" data-latex="\mathbb{R}">&lt;/span>). Pitch lives on a helix &lt;span class="math-inline" data-latex="S^1 \times \mathbb{R}">&lt;/span>. By smearing the spectral energy uniformly across octaves with a bell-shaped envelope, Shepard erases the height coordinate, leaving only the chroma circle &lt;span class="math-inline" data-latex="S^1 \cong \mathbb{R}/12\mathbb{Z}">&lt;/span>.&lt;/p></description></item><item><title>EP09: Combination Tones and Nonlinear Acoustics</title><link>https://amath390.sibeliusp.com/episodes/ep09/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep09/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Play two pure tones — 200 Hz and 300 Hz. The spectrum shows exactly two lines. Yet some listeners perceive a faint 100 Hz drone that is not present in the air at all. It is manufactured inside the cochlea.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>中文:&lt;/em> &amp;ldquo;这个100赫兹不存在于空气中。它是你的耳蜗制造出来的。那它从哪来的？&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>This episode answers that question through the mathematics of nonlinear systems. A linear system passes both frequencies through unchanged. But the cochlea&amp;rsquo;s outer hair cells act as nonlinear amplifiers: their response curve is an S-shaped tanh function, not a straight line. When you expand a nonlinear response &lt;span class="math-inline" data-latex="y = x &amp;#43; \varepsilon x^2 &amp;#43; \delta x^3 &amp;#43; \cdots">&lt;/span> around a two-tone input, algebra forces new frequencies into existence. These are the &lt;strong>combination tones&lt;/strong> — &lt;span class="math-inline" data-latex="mf_1 \pm nf_2">&lt;/span> for all non-negative integers &lt;span class="math-inline" data-latex="m, n">&lt;/span>.&lt;/p></description></item><item><title>EP10: Negative Harmony and the Dihedral Group D₁₂</title><link>https://amath390.sibeliusp.com/episodes/ep10/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep10/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>The perfect authentic cadence — dominant seventh to tonic — has been the gravitational engine of Western tonal music for four centuries. It pulls inward: the leading tone &lt;span class="math-inline" data-latex="B">&lt;/span> rises to &lt;span class="math-inline" data-latex="C">&lt;/span>, the tritone &lt;span class="math-inline" data-latex="B">&lt;/span>–&lt;span class="math-inline" data-latex="F">&lt;/span> contracts, the bass falls a fifth.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>中文:&lt;/em> &amp;ldquo;但是，如果我告诉你，它有一个&amp;rsquo;镜像版本&amp;rsquo;——同样平滑，同样到达，但引力方向完全相反——你会相信吗？&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>This mirror version is &lt;strong>negative harmony&lt;/strong>: a reflection of the chromatic circle that preserves every voice-leading distance while reversing every harmonic direction. The operation is not a curiosity — it is one of the 12 reflections in the &lt;strong>dihedral group&lt;/strong> &lt;span class="math-inline" data-latex="D_{12}">&lt;/span>, the full symmetry group of the regular 12-gon. Western tonal harmony has systematically explored the 12 rotations (transpositions) of &lt;span class="math-inline" data-latex="D_{12}">&lt;/span> while largely leaving the 12 reflections unexplored.&lt;/p></description></item><item><title>EP11: Comma Drift and the Impossibility of Perfect Tuning</title><link>https://amath390.sibeliusp.com/episodes/ep11/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep11/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Jacob Collier calls the piano&amp;rsquo;s major third a &amp;ldquo;cheat.&amp;rdquo; He is right, in a precise mathematical sense: the equal-tempered major third is 14 cents wider than the just major third. And the reason this discrepancy can never be eliminated — not by any tuning system, however ingeniously constructed — is a theorem in number theory.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>中文:&lt;/em> &amp;ldquo;Jacob说，钢琴的大三度比纯律高了14音分——他把这叫做骗局。他选择用耳朵去调律，追求纯律的融合。但这个选择有代价：调性会漂移。这集，我们从数学角度解释：为什么纯净必然导致漂移？因为三个素数，永不相交。&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>The core result is that &lt;span class="math-inline" data-latex="\log_2 3">&lt;/span> is irrational — no power of a perfect fifth (3:2) equals any power of an octave (2:1). This means the &amp;ldquo;spiral of fifths&amp;rdquo; never closes into a circle. Every tuning system is a choice about which aspect of acoustic purity to sacrifice. 12-tone equal temperament chooses to sacrifice a little from every interval equally. Jacob Collier chooses to sacrifice transposability in order to keep pure intervals — and accepts that his pitch center drifts by 14 cents with each just major third progression.&lt;/p></description></item><item><title>EP12: The Circle of Fifths as a Folded Spiral</title><link>https://amath390.sibeliusp.com/episodes/ep12/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep12/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Jacob Collier&amp;rsquo;s &amp;ldquo;Super Ultra Hyper Mega Meta Lydian&amp;rdquo; is not just a joke. It describes a real mathematical structure: an infinite chain of Lydian tetrachords ascending the circle of fifths, never stopping, never repeating. But on a piano — which uses 12-TET — the spiral is forced into a circle, and after 12 steps you return to the same key.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>中文:&lt;/em> &amp;ldquo;圆是钢琴的近似。螺旋是数学的真实。SUM的永不停步，恰好映射了这条螺旋。&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>The key mathematical fact is &lt;span class="math-inline" data-latex="\gcd(7, 12) = 1">&lt;/span>: the interval of a fifth (7 semitones) generates the entire group &lt;span class="math-inline" data-latex="\mathbb{Z}_{12}">&lt;/span> because 7 and 12 are coprime. This is why the circle of fifths visits all 12 pitch classes before returning. Any step size &lt;span class="math-inline" data-latex="k">&lt;/span> with &lt;span class="math-inline" data-latex="\gcd(k, 12) &amp;gt; 1">&lt;/span> would only visit a proper subgroup of pitch classes — a smaller cycle, not the full circle.&lt;/p></description></item><item><title>EP13: Polyrhythm and Rhythm-Pitch Duality</title><link>https://amath390.sibeliusp.com/episodes/ep13/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep13/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>This is Episode 4 of 4 in the Jacob Collier series — the finale of the &lt;span class="math-inline" data-latex="\mathbb{Z}_{12}">&lt;/span> arc.&lt;/p>
+&lt;p>Jacob Collier&amp;rsquo;s mastery of both rhythm and harmony looks like two separate gifts. This episode argues it is one: the ability to perceive integer ratios across all time scales. A polyrhythm of &lt;span class="math-inline" data-latex="2:3">&lt;/span> and a perfect fifth are mathematically identical — the ratio &lt;span class="math-inline" data-latex="2:3">&lt;/span> — separated only by a perceptual threshold near 20 Hz.&lt;/p></description></item><item><title>EP14: Tonnetz Hodge Duality</title><link>https://amath390.sibeliusp.com/episodes/ep14/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep14/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>The Tonnetz — Euler&amp;rsquo;s 1739 interval lattice, rediscovered by neo-Riemannian theorists — is not merely a picture of chord relationships. It is a &lt;strong>simplicial complex triangulating a torus&lt;/strong>, and every chord progression on it is a cochain that decomposes, uniquely and orthogonally, into three mathematically distinct components.&lt;/p>
+&lt;p>This episode applies &lt;strong>discrete Hodge theory&lt;/strong> (Eckmann 1944; Lim 2020) to the Tonnetz. The central result:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>Any 1-cochain on the Tonnetz torus decomposes as:&lt;/em>
+&lt;span class="math-display" data-latex="\omega = \omega_{\text{exact}} \;&amp;#43;\; \omega_{\text{coexact}} \;&amp;#43;\; \omega_{\text{harmonic}}">&lt;/span>
+&lt;em>where the three summands are pairwise orthogonal and uniquely determined.&lt;/em>&lt;/p></description></item><item><title>EP15: Opera Acoustics and the Singer's Formant</title><link>https://amath390.sibeliusp.com/episodes/ep15/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep15/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>An opera singer has no microphone. A single voice must cut through 110 orchestral instruments in a live hall. This episode asks: how?&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>中文:&lt;/em> &amp;ldquo;答案藏在——3000赫兹。乐队能量在这里暴跌18分贝。这是歌手唯一的窗口——或者被淹没，或者穿透。&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>The answer is not louder singing. It is &lt;strong>frequency targeting&lt;/strong>: the singer concentrates acoustic energy precisely where the orchestra is weakest, where the human ear is most sensitive, and where the physics of the vocal tract allows a structural resonance enhancement.&lt;/p>
+&lt;p>This episode develops a three-layer quantitative model:&lt;/p></description></item><item><title>EP16: Rossini's Code — Budden, Gossett, and the Convention System</title><link>https://amath390.sibeliusp.com/episodes/ep16/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep16/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Thirty-four operas in thirteen years. An average of one every five months — while his contemporaries typically took two to three years per opera. Rossini was not merely talented; he had discovered a &lt;strong>system&lt;/strong>.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>中文:&lt;/em> &amp;ldquo;罗西尼不是天才，他找到了一套方法。这期我们来拆解 Budden 所说的罗西尼法典。&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>This episode is primarily &lt;strong>musicology&lt;/strong>, with math appearing only as a toolbox at the end. The core story belongs to two scholars: the musicologist Julian Budden, who named the system &amp;ldquo;Code Rossini&amp;rdquo; (deliberately evoking the Code Napoléon), and Philip Gossett, who analyzed it as a &lt;strong>convention framework&lt;/strong> — a set of shared dramatic expectations between composer and audience.&lt;/p></description></item><item><title>EP17: Leitmotif Networks — Wagner's Ring Cycle</title><link>https://amath390.sibeliusp.com/episodes/ep17/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep17/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>You have heard this melody before. But in the &lt;em>Ring&lt;/em> cycle&amp;rsquo;s sixteen hours, it returns in dozens of different forms — transposed, inverted, reversed, fragmented. Scholars have catalogued over a hundred such motifs. Wagner did not write melodies — he wrote an &lt;strong>operating system&lt;/strong>.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>中文:&lt;/em> &amp;ldquo;瓦格纳没有写旋律——他写了一个操作系统。这期我们来拆解这个系统的网络结构。&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>This episode analyzes Wagner&amp;rsquo;s leitmotif system through three mathematical lenses:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>Abstract algebra&lt;/strong>: The four basic motivic transformations — original, retrograde, inversion, retrograde-inversion — form the &lt;strong>Klein four-group&lt;/strong> &lt;span class="math-inline" data-latex="V_4 \cong \mathbb{Z}_2 \times \mathbb{Z}_2">&lt;/span>, the same algebraic structure we encountered in 
+
+
+
+&lt;a href="https://amath390.sibeliusp.com/episodes/ep04/" class="episode-ref-link">EP04&lt;/a>
+
+&amp;rsquo;s analysis of Schoenberg&amp;rsquo;s twelve-tone rows.&lt;/p></description></item><item><title>EP18: Game Theory in Operatic Duets</title><link>https://amath390.sibeliusp.com/episodes/ep18/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep18/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Four operas. Four game-theoretic frameworks. This episode treats operatic duets as strategic interactions and asks: can the mathematical machinery of game theory &amp;mdash; payoff matrices, equilibrium concepts, information structures &amp;mdash; explain why characters make the choices they do?&lt;/p>
+&lt;p>We begin with Bizet&amp;rsquo;s &lt;em>Carmen&lt;/em> (1875), where the final confrontation between Carmen and Don Jose is modeled as a two-player non-cooperative game solved by backward induction. Mozart&amp;rsquo;s &lt;em>Don Giovanni&lt;/em> (1787) introduces incomplete information: Giovanni persuades Zerlina through repeated signaling, and her decision follows Bayesian updating. Xenakis&amp;rsquo;s &lt;em>Duel&lt;/em> (1959) is the most literal case &amp;mdash; a zero-sum matrix game written directly into the score, governed by the von Neumann minimax theorem. Finally, Zorn&amp;rsquo;s &lt;em>Cobra&lt;/em> (1984) embodies the folk theorem: cooperation emerging from repeated interaction and reputation.&lt;/p></description></item><item><title>EP19: Vibrato as FM Synthesis</title><link>https://amath390.sibeliusp.com/episodes/ep19/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep19/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>A pure A4 (440 Hz) and a gently trembling A4. The strange thing is — the trembling one sounds more stable, more vivid.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>中文:&lt;/em> &amp;ldquo;这就是颤音，vibrato。每个歌剧歌手都在用它，但很少有人意识到，它背后的数学和雅马哈 DX7 合成器完全一样。&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>Vibrato is periodic modulation of the carrier frequency — one sine wave nested inside another. On the surface, only one pitch is wobbling. But the Jacobi-Anger expansion reveals a hidden spectral structure: symmetric sidebands appear on both sides of the carrier, each with amplitude governed by the Bessel function &lt;span class="math-inline" data-latex="J_n(\beta)">&lt;/span>. As the modulation index &lt;span class="math-inline" data-latex="\beta">&lt;/span> grows from small to large, the sound evolves from vibrato into an entirely new timbre — a discovery John Chowning made at Stanford in 1967, which gave birth to the DX7 synthesizer and the sound of an entire decade.&lt;/p></description></item><item><title>EP20: Character Interaction Networks in Opera</title><link>https://amath390.sibeliusp.com/episodes/ep20/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep20/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;blockquote>
+&lt;p>&lt;em>中文:&lt;/em> &amp;ldquo;瓦格纳的《指环》四联剧，三十四个角色。谁最重要？直觉会说沃坦，因为他认识最多人。但如果看图论，答案未必是王，而可能是桥。&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>When Wagner&amp;rsquo;s &lt;em>Ring&lt;/em> cycle is encoded as a graph &amp;mdash; 34 characters as vertices, direct interactions as edges &amp;mdash; the question &amp;ldquo;who is the most important character?&amp;rdquo; becomes a question about &lt;strong>centrality measures&lt;/strong> on finite graphs. Degree centrality identifies the most visible node (Wotan), but betweenness centrality identifies the most structurally indispensable one (Loge), and cut-vertex analysis reveals whose removal shatters the network entirely. These are distinct mathematical concepts with distinct dramaturgical consequences.&lt;/p></description></item><item><title>EP21: From Markov to Diffusion — Sixty Years of AI Composition</title><link>https://amath390.sibeliusp.com/episodes/ep21/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep21/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Three mathematical frameworks have dominated algorithmic music composition over sixty years: &lt;strong>Markov chains&lt;/strong> (1957), &lt;strong>Transformer attention&lt;/strong> (2017), and &lt;strong>diffusion models&lt;/strong> (2020). Each replaces its predecessor not by discarding the core idea — sampling from a learned probability distribution over musical events — but by changing &lt;em>which&lt;/em> probability distribution and &lt;em>how&lt;/em> it is parameterized.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>中文:&lt;/em> &amp;ldquo;它们在解同一个数学问题。这个问题的答案，七十年里只换了三次。从骰子，到注意力，到噪声。&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>This companion page formalizes the mathematics the video sketches: transition matrices on &lt;span class="math-inline" data-latex="\mathbb{Z}_{12}">&lt;/span>, the softmax attention mechanism as a content-dependent stochastic matrix, and the DDPM forward/reverse processes with score matching.&lt;/p></description></item><item><title>EP22: How AI Writes Music — EnCodec and RVQ</title><link>https://amath390.sibeliusp.com/episodes/ep22/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep22/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;blockquote>
+&lt;p>&lt;em>中文:&lt;/em> &amp;ldquo;你在AI音乐工具里打了一行字：&amp;lsquo;一首中国风钢琴曲&amp;rsquo;。十秒后，一段旋律流了出来。这十秒钟里，数据到底经历了什么？&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>This episode traces the complete data pipeline of a text-to-music system, from the moment you type a text prompt to the moment audio emerges from the speaker. We follow two parallel architectures:&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>MusicGen&lt;/strong> (Meta, 2023): text &lt;span class="math-inline" data-latex="\to">&lt;/span> T5 encoder &lt;span class="math-inline" data-latex="\to">&lt;/span> Transformer with delay pattern &lt;span class="math-inline" data-latex="\to">&lt;/span> discrete tokens &lt;span class="math-inline" data-latex="\to">&lt;/span> RVQ decode &lt;span class="math-inline" data-latex="\to">&lt;/span> EnCodec decoder &lt;span class="math-inline" data-latex="\to">&lt;/span> waveform.&lt;/li>
+&lt;li>&lt;strong>ACE-Step&lt;/strong> (2024): text &lt;span class="math-inline" data-latex="\to">&lt;/span> T5 encoder &lt;span class="math-inline" data-latex="\to">&lt;/span> DiT diffusion in continuous latent space &lt;span class="math-inline" data-latex="\to">&lt;/span> DCAE decoder &lt;span class="math-inline" data-latex="\to">&lt;/span> vocoder &lt;span class="math-inline" data-latex="\to">&lt;/span> waveform.&lt;/li>
+&lt;/ol>
+&lt;p>The mathematical core: how to compress audio into a small discrete alphabet (EnCodec + RVQ), how to generate sequences from that alphabet conditioned on text (cross-attention + delay pattern), and how diffusion offers a continuous alternative (DiT + classifier-free guidance).&lt;/p></description></item><item><title>EP23: Can AI Understand Music? Latent Space and Information Bottleneck</title><link>https://amath390.sibeliusp.com/episodes/ep23/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep23/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;blockquote>
+&lt;p>&lt;em>中文:&lt;/em> &amp;ldquo;数学能量出形状，量不出意义。&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>The previous episode (
+
+
+
+&lt;a href="https://amath390.sibeliusp.com/episodes/ep22/" class="episode-ref-link">EP22&lt;/a>
+
+) showed how EnCodec compresses audio into a discrete codebook of 2048 vectors in &lt;span class="math-inline" data-latex="\mathbb{R}^{128}">&lt;/span>. This episode asks the next question: &lt;strong>what did the model learn to encode?&lt;/strong> Tonal structure? Rhythmic patterns? Something humans cannot name?&lt;/p>
+&lt;p>We develop three mathematical frameworks to answer this:&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>t-SNE&lt;/strong> reduces the 128-dimensional codebook to a 2D map, revealing that codewords cluster by musical key &amp;mdash; without any supervision.&lt;/li>
+&lt;li>&lt;strong>Linear probes&lt;/strong> formalize the notion of &amp;ldquo;linearly decodable information&amp;rdquo; in learned representations.&lt;/li>
+&lt;li>&lt;strong>Information Bottleneck theory&lt;/strong> explains &lt;em>why&lt;/em> a model forced to compress discovers musically meaningful structure: it must discard irrelevant detail while preserving predictive content.&lt;/li>
+&lt;/ol>
+&lt;p>The episode closes with Adam Neely&amp;rsquo;s challenge: even if the geometry is real, &lt;strong>structure is not meaning&lt;/strong>. Jazz cannot be interpolated from blues and ragtime, and individually generated music cannot replace communal listening. The central thesis:&lt;/p></description></item><item><title>EP24: The Information Code of Pop Music</title><link>https://amath390.sibeliusp.com/episodes/ep24/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep24/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>A four-bar pop chorus can loop inside your head all day. Not Beethoven, not Coltrane — the mathematically &lt;em>least surprising&lt;/em> thing in music. In 
+
+
+
+&lt;a href="https://amath390.sibeliusp.com/episodes/ep07/" class="episode-ref-link">EP07&lt;/a>
+
+ we defined entropy as average surprise; a chorus has low entropy. So why can&amp;rsquo;t you shake it?&lt;/p>
+&lt;p>The answer involves three interlocking information-theoretic clues. First, the chorus is &lt;em>compressible&lt;/em>: your brain can re-describe it as a handful of splice-able fragments, so a single fragment auto-completes the rest. Second, compressibility alone is not enough — a single repeating tone compresses to almost nothing, yet nobody wants to listen. There is an optimal &lt;em>complexity sweet spot&lt;/em> around 30–40% LZ compression ratio where listener preference peaks. Third, pop songs are not uniformly predictable; they deploy &lt;em>precise violations&lt;/em> — sharply elevated surprisal values at strategic moments (the chorus entry, a key change, the climactic note) — while remaining flat elsewhere.&lt;/p></description></item><item><title>EP25: Why Music Gives You Goosebumps — Prediction Error and Frisson</title><link>https://amath390.sibeliusp.com/episodes/ep25/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep25/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>方大同&amp;rsquo;s &lt;em>BB88&lt;/em> opens with eight bars of strings that never resolve. You know the tonic is coming — you have been waiting for it since bar two. When it finally arrives, the harmony is almost unsurprising (you predicted it). But the instrumentation is not: the strings vanish, and piano and vocals enter simultaneously. That collision between confirmed harmonic prediction and violated timbral prediction produces something measurable in the body: goosebumps, a catch in the breath, a surge that researchers call &lt;strong>frisson&lt;/strong>.&lt;/p></description></item><item><title>EP26: The 1/f Law of Music</title><link>https://amath390.sibeliusp.com/episodes/ep26/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep26/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Take Bach, Jay Chou, Taylor Swift, and a segment of random noise, and feed all four through a spectrum analyser. Three centuries of stylistic difference nearly vanish in a single graph. That is the counterintuitive fact at the centre of this episode: across wildly different genres and eras, the &lt;em>power spectral density&lt;/em> of pitch sequences tends to fall off as &lt;span class="math-inline" data-latex="S(f) \propto 1/f^\alpha">&lt;/span> with &lt;span class="math-inline" data-latex="\alpha \approx 1">&lt;/span>. It is not an iron law, but it is a statistical regularity that recurs with striking consistency.&lt;/p></description></item><item><title>EP27: Answering Viral Critics with Mathematics</title><link>https://amath390.sibeliusp.com/episodes/ep27/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep27/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>This episode closes the Pop Music × Math Arc (EP24–27) by applying the three analytical tools built across the arc to a real-world controversy: are short-video AI hooks and Suno-style generative music the same phenomenon, or fundamentally different problems wearing the same label?&lt;/p>
+&lt;p>The mathematical argument is that &lt;em>mean entropy alone is insufficient&lt;/em> to characterise a musical signal. Two distributions can share the same Shannon entropy yet differ drastically in their &lt;em>surprisal variance&lt;/em>, their melody–harmony mutual information, and the shape of their power spectral density. These three numbers — surprisal variance &lt;span class="math-inline" data-latex="\mathrm{Var}[I(X)]">&lt;/span>, mutual information &lt;span class="math-inline" data-latex="I(M;H)">&lt;/span>, and spectral exponent &lt;span class="math-inline" data-latex="\alpha">&lt;/span> — form a &amp;ldquo;fingerprint&amp;rdquo; that separates human pop, human classical, early AI output, and pure random melody in a way that a single entropy number cannot.&lt;/p></description></item><item><title>EP28: Your Microphone Is a Damped Oscillator</title><link>https://amath390.sibeliusp.com/episodes/ep28/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep28/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Every recording engineer knows that swapping a microphone changes the sound — but why? The answer is not marketing, not mystique, and not simply &amp;ldquo;expensive = better.&amp;rdquo; It is a second-order ordinary differential equation. The thin membrane inside any microphone is a &lt;strong>damped harmonic oscillator&lt;/strong>: an elastic restoring force pulls it back, an inertial mass resists acceleration, and air damping bleeds away energy. These three forces combine into a single ODE whose solution determines everything you hear.&lt;/p></description></item><item><title>EP29: Primes in the Studio — Standing Waves and QRD Diffusers</title><link>https://amath390.sibeliusp.com/episodes/ep29/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep29/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>The wooden slots on the back wall of a professional recording studio — varying depths 0, 8.5, 34, 17, 17, 34, 8.5 mm — are not decorative. They are a number-theoretic construction dating to Manfred Schroeder&amp;rsquo;s 1979 paper: a &lt;strong>Quadratic Residue Diffuser (QRD)&lt;/strong>. Its slot depths are proportional to &lt;span class="math-inline" data-latex="n^2 \bmod p">&lt;/span> for a prime &lt;span class="math-inline" data-latex="p">&lt;/span>, and its design guarantee is that the discrete Fourier transform of the resulting phase sequence has perfectly flat magnitude — an assertion that reduces to the Gauss sum &lt;span class="math-inline" data-latex="|\sum_{n=0}^{p-1} e^{2\pi i n^2/p}| = \sqrt{p}">&lt;/span>.&lt;/p></description></item><item><title>EP30: The Sampling Theorem Is Not What You Think</title><link>https://amath390.sibeliusp.com/episodes/ep30/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep30/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>&amp;ldquo;Digital audio is a staircase waveform — the signal between sample points is guessed, so digital is less natural than analog.&amp;rdquo; This claim is widespread, yet it fundamentally misunderstands the mathematics of signal reconstruction. The Nyquist-Shannon sampling theorem tells us: if a signal is bandlimited, its original continuous waveform can be &lt;strong>perfectly&lt;/strong> reconstructed from uniformly spaced discrete samples alone — not approximately, but exactly. The key to reconstruction is the sinc function, which fills in between discrete samples not with guesses, but with values uniquely determined by those samples.&lt;/p></description></item><item><title>EP31: The Warmth of Moog Has an Equation</title><link>https://amath390.sibeliusp.com/episodes/ep31/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep31/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Analog synthesizers and digital synthesizers sound &amp;ldquo;just different&amp;rdquo; — this perception is so widespread that it has spawned an entire mythology of &amp;ldquo;analog warmth.&amp;rdquo;
+But &amp;ldquo;warmth&amp;rdquo; is not mysticism: it is a concrete spectral fingerprint, composed of a specific distribution of &lt;strong>odd harmonics&lt;/strong>,
+and the physical mechanism that produces this distribution is the odd-function property of the hyperbolic tangent &lt;span class="math-inline" data-latex="\tanh(x)">&lt;/span>.&lt;/p>
+&lt;p>Bob Moog&amp;rsquo;s 1965 patent filter contains two mathematical cores: four cascaded RC low-pass stages, giving a steep −24 dB/octave cutoff;
+and a feedback path from output to input, which creates resonance as the Barkhausen criterion (&lt;span class="math-inline" data-latex="k = 4">&lt;/span>) is approached, reaching a critical point where the entire filter self-oscillates as a sinusoidal oscillator.
+These two mechanisms, combined with the soft clipping nonlinearity of transistors (tanh soft limiting), together constitute the so-called &amp;ldquo;Moog sound.&amp;rdquo;&lt;/p></description></item><item><title>EP32: Chebyshev Waveshaping — Buchla and West Coast Synthesis</title><link>https://amath390.sibeliusp.com/episodes/ep32/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep32/</guid><description>&lt;h2 id="概述">概述&lt;/h2>
+&lt;p>&lt;em>本页内容正在撰写中。请先观看&lt;a href="#">小红书视频&lt;/a>了解核心概念。&lt;/em>&lt;/p>
+&lt;p>本集探讨：Chebyshev多项式T_n, 波形整形, 谐波控制。&lt;/p>
+&lt;h2 id="前置知识">前置知识&lt;/h2>
+&lt;!-- cross-refs partial handles callback links -->
+&lt;h2 id="定义">定义&lt;/h2>
+&lt;!-- 
+
+&lt;div class="definition-block" id="definition">
+ &lt;div class="block-label">
+ Definition (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="主要定理">主要定理&lt;/h2>
+&lt;!-- 
+
+&lt;div class="theorem-block" id="theorem-32.1">
+ &lt;div class="block-label">
+ Theorem 32.1 (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;!-- &lt;div class="proof-block">
+ &lt;div class="block-label">Proof.&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="音乐联系">音乐联系&lt;/h2>
+&lt;!-- &lt;div class="music-block">
+ &lt;div class="block-label">音乐联系&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="局限性与开放问题">局限性与开放问题&lt;/h2>
+&lt;h2 id="参考文献">参考文献&lt;/h2>
+&lt;ol>
+&lt;li>&lt;em>待补充&lt;/em>&lt;/li>
+&lt;/ol></description></item><item><title>EP33: One Delay Line, One String — Physical Modeling</title><link>https://amath390.sibeliusp.com/episodes/ep33/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep33/</guid><description>&lt;h2 id="概述">概述&lt;/h2>
+&lt;p>&lt;em>本页内容正在撰写中。请先观看&lt;a href="#">小红书视频&lt;/a>了解核心概念。&lt;/em>&lt;/p>
+&lt;p>本集探讨：Karplus-Strong, d&amp;rsquo;Alembert行波, 数字波导。&lt;/p>
+&lt;h2 id="前置知识">前置知识&lt;/h2>
+&lt;!-- cross-refs partial handles callback links -->
+&lt;h2 id="定义">定义&lt;/h2>
+&lt;!-- 
+
+&lt;div class="definition-block" id="definition">
+ &lt;div class="block-label">
+ Definition (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="主要定理">主要定理&lt;/h2>
+&lt;!-- 
+
+&lt;div class="theorem-block" id="theorem-33.1">
+ &lt;div class="block-label">
+ Theorem 33.1 (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;!-- &lt;div class="proof-block">
+ &lt;div class="block-label">Proof.&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="音乐联系">音乐联系&lt;/h2>
+&lt;!-- &lt;div class="music-block">
+ &lt;div class="block-label">音乐联系&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="局限性与开放问题">局限性与开放问题&lt;/h2>
+&lt;h2 id="参考文献">参考文献&lt;/h2>
+&lt;ol>
+&lt;li>&lt;em>待补充&lt;/em>&lt;/li>
+&lt;/ol></description></item><item><title>EP34: The Bessel Secret of the DX7 — FM Synthesis Mathematics</title><link>https://amath390.sibeliusp.com/episodes/ep34/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep34/</guid><description>&lt;h2 id="概述">概述&lt;/h2>
+&lt;p>&lt;em>本页内容正在撰写中。请先观看&lt;a href="#">小红书视频&lt;/a>了解核心概念。&lt;/em>&lt;/p>
+&lt;p>本集探讨：Bessel旁频展开J_n(I), Carson带宽公式, 算子反馈分岔。&lt;/p>
+&lt;h2 id="前置知识">前置知识&lt;/h2>
+&lt;!-- cross-refs partial handles callback links -->
+&lt;h2 id="定义">定义&lt;/h2>
+&lt;!-- 
+
+&lt;div class="definition-block" id="definition">
+ &lt;div class="block-label">
+ Definition (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="主要定理">主要定理&lt;/h2>
+&lt;!-- 
+
+&lt;div class="theorem-block" id="theorem-34.1">
+ &lt;div class="block-label">
+ Theorem 34.1 (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;!-- &lt;div class="proof-block">
+ &lt;div class="block-label">Proof.&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="音乐联系">音乐联系&lt;/h2>
+&lt;!-- &lt;div class="music-block">
+ &lt;div class="block-label">音乐联系&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="局限性与开放问题">局限性与开放问题&lt;/h2>
+&lt;h2 id="参考文献">参考文献&lt;/h2>
+&lt;ol>
+&lt;li>&lt;em>待补充&lt;/em>&lt;/li>
+&lt;/ol></description></item><item><title>EP35: The Phase Vocoder — Mathematics of Pitch Shifting</title><link>https://amath390.sibeliusp.com/episodes/ep35/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep35/</guid><description>&lt;h2 id="概述">概述&lt;/h2>
+&lt;p>&lt;em>本页内容正在撰写中。请先观看&lt;a href="#">小红书视频&lt;/a>了解核心概念。&lt;/em>&lt;/p>
+&lt;p>本集探讨：STFT相位展开, COLA条件, 重叠相加, 音高移位。&lt;/p>
+&lt;h2 id="前置知识">前置知识&lt;/h2>
+&lt;!-- cross-refs partial handles callback links -->
+&lt;h2 id="定义">定义&lt;/h2>
+&lt;!-- 
+
+&lt;div class="definition-block" id="definition">
+ &lt;div class="block-label">
+ Definition (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="主要定理">主要定理&lt;/h2>
+&lt;!-- 
+
+&lt;div class="theorem-block" id="theorem-35.1">
+ &lt;div class="block-label">
+ Theorem 35.1 (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;!-- &lt;div class="proof-block">
+ &lt;div class="block-label">Proof.&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="音乐联系">音乐联系&lt;/h2>
+&lt;!-- &lt;div class="music-block">
+ &lt;div class="block-label">音乐联系&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="局限性与开放问题">局限性与开放问题&lt;/h2>
+&lt;h2 id="参考文献">参考文献&lt;/h2>
+&lt;ol>
+&lt;li>&lt;em>待补充&lt;/em>&lt;/li>
+&lt;/ol></description></item><item><title>EP36: Quanta of Sound — Gabor and the Uncertainty Principle</title><link>https://amath390.sibeliusp.com/episodes/ep36/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep36/</guid><description>&lt;h2 id="概述">概述&lt;/h2>
+&lt;p>&lt;em>本页内容正在撰写中。请先观看&lt;a href="#">小红书视频&lt;/a>了解核心概念。&lt;/em>&lt;/p>
+&lt;p>本集探讨：Heisenberg-Gabor σ_t·σ_f≥1/(4π), Gabor原子, Balian-Low定理。&lt;/p>
+&lt;h2 id="前置知识">前置知识&lt;/h2>
+&lt;!-- cross-refs partial handles callback links -->
+&lt;h2 id="定义">定义&lt;/h2>
+&lt;!-- 
+
+&lt;div class="definition-block" id="definition">
+ &lt;div class="block-label">
+ Definition (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="主要定理">主要定理&lt;/h2>
+&lt;!-- 
+
+&lt;div class="theorem-block" id="theorem-36.1">
+ &lt;div class="block-label">
+ Theorem 36.1 (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;!-- &lt;div class="proof-block">
+ &lt;div class="block-label">Proof.&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="音乐联系">音乐联系&lt;/h2>
+&lt;!-- &lt;div class="music-block">
+ &lt;div class="block-label">音乐联系&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="局限性与开放问题">局限性与开放问题&lt;/h2>
+&lt;h2 id="参考文献">参考文献&lt;/h2>
+&lt;ol>
+&lt;li>&lt;em>待补充&lt;/em>&lt;/li>
+&lt;/ol></description></item><item><title>EP37: Your EQ Moves Poles — Biquad Filters</title><link>https://amath390.sibeliusp.com/episodes/ep37/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep37/</guid><description>&lt;h2 id="概述">概述&lt;/h2>
+&lt;p>&lt;em>本页内容正在撰写中。请先观看&lt;a href="#">小红书视频&lt;/a>了解核心概念。&lt;/em>&lt;/p>
+&lt;p>本集探讨：双二阶H(z), 双线性变换, 极零点迁移。&lt;/p>
+&lt;h2 id="前置知识">前置知识&lt;/h2>
+&lt;!-- cross-refs partial handles callback links -->
+&lt;h2 id="定义">定义&lt;/h2>
+&lt;!-- 
+
+&lt;div class="definition-block" id="definition">
+ &lt;div class="block-label">
+ Definition (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="主要定理">主要定理&lt;/h2>
+&lt;!-- 
+
+&lt;div class="theorem-block" id="theorem-37.1">
+ &lt;div class="block-label">
+ Theorem 37.1 (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;!-- &lt;div class="proof-block">
+ &lt;div class="block-label">Proof.&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="音乐联系">音乐联系&lt;/h2>
+&lt;!-- &lt;div class="music-block">
+ &lt;div class="block-label">音乐联系&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="局限性与开放问题">局限性与开放问题&lt;/h2>
+&lt;h2 id="参考文献">参考文献&lt;/h2>
+&lt;ol>
+&lt;li>&lt;em>待补充&lt;/em>&lt;/li>
+&lt;/ol></description></item><item><title>EP38: Reverberation Is Matrix Multiplication</title><link>https://amath390.sibeliusp.com/episodes/ep38/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep38/</guid><description>&lt;h2 id="概述">概述&lt;/h2>
+&lt;p>&lt;em>本页内容正在撰写中。请先观看&lt;a href="#">小红书视频&lt;/a>了解核心概念。&lt;/em>&lt;/p>
+&lt;p>本集探讨：卷积混响, FDN反馈矩阵, Hadamard正交性, 互质延迟。&lt;/p>
+&lt;h2 id="前置知识">前置知识&lt;/h2>
+&lt;!-- cross-refs partial handles callback links -->
+&lt;h2 id="定义">定义&lt;/h2>
+&lt;!-- 
+
+&lt;div class="definition-block" id="definition">
+ &lt;div class="block-label">
+ Definition (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="主要定理">主要定理&lt;/h2>
+&lt;!-- 
+
+&lt;div class="theorem-block" id="theorem-38.1">
+ &lt;div class="block-label">
+ Theorem 38.1 (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;!-- &lt;div class="proof-block">
+ &lt;div class="block-label">Proof.&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="音乐联系">音乐联系&lt;/h2>
+&lt;!-- &lt;div class="music-block">
+ &lt;div class="block-label">音乐联系&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="局限性与开放问题">局限性与开放问题&lt;/h2>
+&lt;h2 id="参考文献">参考文献&lt;/h2>
+&lt;ol>
+&lt;li>&lt;em>待补充&lt;/em>&lt;/li>
+&lt;/ol></description></item><item><title>EP39: How Spotify Knows You Are Too Loud — The LUFS Algorithm</title><link>https://amath390.sibeliusp.com/episodes/ep39/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep39/</guid><description>&lt;h2 id="概述">概述&lt;/h2>
+&lt;p>&lt;em>本页内容正在撰写中。请先观看&lt;a href="#">小红书视频&lt;/a>了解核心概念。&lt;/em>&lt;/p>
+&lt;p>本集探讨：ITU-R BS.1770 K加权双二阶, 双门限, 真峰值。&lt;/p>
+&lt;h2 id="前置知识">前置知识&lt;/h2>
+&lt;!-- cross-refs partial handles callback links -->
+&lt;h2 id="定义">定义&lt;/h2>
+&lt;!-- 
+
+&lt;div class="definition-block" id="definition">
+ &lt;div class="block-label">
+ Definition (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="主要定理">主要定理&lt;/h2>
+&lt;!-- 
+
+&lt;div class="theorem-block" id="theorem-39.1">
+ &lt;div class="block-label">
+ Theorem 39.1 (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;!-- &lt;div class="proof-block">
+ &lt;div class="block-label">Proof.&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="音乐联系">音乐联系&lt;/h2>
+&lt;!-- &lt;div class="music-block">
+ &lt;div class="block-label">音乐联系&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="局限性与开放问题">局限性与开放问题&lt;/h2>
+&lt;h2 id="参考文献">参考文献&lt;/h2>
+&lt;ol>
+&lt;li>&lt;em>待补充&lt;/em>&lt;/li>
+&lt;/ol></description></item><item><title>EP40: What MP3 Deletes — Psychoacoustics and MDCT</title><link>https://amath390.sibeliusp.com/episodes/ep40/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep40/</guid><description>&lt;h2 id="概述">概述&lt;/h2>
+&lt;p>&lt;em>本页内容正在撰写中。请先观看&lt;a href="#">小红书视频&lt;/a>了解核心概念。&lt;/em>&lt;/p>
+&lt;p>本集探讨：心理声学掩蔽(Bark尺度), MDCT核, TDAC定理, Huffman编码。&lt;/p>
+&lt;h2 id="前置知识">前置知识&lt;/h2>
+&lt;!-- cross-refs partial handles callback links -->
+&lt;h2 id="定义">定义&lt;/h2>
+&lt;!-- 
+
+&lt;div class="definition-block" id="definition">
+ &lt;div class="block-label">
+ Definition (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="主要定理">主要定理&lt;/h2>
+&lt;!-- 
+
+&lt;div class="theorem-block" id="theorem-40.1">
+ &lt;div class="block-label">
+ Theorem 40.1 (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;!-- &lt;div class="proof-block">
+ &lt;div class="block-label">Proof.&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="音乐联系">音乐联系&lt;/h2>
+&lt;!-- &lt;div class="music-block">
+ &lt;div class="block-label">音乐联系&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="局限性与开放问题">局限性与开放问题&lt;/h2>
+&lt;h2 id="参考文献">参考文献&lt;/h2>
+&lt;ol>
+&lt;li>&lt;em>待补充&lt;/em>&lt;/li>
+&lt;/ol></description></item><item><title>EP41: The Mathematics of Source Separation — NMF to Demucs</title><link>https://amath390.sibeliusp.com/episodes/ep41/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep41/</guid><description>&lt;h2 id="概述">概述&lt;/h2>
+&lt;p>&lt;em>本页内容正在撰写中。请先观看&lt;a href="#">小红书视频&lt;/a>了解核心概念。&lt;/em>&lt;/p>
+&lt;p>本集探讨：NMF V≈WH乘法更新规则, Wiener掩模MMSE最优性, U-Net, HTDemucs, SDR指标。&lt;/p>
+&lt;h2 id="前置知识">前置知识&lt;/h2>
+&lt;!-- cross-refs partial handles callback links -->
+&lt;h2 id="定义">定义&lt;/h2>
+&lt;!-- 
+
+&lt;div class="definition-block" id="definition">
+ &lt;div class="block-label">
+ Definition (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="主要定理">主要定理&lt;/h2>
+&lt;!-- 
+
+&lt;div class="theorem-block" id="theorem-41.1">
+ &lt;div class="block-label">
+ Theorem 41.1 (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;!-- &lt;div class="proof-block">
+ &lt;div class="block-label">Proof.&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="音乐联系">音乐联系&lt;/h2>
+&lt;!-- &lt;div class="music-block">
+ &lt;div class="block-label">音乐联系&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="局限性与开放问题">局限性与开放问题&lt;/h2>
+&lt;h2 id="参考文献">参考文献&lt;/h2>
+&lt;ol>
+&lt;li>&lt;em>待补充&lt;/em>&lt;/li>
+&lt;/ol></description></item><item><title>EP42: Chord Recognition — From Chroma Vectors to Viterbi Decoding</title><link>https://amath390.sibeliusp.com/episodes/ep42/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep42/</guid><description>&lt;h2 id="概述">概述&lt;/h2>
+&lt;p>你播放一首歌，App 在零点一秒内报出和弦名。这不是凭感觉猜测，也不是查数据库。
+背后是一个&lt;strong>隐马尔可夫模型&lt;/strong>（Hidden Markov Model, HMM），和一个格形图上的&lt;strong>最短路径算法&lt;/strong>（Viterbi）。&lt;/p>
+&lt;p>本集从信号处理（STFT 色度向量）出发，经过模板匹配，建立 HMM 的三要素，
+最终用 Viterbi 动态规划在 &lt;span class="math-inline" data-latex="O(T \cdot N^2)">&lt;/span> 时间内精确解码最优和弦序列。&lt;/p>
+&lt;hr>
+&lt;h2 id="前置知识">前置知识&lt;/h2>
+&lt;ul>
+&lt;li>
+
+
+
+&lt;a href="https://amath390.sibeliusp.com/episodes/ep35/" class="episode-ref-link">STFT 与相位声码器（EP35）&lt;/a>
+
+ — 短时傅里叶变换&lt;/li>
+&lt;li>
+
+
+
+&lt;a href="https://amath390.sibeliusp.com/episodes/ep04/" class="episode-ref-link">全音程列与 &lt;span class="math-inline" data-latex="\mathbb{Z}_{12}">&lt;/span>（EP04）&lt;/a>
+
+ — 十二音类循环群结构&lt;/li>
+&lt;li>
+
+
+
+&lt;a href="https://amath390.sibeliusp.com/episodes/ep21/" class="episode-ref-link">马尔可夫链与 AI 作曲（EP21）&lt;/a>
+
+ — 离散 Markov 链&lt;/li>
+&lt;li>
+
+
+
+&lt;a href="https://amath390.sibeliusp.com/episodes/ep41/" class="episode-ref-link">人声分离（EP41）&lt;/a>
+
+ — 上游信号分离流程&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="定义">定义&lt;/h2>
+
+
+&lt;div class="definition-block" id="definition-42.1">
+ &lt;div class="block-label">
+ Definition 42.1 (色度特征向量)
+ &lt;/div>
+ &lt;div class="block-body">&lt;p>设音频帧的短时傅里叶变换幅度谱为 &lt;span class="math-inline" data-latex="|X[k]|">&lt;/span>，&lt;span class="math-inline" data-latex="k = 0, 1, \ldots, K-1">&lt;/span>。
+&lt;strong>色度向量&lt;/strong> &lt;span class="math-inline" data-latex="\mathbf{c} \in \mathbb{R}^{12}">&lt;/span> 的第 &lt;span class="math-inline" data-latex="p">&lt;/span> 分量（&lt;span class="math-inline" data-latex="p \in \mathbb{Z}_{12}">&lt;/span>）定义为&lt;/p>
+&lt;p>&lt;span class="math-display" data-latex="c_p = \sum_{\substack{k : \, \text{pitch-class}(k) = p}} |X[k]|^2">&lt;/span>&lt;/p>
+&lt;p>其中 &lt;span class="math-inline" data-latex="\text{pitch-class}(k) = \lfloor 12 \log_2(f_k / f_{\text{ref}}) \rfloor \bmod 12">&lt;/span>，&lt;span class="math-inline" data-latex="f_k">&lt;/span> 为第 &lt;span class="math-inline" data-latex="k">&lt;/span> 个频率箱的中心频率，&lt;span class="math-inline" data-latex="f_{\text{ref}}">&lt;/span> 为参考频率（通常取 C0 = 16.35 Hz）。&lt;/p></description></item></channel></rss>

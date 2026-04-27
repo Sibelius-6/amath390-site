@@ -1,446 +1,115 @@
-<!doctype html><html lang=zh-cn>
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<title>EP42: Chord Recognition — From Chroma Vectors to Viterbi Decoding | AMATH 390 数学与音乐</title>
-<meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
-<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous>
-<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script>
-<script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('[data-latex]').forEach(function(a){try{katex.render(a.getAttribute('data-latex'),a,{displayMode:a.classList.contains('math-display'),throwOnError:!1})}catch(b){console.warn('KaTeX:',b.message,a)}})})</script>
-<link rel=icon type=image/png sizes=32x32 href=/favicon-32.png>
-<link rel=icon type=image/png sizes=16x16 href=/favicon-16.png>
-<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
-<link rel=stylesheet href=/css/amath390.css>
-</head>
-<body>
-<div class=layout-wrapper>
-<nav class=sidebar>
-<div class=sidebar-header>
-<a href=/ class=sidebar-title>AMATH 390</a>
-<div class=sidebar-subtitle>数学与音乐</div>
-</div>
-<div class=arc-group>
-<div class=arc-label>数学基础篇</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link>
-<span class=ep-num>01</span>
+<!doctype html><html lang=zh-cn><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>EP42: Chord Recognition — From Chroma Vectors to Viterbi Decoding | AMATH 390 数学与音乐</title><meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music"><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script><script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("[data-latex]").forEach(function(e){try{katex.render(e.getAttribute("data-latex"),e,{displayMode:e.classList.contains("math-display"),throwOnError:!1})}catch(t){console.warn("KaTeX:",t.message,e)}})})</script><link rel=icon type=image/png sizes=32x32 href=/favicon-32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=stylesheet href=/css/amath390.css></head><body><div class=layout-wrapper><nav class=sidebar><div class=sidebar-header><a href=/ class=sidebar-title>AMATH 390</a><div class=sidebar-subtitle>数学与音乐</div></div><div class=arc-group><div class=arc-label>数学基础篇</div><a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link><span class=ep-num>01</span>
 <span class=ep-title>Chord Space and the Torus</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep02/ class=ep-link>
-<span class=ep-num>02</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep02/ class=ep-link><span class=ep-num>02</span>
 <span class=ep-title>String Vibration and the Wave Equation</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link>
-<span class=ep-num>03</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link><span class=ep-num>03</span>
 <span class=ep-title>Bach and Graph Connectivity</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link>
-<span class=ep-num>04</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link><span class=ep-num>04</span>
 <span class=ep-title>All-Interval Rows and ℤ₁₂</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link>
-<span class=ep-num>05</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link><span class=ep-num>05</span>
 <span class=ep-title>Turán's Theorem and Counterpoint</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-link>
-<span class=ep-num>06</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-link><span class=ep-num>06</span>
 <span class=ep-title>Graph Coloring and Voice Assignment</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-link>
-<span class=ep-num>07</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-link><span class=ep-num>07</span>
 <span class=ep-title>Information Entropy and All-Interval Rows</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-link>
-<span class=ep-num>08</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-link><span class=ep-num>08</span>
 <span class=ep-title>Shepard Tones and the Tritone Paradox</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link>
-<span class=ep-num>09</span>
-<span class=ep-title>Combination Tones and Nonlinear Acoustics</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>Jacob Collier 系列</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep10/ class=ep-link>
-<span class=ep-num>10</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link><span class=ep-num>09</span>
+<span class=ep-title>Combination Tones and Nonlinear Acoustics</span></a></div><div class=arc-group><div class=arc-label>Jacob Collier 系列</div><a href=https://amath390.sibeliusp.com/episodes/ep10/ class=ep-link><span class=ep-num>10</span>
 <span class=ep-title>Negative Harmony and the Dihedral Group D₁₂</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link>
-<span class=ep-num>11</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link><span class=ep-num>11</span>
 <span class=ep-title>Comma Drift and the Impossibility of Perfect Tuning</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep12/ class=ep-link>
-<span class=ep-num>12</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep12/ class=ep-link><span class=ep-num>12</span>
 <span class=ep-title>The Circle of Fifths as a Folded Spiral</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-link>
-<span class=ep-num>13</span>
-<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>拓扑数学专篇</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-link>
-<span class=ep-num>14</span>
-<span class=ep-title>Tonnetz Hodge Duality</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>歌剧系列</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-link>
-<span class=ep-num>15</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-link><span class=ep-num>13</span>
+<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span></a></div><div class=arc-group><div class=arc-label>拓扑数学专篇</div><a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-link><span class=ep-num>14</span>
+<span class=ep-title>Tonnetz Hodge Duality</span></a></div><div class=arc-group><div class=arc-label>歌剧系列</div><a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-link><span class=ep-num>15</span>
 <span class=ep-title>Opera Acoustics and the Singer's Formant</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link>
-<span class=ep-num>16</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link><span class=ep-num>16</span>
 <span class=ep-title>Rossini's Code — Budden, Gossett, and the Convention System</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-link>
-<span class=ep-num>17</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-link><span class=ep-num>17</span>
 <span class=ep-title>Leitmotif Networks — Wagner's Ring Cycle</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-link>
-<span class=ep-num>18</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-link><span class=ep-num>18</span>
 <span class=ep-title>Game Theory in Operatic Duets</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link>
-<span class=ep-num>19</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link><span class=ep-num>19</span>
 <span class=ep-title>Vibrato as FM Synthesis</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-link>
-<span class=ep-num>20</span>
-<span class=ep-title>Character Interaction Networks in Opera</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>AI 音乐三部曲</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-link>
-<span class=ep-num>21</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-link><span class=ep-num>20</span>
+<span class=ep-title>Character Interaction Networks in Opera</span></a></div><div class=arc-group><div class=arc-label>AI 音乐三部曲</div><a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-link><span class=ep-num>21</span>
 <span class=ep-title>From Markov to Diffusion — Sixty Years of AI Composition</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-link>
-<span class=ep-num>22</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-link><span class=ep-num>22</span>
 <span class=ep-title>How AI Writes Music — EnCodec and RVQ</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-link>
-<span class=ep-num>23</span>
-<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span>
-</a>
-</div>
-<div class=sidebar-footer>
-<a href=/theorems/>定理索引</a>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-link><span class=ep-num>23</span>
+<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span></a></div><div class=arc-group><div class=arc-label>流行音乐 × 数学</div><a href=https://amath390.sibeliusp.com/episodes/ep24/ class=ep-link><span class=ep-num>24</span>
+<span class=ep-title>The Information Code of Pop Music</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep25/ class=ep-link><span class=ep-num>25</span>
+<span class=ep-title>Why Music Gives You Goosebumps — Prediction Error and Frisson</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep26/ class=ep-link><span class=ep-num>26</span>
+<span class=ep-title>The 1/f Law of Music</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep27/ class=ep-link><span class=ep-num>27</span>
+<span class=ep-title>Answering Viral Critics with Mathematics</span></a></div><div class=arc-group><div class=arc-label>音乐技术系列</div><a href=https://amath390.sibeliusp.com/episodes/ep28/ class=ep-link><span class=ep-num>28</span>
+<span class=ep-title>Your Microphone Is a Damped Oscillator</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep29/ class=ep-link><span class=ep-num>29</span>
+<span class=ep-title>Primes in the Studio — Standing Waves and QRD Diffusers</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep30/ class=ep-link><span class=ep-num>30</span>
+<span class=ep-title>The Sampling Theorem Is Not What You Think</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep31/ class=ep-link><span class=ep-num>31</span>
+<span class=ep-title>The Warmth of Moog Has an Equation</span></a></div><div class=sidebar-footer><a href=/theorems/>定理索引</a>
 <a href=/domains/>数学领域</a>
-<a href=/about/>关于</a>
-</div>
-</nav>
-<main class=main-content>
-<div class=episode-layout>
-<article class=episode-page>
-<header class=episode-header>
-<div class=ep-badge>EP42</div>
-<h1 class=ep-main-title>EP42: Chord Recognition — From Chroma Vectors to Viterbi Decoding</h1>
-<div class=ep-subtitle>从色度向量到Viterbi解码</div>
-<div class=ep-meta>
-<span class=meta-item>
-<span class=meta-icon>▶</span> 5:51
-</span>
-<span class="meta-item domains">
-<span class=domain-chip>Statistics/ML</span><span class=domain-chip>Signal Processing</span><span class=domain-chip>Abstract Algebra</span>
-</span>
-</div>
-</header>
-<div class=cross-refs>
-<h3 class=cross-refs-title>前置知识</h3>
-<div class=ref-cards>
-<a href=https://amath390.sibeliusp.com/episodes/ep04/ class="ref-card callback">
-<span class=ref-ep>EP04</span>
+<a href=/about/>关于</a></div></nav><main class=main-content><div class=episode-layout><article class=episode-page><header class=episode-header><div class=ep-badge>EP42</div><h1 class=ep-main-title>EP42: Chord Recognition — From Chroma Vectors to Viterbi Decoding</h1><div class=ep-subtitle>从色度向量到Viterbi解码</div><div class=ep-meta><span class=meta-item><span class=meta-icon>▶</span> 5:51
+</span><span class="meta-item domains"><span class=domain-chip>Statistics/ML</span><span class=domain-chip>Signal Processing</span><span class=domain-chip>Abstract Algebra</span></span></div></header><div class=cross-refs><h3 class=cross-refs-title>前置知识</h3><div class=ref-cards><a href=https://amath390.sibeliusp.com/episodes/ep04/ class="ref-card callback"><span class=ref-ep>EP04</span>
 <span class=ref-title>All-Interval Rows and ℤ₁₂</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep21/ class="ref-card callback">
-<span class=ref-ep>EP21</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep21/ class="ref-card callback"><span class=ref-ep>EP21</span>
 <span class=ref-title>From Markov to Diffusion — Sixty Years of AI Composition</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep35/ class="ref-card callback">
-<span class=ref-ep>EP35</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep35/ class="ref-card callback"><span class=ref-ep>EP35</span>
 <span class=ref-title>The Phase Vocoder — Mathematics of Pitch Shifting</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep41/ class="ref-card callback">
-<span class=ref-ep>EP41</span>
-<span class=ref-title>The Mathematics of Source Separation — NMF to Demucs</span>
-</a>
-</div>
-</div>
-<div class="episode-content content">
-<h2 id=概述>概述</h2>
-<p>你播放一首歌，App 在零点一秒内报出和弦名。这不是凭感觉猜测，也不是查数据库。
-背后是一个<strong>隐马尔可夫模型</strong>（Hidden Markov Model, HMM），和一个格形图上的<strong>最短路径算法</strong>（Viterbi）。</p>
-<p>本集从信号处理（STFT 色度向量）出发，经过模板匹配，建立 HMM 的三要素，
-最终用 Viterbi 动态规划在 <span class=math-inline data-latex="O(T \cdot N^2)"></span> 时间内精确解码最优和弦序列。</p>
-<hr>
-<h2 id=前置知识>前置知识</h2>
-<ul>
-<li>
-<a href=https://amath390.sibeliusp.com/episodes/ep35/ class=episode-ref-link>STFT 与相位声码器（EP35）</a>
-— 短时傅里叶变换</li>
-<li>
-<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=episode-ref-link>全音程列与 <span class=math-inline data-latex=\mathbb{Z}_{12}></span>（EP04）</a>
-— 十二音类循环群结构</li>
-<li>
-<a href=https://amath390.sibeliusp.com/episodes/ep21/ class=episode-ref-link>马尔可夫链与 AI 作曲（EP21）</a>
-— 离散 Markov 链</li>
-<li>
-<a href=https://amath390.sibeliusp.com/episodes/ep41/ class=episode-ref-link>人声分离（EP41）</a>
-— 上游信号分离流程</li>
-</ul>
-<hr>
-<h2 id=定义>定义</h2>
-<div class=definition-block id=definition-42.1>
-<div class=block-label>
-Definition 42.1 (色度特征向量)
-</div>
-<div class=block-body><p>设音频帧的短时傅里叶变换幅度谱为 <span class=math-inline data-latex=|X[k]|></span>，<span class=math-inline data-latex="k = 0, 1, \ldots, K-1"></span>。
-<strong>色度向量</strong> <span class=math-inline data-latex="\mathbf{c} \in \mathbb{R}^{12}"></span> 的第 <span class=math-inline data-latex=p></span> 分量（<span class=math-inline data-latex="p \in \mathbb{Z}_{12}"></span>）定义为</p>
-<p><span class=math-display data-latex="c_p = \sum_{\substack{k : \, \text{pitch-class}(k) = p}} |X[k]|^2"></span></p>
-<p>其中 <span class=math-inline data-latex="\text{pitch-class}(k) = \lfloor 12 \log_2(f_k / f_{\text{ref}}) \rfloor \bmod 12"></span>，<span class=math-inline data-latex=f_k></span> 为第 <span class=math-inline data-latex=k></span> 个频率箱的中心频率，<span class=math-inline data-latex=f_{\text{ref}}></span> 为参考频率（通常取 C0 = 16.35 Hz）。</p>
-<p>色度向量将所有八度的能量<strong>折叠</strong>到 <span class=math-inline data-latex="\mathbb{Z}_{12} = \{0, 1, \ldots, 11\}"></span> 上，
-实现<strong>八度等价</strong>：<span class=math-inline data-latex=c_p></span> 汇聚了 C4、C5、C6 等所有八度上音名为 <span class=math-inline data-latex=p></span> 的能量。</p>
-</div>
-</div>
-<div class=definition-block id=definition-42.2>
-<div class=block-label>
-Definition 42.2 (余弦相似度模板匹配)
-</div>
-<div class=block-body><p>设 24 个和弦模板为 <span class=math-inline data-latex="\{\mathbf{t}_j\}_{j=1}^{24}"></span>（12 个大调 + 12 个小调），每个模板 <span class=math-inline data-latex="\mathbf{t}_j \in \{0,1\}^{12}"></span>，在和弦包含的音名处取 1，其余取 0（大三和弦取 3 个音名，小三和弦取 3 个音名）。</p>
-<p>帧 <span class=math-inline data-latex=x></span> 属于和弦 <span class=math-inline data-latex=j></span> 的模板匹配得分定义为</p>
-<p><span class=math-display data-latex="\text{sim}(\mathbf{c}, \mathbf{t}_j) = \frac{\mathbf{c} \cdot \mathbf{t}_j}{\|\mathbf{c}\| \cdot \|\mathbf{t}_j\|}"></span></p>
-<p>逐帧识别结果为 <span class=math-inline data-latex="\hat{j} = \arg\max_j \, \text{sim}(\mathbf{c}, \mathbf{t}_j)"></span>。</p>
-</div>
-</div>
-<div class=definition-block id=definition-42.3>
-<div class=block-label>
-Definition 42.3 (隐马尔可夫模型（HMM）)
-</div>
-<div class=block-body><p>一个<strong>隐马尔可夫模型</strong> <span class=math-inline data-latex="\lambda = (A, B, \pi)"></span> 由三部分组成：</p>
-<ol>
-<li>
-<p><strong>转移矩阵</strong> <span class=math-inline data-latex="A \in \mathbb{R}^{N \times N}"></span>：<span class=math-inline data-latex="A_{ij} = P(q_t = j \mid q_{t-1} = i)"></span>，
-其中 <span class=math-inline data-latex="N = 24"></span>（和弦数），满足 <span class=math-inline data-latex="A_{ij} \geq 0"></span>，<span class=math-inline data-latex="\sum_j A_{ij} = 1"></span>。</p>
-</li>
-<li>
-<p><strong>发射概率</strong> <span class=math-inline data-latex="B = \{b_j(\mathbf{o})\}"></span>：给定隐状态 <span class=math-inline data-latex=j></span>，观测 <span class=math-inline data-latex=\mathbf{o}></span>（色度向量）的概率。
+</a><a href=https://amath390.sibeliusp.com/episodes/ep41/ class="ref-card callback"><span class=ref-ep>EP41</span>
+<span class=ref-title>The Mathematics of Source Separation — NMF to Demucs</span></a></div></div><div class="episode-content content"><h2 id=概述>概述</h2><p>你播放一首歌，App 在零点一秒内报出和弦名。这不是凭感觉猜测，也不是查数据库。
+背后是一个<strong>隐马尔可夫模型</strong>（Hidden Markov Model, HMM），和一个格形图上的<strong>最短路径算法</strong>（Viterbi）。</p><p>本集从信号处理（STFT 色度向量）出发，经过模板匹配，建立 HMM 的三要素，
+最终用 Viterbi 动态规划在 <span class=math-inline data-latex="O(T \cdot N^2)"></span> 时间内精确解码最优和弦序列。</p><hr><h2 id=前置知识>前置知识</h2><ul><li><a href=https://amath390.sibeliusp.com/episodes/ep35/ class=episode-ref-link>STFT 与相位声码器（EP35）</a>
+— 短时傅里叶变换</li><li><a href=https://amath390.sibeliusp.com/episodes/ep04/ class=episode-ref-link>全音程列与 <span class=math-inline data-latex=\mathbb{Z}_{12}></span>（EP04）</a>
+— 十二音类循环群结构</li><li><a href=https://amath390.sibeliusp.com/episodes/ep21/ class=episode-ref-link>马尔可夫链与 AI 作曲（EP21）</a>
+— 离散 Markov 链</li><li><a href=https://amath390.sibeliusp.com/episodes/ep41/ class=episode-ref-link>人声分离（EP41）</a>
+— 上游信号分离流程</li></ul><hr><h2 id=定义>定义</h2><div class=definition-block id=definition-42.1><div class=block-label>Definition 42.1 (色度特征向量)</div><div class=block-body><p>设音频帧的短时傅里叶变换幅度谱为 <span class=math-inline data-latex=|X[k]|></span>，<span class=math-inline data-latex="k = 0, 1, \ldots, K-1"></span>。
+<strong>色度向量</strong> <span class=math-inline data-latex="\mathbf{c} \in \mathbb{R}^{12}"></span> 的第 <span class=math-inline data-latex=p></span> 分量（<span class=math-inline data-latex="p \in \mathbb{Z}_{12}"></span>）定义为</p><p><span class=math-display data-latex="c_p = \sum_{\substack{k : \, \text{pitch-class}(k) = p}} |X[k]|^2"></span></p><p>其中 <span class=math-inline data-latex="\text{pitch-class}(k) = \lfloor 12 \log_2(f_k / f_{\text{ref}}) \rfloor \bmod 12"></span>，<span class=math-inline data-latex=f_k></span> 为第 <span class=math-inline data-latex=k></span> 个频率箱的中心频率，<span class=math-inline data-latex=f_{\text{ref}}></span> 为参考频率（通常取 C0 = 16.35 Hz）。</p><p>色度向量将所有八度的能量<strong>折叠</strong>到 <span class=math-inline data-latex="\mathbb{Z}_{12} = \{0, 1, \ldots, 11\}"></span> 上，
+实现<strong>八度等价</strong>：<span class=math-inline data-latex=c_p></span> 汇聚了 C4、C5、C6 等所有八度上音名为 <span class=math-inline data-latex=p></span> 的能量。</p></div></div><div class=definition-block id=definition-42.2><div class=block-label>Definition 42.2 (余弦相似度模板匹配)</div><div class=block-body><p>设 24 个和弦模板为 <span class=math-inline data-latex="\{\mathbf{t}_j\}_{j=1}^{24}"></span>（12 个大调 + 12 个小调），每个模板 <span class=math-inline data-latex="\mathbf{t}_j \in \{0,1\}^{12}"></span>，在和弦包含的音名处取 1，其余取 0（大三和弦取 3 个音名，小三和弦取 3 个音名）。</p><p>帧 <span class=math-inline data-latex=x></span> 属于和弦 <span class=math-inline data-latex=j></span> 的模板匹配得分定义为</p><p><span class=math-display data-latex="\text{sim}(\mathbf{c}, \mathbf{t}_j) = \frac{\mathbf{c} \cdot \mathbf{t}_j}{\|\mathbf{c}\| \cdot \|\mathbf{t}_j\|}"></span></p><p>逐帧识别结果为 <span class=math-inline data-latex="\hat{j} = \arg\max_j \, \text{sim}(\mathbf{c}, \mathbf{t}_j)"></span>。</p></div></div><div class=definition-block id=definition-42.3><div class=block-label>Definition 42.3 (隐马尔可夫模型（HMM）)</div><div class=block-body><p>一个<strong>隐马尔可夫模型</strong> <span class=math-inline data-latex="\lambda = (A, B, \pi)"></span> 由三部分组成：</p><ol><li><p><strong>转移矩阵</strong> <span class=math-inline data-latex="A \in \mathbb{R}^{N \times N}"></span>：<span class=math-inline data-latex="A_{ij} = P(q_t = j \mid q_{t-1} = i)"></span>，
+其中 <span class=math-inline data-latex="N = 24"></span>（和弦数），满足 <span class=math-inline data-latex="A_{ij} \geq 0"></span>，<span class=math-inline data-latex="\sum_j A_{ij} = 1"></span>。</p></li><li><p><strong>发射概率</strong> <span class=math-inline data-latex="B = \{b_j(\mathbf{o})\}"></span>：给定隐状态 <span class=math-inline data-latex=j></span>，观测 <span class=math-inline data-latex=\mathbf{o}></span>（色度向量）的概率。
 常用 12 维高斯模型：
 <span class=math-display data-latex="b_j(\mathbf{o}) = \mathcal{N}(\mathbf{o} \mid \boldsymbol{\mu}_j, \boldsymbol{\Sigma}_j)"></span>
-其中 <span class=math-inline data-latex=\boldsymbol{\mu}_j></span> 为和弦 <span class=math-inline data-latex=j></span> 的理想色度模板。</p>
-</li>
-<li>
-<p><strong>初始概率</strong> <span class=math-inline data-latex="\pi \in \mathbb{R}^N"></span>：<span class=math-inline data-latex="\pi_j = P(q_1 = j)"></span>，满足 <span class=math-inline data-latex="\sum_j \pi_j = 1"></span>。
-实践中常取均匀分布 <span class=math-inline data-latex="\pi_j = 1/24"></span>，或从语料统计得到。</p>
-</li>
-</ol>
-<p>隐状态序列 <span class=math-inline data-latex="q_1, q_2, \ldots, q_T"></span> 对应 <span class=math-inline data-latex=T></span> 帧音频的真实和弦标签，
-不可直接观测；观测序列 <span class=math-inline data-latex="\mathbf{o}_1, \mathbf{o}_2, \ldots, \mathbf{o}_T"></span> 为色度向量序列。</p>
-</div>
-</div>
-<hr>
-<h2 id=主要定理>主要定理</h2>
-<div class=theorem-block id=theorem-42.1>
-<div class=block-label>
-Theorem 42.1 (Viterbi 最优性)
-</div>
-<div class=block-body><p>给定 HMM <span class=math-inline data-latex="\lambda = (A, B, \pi)"></span> 和观测序列 <span class=math-inline data-latex=\mathbf{o}_{1:T}></span>，
-定义 <strong>Viterbi 变量</strong></p>
-<p><span class=math-display data-latex="\delta_t(j) = \max_{q_1, \ldots, q_{t-1}} P(q_1, \ldots, q_{t-1}, q_t = j, \mathbf{o}_{1:t} \mid \lambda)"></span></p>
-<p>则 <span class=math-inline data-latex=\delta_t(j)></span> 满足递推关系</p>
-<p><span class=math-display data-latex="\delta_t(j) = \left[\max_{i=1}^{N} \delta_{t-1}(i) \cdot A_{ij}\right] \cdot b_j(\mathbf{o}_t), \quad t = 2, \ldots, T"></span></p>
-<p>初始条件 <span class=math-inline data-latex="\delta_1(j) = \pi_j \cdot b_j(\mathbf{o}_1)"></span>。</p>
-<p>令 <span class=math-inline data-latex="\psi_t(j) = \arg\max_{i} \delta_{t-1}(i) \cdot A_{ij}"></span> 为<strong>反向指针</strong>。
-最优和弦序列由回溯得到：</p>
-<p><span class=math-display data-latex="q_T^* = \arg\max_j \delta_T(j), \qquad q_t^* = \psi_{t+1}(q_{t+1}^*), \quad t = T-1, \ldots, 1"></span></p>
-<p>该序列 <span class=math-inline data-latex=q_{1:T}^*></span> 最大化联合概率 <span class=math-inline data-latex="P(q_{1:T}, \mathbf{o}_{1:T} \mid \lambda)"></span>，
-时间复杂度为 <span class=math-inline data-latex="O(T \cdot N^2)"></span>。</p>
-</div>
-</div>
-<div class=proof-block>
-<div class=block-label>Proof.</div>
-<div class=block-body><p><strong>正确性</strong>（最优子结构）：</p>
-<p>设 <span class=math-inline data-latex=q_{1:T}^*></span> 是最优序列。对任意 <span class=math-inline data-latex="t < T"></span>，子序列 <span class=math-inline data-latex=q_{1:t}^*></span> 必是到达 <span class=math-inline data-latex=q_t^*></span> 的最优路径。
+其中 <span class=math-inline data-latex=\boldsymbol{\mu}_j></span> 为和弦 <span class=math-inline data-latex=j></span> 的理想色度模板。</p></li><li><p><strong>初始概率</strong> <span class=math-inline data-latex="\pi \in \mathbb{R}^N"></span>：<span class=math-inline data-latex="\pi_j = P(q_1 = j)"></span>，满足 <span class=math-inline data-latex="\sum_j \pi_j = 1"></span>。
+实践中常取均匀分布 <span class=math-inline data-latex="\pi_j = 1/24"></span>，或从语料统计得到。</p></li></ol><p>隐状态序列 <span class=math-inline data-latex="q_1, q_2, \ldots, q_T"></span> 对应 <span class=math-inline data-latex=T></span> 帧音频的真实和弦标签，
+不可直接观测；观测序列 <span class=math-inline data-latex="\mathbf{o}_1, \mathbf{o}_2, \ldots, \mathbf{o}_T"></span> 为色度向量序列。</p></div></div><hr><h2 id=主要定理>主要定理</h2><div class=theorem-block id=theorem-42.1><div class=block-label>Theorem 42.1 (Viterbi 最优性)</div><div class=block-body><p>给定 HMM <span class=math-inline data-latex="\lambda = (A, B, \pi)"></span> 和观测序列 <span class=math-inline data-latex=\mathbf{o}_{1:T}></span>，
+定义 <strong>Viterbi 变量</strong></p><p><span class=math-display data-latex="\delta_t(j) = \max_{q_1, \ldots, q_{t-1}} P(q_1, \ldots, q_{t-1}, q_t = j, \mathbf{o}_{1:t} \mid \lambda)"></span></p><p>则 <span class=math-inline data-latex=\delta_t(j)></span> 满足递推关系</p><p><span class=math-display data-latex="\delta_t(j) = \left[\max_{i=1}^{N} \delta_{t-1}(i) \cdot A_{ij}\right] \cdot b_j(\mathbf{o}_t), \quad t = 2, \ldots, T"></span></p><p>初始条件 <span class=math-inline data-latex="\delta_1(j) = \pi_j \cdot b_j(\mathbf{o}_1)"></span>。</p><p>令 <span class=math-inline data-latex="\psi_t(j) = \arg\max_{i} \delta_{t-1}(i) \cdot A_{ij}"></span> 为<strong>反向指针</strong>。
+最优和弦序列由回溯得到：</p><p><span class=math-display data-latex="q_T^* = \arg\max_j \delta_T(j), \qquad q_t^* = \psi_{t+1}(q_{t+1}^*), \quad t = T-1, \ldots, 1"></span></p><p>该序列 <span class=math-inline data-latex=q_{1:T}^*></span> 最大化联合概率 <span class=math-inline data-latex="P(q_{1:T}, \mathbf{o}_{1:T} \mid \lambda)"></span>，
+时间复杂度为 <span class=math-inline data-latex="O(T \cdot N^2)"></span>。</p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p><strong>正确性</strong>（最优子结构）：</p><p>设 <span class=math-inline data-latex=q_{1:T}^*></span> 是最优序列。对任意 <span class=math-inline data-latex="t < T"></span>，子序列 <span class=math-inline data-latex=q_{1:t}^*></span> 必是到达 <span class=math-inline data-latex=q_t^*></span> 的最优路径。
 若否，设存在更优路径 <span class=math-inline data-latex="q_{1:t}'"></span> 到达 <span class=math-inline data-latex=q_t^*></span>，则将 <span class=math-inline data-latex="q_{1:t}'"></span> 与 <span class=math-inline data-latex=q_{t+1:T}^*></span> 拼接，
-得到比 <span class=math-inline data-latex=q_{1:T}^*></span> 更优的序列，矛盾。</p>
-<p>因此，<span class=math-inline data-latex=\delta_t(j)></span> 确实是到达 <span class=math-inline data-latex="(t, j)"></span> 的最优路径的概率，递推正确。</p>
-<p><strong>复杂度</strong>：</p>
-<p>对每个时刻 <span class=math-inline data-latex=t></span> 和每个状态 <span class=math-inline data-latex=j></span>，计算 <span class=math-inline data-latex="\max_i \delta_{t-1}(i) \cdot A_{ij}"></span> 需 <span class=math-inline data-latex=O(N)></span>。
-共 <span class=math-inline data-latex=T></span> 个时刻、<span class=math-inline data-latex=N></span> 个状态，总复杂度 <span class=math-inline data-latex="O(T \cdot N^2)"></span>。</p>
-<p>对比暴力枚举所有路径：<span class=math-inline data-latex=N^T></span> 条路径，对 <span class=math-inline data-latex="N = 24"></span>、<span class=math-inline data-latex="T = 100"></span> 即 <span class=math-inline data-latex="24^{100} \approx 10^{138}"></span>，
-远超宇宙原子数（<span class=math-inline data-latex="\approx 10^{80}"></span>），计算不可行。动态规划将复杂度从指数降为多项式。<span class=math-inline data-latex=\square></span></p>
-</div>
-</div>
-<div class=theorem-block id=theorem-42.2>
-<div class=block-label>
-Theorem 42.2 (对数空间等价性)
-</div>
-<div class=block-body><p>设 <span class=math-inline data-latex="\delta_t(j) > 0"></span>（排除零概率情形）。令 <span class=math-inline data-latex="\tilde{\delta}_t(j) = \log \delta_t(j)"></span>，则</p>
-<p><span class=math-display data-latex="\tilde{\delta}_t(j) = \left[\max_{i} \tilde{\delta}_{t-1}(i) + \log A_{ij}\right] + \log b_j(\mathbf{o}_t)"></span></p>
-<p>该递推与原始 Viterbi 递推产生完全相同的最优路径：
-<span class=math-inline data-latex="\arg\max_j \tilde{\delta}_t(j) = \arg\max_j \delta_t(j)"></span>。</p>
-</div>
-</div>
-<div class=proof-block>
-<div class=block-label>Proof.</div>
-<div class=block-body><p>对数函数 <span class=math-inline data-latex="\log: (0, +\infty) \to (-\infty, +\infty)"></span> 是严格单调递增函数，因此</p>
-<p><span class=math-display data-latex="\arg\max_j f(j) = \arg\max_j \log f(j)"></span></p>
-<p>对任何正值函数 <span class=math-inline data-latex=f></span> 成立。</p>
-<p>又因 <span class=math-inline data-latex="\log(a \cdot b) = \log a + \log b"></span>，<span class=math-inline data-latex="\log(\max_i a_i) = \max_i \log a_i"></span>（严格单调性），
-原始递推</p>
-<p><span class=math-display data-latex="\delta_t(j) = \max_i [\delta_{t-1}(i) \cdot A_{ij}] \cdot b_j(\mathbf{o}_t)"></span></p>
-<p>取对数后恰好变为</p>
-<p><span class=math-display data-latex="\tilde{\delta}_t(j) = \max_i [\tilde{\delta}_{t-1}(i) + \log A_{ij}] + \log b_j(\mathbf{o}_t)"></span></p>
-<p>乘法变加法，max 保持不变。<span class=math-inline data-latex=\square></span></p>
-<p><strong>实际意义</strong>：<span class=math-inline data-latex="T = 100"></span> 帧时概率连乘可达 <span class=math-inline data-latex="\sim 10^{-138}"></span>，超出 float64 下溢阈值（<span class=math-inline data-latex="\approx 10^{-308}"></span>），
+得到比 <span class=math-inline data-latex=q_{1:T}^*></span> 更优的序列，矛盾。</p><p>因此，<span class=math-inline data-latex=\delta_t(j)></span> 确实是到达 <span class=math-inline data-latex="(t, j)"></span> 的最优路径的概率，递推正确。</p><p><strong>复杂度</strong>：</p><p>对每个时刻 <span class=math-inline data-latex=t></span> 和每个状态 <span class=math-inline data-latex=j></span>，计算 <span class=math-inline data-latex="\max_i \delta_{t-1}(i) \cdot A_{ij}"></span> 需 <span class=math-inline data-latex=O(N)></span>。
+共 <span class=math-inline data-latex=T></span> 个时刻、<span class=math-inline data-latex=N></span> 个状态，总复杂度 <span class=math-inline data-latex="O(T \cdot N^2)"></span>。</p><p>对比暴力枚举所有路径：<span class=math-inline data-latex=N^T></span> 条路径，对 <span class=math-inline data-latex="N = 24"></span>、<span class=math-inline data-latex="T = 100"></span> 即 <span class=math-inline data-latex="24^{100} \approx 10^{138}"></span>，
+远超宇宙原子数（<span class=math-inline data-latex="\approx 10^{80}"></span>），计算不可行。动态规划将复杂度从指数降为多项式。<span class=math-inline data-latex=\square></span></p></div></div><div class=theorem-block id=theorem-42.2><div class=block-label>Theorem 42.2 (对数空间等价性)</div><div class=block-body><p>设 <span class=math-inline data-latex="\delta_t(j) > 0"></span>（排除零概率情形）。令 <span class=math-inline data-latex="\tilde{\delta}_t(j) = \log \delta_t(j)"></span>，则</p><p><span class=math-display data-latex="\tilde{\delta}_t(j) = \left[\max_{i} \tilde{\delta}_{t-1}(i) + \log A_{ij}\right] + \log b_j(\mathbf{o}_t)"></span></p><p>该递推与原始 Viterbi 递推产生完全相同的最优路径：
+<span class=math-inline data-latex="\arg\max_j \tilde{\delta}_t(j) = \arg\max_j \delta_t(j)"></span>。</p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p>对数函数 <span class=math-inline data-latex="\log: (0, +\infty) \to (-\infty, +\infty)"></span> 是严格单调递增函数，因此</p><p><span class=math-display data-latex="\arg\max_j f(j) = \arg\max_j \log f(j)"></span></p><p>对任何正值函数 <span class=math-inline data-latex=f></span> 成立。</p><p>又因 <span class=math-inline data-latex="\log(a \cdot b) = \log a + \log b"></span>，<span class=math-inline data-latex="\log(\max_i a_i) = \max_i \log a_i"></span>（严格单调性），
+原始递推</p><p><span class=math-display data-latex="\delta_t(j) = \max_i [\delta_{t-1}(i) \cdot A_{ij}] \cdot b_j(\mathbf{o}_t)"></span></p><p>取对数后恰好变为</p><p><span class=math-display data-latex="\tilde{\delta}_t(j) = \max_i [\tilde{\delta}_{t-1}(i) + \log A_{ij}] + \log b_j(\mathbf{o}_t)"></span></p><p>乘法变加法，max 保持不变。<span class=math-inline data-latex=\square></span></p><p><strong>实际意义</strong>：<span class=math-inline data-latex="T = 100"></span> 帧时概率连乘可达 <span class=math-inline data-latex="\sim 10^{-138}"></span>，超出 float64 下溢阈值（<span class=math-inline data-latex="\approx 10^{-308}"></span>），
 对数空间操作完全避免此问题。零概率存储为 <span class=math-inline data-latex=-\infty></span>（Python <code>float('-inf')</code>），
-不影响 <span class=math-inline data-latex=\max></span> 操作的正确性。</p>
-</div>
-</div>
-<div class=proposition-block id=prop-42.1>
-<div class=block-label>
-Prop 42.1 (色度折叠保留音名信息)
-</div>
-<div class=block-body><p>色度向量 <span class=math-inline data-latex=\mathbf{c}></span> 是 <span class=math-inline data-latex=\mathbb{Z}_{12}></span>-等变的：对频谱的整数倍频移（即移调 <span class=math-inline data-latex=k></span> 个半音），
+不影响 <span class=math-inline data-latex=\max></span> 操作的正确性。</p></div></div><div class=proposition-block id=prop-42.1><div class=block-label>Prop 42.1 (色度折叠保留音名信息)</div><div class=block-body><p>色度向量 <span class=math-inline data-latex=\mathbf{c}></span> 是 <span class=math-inline data-latex=\mathbb{Z}_{12}></span>-等变的：对频谱的整数倍频移（即移调 <span class=math-inline data-latex=k></span> 个半音），
 色度向量循环移位 <span class=math-inline data-latex=k></span> 位。形式地，若 <span class=math-inline data-latex=\mathbf{c}(\mathbf{x})></span> 是信号 <span class=math-inline data-latex=\mathbf{x}></span> 的色度向量，
-<span class=math-inline data-latex=\mathbf{x}_k></span> 是 <span class=math-inline data-latex=\mathbf{x}></span> 移调 <span class=math-inline data-latex=k></span> 个半音后的信号，则</p>
-<p><span class=math-display data-latex="\mathbf{c}(\mathbf{x}_k)_p = \mathbf{c}(\mathbf{x})_{(p - k) \bmod 12}"></span></p>
-</div>
-</div>
-<div class=proof-block>
-<div class=block-label>Proof.</div>
-<div class=block-body>移调 <span class=math-inline data-latex=k></span> 个半音将频率 <span class=math-inline data-latex=f></span> 映射到 <span class=math-inline data-latex="f \cdot 2^{k/12}"></span>。
+<span class=math-inline data-latex=\mathbf{x}_k></span> 是 <span class=math-inline data-latex=\mathbf{x}></span> 移调 <span class=math-inline data-latex=k></span> 个半音后的信号，则</p><p><span class=math-display data-latex="\mathbf{c}(\mathbf{x}_k)_p = \mathbf{c}(\mathbf{x})_{(p - k) \bmod 12}"></span></p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body>移调 <span class=math-inline data-latex=k></span> 个半音将频率 <span class=math-inline data-latex=f></span> 映射到 <span class=math-inline data-latex="f \cdot 2^{k/12}"></span>。
 于是 pitch-class<span class=math-inline data-latex="(f \cdot 2^{k/12}) = (\text{pitch-class}(f) + k) \bmod 12"></span>。
 色度折叠将各频率箱按 pitch-class 累加，故移调后每个分量的索引增加 <span class=math-inline data-latex="k \pmod{12}"></span>，
-等价于向量循环移位 <span class=math-inline data-latex=k></span> 位。<span class=math-inline data-latex=\square></span></div>
-</div>
-<hr>
-<h2 id=数值示例>数值示例</h2>
-<p><strong>暴力搜索的不可行性</strong>：</p>
-<span class=math-display data-latex="24^{100} = (2^3 \cdot 3)^{100} = 2^{300} \cdot 3^{100}"></span>
-<span class=math-display data-latex="\log_{10}(24^{100}) = 100 \log_{10} 24 = 100 \times 1.3802 \approx 138.0"></span>
-<p>即 <span class=math-inline data-latex="24^{100} \approx 10^{138}"></span>，而宇宙可观测粒子数 <span class=math-inline data-latex="\approx 10^{80}"></span>。</p>
-<p><strong>Viterbi 规模</strong>：<span class=math-inline data-latex="N = 24"></span>，<span class=math-inline data-latex="T = 100"></span>，需要存储 <span class=math-inline data-latex="24 \times 100 = 2400"></span> 个 <span class=math-inline data-latex=\delta></span> 值和同等数量的反向指针，
-总空间 <span class=math-inline data-latex=O(TN)></span>，时间 <span class=math-inline data-latex="O(TN^2) = O(100 \times 576) = O(57600)"></span> 次运算——实时可行。</p>
-<hr>
-<h2 id=音乐联系>音乐联系</h2>
-<div class=music-block>
-<div class=block-label>音乐联系</div>
-<div class=block-body><p><strong>音乐语法的数学编码</strong></p>
-<p>HMM 转移矩阵 <span class=math-inline data-latex=A></span> 将调性引力（tonal gravity）量化为概率。在 C 大调语境下，
+等价于向量循环移位 <span class=math-inline data-latex=k></span> 位。<span class=math-inline data-latex=\square></span></div></div><hr><h2 id=数值示例>数值示例</h2><p><strong>暴力搜索的不可行性</strong>：</p><span class=math-display data-latex="24^{100} = (2^3 \cdot 3)^{100} = 2^{300} \cdot 3^{100}"></span>
+<span class=math-display data-latex="\log_{10}(24^{100}) = 100 \log_{10} 24 = 100 \times 1.3802 \approx 138.0"></span><p>即 <span class=math-inline data-latex="24^{100} \approx 10^{138}"></span>，而宇宙可观测粒子数 <span class=math-inline data-latex="\approx 10^{80}"></span>。</p><p><strong>Viterbi 规模</strong>：<span class=math-inline data-latex="N = 24"></span>，<span class=math-inline data-latex="T = 100"></span>，需要存储 <span class=math-inline data-latex="24 \times 100 = 2400"></span> 个 <span class=math-inline data-latex=\delta></span> 值和同等数量的反向指针，
+总空间 <span class=math-inline data-latex=O(TN)></span>，时间 <span class=math-inline data-latex="O(TN^2) = O(100 \times 576) = O(57600)"></span> 次运算——实时可行。</p><hr><h2 id=音乐联系>音乐联系</h2><div class=music-block><div class=block-label>音乐联系</div><div class=block-body><p><strong>音乐语法的数学编码</strong></p><p>HMM 转移矩阵 <span class=math-inline data-latex=A></span> 将调性引力（tonal gravity）量化为概率。在 C 大调语境下，
 <span class=math-inline data-latex="A_{\text{C→G}} \gg A_{\text{C→F\sharp}}"></span>，因为 G 大调（属和弦）是 C 大调最强的功能和声解决，
-而 F♯ 大调（三全音关系）在古典和声中极少出现。</p>
-<p>通过从巴赫众赞歌或流行歌曲数据集统计 <span class=math-inline data-latex=A></span>，模型自动学到和声语法规则。
+而 F♯ 大调（三全音关系）在古典和声中极少出现。</p><p>通过从巴赫众赞歌或流行歌曲数据集统计 <span class=math-inline data-latex=A></span>，模型自动学到和声语法规则。
 这正是 EP21 中 Markov 链的直接推广：原 Markov 链建模可观测音符序列，
 HMM 在此之上增加了"隐层"——和声功能（属、主、下属）不可直接听到，
-只能从声音特征（色度向量）推断。</p>
-<p><strong>识别局限与乐理边界</strong></p>
-<p>HMM 基于大/小三和弦的 24 个模板，无法处理：</p>
-<ul>
-<li><strong>异名同音</strong>：E♯ 与 F 色度位置相同，但在 B 大调（功能：增八度）和 C 大调（功能：自然四度）中作用不同</li>
-<li><strong>副属和弦</strong>：如 C 大调中的 D7（属于 G 的属和弦），激活两个模板</li>
-<li><strong>爵士变音</strong>：Cm(maj9)♯11 等高叠和弦激活 8 个以上音名位置</li>
-</ul>
-<p>这些局限来自模型的<strong>生成假设</strong>：HMM 假定观测条件独立于过去，
+只能从声音特征（色度向量）推断。</p><p><strong>识别局限与乐理边界</strong></p><p>HMM 基于大/小三和弦的 24 个模板，无法处理：</p><ul><li><strong>异名同音</strong>：E♯ 与 F 色度位置相同，但在 B 大调（功能：增八度）和 C 大调（功能：自然四度）中作用不同</li><li><strong>副属和弦</strong>：如 C 大调中的 D7（属于 G 的属和弦），激活两个模板</li><li><strong>爵士变音</strong>：Cm(maj9)♯11 等高叠和弦激活 8 个以上音名位置</li></ul><p>这些局限来自模型的<strong>生成假设</strong>：HMM 假定观测条件独立于过去，
 而人类和声感知实际上对上下文高度敏感。条件随机场（CRF）的判别框架
-可部分缓解此问题，但代价是失去 Viterbi 解码的精确性。</p>
-</div>
-</div>
-<hr>
-<h2 id=局限性与开放问题>局限性与开放问题</h2>
-<ol>
-<li>
-<p><strong>调内识别 vs 调性识别</strong>：本集仅识别逐帧和弦，未处理全局调性（key）。
-调性识别需要在更长时间尺度（整首曲子）上建模，Krumhansl-Schmuckler (1990) 用轮廓相关系数定义调性中心，这是 EP43 的主题。</p>
-</li>
-<li>
-<p><strong>多声部叠置</strong>：交响乐中多个声部同时演奏不同和弦，色度向量叠加，
-单和弦 HMM 无法分解。需要多和弦联合 HMM 或源分离（EP41）前处理。</p>
-</li>
-<li>
-<p><strong>实时系统延迟</strong>：Viterbi 需要完整序列后向回溯。实时系统需改用<strong>在线 Viterbi</strong>（滑窗回溯）或<strong>前向算法</strong>（给出边际概率，无需回溯），代价是识别精度下降。</p>
-</li>
-<li>
-<p><strong>深度神经网络发射估计</strong>：现代系统（如 ACE-Chroma, 2022）用 CNN 估计 <span class=math-inline data-latex=b_j(\mathbf{o}_t)></span>，
-取代高斯模型，精度显著提升，但丢失了 Viterbi 解码的可解释性。</p>
-</li>
-</ol>
-<div class=conjecture-block id=conjecture>
-<div class=block-label>
-Conjecture (神经 HMM 的 Viterbi 最优性保持)
-</div>
-<div class=block-body>若用神经网络估计的发射对数概率 <span class=math-inline data-latex="\log \hat{b}_j(\mathbf{o}_t)"></span> 替换高斯 <span class=math-inline data-latex="\log b_j(\mathbf{o}_t)"></span>，
+可部分缓解此问题，但代价是失去 Viterbi 解码的精确性。</p></div></div><hr><h2 id=局限性与开放问题>局限性与开放问题</h2><ol><li><p><strong>调内识别 vs 调性识别</strong>：本集仅识别逐帧和弦，未处理全局调性（key）。
+调性识别需要在更长时间尺度（整首曲子）上建模，Krumhansl-Schmuckler (1990) 用轮廓相关系数定义调性中心，这是 EP43 的主题。</p></li><li><p><strong>多声部叠置</strong>：交响乐中多个声部同时演奏不同和弦，色度向量叠加，
+单和弦 HMM 无法分解。需要多和弦联合 HMM 或源分离（EP41）前处理。</p></li><li><p><strong>实时系统延迟</strong>：Viterbi 需要完整序列后向回溯。实时系统需改用<strong>在线 Viterbi</strong>（滑窗回溯）或<strong>前向算法</strong>（给出边际概率，无需回溯），代价是识别精度下降。</p></li><li><p><strong>深度神经网络发射估计</strong>：现代系统（如 ACE-Chroma, 2022）用 CNN 估计 <span class=math-inline data-latex=b_j(\mathbf{o}_t)></span>，
+取代高斯模型，精度显著提升，但丢失了 Viterbi 解码的可解释性。</p></li></ol><div class=conjecture-block id=conjecture><div class=block-label>Conjecture (神经 HMM 的 Viterbi 最优性保持)</div><div class=block-body>若用神经网络估计的发射对数概率 <span class=math-inline data-latex="\log \hat{b}_j(\mathbf{o}_t)"></span> 替换高斯 <span class=math-inline data-latex="\log b_j(\mathbf{o}_t)"></span>，
 Viterbi 递推在形式上仍然正确，且仍给出在 <span class=math-inline data-latex=\hat{b}></span> 下的最优序列。
 <strong>开放问题</strong>：神经估计的 <span class=math-inline data-latex=\hat{b}></span> 是否满足与真实分布的充分近似条件，使得最优序列与人类标注一致？
-目前缺乏理论保证，依赖经验验证。</div>
-</div>
-<hr>
-<h2 id=参考文献>参考文献</h2>
-<ol>
-<li>
-<p>Rabiner, L. R. (1989). A tutorial on hidden Markov models and selected applications in speech recognition. <em>Proceedings of the IEEE</em>, 77(2), 257–286.</p>
-</li>
-<li>
-<p>Viterbi, A. J. (1967). Error bounds for convolutional codes and an asymptotically optimum decoding algorithm. <em>IEEE Transactions on Information Theory</em>, 13(2), 260–269.</p>
-</li>
-<li>
-<p>Müller, M. (2015). <em>Fundamentals of Music Processing</em>. Springer. Ch. 5 (Chord Recognition).</p>
-</li>
-<li>
-<p>Bello, J. P., & Pickens, J. (2005). A robust mid-level representation for harmonic content in music signals. <em>Proceedings of ISMIR</em>, 304–311.</p>
-</li>
-<li>
-<p>Harte, C., Sandler, M., Abdallah, S., & Gómez, E. (2005). Symbolic representation of musical chords: A proposed syntax for text annotations. <em>Proceedings of ISMIR</em>.</p>
-</li>
-<li>
-<p>Krumhansl, C. L. (1990). <em>Cognitive Foundations of Musical Pitch</em>. Oxford University Press.</p>
-</li>
-<li>
-<p>Cho, T., & Bello, J. P. (2014). On the relative importance of individual components of chord recognition systems. <em>IEEE/ACM Transactions on Audio, Speech, and Language Processing</em>, 22(2), 477–492.</p>
-</li>
-</ol>
-</div>
-<nav class=ep-nav>
-<a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-nav-prev>
-← EP23: Can AI Understand Music? Latent Space and Information Bottleneck
-</a>
-</nav>
-</article>
-<aside class=ep-toc-aside>
-<div class=ep-toc-sticky>
-<div class=ep-toc-label>本页目录</div>
-<nav id=TableOfContents>
-<ul>
-<li><a href=#概述>概述</a></li>
-<li><a href=#前置知识>前置知识</a></li>
-<li><a href=#定义>定义</a></li>
-<li><a href=#主要定理>主要定理</a></li>
-<li><a href=#数值示例>数值示例</a></li>
-<li><a href=#音乐联系>音乐联系</a></li>
-<li><a href=#局限性与开放问题>局限性与开放问题</a></li>
-<li><a href=#参考文献>参考文献</a></li>
-</ul>
-</nav>
-</div>
-</aside>
-</div>
-<footer class=site-footer>
-<div class=footer-content>
-<a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link>
-<img src=/images/avatar.png alt="Sibelius P." class=footer-avatar>
-</a>
-<div class=footer-text>
-<span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
+目前缺乏理论保证，依赖经验验证。</div></div><hr><h2 id=参考文献>参考文献</h2><ol><li><p>Rabiner, L. R. (1989). A tutorial on hidden Markov models and selected applications in speech recognition. <em>Proceedings of the IEEE</em>, 77(2), 257–286.</p></li><li><p>Viterbi, A. J. (1967). Error bounds for convolutional codes and an asymptotically optimum decoding algorithm. <em>IEEE Transactions on Information Theory</em>, 13(2), 260–269.</p></li><li><p>Müller, M. (2015). <em>Fundamentals of Music Processing</em>. Springer. Ch. 5 (Chord Recognition).</p></li><li><p>Bello, J. P., & Pickens, J. (2005). A robust mid-level representation for harmonic content in music signals. <em>Proceedings of ISMIR</em>, 304–311.</p></li><li><p>Harte, C., Sandler, M., Abdallah, S., & Gómez, E. (2005). Symbolic representation of musical chords: A proposed syntax for text annotations. <em>Proceedings of ISMIR</em>.</p></li><li><p>Krumhansl, C. L. (1990). <em>Cognitive Foundations of Musical Pitch</em>. Oxford University Press.</p></li><li><p>Cho, T., & Bello, J. P. (2014). On the relative importance of individual components of chord recognition systems. <em>IEEE/ACM Transactions on Audio, Speech, and Language Processing</em>, 22(2), 477–492.</p></li></ol></div><nav class=ep-nav><a href=https://amath390.sibeliusp.com/episodes/ep31/ class=ep-nav-prev>← EP31: The Warmth of Moog Has an Equation</a></nav></article><aside class=ep-toc-aside><div class=ep-toc-sticky><div class=ep-toc-label>本页目录</div><nav id=TableOfContents><ul><li><a href=#概述>概述</a></li><li><a href=#前置知识>前置知识</a></li><li><a href=#定义>定义</a></li><li><a href=#主要定理>主要定理</a></li><li><a href=#数值示例>数值示例</a></li><li><a href=#音乐联系>音乐联系</a></li><li><a href=#局限性与开放问题>局限性与开放问题</a></li><li><a href=#参考文献>参考文献</a></li></ul></nav></div></aside></div><footer class=site-footer><div class=footer-content><a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link><img src=/images/avatar.png alt="Sibelius P." class=footer-avatar></a><div class=footer-text><span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
 <span class=footer-sep>·</span>
 <a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener>小红书</a>
 <span class=footer-sep>·</span>
-<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span>
-</div>
-</div>
-</footer>
-</main>
-</div>
-</body>
-</html>
+<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span></div></div></footer></main></div></body></html>

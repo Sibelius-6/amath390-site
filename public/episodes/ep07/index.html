@@ -1,468 +1,70 @@
-<!doctype html><html lang=zh-cn>
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<title>EP07: Information Entropy and All-Interval Rows | AMATH 390 数学与音乐</title>
-<meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
-<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous>
-<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script>
-<script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('[data-latex]').forEach(function(a){try{katex.render(a.getAttribute('data-latex'),a,{displayMode:a.classList.contains('math-display'),throwOnError:!1})}catch(b){console.warn('KaTeX:',b.message,a)}})})</script>
-<link rel=icon type=image/png sizes=32x32 href=/favicon-32.png>
-<link rel=icon type=image/png sizes=16x16 href=/favicon-16.png>
-<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
-<link rel=stylesheet href=/css/amath390.css>
-</head>
-<body>
-<div class=layout-wrapper>
-<nav class=sidebar>
-<div class=sidebar-header>
-<a href=/ class=sidebar-title>AMATH 390</a>
-<div class=sidebar-subtitle>数学与音乐</div>
-</div>
-<div class=arc-group>
-<div class=arc-label>数学基础篇</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link>
-<span class=ep-num>01</span>
+<!doctype html><html lang=zh-cn><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>EP07: Information Entropy and All-Interval Rows | AMATH 390 数学与音乐</title><meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music"><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script><script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("[data-latex]").forEach(function(e){try{katex.render(e.getAttribute("data-latex"),e,{displayMode:e.classList.contains("math-display"),throwOnError:!1})}catch(t){console.warn("KaTeX:",t.message,e)}})})</script><link rel=icon type=image/png sizes=32x32 href=/favicon-32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=stylesheet href=/css/amath390.css></head><body><div class=layout-wrapper><nav class=sidebar><div class=sidebar-header><a href=/ class=sidebar-title>AMATH 390</a><div class=sidebar-subtitle>数学与音乐</div></div><div class=arc-group><div class=arc-label>数学基础篇</div><a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link><span class=ep-num>01</span>
 <span class=ep-title>Chord Space and the Torus</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep02/ class=ep-link>
-<span class=ep-num>02</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep02/ class=ep-link><span class=ep-num>02</span>
 <span class=ep-title>String Vibration and the Wave Equation</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link>
-<span class=ep-num>03</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link><span class=ep-num>03</span>
 <span class=ep-title>Bach and Graph Connectivity</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link>
-<span class=ep-num>04</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link><span class=ep-num>04</span>
 <span class=ep-title>All-Interval Rows and ℤ₁₂</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link>
-<span class=ep-num>05</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link><span class=ep-num>05</span>
 <span class=ep-title>Turán's Theorem and Counterpoint</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-link>
-<span class=ep-num>06</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-link><span class=ep-num>06</span>
 <span class=ep-title>Graph Coloring and Voice Assignment</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep07/ class="ep-link active">
-<span class=ep-num>07</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep07/ class="ep-link active"><span class=ep-num>07</span>
 <span class=ep-title>Information Entropy and All-Interval Rows</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-link>
-<span class=ep-num>08</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-link><span class=ep-num>08</span>
 <span class=ep-title>Shepard Tones and the Tritone Paradox</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link>
-<span class=ep-num>09</span>
-<span class=ep-title>Combination Tones and Nonlinear Acoustics</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>Jacob Collier 系列</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep10/ class=ep-link>
-<span class=ep-num>10</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link><span class=ep-num>09</span>
+<span class=ep-title>Combination Tones and Nonlinear Acoustics</span></a></div><div class=arc-group><div class=arc-label>Jacob Collier 系列</div><a href=https://amath390.sibeliusp.com/episodes/ep10/ class=ep-link><span class=ep-num>10</span>
 <span class=ep-title>Negative Harmony and the Dihedral Group D₁₂</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link>
-<span class=ep-num>11</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link><span class=ep-num>11</span>
 <span class=ep-title>Comma Drift and the Impossibility of Perfect Tuning</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep12/ class=ep-link>
-<span class=ep-num>12</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep12/ class=ep-link><span class=ep-num>12</span>
 <span class=ep-title>The Circle of Fifths as a Folded Spiral</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-link>
-<span class=ep-num>13</span>
-<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>拓扑数学专篇</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-link>
-<span class=ep-num>14</span>
-<span class=ep-title>Tonnetz Hodge Duality</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>歌剧系列</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-link>
-<span class=ep-num>15</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-link><span class=ep-num>13</span>
+<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span></a></div><div class=arc-group><div class=arc-label>拓扑数学专篇</div><a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-link><span class=ep-num>14</span>
+<span class=ep-title>Tonnetz Hodge Duality</span></a></div><div class=arc-group><div class=arc-label>歌剧系列</div><a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-link><span class=ep-num>15</span>
 <span class=ep-title>Opera Acoustics and the Singer's Formant</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link>
-<span class=ep-num>16</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link><span class=ep-num>16</span>
 <span class=ep-title>Rossini's Code — Budden, Gossett, and the Convention System</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-link>
-<span class=ep-num>17</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-link><span class=ep-num>17</span>
 <span class=ep-title>Leitmotif Networks — Wagner's Ring Cycle</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-link>
-<span class=ep-num>18</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-link><span class=ep-num>18</span>
 <span class=ep-title>Game Theory in Operatic Duets</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link>
-<span class=ep-num>19</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link><span class=ep-num>19</span>
 <span class=ep-title>Vibrato as FM Synthesis</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-link>
-<span class=ep-num>20</span>
-<span class=ep-title>Character Interaction Networks in Opera</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>AI 音乐三部曲</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-link>
-<span class=ep-num>21</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-link><span class=ep-num>20</span>
+<span class=ep-title>Character Interaction Networks in Opera</span></a></div><div class=arc-group><div class=arc-label>AI 音乐三部曲</div><a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-link><span class=ep-num>21</span>
 <span class=ep-title>From Markov to Diffusion — Sixty Years of AI Composition</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-link>
-<span class=ep-num>22</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-link><span class=ep-num>22</span>
 <span class=ep-title>How AI Writes Music — EnCodec and RVQ</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-link>
-<span class=ep-num>23</span>
-<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span>
-</a>
-</div>
-<div class=sidebar-footer>
-<a href=/theorems/>定理索引</a>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-link><span class=ep-num>23</span>
+<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span></a></div><div class=arc-group><div class=arc-label>流行音乐 × 数学</div><a href=https://amath390.sibeliusp.com/episodes/ep24/ class=ep-link><span class=ep-num>24</span>
+<span class=ep-title>The Information Code of Pop Music</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep25/ class=ep-link><span class=ep-num>25</span>
+<span class=ep-title>Why Music Gives You Goosebumps — Prediction Error and Frisson</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep26/ class=ep-link><span class=ep-num>26</span>
+<span class=ep-title>The 1/f Law of Music</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep27/ class=ep-link><span class=ep-num>27</span>
+<span class=ep-title>Answering Viral Critics with Mathematics</span></a></div><div class=arc-group><div class=arc-label>音乐技术系列</div><a href=https://amath390.sibeliusp.com/episodes/ep28/ class=ep-link><span class=ep-num>28</span>
+<span class=ep-title>Your Microphone Is a Damped Oscillator</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep29/ class=ep-link><span class=ep-num>29</span>
+<span class=ep-title>Primes in the Studio — Standing Waves and QRD Diffusers</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep30/ class=ep-link><span class=ep-num>30</span>
+<span class=ep-title>The Sampling Theorem Is Not What You Think</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep31/ class=ep-link><span class=ep-num>31</span>
+<span class=ep-title>The Warmth of Moog Has an Equation</span></a></div><div class=sidebar-footer><a href=/theorems/>定理索引</a>
 <a href=/domains/>数学领域</a>
-<a href=/about/>关于</a>
-</div>
-</nav>
-<main class=main-content>
-<div class=episode-layout>
-<article class=episode-page>
-<header class=episode-header>
-<div class=ep-badge>EP07</div>
-<h1 class=ep-main-title>EP07: Information Entropy and All-Interval Rows</h1>
-<div class=ep-subtitle>Shannon熵, 信源编码</div>
-<div class=ep-meta>
-<span class=meta-item>
-<span class=meta-icon>▶</span> 8:31
-</span>
-<span class="meta-item domains">
-<span class=domain-chip>Information Theory</span><span class=domain-chip>Combinatorics</span><span class=domain-chip>Abstract Algebra</span>
-</span>
-</div>
-</header>
-<div class=cross-refs>
-<h3 class=cross-refs-title>前置知识</h3>
-<div class=ref-cards>
-<a href=https://amath390.sibeliusp.com/episodes/ep04/ class="ref-card callback">
-<span class=ref-ep>EP04</span>
-<span class=ref-title>All-Interval Rows and ℤ₁₂</span>
-</a>
-</div>
-</div>
-<div class=cross-refs>
-<h3 class=cross-refs-title>后续拓展</h3>
-<div class=ref-cards>
-<a href=https://amath390.sibeliusp.com/episodes/ep21/ class="ref-card forward">
-<span class=ref-ep>EP21</span>
+<a href=/about/>关于</a></div></nav><main class=main-content><div class=episode-layout><article class=episode-page><header class=episode-header><div class=ep-badge>EP07</div><h1 class=ep-main-title>EP07: Information Entropy and All-Interval Rows</h1><div class=ep-subtitle>Shannon熵, 信源编码</div><div class=ep-meta><span class=meta-item><span class=meta-icon>▶</span> 8:31
+</span><span class="meta-item domains"><span class=domain-chip>Information Theory</span><span class=domain-chip>Combinatorics</span><span class=domain-chip>Abstract Algebra</span></span></div></header><div class=cross-refs><h3 class=cross-refs-title>前置知识</h3><div class=ref-cards><a href=https://amath390.sibeliusp.com/episodes/ep04/ class="ref-card callback"><span class=ref-ep>EP04</span>
+<span class=ref-title>All-Interval Rows and ℤ₁₂</span></a></div></div><div class=cross-refs><h3 class=cross-refs-title>后续拓展</h3><div class=ref-cards><a href=https://amath390.sibeliusp.com/episodes/ep21/ class="ref-card forward"><span class=ref-ep>EP21</span>
 <span class=ref-title>From Markov to Diffusion — Sixty Years of AI Composition</span>
-</a>
-</div>
-</div>
-<div class=xhs-section>
-<div class=xhs-section-header>
-<span class=xhs-logo-badge>小红书</span>
-<span class=xhs-section-title>Watch on 小红书</span>
-</div>
-<div class=xhs-cards>
-<a href="https://www.xiaohongshu.com/discovery/item/6988f68e000000000a02ddf5?source=webshare&xhsshare=pc_web&xsec_token=ABSm0IpedGbVZ0D1VkJdoq0h65S5c9ceiXYomNFxotYqU=&xsec_source=pc_share" target=_blank rel=noopener class=xhs-card>
-<div class=xhs-card-inner>
-<div class=xhs-card-icon>▶</div>
-<div class=xhs-card-text>
-<div class=xhs-card-title>你觉得混乱？数学说这最均衡</div>
-<div class=xhs-card-sub>xiaohongshu.com</div>
-</div>
-<div class=xhs-card-arrow>→</div>
-</div>
-</a>
-</div>
-</div>
-<div class="episode-content content">
-<h2 id=overview>Overview</h2>
-<p>A listener hears two melodies and judges the second as &ldquo;more chaotic.&rdquo; But when you measure the distribution of adjacent intervals, the second melody is mathematically <em>more uniform</em> — its Shannon entropy is higher, not lower. The discomfort comes not from disorder but from the absence of the familiar concentrated pattern that tonal music trains the brain to expect.</p>
-<p>This episode builds Shannon&rsquo;s entropy from first principles and applies it to music. The central object is the <strong>all-interval row</strong> on <span class=math-inline data-latex=\mathbb{Z}_{12}></span>: a 12-tone sequence whose 11 adjacent intervals hit every value in <span class=math-inline data-latex=\{1,\ldots,11\}></span> exactly once. This uniform distribution achieves the theoretical entropy maximum <span class=math-inline data-latex="H = \log_2 11 \approx 3.46"></span> bits. In contrast, a Bach prelude&rsquo;s interval distribution concentrates on steps and thirds, yielding <span class=math-inline data-latex="H \approx 3.1"></span> bits.</p>
-<p>The paradox: the all-interval row <em>looks</em> random (uniform histogram) but is <em>extremely rare</em> (only 1,928 out of <span class=math-inline data-latex="12! \approx 479{,}000{,}000"></span> twelve-tone rows satisfy the condition). It is a <strong>pseudorandom</strong> object — deterministically constructed to maximize a statistical property. This is the same mathematical principle underlying cryptographic pseudorandom generators.</p>
-<blockquote>
-<p><em>中文:</em> &ldquo;随机性不是无序的对立面，而是极端有序的另一种表现。全音程音列用最严格的约束，生成了最均匀的输出。&rdquo;</p>
-</blockquote>
-<hr>
-<h2 id=prerequisites>Prerequisites</h2>
-<ul>
-<li>
-<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=episode-ref-link>All-Interval Rows and <span class=math-inline data-latex=\mathbb{Z}_{12}></span> (EP04)</a>
-— the definition of all-interval rows, the Klein mother chord</li>
-<li>Basic probability: discrete probability distributions, expected value</li>
-</ul>
-<hr>
-<h2 id=definitions>Definitions</h2>
-<div class=definition-block id=def-7.1>
-<div class=block-label>
-Def 7.1 (Shannon Entropy)
-</div>
-<div class=block-body><p>Let <span class=math-inline data-latex=X></span> be a discrete random variable taking values in <span class=math-inline data-latex="\{x_1, \ldots, x_n\}"></span> with probabilities <span class=math-inline data-latex="p_i = P(X = x_i)"></span>. The <strong>Shannon entropy</strong> of <span class=math-inline data-latex=X></span> is</p>
-<p><span class=math-display data-latex="H(X) = -\sum_{i=1}^n p_i \log_2 p_i \quad \text{(bits)}"></span></p>
-<p>using the convention <span class=math-inline data-latex="0 \log_2 0 = 0"></span>. Entropy measures the average <em>surprise</em> of an outcome: <span class=math-inline data-latex="-\log_2 p_i"></span> is the surprise of outcome <span class=math-inline data-latex=x_i></span>.</p>
-</div>
-</div>
-<div class=definition-block id=def-7.2>
-<div class=block-label>
-Def 7.2 (Interval Distribution of a Melody)
-</div>
-<div class=block-body><p>Given a melody as a sequence of pitch classes <span class=math-inline data-latex="m_1, m_2, \ldots, m_N \in \mathbb{Z}_{12}"></span>, the <strong>adjacent interval sequence</strong> is <span class=math-inline data-latex="d_k = (m_{k+1} - m_k) \bmod 12"></span> for <span class=math-inline data-latex="k = 1,\ldots,N-1"></span>.</p>
-<p>The <strong>interval distribution</strong> is the empirical probability distribution over <span class=math-inline data-latex="\mathbb{Z}_{12} \setminus \{0\}"></span>: <span class=math-inline data-latex="\hat{p}_j = |\{k : d_k = j\}| / (N-1)"></span>.</p>
-<p>The <strong>melodic entropy</strong> is <span class=math-inline data-latex="H = -\sum_{j=1}^{11} \hat{p}_j \log_2 \hat{p}_j"></span>.</p>
-</div>
-</div>
-<div class=definition-block id=def-7.3>
-<div class=block-label>
-Def 7.3 (All-Interval Row)
-</div>
-<div class=block-body><p>A <strong>twelve-tone row</strong> is a permutation <span class=math-inline data-latex="(m_0, m_1, \ldots, m_{11})"></span> of <span class=math-inline data-latex=\mathbb{Z}_{12}></span>. It is an <strong>all-interval row</strong> if the 11 adjacent intervals <span class=math-inline data-latex="d_k = (m_{k+1} - m_k) \bmod 12"></span>, <span class=math-inline data-latex="k = 0,\ldots,10"></span>, take each value in <span class=math-inline data-latex=\{1,2,\ldots,11\}></span> exactly once.</p>
-<p>There are exactly 1,928 all-interval rows (up to starting pitch; if we also mod out by the dihedral group of twelve-tone operations, the count reduces further). Out of <span class=math-inline data-latex="12! = 479{,}001{,}600"></span> possible rows, this is a fraction of approximately <span class=math-inline data-latex=1/248{,}190></span>.</p>
-</div>
-</div>
-<div class=definition-block id=def-7.4>
-<div class=block-label>
-Def 7.4 (Perfect Difference Set)
-</div>
-<div class=block-body><p>A set <span class=math-inline data-latex="S = \{s_0, s_1, \ldots, s_{k-1}\} \subset \mathbb{Z}_n"></span> is a <strong>perfect difference set</strong> if every nonzero element of <span class=math-inline data-latex=\mathbb{Z}_n></span> appears exactly once among the <span class=math-inline data-latex=k(k-1)></span> differences <span class=math-inline data-latex="\{s_i - s_j \bmod n : i \ne j\}"></span>.</p>
-<p>Perfect difference sets exist when <span class=math-inline data-latex="n = k^2 - k + 1"></span> (a prime power condition). For <span class=math-inline data-latex="k = 4"></span>, <span class=math-inline data-latex="n = 13"></span>: the set <span class=math-inline data-latex="\{0, 1, 3, 9\} \subset \mathbb{Z}_{13}"></span> is a perfect difference set.</p>
-<p>All-interval rows are related but distinct: they concern <em>ordered</em> sequences of adjacent differences over <span class=math-inline data-latex=\mathbb{Z}_{12}></span>, not unordered multisets of all pairwise differences.</p>
-</div>
-</div>
-<div class=definition-block id=def-7.5>
-<div class=block-label>
-Def 7.5 (Entropy Rate of a Markov Chain)
-</div>
-<div class=block-body><p>A <strong>first-order Markov chain</strong> on alphabet <span class=math-inline data-latex=\mathcal{A}></span> has transition probabilities <span class=math-inline data-latex="p_{ij} = P(X_{t+1} = j \mid X_t = i)"></span> and stationary distribution <span class=math-inline data-latex=\pi></span> (where <span class=math-inline data-latex="\pi_i = \sum_j \pi_j p_{ji}"></span>).</p>
-<p>The <strong>entropy rate</strong> is</p>
-<p><span class=math-display data-latex="\bar{H} = -\sum_{i,j} \pi_i \, p_{ij} \log_2 p_{ij}."></span></p>
-<p>For music modeled as a Markov chain on pitch classes, <span class=math-inline data-latex=\bar{H}></span> measures the long-run unpredictability of the melody per note.</p>
-</div>
-</div>
-<hr>
-<h2 id=main-theorems>Main Theorems</h2>
-<div class=theorem-block id=theorem-7.1>
-<div class=block-label>
-Theorem 7.1 (Maximum Entropy: Uniform Distribution)
-</div>
-<div class=block-body>Among all probability distributions <span class=math-inline data-latex="(p_1, \ldots, p_n)"></span> with <span class=math-inline data-latex="p_i \ge 0"></span> and <span class=math-inline data-latex="\sum p_i = 1"></span>, entropy <span class=math-inline data-latex="H(X) = -\sum p_i \log_2 p_i"></span> is maximized by the uniform distribution <span class=math-inline data-latex="p_i = 1/n"></span> for all <span class=math-inline data-latex=i></span>, achieving <span class=math-inline data-latex="H_{\max} = \log_2 n"></span> bits.</div>
-</div>
-<div class=proof-block>
-<div class=block-label>Proof.</div>
-<div class=block-body><p>We use <strong>Jensen&rsquo;s inequality</strong>: since <span class=math-inline data-latex=\log_2></span> is strictly concave,</p>
-<p><span class=math-display data-latex="\log_2\!\left(\sum_{i=1}^n p_i \cdot \frac{1}{p_i}\right) \ge \sum_{i=1}^n p_i \log_2\!\left(\frac{1}{p_i}\right)"></span></p>
-<p>with equality iff all <span class=math-inline data-latex=1/p_i></span> are equal, i.e., <span class=math-inline data-latex="p_i = 1/n"></span> for all <span class=math-inline data-latex=i></span>.</p>
-<p>The left side is <span class=math-inline data-latex="\log_2\!\left(\sum_{i=1}^n p_i \cdot \frac{1}{p_i}\right) = \log_2(n)"></span>.</p>
-<p>The right side is <span class=math-inline data-latex="\sum_{i=1}^n p_i \log_2(1/p_i) = -\sum_{i=1}^n p_i \log_2 p_i = H(X)"></span>.</p>
-<p>Therefore <span class=math-inline data-latex="H(X) \le \log_2 n"></span>, with equality iff <span class=math-inline data-latex="p_i = 1/n"></span>. <span class=math-inline data-latex=\square></span></p>
-<p><strong>Corollary for all-interval rows:</strong> The adjacent interval distribution of an all-interval row is uniform over <span class=math-inline data-latex=\{1,\ldots,11\}></span> (each value exactly once out of 11), giving <span class=math-inline data-latex="H = \log_2 11 \approx 3.459"></span> bits — the maximum possible for an 11-symbol alphabet.</p>
-</div>
-</div>
-<div class=theorem-block id=theorem-7.2>
-<div class=block-label>
-Theorem 7.2 (Shannon's Source Coding Theorem)
-</div>
-<div class=block-body><p>Let <span class=math-inline data-latex="X_1, X_2, \ldots"></span> be i.i.d. with distribution <span class=math-inline data-latex=p></span> over alphabet <span class=math-inline data-latex=\mathcal{A}></span>. For any lossless prefix-free code assigning codeword of length <span class=math-inline data-latex=\ell_i></span> to symbol <span class=math-inline data-latex=x_i></span>:</p>
-<p><span class=math-display data-latex="H(X) \le \mathbb{E}[\ell(X)] < H(X) + 1"></span></p>
-<p>where <span class=math-inline data-latex="\mathbb{E}[\ell(X)] = \sum_i p_i \ell_i"></span> is the expected codeword length. The lower bound is achievable; no prefix-free code can do better on average than <span class=math-inline data-latex=H(X)></span> bits per symbol.</p>
-</div>
-</div>
-<div class=proof-block>
-<div class=block-label>Proof.</div>
-<div class=block-body><p><strong>Lower bound (<span class=math-inline data-latex="\mathbb{E}[\ell] \ge H"></span>):</strong> For any prefix-free code, the Kraft inequality states <span class=math-inline data-latex="\sum_i 2^{-\ell_i} \le 1"></span>. Let <span class=math-inline data-latex="q_i = 2^{-\ell_i}/Z"></span> where <span class=math-inline data-latex="Z = \sum_i 2^{-\ell_i} \le 1"></span>. Then</p>
-<p><span class=math-display data-latex="\mathbb{E}[\ell] - H = \sum_i p_i \ell_i + \sum_i p_i \log_2 p_i = \sum_i p_i \log_2 \frac{p_i}{2^{-\ell_i}}"></span></p>
-<p><span class=math-display data-latex="= \sum_i p_i \log_2 \frac{p_i}{q_i \cdot Z} = D_{\mathrm{KL}}(p \| q) + \log_2(1/Z) \ge 0"></span></p>
-<p>since KL divergence <span class=math-inline data-latex="D_{\mathrm{KL}} \ge 0"></span> and <span class=math-inline data-latex="\log_2(1/Z) \ge 0"></span> (as <span class=math-inline data-latex="Z \le 1"></span>).</p>
-<p><strong>Upper bound (<span class=math-inline data-latex="\mathbb{E}[\ell] < H + 1"></span>):</strong> Choose <span class=math-inline data-latex="\ell_i = \lceil -\log_2 p_i \rceil"></span>. Then <span class=math-inline data-latex="\ell_i \le -\log_2 p_i + 1"></span>, so <span class=math-inline data-latex="\mathbb{E}[\ell] \le -\sum p_i \log_2 p_i + 1 = H + 1"></span>. The Kraft inequality is satisfied since <span class=math-inline data-latex="\sum 2^{-\ell_i} \le \sum p_i = 1"></span>. <span class=math-inline data-latex=\square></span></p>
-<p><strong>Musical corollary:</strong> Tonal melody with <span class=math-inline data-latex="H \approx 3.1"></span> bits/interval can be encoded with <span class=math-inline data-latex="\approx 3.1"></span> bits per interval. An all-interval row with <span class=math-inline data-latex="H = 3.46"></span> bits requires <span class=math-inline data-latex="\approx 3.46"></span> bits per interval. The tonal melody is <em>more compressible</em> — its redundancy (repeated steps and thirds) is exactly what permits shorter average codes.</p>
-</div>
-</div>
-<div class=theorem-block id=theorem-7.3>
-<div class=block-label>
-Theorem 7.3 (Entropy Rate via Stationary Distribution)
-</div>
-<div class=block-body><p>For an ergodic Markov chain with stationary distribution <span class=math-inline data-latex=\pi></span> and transition matrix <span class=math-inline data-latex=P></span>, the entropy rate equals</p>
-<p><span class=math-display data-latex="\bar{H} = -\sum_{i \in \mathcal{A}} \pi_i \sum_{j \in \mathcal{A}} p_{ij} \log_2 p_{ij} = \sum_{i} \pi_i H(X_{t+1} \mid X_t = i)."></span></p>
-<p>This is the weighted average of the per-state conditional entropies.</p>
-</div>
-</div>
-<div class=proof-block>
-<div class=block-label>Proof.</div>
-<div class=block-body><p>By the chain rule for entropy, <span class=math-inline data-latex="H(X_1, \ldots, X_n) = H(X_1) + \sum_{k=2}^n H(X_k \mid X_1,\ldots,X_{k-1})"></span>.</p>
-<p>For a Markov chain, <span class=math-inline data-latex="H(X_k \mid X_1,\ldots,X_{k-1}) = H(X_k \mid X_{k-1})"></span>.</p>
-<p>By ergodicity, the empirical distribution of <span class=math-inline data-latex=X_{k-1}></span> converges to <span class=math-inline data-latex=\pi></span>, so</p>
-<p><span class=math-display data-latex="\frac{1}{n}H(X_1,\ldots,X_n) \to H(X_2 \mid X_1) = \sum_i \pi_i H(X_2 \mid X_1 = i) = -\sum_{i,j} \pi_i p_{ij} \log_2 p_{ij}. \quad \square"></span></p>
-</div>
-</div>
-<div class=proposition-block id=prop-7.1>
-<div class=block-label>
-Prop 7.1 (Pseudorandomness of All-Interval Rows)
-</div>
-<div class=block-body><p>An all-interval row achieves the maximum adjacent-interval entropy <span class=math-inline data-latex="H = \log_2 11"></span> and is incompressible in the Lempel-Ziv sense over its 11 intervals — yet it is the output of a deterministic construction satisfying strict algebraic constraints.</p>
-<p>Formally: the 11-symbol string formed by the adjacent intervals of an all-interval row has Kolmogorov complexity <span class=math-inline data-latex="K \ll \log_2(11!) = \log_2(39{,}916{,}800) \approx 25.2"></span> bits, since the row can be specified by its first element and a short description of the all-interval property. It is <em>statistically</em> indistinguishable from a uniform draw over <span class=math-inline data-latex=S_{11}></span> (all permutations of <span class=math-inline data-latex=\{1,\ldots,11\}></span>), but <em>computationally</em> it is a highly structured object.</p>
-</div>
-</div>
-<blockquote>
-<p><em>Visual:</em> Two histograms side by side: left shows Bach C-major Prelude interval frequencies (tall bars at 1,2,3,4; short bars at 6,7,10,11), right shows a flat histogram for an all-interval row. Caption: <span class=math-inline data-latex="H = 3.1"></span> bits vs. <span class=math-inline data-latex="H = 3.46"></span> bits.</p>
-</blockquote>
-<hr>
-<h2 id=musical-connection>Musical Connection</h2>
-<div class=music-block>
-<div class=block-label>音乐联系</div>
-<div class=block-body><p><strong>The entropy hierarchy of musical styles</strong></p>
-<p>Measured entropy of adjacent interval distributions, from various corpora:</p>
-<table>
-<thead>
-<tr>
-<th>Corpus</th>
-<th>Approximate <span class=math-inline data-latex=H></span> (bits)</th>
-<th>Character</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Gregorian chant</td>
-<td><span class=math-inline data-latex="\sim 1.5"></span></td>
-<td>Almost entirely stepwise</td>
-</tr>
-<tr>
-<td>Bach chorales</td>
-<td><span class=math-inline data-latex="\sim 2.6"></span></td>
-<td>Steps + thirds dominate</td>
-</tr>
-<tr>
-<td>Bach C-major Prelude</td>
-<td><span class=math-inline data-latex="\sim 3.1"></span></td>
-<td>Wider range of intervals</td>
-</tr>
-<tr>
-<td>Bebop jazz heads</td>
-<td><span class=math-inline data-latex="\sim 3.3"></span></td>
-<td>Chromatic passing tones</td>
-</tr>
-<tr>
-<td>Webern Op. 27</td>
-<td><span class=math-inline data-latex="\sim 3.4"></span></td>
-<td>Wide leaps, near-uniform</td>
-</tr>
-<tr>
-<td>All-interval row</td>
-<td>$3.459$</td>
-<td>Uniform, theoretical max</td>
-</tr>
-</tbody>
-</table>
-<p>The entropy gradient roughly tracks Western music history: the expansion of harmonic vocabulary from modal chant to twelve-tone serialism corresponds to a monotone increase in interval entropy.</p>
-<p><strong>朱载堉 (Zhu Zaiyu) and equal temperament — the same operation</strong></p>
-<p>In 1584, the Ming dynasty scholar Zhu Zaiyu solved the tuning problem by choosing frequency ratios of <span class=math-inline data-latex=2^{k/12}></span> for all semitones — mathematically equalizing all twelve intervals at the cost of making each one slightly irrational. This is the <em>same mathematical operation</em> as the all-interval row: Zhu uniformized pitch ratios across twelve semitones; Schoenberg uniformized interval frequencies across twelve interval classes. Two revolutions, four centuries apart, unified by the principle of replacing a natural hierarchy with a mathematical uniform distribution.</p>
-<p><strong>Entropy rate and musical style fingerprints</strong></p>
-<p>Modeling a composer&rsquo;s style as a first-order Markov chain on <span class=math-inline data-latex=\mathbb{Z}_{12}></span>, the entropy rate <span class=math-inline data-latex=\bar{H}></span> characterizes how &ldquo;predictable&rdquo; their melodic choices are:</p>
-<ul>
-<li>Bach: <span class=math-inline data-latex="\bar{H} \approx 2.8"></span> bits/note (strong tonal gravity, concentrated transitions)</li>
-<li>Chopin: <span class=math-inline data-latex="\bar{H} \approx 3.1"></span> bits/note (more chromatic but still tonal)</li>
-<li>Schoenberg (twelve-tone period): <span class=math-inline data-latex="\bar{H} \approx 3.4"></span> bits/note (near-maximal)</li>
-</ul>
-<p>The entropy rate is a single real number that summarizes a composer&rsquo;s interval vocabulary — a lossy compression of style into one bit of information theory.</p>
-<p>This connects forward to EP21 (AI composition uses Markov chain entropy rate as a diversity metric) and EP24 (pop music is low-entropy by design; melodic predictability is a feature, not a bug).</p>
-</div>
-</div>
-<hr>
-<h2 id=limits-and-open-questions>Limits and Open Questions</h2>
-<ol>
-<li>
-<p><strong>First-order vs. higher-order models.</strong> Melodic entropy computed from adjacent intervals is a first-order statistic. Long-range dependencies (phrase structure, motivic development) require higher-order Markov models or full probabilistic context-free grammars. The entropy rate of a <span class=math-inline data-latex=k></span>-th order chain requires much more data to estimate reliably.</p>
-</li>
-<li>
-<p><strong>Entropy vs. perceived complexity.</strong> High entropy does not equal perceived complexity. A melody of random pitches (maximum entropy) is less interesting than a fugue (moderate entropy, rich long-range structure). Information theory measures statistical uniformity; perceived complexity involves pattern recognition at multiple timescales.</p>
-</li>
-<li>
-<p><strong>Combinatorial counting of all-interval rows.</strong> The exact count of 1,928 all-interval rows (up to starting pitch) was determined computationally. The algebraic structure that generates them — related to perfect difference sets and the theory of cyclic difference families — is only partially understood. An open question: is there a direct constructive bijection between all-interval rows and a known combinatorial object?</p>
-</li>
-<li>
-<p><strong>Entropy of rhythm.</strong> Analogously to pitch interval entropy, one can define the entropy of inter-onset intervals (IOIs) in rhythm. African polyrhythm typically achieves higher rhythmic entropy than Western common-practice meter. A comparative study across global music traditions is an active research area.</p>
-</li>
-<li>
-<p><strong>Minimum description length and style.</strong> Kolmogorov complexity <span class=math-inline data-latex=K(m)></span> of a melody <span class=math-inline data-latex=m></span> is the length of the shortest program that generates <span class=math-inline data-latex=m></span>. By the source coding theorem, <span class=math-inline data-latex="\mathbb{E}[K(m)] \approx H"></span> for i.i.d. melodies, but for structured compositions <span class=math-inline data-latex="K \ll H \cdot \text{(length)}"></span> because the structure allows extreme compression. The gap <span class=math-inline data-latex="H - K/\text{length}"></span> measures &ldquo;structural redundancy&rdquo; — it is large for tonal music, small for twelve-tone music.</p>
-</li>
-</ol>
-<hr>
-<h2 id=academic-references>Academic References</h2>
-<ol>
-<li>
-<p>Shannon, C. E. (1948). A mathematical theory of communication. <em>Bell System Technical Journal</em>, 27(3), 379–423. (The founding paper of information theory.)</p>
-</li>
-<li>
-<p>Cover, T. M., & Thomas, J. A. (2006). <em>Elements of Information Theory</em> (2nd ed.). Wiley. Ch. 2 (Entropy), Ch. 5 (Source coding theorem).</p>
-</li>
-<li>
-<p>Knopoff, L., & Hutchinson, W. (1983). Entropy as a measure of style: The influence of sample length. <em>Journal of Music Theory</em>, 27(1), 75–97.</p>
-</li>
-<li>
-<p>Margulis, E. H., & Beatty, A. P. (2008). Musical style, psychoaesthetics, and prospects for entropy as an analytic tool. <em>Computer Music Journal</em>, 32(4), 64–78.</p>
-</li>
-<li>
-<p>Morris, R. (1987). <em>Composition with Pitch Classes</em>. Yale University Press. (All-interval rows and their algebraic properties.)</p>
-</li>
-<li>
-<p>Jedrzejewski, F. (2006). <em>Mathematical Theory of Music</em>. Editions Delatour France/IRCAM. (Perfect difference sets and interval content.)</p>
-</li>
-<li>
-<p>Nolan, C. (2000). On the mathematical side of Schoenberg&rsquo;s twelve-tone method. <em>Music Theory Spectrum</em>, 22(2), 162–182.</p>
-</li>
-<li>
-<p>Temperley, D. (2007). <em>Music and Probability</em>. MIT Press. (Probabilistic models of musical cognition including Markov chain entropy.)</p>
-</li>
-</ol>
-</div>
-<nav class=ep-nav>
-<a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-nav-prev>
-← EP06: Graph Coloring and Voice Assignment
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-nav-next>
-EP08: Shepard Tones and the Tritone Paradox →
-</a>
-</nav>
-</article>
-<aside class=ep-toc-aside>
-<div class=ep-toc-sticky>
-<div class=ep-toc-label>本页目录</div>
-<nav id=TableOfContents>
-<ul>
-<li><a href=#overview>Overview</a></li>
-<li><a href=#prerequisites>Prerequisites</a></li>
-<li><a href=#definitions>Definitions</a></li>
-<li><a href=#main-theorems>Main Theorems</a></li>
-<li><a href=#musical-connection>Musical Connection</a></li>
-<li><a href=#limits-and-open-questions>Limits and Open Questions</a></li>
-<li><a href=#academic-references>Academic References</a></li>
-</ul>
-</nav>
-</div>
-</aside>
-</div>
-<footer class=site-footer>
-<div class=footer-content>
-<a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link>
-<img src=/images/avatar.png alt="Sibelius P." class=footer-avatar>
-</a>
-<div class=footer-text>
-<span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep24/ class="ref-card forward"><span class=ref-ep>EP24</span>
+<span class=ref-title>The Information Code of Pop Music</span></a></div></div><div class=xhs-section><div class=xhs-section-header><span class=xhs-logo-badge>小红书</span>
+<span class=xhs-section-title>Watch on 小红书</span></div><div class=xhs-cards><a href="https://www.xiaohongshu.com/discovery/item/6988f68e000000000a02ddf5?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABSm0IpedGbVZ0D1VkJdoq0h65S5c9ceiXYomNFxotYqU=&amp;xsec_source=pc_share" target=_blank rel=noopener class=xhs-card><div class=xhs-card-inner><div class=xhs-card-icon>▶</div><div class=xhs-card-text><div class=xhs-card-title>你觉得混乱？数学说这最均衡</div><div class=xhs-card-sub>xiaohongshu.com</div></div><div class=xhs-card-arrow>→</div></div></a></div></div><div class="episode-content content"><h2 id=overview>Overview</h2><p>A listener hears two melodies and judges the second as &ldquo;more chaotic.&rdquo; But when you measure the distribution of adjacent intervals, the second melody is mathematically <em>more uniform</em> — its Shannon entropy is higher, not lower. The discomfort comes not from disorder but from the absence of the familiar concentrated pattern that tonal music trains the brain to expect.</p><p>This episode builds Shannon&rsquo;s entropy from first principles and applies it to music. The central object is the <strong>all-interval row</strong> on <span class=math-inline data-latex=\mathbb{Z}_{12}></span>: a 12-tone sequence whose 11 adjacent intervals hit every value in <span class=math-inline data-latex=\{1,\ldots,11\}></span> exactly once. This uniform distribution achieves the theoretical entropy maximum <span class=math-inline data-latex="H = \log_2 11 \approx 3.46"></span> bits. In contrast, a Bach prelude&rsquo;s interval distribution concentrates on steps and thirds, yielding <span class=math-inline data-latex="H \approx 3.1"></span> bits.</p><p>The paradox: the all-interval row <em>looks</em> random (uniform histogram) but is <em>extremely rare</em> (only 1,928 out of <span class=math-inline data-latex="12! \approx 479{,}000{,}000"></span> twelve-tone rows satisfy the condition). It is a <strong>pseudorandom</strong> object — deterministically constructed to maximize a statistical property. This is the same mathematical principle underlying cryptographic pseudorandom generators.</p><blockquote><p><em>中文:</em> &ldquo;随机性不是无序的对立面，而是极端有序的另一种表现。全音程音列用最严格的约束，生成了最均匀的输出。&rdquo;</p></blockquote><hr><h2 id=prerequisites>Prerequisites</h2><ul><li><a href=https://amath390.sibeliusp.com/episodes/ep04/ class=episode-ref-link>All-Interval Rows and <span class=math-inline data-latex=\mathbb{Z}_{12}></span> (EP04)</a>
+— the definition of all-interval rows, the Klein mother chord</li><li>Basic probability: discrete probability distributions, expected value</li></ul><hr><h2 id=definitions>Definitions</h2><div class=definition-block id=def-7.1><div class=block-label>Def 7.1 (Shannon Entropy)</div><div class=block-body><p>Let <span class=math-inline data-latex=X></span> be a discrete random variable taking values in <span class=math-inline data-latex="\{x_1, \ldots, x_n\}"></span> with probabilities <span class=math-inline data-latex="p_i = P(X = x_i)"></span>. The <strong>Shannon entropy</strong> of <span class=math-inline data-latex=X></span> is</p><p><span class=math-display data-latex="H(X) = -\sum_{i=1}^n p_i \log_2 p_i \quad \text{(bits)}"></span></p><p>using the convention <span class=math-inline data-latex="0 \log_2 0 = 0"></span>. Entropy measures the average <em>surprise</em> of an outcome: <span class=math-inline data-latex="-\log_2 p_i"></span> is the surprise of outcome <span class=math-inline data-latex=x_i></span>.</p></div></div><div class=definition-block id=def-7.2><div class=block-label>Def 7.2 (Interval Distribution of a Melody)</div><div class=block-body><p>Given a melody as a sequence of pitch classes <span class=math-inline data-latex="m_1, m_2, \ldots, m_N \in \mathbb{Z}_{12}"></span>, the <strong>adjacent interval sequence</strong> is <span class=math-inline data-latex="d_k = (m_{k+1} - m_k) \bmod 12"></span> for <span class=math-inline data-latex="k = 1,\ldots,N-1"></span>.</p><p>The <strong>interval distribution</strong> is the empirical probability distribution over <span class=math-inline data-latex="\mathbb{Z}_{12} \setminus \{0\}"></span>: <span class=math-inline data-latex="\hat{p}_j = |\{k : d_k = j\}| / (N-1)"></span>.</p><p>The <strong>melodic entropy</strong> is <span class=math-inline data-latex="H = -\sum_{j=1}^{11} \hat{p}_j \log_2 \hat{p}_j"></span>.</p></div></div><div class=definition-block id=def-7.3><div class=block-label>Def 7.3 (All-Interval Row)</div><div class=block-body><p>A <strong>twelve-tone row</strong> is a permutation <span class=math-inline data-latex="(m_0, m_1, \ldots, m_{11})"></span> of <span class=math-inline data-latex=\mathbb{Z}_{12}></span>. It is an <strong>all-interval row</strong> if the 11 adjacent intervals <span class=math-inline data-latex="d_k = (m_{k+1} - m_k) \bmod 12"></span>, <span class=math-inline data-latex="k = 0,\ldots,10"></span>, take each value in <span class=math-inline data-latex=\{1,2,\ldots,11\}></span> exactly once.</p><p>There are exactly 1,928 all-interval rows (up to starting pitch; if we also mod out by the dihedral group of twelve-tone operations, the count reduces further). Out of <span class=math-inline data-latex="12! = 479{,}001{,}600"></span> possible rows, this is a fraction of approximately <span class=math-inline data-latex=1/248{,}190></span>.</p></div></div><div class=definition-block id=def-7.4><div class=block-label>Def 7.4 (Perfect Difference Set)</div><div class=block-body><p>A set <span class=math-inline data-latex="S = \{s_0, s_1, \ldots, s_{k-1}\} \subset \mathbb{Z}_n"></span> is a <strong>perfect difference set</strong> if every nonzero element of <span class=math-inline data-latex=\mathbb{Z}_n></span> appears exactly once among the <span class=math-inline data-latex=k(k-1)></span> differences <span class=math-inline data-latex="\{s_i - s_j \bmod n : i \ne j\}"></span>.</p><p>Perfect difference sets exist when <span class=math-inline data-latex="n = k^2 - k + 1"></span> (a prime power condition). For <span class=math-inline data-latex="k = 4"></span>, <span class=math-inline data-latex="n = 13"></span>: the set <span class=math-inline data-latex="\{0, 1, 3, 9\} \subset \mathbb{Z}_{13}"></span> is a perfect difference set.</p><p>All-interval rows are related but distinct: they concern <em>ordered</em> sequences of adjacent differences over <span class=math-inline data-latex=\mathbb{Z}_{12}></span>, not unordered multisets of all pairwise differences.</p></div></div><div class=definition-block id=def-7.5><div class=block-label>Def 7.5 (Entropy Rate of a Markov Chain)</div><div class=block-body><p>A <strong>first-order Markov chain</strong> on alphabet <span class=math-inline data-latex=\mathcal{A}></span> has transition probabilities <span class=math-inline data-latex="p_{ij} = P(X_{t+1} = j \mid X_t = i)"></span> and stationary distribution <span class=math-inline data-latex=\pi></span> (where <span class=math-inline data-latex="\pi_i = \sum_j \pi_j p_{ji}"></span>).</p><p>The <strong>entropy rate</strong> is</p><p><span class=math-display data-latex="\bar{H} = -\sum_{i,j} \pi_i \, p_{ij} \log_2 p_{ij}."></span></p><p>For music modeled as a Markov chain on pitch classes, <span class=math-inline data-latex=\bar{H}></span> measures the long-run unpredictability of the melody per note.</p></div></div><hr><h2 id=main-theorems>Main Theorems</h2><div class=theorem-block id=theorem-7.1><div class=block-label>Theorem 7.1 (Maximum Entropy: Uniform Distribution)</div><div class=block-body>Among all probability distributions <span class=math-inline data-latex="(p_1, \ldots, p_n)"></span> with <span class=math-inline data-latex="p_i \ge 0"></span> and <span class=math-inline data-latex="\sum p_i = 1"></span>, entropy <span class=math-inline data-latex="H(X) = -\sum p_i \log_2 p_i"></span> is maximized by the uniform distribution <span class=math-inline data-latex="p_i = 1/n"></span> for all <span class=math-inline data-latex=i></span>, achieving <span class=math-inline data-latex="H_{\max} = \log_2 n"></span> bits.</div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p>We use <strong>Jensen&rsquo;s inequality</strong>: since <span class=math-inline data-latex=\log_2></span> is strictly concave,</p><p><span class=math-display data-latex="\log_2\!\left(\sum_{i=1}^n p_i \cdot \frac{1}{p_i}\right) \ge \sum_{i=1}^n p_i \log_2\!\left(\frac{1}{p_i}\right)"></span></p><p>with equality iff all <span class=math-inline data-latex=1/p_i></span> are equal, i.e., <span class=math-inline data-latex="p_i = 1/n"></span> for all <span class=math-inline data-latex=i></span>.</p><p>The left side is <span class=math-inline data-latex="\log_2\!\left(\sum_{i=1}^n p_i \cdot \frac{1}{p_i}\right) = \log_2(n)"></span>.</p><p>The right side is <span class=math-inline data-latex="\sum_{i=1}^n p_i \log_2(1/p_i) = -\sum_{i=1}^n p_i \log_2 p_i = H(X)"></span>.</p><p>Therefore <span class=math-inline data-latex="H(X) \le \log_2 n"></span>, with equality iff <span class=math-inline data-latex="p_i = 1/n"></span>. <span class=math-inline data-latex=\square></span></p><p><strong>Corollary for all-interval rows:</strong> The adjacent interval distribution of an all-interval row is uniform over <span class=math-inline data-latex=\{1,\ldots,11\}></span> (each value exactly once out of 11), giving <span class=math-inline data-latex="H = \log_2 11 \approx 3.459"></span> bits — the maximum possible for an 11-symbol alphabet.</p></div></div><div class=theorem-block id=theorem-7.2><div class=block-label>Theorem 7.2 (Shannon's Source Coding Theorem)</div><div class=block-body><p>Let <span class=math-inline data-latex="X_1, X_2, \ldots"></span> be i.i.d. with distribution <span class=math-inline data-latex=p></span> over alphabet <span class=math-inline data-latex=\mathcal{A}></span>. For any lossless prefix-free code assigning codeword of length <span class=math-inline data-latex=\ell_i></span> to symbol <span class=math-inline data-latex=x_i></span>:</p><p><span class=math-display data-latex="H(X) \le \mathbb{E}[\ell(X)] < H(X) + 1"></span></p><p>where <span class=math-inline data-latex="\mathbb{E}[\ell(X)] = \sum_i p_i \ell_i"></span> is the expected codeword length. The lower bound is achievable; no prefix-free code can do better on average than <span class=math-inline data-latex=H(X)></span> bits per symbol.</p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p><strong>Lower bound (<span class=math-inline data-latex="\mathbb{E}[\ell] \ge H"></span>):</strong> For any prefix-free code, the Kraft inequality states <span class=math-inline data-latex="\sum_i 2^{-\ell_i} \le 1"></span>. Let <span class=math-inline data-latex="q_i = 2^{-\ell_i}/Z"></span> where <span class=math-inline data-latex="Z = \sum_i 2^{-\ell_i} \le 1"></span>. Then</p><p><span class=math-display data-latex="\mathbb{E}[\ell] - H = \sum_i p_i \ell_i + \sum_i p_i \log_2 p_i = \sum_i p_i \log_2 \frac{p_i}{2^{-\ell_i}}"></span></p><p><span class=math-display data-latex="= \sum_i p_i \log_2 \frac{p_i}{q_i \cdot Z} = D_{\mathrm{KL}}(p \| q) + \log_2(1/Z) \ge 0"></span></p><p>since KL divergence <span class=math-inline data-latex="D_{\mathrm{KL}} \ge 0"></span> and <span class=math-inline data-latex="\log_2(1/Z) \ge 0"></span> (as <span class=math-inline data-latex="Z \le 1"></span>).</p><p><strong>Upper bound (<span class=math-inline data-latex="\mathbb{E}[\ell] < H + 1"></span>):</strong> Choose <span class=math-inline data-latex="\ell_i = \lceil -\log_2 p_i \rceil"></span>. Then <span class=math-inline data-latex="\ell_i \le -\log_2 p_i + 1"></span>, so <span class=math-inline data-latex="\mathbb{E}[\ell] \le -\sum p_i \log_2 p_i + 1 = H + 1"></span>. The Kraft inequality is satisfied since <span class=math-inline data-latex="\sum 2^{-\ell_i} \le \sum p_i = 1"></span>. <span class=math-inline data-latex=\square></span></p><p><strong>Musical corollary:</strong> Tonal melody with <span class=math-inline data-latex="H \approx 3.1"></span> bits/interval can be encoded with <span class=math-inline data-latex="\approx 3.1"></span> bits per interval. An all-interval row with <span class=math-inline data-latex="H = 3.46"></span> bits requires <span class=math-inline data-latex="\approx 3.46"></span> bits per interval. The tonal melody is <em>more compressible</em> — its redundancy (repeated steps and thirds) is exactly what permits shorter average codes.</p></div></div><div class=theorem-block id=theorem-7.3><div class=block-label>Theorem 7.3 (Entropy Rate via Stationary Distribution)</div><div class=block-body><p>For an ergodic Markov chain with stationary distribution <span class=math-inline data-latex=\pi></span> and transition matrix <span class=math-inline data-latex=P></span>, the entropy rate equals</p><p><span class=math-display data-latex="\bar{H} = -\sum_{i \in \mathcal{A}} \pi_i \sum_{j \in \mathcal{A}} p_{ij} \log_2 p_{ij} = \sum_{i} \pi_i H(X_{t+1} \mid X_t = i)."></span></p><p>This is the weighted average of the per-state conditional entropies.</p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p>By the chain rule for entropy, <span class=math-inline data-latex="H(X_1, \ldots, X_n) = H(X_1) + \sum_{k=2}^n H(X_k \mid X_1,\ldots,X_{k-1})"></span>.</p><p>For a Markov chain, <span class=math-inline data-latex="H(X_k \mid X_1,\ldots,X_{k-1}) = H(X_k \mid X_{k-1})"></span>.</p><p>By ergodicity, the empirical distribution of <span class=math-inline data-latex=X_{k-1}></span> converges to <span class=math-inline data-latex=\pi></span>, so</p><p><span class=math-display data-latex="\frac{1}{n}H(X_1,\ldots,X_n) \to H(X_2 \mid X_1) = \sum_i \pi_i H(X_2 \mid X_1 = i) = -\sum_{i,j} \pi_i p_{ij} \log_2 p_{ij}. \quad \square"></span></p></div></div><div class=proposition-block id=prop-7.1><div class=block-label>Prop 7.1 (Pseudorandomness of All-Interval Rows)</div><div class=block-body><p>An all-interval row achieves the maximum adjacent-interval entropy <span class=math-inline data-latex="H = \log_2 11"></span> and is incompressible in the Lempel-Ziv sense over its 11 intervals — yet it is the output of a deterministic construction satisfying strict algebraic constraints.</p><p>Formally: the 11-symbol string formed by the adjacent intervals of an all-interval row has Kolmogorov complexity <span class=math-inline data-latex="K \ll \log_2(11!) = \log_2(39{,}916{,}800) \approx 25.2"></span> bits, since the row can be specified by its first element and a short description of the all-interval property. It is <em>statistically</em> indistinguishable from a uniform draw over <span class=math-inline data-latex=S_{11}></span> (all permutations of <span class=math-inline data-latex=\{1,\ldots,11\}></span>), but <em>computationally</em> it is a highly structured object.</p></div></div><blockquote><p><em>Visual:</em> Two histograms side by side: left shows Bach C-major Prelude interval frequencies (tall bars at 1,2,3,4; short bars at 6,7,10,11), right shows a flat histogram for an all-interval row. Caption: <span class=math-inline data-latex="H = 3.1"></span> bits vs. <span class=math-inline data-latex="H = 3.46"></span> bits.</p></blockquote><hr><h2 id=musical-connection>Musical Connection</h2><div class=music-block><div class=block-label>音乐联系</div><div class=block-body><p><strong>The entropy hierarchy of musical styles</strong></p><p>Measured entropy of adjacent interval distributions, from various corpora:</p><table><thead><tr><th>Corpus</th><th>Approximate <span class=math-inline data-latex=H></span> (bits)</th><th>Character</th></tr></thead><tbody><tr><td>Gregorian chant</td><td><span class=math-inline data-latex="\sim 1.5"></span></td><td>Almost entirely stepwise</td></tr><tr><td>Bach chorales</td><td><span class=math-inline data-latex="\sim 2.6"></span></td><td>Steps + thirds dominate</td></tr><tr><td>Bach C-major Prelude</td><td><span class=math-inline data-latex="\sim 3.1"></span></td><td>Wider range of intervals</td></tr><tr><td>Bebop jazz heads</td><td><span class=math-inline data-latex="\sim 3.3"></span></td><td>Chromatic passing tones</td></tr><tr><td>Webern Op. 27</td><td><span class=math-inline data-latex="\sim 3.4"></span></td><td>Wide leaps, near-uniform</td></tr><tr><td>All-interval row</td><td>$3.459$</td><td>Uniform, theoretical max</td></tr></tbody></table><p>The entropy gradient roughly tracks Western music history: the expansion of harmonic vocabulary from modal chant to twelve-tone serialism corresponds to a monotone increase in interval entropy.</p><p><strong>朱载堉 (Zhu Zaiyu) and equal temperament — the same operation</strong></p><p>In 1584, the Ming dynasty scholar Zhu Zaiyu solved the tuning problem by choosing frequency ratios of <span class=math-inline data-latex=2^{k/12}></span> for all semitones — mathematically equalizing all twelve intervals at the cost of making each one slightly irrational. This is the <em>same mathematical operation</em> as the all-interval row: Zhu uniformized pitch ratios across twelve semitones; Schoenberg uniformized interval frequencies across twelve interval classes. Two revolutions, four centuries apart, unified by the principle of replacing a natural hierarchy with a mathematical uniform distribution.</p><p><strong>Entropy rate and musical style fingerprints</strong></p><p>Modeling a composer&rsquo;s style as a first-order Markov chain on <span class=math-inline data-latex=\mathbb{Z}_{12}></span>, the entropy rate <span class=math-inline data-latex=\bar{H}></span> characterizes how &ldquo;predictable&rdquo; their melodic choices are:</p><ul><li>Bach: <span class=math-inline data-latex="\bar{H} \approx 2.8"></span> bits/note (strong tonal gravity, concentrated transitions)</li><li>Chopin: <span class=math-inline data-latex="\bar{H} \approx 3.1"></span> bits/note (more chromatic but still tonal)</li><li>Schoenberg (twelve-tone period): <span class=math-inline data-latex="\bar{H} \approx 3.4"></span> bits/note (near-maximal)</li></ul><p>The entropy rate is a single real number that summarizes a composer&rsquo;s interval vocabulary — a lossy compression of style into one bit of information theory.</p><p>This connects forward to EP21 (AI composition uses Markov chain entropy rate as a diversity metric) and EP24 (pop music is low-entropy by design; melodic predictability is a feature, not a bug).</p></div></div><hr><h2 id=limits-and-open-questions>Limits and Open Questions</h2><ol><li><p><strong>First-order vs. higher-order models.</strong> Melodic entropy computed from adjacent intervals is a first-order statistic. Long-range dependencies (phrase structure, motivic development) require higher-order Markov models or full probabilistic context-free grammars. The entropy rate of a <span class=math-inline data-latex=k></span>-th order chain requires much more data to estimate reliably.</p></li><li><p><strong>Entropy vs. perceived complexity.</strong> High entropy does not equal perceived complexity. A melody of random pitches (maximum entropy) is less interesting than a fugue (moderate entropy, rich long-range structure). Information theory measures statistical uniformity; perceived complexity involves pattern recognition at multiple timescales.</p></li><li><p><strong>Combinatorial counting of all-interval rows.</strong> The exact count of 1,928 all-interval rows (up to starting pitch) was determined computationally. The algebraic structure that generates them — related to perfect difference sets and the theory of cyclic difference families — is only partially understood. An open question: is there a direct constructive bijection between all-interval rows and a known combinatorial object?</p></li><li><p><strong>Entropy of rhythm.</strong> Analogously to pitch interval entropy, one can define the entropy of inter-onset intervals (IOIs) in rhythm. African polyrhythm typically achieves higher rhythmic entropy than Western common-practice meter. A comparative study across global music traditions is an active research area.</p></li><li><p><strong>Minimum description length and style.</strong> Kolmogorov complexity <span class=math-inline data-latex=K(m)></span> of a melody <span class=math-inline data-latex=m></span> is the length of the shortest program that generates <span class=math-inline data-latex=m></span>. By the source coding theorem, <span class=math-inline data-latex="\mathbb{E}[K(m)] \approx H"></span> for i.i.d. melodies, but for structured compositions <span class=math-inline data-latex="K \ll H \cdot \text{(length)}"></span> because the structure allows extreme compression. The gap <span class=math-inline data-latex="H - K/\text{length}"></span> measures &ldquo;structural redundancy&rdquo; — it is large for tonal music, small for twelve-tone music.</p></li></ol><hr><h2 id=academic-references>Academic References</h2><ol><li><p>Shannon, C. E. (1948). A mathematical theory of communication. <em>Bell System Technical Journal</em>, 27(3), 379–423. (The founding paper of information theory.)</p></li><li><p>Cover, T. M., & Thomas, J. A. (2006). <em>Elements of Information Theory</em> (2nd ed.). Wiley. Ch. 2 (Entropy), Ch. 5 (Source coding theorem).</p></li><li><p>Knopoff, L., & Hutchinson, W. (1983). Entropy as a measure of style: The influence of sample length. <em>Journal of Music Theory</em>, 27(1), 75–97.</p></li><li><p>Margulis, E. H., & Beatty, A. P. (2008). Musical style, psychoaesthetics, and prospects for entropy as an analytic tool. <em>Computer Music Journal</em>, 32(4), 64–78.</p></li><li><p>Morris, R. (1987). <em>Composition with Pitch Classes</em>. Yale University Press. (All-interval rows and their algebraic properties.)</p></li><li><p>Jedrzejewski, F. (2006). <em>Mathematical Theory of Music</em>. Editions Delatour France/IRCAM. (Perfect difference sets and interval content.)</p></li><li><p>Nolan, C. (2000). On the mathematical side of Schoenberg&rsquo;s twelve-tone method. <em>Music Theory Spectrum</em>, 22(2), 162–182.</p></li><li><p>Temperley, D. (2007). <em>Music and Probability</em>. MIT Press. (Probabilistic models of musical cognition including Markov chain entropy.)</p></li></ol></div><nav class=ep-nav><a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-nav-prev>← EP06: Graph Coloring and Voice Assignment
+</a><a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-nav-next>EP08: Shepard Tones and the Tritone Paradox →</a></nav></article><aside class=ep-toc-aside><div class=ep-toc-sticky><div class=ep-toc-label>本页目录</div><nav id=TableOfContents><ul><li><a href=#overview>Overview</a></li><li><a href=#prerequisites>Prerequisites</a></li><li><a href=#definitions>Definitions</a></li><li><a href=#main-theorems>Main Theorems</a></li><li><a href=#musical-connection>Musical Connection</a></li><li><a href=#limits-and-open-questions>Limits and Open Questions</a></li><li><a href=#academic-references>Academic References</a></li></ul></nav></div></aside></div><footer class=site-footer><div class=footer-content><a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link><img src=/images/avatar.png alt="Sibelius P." class=footer-avatar></a><div class=footer-text><span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
 <span class=footer-sep>·</span>
 <a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener>小红书</a>
 <span class=footer-sep>·</span>
-<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span>
-</div>
-</div>
-</footer>
-</main>
-</div>
-</body>
-</html>
+<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span></div></div></footer></main></div></body></html>

@@ -14,5 +14,5 @@ title = "AMATH 390 数学与音乐"
 [params]
   author = "Sibelius P."
   description = "Comprehensive mathematical companion for AMATH 390: Mathematics and Music"
-  total_episodes = 42
-  display_episodes_until = 31
+  total_episodes = 52
+  display_episodes_until = 52

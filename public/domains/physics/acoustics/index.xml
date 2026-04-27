@@ -1,15 +1,61 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Physics/Acoustics on AMATH 390 数学与音乐</title><link>https://amath390.sibeliusp.com/domains/physics/acoustics/</link><description>Recent content in Physics/Acoustics on AMATH 390 数学与音乐</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://amath390.sibeliusp.com/domains/physics/acoustics/index.xml" rel="self" type="application/rss+xml"/><item><title>EP02: String Vibration and the Wave Equation</title><link>https://amath390.sibeliusp.com/episodes/ep02/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep02/</guid><description>Overview When you pluck a guitar string, why does it produce a rich spectrum of overtones rather than a single pure tone? The answer lies in a second-order partial differential equation derived by d&amp;rsquo;Alembert in 1747 and the separation-of-variables technique that Fourier refined in the early 19th century.
-This episode derives the 1D wave equation from Newton&amp;rsquo;s second law, establishes d&amp;rsquo;Alembert&amp;rsquo;s general solution as a superposition of traveling waves, and then reframes everything as Fourier series — infinite sums of standing-wave modes whose frequencies form the integer harmonic series</description></item><item><title>EP09: Combination Tones and Nonlinear Acoustics</title><link>https://amath390.sibeliusp.com/episodes/ep09/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep09/</guid><description>Overview Play two pure tones — 200 Hz and 300 Hz. The spectrum shows exactly two lines. Yet some listeners perceive a faint 100 Hz drone that is not present in the air at all. It is manufactured inside the cochlea.
-中文: &amp;ldquo;这个100赫兹不存在于空气中。它是你的耳蜗制造出来的。那它从哪来的？&amp;rdquo;
-This episode answers that question through the mathematics of nonlinear systems. A linear system passes both frequencies through unchanged. But the cochlea&amp;rsquo;s outer hair cells act as nonlinear amplifiers: their response curve is an S-shaped tanh function, not a straight line.</description></item><item><title>EP15: Opera Acoustics and the Singer's Formant</title><link>https://amath390.sibeliusp.com/episodes/ep15/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep15/</guid><description>Overview An opera singer has no microphone. A single voice must cut through 110 orchestral instruments in a live hall. This episode asks: how?
-中文: &amp;ldquo;答案藏在——3000赫兹。乐队能量在这里暴跌18分贝。这是歌手唯一的窗口——或者被淹没，或者穿透。&amp;rdquo;
-The answer is not louder singing. It is frequency targeting: the singer concentrates acoustic energy precisely where the orchestra is weakest, where the human ear is most sensitive, and where the physics of the vocal tract allows a structural resonance enhancement.
-This episode develops a three-layer quantitative model:</description></item><item><title>EP19: Vibrato as FM Synthesis</title><link>https://amath390.sibeliusp.com/episodes/ep19/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep19/</guid><description>Overview A pure A4 (440 Hz) and a gently trembling A4. The strange thing is — the trembling one sounds more stable, more vivid.
-中文: &amp;ldquo;这就是颤音，vibrato。每个歌剧歌手都在用它，但很少有人意识到，它背后的数学和雅马哈 DX7 合成器完全一样。&amp;rdquo;
-Vibrato is periodic modulation of the carrier frequency — one sine wave nested inside another. On the surface, only one pitch is wobbling. But the Jacobi-Anger expansion reveals a hidden spectral structure: symmetric sidebands appear on both sides of the carrier, each with amplitude governed by the Bessel function .</description></item><item><title>EP28: Your Microphone Is a Damped Oscillator</title><link>https://amath390.sibeliusp.com/episodes/ep28/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep28/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
-本集探讨：阻尼谐振子ODE, Bode图, Q因子, 极坐标指向性。
-前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 28.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item><item><title>EP29: Primes in the Studio — Standing Waves and QRD Diffusers</title><link>https://amath390.sibeliusp.com/episodes/ep29/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep29/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
-本集探讨：房间模态, Helmholtz共鸣器, 二次剩余模素数, Gauss和。
-前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 29.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item><item><title>EP33: One Delay Line, One String — Physical Modeling</title><link>https://amath390.sibeliusp.com/episodes/ep33/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep33/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
-本集探讨：Karplus-Strong, d&amp;rsquo;Alembert行波, 数字波导。
-前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 33.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Physics/Acoustics on AMATH 390 数学与音乐</title><link>https://amath390.sibeliusp.com/domains/physics/acoustics/</link><description>Recent content in Physics/Acoustics on AMATH 390 数学与音乐</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://amath390.sibeliusp.com/domains/physics/acoustics/index.xml" rel="self" type="application/rss+xml"/><item><title>EP02: String Vibration and the Wave Equation</title><link>https://amath390.sibeliusp.com/episodes/ep02/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep02/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>When you pluck a guitar string, why does it produce a rich spectrum of overtones rather than a single pure tone? The answer lies in a second-order partial differential equation derived by d&amp;rsquo;Alembert in 1747 and the separation-of-variables technique that Fourier refined in the early 19th century.&lt;/p>
+&lt;p>This episode derives the &lt;strong>1D wave equation&lt;/strong> from Newton&amp;rsquo;s second law, establishes &lt;strong>d&amp;rsquo;Alembert&amp;rsquo;s general solution&lt;/strong> as a superposition of traveling waves, and then reframes everything as &lt;strong>Fourier series&lt;/strong> — infinite sums of standing-wave modes whose frequencies form the integer harmonic series &lt;span class="math-inline" data-latex="f_1, 2f_1, 3f_1, \ldots">&lt;/span>&lt;/p></description></item><item><title>EP09: Combination Tones and Nonlinear Acoustics</title><link>https://amath390.sibeliusp.com/episodes/ep09/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep09/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Play two pure tones — 200 Hz and 300 Hz. The spectrum shows exactly two lines. Yet some listeners perceive a faint 100 Hz drone that is not present in the air at all. It is manufactured inside the cochlea.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>中文:&lt;/em> &amp;ldquo;这个100赫兹不存在于空气中。它是你的耳蜗制造出来的。那它从哪来的？&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>This episode answers that question through the mathematics of nonlinear systems. A linear system passes both frequencies through unchanged. But the cochlea&amp;rsquo;s outer hair cells act as nonlinear amplifiers: their response curve is an S-shaped tanh function, not a straight line. When you expand a nonlinear response &lt;span class="math-inline" data-latex="y = x &amp;#43; \varepsilon x^2 &amp;#43; \delta x^3 &amp;#43; \cdots">&lt;/span> around a two-tone input, algebra forces new frequencies into existence. These are the &lt;strong>combination tones&lt;/strong> — &lt;span class="math-inline" data-latex="mf_1 \pm nf_2">&lt;/span> for all non-negative integers &lt;span class="math-inline" data-latex="m, n">&lt;/span>.&lt;/p></description></item><item><title>EP15: Opera Acoustics and the Singer's Formant</title><link>https://amath390.sibeliusp.com/episodes/ep15/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep15/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>An opera singer has no microphone. A single voice must cut through 110 orchestral instruments in a live hall. This episode asks: how?&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>中文:&lt;/em> &amp;ldquo;答案藏在——3000赫兹。乐队能量在这里暴跌18分贝。这是歌手唯一的窗口——或者被淹没，或者穿透。&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>The answer is not louder singing. It is &lt;strong>frequency targeting&lt;/strong>: the singer concentrates acoustic energy precisely where the orchestra is weakest, where the human ear is most sensitive, and where the physics of the vocal tract allows a structural resonance enhancement.&lt;/p>
+&lt;p>This episode develops a three-layer quantitative model:&lt;/p></description></item><item><title>EP19: Vibrato as FM Synthesis</title><link>https://amath390.sibeliusp.com/episodes/ep19/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep19/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>A pure A4 (440 Hz) and a gently trembling A4. The strange thing is — the trembling one sounds more stable, more vivid.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>中文:&lt;/em> &amp;ldquo;这就是颤音，vibrato。每个歌剧歌手都在用它，但很少有人意识到，它背后的数学和雅马哈 DX7 合成器完全一样。&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>Vibrato is periodic modulation of the carrier frequency — one sine wave nested inside another. On the surface, only one pitch is wobbling. But the Jacobi-Anger expansion reveals a hidden spectral structure: symmetric sidebands appear on both sides of the carrier, each with amplitude governed by the Bessel function &lt;span class="math-inline" data-latex="J_n(\beta)">&lt;/span>. As the modulation index &lt;span class="math-inline" data-latex="\beta">&lt;/span> grows from small to large, the sound evolves from vibrato into an entirely new timbre — a discovery John Chowning made at Stanford in 1967, which gave birth to the DX7 synthesizer and the sound of an entire decade.&lt;/p></description></item><item><title>EP28: Your Microphone Is a Damped Oscillator</title><link>https://amath390.sibeliusp.com/episodes/ep28/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep28/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Every recording engineer knows that swapping a microphone changes the sound — but why? The answer is not marketing, not mystique, and not simply &amp;ldquo;expensive = better.&amp;rdquo; It is a second-order ordinary differential equation. The thin membrane inside any microphone is a &lt;strong>damped harmonic oscillator&lt;/strong>: an elastic restoring force pulls it back, an inertial mass resists acceleration, and air damping bleeds away energy. These three forces combine into a single ODE whose solution determines everything you hear.&lt;/p></description></item><item><title>EP29: Primes in the Studio — Standing Waves and QRD Diffusers</title><link>https://amath390.sibeliusp.com/episodes/ep29/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep29/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>The wooden slots on the back wall of a professional recording studio — varying depths 0, 8.5, 34, 17, 17, 34, 8.5 mm — are not decorative. They are a number-theoretic construction dating to Manfred Schroeder&amp;rsquo;s 1979 paper: a &lt;strong>Quadratic Residue Diffuser (QRD)&lt;/strong>. Its slot depths are proportional to &lt;span class="math-inline" data-latex="n^2 \bmod p">&lt;/span> for a prime &lt;span class="math-inline" data-latex="p">&lt;/span>, and its design guarantee is that the discrete Fourier transform of the resulting phase sequence has perfectly flat magnitude — an assertion that reduces to the Gauss sum &lt;span class="math-inline" data-latex="|\sum_{n=0}^{p-1} e^{2\pi i n^2/p}| = \sqrt{p}">&lt;/span>.&lt;/p></description></item><item><title>EP33: One Delay Line, One String — Physical Modeling</title><link>https://amath390.sibeliusp.com/episodes/ep33/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep33/</guid><description>&lt;h2 id="概述">概述&lt;/h2>
+&lt;p>&lt;em>本页内容正在撰写中。请先观看&lt;a href="#">小红书视频&lt;/a>了解核心概念。&lt;/em>&lt;/p>
+&lt;p>本集探讨：Karplus-Strong, d&amp;rsquo;Alembert行波, 数字波导。&lt;/p>
+&lt;h2 id="前置知识">前置知识&lt;/h2>
+&lt;!-- cross-refs partial handles callback links -->
+&lt;h2 id="定义">定义&lt;/h2>
+&lt;!-- 
+
+&lt;div class="definition-block" id="definition">
+ &lt;div class="block-label">
+ Definition (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="主要定理">主要定理&lt;/h2>
+&lt;!-- 
+
+&lt;div class="theorem-block" id="theorem-33.1">
+ &lt;div class="block-label">
+ Theorem 33.1 (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;!-- &lt;div class="proof-block">
+ &lt;div class="block-label">Proof.&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="音乐联系">音乐联系&lt;/h2>
+&lt;!-- &lt;div class="music-block">
+ &lt;div class="block-label">音乐联系&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="局限性与开放问题">局限性与开放问题&lt;/h2>
+&lt;h2 id="参考文献">参考文献&lt;/h2>
+&lt;ol>
+&lt;li>&lt;em>待补充&lt;/em>&lt;/li>
+&lt;/ol></description></item></channel></rss>

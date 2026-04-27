@@ -1,760 +1,125 @@
-<!doctype html><html lang=zh-cn>
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<title>EP21: From Markov to Diffusion — Sixty Years of AI Composition | AMATH 390 数学与音乐</title>
-<meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
-<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous>
-<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script>
-<script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('[data-latex]').forEach(function(a){try{katex.render(a.getAttribute('data-latex'),a,{displayMode:a.classList.contains('math-display'),throwOnError:!1})}catch(b){console.warn('KaTeX:',b.message,a)}})})</script>
-<link rel=icon type=image/png sizes=32x32 href=/favicon-32.png>
-<link rel=icon type=image/png sizes=16x16 href=/favicon-16.png>
-<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
-<link rel=stylesheet href=/css/amath390.css>
-</head>
-<body>
-<div class=layout-wrapper>
-<nav class=sidebar>
-<div class=sidebar-header>
-<a href=/ class=sidebar-title>AMATH 390</a>
-<div class=sidebar-subtitle>数学与音乐</div>
-</div>
-<div class=arc-group>
-<div class=arc-label>数学基础篇</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link>
-<span class=ep-num>01</span>
+<!doctype html><html lang=zh-cn><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>EP21: From Markov to Diffusion — Sixty Years of AI Composition | AMATH 390 数学与音乐</title><meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music"><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script><script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("[data-latex]").forEach(function(e){try{katex.render(e.getAttribute("data-latex"),e,{displayMode:e.classList.contains("math-display"),throwOnError:!1})}catch(t){console.warn("KaTeX:",t.message,e)}})})</script><link rel=icon type=image/png sizes=32x32 href=/favicon-32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=stylesheet href=/css/amath390.css></head><body><div class=layout-wrapper><nav class=sidebar><div class=sidebar-header><a href=/ class=sidebar-title>AMATH 390</a><div class=sidebar-subtitle>数学与音乐</div></div><div class=arc-group><div class=arc-label>数学基础篇</div><a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link><span class=ep-num>01</span>
 <span class=ep-title>Chord Space and the Torus</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep02/ class=ep-link>
-<span class=ep-num>02</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep02/ class=ep-link><span class=ep-num>02</span>
 <span class=ep-title>String Vibration and the Wave Equation</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link>
-<span class=ep-num>03</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link><span class=ep-num>03</span>
 <span class=ep-title>Bach and Graph Connectivity</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link>
-<span class=ep-num>04</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link><span class=ep-num>04</span>
 <span class=ep-title>All-Interval Rows and ℤ₁₂</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link>
-<span class=ep-num>05</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link><span class=ep-num>05</span>
 <span class=ep-title>Turán's Theorem and Counterpoint</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-link>
-<span class=ep-num>06</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-link><span class=ep-num>06</span>
 <span class=ep-title>Graph Coloring and Voice Assignment</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-link>
-<span class=ep-num>07</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-link><span class=ep-num>07</span>
 <span class=ep-title>Information Entropy and All-Interval Rows</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-link>
-<span class=ep-num>08</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-link><span class=ep-num>08</span>
 <span class=ep-title>Shepard Tones and the Tritone Paradox</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link>
-<span class=ep-num>09</span>
-<span class=ep-title>Combination Tones and Nonlinear Acoustics</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>Jacob Collier 系列</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep10/ class=ep-link>
-<span class=ep-num>10</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link><span class=ep-num>09</span>
+<span class=ep-title>Combination Tones and Nonlinear Acoustics</span></a></div><div class=arc-group><div class=arc-label>Jacob Collier 系列</div><a href=https://amath390.sibeliusp.com/episodes/ep10/ class=ep-link><span class=ep-num>10</span>
 <span class=ep-title>Negative Harmony and the Dihedral Group D₁₂</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link>
-<span class=ep-num>11</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link><span class=ep-num>11</span>
 <span class=ep-title>Comma Drift and the Impossibility of Perfect Tuning</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep12/ class=ep-link>
-<span class=ep-num>12</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep12/ class=ep-link><span class=ep-num>12</span>
 <span class=ep-title>The Circle of Fifths as a Folded Spiral</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-link>
-<span class=ep-num>13</span>
-<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>拓扑数学专篇</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-link>
-<span class=ep-num>14</span>
-<span class=ep-title>Tonnetz Hodge Duality</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>歌剧系列</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-link>
-<span class=ep-num>15</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-link><span class=ep-num>13</span>
+<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span></a></div><div class=arc-group><div class=arc-label>拓扑数学专篇</div><a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-link><span class=ep-num>14</span>
+<span class=ep-title>Tonnetz Hodge Duality</span></a></div><div class=arc-group><div class=arc-label>歌剧系列</div><a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-link><span class=ep-num>15</span>
 <span class=ep-title>Opera Acoustics and the Singer's Formant</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link>
-<span class=ep-num>16</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link><span class=ep-num>16</span>
 <span class=ep-title>Rossini's Code — Budden, Gossett, and the Convention System</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-link>
-<span class=ep-num>17</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-link><span class=ep-num>17</span>
 <span class=ep-title>Leitmotif Networks — Wagner's Ring Cycle</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-link>
-<span class=ep-num>18</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-link><span class=ep-num>18</span>
 <span class=ep-title>Game Theory in Operatic Duets</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link>
-<span class=ep-num>19</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link><span class=ep-num>19</span>
 <span class=ep-title>Vibrato as FM Synthesis</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-link>
-<span class=ep-num>20</span>
-<span class=ep-title>Character Interaction Networks in Opera</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>AI 音乐三部曲</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep21/ class="ep-link active">
-<span class=ep-num>21</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-link><span class=ep-num>20</span>
+<span class=ep-title>Character Interaction Networks in Opera</span></a></div><div class=arc-group><div class=arc-label>AI 音乐三部曲</div><a href=https://amath390.sibeliusp.com/episodes/ep21/ class="ep-link active"><span class=ep-num>21</span>
 <span class=ep-title>From Markov to Diffusion — Sixty Years of AI Composition</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-link>
-<span class=ep-num>22</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-link><span class=ep-num>22</span>
 <span class=ep-title>How AI Writes Music — EnCodec and RVQ</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-link>
-<span class=ep-num>23</span>
-<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span>
-</a>
-</div>
-<div class=sidebar-footer>
-<a href=/theorems/>定理索引</a>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-link><span class=ep-num>23</span>
+<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span></a></div><div class=arc-group><div class=arc-label>流行音乐 × 数学</div><a href=https://amath390.sibeliusp.com/episodes/ep24/ class=ep-link><span class=ep-num>24</span>
+<span class=ep-title>The Information Code of Pop Music</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep25/ class=ep-link><span class=ep-num>25</span>
+<span class=ep-title>Why Music Gives You Goosebumps — Prediction Error and Frisson</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep26/ class=ep-link><span class=ep-num>26</span>
+<span class=ep-title>The 1/f Law of Music</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep27/ class=ep-link><span class=ep-num>27</span>
+<span class=ep-title>Answering Viral Critics with Mathematics</span></a></div><div class=arc-group><div class=arc-label>音乐技术系列</div><a href=https://amath390.sibeliusp.com/episodes/ep28/ class=ep-link><span class=ep-num>28</span>
+<span class=ep-title>Your Microphone Is a Damped Oscillator</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep29/ class=ep-link><span class=ep-num>29</span>
+<span class=ep-title>Primes in the Studio — Standing Waves and QRD Diffusers</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep30/ class=ep-link><span class=ep-num>30</span>
+<span class=ep-title>The Sampling Theorem Is Not What You Think</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep31/ class=ep-link><span class=ep-num>31</span>
+<span class=ep-title>The Warmth of Moog Has an Equation</span></a></div><div class=sidebar-footer><a href=/theorems/>定理索引</a>
 <a href=/domains/>数学领域</a>
-<a href=/about/>关于</a>
-</div>
-</nav>
-<main class=main-content>
-<div class=episode-layout>
-<article class=episode-page>
-<header class=episode-header>
-<div class=ep-badge>EP21</div>
-<h1 class=ep-main-title>EP21: From Markov to Diffusion — Sixty Years of AI Composition</h1>
-<div class=ep-subtitle>Markov链, Transformer注意力, 分数匹配/扩散</div>
-<div class=ep-meta>
-<span class=meta-item>
-<span class=meta-icon>▶</span> 8:35
-</span>
-<span class="meta-item domains">
-<span class=domain-chip>Statistics/ML</span><span class=domain-chip>Information Theory</span>
-</span>
-</div>
-</header>
-<div class=cross-refs>
-<h3 class=cross-refs-title>前置知识</h3>
-<div class=ref-cards>
-<a href=https://amath390.sibeliusp.com/episodes/ep04/ class="ref-card callback">
-<span class=ref-ep>EP04</span>
+<a href=/about/>关于</a></div></nav><main class=main-content><div class=episode-layout><article class=episode-page><header class=episode-header><div class=ep-badge>EP21</div><h1 class=ep-main-title>EP21: From Markov to Diffusion — Sixty Years of AI Composition</h1><div class=ep-subtitle>Markov链, Transformer注意力, 分数匹配/扩散</div><div class=ep-meta><span class=meta-item><span class=meta-icon>▶</span> 8:35
+</span><span class="meta-item domains"><span class=domain-chip>Statistics/ML</span><span class=domain-chip>Information Theory</span></span></div></header><div class=cross-refs><h3 class=cross-refs-title>前置知识</h3><div class=ref-cards><a href=https://amath390.sibeliusp.com/episodes/ep04/ class="ref-card callback"><span class=ref-ep>EP04</span>
 <span class=ref-title>All-Interval Rows and ℤ₁₂</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep07/ class="ref-card callback">
-<span class=ref-ep>EP07</span>
-<span class=ref-title>Information Entropy and All-Interval Rows</span>
-</a>
-</div>
-</div>
-<div class=cross-refs>
-<h3 class=cross-refs-title>后续拓展</h3>
-<div class=ref-cards>
-<a href=https://amath390.sibeliusp.com/episodes/ep22/ class="ref-card forward">
-<span class=ref-ep>EP22</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep07/ class="ref-card callback"><span class=ref-ep>EP07</span>
+<span class=ref-title>Information Entropy and All-Interval Rows</span></a></div></div><div class=cross-refs><h3 class=cross-refs-title>后续拓展</h3><div class=ref-cards><a href=https://amath390.sibeliusp.com/episodes/ep22/ class="ref-card forward"><span class=ref-ep>EP22</span>
 <span class=ref-title>How AI Writes Music — EnCodec and RVQ</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep23/ class="ref-card forward">
-<span class=ref-ep>EP23</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep23/ class="ref-card forward"><span class=ref-ep>EP23</span>
 <span class=ref-title>Can AI Understand Music? Latent Space and Information Bottleneck</span>
-</a>
-</div>
-</div>
-<div class="episode-content content">
-<h2 id=overview>Overview</h2>
-<p>Three mathematical frameworks have dominated algorithmic music composition over sixty years: <strong>Markov chains</strong> (1957), <strong>Transformer attention</strong> (2017), and <strong>diffusion models</strong> (2020). Each replaces its predecessor not by discarding the core idea — sampling from a learned probability distribution over musical events — but by changing <em>which</em> probability distribution and <em>how</em> it is parameterized.</p>
-<blockquote>
-<p><em>中文:</em> &ldquo;它们在解同一个数学问题。这个问题的答案，七十年里只换了三次。从骰子，到注意力，到噪声。&rdquo;</p>
-</blockquote>
-<p>This companion page formalizes the mathematics the video sketches: transition matrices on <span class=math-inline data-latex=\mathbb{Z}_{12}></span>, the softmax attention mechanism as a content-dependent stochastic matrix, and the DDPM forward/reverse processes with score matching.</p>
-<hr>
-<h2 id=prerequisites>Prerequisites</h2>
-<ul>
-<li>
-<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=episode-ref-link>Cyclic groups and ℤ₁₂ (EP04)</a>
-— pitch classes as elements of the cyclic group</li>
-<li>
-<a href=https://amath390.sibeliusp.com/episodes/ep07/ class=episode-ref-link>Probability and entropy basics (EP07)</a>
-— probability distributions, expectation</li>
-<li>Linear algebra: matrix multiplication, eigenvalues, positive semi-definiteness</li>
-<li>Basic multivariate calculus: gradients, Gaussian densities</li>
-</ul>
-<hr>
-<h2 id=part-i-markov-chains-on-ℤ>Part I: Markov Chains on ℤ₁₂</h2>
-<blockquote>
-<p><em>中文:</em> &ldquo;1957年，希勒和艾萨克森在伊利诺伊大学的Illiac计算机上做了一个实验。他们把十二个音高排成一圈。第四期讲过，这就是Z 12，十二元循环群。然后给每对音之间分配一个转移概率。&rdquo;</p>
-</blockquote>
-<h3 id=11-definitions>1.1 Definitions</h3>
-<div class=definition-block id=definition-21.1>
-<div class=block-label>
-Definition 21.1 (Time-Homogeneous Markov Chain on a Finite State Space)
-</div>
-<div class=block-body><p>Let <span class=math-inline data-latex="S = \{s_1, \ldots, s_n\}"></span> be a finite set of states. A <strong>time-homogeneous Markov chain</strong> on <span class=math-inline data-latex=S></span> is a sequence of random variables <span class=math-inline data-latex="(X_0, X_1, X_2, \ldots)"></span> taking values in <span class=math-inline data-latex=S></span> such that for all <span class=math-inline data-latex="t \geq 0"></span> and all states <span class=math-inline data-latex="i, j \in S"></span>:
-<span class=math-display data-latex="P(X_{t+1} = j \mid X_t = i, X_{t-1}, \ldots, X_0) = P(X_{t+1} = j \mid X_t = i) =: p_{ij}"></span></p>
-<p>The constant <span class=math-inline data-latex=p_{ij}></span> is called the <strong>transition probability</strong> from state <span class=math-inline data-latex=i></span> to state <span class=math-inline data-latex=j></span>.</p>
-</div>
-</div>
-<p><strong>Example (Illiac Suite, 1957)</strong>: Set <span class=math-inline data-latex="S = \mathbb{Z}_{12} = \{C, C\sharp, D, \ldots, B\}"></span>, the twelve pitch classes (see
+</a><a href=https://amath390.sibeliusp.com/episodes/ep24/ class="ref-card forward"><span class=ref-ep>EP24</span>
+<span class=ref-title>The Information Code of Pop Music</span></a></div></div><div class="episode-content content"><h2 id=overview>Overview</h2><p>Three mathematical frameworks have dominated algorithmic music composition over sixty years: <strong>Markov chains</strong> (1957), <strong>Transformer attention</strong> (2017), and <strong>diffusion models</strong> (2020). Each replaces its predecessor not by discarding the core idea — sampling from a learned probability distribution over musical events — but by changing <em>which</em> probability distribution and <em>how</em> it is parameterized.</p><blockquote><p><em>中文:</em> &ldquo;它们在解同一个数学问题。这个问题的答案，七十年里只换了三次。从骰子，到注意力，到噪声。&rdquo;</p></blockquote><p>This companion page formalizes the mathematics the video sketches: transition matrices on <span class=math-inline data-latex=\mathbb{Z}_{12}></span>, the softmax attention mechanism as a content-dependent stochastic matrix, and the DDPM forward/reverse processes with score matching.</p><hr><h2 id=prerequisites>Prerequisites</h2><ul><li><a href=https://amath390.sibeliusp.com/episodes/ep04/ class=episode-ref-link>Cyclic groups and ℤ₁₂ (EP04)</a>
+— pitch classes as elements of the cyclic group</li><li><a href=https://amath390.sibeliusp.com/episodes/ep07/ class=episode-ref-link>Probability and entropy basics (EP07)</a>
+— probability distributions, expectation</li><li>Linear algebra: matrix multiplication, eigenvalues, positive semi-definiteness</li><li>Basic multivariate calculus: gradients, Gaussian densities</li></ul><hr><h2 id=part-i-markov-chains-on-ℤ>Part I: Markov Chains on ℤ₁₂</h2><blockquote><p><em>中文:</em> &ldquo;1957年，希勒和艾萨克森在伊利诺伊大学的Illiac计算机上做了一个实验。他们把十二个音高排成一圈。第四期讲过，这就是Z 12，十二元循环群。然后给每对音之间分配一个转移概率。&rdquo;</p></blockquote><h3 id=11-definitions>1.1 Definitions</h3><div class=definition-block id=definition-21.1><div class=block-label>Definition 21.1 (Time-Homogeneous Markov Chain on a Finite State Space)</div><div class=block-body><p>Let <span class=math-inline data-latex="S = \{s_1, \ldots, s_n\}"></span> be a finite set of states. A <strong>time-homogeneous Markov chain</strong> on <span class=math-inline data-latex=S></span> is a sequence of random variables <span class=math-inline data-latex="(X_0, X_1, X_2, \ldots)"></span> taking values in <span class=math-inline data-latex=S></span> such that for all <span class=math-inline data-latex="t \geq 0"></span> and all states <span class=math-inline data-latex="i, j \in S"></span>:
+<span class=math-display data-latex="P(X_{t+1} = j \mid X_t = i, X_{t-1}, \ldots, X_0) = P(X_{t+1} = j \mid X_t = i) =: p_{ij}"></span></p><p>The constant <span class=math-inline data-latex=p_{ij}></span> is called the <strong>transition probability</strong> from state <span class=math-inline data-latex=i></span> to state <span class=math-inline data-latex=j></span>.</p></div></div><p><strong>Example (Illiac Suite, 1957)</strong>: Set <span class=math-inline data-latex="S = \mathbb{Z}_{12} = \{C, C\sharp, D, \ldots, B\}"></span>, the twelve pitch classes (see
 <a href=https://amath390.sibeliusp.com/episodes/ep04/ class=episode-ref-link>EP04</a>
-). Hiller and Isaacson assigned transition probabilities such as <span class=math-inline data-latex="p_{C,E} = 0.3"></span> and <span class=math-inline data-latex="p_{C,G} = 0.4"></span>. To generate a melody: start at some pitch <span class=math-inline data-latex=X_0></span>, sample <span class=math-inline data-latex=X_1></span> from row <span class=math-inline data-latex=X_0></span> of the transition matrix, then sample <span class=math-inline data-latex=X_2></span> from row <span class=math-inline data-latex=X_1></span>, and so on.</p>
-<blockquote>
-<p><em>中文:</em> &ldquo;生成旋律的方法：站在当前音，按概率掷骰子，跳到下一个音。重复。这就是马尔可夫链。本质上，1957年的AI作曲，就是在Z 12上掷加权骰子。&rdquo;</p>
-</blockquote>
-<div class=definition-block id=definition-21.2>
-<div class=block-label>
-Definition 21.2 (Stochastic (Transition) Matrix)
-</div>
-<div class=block-body><p>The <strong>transition matrix</strong> <span class=math-inline data-latex="P \in \mathbb{R}^{n \times n}"></span> of a Markov chain on <span class=math-inline data-latex=n></span> states has entries <span class=math-inline data-latex="P_{ij} = p_{ij}"></span> satisfying:</p>
-<ol>
-<li><strong>Non-negativity</strong>: <span class=math-inline data-latex="P_{ij} \geq 0"></span> for all <span class=math-inline data-latex=i,j></span>.</li>
-<li><strong>Row-stochastic</strong>: <span class=math-inline data-latex="\sum_{j=1}^{n} P_{ij} = 1"></span> for every row <span class=math-inline data-latex=i></span>.</li>
-</ol>
-<p>A matrix satisfying both conditions is called a <strong>(row-)stochastic matrix</strong>.</p>
-</div>
-</div>
-<p><strong>Worked example</strong>: A toy <span class=math-inline data-latex="3 \times 3"></span> transition matrix on states <span class=math-inline data-latex="\{C, E, G\}"></span>:
-<span class=math-display data-latex="P = \begin{pmatrix} 0.2 & 0.3 & 0.5 \\ 0.1 & 0.4 & 0.5 \\ 0.3 & 0.3 & 0.4 \end{pmatrix}"></span></p>
-<p>Row 1: from C, probability 0.2 to stay on C, 0.3 to jump to E, 0.5 to jump to G. Each row sums to 1.</p>
-<h3 id=12-multi-step-transitions>1.2 Multi-Step Transitions</h3>
-<div class=theorem-block id=theorem-21.1>
-<div class=block-label>
-Theorem 21.1 (Chapman-Kolmogorov Equation)
-</div>
-<div class=block-body>Let <span class=math-inline data-latex=P></span> be the transition matrix of a time-homogeneous Markov chain. The <span class=math-inline data-latex=n></span>-step transition probabilities satisfy
+). Hiller and Isaacson assigned transition probabilities such as <span class=math-inline data-latex="p_{C,E} = 0.3"></span> and <span class=math-inline data-latex="p_{C,G} = 0.4"></span>. To generate a melody: start at some pitch <span class=math-inline data-latex=X_0></span>, sample <span class=math-inline data-latex=X_1></span> from row <span class=math-inline data-latex=X_0></span> of the transition matrix, then sample <span class=math-inline data-latex=X_2></span> from row <span class=math-inline data-latex=X_1></span>, and so on.</p><blockquote><p><em>中文:</em> &ldquo;生成旋律的方法：站在当前音，按概率掷骰子，跳到下一个音。重复。这就是马尔可夫链。本质上，1957年的AI作曲，就是在Z 12上掷加权骰子。&rdquo;</p></blockquote><div class=definition-block id=definition-21.2><div class=block-label>Definition 21.2 (Stochastic (Transition) Matrix)</div><div class=block-body><p>The <strong>transition matrix</strong> <span class=math-inline data-latex="P \in \mathbb{R}^{n \times n}"></span> of a Markov chain on <span class=math-inline data-latex=n></span> states has entries <span class=math-inline data-latex="P_{ij} = p_{ij}"></span> satisfying:</p><ol><li><strong>Non-negativity</strong>: <span class=math-inline data-latex="P_{ij} \geq 0"></span> for all <span class=math-inline data-latex=i,j></span>.</li><li><strong>Row-stochastic</strong>: <span class=math-inline data-latex="\sum_{j=1}^{n} P_{ij} = 1"></span> for every row <span class=math-inline data-latex=i></span>.</li></ol><p>A matrix satisfying both conditions is called a <strong>(row-)stochastic matrix</strong>.</p></div></div><p><strong>Worked example</strong>: A toy <span class=math-inline data-latex="3 \times 3"></span> transition matrix on states <span class=math-inline data-latex="\{C, E, G\}"></span>:
+<span class=math-display data-latex="P = \begin{pmatrix} 0.2 & 0.3 & 0.5 \\ 0.1 & 0.4 & 0.5 \\ 0.3 & 0.3 & 0.4 \end{pmatrix}"></span></p><p>Row 1: from C, probability 0.2 to stay on C, 0.3 to jump to E, 0.5 to jump to G. Each row sums to 1.</p><h3 id=12-multi-step-transitions>1.2 Multi-Step Transitions</h3><div class=theorem-block id=theorem-21.1><div class=block-label>Theorem 21.1 (Chapman-Kolmogorov Equation)</div><div class=block-body>Let <span class=math-inline data-latex=P></span> be the transition matrix of a time-homogeneous Markov chain. The <span class=math-inline data-latex=n></span>-step transition probabilities satisfy
 <span class=math-display data-latex="P^{(n)} = P^n"></span>
-i.e., the probability of going from state <span class=math-inline data-latex=i></span> to state <span class=math-inline data-latex=j></span> in exactly <span class=math-inline data-latex=n></span> steps is the <span class=math-inline data-latex=(i,j)></span>-entry of the matrix <span class=math-inline data-latex=P^n></span>.</div>
-</div>
-<div class=proof-block>
-<div class=block-label>Proof.</div>
-<div class=block-body><p><strong>Base case</strong> (<span class=math-inline data-latex="n=1"></span>): <span class=math-inline data-latex="P^{(1)} = P^1 = P"></span> by definition.</p>
-<p><strong>Inductive step</strong>: Assume <span class=math-inline data-latex="P^{(n)} = P^n"></span>. For the <span class=math-inline data-latex=(n+1)></span>-step probability:
+i.e., the probability of going from state <span class=math-inline data-latex=i></span> to state <span class=math-inline data-latex=j></span> in exactly <span class=math-inline data-latex=n></span> steps is the <span class=math-inline data-latex=(i,j)></span>-entry of the matrix <span class=math-inline data-latex=P^n></span>.</div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p><strong>Base case</strong> (<span class=math-inline data-latex="n=1"></span>): <span class=math-inline data-latex="P^{(1)} = P^1 = P"></span> by definition.</p><p><strong>Inductive step</strong>: Assume <span class=math-inline data-latex="P^{(n)} = P^n"></span>. For the <span class=math-inline data-latex=(n+1)></span>-step probability:
 <span class=math-display data-latex="P^{(n+1)}_{ij} = P(X_{n+1} = j \mid X_0 = i) = \sum_{k \in S} P(X_{n+1} = j \mid X_n = k)\, P(X_n = k \mid X_0 = i)"></span>
-<span class=math-display data-latex="= \sum_{k \in S} P_{kj} \cdot P^{(n)}_{ik} = \sum_{k \in S} P^n_{ik} \cdot P_{kj} = (P^n \cdot P)_{ij} = P^{n+1}_{ij}"></span></p>
-<p>The first equality uses the law of total probability and the Markov property. The inductive hypothesis gives <span class=math-inline data-latex="P^{(n)}_{ik} = P^n_{ik}"></span>. Therefore <span class=math-inline data-latex="P^{(n+1)} = P^{n+1}"></span>. <span class=math-inline data-latex=\square></span></p>
-</div>
-</div>
-<p><strong>Musical meaning</strong>: <span class=math-inline data-latex=P^n_{C,G}></span> is the probability that a melody starting on C will be on G after exactly <span class=math-inline data-latex=n></span> notes.</p>
-<h3 id=13-stationary-distribution>1.3 Stationary Distribution</h3>
-<div class=definition-block id=definition-21.3>
-<div class=block-label>
-Definition 21.3 (Stationary Distribution)
-</div>
-<div class=block-body>A probability vector <span class=math-inline data-latex="\pi \in \mathbb{R}^n"></span> (with <span class=math-inline data-latex="\pi_i \geq 0"></span> and <span class=math-inline data-latex="\sum_i \pi_i = 1"></span>) is a <strong>stationary distribution</strong> of the Markov chain with transition matrix <span class=math-inline data-latex=P></span> if
+<span class=math-display data-latex="= \sum_{k \in S} P_{kj} \cdot P^{(n)}_{ik} = \sum_{k \in S} P^n_{ik} \cdot P_{kj} = (P^n \cdot P)_{ij} = P^{n+1}_{ij}"></span></p><p>The first equality uses the law of total probability and the Markov property. The inductive hypothesis gives <span class=math-inline data-latex="P^{(n)}_{ik} = P^n_{ik}"></span>. Therefore <span class=math-inline data-latex="P^{(n+1)} = P^{n+1}"></span>. <span class=math-inline data-latex=\square></span></p></div></div><p><strong>Musical meaning</strong>: <span class=math-inline data-latex=P^n_{C,G}></span> is the probability that a melody starting on C will be on G after exactly <span class=math-inline data-latex=n></span> notes.</p><h3 id=13-stationary-distribution>1.3 Stationary Distribution</h3><div class=definition-block id=definition-21.3><div class=block-label>Definition 21.3 (Stationary Distribution)</div><div class=block-body>A probability vector <span class=math-inline data-latex="\pi \in \mathbb{R}^n"></span> (with <span class=math-inline data-latex="\pi_i \geq 0"></span> and <span class=math-inline data-latex="\sum_i \pi_i = 1"></span>) is a <strong>stationary distribution</strong> of the Markov chain with transition matrix <span class=math-inline data-latex=P></span> if
 <span class=math-display data-latex="\pi P = \pi"></span>
-That is, <span class=math-inline data-latex=\pi></span> is a left eigenvector of <span class=math-inline data-latex=P></span> with eigenvalue 1.</div>
-</div>
-<div class=theorem-block id=theorem-21.2>
-<div class=block-label>
-Theorem 21.2 (Existence and Uniqueness of Stationary Distribution (Perron-Frobenius))
-</div>
-<div class=block-body><p>Let <span class=math-inline data-latex=P></span> be the transition matrix of an <strong>irreducible, aperiodic</strong> Markov chain on a finite state space. Then:</p>
-<ol>
-<li><strong>Existence</strong>: There exists a unique stationary distribution <span class=math-inline data-latex=\pi></span> with <span class=math-inline data-latex="\pi P = \pi"></span> and <span class=math-inline data-latex="\pi_i > 0"></span> for all <span class=math-inline data-latex=i></span>.</li>
-<li><strong>Convergence</strong>: For any initial distribution <span class=math-inline data-latex=\mu_0></span>, <span class=math-inline data-latex="\lim_{n \to \infty} \mu_0 P^n = \pi"></span>.</li>
-<li><strong>Long-run frequency</strong>: With probability 1, the fraction of time spent in state <span class=math-inline data-latex=i></span> converges to <span class=math-inline data-latex=\pi_i></span>.</li>
-</ol>
-</div>
-</div>
-<div class=proof-block>
-<div class=block-label>Proof.</div>
-<div class=block-body><em>(Sketch via Perron-Frobenius.)</em> An irreducible chain has <span class=math-inline data-latex="P^m > 0"></span> (entry-wise) for some <span class=math-inline data-latex=m></span> (aperiodicity + irreducibility ensure this). The Perron-Frobenius theorem for positive matrices states that such a matrix has a unique largest eigenvalue <span class=math-inline data-latex="\lambda_1 = 1"></span> (since <span class=math-inline data-latex=P></span> is stochastic, the all-ones vector is a right eigenvector with eigenvalue 1), and the corresponding left eigenvector <span class=math-inline data-latex=\pi></span> can be chosen with all entries positive and summing to 1. All other eigenvalues satisfy <span class=math-inline data-latex="|\lambda_i| < 1"></span>, so <span class=math-inline data-latex="P^n \to \mathbf{1}\pi"></span> as <span class=math-inline data-latex="n \to \infty"></span>, which gives convergence and the frequency interpretation. <span class=math-inline data-latex=\square></span></div>
-</div>
-<p><strong>Musical meaning</strong>: The stationary distribution <span class=math-inline data-latex=\pi></span> gives the long-run frequency of each pitch class. If the Markov chain on <span class=math-inline data-latex=\mathbb{Z}_{12}></span> has <span class=math-inline data-latex="\pi_C = 0.12"></span> and <span class=math-inline data-latex="\pi_G = 0.10"></span>, then in a long enough generated melody, roughly 12% of notes will be C and 10% will be G — regardless of which note started the chain. This is a <em>stylistic fingerprint</em> of the transition matrix.</p>
-<p><strong>Worked example</strong>: For the toy matrix above, solving <span class=math-inline data-latex="\pi P = \pi"></span> with <span class=math-inline data-latex="\pi_1 + \pi_2 + \pi_3 = 1"></span> gives the system <span class=math-inline data-latex="0.2\pi_1 + 0.1\pi_2 + 0.3\pi_3 = \pi_1"></span>, etc. The solution is <span class=math-inline data-latex="\pi \approx (0.194, 0.333, 0.472)"></span>: G dominates in the long run.</p>
-<h3 id=14-why-markov-chains-fail-at-music>1.4 Why Markov Chains Fail at Music</h3>
-<blockquote>
-<p><em>中文:</em> &ldquo;结果听起来怎么样？局部像音乐，整体没记忆。因为马尔可夫链只看上一步。&mldr;副歌回来、主题发展——它全抓不住。&rdquo;</p>
-</blockquote>
-<div class=definition-block id=definition-21.4>
-<div class=block-label>
-Definition 21.4 (Mixing Time)
-</div>
-<div class=block-body>The <strong>mixing time</strong> of an irreducible aperiodic Markov chain is the smallest <span class=math-inline data-latex=t></span> such that the total variation distance between <span class=math-inline data-latex="\mu_0 P^t"></span> and <span class=math-inline data-latex=\pi></span> is at most <span class=math-inline data-latex=1/4></span> for any initial distribution <span class=math-inline data-latex=\mu_0></span>:
-<span class=math-display data-latex="t_{\mathrm{mix}} = \min\bigl\{t : \max_{\mu_0} \|\mu_0 P^t - \pi\|_{\mathrm{TV}} \leq 1/4\bigr\}"></span></div>
-</div>
-<p>The mixing time measures how quickly the chain &ldquo;forgets&rdquo; its starting state. For a first-order chain on <span class=math-inline data-latex=\mathbb{Z}_{12}></span>, this is typically very small (a few steps), meaning the chain loses all memory of its beginning after a handful of notes.</p>
-<p>One might try a <strong><span class=math-inline data-latex=k></span>-th order Markov chain</strong>: condition on the previous <span class=math-inline data-latex=k></span> notes instead of just one. But this requires a transition matrix of size <span class=math-inline data-latex="12^k \times 12^k"></span>: for <span class=math-inline data-latex="k = 8"></span> (a single musical phrase), the state space has <span class=math-inline data-latex="12^8 \approx 4.3 \times 10^8"></span> states. The number of parameters grows exponentially, making estimation from finite training data intractable. This exponential blowup is the fundamental limitation.</p>
-<div class=proposition-block id=prop-21.1>
-<div class=block-label>
-Prop 21.1 (Exponential State Space of k-th Order Chains)
-</div>
-<div class=block-body>A <span class=math-inline data-latex=k></span>-th order Markov chain on an alphabet of size <span class=math-inline data-latex=|S|></span> requires a transition matrix with <span class=math-inline data-latex="|S|^k \cdot |S| = |S|^{k+1}"></span> parameters. For <span class=math-inline data-latex="|S| = 12"></span> and <span class=math-inline data-latex="k = 16"></span> (two bars of eighth notes), this exceeds <span class=math-inline data-latex=10^{17}></span>.</div>
-</div>
-<div class=proof-block>
-<div class=block-label>Proof.</div>
-<div class=block-body>The state space of a <span class=math-inline data-latex=k></span>-th order chain is <span class=math-inline data-latex=S^k></span> (all sequences of length <span class=math-inline data-latex=k></span>), with <span class=math-inline data-latex="|S^k| = |S|^k"></span> states. Each state has <span class=math-inline data-latex=|S|></span> possible next-state probabilities (one per element of <span class=math-inline data-latex=S></span>), so the transition matrix has <span class=math-inline data-latex=|S|^k></span> rows and <span class=math-inline data-latex=|S|></span> free parameters per row (the last is determined by the row-sum constraint, but the matrix still has <span class=math-inline data-latex="|S|^k \times |S|"></span> entries). For <span class=math-inline data-latex="|S| = 12"></span>, <span class=math-inline data-latex="k = 16"></span>: <span class=math-inline data-latex="12^{17} \approx 2.2 \times 10^{18}"></span>. <span class=math-inline data-latex=\square></span></div>
-</div>
-<hr>
-<h2 id=part-ii-attention-and-transformers>Part II: Attention and Transformers</h2>
-<blockquote>
-<p><em>中文:</em> &ldquo;真正的突破要等到2017年。Transformer的核心是注意力机制。关键直觉是这样的：马尔可夫链有一张固定的转移概率表，每行加起来等于一。注意力机制也有这样一张表——但它不是固定的，而是根据当前内容实时算出来的。&rdquo;</p>
-</blockquote>
-<h3 id=21-scaled-dot-product-attention>2.1 Scaled Dot-Product Attention</h3>
-<div class=definition-block id=definition-21.5>
-<div class=block-label>
-Definition 21.5 (Query, Key, Value Projections)
-</div>
-<div class=block-body>Let <span class=math-inline data-latex="X \in \mathbb{R}^{n \times d}"></span> be an input matrix whose <span class=math-inline data-latex=n></span> rows are token embeddings of dimension <span class=math-inline data-latex=d></span>. Define three learned weight matrices <span class=math-inline data-latex="W_Q, W_K \in \mathbb{R}^{d \times d_k}"></span> and <span class=math-inline data-latex="W_V \in \mathbb{R}^{d \times d_v}"></span>. The <strong>query</strong>, <strong>key</strong>, and <strong>value</strong> matrices are:
-<span class=math-display data-latex="Q = XW_Q, \quad K = XW_K, \quad V = XW_V"></span></div>
-</div>
-<div class=definition-block id=definition-21.6>
-<div class=block-label>
-Definition 21.6 (Scaled Dot-Product Attention)
-</div>
-<div class=block-body>Given <span class=math-inline data-latex="Q \in \mathbb{R}^{n \times d_k}"></span>, <span class=math-inline data-latex="K \in \mathbb{R}^{n \times d_k}"></span>, <span class=math-inline data-latex="V \in \mathbb{R}^{n \times d_v}"></span>, the <strong>scaled dot-product attention</strong> is:
+That is, <span class=math-inline data-latex=\pi></span> is a left eigenvector of <span class=math-inline data-latex=P></span> with eigenvalue 1.</div></div><div class=theorem-block id=theorem-21.2><div class=block-label>Theorem 21.2 (Existence and Uniqueness of Stationary Distribution (Perron-Frobenius))</div><div class=block-body><p>Let <span class=math-inline data-latex=P></span> be the transition matrix of an <strong>irreducible, aperiodic</strong> Markov chain on a finite state space. Then:</p><ol><li><strong>Existence</strong>: There exists a unique stationary distribution <span class=math-inline data-latex=\pi></span> with <span class=math-inline data-latex="\pi P = \pi"></span> and <span class=math-inline data-latex="\pi_i > 0"></span> for all <span class=math-inline data-latex=i></span>.</li><li><strong>Convergence</strong>: For any initial distribution <span class=math-inline data-latex=\mu_0></span>, <span class=math-inline data-latex="\lim_{n \to \infty} \mu_0 P^n = \pi"></span>.</li><li><strong>Long-run frequency</strong>: With probability 1, the fraction of time spent in state <span class=math-inline data-latex=i></span> converges to <span class=math-inline data-latex=\pi_i></span>.</li></ol></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><em>(Sketch via Perron-Frobenius.)</em> An irreducible chain has <span class=math-inline data-latex="P^m > 0"></span> (entry-wise) for some <span class=math-inline data-latex=m></span> (aperiodicity + irreducibility ensure this). The Perron-Frobenius theorem for positive matrices states that such a matrix has a unique largest eigenvalue <span class=math-inline data-latex="\lambda_1 = 1"></span> (since <span class=math-inline data-latex=P></span> is stochastic, the all-ones vector is a right eigenvector with eigenvalue 1), and the corresponding left eigenvector <span class=math-inline data-latex=\pi></span> can be chosen with all entries positive and summing to 1. All other eigenvalues satisfy <span class=math-inline data-latex="|\lambda_i| < 1"></span>, so <span class=math-inline data-latex="P^n \to \mathbf{1}\pi"></span> as <span class=math-inline data-latex="n \to \infty"></span>, which gives convergence and the frequency interpretation. <span class=math-inline data-latex=\square></span></div></div><p><strong>Musical meaning</strong>: The stationary distribution <span class=math-inline data-latex=\pi></span> gives the long-run frequency of each pitch class. If the Markov chain on <span class=math-inline data-latex=\mathbb{Z}_{12}></span> has <span class=math-inline data-latex="\pi_C = 0.12"></span> and <span class=math-inline data-latex="\pi_G = 0.10"></span>, then in a long enough generated melody, roughly 12% of notes will be C and 10% will be G — regardless of which note started the chain. This is a <em>stylistic fingerprint</em> of the transition matrix.</p><p><strong>Worked example</strong>: For the toy matrix above, solving <span class=math-inline data-latex="\pi P = \pi"></span> with <span class=math-inline data-latex="\pi_1 + \pi_2 + \pi_3 = 1"></span> gives the system <span class=math-inline data-latex="0.2\pi_1 + 0.1\pi_2 + 0.3\pi_3 = \pi_1"></span>, etc. The solution is <span class=math-inline data-latex="\pi \approx (0.194, 0.333, 0.472)"></span>: G dominates in the long run.</p><h3 id=14-why-markov-chains-fail-at-music>1.4 Why Markov Chains Fail at Music</h3><blockquote><p><em>中文:</em> &ldquo;结果听起来怎么样？局部像音乐，整体没记忆。因为马尔可夫链只看上一步。&mldr;副歌回来、主题发展——它全抓不住。&rdquo;</p></blockquote><div class=definition-block id=definition-21.4><div class=block-label>Definition 21.4 (Mixing Time)</div><div class=block-body>The <strong>mixing time</strong> of an irreducible aperiodic Markov chain is the smallest <span class=math-inline data-latex=t></span> such that the total variation distance between <span class=math-inline data-latex="\mu_0 P^t"></span> and <span class=math-inline data-latex=\pi></span> is at most <span class=math-inline data-latex=1/4></span> for any initial distribution <span class=math-inline data-latex=\mu_0></span>:
+<span class=math-display data-latex="t_{\mathrm{mix}} = \min\bigl\{t : \max_{\mu_0} \|\mu_0 P^t - \pi\|_{\mathrm{TV}} \leq 1/4\bigr\}"></span></div></div><p>The mixing time measures how quickly the chain &ldquo;forgets&rdquo; its starting state. For a first-order chain on <span class=math-inline data-latex=\mathbb{Z}_{12}></span>, this is typically very small (a few steps), meaning the chain loses all memory of its beginning after a handful of notes.</p><p>One might try a <strong><span class=math-inline data-latex=k></span>-th order Markov chain</strong>: condition on the previous <span class=math-inline data-latex=k></span> notes instead of just one. But this requires a transition matrix of size <span class=math-inline data-latex="12^k \times 12^k"></span>: for <span class=math-inline data-latex="k = 8"></span> (a single musical phrase), the state space has <span class=math-inline data-latex="12^8 \approx 4.3 \times 10^8"></span> states. The number of parameters grows exponentially, making estimation from finite training data intractable. This exponential blowup is the fundamental limitation.</p><div class=proposition-block id=prop-21.1><div class=block-label>Prop 21.1 (Exponential State Space of k-th Order Chains)</div><div class=block-body>A <span class=math-inline data-latex=k></span>-th order Markov chain on an alphabet of size <span class=math-inline data-latex=|S|></span> requires a transition matrix with <span class=math-inline data-latex="|S|^k \cdot |S| = |S|^{k+1}"></span> parameters. For <span class=math-inline data-latex="|S| = 12"></span> and <span class=math-inline data-latex="k = 16"></span> (two bars of eighth notes), this exceeds <span class=math-inline data-latex=10^{17}></span>.</div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body>The state space of a <span class=math-inline data-latex=k></span>-th order chain is <span class=math-inline data-latex=S^k></span> (all sequences of length <span class=math-inline data-latex=k></span>), with <span class=math-inline data-latex="|S^k| = |S|^k"></span> states. Each state has <span class=math-inline data-latex=|S|></span> possible next-state probabilities (one per element of <span class=math-inline data-latex=S></span>), so the transition matrix has <span class=math-inline data-latex=|S|^k></span> rows and <span class=math-inline data-latex=|S|></span> free parameters per row (the last is determined by the row-sum constraint, but the matrix still has <span class=math-inline data-latex="|S|^k \times |S|"></span> entries). For <span class=math-inline data-latex="|S| = 12"></span>, <span class=math-inline data-latex="k = 16"></span>: <span class=math-inline data-latex="12^{17} \approx 2.2 \times 10^{18}"></span>. <span class=math-inline data-latex=\square></span></div></div><hr><h2 id=part-ii-attention-and-transformers>Part II: Attention and Transformers</h2><blockquote><p><em>中文:</em> &ldquo;真正的突破要等到2017年。Transformer的核心是注意力机制。关键直觉是这样的：马尔可夫链有一张固定的转移概率表，每行加起来等于一。注意力机制也有这样一张表——但它不是固定的，而是根据当前内容实时算出来的。&rdquo;</p></blockquote><h3 id=21-scaled-dot-product-attention>2.1 Scaled Dot-Product Attention</h3><div class=definition-block id=definition-21.5><div class=block-label>Definition 21.5 (Query, Key, Value Projections)</div><div class=block-body>Let <span class=math-inline data-latex="X \in \mathbb{R}^{n \times d}"></span> be an input matrix whose <span class=math-inline data-latex=n></span> rows are token embeddings of dimension <span class=math-inline data-latex=d></span>. Define three learned weight matrices <span class=math-inline data-latex="W_Q, W_K \in \mathbb{R}^{d \times d_k}"></span> and <span class=math-inline data-latex="W_V \in \mathbb{R}^{d \times d_v}"></span>. The <strong>query</strong>, <strong>key</strong>, and <strong>value</strong> matrices are:
+<span class=math-display data-latex="Q = XW_Q, \quad K = XW_K, \quad V = XW_V"></span></div></div><div class=definition-block id=definition-21.6><div class=block-label>Definition 21.6 (Scaled Dot-Product Attention)</div><div class=block-body>Given <span class=math-inline data-latex="Q \in \mathbb{R}^{n \times d_k}"></span>, <span class=math-inline data-latex="K \in \mathbb{R}^{n \times d_k}"></span>, <span class=math-inline data-latex="V \in \mathbb{R}^{n \times d_v}"></span>, the <strong>scaled dot-product attention</strong> is:
 <span class=math-display data-latex="\mathrm{Attention}(Q, K, V) = \mathrm{softmax}\!\left(\frac{QK^T}{\sqrt{d_k}}\right) V"></span>
-where softmax is applied row-wise: for row <span class=math-inline data-latex=i></span>, <span class=math-inline data-latex="\mathrm{softmax}(z)_j = e^{z_j}/\sum_{\ell} e^{z_\ell}"></span>.</div>
-</div>
-<p><strong>Why the <span class=math-inline data-latex=\sqrt{d_k}></span> scaling</strong>: If the entries of <span class=math-inline data-latex=Q></span> and <span class=math-inline data-latex=K></span> are independent with mean 0 and variance 1, then the dot product <span class=math-inline data-latex="q_i \cdot k_j = \sum_{m=1}^{d_k} q_{im} k_{jm}"></span> has mean 0 and variance <span class=math-inline data-latex=d_k></span>. Without scaling, for large <span class=math-inline data-latex=d_k></span> the dot products grow large in magnitude, pushing softmax into saturation (one entry near 1, all others near 0). Dividing by <span class=math-inline data-latex=\sqrt{d_k}></span> restores unit variance, keeping softmax in its informative regime.</p>
-<p><strong>Worked example</strong>: Let <span class=math-inline data-latex="n = 3"></span> (three tokens: C, E, G), <span class=math-inline data-latex="d_k = 2"></span>. Suppose after projection:
-<span class=math-display data-latex="Q = \begin{pmatrix} 1 & 0 \\ 0 & 1 \\ 1 & 1 \end{pmatrix}, \quad K = \begin{pmatrix} 1 & 1 \\ 0 & 1 \\ 1 & 0 \end{pmatrix}"></span></p>
-<p>Then <span class=math-inline data-latex="QK^T = \begin{pmatrix} 1 & 0 & 1 \\ 1 & 1 & 0 \\ 2 & 1 & 1 \end{pmatrix}"></span>. Dividing by <span class=math-inline data-latex="\sqrt{2} \approx 1.41"></span> and applying row-wise softmax gives a <span class=math-inline data-latex="3 \times 3"></span> matrix where each row sums to 1 — an attention weight matrix.</p>
-<h3 id=22-multi-head-attention>2.2 Multi-Head Attention</h3>
-<div class=definition-block id=definition-21.7>
-<div class=block-label>
-Definition 21.7 (Multi-Head Attention)
-</div>
-<div class=block-body>Given <span class=math-inline data-latex=h></span> attention heads, each with its own projections <span class=math-inline data-latex="W_Q^{(i)}, W_K^{(i)} \in \mathbb{R}^{d \times d_k}"></span> and <span class=math-inline data-latex="W_V^{(i)} \in \mathbb{R}^{d \times d_v}"></span>, define:
+where softmax is applied row-wise: for row <span class=math-inline data-latex=i></span>, <span class=math-inline data-latex="\mathrm{softmax}(z)_j = e^{z_j}/\sum_{\ell} e^{z_\ell}"></span>.</div></div><p><strong>Why the <span class=math-inline data-latex=\sqrt{d_k}></span> scaling</strong>: If the entries of <span class=math-inline data-latex=Q></span> and <span class=math-inline data-latex=K></span> are independent with mean 0 and variance 1, then the dot product <span class=math-inline data-latex="q_i \cdot k_j = \sum_{m=1}^{d_k} q_{im} k_{jm}"></span> has mean 0 and variance <span class=math-inline data-latex=d_k></span>. Without scaling, for large <span class=math-inline data-latex=d_k></span> the dot products grow large in magnitude, pushing softmax into saturation (one entry near 1, all others near 0). Dividing by <span class=math-inline data-latex=\sqrt{d_k}></span> restores unit variance, keeping softmax in its informative regime.</p><p><strong>Worked example</strong>: Let <span class=math-inline data-latex="n = 3"></span> (three tokens: C, E, G), <span class=math-inline data-latex="d_k = 2"></span>. Suppose after projection:
+<span class=math-display data-latex="Q = \begin{pmatrix} 1 & 0 \\ 0 & 1 \\ 1 & 1 \end{pmatrix}, \quad K = \begin{pmatrix} 1 & 1 \\ 0 & 1 \\ 1 & 0 \end{pmatrix}"></span></p><p>Then <span class=math-inline data-latex="QK^T = \begin{pmatrix} 1 & 0 & 1 \\ 1 & 1 & 0 \\ 2 & 1 & 1 \end{pmatrix}"></span>. Dividing by <span class=math-inline data-latex="\sqrt{2} \approx 1.41"></span> and applying row-wise softmax gives a <span class=math-inline data-latex="3 \times 3"></span> matrix where each row sums to 1 — an attention weight matrix.</p><h3 id=22-multi-head-attention>2.2 Multi-Head Attention</h3><div class=definition-block id=definition-21.7><div class=block-label>Definition 21.7 (Multi-Head Attention)</div><div class=block-body>Given <span class=math-inline data-latex=h></span> attention heads, each with its own projections <span class=math-inline data-latex="W_Q^{(i)}, W_K^{(i)} \in \mathbb{R}^{d \times d_k}"></span> and <span class=math-inline data-latex="W_V^{(i)} \in \mathbb{R}^{d \times d_v}"></span>, define:
 <span class=math-display data-latex="\mathrm{head}_i = \mathrm{Attention}(XW_Q^{(i)},\; XW_K^{(i)},\; XW_V^{(i)})"></span>
 <span class=math-display data-latex="\mathrm{MultiHead}(X) = \mathrm{Concat}(\mathrm{head}_1, \ldots, \mathrm{head}_h)\, W_O"></span>
-where <span class=math-inline data-latex="W_O \in \mathbb{R}^{hd_v \times d}"></span> is a learned output projection.</div>
-</div>
-<p><strong>Why multiple heads</strong>: Each head can learn a different &ldquo;type&rdquo; of relationship. In music: one head might attend to rhythmic patterns, another to harmonic intervals, a third to melodic contour. Concatenating and projecting combines these views.</p>
-<h3 id=23-attention-as-a-dynamic-transition-matrix>2.3 Attention as a Dynamic Transition Matrix</h3>
-<blockquote>
-<p><em>中文:</em> &ldquo;换句话说，Transformer把固定概率表变成了动态概率表。&rdquo;</p>
-</blockquote>
-<div class=theorem-block id=theorem-21.3>
-<div class=block-label>
-Theorem 21.3 (Softmax Attention Yields a Row-Stochastic Matrix)
-</div>
-<div class=block-body><p>Let <span class=math-inline data-latex="A = \mathrm{softmax}(QK^T/\sqrt{d_k}) \in \mathbb{R}^{n \times n}"></span>. Then:</p>
-<ol>
-<li><span class=math-inline data-latex="A_{ij} > 0"></span> for all <span class=math-inline data-latex="i, j"></span>.</li>
-<li><span class=math-inline data-latex="\sum_{j=1}^{n} A_{ij} = 1"></span> for every row <span class=math-inline data-latex=i></span>.</li>
-</ol>
-<p>That is, <span class=math-inline data-latex=A></span> is a <strong>(strictly) positive row-stochastic matrix</strong> — it satisfies the same algebraic properties as a Markov chain transition matrix. However, unlike a Markov chain, <span class=math-inline data-latex=A></span> depends on the input <span class=math-inline data-latex=X></span> and changes at every position.</p>
-</div>
-</div>
-<div class=proof-block>
-<div class=block-label>Proof.</div>
-<div class=block-body><p><strong>(1)</strong> For any real vector <span class=math-inline data-latex="z \in \mathbb{R}^n"></span>, the softmax function outputs <span class=math-inline data-latex="\mathrm{softmax}(z)_j = e^{z_j}/\sum_{\ell=1}^n e^{z_\ell}"></span>. Since <span class=math-inline data-latex="e^{z_j} > 0"></span> for all <span class=math-inline data-latex="z_j \in \mathbb{R}"></span>, we have <span class=math-inline data-latex="\mathrm{softmax}(z)_j > 0"></span>.</p>
-<p><strong>(2)</strong> By definition, <span class=math-inline data-latex="\sum_{j=1}^n \mathrm{softmax}(z)_j = \sum_{j=1}^n \frac{e^{z_j}}{\sum_\ell e^{z_\ell}} = \frac{\sum_j e^{z_j}}{\sum_\ell e^{z_\ell}} = 1"></span>.</p>
-<p>Applying this to each row <span class=math-inline data-latex="z_i = (QK^T)_{i,:}/\sqrt{d_k}"></span> establishes both properties for the matrix <span class=math-inline data-latex=A></span>. <span class=math-inline data-latex=\square></span></p>
-</div>
-</div>
-<p>The key conceptual shift: a Markov chain uses a <strong>fixed</strong> stochastic matrix <span class=math-inline data-latex=P></span>, determined once from training data. Attention computes a <strong>different</strong> stochastic matrix <span class=math-inline data-latex=A(X)></span> for each input sequence <span class=math-inline data-latex=X></span>. This allows the model to attend to distant positions when the content warrants it — capturing long-range dependencies like returning choruses and thematic development that Markov chains cannot.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Markov Chain</th>
-<th>Attention</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Stochastic matrix</td>
-<td>Fixed <span class=math-inline data-latex=P></span></td>
-<td>Dynamic <span class=math-inline data-latex=A(X)></span></td>
-</tr>
-<tr>
-<td>Entries</td>
-<td><span class=math-inline data-latex="\geq 0"></span>, rows sum to 1</td>
-<td><span class=math-inline data-latex="> 0"></span>, rows sum to 1</td>
-</tr>
-<tr>
-<td>Context window</td>
-<td>1 step (or <span class=math-inline data-latex=k></span> for order-<span class=math-inline data-latex=k></span>)</td>
-<td>Entire sequence</td>
-</tr>
-<tr>
-<td>Parameters</td>
-<td><span class=math-inline data-latex=O(|S|^2)></span></td>
-<td><span class=math-inline data-latex=O(d^2)></span>, independent of sequence length</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id=part-iii-diffusion-models-ddpm>Part III: Diffusion Models (DDPM)</h2>
-<blockquote>
-<p><em>中文:</em> &ldquo;第三次跳跃更反直觉。&mldr;扩散模型&mldr;从一整片纯噪声开始，一步一步去掉噪声，逐步还原出音乐的结构。&rdquo;</p>
-</blockquote>
-<h3 id=31-the-forward-noising-process>3.1 The Forward Noising Process</h3>
-<div class=definition-block id=definition-21.8>
-<div class=block-label>
-Definition 21.8 (DDPM Forward Process)
-</div>
-<div class=block-body>Let <span class=math-inline data-latex="x_0 \sim q(x_0)"></span> be a data sample (e.g., a mel-spectrogram of music). The <strong>forward (noising) process</strong> is a Markov chain <span class=math-inline data-latex="x_0 \to x_1 \to \cdots \to x_T"></span> defined by:
+where <span class=math-inline data-latex="W_O \in \mathbb{R}^{hd_v \times d}"></span> is a learned output projection.</div></div><p><strong>Why multiple heads</strong>: Each head can learn a different &ldquo;type&rdquo; of relationship. In music: one head might attend to rhythmic patterns, another to harmonic intervals, a third to melodic contour. Concatenating and projecting combines these views.</p><h3 id=23-attention-as-a-dynamic-transition-matrix>2.3 Attention as a Dynamic Transition Matrix</h3><blockquote><p><em>中文:</em> &ldquo;换句话说，Transformer把固定概率表变成了动态概率表。&rdquo;</p></blockquote><div class=theorem-block id=theorem-21.3><div class=block-label>Theorem 21.3 (Softmax Attention Yields a Row-Stochastic Matrix)</div><div class=block-body><p>Let <span class=math-inline data-latex="A = \mathrm{softmax}(QK^T/\sqrt{d_k}) \in \mathbb{R}^{n \times n}"></span>. Then:</p><ol><li><span class=math-inline data-latex="A_{ij} > 0"></span> for all <span class=math-inline data-latex="i, j"></span>.</li><li><span class=math-inline data-latex="\sum_{j=1}^{n} A_{ij} = 1"></span> for every row <span class=math-inline data-latex=i></span>.</li></ol><p>That is, <span class=math-inline data-latex=A></span> is a <strong>(strictly) positive row-stochastic matrix</strong> — it satisfies the same algebraic properties as a Markov chain transition matrix. However, unlike a Markov chain, <span class=math-inline data-latex=A></span> depends on the input <span class=math-inline data-latex=X></span> and changes at every position.</p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p><strong>(1)</strong> For any real vector <span class=math-inline data-latex="z \in \mathbb{R}^n"></span>, the softmax function outputs <span class=math-inline data-latex="\mathrm{softmax}(z)_j = e^{z_j}/\sum_{\ell=1}^n e^{z_\ell}"></span>. Since <span class=math-inline data-latex="e^{z_j} > 0"></span> for all <span class=math-inline data-latex="z_j \in \mathbb{R}"></span>, we have <span class=math-inline data-latex="\mathrm{softmax}(z)_j > 0"></span>.</p><p><strong>(2)</strong> By definition, <span class=math-inline data-latex="\sum_{j=1}^n \mathrm{softmax}(z)_j = \sum_{j=1}^n \frac{e^{z_j}}{\sum_\ell e^{z_\ell}} = \frac{\sum_j e^{z_j}}{\sum_\ell e^{z_\ell}} = 1"></span>.</p><p>Applying this to each row <span class=math-inline data-latex="z_i = (QK^T)_{i,:}/\sqrt{d_k}"></span> establishes both properties for the matrix <span class=math-inline data-latex=A></span>. <span class=math-inline data-latex=\square></span></p></div></div><p>The key conceptual shift: a Markov chain uses a <strong>fixed</strong> stochastic matrix <span class=math-inline data-latex=P></span>, determined once from training data. Attention computes a <strong>different</strong> stochastic matrix <span class=math-inline data-latex=A(X)></span> for each input sequence <span class=math-inline data-latex=X></span>. This allows the model to attend to distant positions when the content warrants it — capturing long-range dependencies like returning choruses and thematic development that Markov chains cannot.</p><table><thead><tr><th>Property</th><th>Markov Chain</th><th>Attention</th></tr></thead><tbody><tr><td>Stochastic matrix</td><td>Fixed <span class=math-inline data-latex=P></span></td><td>Dynamic <span class=math-inline data-latex=A(X)></span></td></tr><tr><td>Entries</td><td><span class=math-inline data-latex="\geq 0"></span>, rows sum to 1</td><td><span class=math-inline data-latex="> 0"></span>, rows sum to 1</td></tr><tr><td>Context window</td><td>1 step (or <span class=math-inline data-latex=k></span> for order-<span class=math-inline data-latex=k></span>)</td><td>Entire sequence</td></tr><tr><td>Parameters</td><td><span class=math-inline data-latex=O(|S|^2)></span></td><td><span class=math-inline data-latex=O(d^2)></span>, independent of sequence length</td></tr></tbody></table><hr><h2 id=part-iii-diffusion-models-ddpm>Part III: Diffusion Models (DDPM)</h2><blockquote><p><em>中文:</em> &ldquo;第三次跳跃更反直觉。&mldr;扩散模型&mldr;从一整片纯噪声开始，一步一步去掉噪声，逐步还原出音乐的结构。&rdquo;</p></blockquote><h3 id=31-the-forward-noising-process>3.1 The Forward Noising Process</h3><div class=definition-block id=definition-21.8><div class=block-label>Definition 21.8 (DDPM Forward Process)</div><div class=block-body>Let <span class=math-inline data-latex="x_0 \sim q(x_0)"></span> be a data sample (e.g., a mel-spectrogram of music). The <strong>forward (noising) process</strong> is a Markov chain <span class=math-inline data-latex="x_0 \to x_1 \to \cdots \to x_T"></span> defined by:
 <span class=math-display data-latex="q(x_t \mid x_{t-1}) = \mathcal{N}\!\left(x_t;\; \sqrt{1 - \beta_t}\, x_{t-1},\; \beta_t I\right)"></span>
-where <span class=math-inline data-latex="\{\beta_t\}_{t=1}^T"></span> is a fixed <strong>noise schedule</strong> with <span class=math-inline data-latex="0 < \beta_t < 1"></span>.</div>
-</div>
-<blockquote>
-<p><em>中文:</em> &ldquo;最反直觉的是：扩散的前向加噪过程，数学上就是一个马尔可夫链。&mldr;只不过状态不再是12个离散的音高，而是一整片连续的噪声。&rdquo;</p>
-</blockquote>
-<p>At each step, the signal is scaled down by <span class=math-inline data-latex=\sqrt{1-\beta_t}></span> and Gaussian noise of variance <span class=math-inline data-latex=\beta_t></span> is added. For large <span class=math-inline data-latex=T></span>, <span class=math-inline data-latex=x_T></span> is approximately pure Gaussian noise.</p>
-<p><strong>Worked example</strong>: For a one-dimensional signal <span class=math-inline data-latex="x_0 = 5"></span> with <span class=math-inline data-latex="\beta_1 = 0.01"></span>:
+where <span class=math-inline data-latex="\{\beta_t\}_{t=1}^T"></span> is a fixed <strong>noise schedule</strong> with <span class=math-inline data-latex="0 < \beta_t < 1"></span>.</div></div><blockquote><p><em>中文:</em> &ldquo;最反直觉的是：扩散的前向加噪过程，数学上就是一个马尔可夫链。&mldr;只不过状态不再是12个离散的音高，而是一整片连续的噪声。&rdquo;</p></blockquote><p>At each step, the signal is scaled down by <span class=math-inline data-latex=\sqrt{1-\beta_t}></span> and Gaussian noise of variance <span class=math-inline data-latex=\beta_t></span> is added. For large <span class=math-inline data-latex=T></span>, <span class=math-inline data-latex=x_T></span> is approximately pure Gaussian noise.</p><p><strong>Worked example</strong>: For a one-dimensional signal <span class=math-inline data-latex="x_0 = 5"></span> with <span class=math-inline data-latex="\beta_1 = 0.01"></span>:
 <span class=math-display data-latex="x_1 \sim \mathcal{N}(\sqrt{0.99} \cdot 5,\; 0.01) = \mathcal{N}(4.975,\; 0.01)"></span>
-The signal is barely perturbed. After many steps, the signal is destroyed.</p>
-<h3 id=32-the-reparameterization-trick>3.2 The Reparameterization Trick</h3>
-<div class=definition-block id=definition-21.9>
-<div class=block-label>
-Definition 21.9 (Cumulative Noise Schedule)
-</div>
-<div class=block-body>Define <span class=math-inline data-latex="\alpha_t = 1 - \beta_t"></span> and the cumulative product:
+The signal is barely perturbed. After many steps, the signal is destroyed.</p><h3 id=32-the-reparameterization-trick>3.2 The Reparameterization Trick</h3><div class=definition-block id=definition-21.9><div class=block-label>Definition 21.9 (Cumulative Noise Schedule)</div><div class=block-body>Define <span class=math-inline data-latex="\alpha_t = 1 - \beta_t"></span> and the cumulative product:
 <span class=math-display data-latex="\bar{\alpha}_t = \prod_{s=1}^{t} \alpha_s = \prod_{s=1}^{t}(1 - \beta_s)"></span>
-Note <span class=math-inline data-latex=\bar{\alpha}_t></span> is decreasing in <span class=math-inline data-latex=t></span>, approaching 0 as <span class=math-inline data-latex="t \to T"></span>.</div>
-</div>
-<div class=theorem-block id=theorem-21.4>
-<div class=block-label>
-Theorem 21.4 (DDPM Forward Reparameterization)
-</div>
-<div class=block-body>For any <span class=math-inline data-latex="t \geq 1"></span>, the marginal <span class=math-inline data-latex="q(x_t \mid x_0)"></span> can be written in closed form:
+Note <span class=math-inline data-latex=\bar{\alpha}_t></span> is decreasing in <span class=math-inline data-latex=t></span>, approaching 0 as <span class=math-inline data-latex="t \to T"></span>.</div></div><div class=theorem-block id=theorem-21.4><div class=block-label>Theorem 21.4 (DDPM Forward Reparameterization)</div><div class=block-body>For any <span class=math-inline data-latex="t \geq 1"></span>, the marginal <span class=math-inline data-latex="q(x_t \mid x_0)"></span> can be written in closed form:
 <span class=math-display data-latex="q(x_t \mid x_0) = \mathcal{N}\!\left(x_t;\; \sqrt{\bar{\alpha}_t}\, x_0,\; (1 - \bar{\alpha}_t)\, I\right)"></span>
 Equivalently, we can sample <span class=math-inline data-latex=x_t></span> directly from <span class=math-inline data-latex=x_0></span> without iterating through intermediate steps:
-<span class=math-display data-latex="x_t = \sqrt{\bar{\alpha}_t}\, x_0 + \sqrt{1 - \bar{\alpha}_t}\, \varepsilon, \qquad \varepsilon \sim \mathcal{N}(0, I)"></span></div>
-</div>
-<div class=proof-block>
-<div class=block-label>Proof.</div>
-<div class=block-body><p><strong>Base case</strong> (<span class=math-inline data-latex="t = 1"></span>): By definition, <span class=math-inline data-latex="q(x_1 \mid x_0) = \mathcal{N}(\sqrt{\alpha_1}\, x_0, \beta_1 I) = \mathcal{N}(\sqrt{\bar{\alpha}_1}\, x_0, (1 - \bar{\alpha}_1) I)"></span> since <span class=math-inline data-latex="\bar{\alpha}_1 = \alpha_1"></span> and <span class=math-inline data-latex="\beta_1 = 1 - \alpha_1"></span>.</p>
-<p><strong>Inductive step</strong>: Assume <span class=math-inline data-latex="x_{t-1} = \sqrt{\bar{\alpha}_{t-1}}\, x_0 + \sqrt{1 - \bar{\alpha}_{t-1}}\, \varepsilon_1"></span> with <span class=math-inline data-latex="\varepsilon_1 \sim \mathcal{N}(0, I)"></span>. Then:
+<span class=math-display data-latex="x_t = \sqrt{\bar{\alpha}_t}\, x_0 + \sqrt{1 - \bar{\alpha}_t}\, \varepsilon, \qquad \varepsilon \sim \mathcal{N}(0, I)"></span></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p><strong>Base case</strong> (<span class=math-inline data-latex="t = 1"></span>): By definition, <span class=math-inline data-latex="q(x_1 \mid x_0) = \mathcal{N}(\sqrt{\alpha_1}\, x_0, \beta_1 I) = \mathcal{N}(\sqrt{\bar{\alpha}_1}\, x_0, (1 - \bar{\alpha}_1) I)"></span> since <span class=math-inline data-latex="\bar{\alpha}_1 = \alpha_1"></span> and <span class=math-inline data-latex="\beta_1 = 1 - \alpha_1"></span>.</p><p><strong>Inductive step</strong>: Assume <span class=math-inline data-latex="x_{t-1} = \sqrt{\bar{\alpha}_{t-1}}\, x_0 + \sqrt{1 - \bar{\alpha}_{t-1}}\, \varepsilon_1"></span> with <span class=math-inline data-latex="\varepsilon_1 \sim \mathcal{N}(0, I)"></span>. Then:
 <span class=math-display data-latex="x_t = \sqrt{\alpha_t}\, x_{t-1} + \sqrt{\beta_t}\, \varepsilon_2, \qquad \varepsilon_2 \sim \mathcal{N}(0, I),\; \varepsilon_2 \perp \varepsilon_1"></span>
 Substituting the inductive hypothesis:
 <span class=math-display data-latex="x_t = \sqrt{\alpha_t}\bigl(\sqrt{\bar{\alpha}_{t-1}}\, x_0 + \sqrt{1 - \bar{\alpha}_{t-1}}\, \varepsilon_1\bigr) + \sqrt{\beta_t}\, \varepsilon_2"></span>
-<span class=math-display data-latex="= \sqrt{\alpha_t \bar{\alpha}_{t-1}}\, x_0 + \sqrt{\alpha_t(1 - \bar{\alpha}_{t-1})}\, \varepsilon_1 + \sqrt{\beta_t}\, \varepsilon_2"></span></p>
-<p>Since <span class=math-inline data-latex=\varepsilon_1></span> and <span class=math-inline data-latex=\varepsilon_2></span> are independent standard Gaussians, the sum <span class=math-inline data-latex="\sqrt{\alpha_t(1 - \bar{\alpha}_{t-1})}\, \varepsilon_1 + \sqrt{\beta_t}\, \varepsilon_2"></span> is Gaussian with mean 0 and variance:
+<span class=math-display data-latex="= \sqrt{\alpha_t \bar{\alpha}_{t-1}}\, x_0 + \sqrt{\alpha_t(1 - \bar{\alpha}_{t-1})}\, \varepsilon_1 + \sqrt{\beta_t}\, \varepsilon_2"></span></p><p>Since <span class=math-inline data-latex=\varepsilon_1></span> and <span class=math-inline data-latex=\varepsilon_2></span> are independent standard Gaussians, the sum <span class=math-inline data-latex="\sqrt{\alpha_t(1 - \bar{\alpha}_{t-1})}\, \varepsilon_1 + \sqrt{\beta_t}\, \varepsilon_2"></span> is Gaussian with mean 0 and variance:
 <span class=math-display data-latex="\alpha_t(1 - \bar{\alpha}_{t-1}) + \beta_t = \alpha_t - \alpha_t \bar{\alpha}_{t-1} + 1 - \alpha_t = 1 - \bar{\alpha}_t"></span>
 using <span class=math-inline data-latex="\alpha_t \bar{\alpha}_{t-1} = \bar{\alpha}_t"></span> and <span class=math-inline data-latex="\beta_t = 1 - \alpha_t"></span>. Therefore:
-<span class=math-display data-latex="x_t = \sqrt{\bar{\alpha}_t}\, x_0 + \sqrt{1 - \bar{\alpha}_t}\, \varepsilon, \qquad \varepsilon \sim \mathcal{N}(0, I) \;\;\square"></span></p>
-</div>
-</div>
-<p><strong>Musical significance</strong>: This result means we can jump directly from a clean spectrogram <span class=math-inline data-latex=x_0></span> to any noise level <span class=math-inline data-latex=t></span> in one step — essential for efficient training where <span class=math-inline data-latex=t></span> is sampled uniformly at random.</p>
-<h3 id=33-the-reverse-denoising-process>3.3 The Reverse (Denoising) Process</h3>
-<div class=definition-block id=definition-21.10>
-<div class=block-label>
-Definition 21.10 (DDPM Reverse Process)
-</div>
-<div class=block-body>The <strong>reverse process</strong> is a learned Markov chain running backward from <span class=math-inline data-latex="x_T \sim \mathcal{N}(0, I)"></span> to <span class=math-inline data-latex=x_0></span>:
+<span class=math-display data-latex="x_t = \sqrt{\bar{\alpha}_t}\, x_0 + \sqrt{1 - \bar{\alpha}_t}\, \varepsilon, \qquad \varepsilon \sim \mathcal{N}(0, I) \;\;\square"></span></p></div></div><p><strong>Musical significance</strong>: This result means we can jump directly from a clean spectrogram <span class=math-inline data-latex=x_0></span> to any noise level <span class=math-inline data-latex=t></span> in one step — essential for efficient training where <span class=math-inline data-latex=t></span> is sampled uniformly at random.</p><h3 id=33-the-reverse-denoising-process>3.3 The Reverse (Denoising) Process</h3><div class=definition-block id=definition-21.10><div class=block-label>Definition 21.10 (DDPM Reverse Process)</div><div class=block-body>The <strong>reverse process</strong> is a learned Markov chain running backward from <span class=math-inline data-latex="x_T \sim \mathcal{N}(0, I)"></span> to <span class=math-inline data-latex=x_0></span>:
 <span class=math-display data-latex="p_\theta(x_{t-1} \mid x_t) = \mathcal{N}\!\left(x_{t-1};\; \mu_\theta(x_t, t),\; \sigma_t^2 I\right)"></span>
-where <span class=math-inline data-latex=\mu_\theta></span> is a neural network predicting the denoised mean, and <span class=math-inline data-latex=\sigma_t^2></span> is a fixed or learned variance schedule.</div>
-</div>
-<div class=theorem-block id=theorem-21.5>
-<div class=block-label>
-Theorem 21.5 (ELBO for Diffusion Models)
-</div>
-<div class=block-body><p>The log-likelihood of the data is bounded below by:
-<span class=math-display data-latex="\log p_\theta(x_0) \geq \mathbb{E}_q\!\left[-\log \frac{p(x_T)}{q(x_T \mid x_0)} - \sum_{t=2}^{T} D_{\mathrm{KL}}\!\left(q(x_{t-1} \mid x_t, x_0) \;\|\; p_\theta(x_{t-1} \mid x_t)\right) + \log p_\theta(x_0 \mid x_1)\right]"></span></p>
-<p>The key insight: the posterior <span class=math-inline data-latex="q(x_{t-1} \mid x_t, x_0)"></span> is tractable (it is Gaussian), so each KL term can be computed in closed form. Training reduces to making each reverse step <span class=math-inline data-latex="p_\theta(x_{t-1} \mid x_t)"></span> match the true posterior <span class=math-inline data-latex="q(x_{t-1} \mid x_t, x_0)"></span>.</p>
-</div>
-</div>
-<div class=proof-block>
-<div class=block-label>Proof.</div>
-<div class=block-body><em>(Sketch.)</em> Start with <span class=math-inline data-latex="\log p_\theta(x_0) = \log \int p_\theta(x_{0:T})\, dx_{1:T}"></span>. Introduce the forward process as a variational distribution:
+where <span class=math-inline data-latex=\mu_\theta></span> is a neural network predicting the denoised mean, and <span class=math-inline data-latex=\sigma_t^2></span> is a fixed or learned variance schedule.</div></div><div class=theorem-block id=theorem-21.5><div class=block-label>Theorem 21.5 (ELBO for Diffusion Models)</div><div class=block-body><p>The log-likelihood of the data is bounded below by:
+<span class=math-display data-latex="\log p_\theta(x_0) \geq \mathbb{E}_q\!\left[-\log \frac{p(x_T)}{q(x_T \mid x_0)} - \sum_{t=2}^{T} D_{\mathrm{KL}}\!\left(q(x_{t-1} \mid x_t, x_0) \;\|\; p_\theta(x_{t-1} \mid x_t)\right) + \log p_\theta(x_0 \mid x_1)\right]"></span></p><p>The key insight: the posterior <span class=math-inline data-latex="q(x_{t-1} \mid x_t, x_0)"></span> is tractable (it is Gaussian), so each KL term can be computed in closed form. Training reduces to making each reverse step <span class=math-inline data-latex="p_\theta(x_{t-1} \mid x_t)"></span> match the true posterior <span class=math-inline data-latex="q(x_{t-1} \mid x_t, x_0)"></span>.</p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><em>(Sketch.)</em> Start with <span class=math-inline data-latex="\log p_\theta(x_0) = \log \int p_\theta(x_{0:T})\, dx_{1:T}"></span>. Introduce the forward process as a variational distribution:
 <span class=math-display data-latex="\log p_\theta(x_0) = \log \int \frac{p_\theta(x_{0:T})}{q(x_{1:T} \mid x_0)} q(x_{1:T} \mid x_0)\, dx_{1:T} \geq \mathbb{E}_{q(x_{1:T} \mid x_0)}\!\left[\log \frac{p_\theta(x_{0:T})}{q(x_{1:T} \mid x_0)}\right]"></span>
-by Jensen&rsquo;s inequality. Factorizing both <span class=math-inline data-latex="p_\theta(x_{0:T}) = p(x_T)\prod_{t=1}^T p_\theta(x_{t-1} \mid x_t)"></span> and <span class=math-inline data-latex="q(x_{1:T} \mid x_0) = \prod_{t=1}^T q(x_t \mid x_{t-1})"></span>, then rewriting the product using Bayes' rule <span class=math-inline data-latex="q(x_t \mid x_{t-1}) = q(x_{t-1} \mid x_t, x_0)\, q(x_t \mid x_0) / q(x_{t-1} \mid x_0)"></span>, telescoping yields the stated decomposition into KL divergence terms. Each <span class=math-inline data-latex="q(x_{t-1} \mid x_t, x_0)"></span> is Gaussian (as the product of two Gaussians), making the KL terms tractable. <span class=math-inline data-latex=\square></span></div>
-</div>
-<p>In practice, Ho et al. (2020) showed that the simplified loss
+by Jensen&rsquo;s inequality. Factorizing both <span class=math-inline data-latex="p_\theta(x_{0:T}) = p(x_T)\prod_{t=1}^T p_\theta(x_{t-1} \mid x_t)"></span> and <span class=math-inline data-latex="q(x_{1:T} \mid x_0) = \prod_{t=1}^T q(x_t \mid x_{t-1})"></span>, then rewriting the product using Bayes&rsquo; rule <span class=math-inline data-latex="q(x_t \mid x_{t-1}) = q(x_{t-1} \mid x_t, x_0)\, q(x_t \mid x_0) / q(x_{t-1} \mid x_0)"></span>, telescoping yields the stated decomposition into KL divergence terms. Each <span class=math-inline data-latex="q(x_{t-1} \mid x_t, x_0)"></span> is Gaussian (as the product of two Gaussians), making the KL terms tractable. <span class=math-inline data-latex=\square></span></div></div><p>In practice, Ho et al. (2020) showed that the simplified loss
 <span class=math-display data-latex="L_{\mathrm{simple}} = \mathbb{E}_{t, x_0, \varepsilon}\!\left[\|\varepsilon - \varepsilon_\theta(x_t, t)\|^2\right]"></span>
-(where <span class=math-inline data-latex=\varepsilon_\theta></span> is a neural network predicting the noise <span class=math-inline data-latex=\varepsilon></span> added at step <span class=math-inline data-latex=t></span>) works well and corresponds to a reweighted version of the ELBO.</p>
-<h3 id=34-score-function-and-score-matching>3.4 Score Function and Score Matching</h3>
-<div class=definition-block id=definition-21.11>
-<div class=block-label>
-Definition 21.11 (Score Function)
-</div>
-<div class=block-body>The <strong>score function</strong> of a distribution <span class=math-inline data-latex=p_t(x)></span> at noise level <span class=math-inline data-latex=t></span> is the gradient of the log-density:
+(where <span class=math-inline data-latex=\varepsilon_\theta></span> is a neural network predicting the noise <span class=math-inline data-latex=\varepsilon></span> added at step <span class=math-inline data-latex=t></span>) works well and corresponds to a reweighted version of the ELBO.</p><h3 id=34-score-function-and-score-matching>3.4 Score Function and Score Matching</h3><div class=definition-block id=definition-21.11><div class=block-label>Definition 21.11 (Score Function)</div><div class=block-body>The <strong>score function</strong> of a distribution <span class=math-inline data-latex=p_t(x)></span> at noise level <span class=math-inline data-latex=t></span> is the gradient of the log-density:
 <span class=math-display data-latex="s(x, t) = \nabla_x \log p_t(x)"></span>
-A neural network <span class=math-inline data-latex="s_\theta(x, t)"></span> trained to approximate the score is called a <strong>score network</strong>.</div>
-</div>
-<div class=theorem-block id=theorem-21.6>
-<div class=block-label>
-Theorem 21.6 (Score-Noise Equivalence)
-</div>
-<div class=block-body>The score function and the noise prediction network are related by:
+A neural network <span class=math-inline data-latex="s_\theta(x, t)"></span> trained to approximate the score is called a <strong>score network</strong>.</div></div><div class=theorem-block id=theorem-21.6><div class=block-label>Theorem 21.6 (Score-Noise Equivalence)</div><div class=block-body>The score function and the noise prediction network are related by:
 <span class=math-display data-latex="s_\theta(x_t, t) = -\frac{\varepsilon_\theta(x_t, t)}{\sqrt{1 - \bar{\alpha}_t}}"></span>
-That is, predicting the score is equivalent to predicting the noise, up to a known scaling factor.</div>
-</div>
-<div class=proof-block>
-<div class=block-label>Proof.</div>
-<div class=block-body><p>From the reparameterization <span class=math-inline data-latex="x_t = \sqrt{\bar{\alpha}_t}\, x_0 + \sqrt{1 - \bar{\alpha}_t}\, \varepsilon"></span>, the conditional density is:
-<span class=math-display data-latex="q(x_t \mid x_0) = \frac{1}{(2\pi(1 - \bar{\alpha}_t))^{d/2}} \exp\!\left(-\frac{\|x_t - \sqrt{\bar{\alpha}_t}\, x_0\|^2}{2(1 - \bar{\alpha}_t)}\right)"></span></p>
-<p>Taking the gradient with respect to <span class=math-inline data-latex=x_t></span>:
-<span class=math-display data-latex="\nabla_{x_t} \log q(x_t \mid x_0) = -\frac{x_t - \sqrt{\bar{\alpha}_t}\, x_0}{1 - \bar{\alpha}_t} = -\frac{\sqrt{1 - \bar{\alpha}_t}\, \varepsilon}{1 - \bar{\alpha}_t} = -\frac{\varepsilon}{\sqrt{1 - \bar{\alpha}_t}}"></span></p>
-<p>Since the optimal noise predictor satisfies <span class=math-inline data-latex="\varepsilon_\theta(x_t, t) \approx \varepsilon"></span>, we have <span class=math-inline data-latex="s_\theta(x_t, t) \approx \nabla_{x_t} \log q(x_t \mid x_0) = -\varepsilon/\sqrt{1 - \bar{\alpha}_t}"></span>. Marginalizing over <span class=math-inline data-latex=x_0></span> extends this to the unconditional score <span class=math-inline data-latex="\nabla_{x_t} \log p_t(x_t)"></span>. <span class=math-inline data-latex=\square></span></p>
-</div>
-</div>
-<p><strong>Musical interpretation</strong>: The score <span class=math-inline data-latex="\nabla_x \log p_t(x)"></span> points toward regions of higher probability density — i.e., toward more &ldquo;music-like&rdquo; spectrograms. Denoising by following the score is equivalent to gradually sculpting noise into music by climbing the probability landscape.</p>
-<h3 id=35-the-landscape-token-vs-continuous>3.5 The Landscape: Token vs Continuous</h3>
-<blockquote>
-<p><em>中文:</em> &ldquo;横轴是开放还是闭源。纵轴是用离散token做自回归，还是用连续空间做扩散。&rdquo;</p>
-</blockquote>
-<div class=definition-block id=definition-21.12>
-<div class=block-label>
-Definition 21.12 (Autoregressive (Token-Based) Generative Model)
-</div>
-<div class=block-body>Given a vocabulary <span class=math-inline data-latex=V></span> (e.g., quantized audio tokens), an <strong>autoregressive model</strong> factorizes the joint distribution of a sequence <span class=math-inline data-latex="(x_1, \ldots, x_n)"></span> as:
+That is, predicting the score is equivalent to predicting the noise, up to a known scaling factor.</div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p>From the reparameterization <span class=math-inline data-latex="x_t = \sqrt{\bar{\alpha}_t}\, x_0 + \sqrt{1 - \bar{\alpha}_t}\, \varepsilon"></span>, the conditional density is:
+<span class=math-display data-latex="q(x_t \mid x_0) = \frac{1}{(2\pi(1 - \bar{\alpha}_t))^{d/2}} \exp\!\left(-\frac{\|x_t - \sqrt{\bar{\alpha}_t}\, x_0\|^2}{2(1 - \bar{\alpha}_t)}\right)"></span></p><p>Taking the gradient with respect to <span class=math-inline data-latex=x_t></span>:
+<span class=math-display data-latex="\nabla_{x_t} \log q(x_t \mid x_0) = -\frac{x_t - \sqrt{\bar{\alpha}_t}\, x_0}{1 - \bar{\alpha}_t} = -\frac{\sqrt{1 - \bar{\alpha}_t}\, \varepsilon}{1 - \bar{\alpha}_t} = -\frac{\varepsilon}{\sqrt{1 - \bar{\alpha}_t}}"></span></p><p>Since the optimal noise predictor satisfies <span class=math-inline data-latex="\varepsilon_\theta(x_t, t) \approx \varepsilon"></span>, we have <span class=math-inline data-latex="s_\theta(x_t, t) \approx \nabla_{x_t} \log q(x_t \mid x_0) = -\varepsilon/\sqrt{1 - \bar{\alpha}_t}"></span>. Marginalizing over <span class=math-inline data-latex=x_0></span> extends this to the unconditional score <span class=math-inline data-latex="\nabla_{x_t} \log p_t(x_t)"></span>. <span class=math-inline data-latex=\square></span></p></div></div><p><strong>Musical interpretation</strong>: The score <span class=math-inline data-latex="\nabla_x \log p_t(x)"></span> points toward regions of higher probability density — i.e., toward more &ldquo;music-like&rdquo; spectrograms. Denoising by following the score is equivalent to gradually sculpting noise into music by climbing the probability landscape.</p><h3 id=35-the-landscape-token-vs-continuous>3.5 The Landscape: Token vs Continuous</h3><blockquote><p><em>中文:</em> &ldquo;横轴是开放还是闭源。纵轴是用离散token做自回归，还是用连续空间做扩散。&rdquo;</p></blockquote><div class=definition-block id=definition-21.12><div class=block-label>Definition 21.12 (Autoregressive (Token-Based) Generative Model)</div><div class=block-body>Given a vocabulary <span class=math-inline data-latex=V></span> (e.g., quantized audio tokens), an <strong>autoregressive model</strong> factorizes the joint distribution of a sequence <span class=math-inline data-latex="(x_1, \ldots, x_n)"></span> as:
 <span class=math-display data-latex="p(x_1, \ldots, x_n) = \prod_{i=1}^{n} p_\theta(x_i \mid x_1, \ldots, x_{i-1})"></span>
-Each conditional is parameterized by a Transformer that attends to all previous tokens. Sampling proceeds left-to-right.</div>
-</div>
-<div class=definition-block id=definition-21.13>
-<div class=block-label>
-Definition 21.13 (Continuous Diffusion Generative Model)
-</div>
-<div class=block-body>A <strong>diffusion model</strong> defines <span class=math-inline data-latex=p_\theta(x)></span> implicitly via the reverse process (Definition 21.10). The data <span class=math-inline data-latex="x \in \mathbb{R}^d"></span> lives in a continuous space (e.g., a mel-spectrogram or a latent embedding). Sampling starts from <span class=math-inline data-latex="x_T \sim \mathcal{N}(0,I)"></span> and iteratively denoises.</div>
-</div>
-<p>The fundamental mathematical distinction: autoregressive models operate on <strong>discrete sequences</strong> with an explicit likelihood via the chain rule of probability. Diffusion models operate on <strong>continuous vectors</strong> with an implicit likelihood accessible only through the ELBO. This is not merely an implementation choice — it determines the inductive bias: autoregressive models excel at capturing sequential dependencies but struggle with global coherence; diffusion models naturally capture global structure (the entire spectrogram is generated jointly) but must be coaxed into temporal coherence.</p>
-<hr>
-<h2 id=numerical-examples>Numerical Examples</h2>
-<h3 id=example-211-markov-chain-melody-generation>Example 21.1: Markov Chain Melody Generation</h3>
-<p>Consider a simple Markov chain on <span class=math-inline data-latex="\{C, D, E, F, G\}"></span> (a pentatonic subset) with transition matrix:</p>
-<span class=math-display data-latex="P = \begin{pmatrix} 0.1 & 0.3 & 0.2 & 0.1 & 0.3 \\ 0.2 & 0.1 & 0.3 & 0.2 & 0.2 \\ 0.1 & 0.2 & 0.1 & 0.3 & 0.3 \\ 0.3 & 0.1 & 0.2 & 0.1 & 0.3 \\ 0.2 & 0.2 & 0.2 & 0.2 & 0.2 \end{pmatrix}"></span>
-<p>Starting at <span class=math-inline data-latex="X_0 = C"></span>: row 1 says we go to D with probability 0.3, to G with probability 0.3. Suppose we sample D. From D (row 2), we might sample E (probability 0.3). From E (row 3), we might sample G (probability 0.3). Generated melody fragment: C-D-E-G-&mldr;</p>
-<p>The two-step transition <span class=math-inline data-latex=P^2></span> entry <span class=math-inline data-latex=(C,G)></span> is: <span class=math-inline data-latex="\sum_k P_{Ck} P_{kG} = 0.1(0.3) + 0.3(0.2) + 0.2(0.3) + 0.1(0.3) + 0.3(0.2) = 0.24"></span>.</p>
-<h3 id=example-212-forward-diffusion-on-a-spectrogram-pixel>Example 21.2: Forward Diffusion on a Spectrogram Pixel</h3>
-<p>Take one pixel of a mel-spectrogram: <span class=math-inline data-latex="x_0 = 3.0"></span> (log-amplitude). With a linear schedule <span class=math-inline data-latex="\beta_t = 0.0001 + (0.02 - 0.0001) \cdot t/T"></span> for <span class=math-inline data-latex="T = 1000"></span>:</p>
-<ul>
-<li>At <span class=math-inline data-latex="t = 1"></span>: <span class=math-inline data-latex="\bar{\alpha}_1 \approx 0.9999"></span>, so <span class=math-inline data-latex="x_1 \approx 0.99995 \cdot 3.0 + 0.01 \cdot \varepsilon \approx 3.0"></span> (nearly unchanged).</li>
-<li>At <span class=math-inline data-latex="t = 500"></span>: <span class=math-inline data-latex="\bar{\alpha}_{500} \approx 0.05"></span>, so <span class=math-inline data-latex="x_{500} \approx 0.22 \cdot 3.0 + 0.97 \cdot \varepsilon"></span> (mostly noise).</li>
-<li>At <span class=math-inline data-latex="t = 1000"></span>: <span class=math-inline data-latex="\bar{\alpha}_{1000} \approx 0"></span>, so <span class=math-inline data-latex="x_{1000} \approx \varepsilon"></span> (pure noise).</li>
-</ul>
-<hr>
-<h2 id=musical-connection>Musical Connection</h2>
-<div class=music-block>
-<div class=block-label>音乐联系</div>
-<div class=block-body><blockquote>
-<p><em>中文:</em> &ldquo;三集，同一个问题：怎么把音乐变成概率模型能操作的对象？&rdquo;</p>
-</blockquote>
-<p><strong>The Representation War</strong>: The narration frames the current landscape as a battle between two representations:</p>
-<blockquote>
-<p><em>中文:</em> &ldquo;今天的模型大战，本质是表示大战——音乐到底该写成token，还是雕成连续潜空间？&rdquo;</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>Approach</th>
-<th>Representation</th>
-<th>Framework</th>
-<th>Examples</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Token-based</strong></td>
-<td>Discrete tokens (MIDI, audio codecs)</td>
-<td>Autoregressive</td>
-<td>MusicLM, MusicGen</td>
-</tr>
-<tr>
-<td><strong>Continuous</strong></td>
-<td>Spectrograms, latent vectors</td>
-<td>Diffusion</td>
-<td>Riffusion, Stable Audio, ACE-Step</td>
-</tr>
-</tbody>
-</table>
-<p>The token-based approach factors the joint distribution as a product of conditionals:</p>
-<p><span class=math-display data-latex="p(x_1, \ldots, x_n) = \prod_{i=1}^{n} p(x_i \mid x_1, \ldots, x_{i-1})"></span></p>
-<p>and predicts one token at a time. The continuous approach treats the entire musical signal as a point in a high-dimensional space and sculpts it from noise by reversing a Markov chain. Both are valid factorizations of the same underlying probability <span class=math-inline data-latex=p(x)></span>.</p>
-<blockquote>
-<p><em>中文:</em> &ldquo;Riffusion：先把声音变成频谱图——一张二维的图片。然后用图片扩散模型去生成新的频谱图&mldr;&rdquo;</p>
-</blockquote>
-<p><strong>The arc from EP21 to EP23</strong>: This episode (EP21) asks <em>how the math changed</em>.</p>
-<p><a href=https://amath390.sibeliusp.com/episodes/ep22/ class=episode-ref-link>EP22</a></p>
-<p>examines the specific architectures (EnCodec, RVQ, DiT).</p>
-<p><a href=https://amath390.sibeliusp.com/episodes/ep23/ class=episode-ref-link>EP23</a></p>
-<p>addresses evaluation — how do we measure whether generated music is &ldquo;good&rdquo;?</p>
-</div>
-</div>
-<hr>
-<h2 id=limits-and-open-questions>Limits and Open Questions</h2>
-<ol>
-<li>
-<p><strong>Markov chains are not dead</strong>: Higher-order Markov models with clever state representations (e.g., learned embeddings rather than raw <span class=math-inline data-latex=k></span>-grams) remain useful as baselines and components of hybrid systems.</p>
-</li>
-<li>
-<p><strong>Attention complexity</strong>: Standard attention is <span class=math-inline data-latex=O(n^2)></span> in sequence length. For long musical pieces (minutes of audio tokenized at high resolution), this is a bottleneck. Linear attention, sparse attention, and state-space models (
+Each conditional is parameterized by a Transformer that attends to all previous tokens. Sampling proceeds left-to-right.</div></div><div class=definition-block id=definition-21.13><div class=block-label>Definition 21.13 (Continuous Diffusion Generative Model)</div><div class=block-body>A <strong>diffusion model</strong> defines <span class=math-inline data-latex=p_\theta(x)></span> implicitly via the reverse process (Definition 21.10). The data <span class=math-inline data-latex="x \in \mathbb{R}^d"></span> lives in a continuous space (e.g., a mel-spectrogram or a latent embedding). Sampling starts from <span class=math-inline data-latex="x_T \sim \mathcal{N}(0,I)"></span> and iteratively denoises.</div></div><p>The fundamental mathematical distinction: autoregressive models operate on <strong>discrete sequences</strong> with an explicit likelihood via the chain rule of probability. Diffusion models operate on <strong>continuous vectors</strong> with an implicit likelihood accessible only through the ELBO. This is not merely an implementation choice — it determines the inductive bias: autoregressive models excel at capturing sequential dependencies but struggle with global coherence; diffusion models naturally capture global structure (the entire spectrogram is generated jointly) but must be coaxed into temporal coherence.</p><hr><h2 id=numerical-examples>Numerical Examples</h2><h3 id=example-211-markov-chain-melody-generation>Example 21.1: Markov Chain Melody Generation</h3><p>Consider a simple Markov chain on <span class=math-inline data-latex="\{C, D, E, F, G\}"></span> (a pentatonic subset) with transition matrix:</p><span class=math-display data-latex="P = \begin{pmatrix} 0.1 & 0.3 & 0.2 & 0.1 & 0.3 \\ 0.2 & 0.1 & 0.3 & 0.2 & 0.2 \\ 0.1 & 0.2 & 0.1 & 0.3 & 0.3 \\ 0.3 & 0.1 & 0.2 & 0.1 & 0.3 \\ 0.2 & 0.2 & 0.2 & 0.2 & 0.2 \end{pmatrix}"></span><p>Starting at <span class=math-inline data-latex="X_0 = C"></span>: row 1 says we go to D with probability 0.3, to G with probability 0.3. Suppose we sample D. From D (row 2), we might sample E (probability 0.3). From E (row 3), we might sample G (probability 0.3). Generated melody fragment: C-D-E-G-&mldr;</p><p>The two-step transition <span class=math-inline data-latex=P^2></span> entry <span class=math-inline data-latex=(C,G)></span> is: <span class=math-inline data-latex="\sum_k P_{Ck} P_{kG} = 0.1(0.3) + 0.3(0.2) + 0.2(0.3) + 0.1(0.3) + 0.3(0.2) = 0.24"></span>.</p><h3 id=example-212-forward-diffusion-on-a-spectrogram-pixel>Example 21.2: Forward Diffusion on a Spectrogram Pixel</h3><p>Take one pixel of a mel-spectrogram: <span class=math-inline data-latex="x_0 = 3.0"></span> (log-amplitude). With a linear schedule <span class=math-inline data-latex="\beta_t = 0.0001 + (0.02 - 0.0001) \cdot t/T"></span> for <span class=math-inline data-latex="T = 1000"></span>:</p><ul><li>At <span class=math-inline data-latex="t = 1"></span>: <span class=math-inline data-latex="\bar{\alpha}_1 \approx 0.9999"></span>, so <span class=math-inline data-latex="x_1 \approx 0.99995 \cdot 3.0 + 0.01 \cdot \varepsilon \approx 3.0"></span> (nearly unchanged).</li><li>At <span class=math-inline data-latex="t = 500"></span>: <span class=math-inline data-latex="\bar{\alpha}_{500} \approx 0.05"></span>, so <span class=math-inline data-latex="x_{500} \approx 0.22 \cdot 3.0 + 0.97 \cdot \varepsilon"></span> (mostly noise).</li><li>At <span class=math-inline data-latex="t = 1000"></span>: <span class=math-inline data-latex="\bar{\alpha}_{1000} \approx 0"></span>, so <span class=math-inline data-latex="x_{1000} \approx \varepsilon"></span> (pure noise).</li></ul><hr><h2 id=musical-connection>Musical Connection</h2><div class=music-block><div class=block-label>音乐联系</div><div class=block-body><blockquote><p><em>中文:</em> &ldquo;三集，同一个问题：怎么把音乐变成概率模型能操作的对象？&rdquo;</p></blockquote><p><strong>The Representation War</strong>: The narration frames the current landscape as a battle between two representations:</p><blockquote><p><em>中文:</em> &ldquo;今天的模型大战，本质是表示大战——音乐到底该写成token，还是雕成连续潜空间？&rdquo;</p></blockquote><table><thead><tr><th>Approach</th><th>Representation</th><th>Framework</th><th>Examples</th></tr></thead><tbody><tr><td><strong>Token-based</strong></td><td>Discrete tokens (MIDI, audio codecs)</td><td>Autoregressive</td><td>MusicLM, MusicGen</td></tr><tr><td><strong>Continuous</strong></td><td>Spectrograms, latent vectors</td><td>Diffusion</td><td>Riffusion, Stable Audio, ACE-Step</td></tr></tbody></table><p>The token-based approach factors the joint distribution as a product of conditionals:</p><p><span class=math-display data-latex="p(x_1, \ldots, x_n) = \prod_{i=1}^{n} p(x_i \mid x_1, \ldots, x_{i-1})"></span></p><p>and predicts one token at a time. The continuous approach treats the entire musical signal as a point in a high-dimensional space and sculpts it from noise by reversing a Markov chain. Both are valid factorizations of the same underlying probability <span class=math-inline data-latex=p(x)></span>.</p><blockquote><p><em>中文:</em> &ldquo;Riffusion：先把声音变成频谱图——一张二维的图片。然后用图片扩散模型去生成新的频谱图&mldr;&rdquo;</p></blockquote><p><strong>The arc from EP21 to EP23</strong>: This episode (EP21) asks <em>how the math changed</em>.</p><p><a href=https://amath390.sibeliusp.com/episodes/ep22/ class=episode-ref-link>EP22</a></p><p>examines the specific architectures (EnCodec, RVQ, DiT).</p><p><a href=https://amath390.sibeliusp.com/episodes/ep23/ class=episode-ref-link>EP23</a></p><p>addresses evaluation — how do we measure whether generated music is &ldquo;good&rdquo;?</p></div></div><hr><h2 id=limits-and-open-questions>Limits and Open Questions</h2><ol><li><p><strong>Markov chains are not dead</strong>: Higher-order Markov models with clever state representations (e.g., learned embeddings rather than raw <span class=math-inline data-latex=k></span>-grams) remain useful as baselines and components of hybrid systems.</p></li><li><p><strong>Attention complexity</strong>: Standard attention is <span class=math-inline data-latex=O(n^2)></span> in sequence length. For long musical pieces (minutes of audio tokenized at high resolution), this is a bottleneck. Linear attention, sparse attention, and state-space models (
 <a href=https://amath390.sibeliusp.com/episodes/ep24/ class=episode-ref-link>EP24</a>
-) are active research directions.</p>
-</li>
-<li>
-<p><strong>Diffusion speed</strong>: DDPM requires hundreds of denoising steps. Accelerated samplers (DDIM, consistency models, flow matching) reduce this to tens or single-digit steps — but the quality-speed tradeoff is not fully understood.</p>
-</li>
-<li>
-<p><strong>The representation question is open</strong>: Whether music is better represented as discrete tokens or continuous signals is an empirical question with no theoretical resolution. Hybrid models (e.g., diffusion in a discrete-token latent space) blur the boundary.</p>
-</li>
-</ol>
-<blockquote>
-<p><em>中文:</em> &ldquo;七个模型，表面上各有各的招。但底层数学只有两条路：要么把音乐切成token一个一个预测，要么把音乐当作连续空间整体雕刻。&rdquo;</p>
-</blockquote>
-<ol start=5>
-<li><strong>Controllability vs quality</strong>: Markov chains offer full control (just edit the transition matrix) but poor quality. Diffusion models offer high quality but limited fine-grained control. Bridging this gap is the central engineering challenge of AI music generation.</li>
-</ol>
-<hr>
-<h2 id=historical-timeline>Historical Timeline</h2>
-<table>
-<thead>
-<tr>
-<th>Year</th>
-<th>Development</th>
-<th>Mathematical core</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1906</td>
-<td>Markov formalizes dependent random variables</td>
-<td>Transition matrix <span class=math-inline data-latex=P></span></td>
-</tr>
-<tr>
-<td>1957</td>
-<td>Hiller & Isaacson: <em>Illiac Suite</em></td>
-<td>Markov chain on <span class=math-inline data-latex=\mathbb{Z}_{12}></span></td>
-</tr>
-<tr>
-<td>1986</td>
-<td>Elman / Jordan: recurrent neural networks</td>
-<td>Hidden state, backpropagation through time</td>
-</tr>
-<tr>
-<td>1997</td>
-<td>Hochreiter & Schmidhuber: LSTM</td>
-<td>Gated memory cells</td>
-</tr>
-<tr>
-<td>2017</td>
-<td>Vaswani et al.: Transformer</td>
-<td>Softmax attention = dynamic stochastic matrix</td>
-</tr>
-<tr>
-<td>2019</td>
-<td>Music Transformer</td>
-<td>Long-range attention for symbolic music</td>
-</tr>
-<tr>
-<td>2020</td>
-<td>Ho et al.: DDPM</td>
-<td>Score matching, forward/reverse diffusion</td>
-</tr>
-<tr>
-<td>2022</td>
-<td>Riffusion</td>
-<td>Image diffusion on spectrograms</td>
-</tr>
-<tr>
-<td>2023</td>
-<td>MusicGen, MusicLM</td>
-<td>Token-based autoregressive audio generation</td>
-</tr>
-<tr>
-<td>2024</td>
-<td>ACE-Step, Stable Audio</td>
-<td>Full-song diffusion in latent space</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id=academic-references>Academic References</h2>
-<ol>
-<li>Hiller, L. & Isaacson, L. (1957). <em>Musical Composition with a High-Speed Digital Computer</em>. Experimental Music, McGraw-Hill.</li>
-<li>Norris, J.R. (1997). <em>Markov Chains</em>. Cambridge University Press.</li>
-<li>Seneta, E. (2006). <em>Non-negative Matrices and Markov Chains</em>, 3rd ed. Springer.</li>
-<li>Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.N., Kaiser, L. & Polosukhin, I. (2017). &ldquo;Attention Is All You Need.&rdquo; <em>Advances in Neural Information Processing Systems</em> 30 (NeurIPS).</li>
-<li>Huang, C.-Z.A., Vaswani, A., Uszkoreit, J., Shazeer, N., Simon, I., Hawthorne, C., Dai, A.M., Hoffman, M.D., Dinculescu, M. & Eck, D. (2019). &ldquo;Music Transformer: Generating Music with Long-Term Structure.&rdquo; <em>ICLR 2019</em>.</li>
-<li>Ho, J., Jain, A. & Abbeel, P. (2020). &ldquo;Denoising Diffusion Probabilistic Models.&rdquo; <em>Advances in Neural Information Processing Systems</em> 33 (NeurIPS).</li>
-<li>Song, Y. & Ermon, S. (2019). &ldquo;Generative Modeling by Estimating Gradients of the Data Distribution.&rdquo; <em>NeurIPS 2019</em>.</li>
-<li>Song, Y., Sohl-Dickstein, J., Kingma, D.P., Kumar, A., Ermon, S. & Poole, B. (2021). &ldquo;Score-Based Generative Modeling through Stochastic Differential Equations.&rdquo; <em>ICLR 2021</em>.</li>
-<li>Forsyth, S. (2022). <em>Riffusion — Stable Diffusion for Real-Time Music Generation</em>. <a href=https://www.riffusion.com>https://www.riffusion.com</a></li>
-<li>Copet, J., Kreuk, F., Gat, I., Remez, T., Kant, D., Synnaeve, G., Adi, Y. & Defossez, A. (2023). &ldquo;Simple and Controllable Music Generation.&rdquo; <em>NeurIPS 2023</em>. (MusicGen)</li>
-<li>Agostinelli, A., Denk, T.I., Borsos, Z., Engel, J., Verzetti, M., Tagliasacchi, A., Marafioti, A., Ye, Z., Le Roux, J. & Frank, J. (2023). &ldquo;MusicLM: Generating Music From Text.&rdquo; <em>arXiv:2301.11325</em>.</li>
-<li>Levin, D.A., Peres, Y. & Wilmer, E.L. (2009). <em>Markov Chains and Mixing Times</em>. AMS.</li>
-<li>Sohl-Dickstein, J., Weiss, E., Maheswaranathan, N. & Ganguli, S. (2015). &ldquo;Deep Unsupervised Learning using Nonequilibrium Thermodynamics.&rdquo; <em>ICML 2015</em>.</li>
-<li>Hochreiter, S. & Schmidhuber, J. (1997). &ldquo;Long Short-Term Memory.&rdquo; <em>Neural Computation</em> 9(8), 1735-1780.</li>
-<li>Briot, J.-P., Hadjeres, G. & Pachet, F. (2020). <em>Deep Learning Techniques for Music Generation</em>. Springer.</li>
-</ol>
-</div>
-<nav class=ep-nav>
-<a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-nav-prev>
-← EP20: Character Interaction Networks in Opera
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-nav-next>
-EP22: How AI Writes Music — EnCodec and RVQ →
-</a>
-</nav>
-</article>
-<aside class=ep-toc-aside>
-<div class=ep-toc-sticky>
-<div class=ep-toc-label>本页目录</div>
-<nav id=TableOfContents>
-<ul>
-<li><a href=#overview>Overview</a></li>
-<li><a href=#prerequisites>Prerequisites</a></li>
-<li><a href=#part-i-markov-chains-on-ℤ>Part I: Markov Chains on ℤ₁₂</a>
-<ul>
-<li><a href=#11-definitions>1.1 Definitions</a></li>
-<li><a href=#12-multi-step-transitions>1.2 Multi-Step Transitions</a></li>
-<li><a href=#13-stationary-distribution>1.3 Stationary Distribution</a></li>
-<li><a href=#14-why-markov-chains-fail-at-music>1.4 Why Markov Chains Fail at Music</a></li>
-</ul>
-</li>
-<li><a href=#part-ii-attention-and-transformers>Part II: Attention and Transformers</a>
-<ul>
-<li><a href=#21-scaled-dot-product-attention>2.1 Scaled Dot-Product Attention</a></li>
-<li><a href=#22-multi-head-attention>2.2 Multi-Head Attention</a></li>
-<li><a href=#23-attention-as-a-dynamic-transition-matrix>2.3 Attention as a Dynamic Transition Matrix</a></li>
-</ul>
-</li>
-<li><a href=#part-iii-diffusion-models-ddpm>Part III: Diffusion Models (DDPM)</a>
-<ul>
-<li><a href=#31-the-forward-noising-process>3.1 The Forward Noising Process</a></li>
-<li><a href=#32-the-reparameterization-trick>3.2 The Reparameterization Trick</a></li>
-<li><a href=#33-the-reverse-denoising-process>3.3 The Reverse (Denoising) Process</a></li>
-<li><a href=#34-score-function-and-score-matching>3.4 Score Function and Score Matching</a></li>
-<li><a href=#35-the-landscape-token-vs-continuous>3.5 The Landscape: Token vs Continuous</a></li>
-</ul>
-</li>
-<li><a href=#numerical-examples>Numerical Examples</a>
-<ul>
-<li><a href=#example-211-markov-chain-melody-generation>Example 21.1: Markov Chain Melody Generation</a></li>
-<li><a href=#example-212-forward-diffusion-on-a-spectrogram-pixel>Example 21.2: Forward Diffusion on a Spectrogram Pixel</a></li>
-</ul>
-</li>
-<li><a href=#musical-connection>Musical Connection</a></li>
-<li><a href=#limits-and-open-questions>Limits and Open Questions</a></li>
-<li><a href=#historical-timeline>Historical Timeline</a></li>
-<li><a href=#academic-references>Academic References</a></li>
-</ul>
-</nav>
-</div>
-</aside>
-</div>
-<footer class=site-footer>
-<div class=footer-content>
-<a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link>
-<img src=/images/avatar.png alt="Sibelius P." class=footer-avatar>
-</a>
-<div class=footer-text>
-<span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
+) are active research directions.</p></li><li><p><strong>Diffusion speed</strong>: DDPM requires hundreds of denoising steps. Accelerated samplers (DDIM, consistency models, flow matching) reduce this to tens or single-digit steps — but the quality-speed tradeoff is not fully understood.</p></li><li><p><strong>The representation question is open</strong>: Whether music is better represented as discrete tokens or continuous signals is an empirical question with no theoretical resolution. Hybrid models (e.g., diffusion in a discrete-token latent space) blur the boundary.</p></li></ol><blockquote><p><em>中文:</em> &ldquo;七个模型，表面上各有各的招。但底层数学只有两条路：要么把音乐切成token一个一个预测，要么把音乐当作连续空间整体雕刻。&rdquo;</p></blockquote><ol start=5><li><strong>Controllability vs quality</strong>: Markov chains offer full control (just edit the transition matrix) but poor quality. Diffusion models offer high quality but limited fine-grained control. Bridging this gap is the central engineering challenge of AI music generation.</li></ol><hr><h2 id=historical-timeline>Historical Timeline</h2><table><thead><tr><th>Year</th><th>Development</th><th>Mathematical core</th></tr></thead><tbody><tr><td>1906</td><td>Markov formalizes dependent random variables</td><td>Transition matrix <span class=math-inline data-latex=P></span></td></tr><tr><td>1957</td><td>Hiller & Isaacson: <em>Illiac Suite</em></td><td>Markov chain on <span class=math-inline data-latex=\mathbb{Z}_{12}></span></td></tr><tr><td>1986</td><td>Elman / Jordan: recurrent neural networks</td><td>Hidden state, backpropagation through time</td></tr><tr><td>1997</td><td>Hochreiter & Schmidhuber: LSTM</td><td>Gated memory cells</td></tr><tr><td>2017</td><td>Vaswani et al.: Transformer</td><td>Softmax attention = dynamic stochastic matrix</td></tr><tr><td>2019</td><td>Music Transformer</td><td>Long-range attention for symbolic music</td></tr><tr><td>2020</td><td>Ho et al.: DDPM</td><td>Score matching, forward/reverse diffusion</td></tr><tr><td>2022</td><td>Riffusion</td><td>Image diffusion on spectrograms</td></tr><tr><td>2023</td><td>MusicGen, MusicLM</td><td>Token-based autoregressive audio generation</td></tr><tr><td>2024</td><td>ACE-Step, Stable Audio</td><td>Full-song diffusion in latent space</td></tr></tbody></table><hr><h2 id=academic-references>Academic References</h2><ol><li>Hiller, L. & Isaacson, L. (1957). <em>Musical Composition with a High-Speed Digital Computer</em>. Experimental Music, McGraw-Hill.</li><li>Norris, J.R. (1997). <em>Markov Chains</em>. Cambridge University Press.</li><li>Seneta, E. (2006). <em>Non-negative Matrices and Markov Chains</em>, 3rd ed. Springer.</li><li>Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.N., Kaiser, L. & Polosukhin, I. (2017). &ldquo;Attention Is All You Need.&rdquo; <em>Advances in Neural Information Processing Systems</em> 30 (NeurIPS).</li><li>Huang, C.-Z.A., Vaswani, A., Uszkoreit, J., Shazeer, N., Simon, I., Hawthorne, C., Dai, A.M., Hoffman, M.D., Dinculescu, M. & Eck, D. (2019). &ldquo;Music Transformer: Generating Music with Long-Term Structure.&rdquo; <em>ICLR 2019</em>.</li><li>Ho, J., Jain, A. & Abbeel, P. (2020). &ldquo;Denoising Diffusion Probabilistic Models.&rdquo; <em>Advances in Neural Information Processing Systems</em> 33 (NeurIPS).</li><li>Song, Y. & Ermon, S. (2019). &ldquo;Generative Modeling by Estimating Gradients of the Data Distribution.&rdquo; <em>NeurIPS 2019</em>.</li><li>Song, Y., Sohl-Dickstein, J., Kingma, D.P., Kumar, A., Ermon, S. & Poole, B. (2021). &ldquo;Score-Based Generative Modeling through Stochastic Differential Equations.&rdquo; <em>ICLR 2021</em>.</li><li>Forsyth, S. (2022). <em>Riffusion — Stable Diffusion for Real-Time Music Generation</em>. <a href=https://www.riffusion.com>https://www.riffusion.com</a></li><li>Copet, J., Kreuk, F., Gat, I., Remez, T., Kant, D., Synnaeve, G., Adi, Y. & Defossez, A. (2023). &ldquo;Simple and Controllable Music Generation.&rdquo; <em>NeurIPS 2023</em>. (MusicGen)</li><li>Agostinelli, A., Denk, T.I., Borsos, Z., Engel, J., Verzetti, M., Tagliasacchi, A., Marafioti, A., Ye, Z., Le Roux, J. & Frank, J. (2023). &ldquo;MusicLM: Generating Music From Text.&rdquo; <em>arXiv:2301.11325</em>.</li><li>Levin, D.A., Peres, Y. & Wilmer, E.L. (2009). <em>Markov Chains and Mixing Times</em>. AMS.</li><li>Sohl-Dickstein, J., Weiss, E., Maheswaranathan, N. & Ganguli, S. (2015). &ldquo;Deep Unsupervised Learning using Nonequilibrium Thermodynamics.&rdquo; <em>ICML 2015</em>.</li><li>Hochreiter, S. & Schmidhuber, J. (1997). &ldquo;Long Short-Term Memory.&rdquo; <em>Neural Computation</em> 9(8), 1735-1780.</li><li>Briot, J.-P., Hadjeres, G. & Pachet, F. (2020). <em>Deep Learning Techniques for Music Generation</em>. Springer.</li></ol></div><nav class=ep-nav><a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-nav-prev>← EP20: Character Interaction Networks in Opera
+</a><a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-nav-next>EP22: How AI Writes Music — EnCodec and RVQ →</a></nav></article><aside class=ep-toc-aside><div class=ep-toc-sticky><div class=ep-toc-label>本页目录</div><nav id=TableOfContents><ul><li><a href=#overview>Overview</a></li><li><a href=#prerequisites>Prerequisites</a></li><li><a href=#part-i-markov-chains-on-ℤ>Part I: Markov Chains on ℤ₁₂</a><ul><li><a href=#11-definitions>1.1 Definitions</a></li><li><a href=#12-multi-step-transitions>1.2 Multi-Step Transitions</a></li><li><a href=#13-stationary-distribution>1.3 Stationary Distribution</a></li><li><a href=#14-why-markov-chains-fail-at-music>1.4 Why Markov Chains Fail at Music</a></li></ul></li><li><a href=#part-ii-attention-and-transformers>Part II: Attention and Transformers</a><ul><li><a href=#21-scaled-dot-product-attention>2.1 Scaled Dot-Product Attention</a></li><li><a href=#22-multi-head-attention>2.2 Multi-Head Attention</a></li><li><a href=#23-attention-as-a-dynamic-transition-matrix>2.3 Attention as a Dynamic Transition Matrix</a></li></ul></li><li><a href=#part-iii-diffusion-models-ddpm>Part III: Diffusion Models (DDPM)</a><ul><li><a href=#31-the-forward-noising-process>3.1 The Forward Noising Process</a></li><li><a href=#32-the-reparameterization-trick>3.2 The Reparameterization Trick</a></li><li><a href=#33-the-reverse-denoising-process>3.3 The Reverse (Denoising) Process</a></li><li><a href=#34-score-function-and-score-matching>3.4 Score Function and Score Matching</a></li><li><a href=#35-the-landscape-token-vs-continuous>3.5 The Landscape: Token vs Continuous</a></li></ul></li><li><a href=#numerical-examples>Numerical Examples</a><ul><li><a href=#example-211-markov-chain-melody-generation>Example 21.1: Markov Chain Melody Generation</a></li><li><a href=#example-212-forward-diffusion-on-a-spectrogram-pixel>Example 21.2: Forward Diffusion on a Spectrogram Pixel</a></li></ul></li><li><a href=#musical-connection>Musical Connection</a></li><li><a href=#limits-and-open-questions>Limits and Open Questions</a></li><li><a href=#historical-timeline>Historical Timeline</a></li><li><a href=#academic-references>Academic References</a></li></ul></nav></div></aside></div><footer class=site-footer><div class=footer-content><a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link><img src=/images/avatar.png alt="Sibelius P." class=footer-avatar></a><div class=footer-text><span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
 <span class=footer-sep>·</span>
 <a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener>小红书</a>
 <span class=footer-sep>·</span>
-<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span>
-</div>
-</div>
-</footer>
-</main>
-</div>
-</body>
-</html>
+<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span></div></div></footer></main></div></body></html>

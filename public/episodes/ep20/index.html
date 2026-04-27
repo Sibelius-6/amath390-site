@@ -1,752 +1,85 @@
-<!doctype html><html lang=zh-cn>
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<title>EP20: Character Interaction Networks in Opera | AMATH 390 数学与音乐</title>
-<meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
-<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous>
-<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script>
-<script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('[data-latex]').forEach(function(a){try{katex.render(a.getAttribute('data-latex'),a,{displayMode:a.classList.contains('math-display'),throwOnError:!1})}catch(b){console.warn('KaTeX:',b.message,a)}})})</script>
-<link rel=icon type=image/png sizes=32x32 href=/favicon-32.png>
-<link rel=icon type=image/png sizes=16x16 href=/favicon-16.png>
-<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
-<link rel=stylesheet href=/css/amath390.css>
-</head>
-<body>
-<div class=layout-wrapper>
-<nav class=sidebar>
-<div class=sidebar-header>
-<a href=/ class=sidebar-title>AMATH 390</a>
-<div class=sidebar-subtitle>数学与音乐</div>
-</div>
-<div class=arc-group>
-<div class=arc-label>数学基础篇</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link>
-<span class=ep-num>01</span>
+<!doctype html><html lang=zh-cn><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>EP20: Character Interaction Networks in Opera | AMATH 390 数学与音乐</title><meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music"><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script><script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("[data-latex]").forEach(function(e){try{katex.render(e.getAttribute("data-latex"),e,{displayMode:e.classList.contains("math-display"),throwOnError:!1})}catch(t){console.warn("KaTeX:",t.message,e)}})})</script><link rel=icon type=image/png sizes=32x32 href=/favicon-32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=stylesheet href=/css/amath390.css></head><body><div class=layout-wrapper><nav class=sidebar><div class=sidebar-header><a href=/ class=sidebar-title>AMATH 390</a><div class=sidebar-subtitle>数学与音乐</div></div><div class=arc-group><div class=arc-label>数学基础篇</div><a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link><span class=ep-num>01</span>
 <span class=ep-title>Chord Space and the Torus</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep02/ class=ep-link>
-<span class=ep-num>02</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep02/ class=ep-link><span class=ep-num>02</span>
 <span class=ep-title>String Vibration and the Wave Equation</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link>
-<span class=ep-num>03</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link><span class=ep-num>03</span>
 <span class=ep-title>Bach and Graph Connectivity</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link>
-<span class=ep-num>04</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link><span class=ep-num>04</span>
 <span class=ep-title>All-Interval Rows and ℤ₁₂</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link>
-<span class=ep-num>05</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link><span class=ep-num>05</span>
 <span class=ep-title>Turán's Theorem and Counterpoint</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-link>
-<span class=ep-num>06</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-link><span class=ep-num>06</span>
 <span class=ep-title>Graph Coloring and Voice Assignment</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-link>
-<span class=ep-num>07</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-link><span class=ep-num>07</span>
 <span class=ep-title>Information Entropy and All-Interval Rows</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-link>
-<span class=ep-num>08</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-link><span class=ep-num>08</span>
 <span class=ep-title>Shepard Tones and the Tritone Paradox</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link>
-<span class=ep-num>09</span>
-<span class=ep-title>Combination Tones and Nonlinear Acoustics</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>Jacob Collier 系列</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep10/ class=ep-link>
-<span class=ep-num>10</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link><span class=ep-num>09</span>
+<span class=ep-title>Combination Tones and Nonlinear Acoustics</span></a></div><div class=arc-group><div class=arc-label>Jacob Collier 系列</div><a href=https://amath390.sibeliusp.com/episodes/ep10/ class=ep-link><span class=ep-num>10</span>
 <span class=ep-title>Negative Harmony and the Dihedral Group D₁₂</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link>
-<span class=ep-num>11</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link><span class=ep-num>11</span>
 <span class=ep-title>Comma Drift and the Impossibility of Perfect Tuning</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep12/ class=ep-link>
-<span class=ep-num>12</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep12/ class=ep-link><span class=ep-num>12</span>
 <span class=ep-title>The Circle of Fifths as a Folded Spiral</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-link>
-<span class=ep-num>13</span>
-<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>拓扑数学专篇</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-link>
-<span class=ep-num>14</span>
-<span class=ep-title>Tonnetz Hodge Duality</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>歌剧系列</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-link>
-<span class=ep-num>15</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-link><span class=ep-num>13</span>
+<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span></a></div><div class=arc-group><div class=arc-label>拓扑数学专篇</div><a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-link><span class=ep-num>14</span>
+<span class=ep-title>Tonnetz Hodge Duality</span></a></div><div class=arc-group><div class=arc-label>歌剧系列</div><a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-link><span class=ep-num>15</span>
 <span class=ep-title>Opera Acoustics and the Singer's Formant</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link>
-<span class=ep-num>16</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link><span class=ep-num>16</span>
 <span class=ep-title>Rossini's Code — Budden, Gossett, and the Convention System</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-link>
-<span class=ep-num>17</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-link><span class=ep-num>17</span>
 <span class=ep-title>Leitmotif Networks — Wagner's Ring Cycle</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-link>
-<span class=ep-num>18</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-link><span class=ep-num>18</span>
 <span class=ep-title>Game Theory in Operatic Duets</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link>
-<span class=ep-num>19</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link><span class=ep-num>19</span>
 <span class=ep-title>Vibrato as FM Synthesis</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep20/ class="ep-link active">
-<span class=ep-num>20</span>
-<span class=ep-title>Character Interaction Networks in Opera</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>AI 音乐三部曲</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-link>
-<span class=ep-num>21</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep20/ class="ep-link active"><span class=ep-num>20</span>
+<span class=ep-title>Character Interaction Networks in Opera</span></a></div><div class=arc-group><div class=arc-label>AI 音乐三部曲</div><a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-link><span class=ep-num>21</span>
 <span class=ep-title>From Markov to Diffusion — Sixty Years of AI Composition</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-link>
-<span class=ep-num>22</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-link><span class=ep-num>22</span>
 <span class=ep-title>How AI Writes Music — EnCodec and RVQ</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-link>
-<span class=ep-num>23</span>
-<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span>
-</a>
-</div>
-<div class=sidebar-footer>
-<a href=/theorems/>定理索引</a>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-link><span class=ep-num>23</span>
+<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span></a></div><div class=arc-group><div class=arc-label>流行音乐 × 数学</div><a href=https://amath390.sibeliusp.com/episodes/ep24/ class=ep-link><span class=ep-num>24</span>
+<span class=ep-title>The Information Code of Pop Music</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep25/ class=ep-link><span class=ep-num>25</span>
+<span class=ep-title>Why Music Gives You Goosebumps — Prediction Error and Frisson</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep26/ class=ep-link><span class=ep-num>26</span>
+<span class=ep-title>The 1/f Law of Music</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep27/ class=ep-link><span class=ep-num>27</span>
+<span class=ep-title>Answering Viral Critics with Mathematics</span></a></div><div class=arc-group><div class=arc-label>音乐技术系列</div><a href=https://amath390.sibeliusp.com/episodes/ep28/ class=ep-link><span class=ep-num>28</span>
+<span class=ep-title>Your Microphone Is a Damped Oscillator</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep29/ class=ep-link><span class=ep-num>29</span>
+<span class=ep-title>Primes in the Studio — Standing Waves and QRD Diffusers</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep30/ class=ep-link><span class=ep-num>30</span>
+<span class=ep-title>The Sampling Theorem Is Not What You Think</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep31/ class=ep-link><span class=ep-num>31</span>
+<span class=ep-title>The Warmth of Moog Has an Equation</span></a></div><div class=sidebar-footer><a href=/theorems/>定理索引</a>
 <a href=/domains/>数学领域</a>
-<a href=/about/>关于</a>
-</div>
-</nav>
-<main class=main-content>
-<div class=episode-layout>
-<article class=episode-page>
-<header class=episode-header>
-<div class=ep-badge>EP20</div>
-<h1 class=ep-main-title>EP20: Character Interaction Networks in Opera</h1>
-<div class=ep-subtitle>度/介数中心性, 社区检测, 割顶</div>
-<div class=ep-meta>
-<span class=meta-item>
-<span class=meta-icon>▶</span> 7:33
-</span>
-<span class="meta-item domains">
-<span class=domain-chip>Graph Theory</span>
-</span>
-</div>
-</header>
-<div class=cross-refs>
-<h3 class=cross-refs-title>前置知识</h3>
-<div class=ref-cards>
-<a href=https://amath390.sibeliusp.com/episodes/ep03/ class="ref-card callback">
-<span class=ref-ep>EP03</span>
+<a href=/about/>关于</a></div></nav><main class=main-content><div class=episode-layout><article class=episode-page><header class=episode-header><div class=ep-badge>EP20</div><h1 class=ep-main-title>EP20: Character Interaction Networks in Opera</h1><div class=ep-subtitle>度/介数中心性, 社区检测, 割顶</div><div class=ep-meta><span class=meta-item><span class=meta-icon>▶</span> 7:33
+</span><span class="meta-item domains"><span class=domain-chip>Graph Theory</span></span></div></header><div class=cross-refs><h3 class=cross-refs-title>前置知识</h3><div class=ref-cards><a href=https://amath390.sibeliusp.com/episodes/ep03/ class="ref-card callback"><span class=ref-ep>EP03</span>
 <span class=ref-title>Bach and Graph Connectivity</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep16/ class="ref-card callback">
-<span class=ref-ep>EP16</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep16/ class="ref-card callback"><span class=ref-ep>EP16</span>
 <span class=ref-title>Rossini's Code — Budden, Gossett, and the Convention System</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep17/ class="ref-card callback">
-<span class=ref-ep>EP17</span>
-<span class=ref-title>Leitmotif Networks — Wagner's Ring Cycle</span>
-</a>
-</div>
-</div>
-<div class="episode-content content">
-<h2 id=overview>Overview</h2>
-<blockquote>
-<p><em>中文:</em> &ldquo;瓦格纳的《指环》四联剧，三十四个角色。谁最重要？直觉会说沃坦，因为他认识最多人。但如果看图论，答案未必是王，而可能是桥。&rdquo;</p>
-</blockquote>
-<p>When Wagner&rsquo;s <em>Ring</em> cycle is encoded as a graph &mdash; 34 characters as vertices, direct interactions as edges &mdash; the question &ldquo;who is the most important character?&rdquo; becomes a question about <strong>centrality measures</strong> on finite graphs. Degree centrality identifies the most visible node (Wotan), but betweenness centrality identifies the most structurally indispensable one (Loge), and cut-vertex analysis reveals whose removal shatters the network entirely. These are distinct mathematical concepts with distinct dramaturgical consequences.</p>
-<p>This episode develops the graph-theoretic toolkit for character interaction networks: degree and betweenness centrality (Definitions 20.1&ndash;20.2), cut vertices and bridges (Definitions 20.3&ndash;20.4), network density (Definition 20.5), modularity and community detection (Definition 20.6), and dynamic networks under node deletion (Definition 20.8). We prove the DFS characterization of cut vertices (Theorem 20.1), state Menger&rsquo;s theorem on vertex connectivity (Theorem 20.2), and show that modularity maximization is NP-hard (Theorem 20.3). The running example is Wagner&rsquo;s <em>Ring</em>, with comparisons to <em>Carmen</em> and <em>Le nozze di Figaro</em>.</p>
-<blockquote>
-<p><em>中文:</em> &ldquo;今天我们把角色变成节点，把互动变成边，看一张网络图怎样泄露戏剧的命运。&rdquo;</p>
-</blockquote>
-<hr>
-<h2 id=prerequisites>Prerequisites</h2>
-<ul>
-<li>
-<a href=https://amath390.sibeliusp.com/episodes/ep03/ class=episode-ref-link>Cut Vertices and Graph Connectivity (EP03)</a>
-&mdash; cut vertex definition and basic connectivity</li>
-<li>
-<a href=https://amath390.sibeliusp.com/episodes/ep16/ class=episode-ref-link>Rossini Syntax Trees (EP16)</a>
-&mdash; graph-theoretic encoding of musical structure</li>
-<li>
-<a href=https://amath390.sibeliusp.com/episodes/ep17/ class=episode-ref-link>Wagner Leitmotif Networks (EP17)</a>
-&mdash; transformation networks on motifs</li>
-</ul>
-<hr>
-<h2 id=section-1-building-the-character-network>Section 1: Building the Character Network</h2>
-<blockquote>
-<p><em>中文:</em> &ldquo;先别背人名。只记两条规则：角色是节点，直接互动是边。&rdquo;</p>
-</blockquote>
-<p>We model a dramatic work as an undirected simple graph.</p>
-<p><strong>Construction rule</strong>: Given an opera (or play, film, novel), form <span class=math-inline data-latex="G = (V, E)"></span> where each character is a vertex <span class=math-inline data-latex="v \in V"></span>, and an edge <span class=math-inline data-latex="\{u,v\} \in E"></span> exists whenever characters <span class=math-inline data-latex=u></span> and <span class=math-inline data-latex=v></span> interact directly (share a scene, address each other, or are co-present in a dramatic exchange). The graph is unweighted and undirected unless otherwise stated.</p>
-<p><strong>Running example</strong>: Wagner&rsquo;s <em>Ring</em> cycle. <span class=math-inline data-latex="|V| = 34"></span> characters, approximately <span class=math-inline data-latex="|E| = 72"></span> interaction edges (exact count depends on encoding conventions; we follow Moretti 2011).</p>
-<blockquote>
-<p><em>中文:</em> &ldquo;整张图&mldr;不只是角色越来越多，而是拓扑越来越清楚：先分块，再连桥；先是几个局部世界，后是一个脆弱的整体。&rdquo;</p>
-</blockquote>
-<p><strong>Graph assembly over the four operas</strong>: The <em>Ring</em> network does not appear all at once. In <em>Das Rheingold</em>, the gods' cluster and the Nibelung cluster form separately, connected only through Loge. In <em>Die Walkure</em>, the Volsung family introduces a new cluster bridged to the gods through Wotan. By <em>Siegfried</em>, the hero Siegfried creates a new path from the Nibelungs (through Mime) to the gods (through Brunnhilde). In <em>Gotterdammerung</em>, the Gibichung court adds yet another cluster. The network grows by <strong>accretion of communities linked by bridges</strong> &mdash; a topological signature of epic narrative.</p>
-<hr>
-<h2 id=section-2-centrality-measures>Section 2: Centrality Measures</h2>
-<h3 id=21-degree-centrality>2.1 Degree Centrality</h3>
-<div class=definition-block id=definition-20.1>
-<div class=block-label>
-Definition 20.1 (Degree Centrality)
-</div>
-<div class=block-body>Let <span class=math-inline data-latex="G = (V, E)"></span> be a simple graph with <span class=math-inline data-latex="|V| = n"></span>. The <strong>degree</strong> of vertex <span class=math-inline data-latex=v></span> is <span class=math-inline data-latex="\deg(v) = |\{u \in V : \{u,v\} \in E\}|"></span>. The <strong>degree centrality</strong> of <span class=math-inline data-latex=v></span> is the normalized quantity
+</a><a href=https://amath390.sibeliusp.com/episodes/ep17/ class="ref-card callback"><span class=ref-ep>EP17</span>
+<span class=ref-title>Leitmotif Networks — Wagner's Ring Cycle</span></a></div></div><div class="episode-content content"><h2 id=overview>Overview</h2><blockquote><p><em>中文:</em> &ldquo;瓦格纳的《指环》四联剧，三十四个角色。谁最重要？直觉会说沃坦，因为他认识最多人。但如果看图论，答案未必是王，而可能是桥。&rdquo;</p></blockquote><p>When Wagner&rsquo;s <em>Ring</em> cycle is encoded as a graph &mdash; 34 characters as vertices, direct interactions as edges &mdash; the question &ldquo;who is the most important character?&rdquo; becomes a question about <strong>centrality measures</strong> on finite graphs. Degree centrality identifies the most visible node (Wotan), but betweenness centrality identifies the most structurally indispensable one (Loge), and cut-vertex analysis reveals whose removal shatters the network entirely. These are distinct mathematical concepts with distinct dramaturgical consequences.</p><p>This episode develops the graph-theoretic toolkit for character interaction networks: degree and betweenness centrality (Definitions 20.1&ndash;20.2), cut vertices and bridges (Definitions 20.3&ndash;20.4), network density (Definition 20.5), modularity and community detection (Definition 20.6), and dynamic networks under node deletion (Definition 20.8). We prove the DFS characterization of cut vertices (Theorem 20.1), state Menger&rsquo;s theorem on vertex connectivity (Theorem 20.2), and show that modularity maximization is NP-hard (Theorem 20.3). The running example is Wagner&rsquo;s <em>Ring</em>, with comparisons to <em>Carmen</em> and <em>Le nozze di Figaro</em>.</p><blockquote><p><em>中文:</em> &ldquo;今天我们把角色变成节点，把互动变成边，看一张网络图怎样泄露戏剧的命运。&rdquo;</p></blockquote><hr><h2 id=prerequisites>Prerequisites</h2><ul><li><a href=https://amath390.sibeliusp.com/episodes/ep03/ class=episode-ref-link>Cut Vertices and Graph Connectivity (EP03)</a>
+&mdash; cut vertex definition and basic connectivity</li><li><a href=https://amath390.sibeliusp.com/episodes/ep16/ class=episode-ref-link>Rossini Syntax Trees (EP16)</a>
+&mdash; graph-theoretic encoding of musical structure</li><li><a href=https://amath390.sibeliusp.com/episodes/ep17/ class=episode-ref-link>Wagner Leitmotif Networks (EP17)</a>
+&mdash; transformation networks on motifs</li></ul><hr><h2 id=section-1-building-the-character-network>Section 1: Building the Character Network</h2><blockquote><p><em>中文:</em> &ldquo;先别背人名。只记两条规则：角色是节点，直接互动是边。&rdquo;</p></blockquote><p>We model a dramatic work as an undirected simple graph.</p><p><strong>Construction rule</strong>: Given an opera (or play, film, novel), form <span class=math-inline data-latex="G = (V, E)"></span> where each character is a vertex <span class=math-inline data-latex="v \in V"></span>, and an edge <span class=math-inline data-latex="\{u,v\} \in E"></span> exists whenever characters <span class=math-inline data-latex=u></span> and <span class=math-inline data-latex=v></span> interact directly (share a scene, address each other, or are co-present in a dramatic exchange). The graph is unweighted and undirected unless otherwise stated.</p><p><strong>Running example</strong>: Wagner&rsquo;s <em>Ring</em> cycle. <span class=math-inline data-latex="|V| = 34"></span> characters, approximately <span class=math-inline data-latex="|E| = 72"></span> interaction edges (exact count depends on encoding conventions; we follow Moretti 2011).</p><blockquote><p><em>中文:</em> &ldquo;整张图&mldr;不只是角色越来越多，而是拓扑越来越清楚：先分块，再连桥；先是几个局部世界，后是一个脆弱的整体。&rdquo;</p></blockquote><p><strong>Graph assembly over the four operas</strong>: The <em>Ring</em> network does not appear all at once. In <em>Das Rheingold</em>, the gods&rsquo; cluster and the Nibelung cluster form separately, connected only through Loge. In <em>Die Walkure</em>, the Volsung family introduces a new cluster bridged to the gods through Wotan. By <em>Siegfried</em>, the hero Siegfried creates a new path from the Nibelungs (through Mime) to the gods (through Brunnhilde). In <em>Gotterdammerung</em>, the Gibichung court adds yet another cluster. The network grows by <strong>accretion of communities linked by bridges</strong> &mdash; a topological signature of epic narrative.</p><hr><h2 id=section-2-centrality-measures>Section 2: Centrality Measures</h2><h3 id=21-degree-centrality>2.1 Degree Centrality</h3><div class=definition-block id=definition-20.1><div class=block-label>Definition 20.1 (Degree Centrality)</div><div class=block-body>Let <span class=math-inline data-latex="G = (V, E)"></span> be a simple graph with <span class=math-inline data-latex="|V| = n"></span>. The <strong>degree</strong> of vertex <span class=math-inline data-latex=v></span> is <span class=math-inline data-latex="\deg(v) = |\{u \in V : \{u,v\} \in E\}|"></span>. The <strong>degree centrality</strong> of <span class=math-inline data-latex=v></span> is the normalized quantity
 <span class=math-display data-latex="C_D(v) = \frac{\deg(v)}{n - 1}"></span>
-so that <span class=math-inline data-latex="0 \le C_D(v) \le 1"></span>.</div>
-</div>
-<blockquote>
-<p><em>中文:</em> &ldquo;先看最直觉的指标：度中心性。数邻居。沃坦最高。&rdquo;</p>
-</blockquote>
-<p><strong>Worked example (Ring cycle)</strong>: Wotan interacts with approximately 16 of the 33 other characters. Thus <span class=math-inline data-latex="C_D(\text{Wotan}) \approx 16/33 \approx 0.48"></span>. By contrast, the Woodbird interacts with only 2 characters, giving <span class=math-inline data-latex="C_D(\text{Woodbird}) \approx 2/33 \approx 0.06"></span>.</p>
-<p><strong>Degree distribution</strong>: The sequence <span class=math-inline data-latex="(d_1, d_2, \ldots, d_n)"></span> sorted in non-increasing order is called the <strong>degree sequence</strong> of <span class=math-inline data-latex=G></span>. Character networks of epic works tend to have heavy-tailed degree distributions: a few characters interact with many others, while most are peripheral. The <em>Ring</em> cycle&rsquo;s degree distribution is approximately power-law, consistent with other literary networks (Stiller, Nettle & Dunbar 2003).</p>
-<p><strong>Handshake lemma check</strong>: The sum of all degrees equals <span class=math-inline data-latex=2|E|></span>. For the <em>Ring</em>, <span class=math-inline data-latex="\sum_{v \in V} \deg(v) = 2 \cdot 72 = 144"></span>, giving an average degree of <span class=math-inline data-latex="\bar{d} = 144/34 \approx 4.2"></span>. Each character interacts with about 4 others on average, but the distribution is highly skewed: Wotan has degree ~16 while many minor characters (Norns, Rhine maidens individually) have degree 2 or 3.</p>
-<h3 id=22-betweenness-centrality>2.2 Betweenness Centrality</h3>
-<div class=definition-block id=definition-20.2>
-<div class=block-label>
-Definition 20.2 (Betweenness Centrality)
-</div>
-<div class=block-body>Let <span class=math-inline data-latex=\sigma_{st}></span> denote the number of shortest paths from <span class=math-inline data-latex=s></span> to <span class=math-inline data-latex=t></span> in <span class=math-inline data-latex=G></span>, and let <span class=math-inline data-latex=\sigma_{st}(v)></span> denote the number of those shortest paths passing through <span class=math-inline data-latex=v></span> (where <span class=math-inline data-latex="v \neq s, t"></span>). The <strong>betweenness centrality</strong> of <span class=math-inline data-latex=v></span> is
+so that <span class=math-inline data-latex="0 \le C_D(v) \le 1"></span>.</div></div><blockquote><p><em>中文:</em> &ldquo;先看最直觉的指标：度中心性。数邻居。沃坦最高。&rdquo;</p></blockquote><p><strong>Worked example (Ring cycle)</strong>: Wotan interacts with approximately 16 of the 33 other characters. Thus <span class=math-inline data-latex="C_D(\text{Wotan}) \approx 16/33 \approx 0.48"></span>. By contrast, the Woodbird interacts with only 2 characters, giving <span class=math-inline data-latex="C_D(\text{Woodbird}) \approx 2/33 \approx 0.06"></span>.</p><p><strong>Degree distribution</strong>: The sequence <span class=math-inline data-latex="(d_1, d_2, \ldots, d_n)"></span> sorted in non-increasing order is called the <strong>degree sequence</strong> of <span class=math-inline data-latex=G></span>. Character networks of epic works tend to have heavy-tailed degree distributions: a few characters interact with many others, while most are peripheral. The <em>Ring</em> cycle&rsquo;s degree distribution is approximately power-law, consistent with other literary networks (Stiller, Nettle & Dunbar 2003).</p><p><strong>Handshake lemma check</strong>: The sum of all degrees equals <span class=math-inline data-latex=2|E|></span>. For the <em>Ring</em>, <span class=math-inline data-latex="\sum_{v \in V} \deg(v) = 2 \cdot 72 = 144"></span>, giving an average degree of <span class=math-inline data-latex="\bar{d} = 144/34 \approx 4.2"></span>. Each character interacts with about 4 others on average, but the distribution is highly skewed: Wotan has degree ~16 while many minor characters (Norns, Rhine maidens individually) have degree 2 or 3.</p><h3 id=22-betweenness-centrality>2.2 Betweenness Centrality</h3><div class=definition-block id=definition-20.2><div class=block-label>Definition 20.2 (Betweenness Centrality)</div><div class=block-body>Let <span class=math-inline data-latex=\sigma_{st}></span> denote the number of shortest paths from <span class=math-inline data-latex=s></span> to <span class=math-inline data-latex=t></span> in <span class=math-inline data-latex=G></span>, and let <span class=math-inline data-latex=\sigma_{st}(v)></span> denote the number of those shortest paths passing through <span class=math-inline data-latex=v></span> (where <span class=math-inline data-latex="v \neq s, t"></span>). The <strong>betweenness centrality</strong> of <span class=math-inline data-latex=v></span> is
 <span class=math-display data-latex="C_B(v) = \sum_{\substack{s,t \in V \\ s \neq v \neq t}} \frac{\sigma_{st}(v)}{\sigma_{st}}"></span>
-The <strong>normalized</strong> betweenness centrality divides by <span class=math-inline data-latex="\binom{n-1}{2} = \frac{(n-1)(n-2)}{2}"></span>, the maximum possible value.</div>
-</div>
-<p><strong>Worked example (Ring cycle)</strong>: Consider three vertices: Wotan (W), Loge (L), and Alberich (A). Suppose the shortest path from Fasolt to Mime is Fasolt&ndash;Loge&ndash;Alberich&ndash;Mime (length 3), and this is the unique shortest path. Then <span class=math-inline data-latex="\sigma_{\text{Fasolt},\text{Mime}}(L) = 1"></span> and <span class=math-inline data-latex="\sigma_{\text{Fasolt},\text{Mime}} = 1"></span>, contributing <span class=math-inline data-latex="1/1 = 1"></span> to <span class=math-inline data-latex=C_B(L)></span>.</p>
-<p>In the <em>Ring</em> network, Loge&rsquo;s betweenness centrality exceeds Wotan&rsquo;s despite Loge&rsquo;s lower degree. Loge sits on most shortest paths between the gods' cluster and the Nibelung cluster. Wotan has many neighbors but those neighbors also connect to each other, so shortest paths can bypass Wotan.</p>
-<blockquote>
-<p><em>中文:</em> &ldquo;但&rsquo;最显眼&rsquo;不等于&rsquo;最不可替代'。介数中心性问的是另一件事：网络里有多少最短路径必须经过你。&rdquo;</p>
-</blockquote>
-<p><strong>Algorithmic note</strong>: Brandes (2001) computes betweenness centrality for all vertices in <span class=math-inline data-latex=O(nm)></span> time for unweighted graphs, using BFS from each vertex.</p>
-<p><strong>Comparing the two centralities</strong>: For a star graph <span class=math-inline data-latex=K_{1,n-1}></span> (one center connected to <span class=math-inline data-latex=n-1></span> leaves), the center has <span class=math-inline data-latex="C_D = 1"></span> and <span class=math-inline data-latex="C_B = \binom{n-1}{2}"></span> (unnormalized) &mdash; both maximal. But in a graph with two dense clusters connected by a single bridge vertex <span class=math-inline data-latex=b></span> of degree 2, <span class=math-inline data-latex=C_D(b)></span> is small while <span class=math-inline data-latex=C_B(b)></span> is large. The <em>Ring</em> network exemplifies this second pattern: Loge&rsquo;s degree is low but his betweenness is high.</p>
-<blockquote>
-<p><em>中文:</em> &ldquo;哪些边只是热闹，哪些连接一断，整部戏就塌了？&rdquo;</p>
-</blockquote>
-<hr>
-<h2 id=section-3-cut-vertices-and-bridges>Section 3: Cut Vertices and Bridges</h2>
-<h3 id=31-cut-vertices-articulation-points>3.1 Cut Vertices (Articulation Points)</h3>
-<div class=definition-block id=definition-20.3>
-<div class=block-label>
-Definition 20.3 (Cut Vertex)
-</div>
-<div class=block-body>A vertex <span class=math-inline data-latex=v></span> in a connected graph <span class=math-inline data-latex="G = (V, E)"></span> is a <strong>cut vertex</strong> (or <strong>articulation point</strong>) if the subgraph <span class=math-inline data-latex="G - v"></span> (obtained by deleting <span class=math-inline data-latex=v></span> and all its incident edges) is disconnected.</div>
-</div>
-<blockquote>
-<p><em>中文:</em> &ldquo;第三集讲过，割点是删掉之后图就断裂的节点。把这个定义搬进歌剧里，意思立刻变得很残酷：有些角色一退场，整个世界就散了。&rdquo;</p>
-</blockquote>
-<p><strong>Worked example</strong>: In the <em>Ring</em> network, Loge is a cut vertex. Removing Loge disconnects the Nibelung realm (Alberich, Mime) from the gods' realm (Wotan, Fricka, Freia, etc.) because Loge is the only character who interacts with both clusters directly. As recalled from
+The <strong>normalized</strong> betweenness centrality divides by <span class=math-inline data-latex="\binom{n-1}{2} = \frac{(n-1)(n-2)}{2}"></span>, the maximum possible value.</div></div><p><strong>Worked example (Ring cycle)</strong>: Consider three vertices: Wotan (W), Loge (L), and Alberich (A). Suppose the shortest path from Fasolt to Mime is Fasolt&ndash;Loge&ndash;Alberich&ndash;Mime (length 3), and this is the unique shortest path. Then <span class=math-inline data-latex="\sigma_{\text{Fasolt},\text{Mime}}(L) = 1"></span> and <span class=math-inline data-latex="\sigma_{\text{Fasolt},\text{Mime}} = 1"></span>, contributing <span class=math-inline data-latex="1/1 = 1"></span> to <span class=math-inline data-latex=C_B(L)></span>.</p><p>In the <em>Ring</em> network, Loge&rsquo;s betweenness centrality exceeds Wotan&rsquo;s despite Loge&rsquo;s lower degree. Loge sits on most shortest paths between the gods&rsquo; cluster and the Nibelung cluster. Wotan has many neighbors but those neighbors also connect to each other, so shortest paths can bypass Wotan.</p><blockquote><p><em>中文:</em> &ldquo;但&rsquo;最显眼&rsquo;不等于&rsquo;最不可替代&rsquo;。介数中心性问的是另一件事：网络里有多少最短路径必须经过你。&rdquo;</p></blockquote><p><strong>Algorithmic note</strong>: Brandes (2001) computes betweenness centrality for all vertices in <span class=math-inline data-latex=O(nm)></span> time for unweighted graphs, using BFS from each vertex.</p><p><strong>Comparing the two centralities</strong>: For a star graph <span class=math-inline data-latex=K_{1,n-1}></span> (one center connected to <span class=math-inline data-latex=n-1></span> leaves), the center has <span class=math-inline data-latex="C_D = 1"></span> and <span class=math-inline data-latex="C_B = \binom{n-1}{2}"></span> (unnormalized) &mdash; both maximal. But in a graph with two dense clusters connected by a single bridge vertex <span class=math-inline data-latex=b></span> of degree 2, <span class=math-inline data-latex=C_D(b)></span> is small while <span class=math-inline data-latex=C_B(b)></span> is large. The <em>Ring</em> network exemplifies this second pattern: Loge&rsquo;s degree is low but his betweenness is high.</p><blockquote><p><em>中文:</em> &ldquo;哪些边只是热闹，哪些连接一断，整部戏就塌了？&rdquo;</p></blockquote><hr><h2 id=section-3-cut-vertices-and-bridges>Section 3: Cut Vertices and Bridges</h2><h3 id=31-cut-vertices-articulation-points>3.1 Cut Vertices (Articulation Points)</h3><div class=definition-block id=definition-20.3><div class=block-label>Definition 20.3 (Cut Vertex)</div><div class=block-body>A vertex <span class=math-inline data-latex=v></span> in a connected graph <span class=math-inline data-latex="G = (V, E)"></span> is a <strong>cut vertex</strong> (or <strong>articulation point</strong>) if the subgraph <span class=math-inline data-latex="G - v"></span> (obtained by deleting <span class=math-inline data-latex=v></span> and all its incident edges) is disconnected.</div></div><blockquote><p><em>中文:</em> &ldquo;第三集讲过，割点是删掉之后图就断裂的节点。把这个定义搬进歌剧里，意思立刻变得很残酷：有些角色一退场，整个世界就散了。&rdquo;</p></blockquote><p><strong>Worked example</strong>: In the <em>Ring</em> network, Loge is a cut vertex. Removing Loge disconnects the Nibelung realm (Alberich, Mime) from the gods&rsquo; realm (Wotan, Fricka, Freia, etc.) because Loge is the only character who interacts with both clusters directly. As recalled from
 <a href=https://amath390.sibeliusp.com/episodes/ep03/ class=episode-ref-link>EP03</a>
-, this is exactly the formal definition: <span class=math-inline data-latex="G - \text{Loge}"></span> has more connected components than <span class=math-inline data-latex=G></span>.</p>
-<div class=theorem-block id=theorem-20.1>
-<div class=block-label>
-Theorem 20.1 (DFS Characterization of Cut Vertices)
-</div>
-<div class=block-body><p>Let <span class=math-inline data-latex=G></span> be a connected undirected graph and let <span class=math-inline data-latex=T></span> be a DFS tree of <span class=math-inline data-latex=G></span> rooted at <span class=math-inline data-latex=r></span>. A vertex <span class=math-inline data-latex=v></span> is a cut vertex of <span class=math-inline data-latex=G></span> if and only if one of the following holds:</p>
-<ol>
-<li><span class=math-inline data-latex="v = r"></span> and <span class=math-inline data-latex=v></span> has at least two children in <span class=math-inline data-latex=T></span>.</li>
-<li><span class=math-inline data-latex="v \neq r"></span> and <span class=math-inline data-latex=v></span> has a child <span class=math-inline data-latex=u></span> in <span class=math-inline data-latex=T></span> such that no vertex in the subtree rooted at <span class=math-inline data-latex=u></span> has a back edge to a proper ancestor of <span class=math-inline data-latex=v></span>.</li>
-</ol>
-<p>Equivalently, defining <span class=math-inline data-latex=\mathrm{disc}(v)></span> as the discovery time and
+, this is exactly the formal definition: <span class=math-inline data-latex="G - \text{Loge}"></span> has more connected components than <span class=math-inline data-latex=G></span>.</p><div class=theorem-block id=theorem-20.1><div class=block-label>Theorem 20.1 (DFS Characterization of Cut Vertices)</div><div class=block-body><p>Let <span class=math-inline data-latex=G></span> be a connected undirected graph and let <span class=math-inline data-latex=T></span> be a DFS tree of <span class=math-inline data-latex=G></span> rooted at <span class=math-inline data-latex=r></span>. A vertex <span class=math-inline data-latex=v></span> is a cut vertex of <span class=math-inline data-latex=G></span> if and only if one of the following holds:</p><ol><li><span class=math-inline data-latex="v = r"></span> and <span class=math-inline data-latex=v></span> has at least two children in <span class=math-inline data-latex=T></span>.</li><li><span class=math-inline data-latex="v \neq r"></span> and <span class=math-inline data-latex=v></span> has a child <span class=math-inline data-latex=u></span> in <span class=math-inline data-latex=T></span> such that no vertex in the subtree rooted at <span class=math-inline data-latex=u></span> has a back edge to a proper ancestor of <span class=math-inline data-latex=v></span>.</li></ol><p>Equivalently, defining <span class=math-inline data-latex=\mathrm{disc}(v)></span> as the discovery time and
 <span class=math-display data-latex="\mathrm{low}(u) = \min\bigl(\mathrm{disc}(u),\;\min_{(w,x) \text{ back edge from subtree}(u)} \mathrm{disc}(x)\bigr)"></span>
-the condition for case 2 becomes: <span class=math-inline data-latex="\mathrm{low}(u) \ge \mathrm{disc}(v)"></span> for some child <span class=math-inline data-latex=u></span> of <span class=math-inline data-latex=v></span>.</p>
-</div>
-</div>
-<div class=proof-block>
-<div class=block-label>Proof.</div>
-<div class=block-body><p><strong>(Case 1: <span class=math-inline data-latex="v = r"></span>).</strong> If the root has children <span class=math-inline data-latex="u_1, u_2, \ldots, u_k"></span> in the DFS tree with <span class=math-inline data-latex="k \ge 2"></span>, then the subtrees rooted at <span class=math-inline data-latex="u_1, \ldots, u_k"></span> are pairwise disconnected in <span class=math-inline data-latex="G - r"></span>. To see this, note that in a DFS tree every non-tree edge is a back edge (connecting a descendant to an ancestor). No non-tree edge can connect a vertex in <span class=math-inline data-latex=\mathrm{subtree}(u_i)></span> to a vertex in <span class=math-inline data-latex=\mathrm{subtree}(u_j)></span> for <span class=math-inline data-latex="i \neq j"></span>, because such an edge would be a cross edge, which cannot exist in an undirected DFS tree. Therefore <span class=math-inline data-latex="G - r"></span> has at least <span class=math-inline data-latex="k \ge 2"></span> components, so <span class=math-inline data-latex=r></span> is a cut vertex. Conversely, if <span class=math-inline data-latex=r></span> has exactly one child in <span class=math-inline data-latex=T></span>, then all other vertices are in the subtree of that child and remain connected in <span class=math-inline data-latex="G - r"></span>.</p>
-<p><strong>(Case 2: <span class=math-inline data-latex="v \neq r"></span>, forward direction.)</strong> Suppose <span class=math-inline data-latex=v></span> has a child <span class=math-inline data-latex=u></span> in <span class=math-inline data-latex=T></span> such that <span class=math-inline data-latex="\mathrm{low}(u) \ge \mathrm{disc}(v)"></span>. This means no vertex in <span class=math-inline data-latex=\mathrm{subtree}(u)></span> has a back edge reaching above <span class=math-inline data-latex=v></span> (or to <span class=math-inline data-latex=v></span>&rsquo;s ancestors). In <span class=math-inline data-latex="G - v"></span>, every path from <span class=math-inline data-latex=\mathrm{subtree}(u)></span> to the parent of <span class=math-inline data-latex=v></span> must use either a tree edge through <span class=math-inline data-latex=v></span> (deleted) or a back edge above <span class=math-inline data-latex=v></span> (none exists by hypothesis). So <span class=math-inline data-latex=\mathrm{subtree}(u)></span> is disconnected from the rest of <span class=math-inline data-latex="G - v"></span>, and <span class=math-inline data-latex=v></span> is a cut vertex.</p>
-<p><strong>(Case 2: <span class=math-inline data-latex="v \neq r"></span>, reverse direction.)</strong> Suppose for every child <span class=math-inline data-latex=u></span> of <span class=math-inline data-latex=v></span>, <span class=math-inline data-latex="\mathrm{low}(u) < \mathrm{disc}(v)"></span>. Then every subtree below <span class=math-inline data-latex=v></span> has a back edge reaching a proper ancestor of <span class=math-inline data-latex=v></span>. Removing <span class=math-inline data-latex=v></span>, every vertex in <span class=math-inline data-latex=\mathrm{subtree}(u)></span> can reach an ancestor of <span class=math-inline data-latex=v></span> via that back edge. The parent-side of <span class=math-inline data-latex=v></span> remains connected (it is a subtree of <span class=math-inline data-latex="T - v"></span> containing <span class=math-inline data-latex=r></span>). Hence <span class=math-inline data-latex="G - v"></span> remains connected and <span class=math-inline data-latex=v></span> is not a cut vertex. <span class=math-inline data-latex=\square></span></p>
-</div>
-</div>
-<p><strong>Complexity</strong>: The algorithm runs in <span class=math-inline data-latex="O(n + m)"></span> time via a single DFS pass, computing <span class=math-inline data-latex=\mathrm{disc}></span> and <span class=math-inline data-latex=\mathrm{low}></span> values. This is due to Tarjan (1972), who also used the same DFS framework for strongly connected components and biconnected components.</p>
-<p><strong>Worked example (DFS on a 5-vertex path)</strong>: Consider the path graph <span class=math-inline data-latex="P_5 = a - b - c - d - e"></span>. DFS from <span class=math-inline data-latex=a></span> produces the tree <span class=math-inline data-latex="a \to b \to c \to d \to e"></span> with no back edges. For every internal vertex <span class=math-inline data-latex=v></span> (i.e., <span class=math-inline data-latex="b, c, d"></span>), the child subtree has <span class=math-inline data-latex="\mathrm{low} = \mathrm{disc}(\text{child}) \ge \mathrm{disc}(v)"></span>, so every internal vertex is a cut vertex. This matches intuition: removing any internal vertex from a path disconnects it.</p>
-<h3 id=32-bridges>3.2 Bridges</h3>
-<div class=definition-block id=definition-20.4>
-<div class=block-label>
-Definition 20.4 (Bridge)
-</div>
-<div class=block-body>An edge <span class=math-inline data-latex="e = \{u, v\} \in E"></span> of a connected graph <span class=math-inline data-latex=G></span> is a <strong>bridge</strong> if <span class=math-inline data-latex="G - e"></span> (the graph with edge <span class=math-inline data-latex=e></span> removed but both endpoints retained) is disconnected.</div>
-</div>
-<p><strong>Worked example</strong>: The edge <span class=math-inline data-latex="\{\text{Loge}, \text{Alberich}\}"></span> in the <em>Ring</em> is a bridge if it is the sole edge connecting the gods' cluster to the Nibelung cluster. Removing this edge (i.e., if Loge and Alberich never interacted) would split the network.</p>
-<div class=proposition-block id=prop-20.1>
-<div class=block-label>
-Prop 20.1 (Bridge--Cut-Vertex Relation)
-</div>
-<div class=block-body>If <span class=math-inline data-latex="e = \{u, v\}"></span> is a bridge and <span class=math-inline data-latex="\deg(u) \ge 2"></span>, then <span class=math-inline data-latex=u></span> is a cut vertex. Conversely, if <span class=math-inline data-latex=v></span> is a cut vertex connected to a component of <span class=math-inline data-latex="G - v"></span> by a single edge, then that edge is a bridge.</div>
-</div>
-<div class=proof-block>
-<div class=block-label>Proof.</div>
-<div class=block-body><p>Suppose <span class=math-inline data-latex="e = \{u,v\}"></span> is a bridge and <span class=math-inline data-latex="\deg(u) \ge 2"></span>. Then <span class=math-inline data-latex="G - e"></span> has two components; call the one containing <span class=math-inline data-latex=u></span> as <span class=math-inline data-latex=C_u></span> and the one containing <span class=math-inline data-latex=v></span> as <span class=math-inline data-latex=C_v></span>. Since <span class=math-inline data-latex="\deg(u) \ge 2"></span>, vertex <span class=math-inline data-latex=u></span> has at least one neighbor <span class=math-inline data-latex="w \neq v"></span> in <span class=math-inline data-latex=C_u></span>. In <span class=math-inline data-latex="G - u"></span>, vertex <span class=math-inline data-latex=v></span> is separated from <span class=math-inline data-latex=w></span>: any path from <span class=math-inline data-latex=w></span> to <span class=math-inline data-latex=v></span> in <span class=math-inline data-latex=G></span> must either pass through <span class=math-inline data-latex=u></span> (deleted) or through the bridge <span class=math-inline data-latex=e></span> (which requires reaching <span class=math-inline data-latex=u></span> first). So <span class=math-inline data-latex="G - u"></span> is disconnected and <span class=math-inline data-latex=u></span> is a cut vertex.</p>
-<p>For the converse, if <span class=math-inline data-latex=v></span> is a cut vertex and some component <span class=math-inline data-latex=C></span> of <span class=math-inline data-latex="G - v"></span> is attached to <span class=math-inline data-latex=v></span> by the single edge <span class=math-inline data-latex="e = \{v, w\}"></span> where <span class=math-inline data-latex="w \in C"></span>, then removing <span class=math-inline data-latex=e></span> disconnects <span class=math-inline data-latex=C></span> from the rest of <span class=math-inline data-latex=G></span>, so <span class=math-inline data-latex=e></span> is a bridge. <span class=math-inline data-latex=\square></span></p>
-</div>
-</div>
-<blockquote>
-<p><em>中文:</em> &ldquo;洛格连接着众神阵营和侏儒阵营。删掉他，网络直接断开。这就是第三集的割点。&rdquo;</p>
-</blockquote>
-<hr>
-<h2 id=section-4-network-density-and-connectivity>Section 4: Network Density and Connectivity</h2>
-<div class=definition-block id=definition-20.5>
-<div class=block-label>
-Definition 20.5 (Network Density)
-</div>
-<div class=block-body>The <strong>density</strong> of a simple undirected graph <span class=math-inline data-latex="G = (V, E)"></span> with <span class=math-inline data-latex="|V| = n"></span> and <span class=math-inline data-latex="|E| = m"></span> is
+the condition for case 2 becomes: <span class=math-inline data-latex="\mathrm{low}(u) \ge \mathrm{disc}(v)"></span> for some child <span class=math-inline data-latex=u></span> of <span class=math-inline data-latex=v></span>.</p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p><strong>(Case 1: <span class=math-inline data-latex="v = r"></span>).</strong> If the root has children <span class=math-inline data-latex="u_1, u_2, \ldots, u_k"></span> in the DFS tree with <span class=math-inline data-latex="k \ge 2"></span>, then the subtrees rooted at <span class=math-inline data-latex="u_1, \ldots, u_k"></span> are pairwise disconnected in <span class=math-inline data-latex="G - r"></span>. To see this, note that in a DFS tree every non-tree edge is a back edge (connecting a descendant to an ancestor). No non-tree edge can connect a vertex in <span class=math-inline data-latex=\mathrm{subtree}(u_i)></span> to a vertex in <span class=math-inline data-latex=\mathrm{subtree}(u_j)></span> for <span class=math-inline data-latex="i \neq j"></span>, because such an edge would be a cross edge, which cannot exist in an undirected DFS tree. Therefore <span class=math-inline data-latex="G - r"></span> has at least <span class=math-inline data-latex="k \ge 2"></span> components, so <span class=math-inline data-latex=r></span> is a cut vertex. Conversely, if <span class=math-inline data-latex=r></span> has exactly one child in <span class=math-inline data-latex=T></span>, then all other vertices are in the subtree of that child and remain connected in <span class=math-inline data-latex="G - r"></span>.</p><p><strong>(Case 2: <span class=math-inline data-latex="v \neq r"></span>, forward direction.)</strong> Suppose <span class=math-inline data-latex=v></span> has a child <span class=math-inline data-latex=u></span> in <span class=math-inline data-latex=T></span> such that <span class=math-inline data-latex="\mathrm{low}(u) \ge \mathrm{disc}(v)"></span>. This means no vertex in <span class=math-inline data-latex=\mathrm{subtree}(u)></span> has a back edge reaching above <span class=math-inline data-latex=v></span> (or to <span class=math-inline data-latex=v></span>&rsquo;s ancestors). In <span class=math-inline data-latex="G - v"></span>, every path from <span class=math-inline data-latex=\mathrm{subtree}(u)></span> to the parent of <span class=math-inline data-latex=v></span> must use either a tree edge through <span class=math-inline data-latex=v></span> (deleted) or a back edge above <span class=math-inline data-latex=v></span> (none exists by hypothesis). So <span class=math-inline data-latex=\mathrm{subtree}(u)></span> is disconnected from the rest of <span class=math-inline data-latex="G - v"></span>, and <span class=math-inline data-latex=v></span> is a cut vertex.</p><p><strong>(Case 2: <span class=math-inline data-latex="v \neq r"></span>, reverse direction.)</strong> Suppose for every child <span class=math-inline data-latex=u></span> of <span class=math-inline data-latex=v></span>, <span class=math-inline data-latex="\mathrm{low}(u) < \mathrm{disc}(v)"></span>. Then every subtree below <span class=math-inline data-latex=v></span> has a back edge reaching a proper ancestor of <span class=math-inline data-latex=v></span>. Removing <span class=math-inline data-latex=v></span>, every vertex in <span class=math-inline data-latex=\mathrm{subtree}(u)></span> can reach an ancestor of <span class=math-inline data-latex=v></span> via that back edge. The parent-side of <span class=math-inline data-latex=v></span> remains connected (it is a subtree of <span class=math-inline data-latex="T - v"></span> containing <span class=math-inline data-latex=r></span>). Hence <span class=math-inline data-latex="G - v"></span> remains connected and <span class=math-inline data-latex=v></span> is not a cut vertex. <span class=math-inline data-latex=\square></span></p></div></div><p><strong>Complexity</strong>: The algorithm runs in <span class=math-inline data-latex="O(n + m)"></span> time via a single DFS pass, computing <span class=math-inline data-latex=\mathrm{disc}></span> and <span class=math-inline data-latex=\mathrm{low}></span> values. This is due to Tarjan (1972), who also used the same DFS framework for strongly connected components and biconnected components.</p><p><strong>Worked example (DFS on a 5-vertex path)</strong>: Consider the path graph <span class=math-inline data-latex="P_5 = a - b - c - d - e"></span>. DFS from <span class=math-inline data-latex=a></span> produces the tree <span class=math-inline data-latex="a \to b \to c \to d \to e"></span> with no back edges. For every internal vertex <span class=math-inline data-latex=v></span> (i.e., <span class=math-inline data-latex="b, c, d"></span>), the child subtree has <span class=math-inline data-latex="\mathrm{low} = \mathrm{disc}(\text{child}) \ge \mathrm{disc}(v)"></span>, so every internal vertex is a cut vertex. This matches intuition: removing any internal vertex from a path disconnects it.</p><h3 id=32-bridges>3.2 Bridges</h3><div class=definition-block id=definition-20.4><div class=block-label>Definition 20.4 (Bridge)</div><div class=block-body>An edge <span class=math-inline data-latex="e = \{u, v\} \in E"></span> of a connected graph <span class=math-inline data-latex=G></span> is a <strong>bridge</strong> if <span class=math-inline data-latex="G - e"></span> (the graph with edge <span class=math-inline data-latex=e></span> removed but both endpoints retained) is disconnected.</div></div><p><strong>Worked example</strong>: The edge <span class=math-inline data-latex="\{\text{Loge}, \text{Alberich}\}"></span> in the <em>Ring</em> is a bridge if it is the sole edge connecting the gods&rsquo; cluster to the Nibelung cluster. Removing this edge (i.e., if Loge and Alberich never interacted) would split the network.</p><div class=proposition-block id=prop-20.1><div class=block-label>Prop 20.1 (Bridge--Cut-Vertex Relation)</div><div class=block-body>If <span class=math-inline data-latex="e = \{u, v\}"></span> is a bridge and <span class=math-inline data-latex="\deg(u) \ge 2"></span>, then <span class=math-inline data-latex=u></span> is a cut vertex. Conversely, if <span class=math-inline data-latex=v></span> is a cut vertex connected to a component of <span class=math-inline data-latex="G - v"></span> by a single edge, then that edge is a bridge.</div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p>Suppose <span class=math-inline data-latex="e = \{u,v\}"></span> is a bridge and <span class=math-inline data-latex="\deg(u) \ge 2"></span>. Then <span class=math-inline data-latex="G - e"></span> has two components; call the one containing <span class=math-inline data-latex=u></span> as <span class=math-inline data-latex=C_u></span> and the one containing <span class=math-inline data-latex=v></span> as <span class=math-inline data-latex=C_v></span>. Since <span class=math-inline data-latex="\deg(u) \ge 2"></span>, vertex <span class=math-inline data-latex=u></span> has at least one neighbor <span class=math-inline data-latex="w \neq v"></span> in <span class=math-inline data-latex=C_u></span>. In <span class=math-inline data-latex="G - u"></span>, vertex <span class=math-inline data-latex=v></span> is separated from <span class=math-inline data-latex=w></span>: any path from <span class=math-inline data-latex=w></span> to <span class=math-inline data-latex=v></span> in <span class=math-inline data-latex=G></span> must either pass through <span class=math-inline data-latex=u></span> (deleted) or through the bridge <span class=math-inline data-latex=e></span> (which requires reaching <span class=math-inline data-latex=u></span> first). So <span class=math-inline data-latex="G - u"></span> is disconnected and <span class=math-inline data-latex=u></span> is a cut vertex.</p><p>For the converse, if <span class=math-inline data-latex=v></span> is a cut vertex and some component <span class=math-inline data-latex=C></span> of <span class=math-inline data-latex="G - v"></span> is attached to <span class=math-inline data-latex=v></span> by the single edge <span class=math-inline data-latex="e = \{v, w\}"></span> where <span class=math-inline data-latex="w \in C"></span>, then removing <span class=math-inline data-latex=e></span> disconnects <span class=math-inline data-latex=C></span> from the rest of <span class=math-inline data-latex=G></span>, so <span class=math-inline data-latex=e></span> is a bridge. <span class=math-inline data-latex=\square></span></p></div></div><blockquote><p><em>中文:</em> &ldquo;洛格连接着众神阵营和侏儒阵营。删掉他，网络直接断开。这就是第三集的割点。&rdquo;</p></blockquote><hr><h2 id=section-4-network-density-and-connectivity>Section 4: Network Density and Connectivity</h2><div class=definition-block id=definition-20.5><div class=block-label>Definition 20.5 (Network Density)</div><div class=block-body>The <strong>density</strong> of a simple undirected graph <span class=math-inline data-latex="G = (V, E)"></span> with <span class=math-inline data-latex="|V| = n"></span> and <span class=math-inline data-latex="|E| = m"></span> is
 <span class=math-display data-latex="D(G) = \frac{2m}{n(n-1)}"></span>
-so that <span class=math-inline data-latex="0 \le D(G) \le 1"></span>. A graph with <span class=math-inline data-latex=D></span> close to 1 is <strong>dense</strong>; with <span class=math-inline data-latex=D></span> close to 0 is <strong>sparse</strong>.</div>
-</div>
-<p><strong>Worked example</strong>: For <em>Carmen</em> with approximately <span class=math-inline data-latex="n = 12"></span> characters and <span class=math-inline data-latex="m = 40"></span> edges: <span class=math-inline data-latex="D = 2 \cdot 40 / (12 \cdot 11) \approx 0.61"></span>. For the <em>Ring</em> with <span class=math-inline data-latex="n = 34"></span> and <span class=math-inline data-latex="m = 72"></span>: <span class=math-inline data-latex="D = 2 \cdot 72 / (34 \cdot 33) \approx 0.13"></span>. For <em>Le nozze di Figaro</em> with approximately <span class=math-inline data-latex="n = 11"></span> and <span class=math-inline data-latex="m = 24"></span>: <span class=math-inline data-latex="D = 2 \cdot 24 / (11 \cdot 10) \approx 0.44"></span>.</p>
-<p><em>Carmen</em> is a high-density network; the <em>Ring</em> is sparse; <em>Figaro</em> sits in between.</p>
-<blockquote>
-<p><em>中文:</em> &ldquo;《卡门》。高密度网络&mldr;冲突无处可逃&mldr;天然朝悲剧收缩。&rdquo;</p>
-</blockquote>
-<p>In a dense network, almost every pair of characters can interact directly, leaving no room for avoidance or ignorance. Conflict is inescapable. In a sparse network, characters inhabit separate worlds that may never collide &mdash; until a bridge character carries information (or betrayal) across the divide.</p>
-<blockquote>
-<p><em>中文:</em> &ldquo;密度高，倾向悲剧；模块化强，倾向史诗；跨阵营边占主导，倾向喜剧。&rdquo;</p>
-</blockquote>
-<div class=definition-block id=definition-20.6>
-<div class=block-label>
-Definition 20.6 (Vertex Connectivity)
-</div>
-<div class=block-body>The <strong>vertex connectivity</strong> <span class=math-inline data-latex=\kappa(G)></span> of a connected graph <span class=math-inline data-latex=G></span> is the minimum number of vertices whose removal disconnects <span class=math-inline data-latex=G></span> (or reduces it to a single vertex). A graph is <strong><span class=math-inline data-latex=k></span>-connected</strong> if <span class=math-inline data-latex="\kappa(G) \ge k"></span>.</div>
-</div>
-<p><strong>Worked example</strong>: If the <em>Ring</em> network has a single cut vertex (Loge), then <span class=math-inline data-latex="\kappa(G_{\text{Ring}}) = 1"></span>. The <em>Carmen</em> network, being denser with many redundant paths, likely has <span class=math-inline data-latex="\kappa(G_{\text{Carmen}}) \ge 3"></span>.</p>
-<div class=theorem-block id=theorem-20.2>
-<div class=block-label>
-Theorem 20.2 (Menger's Theorem)
-</div>
-<div class=block-body>Let <span class=math-inline data-latex="G = (V, E)"></span> be a graph and let <span class=math-inline data-latex="s, t \in V"></span> be non-adjacent vertices. The maximum number of internally vertex-disjoint <span class=math-inline data-latex=s></span>&ndash;<span class=math-inline data-latex=t></span> paths equals the minimum number of vertices in an <span class=math-inline data-latex=s></span>&ndash;<span class=math-inline data-latex=t></span> separating set (a set <span class=math-inline data-latex="S \subseteq V \setminus \{s,t\}"></span> whose removal disconnects <span class=math-inline data-latex=s></span> from <span class=math-inline data-latex=t></span>).</div>
-</div>
-<div class=proof-block>
-<div class=block-label>Proof.</div>
-<div class=block-body><p>We prove both directions.</p>
-<p><strong>Direction 1 (max <span class=math-inline data-latex=\le></span> min):</strong> If <span class=math-inline data-latex=S></span> is an <span class=math-inline data-latex=s></span>&ndash;<span class=math-inline data-latex=t></span> separating set of size <span class=math-inline data-latex=k></span>, then every <span class=math-inline data-latex=s></span>&ndash;<span class=math-inline data-latex=t></span> path must pass through at least one vertex of <span class=math-inline data-latex=S></span>. Since internally vertex-disjoint paths share no internal vertices, at most <span class=math-inline data-latex=k></span> such paths can exist.</p>
-<p><strong>Direction 2 (max <span class=math-inline data-latex=\ge></span> min) by induction on <span class=math-inline data-latex=|E|></span>:</strong> The base case (<span class=math-inline data-latex="s, t"></span> with no path) gives both sides equal to 0. For the inductive step, let the minimum <span class=math-inline data-latex=s></span>&ndash;<span class=math-inline data-latex=t></span> separator have size <span class=math-inline data-latex=k></span>.</p>
-<p>Pick any edge <span class=math-inline data-latex="e = \{u, w\}"></span> on some <span class=math-inline data-latex=s></span>&ndash;<span class=math-inline data-latex=t></span> path. Consider two auxiliary graphs:</p>
-<ul>
-<li><span class=math-inline data-latex="G_1 = G / e"></span> (contract <span class=math-inline data-latex=e></span>, merging <span class=math-inline data-latex="u, w"></span> into a single vertex <span class=math-inline data-latex=uw></span>). Any <span class=math-inline data-latex=s></span>&ndash;<span class=math-inline data-latex=t></span> separator in <span class=math-inline data-latex=G_1></span> yields one in <span class=math-inline data-latex=G></span> of equal or smaller size, so the min separator in <span class=math-inline data-latex=G_1></span> has size <span class=math-inline data-latex="\le k"></span>. Since <span class=math-inline data-latex="|E(G_1)| < |E(G)|"></span>, by induction <span class=math-inline data-latex=G_1></span> has <span class=math-inline data-latex=k></span> vertex-disjoint <span class=math-inline data-latex=s></span>&ndash;<span class=math-inline data-latex=t></span> paths.</li>
-<li><span class=math-inline data-latex="G_2 = G - e"></span>. Similarly, apply induction.</li>
-</ul>
-<p>By a careful case analysis on whether the minimum separator in <span class=math-inline data-latex=G_1></span> or <span class=math-inline data-latex=G_2></span> has size exactly <span class=math-inline data-latex=k></span> or <span class=math-inline data-latex=k-1></span>, one reconstructs <span class=math-inline data-latex=k></span> vertex-disjoint paths in <span class=math-inline data-latex=G></span> from the paths in <span class=math-inline data-latex=G_1></span> and <span class=math-inline data-latex=G_2></span>. The full combinatorial argument (due to Menger 1927, with a streamlined proof by Dirac 1966) proceeds by splitting the minimum separator and patching paths; we refer to Diestel (2017, Theorem 3.3.1) for the complete details.</p>
-<p>As a corollary, <span class=math-inline data-latex="\kappa(G) = \min_{s \neq t} \{\text{min } s\text{-}t \text{ separator size}\}"></span> equals the maximum number of vertex-disjoint paths between the worst-case pair. <span class=math-inline data-latex=\square></span></p>
-</div>
-</div>
-<p><strong>Dramatic interpretation</strong>: Menger&rsquo;s theorem tells us that <span class=math-inline data-latex="\kappa(G_{\text{Ring}}) = 1"></span> means there exist two characters whose only communication channel passes through a single intermediary. If that intermediary exits the drama, those two worlds can no longer interact.</p>
-<p><strong>Worked example</strong>: Between Fricka (in the gods' cluster) and Mime (in the Nibelung cluster), suppose there are exactly 2 internally vertex-disjoint paths: Fricka&ndash;Wotan&ndash;Loge&ndash;Alberich&ndash;Mime and Fricka&ndash;Brunnhilde&ndash;Siegfried&ndash;Mime. By Menger&rsquo;s theorem, any separating set for Fricka and Mime must contain at least 2 vertices. Indeed, removing both Loge and Siegfried disconnects Fricka from Mime. But for the pair (Freia, Mime), there may be only one path through Loge, so a single vertex cut suffices.</p>
-<hr>
-<h2 id=section-5-community-detection-and-modularity>Section 5: Community Detection and Modularity</h2>
-<blockquote>
-<p><em>中文:</em> &ldquo;社区检测&mldr;让模块度尽量高。于是《指环》自然裂成几个说明性团块：众神、侏儒、英雄。&rdquo;</p>
-</blockquote>
-<div class=definition-block id=definition-20.7>
-<div class=block-label>
-Definition 20.7 (Modularity)
-</div>
-<div class=block-body><p>Let <span class=math-inline data-latex="G = (V, E)"></span> with <span class=math-inline data-latex="|E| = m"></span>, adjacency matrix <span class=math-inline data-latex=A></span>, and let <span class=math-inline data-latex="c : V \to \{1, \ldots, r\}"></span> be a partition of vertices into <span class=math-inline data-latex=r></span> communities. The <strong>modularity</strong> of this partition is
+so that <span class=math-inline data-latex="0 \le D(G) \le 1"></span>. A graph with <span class=math-inline data-latex=D></span> close to 1 is <strong>dense</strong>; with <span class=math-inline data-latex=D></span> close to 0 is <strong>sparse</strong>.</div></div><p><strong>Worked example</strong>: For <em>Carmen</em> with approximately <span class=math-inline data-latex="n = 12"></span> characters and <span class=math-inline data-latex="m = 40"></span> edges: <span class=math-inline data-latex="D = 2 \cdot 40 / (12 \cdot 11) \approx 0.61"></span>. For the <em>Ring</em> with <span class=math-inline data-latex="n = 34"></span> and <span class=math-inline data-latex="m = 72"></span>: <span class=math-inline data-latex="D = 2 \cdot 72 / (34 \cdot 33) \approx 0.13"></span>. For <em>Le nozze di Figaro</em> with approximately <span class=math-inline data-latex="n = 11"></span> and <span class=math-inline data-latex="m = 24"></span>: <span class=math-inline data-latex="D = 2 \cdot 24 / (11 \cdot 10) \approx 0.44"></span>.</p><p><em>Carmen</em> is a high-density network; the <em>Ring</em> is sparse; <em>Figaro</em> sits in between.</p><blockquote><p><em>中文:</em> &ldquo;《卡门》。高密度网络&mldr;冲突无处可逃&mldr;天然朝悲剧收缩。&rdquo;</p></blockquote><p>In a dense network, almost every pair of characters can interact directly, leaving no room for avoidance or ignorance. Conflict is inescapable. In a sparse network, characters inhabit separate worlds that may never collide &mdash; until a bridge character carries information (or betrayal) across the divide.</p><blockquote><p><em>中文:</em> &ldquo;密度高，倾向悲剧；模块化强，倾向史诗；跨阵营边占主导，倾向喜剧。&rdquo;</p></blockquote><div class=definition-block id=definition-20.6><div class=block-label>Definition 20.6 (Vertex Connectivity)</div><div class=block-body>The <strong>vertex connectivity</strong> <span class=math-inline data-latex=\kappa(G)></span> of a connected graph <span class=math-inline data-latex=G></span> is the minimum number of vertices whose removal disconnects <span class=math-inline data-latex=G></span> (or reduces it to a single vertex). A graph is <strong><span class=math-inline data-latex=k></span>-connected</strong> if <span class=math-inline data-latex="\kappa(G) \ge k"></span>.</div></div><p><strong>Worked example</strong>: If the <em>Ring</em> network has a single cut vertex (Loge), then <span class=math-inline data-latex="\kappa(G_{\text{Ring}}) = 1"></span>. The <em>Carmen</em> network, being denser with many redundant paths, likely has <span class=math-inline data-latex="\kappa(G_{\text{Carmen}}) \ge 3"></span>.</p><div class=theorem-block id=theorem-20.2><div class=block-label>Theorem 20.2 (Menger's Theorem)</div><div class=block-body>Let <span class=math-inline data-latex="G = (V, E)"></span> be a graph and let <span class=math-inline data-latex="s, t \in V"></span> be non-adjacent vertices. The maximum number of internally vertex-disjoint <span class=math-inline data-latex=s></span>&ndash;<span class=math-inline data-latex=t></span> paths equals the minimum number of vertices in an <span class=math-inline data-latex=s></span>&ndash;<span class=math-inline data-latex=t></span> separating set (a set <span class=math-inline data-latex="S \subseteq V \setminus \{s,t\}"></span> whose removal disconnects <span class=math-inline data-latex=s></span> from <span class=math-inline data-latex=t></span>).</div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p>We prove both directions.</p><p><strong>Direction 1 (max <span class=math-inline data-latex=\le></span> min):</strong> If <span class=math-inline data-latex=S></span> is an <span class=math-inline data-latex=s></span>&ndash;<span class=math-inline data-latex=t></span> separating set of size <span class=math-inline data-latex=k></span>, then every <span class=math-inline data-latex=s></span>&ndash;<span class=math-inline data-latex=t></span> path must pass through at least one vertex of <span class=math-inline data-latex=S></span>. Since internally vertex-disjoint paths share no internal vertices, at most <span class=math-inline data-latex=k></span> such paths can exist.</p><p><strong>Direction 2 (max <span class=math-inline data-latex=\ge></span> min) by induction on <span class=math-inline data-latex=|E|></span>:</strong> The base case (<span class=math-inline data-latex="s, t"></span> with no path) gives both sides equal to 0. For the inductive step, let the minimum <span class=math-inline data-latex=s></span>&ndash;<span class=math-inline data-latex=t></span> separator have size <span class=math-inline data-latex=k></span>.</p><p>Pick any edge <span class=math-inline data-latex="e = \{u, w\}"></span> on some <span class=math-inline data-latex=s></span>&ndash;<span class=math-inline data-latex=t></span> path. Consider two auxiliary graphs:</p><ul><li><span class=math-inline data-latex="G_1 = G / e"></span> (contract <span class=math-inline data-latex=e></span>, merging <span class=math-inline data-latex="u, w"></span> into a single vertex <span class=math-inline data-latex=uw></span>). Any <span class=math-inline data-latex=s></span>&ndash;<span class=math-inline data-latex=t></span> separator in <span class=math-inline data-latex=G_1></span> yields one in <span class=math-inline data-latex=G></span> of equal or smaller size, so the min separator in <span class=math-inline data-latex=G_1></span> has size <span class=math-inline data-latex="\le k"></span>. Since <span class=math-inline data-latex="|E(G_1)| < |E(G)|"></span>, by induction <span class=math-inline data-latex=G_1></span> has <span class=math-inline data-latex=k></span> vertex-disjoint <span class=math-inline data-latex=s></span>&ndash;<span class=math-inline data-latex=t></span> paths.</li><li><span class=math-inline data-latex="G_2 = G - e"></span>. Similarly, apply induction.</li></ul><p>By a careful case analysis on whether the minimum separator in <span class=math-inline data-latex=G_1></span> or <span class=math-inline data-latex=G_2></span> has size exactly <span class=math-inline data-latex=k></span> or <span class=math-inline data-latex=k-1></span>, one reconstructs <span class=math-inline data-latex=k></span> vertex-disjoint paths in <span class=math-inline data-latex=G></span> from the paths in <span class=math-inline data-latex=G_1></span> and <span class=math-inline data-latex=G_2></span>. The full combinatorial argument (due to Menger 1927, with a streamlined proof by Dirac 1966) proceeds by splitting the minimum separator and patching paths; we refer to Diestel (2017, Theorem 3.3.1) for the complete details.</p><p>As a corollary, <span class=math-inline data-latex="\kappa(G) = \min_{s \neq t} \{\text{min } s\text{-}t \text{ separator size}\}"></span> equals the maximum number of vertex-disjoint paths between the worst-case pair. <span class=math-inline data-latex=\square></span></p></div></div><p><strong>Dramatic interpretation</strong>: Menger&rsquo;s theorem tells us that <span class=math-inline data-latex="\kappa(G_{\text{Ring}}) = 1"></span> means there exist two characters whose only communication channel passes through a single intermediary. If that intermediary exits the drama, those two worlds can no longer interact.</p><p><strong>Worked example</strong>: Between Fricka (in the gods&rsquo; cluster) and Mime (in the Nibelung cluster), suppose there are exactly 2 internally vertex-disjoint paths: Fricka&ndash;Wotan&ndash;Loge&ndash;Alberich&ndash;Mime and Fricka&ndash;Brunnhilde&ndash;Siegfried&ndash;Mime. By Menger&rsquo;s theorem, any separating set for Fricka and Mime must contain at least 2 vertices. Indeed, removing both Loge and Siegfried disconnects Fricka from Mime. But for the pair (Freia, Mime), there may be only one path through Loge, so a single vertex cut suffices.</p><hr><h2 id=section-5-community-detection-and-modularity>Section 5: Community Detection and Modularity</h2><blockquote><p><em>中文:</em> &ldquo;社区检测&mldr;让模块度尽量高。于是《指环》自然裂成几个说明性团块：众神、侏儒、英雄。&rdquo;</p></blockquote><div class=definition-block id=definition-20.7><div class=block-label>Definition 20.7 (Modularity)</div><div class=block-body><p>Let <span class=math-inline data-latex="G = (V, E)"></span> with <span class=math-inline data-latex="|E| = m"></span>, adjacency matrix <span class=math-inline data-latex=A></span>, and let <span class=math-inline data-latex="c : V \to \{1, \ldots, r\}"></span> be a partition of vertices into <span class=math-inline data-latex=r></span> communities. The <strong>modularity</strong> of this partition is
 <span class=math-display data-latex="Q = \frac{1}{2m} \sum_{i,j} \left[ A_{ij} - \frac{k_i k_j}{2m} \right] \delta(c_i, c_j)"></span>
-where <span class=math-inline data-latex="k_i = \deg(i)"></span>, <span class=math-inline data-latex="\delta(c_i, c_j) = 1"></span> if <span class=math-inline data-latex="c_i = c_j"></span> (same community) and 0 otherwise.</p>
-<p>The term <span class=math-inline data-latex="k_i k_j / (2m)"></span> is the <strong>null model</strong>: the expected number of edges between <span class=math-inline data-latex=i></span> and <span class=math-inline data-latex=j></span> in a random graph preserving the degree sequence (the configuration model). Modularity measures the fraction of edges within communities minus the expected fraction under the null model.</p>
-</div>
-</div>
-<p><strong>Interpretation of the null model</strong>: If edges were randomly distributed while preserving each vertex&rsquo;s degree, the probability that <span class=math-inline data-latex=i></span> and <span class=math-inline data-latex=j></span> are connected is approximately <span class=math-inline data-latex="k_i k_j / (2m)"></span>. High modularity (<span class=math-inline data-latex="Q > 0"></span>) means the actual graph has more within-community edges than this random baseline. Values of <span class=math-inline data-latex="Q \ge 0.3"></span> are typically considered indicative of significant community structure (Newman & Girvan 2004).</p>
-<p><strong>Worked example</strong>: In the <em>Ring</em>, suppose we partition into three communities: Gods (<span class=math-inline data-latex=C_1></span>: Wotan, Fricka, Freia, Donner, Froh, Erda, Loge, Brunnhilde), Nibelungs (<span class=math-inline data-latex=C_2></span>: Alberich, Mime, Hagen), and Heroes (<span class=math-inline data-latex=C_3></span>: Siegmund, Sieglinde, Siegfried, Gutrune, Gunther). Consider two vertices Wotan (<span class=math-inline data-latex="k_W = 16"></span>) and Fricka (<span class=math-inline data-latex="k_F = 6"></span>) in the same community, with <span class=math-inline data-latex="m = 72"></span>. Their contribution to <span class=math-inline data-latex=Q></span> is <span class=math-inline data-latex="\frac{1}{144}[A_{WF} - \frac{16 \cdot 6}{144}]"></span>. Since <span class=math-inline data-latex="A_{WF} = 1"></span> and <span class=math-inline data-latex="\frac{96}{144} \approx 0.67"></span>, this pair contributes <span class=math-inline data-latex="\frac{1}{144}(1 - 0.67) \approx 0.0023"></span> to <span class=math-inline data-latex=Q></span>. Summing over all same-community pairs yields the total modularity.</p>
-<div class=theorem-block id=theorem-20.3>
-<div class=block-label>
-Theorem 20.3 (NP-hardness of Modularity Maximization)
-</div>
-<div class=block-body><em>(Brandes et al. 2008)</em> Finding the partition <span class=math-inline data-latex="c : V \to \{1, \ldots, r\}"></span> that maximizes the modularity <span class=math-inline data-latex=Q></span> is NP-hard.</div>
-</div>
-<div class=proof-block>
-<div class=block-label>Proof.</div>
-<div class=block-body><em>(Sketch.)</em> Brandes et al. (2008) reduce 3-PARTITION to modularity maximization. Given an instance of 3-PARTITION with integers <span class=math-inline data-latex="a_1, \ldots, a_{3s}"></span> summing to <span class=math-inline data-latex=sB></span>, they construct a graph <span class=math-inline data-latex=G></span> such that <span class=math-inline data-latex=Q></span> achieves a specific target value if and only if the integers can be partitioned into <span class=math-inline data-latex=s></span> triples each summing to <span class=math-inline data-latex=B></span>. The construction encodes each integer <span class=math-inline data-latex=a_i></span> as a clique of size proportional to <span class=math-inline data-latex=a_i></span>, connected by carefully chosen inter-clique edges. The modularity function <span class=math-inline data-latex=Q></span> then decomposes into per-community terms whose sum is maximized precisely when the 3-PARTITION condition is satisfied. Since 3-PARTITION is strongly NP-complete, modularity maximization is NP-hard. <span class=math-inline data-latex=\square></span></div>
-</div>
-<p><strong>The Louvain algorithm</strong> (Blondel et al. 2008) is the standard heuristic for approximate modularity maximization:</p>
-<ol>
-<li><strong>Local moves</strong>: Start with each vertex in its own community. For each vertex <span class=math-inline data-latex=v></span>, compute the modularity gain from moving <span class=math-inline data-latex=v></span> to each neighbor&rsquo;s community. Move <span class=math-inline data-latex=v></span> to the community yielding the largest positive gain. Repeat until no move increases <span class=math-inline data-latex=Q></span>.</li>
-<li><strong>Aggregation</strong>: Contract each community into a single super-node, preserving edge weights. Return to step 1 on the coarsened graph.</li>
-<li><strong>Iterate</strong> until convergence.</li>
-</ol>
-<p>The Louvain algorithm runs in <span class=math-inline data-latex="O(n \log n)"></span> time in practice and typically finds partitions close to the global maximum.</p>
-<p><strong>Community structure of the Ring</strong>: Applying Louvain to the <em>Ring</em> network yields communities closely matching the dramatic factions:</p>
-<table>
-<thead>
-<tr>
-<th>Community</th>
-<th>Characters</th>
-<th>Internal edges</th>
-<th>Cross-community edges</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Gods</td>
-<td>Wotan, Fricka, Freia, Donner, Froh, Erda</td>
-<td>Dense (most pairs interact)</td>
-<td>Loge bridges to Nibelungs</td>
-</tr>
-<tr>
-<td>Nibelungs</td>
-<td>Alberich, Mime, Hagen</td>
-<td>Moderate</td>
-<td>Loge, Siegfried bridge outward</td>
-</tr>
-<tr>
-<td>Volsungs/Heroes</td>
-<td>Siegmund, Sieglinde, Siegfried, Brunnhilde</td>
-<td>Moderate</td>
-<td>Brunnhilde bridges to Gods</td>
-</tr>
-<tr>
-<td>Gibichungs</td>
-<td>Gunther, Gutrune</td>
-<td>Sparse</td>
-<td>Hagen, Siegfried bridge inward</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><em>中文:</em> &ldquo;洛格把众神接到侏儒，布伦希尔德横跨众神与英雄，齐格琳德则把家族秘密拖过边界。桥一出现，命运就出现了。&rdquo;</p>
-</blockquote>
-<p>The characters with edges crossing community boundaries &mdash; Loge, Brunnhilde, Sieglinde, Siegfried &mdash; are precisely those whose dramatic arcs drive the plot forward. In graph-theoretic terms, they are the <strong>inter-community bridge vertices</strong>. Their structural role (high betweenness, potential cut-vertex status) mirrors their narrative role (carrying information, loyalty, or betrayal across factional lines).</p>
-<hr>
-<h2 id=section-6-dynamic-networks>Section 6: Dynamic Networks</h2>
-<div class=definition-block id=definition-20.8>
-<div class=block-label>
-Definition 20.8 (Temporal Graph)
-</div>
-<div class=block-body><p>A <strong>temporal graph</strong> (or dynamic network) is a sequence of graphs <span class=math-inline data-latex="G(t) = (V(t), E(t))"></span> indexed by time <span class=math-inline data-latex="t \in \{1, 2, \ldots, T\}"></span>. Node deletion at time <span class=math-inline data-latex=t_0></span> means <span class=math-inline data-latex="V(t_0) = V(t_0 - 1) \setminus \{v\}"></span> and <span class=math-inline data-latex="E(t_0) = E(t_0 - 1) \setminus \{e : v \in e\}"></span>.</p>
-<p>Centrality measures become functions of time: <span class=math-inline data-latex="C_B(v; t)"></span> is the betweenness centrality of vertex <span class=math-inline data-latex=v></span> in <span class=math-inline data-latex=G(t)></span>.</p>
-</div>
-</div>
-<blockquote>
-<p><em>中文:</em> &ldquo;《诸神的黄昏》&mldr;齐格弗里德被杀，节点直接删除&mldr;布伦希尔德的介数中心性暴涨&mldr;最后一座桥。&rdquo;</p>
-</blockquote>
-<p><strong>Worked example (Gotterdammerung)</strong>: Consider three snapshots:</p>
-<ul>
-<li><span class=math-inline data-latex=G(1)></span>: Full network before any deaths. Brunnhilde has moderate betweenness.</li>
-<li><span class=math-inline data-latex=G(2)></span>: Siegfried is killed &mdash; remove vertex Siegfried. Brunnhilde, who previously shared Siegfried&rsquo;s bridging role, now becomes the sole connection between the heroes' remnant and the gods. Her betweenness centrality increases sharply.</li>
-<li><span class=math-inline data-latex=G(3)></span>: Brunnhilde&rsquo;s self-immolation &mdash; remove Brunnhilde. The network shatters. If Brunnhilde was the last cut vertex, <span class=math-inline data-latex=G(3)></span> has multiple disconnected components. The drama ends in fragmentation.</li>
-</ul>
-<div class=proposition-block id=prop-20.2>
-<div class=block-label>
-Prop 20.2 (Betweenness Monotonicity Under Deletion)
-</div>
-<div class=block-body>Let <span class=math-inline data-latex=v></span> be a non-cut vertex deleted from <span class=math-inline data-latex=G></span> to form <span class=math-inline data-latex="G' = G - v"></span>. If <span class=math-inline data-latex=w></span> lies on shortest paths that previously went through <span class=math-inline data-latex=v></span>, then <span class=math-inline data-latex="C_B(w; G')"></span> may increase or decrease relative to <span class=math-inline data-latex="C_B(w; G)"></span> &mdash; there is no general monotonicity. However, if <span class=math-inline data-latex=v></span> is a cut vertex and <span class=math-inline data-latex=w></span> is the unique alternative bridge between the resulting components, then <span class=math-inline data-latex="C_B(w; G') > C_B(w; G)"></span>.</div>
-</div>
-<div class=proof-block>
-<div class=block-label>Proof.</div>
-<div class=block-body>When <span class=math-inline data-latex=v></span> is deleted, shortest paths that used <span class=math-inline data-latex=v></span> must reroute. If <span class=math-inline data-latex=w></span> is the unique alternative bridge, then all <span class=math-inline data-latex=s></span>&ndash;<span class=math-inline data-latex=t></span> pairs that were separated by <span class=math-inline data-latex=v></span>&rsquo;s removal but remain connected via <span class=math-inline data-latex=w></span> now have all their shortest paths passing through <span class=math-inline data-latex=w></span>. The numerator <span class=math-inline data-latex=\sigma_{st}(w)></span> increases for these pairs while <span class=math-inline data-latex=\sigma_{st}></span> may also change, but the net effect is an increase because the number of <span class=math-inline data-latex=(s,t)></span> pairs routed exclusively through <span class=math-inline data-latex=w></span> grows. In the <em>Ring</em> example, Brunnhilde absorbs all inter-component shortest paths after Siegfried&rsquo;s removal. <span class=math-inline data-latex=\square></span></div>
-</div>
-<p><strong>Evolution table for Gotterdammerung</strong> (simplified):</p>
-<table>
-<thead>
-<tr>
-<th>Time</th>
-<th>Event</th>
-<th><span class=math-inline data-latex=|V|></span></th>
-<th><span class=math-inline data-latex=|E|></span></th>
-<th>Cut vertices</th>
-<th><span class=math-inline data-latex=\kappa(G)></span></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><span class=math-inline data-latex=t_1></span></td>
-<td>Full cast assembled</td>
-<td>10</td>
-<td>14</td>
-<td>L</td>
-<td>1</td>
-</tr>
-<tr>
-<td><span class=math-inline data-latex=t_2></span></td>
-<td>Siegfried killed</td>
-<td>9</td>
-<td>10</td>
-<td>B, L</td>
-<td>1</td>
-</tr>
-<tr>
-<td><span class=math-inline data-latex=t_3></span></td>
-<td>Brunnhilde&rsquo;s immolation</td>
-<td>8</td>
-<td>7</td>
-<td>L</td>
-<td>1</td>
-</tr>
-<tr>
-<td><span class=math-inline data-latex=t_4></span></td>
-<td>Hagen drowns</td>
-<td>7</td>
-<td>5</td>
-<td>L</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<p>The progressive deletion of high-betweenness vertices causes the network to fragment. Each deletion removes edges and potentially creates new cut vertices, accelerating the collapse.</p>
-<blockquote>
-<p><em>中文:</em> &ldquo;悲剧，就是割点被删除的那一刻。&rdquo;</p>
-</blockquote>
-<hr>
-<h2 id=section-7-numerical-example-----the-ring-cycle-network>Section 7: Numerical Example &mdash; The Ring Cycle Network</h2>
-<p>We compute key quantities for a simplified <em>Ring</em> network with <span class=math-inline data-latex="n = 10"></span> representative characters and <span class=math-inline data-latex="m = 14"></span> edges.</p>
-<p><strong>Vertices</strong>: W (Wotan), F (Fricka), B (Brunnhilde), L (Loge), A (Alberich), M (Mime), S (Siegfried), Sg (Siegmund), Sl (Sieglinde), H (Hagen).</p>
-<p><strong>Edges</strong>: W&ndash;F, W&ndash;B, W&ndash;L, W&ndash;Sg, W&ndash;Sl, W&ndash;S (via Erda&rsquo;s prophecy chain), F&ndash;B, L&ndash;A, A&ndash;M, M&ndash;S, S&ndash;B, Sg&ndash;Sl, S&ndash;H, B&ndash;H.</p>
-<p><strong>Density</strong>:
-<span class=math-display data-latex="D = \frac{2 \cdot 14}{10 \cdot 9} = \frac{28}{90} \approx 0.31"></span></p>
-<p><strong>Degree centrality</strong>: <span class=math-inline data-latex="C_D(W) = 6/9 \approx 0.67"></span>, <span class=math-inline data-latex="C_D(L) = 2/9 \approx 0.22"></span>, <span class=math-inline data-latex="C_D(S) = 4/9 \approx 0.44"></span>, <span class=math-inline data-latex="C_D(B) = 4/9 \approx 0.44"></span>.</p>
-<p><strong>Betweenness centrality of Loge</strong>: Loge&rsquo;s only neighbors are Wotan and Alberich. Every shortest path from the gods' side ({W, F, B, Sg, Sl}) to the Nibelung side ({A, M}) that does not pass through S&ndash;M must pass through L. For example, <span class=math-inline data-latex="\sigma_{F,M} = 1"></span> (F&ndash;W&ndash;L&ndash;A&ndash;M), and <span class=math-inline data-latex="\sigma_{F,M}(L) = 1"></span>. Summing over all such pairs, <span class=math-inline data-latex="C_B(L) \ge 10"></span> (unnormalized), despite L having only degree 2.</p>
-<blockquote>
-<p><em>中文:</em> &ldquo;沃坦的重要性，是覆盖面；洛格的重要性，是通行权。&rdquo;</p>
-</blockquote>
-<p><strong>Cut vertex check</strong>: Is Loge a cut vertex? In the DFS tree rooted at W, Loge&rsquo;s only child is Alberich. The subtree of Alberich contains {A, M}. The only back edge from this subtree goes to&mldr; Loge has <span class=math-inline data-latex="\mathrm{disc}(L) = 3"></span> (say), and the subtree of A has no back edge to any vertex with discovery time <span class=math-inline data-latex="< 3"></span>. So <span class=math-inline data-latex="\mathrm{low}(A) \ge 3 = \mathrm{disc}(L)"></span>, confirming Loge is a cut vertex by Theorem 20.1.</p>
-<p>However, the edge S&ndash;M provides an alternative path from the gods to the Nibelungs (via Siegfried). So in the full 10-vertex graph, Loge may not be a cut vertex if S&ndash;M exists. This illustrates the sensitivity of the cut-vertex property to the encoding. In the original Moretti encoding of the full <em>Ring</em>, Loge is indeed a cut vertex because certain interactions are indirect.</p>
-<p><strong>Bridge detection</strong>: The edge L&ndash;A is a bridge if there is no alternative path from L to A avoiding that edge. In our simplified graph, L&rsquo;s only neighbors are W and A, and A&rsquo;s only neighbors are L and M. The only L&ndash;A path not using the direct edge would require L&ndash;W&ndash;&mldr;&ndash;M&ndash;A, which requires the path W&ndash;S&ndash;M&ndash;A (length 4 via Siegfried). If this path exists, L&ndash;A is not a bridge. The existence of even one alternative path &mdash; however long &mdash; prevents an edge from being a bridge. This subtlety distinguishes the bridge concept from informal notions of &ldquo;important connection.&rdquo;</p>
-<p><strong>Full betweenness calculation for L</strong>: We enumerate all <span class=math-inline data-latex=(s,t)></span> pairs with <span class=math-inline data-latex="s \neq L \neq t"></span> where L lies on a shortest path. The pairs where L is on the unique shortest path include: (W, A) via W&ndash;L&ndash;A (length 2, while alternative W&ndash;S&ndash;M&ndash;A has length 3, so the shortest goes through L); (F, A) via F&ndash;W&ndash;L&ndash;A (length 3); (B, A) via B&ndash;W&ndash;L&ndash;A (length 3) or B&ndash;S&ndash;M&ndash;A (length 3, bypassing L). When there are multiple shortest paths of equal length, <span class=math-inline data-latex=\sigma_{st}(L)/\sigma_{st}></span> may be a fraction.</p>
-<p><strong>Modularity</strong>: Partition into <span class=math-inline data-latex="C_1 = \{W, F, B, Sg, Sl\}"></span> (gods/Volsungs), <span class=math-inline data-latex="C_2 = \{A, M, H\}"></span> (antagonists), <span class=math-inline data-latex="C_3 = \{S, L\}"></span> (intermediaries). The within-community edges are: <span class=math-inline data-latex=C_1></span>: W&ndash;F, W&ndash;B, W&ndash;Sg, W&ndash;Sl, F&ndash;B, Sg&ndash;Sl (6 edges); <span class=math-inline data-latex=C_2></span>: A&ndash;M (1 edge); <span class=math-inline data-latex=C_3></span>: none. Total within-community: 7. Under the null model, the expected within-community edges for <span class=math-inline data-latex=C_1></span> with degrees summing to <span class=math-inline data-latex="\sum k_i = 22"></span> would be approximately <span class=math-inline data-latex="\frac{22^2}{4 \cdot 14} \approx 8.6"></span>. The modularity <span class=math-inline data-latex=Q></span> accumulates these differences across all communities.</p>
-<hr>
-<h2 id=musical-connection>Musical Connection</h2>
-<div class=music-block>
-<div class=block-label>音乐联系</div>
-<div class=block-body><blockquote>
-<p><em>中文:</em> &ldquo;《卡门》。高密度网络&mldr;冲突无处可逃&mldr;天然朝悲剧收缩。《指环》。不是密室，而是大陆。社区很多，模块度很高&mldr;桥一断，世界分裂。这就是史诗的拓扑。&rdquo;</p>
-</blockquote>
-<p>Three operas illustrate three graph-theoretic regimes:</p>
-<table>
-<thead>
-<tr>
-<th>Opera</th>
-<th>Density <span class=math-inline data-latex=D></span></th>
-<th>Modularity <span class=math-inline data-latex=Q></span></th>
-<th>Cut vertices</th>
-<th>Dramatic mode</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><em>Carmen</em></td>
-<td>High (~0.6)</td>
-<td>Low (~0.1)</td>
-<td>Few/none</td>
-<td>Tragedy: dense conflict, no escape</td>
-</tr>
-<tr>
-<td><em>Ring</em> cycle</td>
-<td>Low (~0.13)</td>
-<td>High (~0.5)</td>
-<td>Several (Loge, Brunnhilde)</td>
-<td>Epic: modular worlds, fragile bridges</td>
-</tr>
-<tr>
-<td><em>Le nozze di Figaro</em></td>
-<td>Medium (~0.4)</td>
-<td>Low (~0.15)</td>
-<td>None</td>
-<td>Comedy: cross-community edges dominate</td>
-</tr>
-</tbody>
-</table>
-<p>The narration&rsquo;s taxonomy &mdash; &ldquo;density tends toward tragedy; modularity toward epic; cross-faction edges toward comedy&rdquo; &mdash; corresponds to these three graph invariants. This is not deterministic but suggests a structural vocabulary for dramatic topology.</p>
-<blockquote>
-<p><em>中文:</em> &ldquo;《费加罗的婚礼》&mldr;跨界不是灾难源，而是笑料源。喜剧。&rdquo;</p>
-</blockquote>
-<p>In <em>Le nozze di Figaro</em>, the cross-community edges (servant&ndash;master, lover&ndash;rival) are not fragile bridges but robust, redundant connections. Removing any single character does not disconnect the network. Comedy thrives on the <em>inability</em> to separate: characters who should not interact are forced together, and the resulting entanglements produce humor rather than tragedy. The graph-theoretic signature is low modularity (communities bleed into each other) and high connectivity (<span class=math-inline data-latex="\kappa(G) \ge 2"></span>).</p>
-<p>As noted in</p>
-<p><a href=https://amath390.sibeliusp.com/episodes/ep16/ class=episode-ref-link>EP16</a></p>
-<p>, Rossini&rsquo;s structures are syntax trees; in</p>
-<p><a href=https://amath390.sibeliusp.com/episodes/ep17/ class=episode-ref-link>EP17</a></p>
-<p>, Wagner&rsquo;s leitmotifs form transformation networks. Today&rsquo;s character networks add a third layer. The narration&rsquo;s concluding observation is apt:</p>
-<blockquote>
-<p><em>中文:</em> &ldquo;歌剧不是一个故事，而是一个多层图。&rdquo;</p>
-</blockquote>
-<p>Each layer &mdash; syntactic (tree), motivic (transformation network), social (interaction graph), strategic (</p>
-<p><a href=https://amath390.sibeliusp.com/episodes/ep18/ class=episode-ref-link>game-theoretic, EP18</a></p>
-<p>) &mdash; captures a different aspect of the same dramatic object. A complete mathematical model of opera would be a <strong>multiplex graph</strong>: the same vertex set <span class=math-inline data-latex=V></span> (characters) with multiple edge sets <span class=math-inline data-latex="E_1, E_2, \ldots"></span> (one per layer), and inter-layer dependencies encoding how a character&rsquo;s structural role in one layer constrains their role in another.</p>
-<blockquote>
-<p><em>中文:</em> &ldquo;第十六集，罗西尼是一棵语法树&mldr;第十七集，瓦格纳的动机是变换网络&mldr;今天，角色是社会网络&mldr;第十八集我们又在每条边上叠了一层策略，那就是博弈。&rdquo;</p>
-</blockquote>
-</div>
-</div>
-<hr>
-<h2 id=limits-and-open-questions>Limits and Open Questions</h2>
-<ol>
-<li>
-<p><strong>Encoding ambiguity</strong>: The character network depends heavily on what counts as an &ldquo;interaction.&rdquo; Co-presence on stage, direct address, singing simultaneously, and narrative reference all give different graphs with potentially different cut vertices and community structures.</p>
-</li>
-<li>
-<p><strong>Weighted networks</strong>: The unweighted model treats a single exchange and a 30-minute duet identically. Weighted edges (by scene duration, number of lines, or emotional intensity) would refine all centrality measures but introduce additional modeling choices.</p>
-</li>
-<li>
-<p><strong>Directed networks</strong>: Many dramatic interactions are asymmetric (one character commands, another obeys). Directed betweenness centrality and directed modularity are defined but computationally harder and less studied in the literary-network literature.</p>
-</li>
-<li>
-<p><strong>Resolution limit of modularity</strong>: Fortunato and Barthelemy (2007) showed that modularity maximization has a resolution limit: communities smaller than <span class=math-inline data-latex=\sqrt{2m}></span> edges may be invisible. For the <em>Ring</em> with <span class=math-inline data-latex="m = 72"></span>, the resolution limit is approximately <span class=math-inline data-latex="\sqrt{144} = 12"></span> edges, meaning small sub-communities (e.g., the Norns trio) may be absorbed into larger clusters.</p>
-</li>
-<li>
-<p><strong>Temporal resolution</strong>: Our dynamic model (Definition 20.8) uses discrete snapshots. Continuous-time models (e.g., interval graphs where edges have active time intervals) would better capture the flow of dramatic time.</p>
-</li>
-<li>
-<p><strong>Cross-work comparison</strong>: Can density and modularity predict genre (tragedy/comedy/epic) across a large corpus? Moretti (2011) suggests yes for Shakespeare; systematic testing on opera libretti remains open.</p>
-</li>
-<li>
-<p><strong>Spectral gap and robustness</strong>: The algebraic connectivity <span class=math-inline data-latex=\lambda_2(L)></span> (second-smallest eigenvalue of the graph Laplacian) measures how well-connected a graph is. For the <em>Ring</em>, <span class=math-inline data-latex=\lambda_2></span> is small (near a cut vertex, connectivity is fragile); for <em>Carmen</em>, <span class=math-inline data-latex=\lambda_2></span> is larger. A systematic study relating <span class=math-inline data-latex=\lambda_2></span> to dramatic pacing and tension remains open.</p>
-</li>
-<li>
-<p><strong>Multilayer network formalization</strong>: Combining character interactions, leitmotif transformations, and game-theoretic strategies into a single multiplex framework (Kivela et al. 2014) would allow centrality measures that account for cross-layer influence &mdash; e.g., a character who is peripheral in the social layer but central in the motivic layer.</p>
-</li>
-<li>
-<p><strong>Algorithmic drama analysis</strong>: Can an algorithm, given only the character interaction graph (no libretto, no music), predict which character dies? A cut vertex whose deletion maximizes the increase in the number of connected components is a candidate. Testing this &ldquo;topological death prediction&rdquo; across a corpus of tragedies is an open computational question.</p>
-</li>
-</ol>
-<hr>
-<h2 id=summary-of-notation>Summary of Notation</h2>
-<table>
-<thead>
-<tr>
-<th>Symbol</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><span class=math-inline data-latex="G = (V, E)"></span></td>
-<td>Undirected simple graph</td>
-</tr>
-<tr>
-<td><span class=math-inline data-latex="n = |V|"></span>, <span class=math-inline data-latex="m = |E|"></span></td>
-<td>Vertex and edge counts</td>
-</tr>
-<tr>
-<td><span class=math-inline data-latex=\deg(v)></span></td>
-<td>Degree of vertex <span class=math-inline data-latex=v></span></td>
-</tr>
-<tr>
-<td><span class=math-inline data-latex=C_D(v)></span></td>
-<td>Degree centrality</td>
-</tr>
-<tr>
-<td><span class=math-inline data-latex=C_B(v)></span></td>
-<td>Betweenness centrality</td>
-</tr>
-<tr>
-<td><span class=math-inline data-latex=\sigma_{st}></span></td>
-<td>Number of shortest <span class=math-inline data-latex=s></span>&ndash;<span class=math-inline data-latex=t></span> paths</td>
-</tr>
-<tr>
-<td><span class=math-inline data-latex=\sigma_{st}(v)></span></td>
-<td>Number of shortest <span class=math-inline data-latex=s></span>&ndash;<span class=math-inline data-latex=t></span> paths through <span class=math-inline data-latex=v></span></td>
-</tr>
-<tr>
-<td><span class=math-inline data-latex=D(G)></span></td>
-<td>Network density</td>
-</tr>
-<tr>
-<td><span class=math-inline data-latex=\kappa(G)></span></td>
-<td>Vertex connectivity</td>
-</tr>
-<tr>
-<td><span class=math-inline data-latex=Q></span></td>
-<td>Modularity</td>
-</tr>
-<tr>
-<td><span class=math-inline data-latex=A_{ij}></span></td>
-<td>Adjacency matrix entry</td>
-</tr>
-<tr>
-<td><span class=math-inline data-latex=k_i></span></td>
-<td>Degree of vertex <span class=math-inline data-latex=i></span></td>
-</tr>
-<tr>
-<td><span class=math-inline data-latex=G(t)></span></td>
-<td>Temporal graph at time <span class=math-inline data-latex=t></span></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id=academic-references>Academic References</h2>
-<ol>
-<li>Moretti, F. (2011). &ldquo;Network Theory, Plot Analysis.&rdquo; <em>New Left Review</em> 68, 80&ndash;102.</li>
-<li>Freeman, L. C. (1977). &ldquo;A Set of Measures of Centrality Based on Betweenness.&rdquo; <em>Sociometry</em> 40(1), 35&ndash;41.</li>
-<li>Brandes, U. (2001). &ldquo;A Faster Algorithm for Betweenness Centrality.&rdquo; <em>Journal of Mathematical Sociology</em> 25(2), 163&ndash;177.</li>
-<li>Newman, M. E. J. & Girvan, M. (2004). &ldquo;Finding and Evaluating Community Structure in Networks.&rdquo; <em>Physical Review E</em> 69(2), 026113.</li>
-<li>Blondel, V. D., Guillaume, J.-L., Lambiotte, R. & Lefebvre, E. (2008). &ldquo;Fast Unfolding of Communities in Large Networks.&rdquo; <em>Journal of Statistical Mechanics</em>, P10008.</li>
-<li>Brandes, U., Delling, D., Gaertler, M., Gorke, R., Hoefer, M., Nikoloski, Z. & Wagner, D. (2008). &ldquo;On Modularity Clustering.&rdquo; <em>IEEE Transactions on Knowledge and Data Engineering</em> 20(2), 172&ndash;188.</li>
-<li>Fortunato, S. & Barthelemy, M. (2007). &ldquo;Resolution Limit in Community Detection.&rdquo; <em>Proceedings of the National Academy of Sciences</em> 104(1), 36&ndash;41.</li>
-<li>Menger, K. (1927). &ldquo;Zur allgemeinen Kurventheorie.&rdquo; <em>Fundamenta Mathematicae</em> 10, 96&ndash;115.</li>
-<li>Diestel, R. (2017). <em>Graph Theory</em>, 5th ed. Springer GTM 173.</li>
-<li>Stiller, J., Nettle, D. & Dunbar, R. I. M. (2003). &ldquo;The Small World of Shakespeare&rsquo;s Plays.&rdquo; <em>Human Nature</em> 14(4), 397&ndash;408.</li>
-</ol>
-</div>
-<nav class=ep-nav>
-<a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-nav-prev>
-← EP19: Vibrato as FM Synthesis
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-nav-next>
-EP21: From Markov to Diffusion — Sixty Years of AI Composition →
-</a>
-</nav>
-</article>
-<aside class=ep-toc-aside>
-<div class=ep-toc-sticky>
-<div class=ep-toc-label>本页目录</div>
-<nav id=TableOfContents>
-<ul>
-<li><a href=#overview>Overview</a></li>
-<li><a href=#prerequisites>Prerequisites</a></li>
-<li><a href=#section-1-building-the-character-network>Section 1: Building the Character Network</a></li>
-<li><a href=#section-2-centrality-measures>Section 2: Centrality Measures</a>
-<ul>
-<li><a href=#21-degree-centrality>2.1 Degree Centrality</a></li>
-<li><a href=#22-betweenness-centrality>2.2 Betweenness Centrality</a></li>
-</ul>
-</li>
-<li><a href=#section-3-cut-vertices-and-bridges>Section 3: Cut Vertices and Bridges</a>
-<ul>
-<li><a href=#31-cut-vertices-articulation-points>3.1 Cut Vertices (Articulation Points)</a></li>
-<li><a href=#32-bridges>3.2 Bridges</a></li>
-</ul>
-</li>
-<li><a href=#section-4-network-density-and-connectivity>Section 4: Network Density and Connectivity</a></li>
-<li><a href=#section-5-community-detection-and-modularity>Section 5: Community Detection and Modularity</a></li>
-<li><a href=#section-6-dynamic-networks>Section 6: Dynamic Networks</a></li>
-<li><a href=#section-7-numerical-example-----the-ring-cycle-network>Section 7: Numerical Example &mdash; The Ring Cycle Network</a></li>
-<li><a href=#musical-connection>Musical Connection</a></li>
-<li><a href=#limits-and-open-questions>Limits and Open Questions</a></li>
-<li><a href=#summary-of-notation>Summary of Notation</a></li>
-<li><a href=#academic-references>Academic References</a></li>
-</ul>
-</nav>
-</div>
-</aside>
-</div>
-<footer class=site-footer>
-<div class=footer-content>
-<a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link>
-<img src=/images/avatar.png alt="Sibelius P." class=footer-avatar>
-</a>
-<div class=footer-text>
-<span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
+where <span class=math-inline data-latex="k_i = \deg(i)"></span>, <span class=math-inline data-latex="\delta(c_i, c_j) = 1"></span> if <span class=math-inline data-latex="c_i = c_j"></span> (same community) and 0 otherwise.</p><p>The term <span class=math-inline data-latex="k_i k_j / (2m)"></span> is the <strong>null model</strong>: the expected number of edges between <span class=math-inline data-latex=i></span> and <span class=math-inline data-latex=j></span> in a random graph preserving the degree sequence (the configuration model). Modularity measures the fraction of edges within communities minus the expected fraction under the null model.</p></div></div><p><strong>Interpretation of the null model</strong>: If edges were randomly distributed while preserving each vertex&rsquo;s degree, the probability that <span class=math-inline data-latex=i></span> and <span class=math-inline data-latex=j></span> are connected is approximately <span class=math-inline data-latex="k_i k_j / (2m)"></span>. High modularity (<span class=math-inline data-latex="Q > 0"></span>) means the actual graph has more within-community edges than this random baseline. Values of <span class=math-inline data-latex="Q \ge 0.3"></span> are typically considered indicative of significant community structure (Newman & Girvan 2004).</p><p><strong>Worked example</strong>: In the <em>Ring</em>, suppose we partition into three communities: Gods (<span class=math-inline data-latex=C_1></span>: Wotan, Fricka, Freia, Donner, Froh, Erda, Loge, Brunnhilde), Nibelungs (<span class=math-inline data-latex=C_2></span>: Alberich, Mime, Hagen), and Heroes (<span class=math-inline data-latex=C_3></span>: Siegmund, Sieglinde, Siegfried, Gutrune, Gunther). Consider two vertices Wotan (<span class=math-inline data-latex="k_W = 16"></span>) and Fricka (<span class=math-inline data-latex="k_F = 6"></span>) in the same community, with <span class=math-inline data-latex="m = 72"></span>. Their contribution to <span class=math-inline data-latex=Q></span> is <span class=math-inline data-latex="\frac{1}{144}[A_{WF} - \frac{16 \cdot 6}{144}]"></span>. Since <span class=math-inline data-latex="A_{WF} = 1"></span> and <span class=math-inline data-latex="\frac{96}{144} \approx 0.67"></span>, this pair contributes <span class=math-inline data-latex="\frac{1}{144}(1 - 0.67) \approx 0.0023"></span> to <span class=math-inline data-latex=Q></span>. Summing over all same-community pairs yields the total modularity.</p><div class=theorem-block id=theorem-20.3><div class=block-label>Theorem 20.3 (NP-hardness of Modularity Maximization)</div><div class=block-body><em>(Brandes et al. 2008)</em> Finding the partition <span class=math-inline data-latex="c : V \to \{1, \ldots, r\}"></span> that maximizes the modularity <span class=math-inline data-latex=Q></span> is NP-hard.</div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><em>(Sketch.)</em> Brandes et al. (2008) reduce 3-PARTITION to modularity maximization. Given an instance of 3-PARTITION with integers <span class=math-inline data-latex="a_1, \ldots, a_{3s}"></span> summing to <span class=math-inline data-latex=sB></span>, they construct a graph <span class=math-inline data-latex=G></span> such that <span class=math-inline data-latex=Q></span> achieves a specific target value if and only if the integers can be partitioned into <span class=math-inline data-latex=s></span> triples each summing to <span class=math-inline data-latex=B></span>. The construction encodes each integer <span class=math-inline data-latex=a_i></span> as a clique of size proportional to <span class=math-inline data-latex=a_i></span>, connected by carefully chosen inter-clique edges. The modularity function <span class=math-inline data-latex=Q></span> then decomposes into per-community terms whose sum is maximized precisely when the 3-PARTITION condition is satisfied. Since 3-PARTITION is strongly NP-complete, modularity maximization is NP-hard. <span class=math-inline data-latex=\square></span></div></div><p><strong>The Louvain algorithm</strong> (Blondel et al. 2008) is the standard heuristic for approximate modularity maximization:</p><ol><li><strong>Local moves</strong>: Start with each vertex in its own community. For each vertex <span class=math-inline data-latex=v></span>, compute the modularity gain from moving <span class=math-inline data-latex=v></span> to each neighbor&rsquo;s community. Move <span class=math-inline data-latex=v></span> to the community yielding the largest positive gain. Repeat until no move increases <span class=math-inline data-latex=Q></span>.</li><li><strong>Aggregation</strong>: Contract each community into a single super-node, preserving edge weights. Return to step 1 on the coarsened graph.</li><li><strong>Iterate</strong> until convergence.</li></ol><p>The Louvain algorithm runs in <span class=math-inline data-latex="O(n \log n)"></span> time in practice and typically finds partitions close to the global maximum.</p><p><strong>Community structure of the Ring</strong>: Applying Louvain to the <em>Ring</em> network yields communities closely matching the dramatic factions:</p><table><thead><tr><th>Community</th><th>Characters</th><th>Internal edges</th><th>Cross-community edges</th></tr></thead><tbody><tr><td>Gods</td><td>Wotan, Fricka, Freia, Donner, Froh, Erda</td><td>Dense (most pairs interact)</td><td>Loge bridges to Nibelungs</td></tr><tr><td>Nibelungs</td><td>Alberich, Mime, Hagen</td><td>Moderate</td><td>Loge, Siegfried bridge outward</td></tr><tr><td>Volsungs/Heroes</td><td>Siegmund, Sieglinde, Siegfried, Brunnhilde</td><td>Moderate</td><td>Brunnhilde bridges to Gods</td></tr><tr><td>Gibichungs</td><td>Gunther, Gutrune</td><td>Sparse</td><td>Hagen, Siegfried bridge inward</td></tr></tbody></table><blockquote><p><em>中文:</em> &ldquo;洛格把众神接到侏儒，布伦希尔德横跨众神与英雄，齐格琳德则把家族秘密拖过边界。桥一出现，命运就出现了。&rdquo;</p></blockquote><p>The characters with edges crossing community boundaries &mdash; Loge, Brunnhilde, Sieglinde, Siegfried &mdash; are precisely those whose dramatic arcs drive the plot forward. In graph-theoretic terms, they are the <strong>inter-community bridge vertices</strong>. Their structural role (high betweenness, potential cut-vertex status) mirrors their narrative role (carrying information, loyalty, or betrayal across factional lines).</p><hr><h2 id=section-6-dynamic-networks>Section 6: Dynamic Networks</h2><div class=definition-block id=definition-20.8><div class=block-label>Definition 20.8 (Temporal Graph)</div><div class=block-body><p>A <strong>temporal graph</strong> (or dynamic network) is a sequence of graphs <span class=math-inline data-latex="G(t) = (V(t), E(t))"></span> indexed by time <span class=math-inline data-latex="t \in \{1, 2, \ldots, T\}"></span>. Node deletion at time <span class=math-inline data-latex=t_0></span> means <span class=math-inline data-latex="V(t_0) = V(t_0 - 1) \setminus \{v\}"></span> and <span class=math-inline data-latex="E(t_0) = E(t_0 - 1) \setminus \{e : v \in e\}"></span>.</p><p>Centrality measures become functions of time: <span class=math-inline data-latex="C_B(v; t)"></span> is the betweenness centrality of vertex <span class=math-inline data-latex=v></span> in <span class=math-inline data-latex=G(t)></span>.</p></div></div><blockquote><p><em>中文:</em> &ldquo;《诸神的黄昏》&mldr;齐格弗里德被杀，节点直接删除&mldr;布伦希尔德的介数中心性暴涨&mldr;最后一座桥。&rdquo;</p></blockquote><p><strong>Worked example (Gotterdammerung)</strong>: Consider three snapshots:</p><ul><li><span class=math-inline data-latex=G(1)></span>: Full network before any deaths. Brunnhilde has moderate betweenness.</li><li><span class=math-inline data-latex=G(2)></span>: Siegfried is killed &mdash; remove vertex Siegfried. Brunnhilde, who previously shared Siegfried&rsquo;s bridging role, now becomes the sole connection between the heroes&rsquo; remnant and the gods. Her betweenness centrality increases sharply.</li><li><span class=math-inline data-latex=G(3)></span>: Brunnhilde&rsquo;s self-immolation &mdash; remove Brunnhilde. The network shatters. If Brunnhilde was the last cut vertex, <span class=math-inline data-latex=G(3)></span> has multiple disconnected components. The drama ends in fragmentation.</li></ul><div class=proposition-block id=prop-20.2><div class=block-label>Prop 20.2 (Betweenness Monotonicity Under Deletion)</div><div class=block-body>Let <span class=math-inline data-latex=v></span> be a non-cut vertex deleted from <span class=math-inline data-latex=G></span> to form <span class=math-inline data-latex="G' = G - v"></span>. If <span class=math-inline data-latex=w></span> lies on shortest paths that previously went through <span class=math-inline data-latex=v></span>, then <span class=math-inline data-latex="C_B(w; G')"></span> may increase or decrease relative to <span class=math-inline data-latex="C_B(w; G)"></span> &mdash; there is no general monotonicity. However, if <span class=math-inline data-latex=v></span> is a cut vertex and <span class=math-inline data-latex=w></span> is the unique alternative bridge between the resulting components, then <span class=math-inline data-latex="C_B(w; G') > C_B(w; G)"></span>.</div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body>When <span class=math-inline data-latex=v></span> is deleted, shortest paths that used <span class=math-inline data-latex=v></span> must reroute. If <span class=math-inline data-latex=w></span> is the unique alternative bridge, then all <span class=math-inline data-latex=s></span>&ndash;<span class=math-inline data-latex=t></span> pairs that were separated by <span class=math-inline data-latex=v></span>&rsquo;s removal but remain connected via <span class=math-inline data-latex=w></span> now have all their shortest paths passing through <span class=math-inline data-latex=w></span>. The numerator <span class=math-inline data-latex=\sigma_{st}(w)></span> increases for these pairs while <span class=math-inline data-latex=\sigma_{st}></span> may also change, but the net effect is an increase because the number of <span class=math-inline data-latex=(s,t)></span> pairs routed exclusively through <span class=math-inline data-latex=w></span> grows. In the <em>Ring</em> example, Brunnhilde absorbs all inter-component shortest paths after Siegfried&rsquo;s removal. <span class=math-inline data-latex=\square></span></div></div><p><strong>Evolution table for Gotterdammerung</strong> (simplified):</p><table><thead><tr><th>Time</th><th>Event</th><th><span class=math-inline data-latex=|V|></span></th><th><span class=math-inline data-latex=|E|></span></th><th>Cut vertices</th><th><span class=math-inline data-latex=\kappa(G)></span></th></tr></thead><tbody><tr><td><span class=math-inline data-latex=t_1></span></td><td>Full cast assembled</td><td>10</td><td>14</td><td>L</td><td>1</td></tr><tr><td><span class=math-inline data-latex=t_2></span></td><td>Siegfried killed</td><td>9</td><td>10</td><td>B, L</td><td>1</td></tr><tr><td><span class=math-inline data-latex=t_3></span></td><td>Brunnhilde&rsquo;s immolation</td><td>8</td><td>7</td><td>L</td><td>1</td></tr><tr><td><span class=math-inline data-latex=t_4></span></td><td>Hagen drowns</td><td>7</td><td>5</td><td>L</td><td>1</td></tr></tbody></table><p>The progressive deletion of high-betweenness vertices causes the network to fragment. Each deletion removes edges and potentially creates new cut vertices, accelerating the collapse.</p><blockquote><p><em>中文:</em> &ldquo;悲剧，就是割点被删除的那一刻。&rdquo;</p></blockquote><hr><h2 id=section-7-numerical-example-----the-ring-cycle-network>Section 7: Numerical Example &mdash; The Ring Cycle Network</h2><p>We compute key quantities for a simplified <em>Ring</em> network with <span class=math-inline data-latex="n = 10"></span> representative characters and <span class=math-inline data-latex="m = 14"></span> edges.</p><p><strong>Vertices</strong>: W (Wotan), F (Fricka), B (Brunnhilde), L (Loge), A (Alberich), M (Mime), S (Siegfried), Sg (Siegmund), Sl (Sieglinde), H (Hagen).</p><p><strong>Edges</strong>: W&ndash;F, W&ndash;B, W&ndash;L, W&ndash;Sg, W&ndash;Sl, W&ndash;S (via Erda&rsquo;s prophecy chain), F&ndash;B, L&ndash;A, A&ndash;M, M&ndash;S, S&ndash;B, Sg&ndash;Sl, S&ndash;H, B&ndash;H.</p><p><strong>Density</strong>:
+<span class=math-display data-latex="D = \frac{2 \cdot 14}{10 \cdot 9} = \frac{28}{90} \approx 0.31"></span></p><p><strong>Degree centrality</strong>: <span class=math-inline data-latex="C_D(W) = 6/9 \approx 0.67"></span>, <span class=math-inline data-latex="C_D(L) = 2/9 \approx 0.22"></span>, <span class=math-inline data-latex="C_D(S) = 4/9 \approx 0.44"></span>, <span class=math-inline data-latex="C_D(B) = 4/9 \approx 0.44"></span>.</p><p><strong>Betweenness centrality of Loge</strong>: Loge&rsquo;s only neighbors are Wotan and Alberich. Every shortest path from the gods&rsquo; side ({W, F, B, Sg, Sl}) to the Nibelung side ({A, M}) that does not pass through S&ndash;M must pass through L. For example, <span class=math-inline data-latex="\sigma_{F,M} = 1"></span> (F&ndash;W&ndash;L&ndash;A&ndash;M), and <span class=math-inline data-latex="\sigma_{F,M}(L) = 1"></span>. Summing over all such pairs, <span class=math-inline data-latex="C_B(L) \ge 10"></span> (unnormalized), despite L having only degree 2.</p><blockquote><p><em>中文:</em> &ldquo;沃坦的重要性，是覆盖面；洛格的重要性，是通行权。&rdquo;</p></blockquote><p><strong>Cut vertex check</strong>: Is Loge a cut vertex? In the DFS tree rooted at W, Loge&rsquo;s only child is Alberich. The subtree of Alberich contains {A, M}. The only back edge from this subtree goes to&mldr; Loge has <span class=math-inline data-latex="\mathrm{disc}(L) = 3"></span> (say), and the subtree of A has no back edge to any vertex with discovery time <span class=math-inline data-latex="< 3"></span>. So <span class=math-inline data-latex="\mathrm{low}(A) \ge 3 = \mathrm{disc}(L)"></span>, confirming Loge is a cut vertex by Theorem 20.1.</p><p>However, the edge S&ndash;M provides an alternative path from the gods to the Nibelungs (via Siegfried). So in the full 10-vertex graph, Loge may not be a cut vertex if S&ndash;M exists. This illustrates the sensitivity of the cut-vertex property to the encoding. In the original Moretti encoding of the full <em>Ring</em>, Loge is indeed a cut vertex because certain interactions are indirect.</p><p><strong>Bridge detection</strong>: The edge L&ndash;A is a bridge if there is no alternative path from L to A avoiding that edge. In our simplified graph, L&rsquo;s only neighbors are W and A, and A&rsquo;s only neighbors are L and M. The only L&ndash;A path not using the direct edge would require L&ndash;W&ndash;&mldr;&ndash;M&ndash;A, which requires the path W&ndash;S&ndash;M&ndash;A (length 4 via Siegfried). If this path exists, L&ndash;A is not a bridge. The existence of even one alternative path &mdash; however long &mdash; prevents an edge from being a bridge. This subtlety distinguishes the bridge concept from informal notions of &ldquo;important connection.&rdquo;</p><p><strong>Full betweenness calculation for L</strong>: We enumerate all <span class=math-inline data-latex=(s,t)></span> pairs with <span class=math-inline data-latex="s \neq L \neq t"></span> where L lies on a shortest path. The pairs where L is on the unique shortest path include: (W, A) via W&ndash;L&ndash;A (length 2, while alternative W&ndash;S&ndash;M&ndash;A has length 3, so the shortest goes through L); (F, A) via F&ndash;W&ndash;L&ndash;A (length 3); (B, A) via B&ndash;W&ndash;L&ndash;A (length 3) or B&ndash;S&ndash;M&ndash;A (length 3, bypassing L). When there are multiple shortest paths of equal length, <span class=math-inline data-latex=\sigma_{st}(L)/\sigma_{st}></span> may be a fraction.</p><p><strong>Modularity</strong>: Partition into <span class=math-inline data-latex="C_1 = \{W, F, B, Sg, Sl\}"></span> (gods/Volsungs), <span class=math-inline data-latex="C_2 = \{A, M, H\}"></span> (antagonists), <span class=math-inline data-latex="C_3 = \{S, L\}"></span> (intermediaries). The within-community edges are: <span class=math-inline data-latex=C_1></span>: W&ndash;F, W&ndash;B, W&ndash;Sg, W&ndash;Sl, F&ndash;B, Sg&ndash;Sl (6 edges); <span class=math-inline data-latex=C_2></span>: A&ndash;M (1 edge); <span class=math-inline data-latex=C_3></span>: none. Total within-community: 7. Under the null model, the expected within-community edges for <span class=math-inline data-latex=C_1></span> with degrees summing to <span class=math-inline data-latex="\sum k_i = 22"></span> would be approximately <span class=math-inline data-latex="\frac{22^2}{4 \cdot 14} \approx 8.6"></span>. The modularity <span class=math-inline data-latex=Q></span> accumulates these differences across all communities.</p><hr><h2 id=musical-connection>Musical Connection</h2><div class=music-block><div class=block-label>音乐联系</div><div class=block-body><blockquote><p><em>中文:</em> &ldquo;《卡门》。高密度网络&mldr;冲突无处可逃&mldr;天然朝悲剧收缩。《指环》。不是密室，而是大陆。社区很多，模块度很高&mldr;桥一断，世界分裂。这就是史诗的拓扑。&rdquo;</p></blockquote><p>Three operas illustrate three graph-theoretic regimes:</p><table><thead><tr><th>Opera</th><th>Density <span class=math-inline data-latex=D></span></th><th>Modularity <span class=math-inline data-latex=Q></span></th><th>Cut vertices</th><th>Dramatic mode</th></tr></thead><tbody><tr><td><em>Carmen</em></td><td>High (~0.6)</td><td>Low (~0.1)</td><td>Few/none</td><td>Tragedy: dense conflict, no escape</td></tr><tr><td><em>Ring</em> cycle</td><td>Low (~0.13)</td><td>High (~0.5)</td><td>Several (Loge, Brunnhilde)</td><td>Epic: modular worlds, fragile bridges</td></tr><tr><td><em>Le nozze di Figaro</em></td><td>Medium (~0.4)</td><td>Low (~0.15)</td><td>None</td><td>Comedy: cross-community edges dominate</td></tr></tbody></table><p>The narration&rsquo;s taxonomy &mdash; &ldquo;density tends toward tragedy; modularity toward epic; cross-faction edges toward comedy&rdquo; &mdash; corresponds to these three graph invariants. This is not deterministic but suggests a structural vocabulary for dramatic topology.</p><blockquote><p><em>中文:</em> &ldquo;《费加罗的婚礼》&mldr;跨界不是灾难源，而是笑料源。喜剧。&rdquo;</p></blockquote><p>In <em>Le nozze di Figaro</em>, the cross-community edges (servant&ndash;master, lover&ndash;rival) are not fragile bridges but robust, redundant connections. Removing any single character does not disconnect the network. Comedy thrives on the <em>inability</em> to separate: characters who should not interact are forced together, and the resulting entanglements produce humor rather than tragedy. The graph-theoretic signature is low modularity (communities bleed into each other) and high connectivity (<span class=math-inline data-latex="\kappa(G) \ge 2"></span>).</p><p>As noted in</p><p><a href=https://amath390.sibeliusp.com/episodes/ep16/ class=episode-ref-link>EP16</a></p><p>, Rossini&rsquo;s structures are syntax trees; in</p><p><a href=https://amath390.sibeliusp.com/episodes/ep17/ class=episode-ref-link>EP17</a></p><p>, Wagner&rsquo;s leitmotifs form transformation networks. Today&rsquo;s character networks add a third layer. The narration&rsquo;s concluding observation is apt:</p><blockquote><p><em>中文:</em> &ldquo;歌剧不是一个故事，而是一个多层图。&rdquo;</p></blockquote><p>Each layer &mdash; syntactic (tree), motivic (transformation network), social (interaction graph), strategic (</p><p><a href=https://amath390.sibeliusp.com/episodes/ep18/ class=episode-ref-link>game-theoretic, EP18</a></p><p>) &mdash; captures a different aspect of the same dramatic object. A complete mathematical model of opera would be a <strong>multiplex graph</strong>: the same vertex set <span class=math-inline data-latex=V></span> (characters) with multiple edge sets <span class=math-inline data-latex="E_1, E_2, \ldots"></span> (one per layer), and inter-layer dependencies encoding how a character&rsquo;s structural role in one layer constrains their role in another.</p><blockquote><p><em>中文:</em> &ldquo;第十六集，罗西尼是一棵语法树&mldr;第十七集，瓦格纳的动机是变换网络&mldr;今天，角色是社会网络&mldr;第十八集我们又在每条边上叠了一层策略，那就是博弈。&rdquo;</p></blockquote></div></div><hr><h2 id=limits-and-open-questions>Limits and Open Questions</h2><ol><li><p><strong>Encoding ambiguity</strong>: The character network depends heavily on what counts as an &ldquo;interaction.&rdquo; Co-presence on stage, direct address, singing simultaneously, and narrative reference all give different graphs with potentially different cut vertices and community structures.</p></li><li><p><strong>Weighted networks</strong>: The unweighted model treats a single exchange and a 30-minute duet identically. Weighted edges (by scene duration, number of lines, or emotional intensity) would refine all centrality measures but introduce additional modeling choices.</p></li><li><p><strong>Directed networks</strong>: Many dramatic interactions are asymmetric (one character commands, another obeys). Directed betweenness centrality and directed modularity are defined but computationally harder and less studied in the literary-network literature.</p></li><li><p><strong>Resolution limit of modularity</strong>: Fortunato and Barthelemy (2007) showed that modularity maximization has a resolution limit: communities smaller than <span class=math-inline data-latex=\sqrt{2m}></span> edges may be invisible. For the <em>Ring</em> with <span class=math-inline data-latex="m = 72"></span>, the resolution limit is approximately <span class=math-inline data-latex="\sqrt{144} = 12"></span> edges, meaning small sub-communities (e.g., the Norns trio) may be absorbed into larger clusters.</p></li><li><p><strong>Temporal resolution</strong>: Our dynamic model (Definition 20.8) uses discrete snapshots. Continuous-time models (e.g., interval graphs where edges have active time intervals) would better capture the flow of dramatic time.</p></li><li><p><strong>Cross-work comparison</strong>: Can density and modularity predict genre (tragedy/comedy/epic) across a large corpus? Moretti (2011) suggests yes for Shakespeare; systematic testing on opera libretti remains open.</p></li><li><p><strong>Spectral gap and robustness</strong>: The algebraic connectivity <span class=math-inline data-latex=\lambda_2(L)></span> (second-smallest eigenvalue of the graph Laplacian) measures how well-connected a graph is. For the <em>Ring</em>, <span class=math-inline data-latex=\lambda_2></span> is small (near a cut vertex, connectivity is fragile); for <em>Carmen</em>, <span class=math-inline data-latex=\lambda_2></span> is larger. A systematic study relating <span class=math-inline data-latex=\lambda_2></span> to dramatic pacing and tension remains open.</p></li><li><p><strong>Multilayer network formalization</strong>: Combining character interactions, leitmotif transformations, and game-theoretic strategies into a single multiplex framework (Kivela et al. 2014) would allow centrality measures that account for cross-layer influence &mdash; e.g., a character who is peripheral in the social layer but central in the motivic layer.</p></li><li><p><strong>Algorithmic drama analysis</strong>: Can an algorithm, given only the character interaction graph (no libretto, no music), predict which character dies? A cut vertex whose deletion maximizes the increase in the number of connected components is a candidate. Testing this &ldquo;topological death prediction&rdquo; across a corpus of tragedies is an open computational question.</p></li></ol><hr><h2 id=summary-of-notation>Summary of Notation</h2><table><thead><tr><th>Symbol</th><th>Meaning</th></tr></thead><tbody><tr><td><span class=math-inline data-latex="G = (V, E)"></span></td><td>Undirected simple graph</td></tr><tr><td><span class=math-inline data-latex="n = |V|"></span>, <span class=math-inline data-latex="m = |E|"></span></td><td>Vertex and edge counts</td></tr><tr><td><span class=math-inline data-latex=\deg(v)></span></td><td>Degree of vertex <span class=math-inline data-latex=v></span></td></tr><tr><td><span class=math-inline data-latex=C_D(v)></span></td><td>Degree centrality</td></tr><tr><td><span class=math-inline data-latex=C_B(v)></span></td><td>Betweenness centrality</td></tr><tr><td><span class=math-inline data-latex=\sigma_{st}></span></td><td>Number of shortest <span class=math-inline data-latex=s></span>&ndash;<span class=math-inline data-latex=t></span> paths</td></tr><tr><td><span class=math-inline data-latex=\sigma_{st}(v)></span></td><td>Number of shortest <span class=math-inline data-latex=s></span>&ndash;<span class=math-inline data-latex=t></span> paths through <span class=math-inline data-latex=v></span></td></tr><tr><td><span class=math-inline data-latex=D(G)></span></td><td>Network density</td></tr><tr><td><span class=math-inline data-latex=\kappa(G)></span></td><td>Vertex connectivity</td></tr><tr><td><span class=math-inline data-latex=Q></span></td><td>Modularity</td></tr><tr><td><span class=math-inline data-latex=A_{ij}></span></td><td>Adjacency matrix entry</td></tr><tr><td><span class=math-inline data-latex=k_i></span></td><td>Degree of vertex <span class=math-inline data-latex=i></span></td></tr><tr><td><span class=math-inline data-latex=G(t)></span></td><td>Temporal graph at time <span class=math-inline data-latex=t></span></td></tr></tbody></table><hr><h2 id=academic-references>Academic References</h2><ol><li>Moretti, F. (2011). &ldquo;Network Theory, Plot Analysis.&rdquo; <em>New Left Review</em> 68, 80&ndash;102.</li><li>Freeman, L. C. (1977). &ldquo;A Set of Measures of Centrality Based on Betweenness.&rdquo; <em>Sociometry</em> 40(1), 35&ndash;41.</li><li>Brandes, U. (2001). &ldquo;A Faster Algorithm for Betweenness Centrality.&rdquo; <em>Journal of Mathematical Sociology</em> 25(2), 163&ndash;177.</li><li>Newman, M. E. J. & Girvan, M. (2004). &ldquo;Finding and Evaluating Community Structure in Networks.&rdquo; <em>Physical Review E</em> 69(2), 026113.</li><li>Blondel, V. D., Guillaume, J.-L., Lambiotte, R. & Lefebvre, E. (2008). &ldquo;Fast Unfolding of Communities in Large Networks.&rdquo; <em>Journal of Statistical Mechanics</em>, P10008.</li><li>Brandes, U., Delling, D., Gaertler, M., Gorke, R., Hoefer, M., Nikoloski, Z. & Wagner, D. (2008). &ldquo;On Modularity Clustering.&rdquo; <em>IEEE Transactions on Knowledge and Data Engineering</em> 20(2), 172&ndash;188.</li><li>Fortunato, S. & Barthelemy, M. (2007). &ldquo;Resolution Limit in Community Detection.&rdquo; <em>Proceedings of the National Academy of Sciences</em> 104(1), 36&ndash;41.</li><li>Menger, K. (1927). &ldquo;Zur allgemeinen Kurventheorie.&rdquo; <em>Fundamenta Mathematicae</em> 10, 96&ndash;115.</li><li>Diestel, R. (2017). <em>Graph Theory</em>, 5th ed. Springer GTM 173.</li><li>Stiller, J., Nettle, D. & Dunbar, R. I. M. (2003). &ldquo;The Small World of Shakespeare&rsquo;s Plays.&rdquo; <em>Human Nature</em> 14(4), 397&ndash;408.</li></ol></div><nav class=ep-nav><a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-nav-prev>← EP19: Vibrato as FM Synthesis
+</a><a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-nav-next>EP21: From Markov to Diffusion — Sixty Years of AI Composition →</a></nav></article><aside class=ep-toc-aside><div class=ep-toc-sticky><div class=ep-toc-label>本页目录</div><nav id=TableOfContents><ul><li><a href=#overview>Overview</a></li><li><a href=#prerequisites>Prerequisites</a></li><li><a href=#section-1-building-the-character-network>Section 1: Building the Character Network</a></li><li><a href=#section-2-centrality-measures>Section 2: Centrality Measures</a><ul><li><a href=#21-degree-centrality>2.1 Degree Centrality</a></li><li><a href=#22-betweenness-centrality>2.2 Betweenness Centrality</a></li></ul></li><li><a href=#section-3-cut-vertices-and-bridges>Section 3: Cut Vertices and Bridges</a><ul><li><a href=#31-cut-vertices-articulation-points>3.1 Cut Vertices (Articulation Points)</a></li><li><a href=#32-bridges>3.2 Bridges</a></li></ul></li><li><a href=#section-4-network-density-and-connectivity>Section 4: Network Density and Connectivity</a></li><li><a href=#section-5-community-detection-and-modularity>Section 5: Community Detection and Modularity</a></li><li><a href=#section-6-dynamic-networks>Section 6: Dynamic Networks</a></li><li><a href=#section-7-numerical-example-----the-ring-cycle-network>Section 7: Numerical Example &mdash; The Ring Cycle Network</a></li><li><a href=#musical-connection>Musical Connection</a></li><li><a href=#limits-and-open-questions>Limits and Open Questions</a></li><li><a href=#summary-of-notation>Summary of Notation</a></li><li><a href=#academic-references>Academic References</a></li></ul></nav></div></aside></div><footer class=site-footer><div class=footer-content><a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link><img src=/images/avatar.png alt="Sibelius P." class=footer-avatar></a><div class=footer-text><span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
 <span class=footer-sep>·</span>
 <a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener>小红书</a>
 <span class=footer-sep>·</span>
-<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span>
-</div>
-</div>
-</footer>
-</main>
-</div>
-</body>
-</html>
+<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span></div></div></footer></main></div></body></html>

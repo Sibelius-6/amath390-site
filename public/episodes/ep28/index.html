@@ -1,218 +1,76 @@
-<!doctype html><html lang=zh-cn>
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<title>EP28: Your Microphone Is a Damped Oscillator | AMATH 390 数学与音乐</title>
-<meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
-<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous>
-<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script>
-<script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('[data-latex]').forEach(function(a){try{katex.render(a.getAttribute('data-latex'),a,{displayMode:a.classList.contains('math-display'),throwOnError:!1})}catch(b){console.warn('KaTeX:',b.message,a)}})})</script>
-<link rel=icon type=image/png sizes=32x32 href=/favicon-32.png>
-<link rel=icon type=image/png sizes=16x16 href=/favicon-16.png>
-<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
-<link rel=stylesheet href=/css/amath390.css>
-</head>
-<body>
-<div class=layout-wrapper>
-<nav class=sidebar>
-<div class=sidebar-header>
-<a href=/ class=sidebar-title>AMATH 390</a>
-<div class=sidebar-subtitle>数学与音乐</div>
-</div>
-<div class=arc-group>
-<div class=arc-label>数学基础篇</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link>
-<span class=ep-num>01</span>
+<!doctype html><html lang=zh-cn><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>EP28: Your Microphone Is a Damped Oscillator | AMATH 390 数学与音乐</title><meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music"><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script><script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("[data-latex]").forEach(function(e){try{katex.render(e.getAttribute("data-latex"),e,{displayMode:e.classList.contains("math-display"),throwOnError:!1})}catch(t){console.warn("KaTeX:",t.message,e)}})})</script><link rel=icon type=image/png sizes=32x32 href=/favicon-32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=stylesheet href=/css/amath390.css></head><body><div class=layout-wrapper><nav class=sidebar><div class=sidebar-header><a href=/ class=sidebar-title>AMATH 390</a><div class=sidebar-subtitle>数学与音乐</div></div><div class=arc-group><div class=arc-label>数学基础篇</div><a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link><span class=ep-num>01</span>
 <span class=ep-title>Chord Space and the Torus</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep02/ class=ep-link>
-<span class=ep-num>02</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep02/ class=ep-link><span class=ep-num>02</span>
 <span class=ep-title>String Vibration and the Wave Equation</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link>
-<span class=ep-num>03</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link><span class=ep-num>03</span>
 <span class=ep-title>Bach and Graph Connectivity</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link>
-<span class=ep-num>04</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link><span class=ep-num>04</span>
 <span class=ep-title>All-Interval Rows and ℤ₁₂</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link>
-<span class=ep-num>05</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link><span class=ep-num>05</span>
 <span class=ep-title>Turán's Theorem and Counterpoint</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-link>
-<span class=ep-num>06</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-link><span class=ep-num>06</span>
 <span class=ep-title>Graph Coloring and Voice Assignment</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-link>
-<span class=ep-num>07</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-link><span class=ep-num>07</span>
 <span class=ep-title>Information Entropy and All-Interval Rows</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-link>
-<span class=ep-num>08</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-link><span class=ep-num>08</span>
 <span class=ep-title>Shepard Tones and the Tritone Paradox</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link>
-<span class=ep-num>09</span>
-<span class=ep-title>Combination Tones and Nonlinear Acoustics</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>Jacob Collier 系列</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep10/ class=ep-link>
-<span class=ep-num>10</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link><span class=ep-num>09</span>
+<span class=ep-title>Combination Tones and Nonlinear Acoustics</span></a></div><div class=arc-group><div class=arc-label>Jacob Collier 系列</div><a href=https://amath390.sibeliusp.com/episodes/ep10/ class=ep-link><span class=ep-num>10</span>
 <span class=ep-title>Negative Harmony and the Dihedral Group D₁₂</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link>
-<span class=ep-num>11</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link><span class=ep-num>11</span>
 <span class=ep-title>Comma Drift and the Impossibility of Perfect Tuning</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep12/ class=ep-link>
-<span class=ep-num>12</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep12/ class=ep-link><span class=ep-num>12</span>
 <span class=ep-title>The Circle of Fifths as a Folded Spiral</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-link>
-<span class=ep-num>13</span>
-<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>拓扑数学专篇</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-link>
-<span class=ep-num>14</span>
-<span class=ep-title>Tonnetz Hodge Duality</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>歌剧系列</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-link>
-<span class=ep-num>15</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-link><span class=ep-num>13</span>
+<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span></a></div><div class=arc-group><div class=arc-label>拓扑数学专篇</div><a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-link><span class=ep-num>14</span>
+<span class=ep-title>Tonnetz Hodge Duality</span></a></div><div class=arc-group><div class=arc-label>歌剧系列</div><a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-link><span class=ep-num>15</span>
 <span class=ep-title>Opera Acoustics and the Singer's Formant</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link>
-<span class=ep-num>16</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link><span class=ep-num>16</span>
 <span class=ep-title>Rossini's Code — Budden, Gossett, and the Convention System</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-link>
-<span class=ep-num>17</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-link><span class=ep-num>17</span>
 <span class=ep-title>Leitmotif Networks — Wagner's Ring Cycle</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-link>
-<span class=ep-num>18</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-link><span class=ep-num>18</span>
 <span class=ep-title>Game Theory in Operatic Duets</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link>
-<span class=ep-num>19</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link><span class=ep-num>19</span>
 <span class=ep-title>Vibrato as FM Synthesis</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-link>
-<span class=ep-num>20</span>
-<span class=ep-title>Character Interaction Networks in Opera</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>AI 音乐三部曲</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-link>
-<span class=ep-num>21</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-link><span class=ep-num>20</span>
+<span class=ep-title>Character Interaction Networks in Opera</span></a></div><div class=arc-group><div class=arc-label>AI 音乐三部曲</div><a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-link><span class=ep-num>21</span>
 <span class=ep-title>From Markov to Diffusion — Sixty Years of AI Composition</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-link>
-<span class=ep-num>22</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-link><span class=ep-num>22</span>
 <span class=ep-title>How AI Writes Music — EnCodec and RVQ</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-link>
-<span class=ep-num>23</span>
-<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span>
-</a>
-</div>
-<div class=sidebar-footer>
-<a href=/theorems/>定理索引</a>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-link><span class=ep-num>23</span>
+<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span></a></div><div class=arc-group><div class=arc-label>流行音乐 × 数学</div><a href=https://amath390.sibeliusp.com/episodes/ep24/ class=ep-link><span class=ep-num>24</span>
+<span class=ep-title>The Information Code of Pop Music</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep25/ class=ep-link><span class=ep-num>25</span>
+<span class=ep-title>Why Music Gives You Goosebumps — Prediction Error and Frisson</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep26/ class=ep-link><span class=ep-num>26</span>
+<span class=ep-title>The 1/f Law of Music</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep27/ class=ep-link><span class=ep-num>27</span>
+<span class=ep-title>Answering Viral Critics with Mathematics</span></a></div><div class=arc-group><div class=arc-label>音乐技术系列</div><a href=https://amath390.sibeliusp.com/episodes/ep28/ class="ep-link active"><span class=ep-num>28</span>
+<span class=ep-title>Your Microphone Is a Damped Oscillator</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep29/ class=ep-link><span class=ep-num>29</span>
+<span class=ep-title>Primes in the Studio — Standing Waves and QRD Diffusers</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep30/ class=ep-link><span class=ep-num>30</span>
+<span class=ep-title>The Sampling Theorem Is Not What You Think</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep31/ class=ep-link><span class=ep-num>31</span>
+<span class=ep-title>The Warmth of Moog Has an Equation</span></a></div><div class=sidebar-footer><a href=/theorems/>定理索引</a>
 <a href=/domains/>数学领域</a>
-<a href=/about/>关于</a>
-</div>
-</nav>
-<main class=main-content>
-<div class=episode-layout>
-<article class=episode-page>
-<header class=episode-header>
-<div class=ep-badge>EP28</div>
-<h1 class=ep-main-title>EP28: Your Microphone Is a Damped Oscillator</h1>
-<div class=ep-subtitle>阻尼谐振子ODE, Bode图, Q因子, 极坐标指向性</div>
-<div class=ep-meta>
-<span class=meta-item>
-<span class=meta-icon>▶</span> 5:54
-</span>
-<span class="meta-item domains">
-<span class=domain-chip>Physics/Acoustics</span><span class=domain-chip>Signal Processing</span>
-</span>
-</div>
-</header>
-<div class=cross-refs>
-<h3 class=cross-refs-title>前置知识</h3>
-<div class=ref-cards>
-<a href=https://amath390.sibeliusp.com/episodes/ep02/ class="ref-card callback">
-<span class=ref-ep>EP02</span>
+<a href=/about/>关于</a></div></nav><main class=main-content><div class=episode-layout><article class=episode-page><header class=episode-header><div class=ep-badge>EP28</div><h1 class=ep-main-title>EP28: Your Microphone Is a Damped Oscillator</h1><div class=ep-subtitle>阻尼谐振子ODE, Bode图, Q因子, 极坐标指向性</div><div class=ep-meta><span class=meta-item><span class=meta-icon>▶</span> 5:54
+</span><span class="meta-item domains"><span class=domain-chip>Physics/Acoustics</span><span class=domain-chip>Signal Processing</span></span></div></header><div class=cross-refs><h3 class=cross-refs-title>前置知识</h3><div class=ref-cards><a href=https://amath390.sibeliusp.com/episodes/ep02/ class="ref-card callback"><span class=ref-ep>EP02</span>
 <span class=ref-title>String Vibration and the Wave Equation</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep15/ class="ref-card callback">
-<span class=ref-ep>EP15</span>
-<span class=ref-title>Opera Acoustics and the Singer's Formant</span>
-</a>
-</div>
-</div>
-<div class="episode-content content">
-<h2 id=概述>概述</h2>
-<p><em>本页内容正在撰写中。请先观看<a href=#>小红书视频</a>了解核心概念。</em></p>
-<p>本集探讨：阻尼谐振子ODE, Bode图, Q因子, 极坐标指向性。</p>
-<h2 id=前置知识>前置知识</h2>
-<h2 id=定义>定义</h2>
-<h2 id=主要定理>主要定理</h2>
-<h2 id=音乐联系>音乐联系</h2>
-<h2 id=局限性与开放问题>局限性与开放问题</h2>
-<h2 id=参考文献>参考文献</h2>
-<ol>
-<li><em>待补充</em></li>
-</ol>
-</div>
-<nav class=ep-nav>
-<a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-nav-prev>
-← EP23: Can AI Understand Music? Latent Space and Information Bottleneck
-</a>
-</nav>
-</article>
-<aside class=ep-toc-aside>
-<div class=ep-toc-sticky>
-<div class=ep-toc-label>本页目录</div>
-<nav id=TableOfContents>
-<ul>
-<li><a href=#概述>概述</a></li>
-<li><a href=#前置知识>前置知识</a></li>
-<li><a href=#定义>定义</a></li>
-<li><a href=#主要定理>主要定理</a></li>
-<li><a href=#音乐联系>音乐联系</a></li>
-<li><a href=#局限性与开放问题>局限性与开放问题</a></li>
-<li><a href=#参考文献>参考文献</a></li>
-</ul>
-</nav>
-</div>
-</aside>
-</div>
-<footer class=site-footer>
-<div class=footer-content>
-<a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link>
-<img src=/images/avatar.png alt="Sibelius P." class=footer-avatar>
-</a>
-<div class=footer-text>
-<span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep15/ class="ref-card callback"><span class=ref-ep>EP15</span>
+<span class=ref-title>Opera Acoustics and the Singer's Formant</span></a></div></div><div class=cross-refs><h3 class=cross-refs-title>后续拓展</h3><div class=ref-cards><a href=https://amath390.sibeliusp.com/episodes/ep29/ class="ref-card forward"><span class=ref-ep>EP29</span>
+<span class=ref-title>Primes in the Studio — Standing Waves and QRD Diffusers</span></a></div></div><div class="episode-content content"><h2 id=overview>Overview</h2><p>Every recording engineer knows that swapping a microphone changes the sound — but why? The answer is not marketing, not mystique, and not simply &ldquo;expensive = better.&rdquo; It is a second-order ordinary differential equation. The thin membrane inside any microphone is a <strong>damped harmonic oscillator</strong>: an elastic restoring force pulls it back, an inertial mass resists acceleration, and air damping bleeds away energy. These three forces combine into a single ODE whose solution determines everything you hear.</p><p>This episode derives that ODE from first principles, extracts the two dimensionless parameters that govern microphone character — natural frequency <span class=math-inline data-latex=\omega_0></span> and quality factor <span class=math-inline data-latex=Q></span> — and shows how the resulting transfer function <span class=math-inline data-latex=H(s)></span> produces the Bode-plot &ldquo;fingerprint&rdquo; of a microphone. We then add the two further dimensions of microphone design: polar pattern (which directions are captured) and transduction mechanism (displacement vs. velocity sensing). All three dimensions resolve to the same mathematical object: a transfer function, or a product of transfer functions.</p><blockquote><p><em>中文:</em> &ldquo;同一个歌手，同一句歌词，一支SM五十八，一支Neumann U八七。换了麦，像换了一个嗓子。这不是玄学，不是贵的就更好，是物理。&rdquo;</p></blockquote><hr><h2 id=prerequisites>Prerequisites</h2><ul><li><a href=https://amath390.sibeliusp.com/episodes/ep02/ class=episode-ref-link>波动方程与傅里叶分析（EP02）</a>
+— the wave equation as the origin of the forcing term <span class=math-inline data-latex=F(t)></span>; Fourier decomposition of signals into frequency components</li><li><a href=https://amath390.sibeliusp.com/episodes/ep15/ class=episode-ref-link>歌者共振峰（EP15）</a>
+— the singer&rsquo;s formant near 3 kHz as a natural energy concentration; this episode&rsquo;s microphone peak interacts directly with that formant</li></ul><hr><h2 id=definitions>Definitions</h2><div class=definition-block id=definition-28.1><div class=block-label>Definition 28.1 (Damped Harmonic Oscillator)</div><div class=block-body><p>Let <span class=math-inline data-latex=x(t)></span> denote the displacement of a membrane of mass <span class=math-inline data-latex="m > 0"></span>, subject to an elastic restoring coefficient <span class=math-inline data-latex="k > 0"></span>, a viscous damping coefficient <span class=math-inline data-latex="c \geq 0"></span>, and an external forcing <span class=math-inline data-latex=F(t)></span>. Newton&rsquo;s second law gives the <strong>damped harmonic oscillator ODE</strong>:</p><p><span class=math-display data-latex="m\,\ddot{x} + c\,\dot{x} + k\,x = F(t)"></span></p><p>The <strong>natural (angular) frequency</strong> is</p><p><span class=math-display data-latex="\omega_0 = \sqrt{\frac{k}{m}}"></span></p><p>and the <strong>damping ratio</strong> is</p><p><span class=math-display data-latex="\zeta = \frac{c}{2\sqrt{mk}} = \frac{c}{2m\omega_0}"></span></p><p>Dividing through by <span class=math-inline data-latex=m></span> and writing <span class=math-inline data-latex="f(t) = F(t)/m"></span>, the ODE becomes the standard form:</p><p><span class=math-display data-latex="\ddot{x} + 2\zeta\omega_0\,\dot{x} + \omega_0^2\,x = f(t)"></span></p></div></div><figure><svg viewBox="0 0 480 160" style="max-width:480px;width:100%;font-family:sans-serif;font-size:13px"><rect x="10" y="20" width="12" height="120" fill="#7f8c8d"/><line x1="22" y1="20" x2="10" y2="40" stroke="#7f8c8d" stroke-width="2"/><line x1="22" y1="50" x2="10" y2="70" stroke="#7f8c8d" stroke-width="2"/><line x1="22" y1="80" x2="10" y2="100" stroke="#7f8c8d" stroke-width="2"/><line x1="22" y1="110" x2="10" y2="130" stroke="#7f8c8d" stroke-width="2"/><polyline points="22,60 40,60 50,45 60,75 70,45 80,75 90,45 100,75 110,60 130,60" fill="none" stroke="#e74c3c" stroke-width="2"/><text x="62" y="100" fill="#e74c3c" text-anchor="middle" font-size="12">spring k</text><line x1="22" y1="90" x2="80" y2="90" stroke="#3498db" stroke-width="2"/><rect x="60" y="82" width="30" height="16" fill="#d6eaf8" stroke="#3498db" stroke-width="1.5"/><line x1="90" y1="90" x2="130" y2="90" stroke="#3498db" stroke-width="2"/><text x="75" y="115" fill="#3498db" text-anchor="middle" font-size="12">damper c</text><line x1="130" y1="60" x2="155" y2="60" stroke="#555" stroke-width="2"/><line x1="130" y1="90" x2="155" y2="90" stroke="#555" stroke-width="2"/><rect x="155" y="45" width="60" height="60" fill="#ecf0f1" stroke="#2c3e50" stroke-width="2"/><text x="185" y="78" text-anchor="middle" font-size="13" font-weight="bold">m</text><line x1="215" y1="75" x2="280" y2="75" stroke="#27ae60" stroke-width="2" marker-end="url(#arr)"/><defs><marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0V6L8 3z" fill="#27ae60"/></marker></defs><text x="295" y="79" fill="#27ae60" font-size="13">F(t)</text><text x="185" y="130" text-anchor="middle" fill="#8e44ad" font-size="12">x(t)</text><line x1="185" y1="107" x2="185" y2="115" stroke="#8e44ad" stroke-width="1.5" stroke-dasharray="3"/><text x="360" y="75" fill="#2c3e50" font-size="12" text-anchor="middle">mẍ + cẋ + kx = F(t)</text></svg><figcaption>Mass–spring–damper model of a microphone diaphragm. The spring force <em>kx</em>, damping force <em>cẋ</em>, and inertia <em>mẍ</em> balance the acoustic pressure F(t).</figcaption></figure><p><strong>Worked example.</strong> A condenser capsule has a membrane of effective mass <span class=math-inline data-latex="m = 0.5 \times 10^{-6}"></span> kg and elastic stiffness <span class=math-inline data-latex="k = 200"></span> N/m. Then <span class=math-inline data-latex="\omega_0 = \sqrt{200 / (0.5 \times 10^{-6})} = \sqrt{4 \times 10^8} \approx 2 \times 10^4"></span> rad/s, corresponding to <span class=math-inline data-latex="f_0 = \omega_0 / (2\pi) \approx 3.18"></span> kHz — right in the presence band exploited by the singer&rsquo;s formant from
+<a href=https://amath390.sibeliusp.com/episodes/ep15/ class=episode-ref-link>EP15</a>
+.</p><div class=definition-block id=definition-28.2><div class=block-label>Definition 28.2 (Quality Factor Q)</div><div class=block-body><p>The <strong>quality factor</strong> (Q factor) of a damped oscillator is defined as</p><p><span class=math-display data-latex="Q = \frac{1}{2\zeta} = \frac{m\omega_0}{c} = \frac{\sqrt{mk}}{c}"></span></p><p>Physically, <span class=math-inline data-latex=Q></span> measures the ratio of energy stored to energy dissipated per radian of oscillation. Three regimes:</p><ul><li><span class=math-inline data-latex="Q < \tfrac{1}{2}"></span> (i.e. <span class=math-inline data-latex="\zeta > 1"></span>): <strong>overdamped</strong> — returns to equilibrium without oscillating</li><li><span class=math-inline data-latex="Q = \tfrac{1}{2}"></span> (i.e. <span class=math-inline data-latex="\zeta = 1"></span>): <strong>critically damped</strong> — fastest non-oscillatory return</li><li><span class=math-inline data-latex="Q > \tfrac{1}{2}"></span> (i.e. <span class=math-inline data-latex="\zeta < 1"></span>): <strong>underdamped</strong> — rings at angular frequency <span class=math-inline data-latex="\omega_d = \omega_0\sqrt{1-\zeta^2}"></span>; a gain peak appears in the frequency response</li></ul></div></div><p><strong>Worked example.</strong> The Shure SM58 has <span class=math-inline data-latex="Q \approx 1.5"></span>, so <span class=math-inline data-latex="\zeta = 1/(2 \times 1.5) = 1/3 \approx 0.333"></span>. Since <span class=math-inline data-latex="\zeta < 1/\sqrt{2} \approx 0.707"></span>, the SM58 membrane is underdamped and exhibits a gain peak — but with low <span class=math-inline data-latex=Q></span> the peak is broad and the response stays nearly flat across the vocal range. The Neumann U87 has <span class=math-inline data-latex="Q \approx 3"></span> to <span class=math-inline data-latex=5></span>, giving a narrow bright peak near 10 kHz.</p><div class=definition-block id=definition-28.3><div class=block-label>Definition 28.3 (Transfer Function)</div><div class=block-body><p>Taking the Laplace transform of the standard-form ODE (with zero initial conditions), and denoting the Laplace variable by <span class=math-inline data-latex=s></span>, the <strong>transfer function</strong> of the damped harmonic oscillator is</p><p><span class=math-display data-latex="H(s) = \frac{X(s)}{F(s)} = \frac{\omega_0^2}{s^2 + 2\zeta\omega_0\,s + \omega_0^2}"></span></p><p>The <strong>frequency response</strong> is obtained by substituting <span class=math-inline data-latex="s = i\omega"></span> (where <span class=math-inline data-latex="i = \sqrt{-1}"></span> and <span class=math-inline data-latex=\omega></span> is the real angular frequency):</p><p><span class=math-display data-latex="H(i\omega) = \frac{\omega_0^2}{(\omega_0^2 - \omega^2) + 2i\zeta\omega_0\omega}"></span></p><p>The magnitude response (Bode gain plot) is</p><p><span class=math-display data-latex="|H(i\omega)| = \frac{\omega_0^2}{\sqrt{(\omega_0^2 - \omega^2)^2 + 4\zeta^2\omega_0^2\omega^2}}"></span></p></div></div><p><strong>Worked example.</strong> At <span class=math-inline data-latex="\omega = 0"></span>, <span class=math-inline data-latex="|H| = 1"></span> (0 dB, unity gain at DC). At <span class=math-inline data-latex="\omega = \omega_0"></span>, <span class=math-inline data-latex="|H(i\omega_0)| = \omega_0^2 / (2\zeta\omega_0^2) = 1/(2\zeta) = Q"></span>. So the on-resonance gain equals the Q factor in linear units, or <span class=math-inline data-latex=20\log_{10}Q></span> dB. For <span class=math-inline data-latex="Q = 3"></span>: gain at resonance = 9.5 dB.</p><p>The following script generates Bode magnitude plots contrasting a broad SM58 response (Q ≈ 1.5) with the sharper U87 presence peak (Q ≈ 4), overlaid with the singer&rsquo;s formant reference from EP15:</p><figure><img src=/images/ep28/fig01_bode_magnitude_plot_sm58_q15_vs_neumann_u87_q4.png alt="Bode magnitude plot — SM58 (Q≈1.5) vs Neumann U87 (Q≈4)" style=max-width:100%;border-radius:4px><figcaption>Bode magnitude plot — SM58 (Q≈1.5) vs Neumann U87 (Q≈4)</figcaption></figure><div class=definition-block id=definition-28.4><div class=block-label>Definition 28.4 (Polar Pattern)</div><div class=block-body><p>The directional sensitivity pattern of a microphone is described by the <strong>polar pattern function</strong></p><p><span class=math-display data-latex="P(\theta) = a + (1-a)\cos\theta, \quad \theta \in [0, 2\pi)"></span></p><p>where <span class=math-inline data-latex="a \in [0, 1]"></span> is the omnidirectional component weight. Special cases:</p><table><thead><tr><th><span class=math-inline data-latex=a></span></th><th>Name</th><th>On-axis (0°)</th><th>Rear (180°)</th><th>Null</th></tr></thead><tbody><tr><td>1</td><td>Omnidirectional</td><td>1</td><td>1</td><td>none</td></tr><tr><td>0.5</td><td>Cardioid</td><td>1</td><td>0</td><td>180°</td></tr><tr><td>0</td><td>Figure-8 (bidirectional)</td><td>1</td><td>−1</td><td>±90°</td></tr><tr><td>0.37</td><td>Supercardioid</td><td>1</td><td>−0.26</td><td>±125°</td></tr></tbody></table><p>The cardioid pattern is realised physically by combining a pressure sensor (omnidirectional) with a pressure-gradient sensor (figure-8) and summing their outputs with equal weight.</p></div></div><p>The following script generates polar diagrams for all three canonical patterns — omnidirectional, cardioid, and figure-8 — directly from the formula <span class=math-inline data-latex="P(\theta) = a + (1-a)\cos\theta"></span>:</p><figure><img src=/images/ep28/fig02_microphone_polar_patterns_omnidirectional_cardioid_figure_8.png alt="Microphone polar patterns — omnidirectional, cardioid, figure-8" style=max-width:100%;border-radius:4px><figcaption>Microphone polar patterns — omnidirectional, cardioid, figure-8</figcaption></figure><hr><h2 id=main-theorems>Main Theorems</h2><div class=theorem-block id=theorem-28.1><div class=block-label>Theorem 28.1 (Resonance Peak Condition)</div><div class=block-body><p>For the standard second-order transfer function <span class=math-inline data-latex="H(i\omega) = \omega_0^2 / [(\omega_0^2 - \omega^2) + 2i\zeta\omega_0\omega]"></span>, a local maximum of <span class=math-inline data-latex=|H(i\omega)|></span> in <span class=math-inline data-latex="\omega > 0"></span> exists <strong>if and only if</strong> <span class=math-inline data-latex="\zeta < 1/\sqrt{2}"></span>. When it exists, the peak occurs at</p><p><span class=math-display data-latex="\omega_{\text{peak}} = \omega_0\sqrt{1 - 2\zeta^2}"></span></p><p>and the peak gain is</p><p><span class=math-display data-latex="|H(i\omega_{\text{peak}})| = \frac{1}{2\zeta\sqrt{1-\zeta^2}}"></span></p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p>Let <span class=math-inline data-latex="u = \omega^2"></span> and define</p><p><span class=math-display data-latex="D(u) = (\omega_0^2 - u)^2 + 4\zeta^2\omega_0^2\,u"></span></p><p>so that <span class=math-inline data-latex="|H(i\omega)|^2 = \omega_0^4 / D(u)"></span>. Maximising <span class=math-inline data-latex=|H|></span> is equivalent to minimising <span class=math-inline data-latex=D(u)></span>.</p><p>Differentiate with respect to <span class=math-inline data-latex=u></span>:</p><p><span class=math-display data-latex="\frac{dD}{du} = -2(\omega_0^2 - u) + 4\zeta^2\omega_0^2"></span></p><p>Setting <span class=math-inline data-latex="dD/du = 0"></span>:</p><p><span class=math-display data-latex="2(\omega_0^2 - u) = 4\zeta^2\omega_0^2 \implies u^* = \omega_0^2(1 - 2\zeta^2)"></span></p><p>Since we require <span class=math-inline data-latex="u^* = \omega_{\text{peak}}^2 > 0"></span>, a peak exists only when <span class=math-inline data-latex="1 - 2\zeta^2 > 0"></span>, i.e. <span class=math-inline data-latex="\zeta < 1/\sqrt{2}"></span>.</p><p>Substituting <span class=math-inline data-latex="\omega_{\text{peak}} = \omega_0\sqrt{1-2\zeta^2}"></span> back into <span class=math-inline data-latex=D></span>:</p><p><span class=math-display data-latex="D(u^*) = (2\zeta^2\omega_0^2)^2 + 4\zeta^2\omega_0^2 \cdot \omega_0^2(1-2\zeta^2) = 4\zeta^2\omega_0^4(1 - \zeta^2)"></span></p><p>Therefore</p><p><span class=math-display data-latex="|H(i\omega_{\text{peak}})| = \frac{\omega_0^2}{\sqrt{4\zeta^2\omega_0^4(1-\zeta^2)}} = \frac{1}{2\zeta\sqrt{1-\zeta^2}}"></span></p><p>The second derivative <span class=math-inline data-latex="d^2D/du^2 = 2 > 0"></span> confirms this is a minimum of <span class=math-inline data-latex=D></span>, hence a maximum of <span class=math-inline data-latex=|H|></span>. <span class=math-inline data-latex=\square></span></p></div></div><div class=theorem-block id=theorem-28.2><div class=block-label>Theorem 28.2 (Laplace Derivation of the Transfer Function)</div><div class=block-body><p>Starting from the standard-form ODE</p><p><span class=math-display data-latex="\ddot{x} + 2\zeta\omega_0\,\dot{x} + \omega_0^2\,x = f(t)"></span></p><p>with zero initial conditions <span class=math-inline data-latex="x(0) = \dot{x}(0) = 0"></span>, the Laplace transform yields</p><p><span class=math-display data-latex="H(s) = \frac{\mathcal{L}\{x\}}{\mathcal{L}\{f\}} = \frac{\omega_0^2}{s^2 + 2\zeta\omega_0 s + \omega_0^2}"></span></p><p>The two poles are located at <span class=math-inline data-latex="s_{1,2} = -\zeta\omega_0 \pm i\omega_0\sqrt{1-\zeta^2}"></span>, and lie in the left half-plane (system is stable) if and only if <span class=math-inline data-latex="\zeta > 0"></span>.</p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p>Apply the Laplace transform linearity and the differentiation rule <span class=math-inline data-latex="\mathcal{L}\{\ddot{x}\} = s^2 X(s) - s\,x(0) - \dot{x}(0)"></span>, <span class=math-inline data-latex="\mathcal{L}\{\dot{x}\} = s X(s) - x(0)"></span>:</p><p><span class=math-display data-latex="[s^2 X(s) - 0 - 0] + 2\zeta\omega_0[s X(s) - 0] + \omega_0^2 X(s) = F(s)"></span></p><p>Factor <span class=math-inline data-latex=X(s)></span>:</p><p><span class=math-display data-latex="X(s)\bigl(s^2 + 2\zeta\omega_0 s + \omega_0^2\bigr) = F(s)"></span></p><p>Dividing both sides by <span class=math-inline data-latex="(s^2 + 2\zeta\omega_0 s + \omega_0^2)"></span> and noting that the denominator factors as <span class=math-inline data-latex="(s - s_1)(s - s_2)"></span> with roots from the quadratic formula gives</p><p><span class=math-display data-latex="s_{1,2} = \frac{-2\zeta\omega_0 \pm \sqrt{4\zeta^2\omega_0^2 - 4\omega_0^2}}{2} = -\zeta\omega_0 \pm i\omega_0\sqrt{1-\zeta^2}"></span></p><p>Real part of each pole is <span class=math-inline data-latex="-\zeta\omega_0 < 0"></span> for <span class=math-inline data-latex="\zeta > 0"></span>, confirming BIBO stability. <span class=math-inline data-latex=\square></span></p></div></div><div class=theorem-block id=theorem-28.3><div class=block-label>Theorem 28.3 (Dynamic vs Condenser Frequency Response Ratio)</div><div class=block-body><p>A <strong>condenser microphone</strong> senses membrane displacement <span class=math-inline data-latex=x(t)></span>; its output is proportional to <span class=math-inline data-latex=X(s)></span> in the Laplace domain. A <strong>dynamic (moving-coil) microphone</strong> senses membrane velocity <span class=math-inline data-latex=\dot{x}(t)></span>; its output is proportional to <span class=math-inline data-latex=s\,X(s)></span>.</p><p>Their frequency responses along the frequency axis <span class=math-inline data-latex="s = i\omega"></span> differ by a factor of <span class=math-inline data-latex=i\omega></span>:</p><p><span class=math-display data-latex="\frac{H_{\text{dyn}}(i\omega)}{H_{\text{cond}}(i\omega)} = i\omega"></span></p><p>In magnitude: <span class=math-inline data-latex="|H_{\text{dyn}}(i\omega)| = \omega \cdot |H_{\text{cond}}(i\omega)|"></span>.</p><p>Consequently, relative to the displacement response, the velocity (dynamic) response rises at +6 dB/octave at low frequencies and falls at −6 dB/octave at high frequencies above resonance.</p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p>The induced EMF in a dynamic microphone coil moving through a magnetic field of strength <span class=math-inline data-latex=B></span> with effective wire length <span class=math-inline data-latex=L></span> is</p><p><span class=math-display data-latex="V(t) = BL\,\dot{x}(t)"></span></p><p>Taking the Laplace transform: <span class=math-inline data-latex="\mathcal{L}\{V\} = BL \cdot s\,X(s)"></span> (using the differentiation rule). The transfer function from forcing <span class=math-inline data-latex=f(t)></span> to output voltage is therefore</p><p><span class=math-display data-latex="H_{\text{dyn}}(s) = \frac{BL \cdot s\,X(s)}{F(s)} = BL \cdot s \cdot H_{\text{cond}}(s)"></span></p><p>Evaluating on the imaginary axis: <span class=math-inline data-latex="H_{\text{dyn}}(i\omega) = BL \cdot (i\omega) \cdot H_{\text{cond}}(i\omega)"></span>.</p><p>Taking magnitudes and ignoring the constant <span class=math-inline data-latex=BL></span>: <span class=math-inline data-latex="|H_{\text{dyn}}(i\omega)| = \omega \cdot |H_{\text{cond}}(i\omega)|"></span>.</p><p>The factor <span class=math-inline data-latex=\omega></span> corresponds to a slope of <span class=math-inline data-latex=+20></span> dB/decade = <span class=math-inline data-latex=+6></span> dB/octave in the pass-band below resonance. Above resonance the denominator of <span class=math-inline data-latex=H_{\text{cond}}></span> grows as <span class=math-inline data-latex=\omega^2></span>, so <span class=math-inline data-latex="|H_{\text{dyn}}| \propto \omega / \omega^2 = 1/\omega"></span>, i.e. <span class=math-inline data-latex=-6></span> dB/octave. <span class=math-inline data-latex=\square></span></p></div></div><hr><h2 id=numerical-examples>Numerical Examples</h2><p><strong>SM58 peak location.</strong> The Shure SM58 has <span class=math-inline data-latex="Q \approx 1.5"></span>, so <span class=math-inline data-latex="\zeta = 1/(2Q) = 1/3"></span>. The condition for a peak is <span class=math-inline data-latex="\zeta < 1/\sqrt{2} \approx 0.707"></span>: satisfied. Peak location relative to natural frequency:</p><span class=math-display data-latex="\frac{\omega_{\text{peak}}}{\omega_0} = \sqrt{1 - 2\zeta^2} = \sqrt{1 - 2/9} = \sqrt{7/9} = \frac{\sqrt{7}}{3} \approx 0.882"></span><p>So the SM58 peak sits about 12% below the natural frequency — the resonance is pulled slightly down by damping. Peak gain:</p><span class=math-display data-latex="|H_{\text{peak}}| = \frac{1}{2 \cdot (1/3) \cdot \sqrt{1 - 1/9}} = \frac{1}{(2/3)\sqrt{8/9}} = \frac{1}{(2/3)(2\sqrt{2}/3)} = \frac{9}{4\sqrt{2}} \approx 1.59"></span><p>That is <span class=math-inline data-latex="20\log_{10}(1.59) \approx 4.0"></span> dB — a gentle broad hump.</p><p><strong>Neumann U87 peak sharpness.</strong> With <span class=math-inline data-latex="Q = 4"></span>, <span class=math-inline data-latex="\zeta = 0.125"></span>:</p><span class=math-display data-latex="\omega_{\text{peak}} = \omega_0\sqrt{1 - 2(0.125)^2} = \omega_0\sqrt{0.969} \approx 0.984\,\omega_0"></span><p>Peak gain: <span class=math-inline data-latex="|H_{\text{peak}}| \approx 1/(2 \times 0.125 \times \sqrt{1-0.0156}) \approx 4.03"></span>, i.e. about 12.1 dB — a clearly audible narrow brightness spike near <span class=math-inline data-latex="\omega_0 \approx 2\pi \times 10\,000"></span> rad/s.</p><p><strong>Polar pattern: cardioid front-to-back ratio.</strong> With <span class=math-inline data-latex="a = 0.5"></span>, the front (<span class=math-inline data-latex="\theta = 0"></span>) gain is <span class=math-inline data-latex="P(0) = 0.5 + 0.5 = 1"></span>. The rear (<span class=math-inline data-latex="\theta = \pi"></span>) gain is <span class=math-inline data-latex="P(\pi) = 0.5 - 0.5 = 0"></span>: perfect rear null. The −3 dB point occurs where <span class=math-inline data-latex="P(\theta) = 1/\sqrt{2}"></span>: <span class=math-inline data-latex="0.5 + 0.5\cos\theta = 1/\sqrt{2}"></span>, giving <span class=math-inline data-latex="\cos\theta = \sqrt{2}-1 \approx 0.414"></span>, <span class=math-inline data-latex="\theta \approx 65.5°"></span>.</p><p><strong>Formant interaction.</strong> The singer&rsquo;s formant from
+<a href=https://amath390.sibeliusp.com/episodes/ep15/ class=episode-ref-link>EP15</a>
+concentrates vocal energy near 3 kHz. If a microphone&rsquo;s <span class=math-inline data-latex="\omega_0 = 2\pi \times 10\,000"></span> rad/s but with a broad <span class=math-inline data-latex="Q=1.5"></span> skirt extending down to 3 kHz, the microphone gain at 3 kHz is (using the transfer function magnitude formula with <span class=math-inline data-latex="\omega/\omega_0 = 0.3"></span>, <span class=math-inline data-latex="\zeta=1/3"></span>):</p><span class=math-display data-latex="|H(i \cdot 0.3\omega_0)| = \frac{1}{\sqrt{(1-0.09)^2 + 4(1/9)(0.09)}} = \frac{1}{\sqrt{0.829 + 0.04}} = \frac{1}{\sqrt{0.869}} \approx 1.07"></span><p>About 0.6 dB lift — modest, but stacked on top of the singer&rsquo;s formant, the combined effect is a noticeable presence boost.</p><hr><h2 id=musical-connection>Musical Connection</h2><div class=music-block><div class=block-label>音乐联系</div><div class=block-body><p><strong>Choosing a microphone is choosing a transfer function product.</strong></p><p>Every microphone in the signal chain adds its transfer function <span class=math-inline data-latex=H_{\text{mic}}(i\omega)></span> to the vocal transfer function <span class=math-inline data-latex=H_{\text{voice}}(i\omega)></span>. What arrives at the preamp is the product <span class=math-inline data-latex="H_{\text{voice}} \cdot H_{\text{mic}}"></span>. The engineer&rsquo;s intuitive vocabulary — &ldquo;presence,&rdquo; &ldquo;air,&rdquo; &ldquo;warmth,&rdquo; &ldquo;proximity effect&rdquo; — maps directly onto the shape of <span class=math-inline data-latex=|H_{\text{mic}}(i\omega)|></span>:</p><ul><li><strong>Presence</strong> = a mid-high peak (3–8 kHz), aligning with the singer&rsquo;s formant from</li></ul><p><a href=https://amath390.sibeliusp.com/episodes/ep15/ class=episode-ref-link>EP15</a></p><ul><li><strong>Air</strong> = a narrow high-frequency peak above 10 kHz (high <span class=math-inline data-latex=Q></span>)</li><li><strong>Warmth</strong> = a low-frequency shoulder below 200 Hz (low <span class=math-inline data-latex=\omega_0></span>)</li><li><strong>Proximity effect</strong> = a dynamic microphone&rsquo;s inherent bass boost when used close-up, arising from near-field pressure-gradient enhancement of the velocity signal</li></ul><p>The SM58/U87 contrast encodes the engineering trade-off: high <span class=math-inline data-latex=Q></span> gives distinctive character but requires careful placement; low <span class=math-inline data-latex=Q></span> is forgiving but generic. Neither is &ldquo;better&rdquo; — they are different poles in the complex <span class=math-inline data-latex=s></span>-plane.</p><p><strong>Connection forward.</strong> In</p><p><a href=https://amath390.sibeliusp.com/episodes/ep29/ class=episode-ref-link>EP29</a></p><p>, the Helmholtz resonator that absorbs low-frequency room modes is governed by the identical ODE with a different physical interpretation of <span class=math-inline data-latex=m></span> (air mass in the neck) and <span class=math-inline data-latex=k></span> (restoring compressibility of cavity air). In</p><p><a href=https://amath390.sibeliusp.com/episodes/ep37/ class=episode-ref-link>EP37</a></p><p>, the biquad EQ filter is the digital implementation of the same transfer function — <span class=math-inline data-latex=H(s)></span> discretised via the bilinear transform.</p></div></div><hr><h2 id=limits-and-open-questions>Limits and Open Questions</h2><ol><li><p><strong>Membrane non-linearity.</strong> The ODE of Definition 28.1 assumes a linear elastic restoring force (Hooke&rsquo;s law). Real membranes at high sound pressure levels exhibit stiffness hardening (<span class=math-inline data-latex="k \to k + \alpha x^2"></span>), producing even-harmonic distortion. This is the origin of microphone THD specifications and is not captured by the linear transfer function.</p></li><li><p><strong>Distributed membrane modes.</strong> The lumped-mass model treats the membrane as a point mass. A real circular membrane (governed by the two-dimensional wave equation in polar coordinates) has infinitely many normal modes — Bessel functions <span class=math-inline data-latex="J_n(k_{nm} r)"></span> — each contributing a separate resonance peak. The transfer function <span class=math-inline data-latex=H(s)></span> of Definition 28.3 approximates only the dominant lowest mode.</p></li><li><p><strong>Proximity effect and directional microphones.</strong> The pressure-gradient (figure-8) component of a cardioid pattern is inherently a near-field-dependent signal. At close distances the pressure-gradient term grows as <span class=math-inline data-latex=1/r^2></span> rather than <span class=math-inline data-latex=1/r></span>, causing a bass boost that is not captured by the far-field polar pattern <span class=math-inline data-latex=P(\theta)></span>. A complete model requires a two-variable transfer function <span class=math-inline data-latex="H(i\omega, r)"></span>.</p></li><li><p><strong>Self-noise and thermal noise floor.</strong> The Fluctuation-Dissipation theorem predicts that the same damping coefficient <span class=math-inline data-latex=c></span> that determines <span class=math-inline data-latex=\zeta></span> also sets the Nyquist thermal noise force <span class=math-inline data-latex="S_F = 4k_B T c"></span>. High <span class=math-inline data-latex=Q></span> (low <span class=math-inline data-latex=c></span>) microphones therefore have lower self-noise — a direct physical link between frequency response shape and noise floor specification.</p></li><li><p><strong>Vector cardioid and coincident-pair stereo.</strong> The polar pattern <span class=math-inline data-latex="P(\theta) = a + (1-a)\cos\theta"></span> is a scalar function. Real coincident microphone arrays (XY, ORTF, Mid-Side) multiply polar patterns across multiple capsules to synthesise arbitrary stereo images. The mathematical framework is the <strong>spherical harmonic decomposition</strong> of the sound field, connecting back to the eigenfunction expansions of
+<a href=https://amath390.sibeliusp.com/episodes/ep02/ class=episode-ref-link>EP02</a>
+.</p></li></ol><div class=conjecture-block id=conjecture><div class=block-label>Conjecture (Optimal Q for Formant Alignment)</div><div class=block-body>For a vocalist whose singer&rsquo;s formant peak is centred at frequency <span class=math-inline data-latex=f_F></span> (typically 2.8–3.2 kHz), there exists an optimal microphone quality factor <span class=math-inline data-latex=Q^*></span> such that the composite response <span class=math-inline data-latex="|H_{\text{voice}}(f)| \cdot |H_{\text{mic}}(f)|"></span> maximises perceived intelligibility as measured by the Speech Intelligibility Index (ANSI S3.5). The conjecture is that <span class=math-inline data-latex=Q^*></span> depends on the vocalist&rsquo;s individual formant bandwidth, implying that &ldquo;microphone matching&rdquo; is a speaker-dependent optimisation problem with no universal answer. <strong>Falsification criterion</strong>: measure STI scores for 20 vocalists × 5 microphones in an anechoic chamber; test whether the highest-scoring microphone per vocalist can be predicted from the vocal formant bandwidth alone.</div></div><hr><h2 id=academic-references>Academic References</h2><ol><li><p>Kinsler, L. E., Frey, A. R., Coppens, A. B., & Sanders, J. V. (2000). <em>Fundamentals of Acoustics</em> (4th ed.). Wiley. Ch. 2–4 (damped oscillator, acoustic transducers).</p></li><li><p>Beranek, L. L. (1954). <em>Acoustics</em>. McGraw-Hill. §3 (acoustic impedance and the mass-spring-damper analogy for microphones).</p></li><li><p>Shure Inc. (2003). <em>Microphone Techniques for Recording</em> (Application Guide). Available at shure.com. (SM58 frequency response and Q interpretation.)</p></li><li><p>Neumann GmbH. (2019). <em>U 87 Ai Technical Data Sheet</em>. Sennheiser/Neumann. (U87 presence peak near 10 kHz.)</p></li><li><p>Oppenheim, A. V., & Willsky, A. S. (1997). <em>Signals and Systems</em> (2nd ed.). Prentice Hall. Ch. 9 (Laplace transform and transfer functions).</p></li><li><p>Stearns, S. D., & Hush, D. R. (2011). <em>Digital Signal Processing with Examples in MATLAB</em> (2nd ed.). CRC Press. Ch. 3 (second-order systems and Bode plots).</p></li><li><p>Rumsey, F., & McCormick, T. (2014). <em>Sound and Recording: Applications and Theory</em> (7th ed.). Focal Press. Ch. 11 (microphone types and polar patterns).</p></li><li><p>Sessler, G. M. (1999). Acoustic sensors. <em>Journal of the Acoustical Society of America</em>, 105(2), 1139–1143. (Physical review of condenser and dynamic transduction mechanisms.)</p></li><li><p>Eargle, J. (2004). <em>The Microphone Book</em> (2nd ed.). Focal Press. (Industry reference for polar patterns, frequency response measurement, and Q in real capsule design.)</p></li><li><p>Carlson, G. E. (1998). <em>Signal and Linear System Analysis</em> (2nd ed.). Wiley. Ch. 6 (stability, poles, BIBO).</p></li></ol></div><nav class=ep-nav><a href=https://amath390.sibeliusp.com/episodes/ep27/ class=ep-nav-prev>← EP27: Answering Viral Critics with Mathematics
+</a><a href=https://amath390.sibeliusp.com/episodes/ep29/ class=ep-nav-next>EP29: Primes in the Studio — Standing Waves and QRD Diffusers →</a></nav></article><aside class=ep-toc-aside><div class=ep-toc-sticky><div class=ep-toc-label>本页目录</div><nav id=TableOfContents><ul><li><a href=#overview>Overview</a></li><li><a href=#prerequisites>Prerequisites</a></li><li><a href=#definitions>Definitions</a></li><li><a href=#main-theorems>Main Theorems</a></li><li><a href=#numerical-examples>Numerical Examples</a></li><li><a href=#musical-connection>Musical Connection</a></li><li><a href=#limits-and-open-questions>Limits and Open Questions</a></li><li><a href=#academic-references>Academic References</a></li></ul></nav></div></aside></div><footer class=site-footer><div class=footer-content><a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link><img src=/images/avatar.png alt="Sibelius P." class=footer-avatar></a><div class=footer-text><span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
 <span class=footer-sep>·</span>
 <a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener>小红书</a>
 <span class=footer-sep>·</span>
-<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span>
-</div>
-</div>
-</footer>
-</main>
-</div>
-</body>
-</html>
+<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span></div></div></footer></main></div></body></html>

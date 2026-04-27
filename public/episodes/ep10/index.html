@@ -1,512 +1,72 @@
-<!doctype html><html lang=zh-cn>
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<title>EP10: Negative Harmony and the Dihedral Group D₁₂ | AMATH 390 数学与音乐</title>
-<meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
-<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous>
-<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script>
-<script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('[data-latex]').forEach(function(a){try{katex.render(a.getAttribute('data-latex'),a,{displayMode:a.classList.contains('math-display'),throwOnError:!1})}catch(b){console.warn('KaTeX:',b.message,a)}})})</script>
-<link rel=icon type=image/png sizes=32x32 href=/favicon-32.png>
-<link rel=icon type=image/png sizes=16x16 href=/favicon-16.png>
-<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
-<link rel=stylesheet href=/css/amath390.css>
-</head>
-<body>
-<div class=layout-wrapper>
-<nav class=sidebar>
-<div class=sidebar-header>
-<a href=/ class=sidebar-title>AMATH 390</a>
-<div class=sidebar-subtitle>数学与音乐</div>
-</div>
-<div class=arc-group>
-<div class=arc-label>数学基础篇</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link>
-<span class=ep-num>01</span>
+<!doctype html><html lang=zh-cn><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>EP10: Negative Harmony and the Dihedral Group D₁₂ | AMATH 390 数学与音乐</title><meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music"><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script><script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("[data-latex]").forEach(function(e){try{katex.render(e.getAttribute("data-latex"),e,{displayMode:e.classList.contains("math-display"),throwOnError:!1})}catch(t){console.warn("KaTeX:",t.message,e)}})})</script><link rel=icon type=image/png sizes=32x32 href=/favicon-32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=stylesheet href=/css/amath390.css></head><body><div class=layout-wrapper><nav class=sidebar><div class=sidebar-header><a href=/ class=sidebar-title>AMATH 390</a><div class=sidebar-subtitle>数学与音乐</div></div><div class=arc-group><div class=arc-label>数学基础篇</div><a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link><span class=ep-num>01</span>
 <span class=ep-title>Chord Space and the Torus</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep02/ class=ep-link>
-<span class=ep-num>02</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep02/ class=ep-link><span class=ep-num>02</span>
 <span class=ep-title>String Vibration and the Wave Equation</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link>
-<span class=ep-num>03</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link><span class=ep-num>03</span>
 <span class=ep-title>Bach and Graph Connectivity</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link>
-<span class=ep-num>04</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link><span class=ep-num>04</span>
 <span class=ep-title>All-Interval Rows and ℤ₁₂</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link>
-<span class=ep-num>05</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link><span class=ep-num>05</span>
 <span class=ep-title>Turán's Theorem and Counterpoint</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-link>
-<span class=ep-num>06</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-link><span class=ep-num>06</span>
 <span class=ep-title>Graph Coloring and Voice Assignment</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-link>
-<span class=ep-num>07</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-link><span class=ep-num>07</span>
 <span class=ep-title>Information Entropy and All-Interval Rows</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-link>
-<span class=ep-num>08</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-link><span class=ep-num>08</span>
 <span class=ep-title>Shepard Tones and the Tritone Paradox</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link>
-<span class=ep-num>09</span>
-<span class=ep-title>Combination Tones and Nonlinear Acoustics</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>Jacob Collier 系列</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep10/ class="ep-link active">
-<span class=ep-num>10</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link><span class=ep-num>09</span>
+<span class=ep-title>Combination Tones and Nonlinear Acoustics</span></a></div><div class=arc-group><div class=arc-label>Jacob Collier 系列</div><a href=https://amath390.sibeliusp.com/episodes/ep10/ class="ep-link active"><span class=ep-num>10</span>
 <span class=ep-title>Negative Harmony and the Dihedral Group D₁₂</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link>
-<span class=ep-num>11</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link><span class=ep-num>11</span>
 <span class=ep-title>Comma Drift and the Impossibility of Perfect Tuning</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep12/ class=ep-link>
-<span class=ep-num>12</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep12/ class=ep-link><span class=ep-num>12</span>
 <span class=ep-title>The Circle of Fifths as a Folded Spiral</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-link>
-<span class=ep-num>13</span>
-<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>拓扑数学专篇</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-link>
-<span class=ep-num>14</span>
-<span class=ep-title>Tonnetz Hodge Duality</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>歌剧系列</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-link>
-<span class=ep-num>15</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-link><span class=ep-num>13</span>
+<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span></a></div><div class=arc-group><div class=arc-label>拓扑数学专篇</div><a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-link><span class=ep-num>14</span>
+<span class=ep-title>Tonnetz Hodge Duality</span></a></div><div class=arc-group><div class=arc-label>歌剧系列</div><a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-link><span class=ep-num>15</span>
 <span class=ep-title>Opera Acoustics and the Singer's Formant</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link>
-<span class=ep-num>16</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link><span class=ep-num>16</span>
 <span class=ep-title>Rossini's Code — Budden, Gossett, and the Convention System</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-link>
-<span class=ep-num>17</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-link><span class=ep-num>17</span>
 <span class=ep-title>Leitmotif Networks — Wagner's Ring Cycle</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-link>
-<span class=ep-num>18</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-link><span class=ep-num>18</span>
 <span class=ep-title>Game Theory in Operatic Duets</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link>
-<span class=ep-num>19</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link><span class=ep-num>19</span>
 <span class=ep-title>Vibrato as FM Synthesis</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-link>
-<span class=ep-num>20</span>
-<span class=ep-title>Character Interaction Networks in Opera</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>AI 音乐三部曲</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-link>
-<span class=ep-num>21</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-link><span class=ep-num>20</span>
+<span class=ep-title>Character Interaction Networks in Opera</span></a></div><div class=arc-group><div class=arc-label>AI 音乐三部曲</div><a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-link><span class=ep-num>21</span>
 <span class=ep-title>From Markov to Diffusion — Sixty Years of AI Composition</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-link>
-<span class=ep-num>22</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-link><span class=ep-num>22</span>
 <span class=ep-title>How AI Writes Music — EnCodec and RVQ</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-link>
-<span class=ep-num>23</span>
-<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span>
-</a>
-</div>
-<div class=sidebar-footer>
-<a href=/theorems/>定理索引</a>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-link><span class=ep-num>23</span>
+<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span></a></div><div class=arc-group><div class=arc-label>流行音乐 × 数学</div><a href=https://amath390.sibeliusp.com/episodes/ep24/ class=ep-link><span class=ep-num>24</span>
+<span class=ep-title>The Information Code of Pop Music</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep25/ class=ep-link><span class=ep-num>25</span>
+<span class=ep-title>Why Music Gives You Goosebumps — Prediction Error and Frisson</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep26/ class=ep-link><span class=ep-num>26</span>
+<span class=ep-title>The 1/f Law of Music</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep27/ class=ep-link><span class=ep-num>27</span>
+<span class=ep-title>Answering Viral Critics with Mathematics</span></a></div><div class=arc-group><div class=arc-label>音乐技术系列</div><a href=https://amath390.sibeliusp.com/episodes/ep28/ class=ep-link><span class=ep-num>28</span>
+<span class=ep-title>Your Microphone Is a Damped Oscillator</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep29/ class=ep-link><span class=ep-num>29</span>
+<span class=ep-title>Primes in the Studio — Standing Waves and QRD Diffusers</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep30/ class=ep-link><span class=ep-num>30</span>
+<span class=ep-title>The Sampling Theorem Is Not What You Think</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep31/ class=ep-link><span class=ep-num>31</span>
+<span class=ep-title>The Warmth of Moog Has an Equation</span></a></div><div class=sidebar-footer><a href=/theorems/>定理索引</a>
 <a href=/domains/>数学领域</a>
-<a href=/about/>关于</a>
-</div>
-</nav>
-<main class=main-content>
-<div class=episode-layout>
-<article class=episode-page>
-<header class=episode-header>
-<div class=ep-badge>EP10</div>
-<h1 class=ep-main-title>EP10: Negative Harmony and the Dihedral Group D₁₂</h1>
-<div class=ep-subtitle>Reflection in ℤ₁₂, D₁₂ Group Action, Voice-Leading Symmetry</div>
-<div class=ep-meta>
-<span class=meta-item>
-<span class=meta-icon>▶</span> 7:38
-</span>
-<span class="meta-item domains">
-<span class=domain-chip>Abstract Algebra</span><span class=domain-chip>Group Theory</span>
-</span>
-</div>
-</header>
-<div class=cross-refs>
-<h3 class=cross-refs-title>前置知识</h3>
-<div class=ref-cards>
-<a href=https://amath390.sibeliusp.com/episodes/ep04/ class="ref-card callback">
-<span class=ref-ep>EP04</span>
+<a href=/about/>关于</a></div></nav><main class=main-content><div class=episode-layout><article class=episode-page><header class=episode-header><div class=ep-badge>EP10</div><h1 class=ep-main-title>EP10: Negative Harmony and the Dihedral Group D₁₂</h1><div class=ep-subtitle>Reflection in ℤ₁₂, D₁₂ Group Action, Voice-Leading Symmetry</div><div class=ep-meta><span class=meta-item><span class=meta-icon>▶</span> 7:38
+</span><span class="meta-item domains"><span class=domain-chip>Abstract Algebra</span><span class=domain-chip>Group Theory</span></span></div></header><div class=cross-refs><h3 class=cross-refs-title>前置知识</h3><div class=ref-cards><a href=https://amath390.sibeliusp.com/episodes/ep04/ class="ref-card callback"><span class=ref-ep>EP04</span>
 <span class=ref-title>All-Interval Rows and ℤ₁₂</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep01/ class="ref-card callback">
-<span class=ref-ep>EP01</span>
-<span class=ref-title>Chord Space and the Torus</span>
-</a>
-</div>
-</div>
-<div class=cross-refs>
-<h3 class=cross-refs-title>后续拓展</h3>
-<div class=ref-cards>
-<a href=https://amath390.sibeliusp.com/episodes/ep17/ class="ref-card forward">
-<span class=ref-ep>EP17</span>
-<span class=ref-title>Leitmotif Networks — Wagner's Ring Cycle</span>
-</a>
-</div>
-</div>
-<div class=xhs-section>
-<div class=xhs-section-header>
-<span class=xhs-logo-badge>小红书</span>
-<span class=xhs-section-title>Watch on 小红书</span>
-</div>
-<div class=xhs-cards>
-<a href="https://www.xiaohongshu.com/discovery/item/698e8cf6000000000b010b63?source=webshare&xhsshare=pc_web&xsec_token=AB5nnfcqs3ToPQBQMsP2SZXev_nsMjZgS2EUYXt-UANn0=&xsec_source=pc_share" target=_blank rel=noopener class=xhs-card>
-<div class=xhs-card-inner>
-<div class=xhs-card-icon>▶</div>
-<div class=xhs-card-text>
-<div class=xhs-card-title>和声学400年只用了一半对称？</div>
-<div class=xhs-card-sub>xiaohongshu.com</div>
-</div>
-<div class=xhs-card-arrow>→</div>
-</div>
-</a>
-</div>
-</div>
-<div class="episode-content content">
-<h2 id=overview>Overview</h2>
-<p>The perfect authentic cadence — dominant seventh to tonic — has been the gravitational engine of Western tonal music for four centuries. It pulls inward: the leading tone <span class=math-inline data-latex=B></span> rises to <span class=math-inline data-latex=C></span>, the tritone <span class=math-inline data-latex=B></span>–<span class=math-inline data-latex=F></span> contracts, the bass falls a fifth.</p>
-<blockquote>
-<p><em>中文:</em> &ldquo;但是，如果我告诉你，它有一个&rsquo;镜像版本'——同样平滑，同样到达，但引力方向完全相反——你会相信吗？&rdquo;</p>
-</blockquote>
-<p>This mirror version is <strong>negative harmony</strong>: a reflection of the chromatic circle that preserves every voice-leading distance while reversing every harmonic direction. The operation is not a curiosity — it is one of the 12 reflections in the <strong>dihedral group</strong> <span class=math-inline data-latex=D_{12}></span>, the full symmetry group of the regular 12-gon. Western tonal harmony has systematically explored the 12 rotations (transpositions) of <span class=math-inline data-latex=D_{12}></span> while largely leaving the 12 reflections unexplored.</p>
-<p>This episode is the first in a four-episode arc on Jacob Collier&rsquo;s mathematics. The framework connects to EP04 (<span class=math-inline data-latex=\mathbb{Z}_{12}></span> and group actions) and forward to EP17 (Neo-Riemannian theory).</p>
-<hr>
-<h2 id=prerequisites>Prerequisites</h2>
-<ul>
-<li>
-<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=episode-ref-link>The All-Interval Row and <span class=math-inline data-latex=\mathbb{Z}_{12}></span> (EP04)</a>
-— pitch classes, group actions, stabilizers</li>
-<li>
-<a href=https://amath390.sibeliusp.com/episodes/ep01/ class=episode-ref-link>Overtone Series and Intervals (EP01)</a>
-— just intervals, harmonic series</li>
-<li>Basic group theory: groups, generators, relations, group homomorphisms</li>
-</ul>
-<hr>
-<h2 id=definitions>Definitions</h2>
-<div class=definition-block id=definition-10.1>
-<div class=block-label>
-Definition 10.1 (Pitch Class Group ℤ₁₂)
-</div>
-<div class=block-body><p>The <strong>pitch class group</strong> is the cyclic group <span class=math-inline data-latex="\mathbb{Z}_{12} = \{0, 1, 2, \ldots, 11\}"></span> under addition modulo 12. Each element represents one of the 12 chromatic pitch classes (C=0, C♯=1, …, B=11), with octave equivalence: pitch classes differing by a multiple of 12 are identified.</p>
-<p>The <strong>transposition</strong> by <span class=math-inline data-latex=k></span> semitones is the map <span class=math-inline data-latex="T_k: x \mapsto x + k \pmod{12}"></span>. Transpositions form the cyclic subgroup <span class=math-inline data-latex="\{T_0, T_1, \ldots, T_{11}\} \cong \mathbb{Z}_{12}"></span> of the group of pitch-class transformations.</p>
-</div>
-</div>
-<div class=definition-block id=definition-10.2>
-<div class=block-label>
-Definition 10.2 (Pitch-Class Inversion)
-</div>
-<div class=block-body><p>The <strong>inversion</strong> (or reflection) through axis <span class=math-inline data-latex=n/2></span> is the map</p>
-<p><span class=math-display data-latex="I_n : \mathbb{Z}_{12} \to \mathbb{Z}_{12}, \qquad I_n(x) = n - x \pmod{12}"></span></p>
-<p>Geometrically, <span class=math-inline data-latex=I_n></span> reflects the 12-gon through the axis passing through the midpoint of pitch classes <span class=math-inline data-latex=n/2></span> and <span class=math-inline data-latex="n/2 + 6"></span> (mod 12).</p>
-<p>For <strong>negative harmony in C major</strong>, the axis passes through the midpoint between E (pitch class 4) and E♭ (pitch class 3), equivalently between G (7) and C (0) — giving <span class=math-inline data-latex="n = 7"></span> and the formula <span class=math-inline data-latex="I_7(x) = 7 - x \pmod{12}"></span>:</p>
-<table>
-<thead>
-<tr>
-<th>Pitch</th>
-<th>PC</th>
-<th><span class=math-inline data-latex=I_7></span> image</th>
-<th>Image name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>C</td>
-<td>0</td>
-<td>7</td>
-<td>G</td>
-</tr>
-<tr>
-<td>D</td>
-<td>2</td>
-<td>5</td>
-<td>F</td>
-</tr>
-<tr>
-<td>E</td>
-<td>4</td>
-<td>3</td>
-<td>E♭</td>
-</tr>
-<tr>
-<td>F</td>
-<td>5</td>
-<td>2</td>
-<td>D</td>
-</tr>
-<tr>
-<td>G</td>
-<td>7</td>
-<td>0</td>
-<td>C</td>
-</tr>
-<tr>
-<td>A</td>
-<td>9</td>
-<td>10</td>
-<td>B♭</td>
-</tr>
-<tr>
-<td>B</td>
-<td>11</td>
-<td>8</td>
-<td>A♭</td>
-</tr>
-</tbody>
-</table>
-<p>Note that C and G exchange, and E and E♭ exchange — as stated in the narration: &ldquo;主音 C 和属音 G 互相交换；降E 和 E 也互换.&rdquo;</p>
-</div>
-</div>
-<div class=definition-block id=definition-10.3>
-<div class=block-label>
-Definition 10.3 (Dihedral Group D₁₂)
-</div>
-<div class=block-body><p>The <strong>dihedral group</strong> <span class=math-inline data-latex=D_{12}></span> is the group of symmetries of a regular 12-gon. It has order 24 and is generated by two elements:</p>
-<ul>
-<li><span class=math-inline data-latex=r></span>: rotation by <span class=math-inline data-latex="2\pi/12 = 30°"></span> (transposition by 1 semitone, <span class=math-inline data-latex=T_1></span>)</li>
-<li><span class=math-inline data-latex=s></span>: a fixed reflection (e.g., <span class=math-inline data-latex=I_0></span>)</li>
-</ul>
-<p>Subject to the relations:</p>
-<p><span class=math-display data-latex="r^{12} = e, \qquad s^2 = e, \qquad srs = r^{-1}"></span></p>
-<p>The 24 elements decompose as:</p>
-<ul>
-<li>12 <strong>rotations</strong>: <span class=math-inline data-latex="\{e, r, r^2, \ldots, r^{11}\}"></span> — transpositions <span class=math-inline data-latex="T_0, \ldots, T_{11}"></span></li>
-<li>12 <strong>reflections</strong>: <span class=math-inline data-latex="\{s, sr, sr^2, \ldots, sr^{11}\}"></span> — inversions <span class=math-inline data-latex="I_0, I_1, \ldots, I_{11}"></span></li>
-</ul>
-<p>The relation <span class=math-inline data-latex="srs = r^{-1}"></span> encodes: a reflection composed with a rotation composed with the same reflection gives the inverse rotation — &ldquo;reflection reverses the direction of rotation.&rdquo;</p>
-</div>
-</div>
-<div class=definition-block id=definition-10.4>
-<div class=block-label>
-Definition 10.4 (Fixed Points of a Reflection)
-</div>
-<div class=block-body><p>A pitch class <span class=math-inline data-latex="x \in \mathbb{Z}_{12}"></span> is a <strong>fixed point</strong> of <span class=math-inline data-latex=I_n></span> if <span class=math-inline data-latex="I_n(x) = x"></span>, i.e., <span class=math-inline data-latex="n - x \equiv x \pmod{12}"></span>, i.e., <span class=math-inline data-latex="2x \equiv n \pmod{12}"></span>.</p>
-<ul>
-<li>If <span class=math-inline data-latex=n></span> is even, this has two solutions: <span class=math-inline data-latex="x = n/2"></span> and <span class=math-inline data-latex="x = n/2 + 6"></span> (mod 12). These are the two pitch classes on the reflection axis.</li>
-<li>If <span class=math-inline data-latex=n></span> is odd, the equation <span class=math-inline data-latex="2x \equiv n \pmod{12}"></span> has no solutions in <span class=math-inline data-latex=\mathbb{Z}_{12}></span> (since 2 is not invertible mod 12). The axis passes between pitch classes, and there are no fixed pitch classes — all 12 form six exchange pairs.</li>
-</ul>
-<p>For <span class=math-inline data-latex=I_7></span> (negative harmony in C major), <span class=math-inline data-latex="n = 7"></span> is odd, so there are <strong>no fixed pitch classes</strong>. Every note maps to a different note.</p>
-</div>
-</div>
-<hr>
-<h2 id=main-theorems>Main Theorems</h2>
-<div class=theorem-block id=theorem-10.1>
-<div class=block-label>
-Theorem 10.1 (Distance Preservation Under Reflection)
-</div>
-<div class=block-body><p>For any two pitch classes <span class=math-inline data-latex="x, y \in \mathbb{Z}_{12}"></span> and any inversion <span class=math-inline data-latex=I_n></span>,</p>
-<p><span class=math-display data-latex="|I_n(x) - I_n(y)| \equiv |x - y| \pmod{12}"></span></p>
-<p>That is, the interval between two pitch classes is preserved by <span class=math-inline data-latex=I_n></span>.</p>
-</div>
-</div>
-<div class=proof-block>
-<div class=block-label>Proof.</div>
-<div class=block-body><p>Compute directly:</p>
-<p><span class=math-display data-latex="I_n(x) - I_n(y) = (n - x) - (n - y) = y - x \pmod{12}"></span></p>
-<p>Therefore <span class=math-inline data-latex="|I_n(x) - I_n(y)| = |y - x| = |x - y|"></span> (mod 12). <span class=math-inline data-latex=\square></span></p>
-<blockquote>
-<p><em>中文:</em> &ldquo;反射变换 <span class=math-inline data-latex=n></span> 映射到 $7$ 减 <span class=math-inline data-latex=n></span>。两个音之间的距离：<span class=math-inline data-latex=n></span> 减 <span class=math-inline data-latex=m></span> 的绝对值。反射后的距离：$7$ 减 <span class=math-inline data-latex=n></span>，减去 $7$ 减 <span class=math-inline data-latex=m></span> 的绝对值，等于 <span class=math-inline data-latex=m></span> 减 <span class=math-inline data-latex=n></span> 的绝对值。完全相等。&rdquo;</p>
-</blockquote>
-</div>
-</div>
-<p><strong>Corollary:</strong> Voice leading — the pattern of semitone distances each voice moves through — is identical in a progression and its negative-harmony mirror. If V→I moves each voice by <span class=math-inline data-latex="d_1, d_2, \ldots, d_k"></span> semitones, then the mirrored progression moves each voice by <span class=math-inline data-latex="d_1, d_2, \ldots, d_k"></span> semitones as well.</p>
-<div class=theorem-block id=theorem-10.2>
-<div class=block-label>
-Theorem 10.2 (Negative Harmony of G7 in C Major)
-</div>
-<div class=block-body><p>Under <span class=math-inline data-latex="I_7: x \mapsto 7 - x \pmod{12}"></span>, the G dominant seventh chord <span class=math-inline data-latex="\{7, 11, 2, 5\}"></span> (G–B–D–F) maps to <span class=math-inline data-latex="\{0, 8, 5, 2\}"></span> (C–A♭–F–D), which is an F minor sixth chord (Fm6) in first inversion.</p>
-<p>The cadential motion G7→C (pitch classes <span class=math-inline data-latex="\{7,11,2,5\} \to \{0,4,7\}"></span>) maps to Fm6→Cm (<span class=math-inline data-latex="\{0,8,5,2\} \to \{0,3,7\}"></span>).</p>
-</div>
-</div>
-<div class=proof-block>
-<div class=block-label>Proof.</div>
-<div class=block-body><p>Apply <span class=math-inline data-latex=I_7></span> componentwise to G7 = <span class=math-inline data-latex="\{7, 11, 2, 5\}"></span>:</p>
-<p><span class=math-display data-latex="I_7(7) = 0 \text{ (C)}, \quad I_7(11) = -4 \equiv 8 \text{ (A♭)}, \quad I_7(2) = 5 \text{ (F)}, \quad I_7(5) = 2 \text{ (D)}"></span></p>
-<p>The image set <span class=math-inline data-latex="\{0, 2, 5, 8\}"></span> = <span class=math-inline data-latex="\{C, D, F, A♭\}"></span> = Fm6 (F minor with added sixth: F–A♭–C–D).</p>
-<p>For the tonic C major <span class=math-inline data-latex="\{0, 4, 7\}"></span> (C–E–G):</p>
-<p><span class=math-display data-latex="I_7(0) = 7 \text{ (G)}, \quad I_7(4) = 3 \text{ (E♭)}, \quad I_7(7) = 0 \text{ (C)}"></span></p>
-<p>Image: <span class=math-inline data-latex="\{0, 3, 7\}"></span> = C minor (Cm).</p>
-<p>So G7→Cmaj becomes Fm6→Cm under negative harmony. The dominant-to-tonic authentic cadence becomes a subdominant-to-tonic plagal motion. <span class=math-inline data-latex=\square></span></p>
-</div>
-</div>
-<div class=theorem-block id=theorem-10.3>
-<div class=block-label>
-Theorem 10.3 (D₁₂ Group Structure)
-</div>
-<div class=block-body><p>The 24 elements of <span class=math-inline data-latex=D_{12}></span> act on <span class=math-inline data-latex=\mathbb{Z}_{12}></span> as follows:</p>
-<ul>
-<li><strong>Rotations</strong> <span class=math-inline data-latex="T_k(x) = x + k \pmod{12}"></span>: form the normal subgroup <span class=math-inline data-latex="\mathbb{Z}_{12} \trianglelefteq D_{12}"></span></li>
-<li><strong>Reflections</strong> <span class=math-inline data-latex="I_n(x) = n - x \pmod{12}"></span>: form a coset of <span class=math-inline data-latex=\mathbb{Z}_{12}></span> in <span class=math-inline data-latex=D_{12}></span>, not closed under composition</li>
-</ul>
-<p>The composition law is:
-<span class=math-display data-latex="T_k \circ T_j = T_{k+j}, \qquad I_m \circ I_n = T_{m-n}, \qquad T_k \circ I_n = I_{n+k}, \qquad I_m \circ T_k = I_{m-k}"></span></p>
-</div>
-</div>
-<div class=proof-block>
-<div class=block-label>Proof.</div>
-<div class=block-body><p>For rotations: <span class=math-inline data-latex="(T_k \circ T_j)(x) = T_k(x+j) = x+j+k = T_{k+j}(x)"></span>. Clear.</p>
-<p>For two reflections: <span class=math-inline data-latex="(I_m \circ I_n)(x) = I_m(n-x) = m-(n-x) = m-n+x = T_{m-n}(x)"></span>. The composition of two reflections is a rotation by <span class=math-inline data-latex=m-n></span>.</p>
-<p>For rotation then reflection: <span class=math-inline data-latex="(T_k \circ I_n)(x) = T_k(n-x) = n-x+k = (n+k)-x = I_{n+k}(x)"></span>.</p>
-<p>For reflection then rotation: <span class=math-inline data-latex="(I_m \circ T_k)(x) = I_m(x+k) = m-(x+k) = (m-k)-x = I_{m-k}(x)"></span>.</p>
-<p>These are precisely the multiplication rules of <span class=math-inline data-latex=D_{12}></span> with generators <span class=math-inline data-latex="r = T_1"></span> and <span class=math-inline data-latex="s = I_0"></span>, verifying <span class=math-inline data-latex=D_{12}></span> structure. <span class=math-inline data-latex=\square></span></p>
-</div>
-</div>
-<div class=proposition-block id=prop-10.1>
-<div class=block-label>
-Prop 10.1 (Neo-Riemannian Connection)
-</div>
-<div class=block-body>The <strong>neo-Riemannian group</strong> generated by the PLR transformations (Parallel, Leading-tone exchange, Relative) on major and minor triads is isomorphic to <span class=math-inline data-latex=D_{12}></span>. The <span class=math-inline data-latex=P></span>, <span class=math-inline data-latex=L></span>, <span class=math-inline data-latex=R></span> operations are inversions <span class=math-inline data-latex=I_n></span> for specific <span class=math-inline data-latex=n></span> depending on the triad root, composed with triad-type switching. This establishes negative harmony as a special case of neo-Riemannian theory.</div>
-</div>
-<hr>
-<h2 id=musical-connection>Musical Connection</h2>
-<div class=music-block>
-<div class=block-label>音乐联系</div>
-<div class=block-body><p><strong>The two halves of <span class=math-inline data-latex=D_{12}></span></strong></p>
-<p>Western tonal harmony from 1600–1900 systematically exploits the rotation subgroup of <span class=math-inline data-latex=D_{12}></span>: modulation is <span class=math-inline data-latex=T_k></span>, the circle of fifths is traversal of <span class=math-inline data-latex=T_7^n></span>, all 24 major and minor keys are orbits under rotation. The reflection half remained largely implicit — present in the mirror counterpoint of Bach&rsquo;s <em>Art of Fugue</em>, in Hindemith&rsquo;s symmetrical constructions, in Bartók&rsquo;s axis system — but was never given a unified theoretical name until Ernst Levy&rsquo;s <em>A Theory of Harmony</em> (1985).</p>
-<blockquote>
-<p><em>中文:</em> &ldquo;几百年来，西方和声学主要系统探索了旋转——大小调、转调、移调，都是旋转操作。反射操作相对较少被系统使用。负和声不是&rsquo;另一种功能'——它是&rsquo;另一种引力方向'。对称性的另一半。&rdquo;</p>
-</blockquote>
-<p><strong>Why the reflection &ldquo;works&rdquo; musically</strong></p>
-<p>Theorem 10.1 guarantees that every voice-leading motion in the original progression has an equally smooth counterpart in the reflection. The perception of smoothness (Tymoczko 2011) depends only on the sum of voice-leading distances, not on direction. Thus negative harmony is, in a precise sense, the maximally voice-leading-equivalent reharmonization.</p>
-<p>However, direction matters for <strong>harmonic function</strong>: the leading tone <span class=math-inline data-latex=B></span> resolves upward to <span class=math-inline data-latex=C></span> in G7→C because <span class=math-inline data-latex=B></span> is a half-step below <span class=math-inline data-latex=C></span>. Its mirror <span class=math-inline data-latex=A♭></span> resolves downward to <span class=math-inline data-latex=G></span> in <span class=math-inline data-latex=Fm6→Cm></span> because <span class=math-inline data-latex=A♭></span> is a half-step above <span class=math-inline data-latex=G></span>. The tension is real and comparable, but the functional grammar (dominant→tonic vs. subdominant→tonic) is inverted.</p>
-<blockquote>
-<p><em>中文:</em> &ldquo;两条路，长度相同，方向相反。这就是负和声的本质：距离不变，功能镜像。&rdquo;</p>
-</blockquote>
-<p><strong>Historical trajectory: Levy → Coleman → Collier</strong></p>
-<p>Ernst Levy formulated the theory algebraically in the 1940s–1980s. Jazz saxophonist Steve Coleman brought it into improvisational practice in the 1980s. Jacob Collier demonstrated it publicly in 2017, causing Levy&rsquo;s out-of-print book to sell 800 copies overnight. The viral dissemination of a mathematical idea about group symmetry through a YouTube video is itself remarkable.</p>
-<blockquote>
-<p><em>中文:</em> &ldquo;1940年代，瑞士理论家Ernst Levy在极性理论中首先探索了这种对称性……2017年，Jacob Collier在一次访谈中演示了它。Levy那本只卖了32本的书，一夜之间卖出了800多本。&rdquo;</p>
-</blockquote>
-</div>
-</div>
-<hr>
-<h2 id=limits-and-open-questions>Limits and Open Questions</h2>
-<ol>
-<li>
-<p><strong>Axis choice is culturally determined.</strong> The axis <span class=math-inline data-latex="n = 7"></span> (between C and G, axis at E♭/E) is natural for C major because it maps tonic to tonic and dominant to dominant. But the choice of axis depends entirely on the tonal center of the music. For atonal music, there is no canonical axis, and the operation becomes purely a structural transformation without harmonic-functional content.</p>
-</li>
-<li>
-<p><strong>Seventh chords and extensions.</strong> Theorem 10.2 shows G7 maps to Fm6. But jazz chords with ninths, elevenths, and thirteenths have more pitch classes; the reflected chord may not correspond to any standard chord label. The operation is always well-defined algebraically, but the resulting chord may be &ldquo;unnameable&rdquo; within standard nomenclature.</p>
-</li>
-<li>
-<p><strong>Higher-dimensional analogies.</strong> <span class=math-inline data-latex=D_{12}></span> acts on the one-dimensional &ldquo;chromatic circle.&rdquo; Can one define an analogous dihedral action on the two-dimensional torus of keys (EP12), or on the three-dimensional tonnetz? Cohn (2012) and others have explored Riemannian extensions that suggest the answer is yes, but the resulting groups are larger and less tractable.</p>
-</li>
-<li>
-<p><strong>Empirical perceptual studies.</strong> The claim that negative-harmony cadences are perceived as &ldquo;equally smooth but harmonically reversed&rdquo; (Theorem 10.1 + musical analogy) has not been tested in controlled psychoacoustic experiments. Whether listeners unfamiliar with the concept perceive the symmetry, or only those trained in it, is an open empirical question.</p>
-</li>
-</ol>
-<div class=conjecture-block id=conjecture>
-<div class=block-label>
-Conjecture (Auditory Symmetry Detection)
-</div>
-<div class=block-body>Naive listeners (without music theory training) hearing a V–I cadence followed by its <span class=math-inline data-latex=I_7></span>-reflection will not spontaneously identify the mirror relationship, but will rate both cadences as approximately equally &ldquo;complete&rdquo; or &ldquo;resolved.&rdquo; This would confirm that voice-leading smoothness (distance-preserved) rather than harmonic function (direction-sensitive) drives the perception of cadential closure.</div>
-</div>
-<hr>
-<h2 id=extended-reading>Extended Reading</h2>
-<div class=yt-container>
-<div class=yt-embed>
-<iframe src="https://www.youtube.com/embed/aewI1F8bA8M?start=77" title="Jacob Collier explains negative harmony" frameborder=0 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy=strict-origin-when-cross-origin allowfullscreen></iframe>
-</div>
-<p class=yt-caption>Jacob Collier's live demonstration of negative harmony — the interview that caused Ernst Levy's out-of-print book to sell 800 copies overnight. The D₁₂ reflection in action, explained intuitively.</p>
-</div>
-<div class=yt-container>
-<div class=yt-embed>
-<iframe src="https://www.youtube.com/embed/SF8CdxcdJgw?start=1" title="Negative harmony deep dive" frameborder=0 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy=strict-origin-when-cross-origin allowfullscreen></iframe>
-</div>
-<p class=yt-caption>A more technical walkthrough of the negative harmony reflection: how the axis n = 7 maps dominant to subdominant, and why voice-leading distances are preserved under the D₁₂ reflection (Theorem 10.1).</p>
-</div>
-<h2 id=academic-references>Academic References</h2>
-<ol>
-<li>
-<p>Levy, E. (1985). <em>A Theory of Harmony</em>. SUNY Press.</p>
-</li>
-<li>
-<p>Cohn, R. (1998). Introduction to Neo-Riemannian theory: A survey and a historical perspective. <em>Journal of Music Theory</em>, 42(2), 167–180.</p>
-</li>
-<li>
-<p>Tymoczko, D. (2011). <em>A Geometry of Music: Harmony and Counterpoint in the Extended Common Practice</em>. Oxford University Press.</p>
-</li>
-<li>
-<p>Hook, J. (2002). Uniform triadic transformations. <em>Journal of Music Theory</em>, 46(1–2), 57–126.</p>
-</li>
-<li>
-<p>Straus, J. N. (2005). <em>Introduction to Post-Tonal Theory</em> (3rd ed.). Prentice Hall. Ch. 2 (Pitch-class sets and operations).</p>
-</li>
-<li>
-<p>Collier, J. (2017). Negative harmony demonstration. <em>YouTube</em> (various interviews). [Publicly available.]</p>
-</li>
-<li>
-<p>Fiore, T. M., & Satyendra, R. (2005). Generalized contextual groups. <em>Music Theory Spectrum</em>, 27(1), 99–120.</p>
-</li>
-</ol>
-</div>
-<nav class=ep-nav>
-<a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-nav-prev>
-← EP09: Combination Tones and Nonlinear Acoustics
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-nav-next>
-EP11: Comma Drift and the Impossibility of Perfect Tuning →
-</a>
-</nav>
-</article>
-<aside class=ep-toc-aside>
-<div class=ep-toc-sticky>
-<div class=ep-toc-label>本页目录</div>
-<nav id=TableOfContents>
-<ul>
-<li><a href=#overview>Overview</a></li>
-<li><a href=#prerequisites>Prerequisites</a></li>
-<li><a href=#definitions>Definitions</a></li>
-<li><a href=#main-theorems>Main Theorems</a></li>
-<li><a href=#musical-connection>Musical Connection</a></li>
-<li><a href=#limits-and-open-questions>Limits and Open Questions</a></li>
-<li><a href=#extended-reading>Extended Reading</a></li>
-<li><a href=#academic-references>Academic References</a></li>
-</ul>
-</nav>
-</div>
-</aside>
-</div>
-<footer class=site-footer>
-<div class=footer-content>
-<a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link>
-<img src=/images/avatar.png alt="Sibelius P." class=footer-avatar>
-</a>
-<div class=footer-text>
-<span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep01/ class="ref-card callback"><span class=ref-ep>EP01</span>
+<span class=ref-title>Chord Space and the Torus</span></a></div></div><div class=cross-refs><h3 class=cross-refs-title>后续拓展</h3><div class=ref-cards><a href=https://amath390.sibeliusp.com/episodes/ep17/ class="ref-card forward"><span class=ref-ep>EP17</span>
+<span class=ref-title>Leitmotif Networks — Wagner's Ring Cycle</span></a></div></div><div class=xhs-section><div class=xhs-section-header><span class=xhs-logo-badge>小红书</span>
+<span class=xhs-section-title>Watch on 小红书</span></div><div class=xhs-cards><a href="https://www.xiaohongshu.com/discovery/item/698e8cf6000000000b010b63?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=AB5nnfcqs3ToPQBQMsP2SZXev_nsMjZgS2EUYXt-UANn0=&amp;xsec_source=pc_share" target=_blank rel=noopener class=xhs-card><div class=xhs-card-inner><div class=xhs-card-icon>▶</div><div class=xhs-card-text><div class=xhs-card-title>和声学400年只用了一半对称？</div><div class=xhs-card-sub>xiaohongshu.com</div></div><div class=xhs-card-arrow>→</div></div></a></div></div><div class="episode-content content"><h2 id=overview>Overview</h2><p>The perfect authentic cadence — dominant seventh to tonic — has been the gravitational engine of Western tonal music for four centuries. It pulls inward: the leading tone <span class=math-inline data-latex=B></span> rises to <span class=math-inline data-latex=C></span>, the tritone <span class=math-inline data-latex=B></span>–<span class=math-inline data-latex=F></span> contracts, the bass falls a fifth.</p><blockquote><p><em>中文:</em> &ldquo;但是，如果我告诉你，它有一个&rsquo;镜像版本&rsquo;——同样平滑，同样到达，但引力方向完全相反——你会相信吗？&rdquo;</p></blockquote><p>This mirror version is <strong>negative harmony</strong>: a reflection of the chromatic circle that preserves every voice-leading distance while reversing every harmonic direction. The operation is not a curiosity — it is one of the 12 reflections in the <strong>dihedral group</strong> <span class=math-inline data-latex=D_{12}></span>, the full symmetry group of the regular 12-gon. Western tonal harmony has systematically explored the 12 rotations (transpositions) of <span class=math-inline data-latex=D_{12}></span> while largely leaving the 12 reflections unexplored.</p><p>This episode is the first in a four-episode arc on Jacob Collier&rsquo;s mathematics. The framework connects to EP04 (<span class=math-inline data-latex=\mathbb{Z}_{12}></span> and group actions) and forward to EP17 (Neo-Riemannian theory).</p><hr><h2 id=prerequisites>Prerequisites</h2><ul><li><a href=https://amath390.sibeliusp.com/episodes/ep04/ class=episode-ref-link>The All-Interval Row and <span class=math-inline data-latex=\mathbb{Z}_{12}></span> (EP04)</a>
+— pitch classes, group actions, stabilizers</li><li><a href=https://amath390.sibeliusp.com/episodes/ep01/ class=episode-ref-link>Overtone Series and Intervals (EP01)</a>
+— just intervals, harmonic series</li><li>Basic group theory: groups, generators, relations, group homomorphisms</li></ul><hr><h2 id=definitions>Definitions</h2><div class=definition-block id=definition-10.1><div class=block-label>Definition 10.1 (Pitch Class Group ℤ₁₂)</div><div class=block-body><p>The <strong>pitch class group</strong> is the cyclic group <span class=math-inline data-latex="\mathbb{Z}_{12} = \{0, 1, 2, \ldots, 11\}"></span> under addition modulo 12. Each element represents one of the 12 chromatic pitch classes (C=0, C♯=1, …, B=11), with octave equivalence: pitch classes differing by a multiple of 12 are identified.</p><p>The <strong>transposition</strong> by <span class=math-inline data-latex=k></span> semitones is the map <span class=math-inline data-latex="T_k: x \mapsto x + k \pmod{12}"></span>. Transpositions form the cyclic subgroup <span class=math-inline data-latex="\{T_0, T_1, \ldots, T_{11}\} \cong \mathbb{Z}_{12}"></span> of the group of pitch-class transformations.</p></div></div><div class=definition-block id=definition-10.2><div class=block-label>Definition 10.2 (Pitch-Class Inversion)</div><div class=block-body><p>The <strong>inversion</strong> (or reflection) through axis <span class=math-inline data-latex=n/2></span> is the map</p><p><span class=math-display data-latex="I_n : \mathbb{Z}_{12} \to \mathbb{Z}_{12}, \qquad I_n(x) = n - x \pmod{12}"></span></p><p>Geometrically, <span class=math-inline data-latex=I_n></span> reflects the 12-gon through the axis passing through the midpoint of pitch classes <span class=math-inline data-latex=n/2></span> and <span class=math-inline data-latex="n/2 + 6"></span> (mod 12).</p><p>For <strong>negative harmony in C major</strong>, the axis passes through the midpoint between E (pitch class 4) and E♭ (pitch class 3), equivalently between G (7) and C (0) — giving <span class=math-inline data-latex="n = 7"></span> and the formula <span class=math-inline data-latex="I_7(x) = 7 - x \pmod{12}"></span>:</p><table><thead><tr><th>Pitch</th><th>PC</th><th><span class=math-inline data-latex=I_7></span> image</th><th>Image name</th></tr></thead><tbody><tr><td>C</td><td>0</td><td>7</td><td>G</td></tr><tr><td>D</td><td>2</td><td>5</td><td>F</td></tr><tr><td>E</td><td>4</td><td>3</td><td>E♭</td></tr><tr><td>F</td><td>5</td><td>2</td><td>D</td></tr><tr><td>G</td><td>7</td><td>0</td><td>C</td></tr><tr><td>A</td><td>9</td><td>10</td><td>B♭</td></tr><tr><td>B</td><td>11</td><td>8</td><td>A♭</td></tr></tbody></table><p>Note that C and G exchange, and E and E♭ exchange — as stated in the narration: &ldquo;主音 C 和属音 G 互相交换；降E 和 E 也互换.&rdquo;</p></div></div><div class=definition-block id=definition-10.3><div class=block-label>Definition 10.3 (Dihedral Group D₁₂)</div><div class=block-body><p>The <strong>dihedral group</strong> <span class=math-inline data-latex=D_{12}></span> is the group of symmetries of a regular 12-gon. It has order 24 and is generated by two elements:</p><ul><li><span class=math-inline data-latex=r></span>: rotation by <span class=math-inline data-latex="2\pi/12 = 30°"></span> (transposition by 1 semitone, <span class=math-inline data-latex=T_1></span>)</li><li><span class=math-inline data-latex=s></span>: a fixed reflection (e.g., <span class=math-inline data-latex=I_0></span>)</li></ul><p>Subject to the relations:</p><p><span class=math-display data-latex="r^{12} = e, \qquad s^2 = e, \qquad srs = r^{-1}"></span></p><p>The 24 elements decompose as:</p><ul><li>12 <strong>rotations</strong>: <span class=math-inline data-latex="\{e, r, r^2, \ldots, r^{11}\}"></span> — transpositions <span class=math-inline data-latex="T_0, \ldots, T_{11}"></span></li><li>12 <strong>reflections</strong>: <span class=math-inline data-latex="\{s, sr, sr^2, \ldots, sr^{11}\}"></span> — inversions <span class=math-inline data-latex="I_0, I_1, \ldots, I_{11}"></span></li></ul><p>The relation <span class=math-inline data-latex="srs = r^{-1}"></span> encodes: a reflection composed with a rotation composed with the same reflection gives the inverse rotation — &ldquo;reflection reverses the direction of rotation.&rdquo;</p></div></div><div class=definition-block id=definition-10.4><div class=block-label>Definition 10.4 (Fixed Points of a Reflection)</div><div class=block-body><p>A pitch class <span class=math-inline data-latex="x \in \mathbb{Z}_{12}"></span> is a <strong>fixed point</strong> of <span class=math-inline data-latex=I_n></span> if <span class=math-inline data-latex="I_n(x) = x"></span>, i.e., <span class=math-inline data-latex="n - x \equiv x \pmod{12}"></span>, i.e., <span class=math-inline data-latex="2x \equiv n \pmod{12}"></span>.</p><ul><li>If <span class=math-inline data-latex=n></span> is even, this has two solutions: <span class=math-inline data-latex="x = n/2"></span> and <span class=math-inline data-latex="x = n/2 + 6"></span> (mod 12). These are the two pitch classes on the reflection axis.</li><li>If <span class=math-inline data-latex=n></span> is odd, the equation <span class=math-inline data-latex="2x \equiv n \pmod{12}"></span> has no solutions in <span class=math-inline data-latex=\mathbb{Z}_{12}></span> (since 2 is not invertible mod 12). The axis passes between pitch classes, and there are no fixed pitch classes — all 12 form six exchange pairs.</li></ul><p>For <span class=math-inline data-latex=I_7></span> (negative harmony in C major), <span class=math-inline data-latex="n = 7"></span> is odd, so there are <strong>no fixed pitch classes</strong>. Every note maps to a different note.</p></div></div><hr><h2 id=main-theorems>Main Theorems</h2><div class=theorem-block id=theorem-10.1><div class=block-label>Theorem 10.1 (Distance Preservation Under Reflection)</div><div class=block-body><p>For any two pitch classes <span class=math-inline data-latex="x, y \in \mathbb{Z}_{12}"></span> and any inversion <span class=math-inline data-latex=I_n></span>,</p><p><span class=math-display data-latex="|I_n(x) - I_n(y)| \equiv |x - y| \pmod{12}"></span></p><p>That is, the interval between two pitch classes is preserved by <span class=math-inline data-latex=I_n></span>.</p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p>Compute directly:</p><p><span class=math-display data-latex="I_n(x) - I_n(y) = (n - x) - (n - y) = y - x \pmod{12}"></span></p><p>Therefore <span class=math-inline data-latex="|I_n(x) - I_n(y)| = |y - x| = |x - y|"></span> (mod 12). <span class=math-inline data-latex=\square></span></p><blockquote><p><em>中文:</em> &ldquo;反射变换 <span class=math-inline data-latex=n></span> 映射到 $7$ 减 <span class=math-inline data-latex=n></span>。两个音之间的距离：<span class=math-inline data-latex=n></span> 减 <span class=math-inline data-latex=m></span> 的绝对值。反射后的距离：$7$ 减 <span class=math-inline data-latex=n></span>，减去 $7$ 减 <span class=math-inline data-latex=m></span> 的绝对值，等于 <span class=math-inline data-latex=m></span> 减 <span class=math-inline data-latex=n></span> 的绝对值。完全相等。&rdquo;</p></blockquote></div></div><p><strong>Corollary:</strong> Voice leading — the pattern of semitone distances each voice moves through — is identical in a progression and its negative-harmony mirror. If V→I moves each voice by <span class=math-inline data-latex="d_1, d_2, \ldots, d_k"></span> semitones, then the mirrored progression moves each voice by <span class=math-inline data-latex="d_1, d_2, \ldots, d_k"></span> semitones as well.</p><div class=theorem-block id=theorem-10.2><div class=block-label>Theorem 10.2 (Negative Harmony of G7 in C Major)</div><div class=block-body><p>Under <span class=math-inline data-latex="I_7: x \mapsto 7 - x \pmod{12}"></span>, the G dominant seventh chord <span class=math-inline data-latex="\{7, 11, 2, 5\}"></span> (G–B–D–F) maps to <span class=math-inline data-latex="\{0, 8, 5, 2\}"></span> (C–A♭–F–D), which is an F minor sixth chord (Fm6) in first inversion.</p><p>The cadential motion G7→C (pitch classes <span class=math-inline data-latex="\{7,11,2,5\} \to \{0,4,7\}"></span>) maps to Fm6→Cm (<span class=math-inline data-latex="\{0,8,5,2\} \to \{0,3,7\}"></span>).</p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p>Apply <span class=math-inline data-latex=I_7></span> componentwise to G7 = <span class=math-inline data-latex="\{7, 11, 2, 5\}"></span>:</p><p><span class=math-display data-latex="I_7(7) = 0 \text{ (C)}, \quad I_7(11) = -4 \equiv 8 \text{ (A♭)}, \quad I_7(2) = 5 \text{ (F)}, \quad I_7(5) = 2 \text{ (D)}"></span></p><p>The image set <span class=math-inline data-latex="\{0, 2, 5, 8\}"></span> = <span class=math-inline data-latex="\{C, D, F, A♭\}"></span> = Fm6 (F minor with added sixth: F–A♭–C–D).</p><p>For the tonic C major <span class=math-inline data-latex="\{0, 4, 7\}"></span> (C–E–G):</p><p><span class=math-display data-latex="I_7(0) = 7 \text{ (G)}, \quad I_7(4) = 3 \text{ (E♭)}, \quad I_7(7) = 0 \text{ (C)}"></span></p><p>Image: <span class=math-inline data-latex="\{0, 3, 7\}"></span> = C minor (Cm).</p><p>So G7→Cmaj becomes Fm6→Cm under negative harmony. The dominant-to-tonic authentic cadence becomes a subdominant-to-tonic plagal motion. <span class=math-inline data-latex=\square></span></p></div></div><div class=theorem-block id=theorem-10.3><div class=block-label>Theorem 10.3 (D₁₂ Group Structure)</div><div class=block-body><p>The 24 elements of <span class=math-inline data-latex=D_{12}></span> act on <span class=math-inline data-latex=\mathbb{Z}_{12}></span> as follows:</p><ul><li><strong>Rotations</strong> <span class=math-inline data-latex="T_k(x) = x + k \pmod{12}"></span>: form the normal subgroup <span class=math-inline data-latex="\mathbb{Z}_{12} \trianglelefteq D_{12}"></span></li><li><strong>Reflections</strong> <span class=math-inline data-latex="I_n(x) = n - x \pmod{12}"></span>: form a coset of <span class=math-inline data-latex=\mathbb{Z}_{12}></span> in <span class=math-inline data-latex=D_{12}></span>, not closed under composition</li></ul><p>The composition law is:
+<span class=math-display data-latex="T_k \circ T_j = T_{k+j}, \qquad I_m \circ I_n = T_{m-n}, \qquad T_k \circ I_n = I_{n+k}, \qquad I_m \circ T_k = I_{m-k}"></span></p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p>For rotations: <span class=math-inline data-latex="(T_k \circ T_j)(x) = T_k(x+j) = x+j+k = T_{k+j}(x)"></span>. Clear.</p><p>For two reflections: <span class=math-inline data-latex="(I_m \circ I_n)(x) = I_m(n-x) = m-(n-x) = m-n+x = T_{m-n}(x)"></span>. The composition of two reflections is a rotation by <span class=math-inline data-latex=m-n></span>.</p><p>For rotation then reflection: <span class=math-inline data-latex="(T_k \circ I_n)(x) = T_k(n-x) = n-x+k = (n+k)-x = I_{n+k}(x)"></span>.</p><p>For reflection then rotation: <span class=math-inline data-latex="(I_m \circ T_k)(x) = I_m(x+k) = m-(x+k) = (m-k)-x = I_{m-k}(x)"></span>.</p><p>These are precisely the multiplication rules of <span class=math-inline data-latex=D_{12}></span> with generators <span class=math-inline data-latex="r = T_1"></span> and <span class=math-inline data-latex="s = I_0"></span>, verifying <span class=math-inline data-latex=D_{12}></span> structure. <span class=math-inline data-latex=\square></span></p></div></div><div class=proposition-block id=prop-10.1><div class=block-label>Prop 10.1 (Neo-Riemannian Connection)</div><div class=block-body>The <strong>neo-Riemannian group</strong> generated by the PLR transformations (Parallel, Leading-tone exchange, Relative) on major and minor triads is isomorphic to <span class=math-inline data-latex=D_{12}></span>. The <span class=math-inline data-latex=P></span>, <span class=math-inline data-latex=L></span>, <span class=math-inline data-latex=R></span> operations are inversions <span class=math-inline data-latex=I_n></span> for specific <span class=math-inline data-latex=n></span> depending on the triad root, composed with triad-type switching. This establishes negative harmony as a special case of neo-Riemannian theory.</div></div><hr><h2 id=musical-connection>Musical Connection</h2><div class=music-block><div class=block-label>音乐联系</div><div class=block-body><p><strong>The two halves of <span class=math-inline data-latex=D_{12}></span></strong></p><p>Western tonal harmony from 1600–1900 systematically exploits the rotation subgroup of <span class=math-inline data-latex=D_{12}></span>: modulation is <span class=math-inline data-latex=T_k></span>, the circle of fifths is traversal of <span class=math-inline data-latex=T_7^n></span>, all 24 major and minor keys are orbits under rotation. The reflection half remained largely implicit — present in the mirror counterpoint of Bach&rsquo;s <em>Art of Fugue</em>, in Hindemith&rsquo;s symmetrical constructions, in Bartók&rsquo;s axis system — but was never given a unified theoretical name until Ernst Levy&rsquo;s <em>A Theory of Harmony</em> (1985).</p><blockquote><p><em>中文:</em> &ldquo;几百年来，西方和声学主要系统探索了旋转——大小调、转调、移调，都是旋转操作。反射操作相对较少被系统使用。负和声不是&rsquo;另一种功能&rsquo;——它是&rsquo;另一种引力方向&rsquo;。对称性的另一半。&rdquo;</p></blockquote><p><strong>Why the reflection &ldquo;works&rdquo; musically</strong></p><p>Theorem 10.1 guarantees that every voice-leading motion in the original progression has an equally smooth counterpart in the reflection. The perception of smoothness (Tymoczko 2011) depends only on the sum of voice-leading distances, not on direction. Thus negative harmony is, in a precise sense, the maximally voice-leading-equivalent reharmonization.</p><p>However, direction matters for <strong>harmonic function</strong>: the leading tone <span class=math-inline data-latex=B></span> resolves upward to <span class=math-inline data-latex=C></span> in G7→C because <span class=math-inline data-latex=B></span> is a half-step below <span class=math-inline data-latex=C></span>. Its mirror <span class=math-inline data-latex=A♭></span> resolves downward to <span class=math-inline data-latex=G></span> in <span class=math-inline data-latex=Fm6→Cm></span> because <span class=math-inline data-latex=A♭></span> is a half-step above <span class=math-inline data-latex=G></span>. The tension is real and comparable, but the functional grammar (dominant→tonic vs. subdominant→tonic) is inverted.</p><blockquote><p><em>中文:</em> &ldquo;两条路，长度相同，方向相反。这就是负和声的本质：距离不变，功能镜像。&rdquo;</p></blockquote><p><strong>Historical trajectory: Levy → Coleman → Collier</strong></p><p>Ernst Levy formulated the theory algebraically in the 1940s–1980s. Jazz saxophonist Steve Coleman brought it into improvisational practice in the 1980s. Jacob Collier demonstrated it publicly in 2017, causing Levy&rsquo;s out-of-print book to sell 800 copies overnight. The viral dissemination of a mathematical idea about group symmetry through a YouTube video is itself remarkable.</p><blockquote><p><em>中文:</em> &ldquo;1940年代，瑞士理论家Ernst Levy在极性理论中首先探索了这种对称性……2017年，Jacob Collier在一次访谈中演示了它。Levy那本只卖了32本的书，一夜之间卖出了800多本。&rdquo;</p></blockquote></div></div><hr><h2 id=limits-and-open-questions>Limits and Open Questions</h2><ol><li><p><strong>Axis choice is culturally determined.</strong> The axis <span class=math-inline data-latex="n = 7"></span> (between C and G, axis at E♭/E) is natural for C major because it maps tonic to tonic and dominant to dominant. But the choice of axis depends entirely on the tonal center of the music. For atonal music, there is no canonical axis, and the operation becomes purely a structural transformation without harmonic-functional content.</p></li><li><p><strong>Seventh chords and extensions.</strong> Theorem 10.2 shows G7 maps to Fm6. But jazz chords with ninths, elevenths, and thirteenths have more pitch classes; the reflected chord may not correspond to any standard chord label. The operation is always well-defined algebraically, but the resulting chord may be &ldquo;unnameable&rdquo; within standard nomenclature.</p></li><li><p><strong>Higher-dimensional analogies.</strong> <span class=math-inline data-latex=D_{12}></span> acts on the one-dimensional &ldquo;chromatic circle.&rdquo; Can one define an analogous dihedral action on the two-dimensional torus of keys (EP12), or on the three-dimensional tonnetz? Cohn (2012) and others have explored Riemannian extensions that suggest the answer is yes, but the resulting groups are larger and less tractable.</p></li><li><p><strong>Empirical perceptual studies.</strong> The claim that negative-harmony cadences are perceived as &ldquo;equally smooth but harmonically reversed&rdquo; (Theorem 10.1 + musical analogy) has not been tested in controlled psychoacoustic experiments. Whether listeners unfamiliar with the concept perceive the symmetry, or only those trained in it, is an open empirical question.</p></li></ol><div class=conjecture-block id=conjecture><div class=block-label>Conjecture (Auditory Symmetry Detection)</div><div class=block-body>Naive listeners (without music theory training) hearing a V–I cadence followed by its <span class=math-inline data-latex=I_7></span>-reflection will not spontaneously identify the mirror relationship, but will rate both cadences as approximately equally &ldquo;complete&rdquo; or &ldquo;resolved.&rdquo; This would confirm that voice-leading smoothness (distance-preserved) rather than harmonic function (direction-sensitive) drives the perception of cadential closure.</div></div><hr><h2 id=extended-reading>Extended Reading</h2><div class=yt-container><div class=yt-embed><iframe src="https://www.youtube.com/embed/aewI1F8bA8M?start=77" title="Jacob Collier explains negative harmony" frameborder=0 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy=strict-origin-when-cross-origin allowfullscreen></iframe></div><p class=yt-caption>Jacob Collier's live demonstration of negative harmony — the interview that caused Ernst Levy's out-of-print book to sell 800 copies overnight. The D₁₂ reflection in action, explained intuitively.</p></div><div class=yt-container><div class=yt-embed><iframe src="https://www.youtube.com/embed/SF8CdxcdJgw?start=1" title="Negative harmony deep dive" frameborder=0 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy=strict-origin-when-cross-origin allowfullscreen></iframe></div><p class=yt-caption>A more technical walkthrough of the negative harmony reflection: how the axis n = 7 maps dominant to subdominant, and why voice-leading distances are preserved under the D₁₂ reflection (Theorem 10.1).</p></div><h2 id=academic-references>Academic References</h2><ol><li><p>Levy, E. (1985). <em>A Theory of Harmony</em>. SUNY Press.</p></li><li><p>Cohn, R. (1998). Introduction to Neo-Riemannian theory: A survey and a historical perspective. <em>Journal of Music Theory</em>, 42(2), 167–180.</p></li><li><p>Tymoczko, D. (2011). <em>A Geometry of Music: Harmony and Counterpoint in the Extended Common Practice</em>. Oxford University Press.</p></li><li><p>Hook, J. (2002). Uniform triadic transformations. <em>Journal of Music Theory</em>, 46(1–2), 57–126.</p></li><li><p>Straus, J. N. (2005). <em>Introduction to Post-Tonal Theory</em> (3rd ed.). Prentice Hall. Ch. 2 (Pitch-class sets and operations).</p></li><li><p>Collier, J. (2017). Negative harmony demonstration. <em>YouTube</em> (various interviews). [Publicly available.]</p></li><li><p>Fiore, T. M., & Satyendra, R. (2005). Generalized contextual groups. <em>Music Theory Spectrum</em>, 27(1), 99–120.</p></li></ol></div><nav class=ep-nav><a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-nav-prev>← EP09: Combination Tones and Nonlinear Acoustics
+</a><a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-nav-next>EP11: Comma Drift and the Impossibility of Perfect Tuning →</a></nav></article><aside class=ep-toc-aside><div class=ep-toc-sticky><div class=ep-toc-label>本页目录</div><nav id=TableOfContents><ul><li><a href=#overview>Overview</a></li><li><a href=#prerequisites>Prerequisites</a></li><li><a href=#definitions>Definitions</a></li><li><a href=#main-theorems>Main Theorems</a></li><li><a href=#musical-connection>Musical Connection</a></li><li><a href=#limits-and-open-questions>Limits and Open Questions</a></li><li><a href=#extended-reading>Extended Reading</a></li><li><a href=#academic-references>Academic References</a></li></ul></nav></div></aside></div><footer class=site-footer><div class=footer-content><a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link><img src=/images/avatar.png alt="Sibelius P." class=footer-avatar></a><div class=footer-text><span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
 <span class=footer-sep>·</span>
 <a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener>小红书</a>
 <span class=footer-sep>·</span>
-<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span>
-</div>
-</div>
-</footer>
-</main>
-</div>
-</body>
-</html>
+<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span></div></div></footer></main></div></body></html>

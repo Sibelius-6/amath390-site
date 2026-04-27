@@ -1,222 +1,78 @@
-<!doctype html><html lang=zh-cn>
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<title>EP27: Answering Viral Critics with Mathematics | AMATH 390 数学与音乐</title>
-<meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
-<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous>
-<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script>
-<script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('[data-latex]').forEach(function(a){try{katex.render(a.getAttribute('data-latex'),a,{displayMode:a.classList.contains('math-display'),throwOnError:!1})}catch(b){console.warn('KaTeX:',b.message,a)}})})</script>
-<link rel=icon type=image/png sizes=32x32 href=/favicon-32.png>
-<link rel=icon type=image/png sizes=16x16 href=/favicon-16.png>
-<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
-<link rel=stylesheet href=/css/amath390.css>
-</head>
-<body>
-<div class=layout-wrapper>
-<nav class=sidebar>
-<div class=sidebar-header>
-<a href=/ class=sidebar-title>AMATH 390</a>
-<div class=sidebar-subtitle>数学与音乐</div>
-</div>
-<div class=arc-group>
-<div class=arc-label>数学基础篇</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link>
-<span class=ep-num>01</span>
+<!doctype html><html lang=zh-cn><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>EP27: Answering Viral Critics with Mathematics | AMATH 390 数学与音乐</title><meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music"><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script><script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("[data-latex]").forEach(function(e){try{katex.render(e.getAttribute("data-latex"),e,{displayMode:e.classList.contains("math-display"),throwOnError:!1})}catch(t){console.warn("KaTeX:",t.message,e)}})})</script><link rel=icon type=image/png sizes=32x32 href=/favicon-32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=stylesheet href=/css/amath390.css></head><body><div class=layout-wrapper><nav class=sidebar><div class=sidebar-header><a href=/ class=sidebar-title>AMATH 390</a><div class=sidebar-subtitle>数学与音乐</div></div><div class=arc-group><div class=arc-label>数学基础篇</div><a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link><span class=ep-num>01</span>
 <span class=ep-title>Chord Space and the Torus</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep02/ class=ep-link>
-<span class=ep-num>02</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep02/ class=ep-link><span class=ep-num>02</span>
 <span class=ep-title>String Vibration and the Wave Equation</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link>
-<span class=ep-num>03</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link><span class=ep-num>03</span>
 <span class=ep-title>Bach and Graph Connectivity</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link>
-<span class=ep-num>04</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link><span class=ep-num>04</span>
 <span class=ep-title>All-Interval Rows and ℤ₁₂</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link>
-<span class=ep-num>05</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link><span class=ep-num>05</span>
 <span class=ep-title>Turán's Theorem and Counterpoint</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-link>
-<span class=ep-num>06</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-link><span class=ep-num>06</span>
 <span class=ep-title>Graph Coloring and Voice Assignment</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-link>
-<span class=ep-num>07</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-link><span class=ep-num>07</span>
 <span class=ep-title>Information Entropy and All-Interval Rows</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-link>
-<span class=ep-num>08</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-link><span class=ep-num>08</span>
 <span class=ep-title>Shepard Tones and the Tritone Paradox</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link>
-<span class=ep-num>09</span>
-<span class=ep-title>Combination Tones and Nonlinear Acoustics</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>Jacob Collier 系列</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep10/ class=ep-link>
-<span class=ep-num>10</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link><span class=ep-num>09</span>
+<span class=ep-title>Combination Tones and Nonlinear Acoustics</span></a></div><div class=arc-group><div class=arc-label>Jacob Collier 系列</div><a href=https://amath390.sibeliusp.com/episodes/ep10/ class=ep-link><span class=ep-num>10</span>
 <span class=ep-title>Negative Harmony and the Dihedral Group D₁₂</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link>
-<span class=ep-num>11</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link><span class=ep-num>11</span>
 <span class=ep-title>Comma Drift and the Impossibility of Perfect Tuning</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep12/ class=ep-link>
-<span class=ep-num>12</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep12/ class=ep-link><span class=ep-num>12</span>
 <span class=ep-title>The Circle of Fifths as a Folded Spiral</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-link>
-<span class=ep-num>13</span>
-<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>拓扑数学专篇</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-link>
-<span class=ep-num>14</span>
-<span class=ep-title>Tonnetz Hodge Duality</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>歌剧系列</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-link>
-<span class=ep-num>15</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-link><span class=ep-num>13</span>
+<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span></a></div><div class=arc-group><div class=arc-label>拓扑数学专篇</div><a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-link><span class=ep-num>14</span>
+<span class=ep-title>Tonnetz Hodge Duality</span></a></div><div class=arc-group><div class=arc-label>歌剧系列</div><a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-link><span class=ep-num>15</span>
 <span class=ep-title>Opera Acoustics and the Singer's Formant</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link>
-<span class=ep-num>16</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link><span class=ep-num>16</span>
 <span class=ep-title>Rossini's Code — Budden, Gossett, and the Convention System</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-link>
-<span class=ep-num>17</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-link><span class=ep-num>17</span>
 <span class=ep-title>Leitmotif Networks — Wagner's Ring Cycle</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-link>
-<span class=ep-num>18</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-link><span class=ep-num>18</span>
 <span class=ep-title>Game Theory in Operatic Duets</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link>
-<span class=ep-num>19</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link><span class=ep-num>19</span>
 <span class=ep-title>Vibrato as FM Synthesis</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-link>
-<span class=ep-num>20</span>
-<span class=ep-title>Character Interaction Networks in Opera</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>AI 音乐三部曲</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-link>
-<span class=ep-num>21</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-link><span class=ep-num>20</span>
+<span class=ep-title>Character Interaction Networks in Opera</span></a></div><div class=arc-group><div class=arc-label>AI 音乐三部曲</div><a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-link><span class=ep-num>21</span>
 <span class=ep-title>From Markov to Diffusion — Sixty Years of AI Composition</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-link>
-<span class=ep-num>22</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-link><span class=ep-num>22</span>
 <span class=ep-title>How AI Writes Music — EnCodec and RVQ</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-link>
-<span class=ep-num>23</span>
-<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span>
-</a>
-</div>
-<div class=sidebar-footer>
-<a href=/theorems/>定理索引</a>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-link><span class=ep-num>23</span>
+<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span></a></div><div class=arc-group><div class=arc-label>流行音乐 × 数学</div><a href=https://amath390.sibeliusp.com/episodes/ep24/ class=ep-link><span class=ep-num>24</span>
+<span class=ep-title>The Information Code of Pop Music</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep25/ class=ep-link><span class=ep-num>25</span>
+<span class=ep-title>Why Music Gives You Goosebumps — Prediction Error and Frisson</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep26/ class=ep-link><span class=ep-num>26</span>
+<span class=ep-title>The 1/f Law of Music</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep27/ class="ep-link active"><span class=ep-num>27</span>
+<span class=ep-title>Answering Viral Critics with Mathematics</span></a></div><div class=arc-group><div class=arc-label>音乐技术系列</div><a href=https://amath390.sibeliusp.com/episodes/ep28/ class=ep-link><span class=ep-num>28</span>
+<span class=ep-title>Your Microphone Is a Damped Oscillator</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep29/ class=ep-link><span class=ep-num>29</span>
+<span class=ep-title>Primes in the Studio — Standing Waves and QRD Diffusers</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep30/ class=ep-link><span class=ep-num>30</span>
+<span class=ep-title>The Sampling Theorem Is Not What You Think</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep31/ class=ep-link><span class=ep-num>31</span>
+<span class=ep-title>The Warmth of Moog Has an Equation</span></a></div><div class=sidebar-footer><a href=/theorems/>定理索引</a>
 <a href=/domains/>数学领域</a>
-<a href=/about/>关于</a>
-</div>
-</nav>
-<main class=main-content>
-<div class=episode-layout>
-<article class=episode-page>
-<header class=episode-header>
-<div class=ep-badge>EP27</div>
-<h1 class=ep-main-title>EP27: Answering Viral Critics with Mathematics</h1>
-<div class=ep-subtitle>EP24–26工具综合应用, surprisal方差</div>
-<div class=ep-meta>
-<span class=meta-item>
-<span class=meta-icon>▶</span> 7:52
-</span>
-<span class="meta-item domains">
-<span class=domain-chip>Information Theory</span>
-</span>
-</div>
-</header>
-<div class=cross-refs>
-<h3 class=cross-refs-title>前置知识</h3>
-<div class=ref-cards>
-<a href=https://amath390.sibeliusp.com/episodes/ep24/ class="ref-card callback">
-<span class=ref-ep>EP24</span>
+<a href=/about/>关于</a></div></nav><main class=main-content><div class=episode-layout><article class=episode-page><header class=episode-header><div class=ep-badge>EP27</div><h1 class=ep-main-title>EP27: Answering Viral Critics with Mathematics</h1><div class=ep-subtitle>Arc synthesis: EP24–26 tools, surprisal variance</div><div class=ep-meta><span class=meta-item><span class=meta-icon>▶</span> 7:52
+</span><span class="meta-item domains"><span class=domain-chip>Information Theory</span></span></div></header><div class=cross-refs><h3 class=cross-refs-title>前置知识</h3><div class=ref-cards><a href=https://amath390.sibeliusp.com/episodes/ep24/ class="ref-card callback"><span class=ref-ep>EP24</span>
 <span class=ref-title>The Information Code of Pop Music</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep25/ class="ref-card callback">
-<span class=ref-ep>EP25</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep25/ class="ref-card callback"><span class=ref-ep>EP25</span>
 <span class=ref-title>Why Music Gives You Goosebumps — Prediction Error and Frisson</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep26/ class="ref-card callback">
-<span class=ref-ep>EP26</span>
-<span class=ref-title>The 1/f Law of Music</span>
-</a>
-</div>
-</div>
-<div class="episode-content content">
-<h2 id=概述>概述</h2>
-<p><em>本页内容正在撰写中。请先观看<a href=#>小红书视频</a>了解核心概念。</em></p>
-<p>本集探讨：EP24–26工具综合应用, surprisal方差。</p>
-<h2 id=前置知识>前置知识</h2>
-<h2 id=定义>定义</h2>
-<h2 id=主要定理>主要定理</h2>
-<h2 id=音乐联系>音乐联系</h2>
-<h2 id=局限性与开放问题>局限性与开放问题</h2>
-<h2 id=参考文献>参考文献</h2>
-<ol>
-<li><em>待补充</em></li>
-</ol>
-</div>
-<nav class=ep-nav>
-<a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-nav-prev>
-← EP23: Can AI Understand Music? Latent Space and Information Bottleneck
-</a>
-</nav>
-</article>
-<aside class=ep-toc-aside>
-<div class=ep-toc-sticky>
-<div class=ep-toc-label>本页目录</div>
-<nav id=TableOfContents>
-<ul>
-<li><a href=#概述>概述</a></li>
-<li><a href=#前置知识>前置知识</a></li>
-<li><a href=#定义>定义</a></li>
-<li><a href=#主要定理>主要定理</a></li>
-<li><a href=#音乐联系>音乐联系</a></li>
-<li><a href=#局限性与开放问题>局限性与开放问题</a></li>
-<li><a href=#参考文献>参考文献</a></li>
-</ul>
-</nav>
-</div>
-</aside>
-</div>
-<footer class=site-footer>
-<div class=footer-content>
-<a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link>
-<img src=/images/avatar.png alt="Sibelius P." class=footer-avatar>
-</a>
-<div class=footer-text>
-<span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep26/ class="ref-card callback"><span class=ref-ep>EP26</span>
+<span class=ref-title>The 1/f Law of Music</span></a></div></div><div class="episode-content content"><h2 id=overview>Overview</h2><p>This episode closes the Pop Music × Math Arc (EP24–27) by applying the three analytical tools built across the arc to a real-world controversy: are short-video AI hooks and Suno-style generative music the same phenomenon, or fundamentally different problems wearing the same label?</p><p>The mathematical argument is that <em>mean entropy alone is insufficient</em> to characterise a musical signal. Two distributions can share the same Shannon entropy yet differ drastically in their <em>surprisal variance</em>, their melody–harmony mutual information, and the shape of their power spectral density. These three numbers — surprisal variance <span class=math-inline data-latex=\mathrm{Var}[I(X)]></span>, mutual information <span class=math-inline data-latex=I(M;H)></span>, and spectral exponent <span class=math-inline data-latex=\alpha></span> — form a &ldquo;fingerprint&rdquo; that separates human pop, human classical, early AI output, and pure random melody in a way that a single entropy number cannot.</p><p>The episode also traces how platform architecture shapes <em>which</em> criticism surfaces first: short-video platforms amplify the attention problem (low-entropy hooks engineered for compulsive replay), while streaming and rights systems amplify the accountability problem (untraceable training data, unattributable synthesis). The mathematics does not adjudicate copyright law, but it does clarify the factual claims embedded in the debate.</p><blockquote><p><em>中文:</em> &ldquo;抖音AI要的，是十五秒就能洗脑的钩子。Suno要的，是一句提示词生成整首歌。它们都叫&rsquo;AI音乐&rsquo;，但根本不是同一个物种。&rdquo;</p></blockquote><hr><h2 id=prerequisites>Prerequisites</h2><ul><li><a href=https://amath390.sibeliusp.com/episodes/ep24/ class=episode-ref-link>The Information Code of Pop Music (EP24)</a>
+— Shannon entropy <span class=math-inline data-latex=H(X)></span>, LZ compression rate, Kolmogorov complexity</li><li><a href=https://amath390.sibeliusp.com/episodes/ep25/ class=episode-ref-link>Why Music Gives You Goosebumps (EP25)</a>
+— prediction error <span class=math-inline data-latex=\delta></span>, surprisal, frisson</li><li><a href=https://amath390.sibeliusp.com/episodes/ep26/ class=episode-ref-link>The 1/f Law of Music (EP26)</a>
+— power spectral density, Hurst exponent <span class=math-inline data-latex=H></span>, spectral exponent <span class=math-inline data-latex=\alpha></span></li><li><a href=https://amath390.sibeliusp.com/episodes/ep18/ class=episode-ref-link>Game Theory and Evolutionarily Stable Strategies (EP18)</a>
+— Nash equilibrium, mixed strategies</li></ul><hr><h2 id=definitions>Definitions</h2><div class=definition-block id=definition-27.1><div class=block-label>Definition 27.1 (Surprisal (Self-Information))</div><div class=block-body><p>Let <span class=math-inline data-latex=X></span> be a random variable taking values in a finite set <span class=math-inline data-latex=\mathcal{X}></span> with distribution <span class=math-inline data-latex="p(x) = P(X = x)"></span>. The <strong>surprisal</strong> (self-information) of outcome <span class=math-inline data-latex=x></span> is defined as</p><p><span class=math-display data-latex="I(x) = -\log_2 p(x) \quad \text{(bits)}"></span></p><p>The Shannon entropy is the expected surprisal:</p><p><span class=math-display data-latex="H(X) = \mathbb{E}[I(X)] = -\sum_{x \in \mathcal{X}} p(x) \log_2 p(x)"></span></p><p><strong>Intuition:</strong> <span class=math-inline data-latex=I(x)></span> quantifies the &ldquo;surprise&rdquo; of observing outcome <span class=math-inline data-latex=x></span>. Lower probability events carry higher surprisal.</p></div></div><p><strong>Worked example:</strong> Suppose the next note of a melody is drawn uniformly from the C major scale (7 pitches). Then each note has surprisal <span class=math-inline data-latex="I = \log_2 7 \approx 2.81"></span> bits, entropy <span class=math-inline data-latex="H = 2.81"></span> bits, and variance <span class=math-inline data-latex="\mathrm{Var}[I] = 0"></span> (uniform distribution, zero variance). Now change the distribution: tonic C is chosen with probability 0.5; each of the remaining 6 pitches is chosen with probability <span class=math-inline data-latex=1/12></span>. Then <span class=math-inline data-latex="I(\text{C}) = \log_2 2 = 1"></span> bit, <span class=math-inline data-latex="I(\text{others}) = \log_2 12 \approx 3.58"></span> bits, entropy <span class=math-inline data-latex="H \approx 2.37"></span> bits, and surprisal variance is strictly positive — this is the &ldquo;peak effect&rdquo; produced by the tonal centre.</p><hr><div class=definition-block id=definition-27.2><div class=block-label>Definition 27.2 (Surprisal Variance)</div><div class=block-body><p>Given distribution <span class=math-inline data-latex=p></span>, the <strong>surprisal variance</strong> is defined as</p><p><span class=math-display data-latex="\mathrm{Var}[I(X)] = \mathbb{E}\!\left[I(X)^2\right] - \left(\mathbb{E}[I(X)]\right)^2 = \sum_{x} p(x) \log_2^2 p(x) - H(X)^2"></span></p><p>Surprisal variance quantifies the <strong>peak-valley structure (peakedness)</strong> of the surprise distribution:</p><ul><li>Uniform distribution: <span class=math-inline data-latex="\mathrm{Var}[I] = 0"></span> (all events equally surprising, no peaks)</li><li>Concentrated distribution (one high-probability event + a few low-probability events): <span class=math-inline data-latex=\mathrm{Var}[I]></span> is large (most moments are &ldquo;boring&rdquo;, occasionally &ldquo;very surprising&rdquo;)</li></ul></div></div><hr><div class=definition-block id=definition-27.3><div class=block-label>Definition 27.3 (Melody–Harmony Mutual Information)</div><div class=block-body><p>Let melody variable <span class=math-inline data-latex=M></span> and harmony variable <span class=math-inline data-latex=H_{\text{chord}}></span> have joint distribution <span class=math-inline data-latex="p(m, h)"></span>. The <strong>mutual information</strong> is defined as</p><p><span class=math-display data-latex="I(M; H_{\text{chord}}) = H(M) + H(H_{\text{chord}}) - H(M, H_{\text{chord}})"></span></p><p>Equivalently,</p><p><span class=math-display data-latex="I(M; H_{\text{chord}}) = \sum_{m,h} p(m,h) \log_2 \frac{p(m,h)}{p(m)\,p(h)}"></span></p><p><strong>Intuition:</strong> <span class=math-inline data-latex="I(M; H_{\text{chord}})"></span> measures how many bits of uncertainty about the melody note are eliminated once the harmony is known. High mutual information means melody and harmony are tightly coordinated (chord tones dominate); low mutual information means melody is nearly independent of harmony (possibly atonal or randomly synthesised).</p></div></div><p><strong>Worked example:</strong> In C major, if 90% of melody notes are chord tones, <span class=math-inline data-latex="I(M; H_{\text{chord}})"></span> is high. If melody notes are uniformly distributed across all 12 pitch classes regardless of harmony, then <span class=math-inline data-latex="I(M; H_{\text{chord}}) = 0"></span>. Empirically, human pop music shows typical mutual information of about 0.8–1.5 bits/note, while early AI generation (random resampling) shows about 0.1–0.3 bits/note.</p><p>The Venn diagram below illustrates how <span class=math-inline data-latex=I(M;H_c)></span> occupies exactly the overlap region between the two marginal entropies.</p><figure><svg viewBox="0 0 340 160" style="max-width:340px;width:100%;font-family:sans-serif;font-size:13px"><circle cx="120" cy="80" r="65" fill="#3498db" fill-opacity=".35" stroke="#3498db" stroke-width="2"/><circle cx="220" cy="80" r="65" fill="#e74c3c" fill-opacity=".35" stroke="#e74c3c" stroke-width="2"/><text x="80" y="84" text-anchor="middle" fill="#2c3e50">H(M)</text><text x="170" y="50" text-anchor="middle" fill="#27ae60" font-weight="bold">I(M;H)</text><text x="260" y="84" text-anchor="middle" fill="#2c3e50">H(H)</text><text x="120" y="155" text-anchor="middle" fill="#3498db" font-size="11">Melody entropy</text><text x="220" y="155" text-anchor="middle" fill="#e74c3c" font-size="11">Harmony entropy</text></svg><figcaption>Mutual information I(M;H) as the overlap between melody and harmony entropy. Pop music maximises this shared region — a single fragment retrieves the rest.</figcaption></figure><hr><div class=definition-block id=definition-27.4><div class=block-label>Definition 27.4 (LZ Compression Rate)</div><div class=block-body><p>Given a symbol sequence <span class=math-inline data-latex="x_1 x_2 \cdots x_N"></span> encoded as a byte string, the <strong>LZ compression rate</strong> is defined as</p><p><span class=math-display data-latex="\rho_{\text{LZ}} = \frac{\text{compressed bytes}}{\text{original bytes}} \in (0, 1]"></span></p><p><span class=math-inline data-latex="\rho_{\text{LZ}} \to 0"></span> indicates high repetitiveness and high compressibility (low complexity); <span class=math-inline data-latex="\rho_{\text{LZ}} \to 1"></span> indicates near-randomness and incompressibility (high complexity). The LZ compression rate is a computable approximation to Kolmogorov complexity (see EP24).</p></div></div><hr><h2 id=main-theorems>Main Theorems</h2><div class=theorem-block id=theorem-27.1><div class=block-label>Theorem 27.1 (Surprisal Variance Decomposition)</div><div class=block-body><p>For any discrete distribution <span class=math-inline data-latex=p></span>, the surprisal variance satisfies</p><p><span class=math-display data-latex="\mathrm{Var}[I(X)] = \mathbb{E}\!\left[\log_2^2 p(X)\right] - H(X)^2"></span></p><p>with the bounds</p><p><span class=math-display data-latex="0 \leq \mathrm{Var}[I(X)] \leq H(X) \cdot \log_2\frac{1}{p_{\min}} - H(X)^2"></span></p><p>where <span class=math-inline data-latex="p_{\min} = \min_{x: p(x)>0} p(x)"></span>. The lower bound is achieved if and only if the distribution is uniform.</p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p><strong>Lower bound:</strong> Non-negativity of variance is a basic fact: <span class=math-inline data-latex="\mathrm{Var}[Z] = \mathbb{E}[Z^2] - (\mathbb{E}[Z])^2 \geq 0"></span> for any random variable <span class=math-inline data-latex=Z></span>. Equality holds if and only if <span class=math-inline data-latex=Z></span> is constant, i.e., all <span class=math-inline data-latex="I(x) = c"></span>, i.e., <span class=math-inline data-latex=p(x)></span> is constant for all <span class=math-inline data-latex=x></span> (uniform distribution).</p><p><strong>Upper bound:</strong> Since <span class=math-inline data-latex="I(x) = -\log_2 p(x) \leq -\log_2 p_{\min} = \log_2(1/p_{\min})"></span>,</p><p><span class=math-display data-latex="\mathbb{E}[I(X)^2] \leq \mathbb{E}\!\left[I(X) \cdot \log_2 \frac{1}{p_{\min}}\right] = H(X) \cdot \log_2 \frac{1}{p_{\min}}"></span></p><p>Substituting into the variance formula:</p><p><span class=math-display data-latex="\mathrm{Var}[I(X)] = \mathbb{E}[I(X)^2] - H(X)^2 \leq H(X) \cdot \log_2 \frac{1}{p_{\min}} - H(X)^2 \qquad \square"></span></p></div></div><hr><div class=theorem-block id=theorem-27.2><div class=block-label>Theorem 27.2 (Same-Entropy Different-Variance Lemma)</div><div class=block-body><p>For <span class=math-inline data-latex="|\mathcal{X}| = n \geq 3"></span>, there exist two distributions <span class=math-inline data-latex=p></span> and <span class=math-inline data-latex=q></span> on the same set <span class=math-inline data-latex=\mathcal{X}></span> satisfying</p><p><span class=math-display data-latex="H_p(X) = H_q(X)"></span></p><p>but <span class=math-inline data-latex="\mathrm{Var}_p[I(X)] \neq \mathrm{Var}_q[I(X)]"></span>.</p><p>That is: <strong>equal Shannon entropy does not determine the surprisal variance</strong>. Entropy is the first moment; variance is the second central moment; they carry independent information.</p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p><strong>Constructive example (<span class=math-inline data-latex="n = 3"></span>):</strong> Let <span class=math-inline data-latex="\mathcal{X} = \{a, b, c\}"></span>.</p><p><strong>Distribution <span class=math-inline data-latex=p></span> (uniform):</strong> <span class=math-inline data-latex="p(a) = p(b) = p(c) = 1/3"></span>. Then</p><p><span class=math-display data-latex="H_p = \log_2 3 \approx 1.585 \text{ bits}, \qquad \mathrm{Var}_p[I] = 0"></span></p><p><strong>Distribution <span class=math-inline data-latex=q></span> (non-uniform, equal entropy):</strong> We seek <span class=math-inline data-latex="(q_a, q_b, q_c)"></span> with <span class=math-inline data-latex="H_q = \log_2 3"></span> but non-zero variance.</p><p>Take the one-parameter family <span class=math-inline data-latex="q(\alpha) = (\alpha, \alpha, 1-2\alpha)"></span>, <span class=math-inline data-latex="\alpha \in (0, 1/2)"></span>.</p><p>Then <span class=math-inline data-latex="H_q(\alpha) = -2\alpha \log_2 \alpha - (1-2\alpha)\log_2(1-2\alpha)"></span>,</p><p><span class=math-display data-latex="\mathbb{E}_q[I^2] = 2\alpha \log_2^2(1/\alpha) + (1-2\alpha)\log_2^2\!\left(\frac{1}{1-2\alpha}\right)"></span></p><p><span class=math-display data-latex="\mathrm{Var}_q[I] = \mathbb{E}_q[I^2] - H_q(\alpha)^2"></span></p><p>At <span class=math-inline data-latex="\alpha = 1/3"></span>, <span class=math-inline data-latex=q></span> reduces to the uniform distribution with zero variance. For <span class=math-inline data-latex="\alpha \neq 1/3"></span>, the variance is strictly positive. Since <span class=math-inline data-latex=H_q(\alpha)></span> varies continuously from <span class=math-inline data-latex=0></span> to its maximum <span class=math-inline data-latex="\log_2 3"></span> on <span class=math-inline data-latex="\alpha \in (0, 1/3)"></span>, the intermediate value theorem guarantees an <span class=math-inline data-latex="\alpha_0 \neq 1/3"></span> with <span class=math-inline data-latex="H_q(\alpha_0) = H_q(1/3) = \log_2 3"></span>, while <span class=math-inline data-latex="\mathrm{Var}_q[I] > 0"></span> at that point.</p><p>For a more explicit construction with <span class=math-inline data-latex="n = 4"></span>: take <span class=math-inline data-latex="p = (1/4, 1/4, 1/4, 1/4)"></span> (entropy 2 bits, variance 0) and adjust <span class=math-inline data-latex=q></span> continuously until its entropy also equals 2 bits while its variance remains non-zero.</p><p><strong>Conclusion:</strong> Two distributions can share the same entropy (first moment) yet differ in surprisal variance (second central moment). <span class=math-inline data-latex=\square></span></p></div></div><p>The following script visualises a concrete 8-outcome example: a uniform distribution (zero surprisal variance) and a bimodal distribution, both plotted side by side so the contrast is immediately legible.</p><figure><img src=/images/ep27/fig01_two_distributions_same_entropy_h_different_surprisal_varianc.png alt="Two distributions — same entropy H, different surprisal variance" style=max-width:100%;border-radius:4px><figcaption>Two distributions — same entropy H, different surprisal variance</figcaption></figure><hr><div class=theorem-block id=theorem-27.3><div class=block-label>Theorem 27.3 (Chain Rule for Melody–Harmony Mutual Information)</div><div class=block-body><p>Let melody variable <span class=math-inline data-latex=M></span> and harmony variable <span class=math-inline data-latex=H_c></span> be defined on finite sets. Mutual information satisfies</p><p><span class=math-display data-latex="I(M; H_c) = H(M) + H(H_c) - H(M, H_c) = H(M) - H(M \mid H_c) = H(H_c) - H(H_c \mid M)"></span></p><p>and <span class=math-inline data-latex="I(M; H_c) \geq 0"></span>, with equality if and only if <span class=math-inline data-latex=M></span> and <span class=math-inline data-latex=H_c></span> are independent.</p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p><strong>Non-negativity (via KL divergence):</strong></p><p><span class=math-display data-latex="I(M; H_c) = \sum_{m,h} p(m,h) \log_2 \frac{p(m,h)}{p(m)p(h)} = D_{\text{KL}}\!\left(p(M,H_c) \;\|\; p(M)p(H_c)\right)"></span></p><p>Non-negativity of KL divergence follows from Jensen&rsquo;s inequality applied to the strictly convex function <span class=math-inline data-latex=-\log></span>:</p><p><span class=math-display data-latex="D_{\text{KL}}(p \| q) = \sum_x p(x) \log \frac{p(x)}{q(x)} \geq -\log \sum_x p(x) \cdot \frac{q(x)}{p(x)} = -\log 1 = 0"></span></p><p>Equality holds if and only if <span class=math-inline data-latex="p(m,h) = p(m)p(h)"></span> for all <span class=math-inline data-latex=(m,h)></span>, i.e., independence.</p><p><strong>Chain rule derivation:</strong></p><p>By the chain rule of conditional entropy:</p><p><span class=math-display data-latex="H(M, H_c) = H(M) + H(H_c \mid M) = H(H_c) + H(M \mid H_c)"></span></p><p>Substituting into <span class=math-inline data-latex="I(M;H_c) = H(M) + H(H_c) - H(M, H_c)"></span>:</p><p><span class=math-display data-latex="I(M; H_c) = H(M) + H(H_c) - H(H_c) - H(M \mid H_c) = H(M) - H(M \mid H_c) \qquad \square"></span></p></div></div><hr><div class=theorem-block id=theorem-27.4><div class=block-label>Theorem 27.4 (Nash Equilibrium of the Pop Music Formula)</div><div class=block-body><p>Consider the composer–listener game: the composer chooses strategy <span class=math-inline data-latex="s_C \in \{\text{high-entropy innovation}, \text{low-entropy repetition}\}"></span>; the listener&rsquo;s attention allocation strategy is <span class=math-inline data-latex="s_L \in \{\text{deep listening}, \text{random skipping}\}"></span>. The payoff matrix (with streaming plays as proxy) is</p><p><span class=math-display data-latex="\begin{array}{c|cc}
+& \text{deep listening} & \text{random skipping} \\
+\hline
+\text{high-entropy innovation} & (R_H, U_H) & (r, 0) \\
+\text{low-entropy repetition} & (R_L, U_L) & (R_L \cdot \rho, U_L \cdot \lambda)
+\end{array}"></span></p><p>where <span class=math-inline data-latex="R_H > R_L"></span> (innovative works yield higher payoff under deep listening), <span class=math-inline data-latex="\rho, \lambda \in (0,1)"></span> (discount factors when skipped), and <span class=math-inline data-latex="r \approx 0"></span> (innovative works earn near-zero payoff when skipped).</p><p>If <span class=math-inline data-latex="R_L \cdot \rho > r"></span> and <span class=math-inline data-latex="U_L \cdot \lambda > 0"></span>, the pure-strategy Nash equilibrium is <strong>(low-entropy repetition, random skipping)</strong>: composers choose low-entropy hooks and listeners rely on random skipping to discover content.</p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p><strong>Verifying the Nash equilibrium conditions.</strong> Given that the listener plays &ldquo;random skipping&rdquo;:</p><ul><li>Composer&rsquo;s payoff from &ldquo;low-entropy repetition&rdquo; <span class=math-inline data-latex="= R_L \cdot \rho"></span></li><li>Composer&rsquo;s payoff from &ldquo;high-entropy innovation&rdquo; <span class=math-inline data-latex="= r \approx 0"></span></li><li>Since <span class=math-inline data-latex="R_L \cdot \rho > r"></span>, the composer&rsquo;s best response is &ldquo;low-entropy repetition&rdquo;.</li></ul><p>Given that the composer plays &ldquo;low-entropy repetition&rdquo;:</p><ul><li>Listener&rsquo;s payoff from &ldquo;deep listening&rdquo; <span class=math-inline data-latex="= U_L"></span></li><li>Listener&rsquo;s payoff from &ldquo;random skipping&rdquo; <span class=math-inline data-latex="= U_L \cdot \lambda"></span></li></ul><p>Without platform effects, since <span class=math-inline data-latex="\lambda < 1"></span>, deep listening dominates. However, on short-video platforms the recommendation multiplier <span class=math-inline data-latex="K > 1"></span> raises the expected payoff of random skipping to <span class=math-inline data-latex="U_L \cdot \lambda \cdot K > U_L"></span>, reversing the listener&rsquo;s best response to &ldquo;random skipping&rdquo;.</p><p>When <span class=math-inline data-latex="K > 1/\lambda"></span>, both players&rsquo; best responses are mutually consistent, forming the Nash equilibrium: <strong>(low-entropy repetition, random skipping)</strong>. <span class=math-inline data-latex=\square></span></p><p><strong>Interpretation:</strong> The platform algorithm embeds the recommendation multiplier <span class=math-inline data-latex=K></span> into the payoff structure, shifting the equilibrium point. This is the game-theoretic mechanism behind the &ldquo;AI fast-food music&rdquo; tendency on short-video platforms — no conspiracy required, only incentive-compatible algorithm design.</p></div></div><hr><h2 id=numerical-example-three-metric-verdict-table>Numerical Example: Three-Metric Verdict Table</h2><p>The table below compares four music categories across three quantitative metrics (values are literature-synthesised estimates and theoretical expectations, not results from a single experiment):</p><table><thead><tr><th>Category</th><th>LZ Rate <span class=math-inline data-latex=\rho_{\text{LZ}}></span></th><th>Surprisal Variance <span class=math-inline data-latex=\mathrm{Var}[I]></span></th><th>Melody–Harmony MI <span class=math-inline data-latex=I(M;H_c)></span></th><th>Spectral exponent <span class=math-inline data-latex=\alpha></span></th></tr></thead><tbody><tr><td>Human pop</td><td>0.55–0.70</td><td>1.2–2.0 bits²</td><td>0.8–1.5 bits/note</td><td>0.9–1.2</td></tr><tr><td>Human classical</td><td>0.65–0.80</td><td>0.8–1.5 bits²</td><td>0.6–1.2 bits/note</td><td>0.8–1.2</td></tr><tr><td>Early AI generation</td><td>0.40–0.60</td><td>0.2–0.6 bits²</td><td>0.1–0.4 bits/note</td><td>0.3–0.8</td></tr><tr><td>Random melody</td><td>≈ 1.00</td><td>≈ 0 bits²</td><td>≈ 0 bits/note</td><td>≈ 0</td></tr></tbody></table><p><strong>How to read the table:</strong></p><ul><li><strong>Low LZ rate</strong> = highly repetitive and compressible (pop hooks: low; random: high)</li><li><strong>High surprisal variance</strong> = melody has a clear peak structure with high-probability &ldquo;expected&rdquo; notes and low-probability &ldquo;surprise&rdquo; notes (tonal music: high; uniform random: zero)</li><li><strong>High Melody–Harmony MI</strong> = melody and harmony are tightly coordinated, consistent with tonal grammar (human music: high; early AI: low)</li><li><strong>Spectral exponent <span class=math-inline data-latex="\alpha \approx 1"></span></strong> = pink noise regime (human music: moderate; random: near zero)</li></ul><p>The following script renders the same four-metric verdict as a colour-coded heatmap, making it easy to compare all four music categories at a glance.</p><figure><img src=/images/ep27/fig02_ai_music_verdict_table_4_genres_4_metrics.png alt="AI music verdict table — 4 genres × 4 metrics" style=max-width:100%;border-radius:4px><figcaption>AI music verdict table — 4 genres × 4 metrics</figcaption></figure><blockquote><p><em>中文:</em> &ldquo;数学解释它为什么上头，平台和制度决定这份上头最后算到谁头上。&rdquo;</p></blockquote><p><strong>Application to the Velvet Sundown case:</strong> Velvet Sundown, a fictitious band with over a million monthly listeners on Spotify, was confirmed to be AI-generated. Applying the three-metric fingerprint to its melodies, one would expect: moderate LZ compression rate (the AI has learned repetitive structure), but low surprisal variance (lacking the tonal-centre peak structure), low <span class=math-inline data-latex="I(M; H_c)"></span> (weak melody–harmony coordination), and <span class=math-inline data-latex=\alpha></span> deviating from 1 (distorted statistical structure). Rick Beato&rsquo;s stem-separation test (all layers fused, impossible to isolate) provides independent physical-layer evidence that corroborates these information-theoretic indicators.</p><hr><div class=music-block><div class=block-label>音乐联系</div><div class=block-body><p><strong>Closing the Pop Music × Math Arc</strong></p><p>This is the endpoint of the four-episode arc EP24–EP27. The arc&rsquo;s logic is:</p><ol><li><strong>EP24</strong>: A melody is an information sequence; Shannon entropy and LZ complexity quantify its regularity.</li><li><strong>EP25</strong>: The listener&rsquo;s nervous system is a prediction machine; the temporal distribution of surprisal (mean + variance + spike positions) determines the shape of the emotional response.</li><li><strong>EP26</strong>: A good melody&rsquo;s cross-spectral structure satisfies the 1/f law, simultaneously maintaining short-range freshness and long-range memorability.</li><li><strong>EP27</strong>: These three tools together form an operational fingerprint that distinguishes &ldquo;structured music&rdquo; from &ldquo;unstructured generation.&rdquo;</li></ol><p><strong>Same toolkit, two different critiques</strong></p><p>Both the short-video critique (attention-engineering view) and the streaming critique (copyright accountability view) can be characterised with this toolkit, but they target different kinds of imbalance:</p><ul><li>Short-video AI hooks: LZ rate <strong>too low</strong> (excessive repetition), surprisal variance <strong>too low</strong> (no peak-and-valley surprise) — this is an <strong>entropy-deficiency</strong> problem.</li><li>Suno-style generation: melody–harmony MI <strong>too low</strong> (weak tonal coordination), <span class=math-inline data-latex=\alpha></span> <strong>deviating from 1</strong> (distorted statistical structure) — this is a <strong>structural-deficiency</strong> problem.</li></ul><p>The two kinds of AI music occupy different positions in parameter space, and therefore require different policy responses — this is mathematics&rsquo; direct contribution to policy discussion.</p><p><strong>Platform–institution asymmetry</strong></p><p>Western markets legalised first (the three major labels sued Suno); Chinese markets productised first (platforms established the production pipeline before regulations arrived). Mathematics does not adjudicate which ordering is better, but it clarifies three unavoidable questions regardless: how to label AI generation (requires detectable watermarks, correlating with LZ rate and MI metrics), who authorised training data (statistical traces of copyrighted works are partially detectable), and how to distribute revenue (game-theoretic pricing).</p></div></div><hr><h2 id=limitations-and-open-questions>Limitations and Open Questions</h2><ol><li><p><strong>The three metrics are not sufficient discriminants:</strong> LZ rate, surprisal variance, and melody–harmony MI can distinguish &ldquo;structure present&rdquo; from &ldquo;structure absent&rdquo;, but cannot distinguish &ldquo;structured AI generation&rdquo; (where the AI has learned to mimic human metrics well enough) from genuine human creation. As AI generation quality improves, the discriminating power of these three metrics will decline.</p></li><li><p><strong>Surprisal variance depends on pitch quantisation granularity:</strong> Whether one uses MIDI integers (12 semitones) or finer cent-resolution (100 cents per semitone) substantially affects estimates. Without a unified quantisation standard, numerical comparisons across the literature must be interpreted with care.</p></li><li><p><strong>Simplifying assumptions in the Nash equilibrium model:</strong> The game in Theorem 27.4 assumes only two pure strategies for each player, ignoring mixed-strategy equilibria, multi-player games (platform, record label, listener, and composer as four parties), and reputation effects in repeated games. A more realistic model would require an n-player multi-stage game, making equilibrium analysis considerably more complex.</p></li><li><p><strong>Difficulty of estimating melody–harmony mutual information:</strong> Estimating <span class=math-inline data-latex="I(M; H_c)"></span> in real music requires automatic chord recognition (cf. Viterbi decoding in EP42) and note alignment; both steps introduce independent estimation errors. Low-quality AI generation may fail to yield reliable chord annotations before stem separation is even possible.</p></li><li><p><strong>Policy effectiveness lies beyond mathematics:</strong> Mathematical tools can describe and quantify problems, but &ldquo;how AI generation should be labelled&rdquo;, &ldquo;where the fair-use boundary of training data lies&rdquo;, and &ldquo;how revenue should be apportioned&rdquo; are legal and ethical questions. Mathematical conclusions (e.g., the information-theoretic feasibility of detectable watermarking) can serve as inputs to policy discussion but cannot substitute for policy judgement.</p></li></ol><div class=conjecture-block id=conjecture><div class=block-label>Conjecture (Watermark Detection Conjecture for AI-Generated Music)</div><div class=block-body><p>There exists an information-theoretically feasible watermarking scheme such that: within perturbations not exceeding human auditory detection thresholds, <span class=math-inline data-latex=w></span> bits of copyright identifier can be embedded into a melody of length <span class=math-inline data-latex=N></span> notes (<span class=math-inline data-latex="w = O(\log N)"></span>), and the watermark can be reliably detected with probability <span class=math-inline data-latex="\geq 1 - \delta"></span> given knowledge of the watermark key, while an adversary without the key cannot find the watermark location in polynomial time.</p><p><strong>Theoretical basis:</strong> Analogous to digital watermarking (LSB substitution) and robust watermarking (frequency-domain embedding), melody watermarking can embed controlled perturbations in the low-probability regions of the surprisal distribution (high-surprisal positions) without altering the perceptually salient high-probability skeleton notes.</p><p><strong>Falsifiability criterion:</strong> The conjecture is falsified if one can construct an adversarial algorithm that, while keeping the LZ compression rate, surprisal variance, and melody–harmony MI within given tolerances, removes the watermark with non-negligible probability.</p></div></div><hr><h2 id=references>References</h2><ol><li><p>Shannon, C. E. (1948). A mathematical theory of communication. <em>Bell System Technical Journal</em>, 27(3), 379–423.</p></li><li><p>Cover, T. M., & Thomas, J. A. (2006). <em>Elements of Information Theory</em> (2nd ed.). Wiley. Ch. 2 (Entropy, relative entropy, mutual information).</p></li><li><p>Voss, R. F., & Clarke, J. (1975). &ldquo;1/f noise&rdquo; in music and speech. <em>Nature</em>, 258(5533), 317–318.</p></li><li><p>Hsu, K. J., & Hsu, A. J. (1991). Self-similarity of the &ldquo;1/f noise&rdquo; called music. <em>Proceedings of the National Academy of Sciences</em>, 88(8), 3507–3509.</p></li><li><p>Nash, J. F. (1950). Equilibrium points in n-person games. <em>Proceedings of the National Academy of Sciences</em>, 36(1), 48–49.</p></li><li><p>Ziv, J., & Lempel, A. (1977). A universal algorithm for sequential data compression. <em>IEEE Transactions on Information Theory</em>, 23(3), 337–343.</p></li><li><p>Eerola, T., & Vuoskoski, J. K. (2011). A comparison of the discrete and dimensional models of emotion in music. <em>Psychology of Music</em>, 39(1), 18–49.</p></li><li><p>Wiggins, G. A. (2012). Music, mind and mathematics: theory, reality and formality. <em>Journal of Mathematics and Music</em>, 6(2), 111–123.</p></li><li><p>Müller, M. (2015). <em>Fundamentals of Music Processing</em>. Springer. Ch. 6 (Music structure analysis).</p></li><li><p>Cox, G. (2020). Algorithmic music: computational musicology in the era of AI. <em>Contemporary Music Review</em>, 39(2), 165–179.</p></li><li><p>Agres, K., Forth, J., & Wiggins, G. A. (2017). Evaluation of musical creativity and musical metacreation systems. <em>Computers in Entertainment</em>, 14(3), 1–33.</p></li><li><p>Cox, I., Miller, M., Bloom, J., Fridrich, J., & Kalker, T. (2007). <em>Digital Watermarking and Steganography</em> (2nd ed.). Morgan Kaufmann. Ch. 3 (Theoretical foundations).</p></li><li><p>Serrà, J., Corral, Á., Boguñá, M., Haro, M., & Arcos, J. L. (2012). Measuring the evolution of contemporary western popular music. <em>Scientific Reports</em>, 2, 521.</p></li><li><p>Friberg, A., & Sundström, A. (2002). Swing ratios and ensemble timing in jazz performance. <em>Music Perception</em>, 19(3), 333–349.</p></li></ol></div><nav class=ep-nav><a href=https://amath390.sibeliusp.com/episodes/ep26/ class=ep-nav-prev>← EP26: The 1/f Law of Music
+</a><a href=https://amath390.sibeliusp.com/episodes/ep28/ class=ep-nav-next>EP28: Your Microphone Is a Damped Oscillator →</a></nav></article><aside class=ep-toc-aside><div class=ep-toc-sticky><div class=ep-toc-label>本页目录</div><nav id=TableOfContents><ul><li><a href=#overview>Overview</a></li><li><a href=#prerequisites>Prerequisites</a></li><li><a href=#definitions>Definitions</a></li><li><a href=#main-theorems>Main Theorems</a></li><li><a href=#numerical-example-three-metric-verdict-table>Numerical Example: Three-Metric Verdict Table</a></li><li><a href=#limitations-and-open-questions>Limitations and Open Questions</a></li><li><a href=#references>References</a></li></ul></nav></div></aside></div><footer class=site-footer><div class=footer-content><a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link><img src=/images/avatar.png alt="Sibelius P." class=footer-avatar></a><div class=footer-text><span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
 <span class=footer-sep>·</span>
 <a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener>小红书</a>
 <span class=footer-sep>·</span>
-<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span>
-</div>
-</div>
-</footer>
-</main>
-</div>
-</body>
-</html>
+<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span></div></div></footer></main></div></body></html>

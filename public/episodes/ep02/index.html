@@ -1,530 +1,77 @@
-<!doctype html><html lang=zh-cn>
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<title>EP02: String Vibration and the Wave Equation | AMATH 390 数学与音乐</title>
-<meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music">
-<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous>
-<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script>
-<script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('[data-latex]').forEach(function(a){try{katex.render(a.getAttribute('data-latex'),a,{displayMode:a.classList.contains('math-display'),throwOnError:!1})}catch(b){console.warn('KaTeX:',b.message,a)}})})</script>
-<link rel=icon type=image/png sizes=32x32 href=/favicon-32.png>
-<link rel=icon type=image/png sizes=16x16 href=/favicon-16.png>
-<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
-<link rel=stylesheet href=/css/amath390.css>
-</head>
-<body>
-<div class=layout-wrapper>
-<nav class=sidebar>
-<div class=sidebar-header>
-<a href=/ class=sidebar-title>AMATH 390</a>
-<div class=sidebar-subtitle>数学与音乐</div>
-</div>
-<div class=arc-group>
-<div class=arc-label>数学基础篇</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link>
-<span class=ep-num>01</span>
+<!doctype html><html lang=zh-cn><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>EP02: String Vibration and the Wave Equation | AMATH 390 数学与音乐</title><meta name=description content="Comprehensive mathematical companion for AMATH 390: Mathematics and Music"><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script><script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("[data-latex]").forEach(function(e){try{katex.render(e.getAttribute("data-latex"),e,{displayMode:e.classList.contains("math-display"),throwOnError:!1})}catch(t){console.warn("KaTeX:",t.message,e)}})})</script><link rel=icon type=image/png sizes=32x32 href=/favicon-32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=stylesheet href=/css/amath390.css></head><body><div class=layout-wrapper><nav class=sidebar><div class=sidebar-header><a href=/ class=sidebar-title>AMATH 390</a><div class=sidebar-subtitle>数学与音乐</div></div><div class=arc-group><div class=arc-label>数学基础篇</div><a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-link><span class=ep-num>01</span>
 <span class=ep-title>Chord Space and the Torus</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep02/ class="ep-link active">
-<span class=ep-num>02</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep02/ class="ep-link active"><span class=ep-num>02</span>
 <span class=ep-title>String Vibration and the Wave Equation</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link>
-<span class=ep-num>03</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-link><span class=ep-num>03</span>
 <span class=ep-title>Bach and Graph Connectivity</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link>
-<span class=ep-num>04</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep04/ class=ep-link><span class=ep-num>04</span>
 <span class=ep-title>All-Interval Rows and ℤ₁₂</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link>
-<span class=ep-num>05</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep05/ class=ep-link><span class=ep-num>05</span>
 <span class=ep-title>Turán's Theorem and Counterpoint</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-link>
-<span class=ep-num>06</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep06/ class=ep-link><span class=ep-num>06</span>
 <span class=ep-title>Graph Coloring and Voice Assignment</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-link>
-<span class=ep-num>07</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep07/ class=ep-link><span class=ep-num>07</span>
 <span class=ep-title>Information Entropy and All-Interval Rows</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-link>
-<span class=ep-num>08</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep08/ class=ep-link><span class=ep-num>08</span>
 <span class=ep-title>Shepard Tones and the Tritone Paradox</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link>
-<span class=ep-num>09</span>
-<span class=ep-title>Combination Tones and Nonlinear Acoustics</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>Jacob Collier 系列</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep10/ class=ep-link>
-<span class=ep-num>10</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep09/ class=ep-link><span class=ep-num>09</span>
+<span class=ep-title>Combination Tones and Nonlinear Acoustics</span></a></div><div class=arc-group><div class=arc-label>Jacob Collier 系列</div><a href=https://amath390.sibeliusp.com/episodes/ep10/ class=ep-link><span class=ep-num>10</span>
 <span class=ep-title>Negative Harmony and the Dihedral Group D₁₂</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link>
-<span class=ep-num>11</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep11/ class=ep-link><span class=ep-num>11</span>
 <span class=ep-title>Comma Drift and the Impossibility of Perfect Tuning</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep12/ class=ep-link>
-<span class=ep-num>12</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep12/ class=ep-link><span class=ep-num>12</span>
 <span class=ep-title>The Circle of Fifths as a Folded Spiral</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-link>
-<span class=ep-num>13</span>
-<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>拓扑数学专篇</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-link>
-<span class=ep-num>14</span>
-<span class=ep-title>Tonnetz Hodge Duality</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>歌剧系列</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-link>
-<span class=ep-num>15</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep13/ class=ep-link><span class=ep-num>13</span>
+<span class=ep-title>Polyrhythm and Rhythm-Pitch Duality</span></a></div><div class=arc-group><div class=arc-label>拓扑数学专篇</div><a href=https://amath390.sibeliusp.com/episodes/ep14/ class=ep-link><span class=ep-num>14</span>
+<span class=ep-title>Tonnetz Hodge Duality</span></a></div><div class=arc-group><div class=arc-label>歌剧系列</div><a href=https://amath390.sibeliusp.com/episodes/ep15/ class=ep-link><span class=ep-num>15</span>
 <span class=ep-title>Opera Acoustics and the Singer's Formant</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link>
-<span class=ep-num>16</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep16/ class=ep-link><span class=ep-num>16</span>
 <span class=ep-title>Rossini's Code — Budden, Gossett, and the Convention System</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-link>
-<span class=ep-num>17</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep17/ class=ep-link><span class=ep-num>17</span>
 <span class=ep-title>Leitmotif Networks — Wagner's Ring Cycle</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-link>
-<span class=ep-num>18</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep18/ class=ep-link><span class=ep-num>18</span>
 <span class=ep-title>Game Theory in Operatic Duets</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link>
-<span class=ep-num>19</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep19/ class=ep-link><span class=ep-num>19</span>
 <span class=ep-title>Vibrato as FM Synthesis</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-link>
-<span class=ep-num>20</span>
-<span class=ep-title>Character Interaction Networks in Opera</span>
-</a>
-</div>
-<div class=arc-group>
-<div class=arc-label>AI 音乐三部曲</div>
-<a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-link>
-<span class=ep-num>21</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep20/ class=ep-link><span class=ep-num>20</span>
+<span class=ep-title>Character Interaction Networks in Opera</span></a></div><div class=arc-group><div class=arc-label>AI 音乐三部曲</div><a href=https://amath390.sibeliusp.com/episodes/ep21/ class=ep-link><span class=ep-num>21</span>
 <span class=ep-title>From Markov to Diffusion — Sixty Years of AI Composition</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-link>
-<span class=ep-num>22</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep22/ class=ep-link><span class=ep-num>22</span>
 <span class=ep-title>How AI Writes Music — EnCodec and RVQ</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-link>
-<span class=ep-num>23</span>
-<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span>
-</a>
-</div>
-<div class=sidebar-footer>
-<a href=/theorems/>定理索引</a>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep23/ class=ep-link><span class=ep-num>23</span>
+<span class=ep-title>Can AI Understand Music? Latent Space and Information Bottleneck</span></a></div><div class=arc-group><div class=arc-label>流行音乐 × 数学</div><a href=https://amath390.sibeliusp.com/episodes/ep24/ class=ep-link><span class=ep-num>24</span>
+<span class=ep-title>The Information Code of Pop Music</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep25/ class=ep-link><span class=ep-num>25</span>
+<span class=ep-title>Why Music Gives You Goosebumps — Prediction Error and Frisson</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep26/ class=ep-link><span class=ep-num>26</span>
+<span class=ep-title>The 1/f Law of Music</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep27/ class=ep-link><span class=ep-num>27</span>
+<span class=ep-title>Answering Viral Critics with Mathematics</span></a></div><div class=arc-group><div class=arc-label>音乐技术系列</div><a href=https://amath390.sibeliusp.com/episodes/ep28/ class=ep-link><span class=ep-num>28</span>
+<span class=ep-title>Your Microphone Is a Damped Oscillator</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep29/ class=ep-link><span class=ep-num>29</span>
+<span class=ep-title>Primes in the Studio — Standing Waves and QRD Diffusers</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep30/ class=ep-link><span class=ep-num>30</span>
+<span class=ep-title>The Sampling Theorem Is Not What You Think</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep31/ class=ep-link><span class=ep-num>31</span>
+<span class=ep-title>The Warmth of Moog Has an Equation</span></a></div><div class=sidebar-footer><a href=/theorems/>定理索引</a>
 <a href=/domains/>数学领域</a>
-<a href=/about/>关于</a>
-</div>
-</nav>
-<main class=main-content>
-<div class=episode-layout>
-<article class=episode-page>
-<header class=episode-header>
-<div class=ep-badge>EP02</div>
-<h1 class=ep-main-title>EP02: String Vibration and the Wave Equation</h1>
-<div class=ep-subtitle>PDE, Fourier级数</div>
-<div class=ep-meta>
-<span class=meta-item>
-<span class=meta-icon>▶</span> —
-</span>
-<span class="meta-item domains">
-<span class=domain-chip>Physics/Acoustics</span><span class=domain-chip>Harmonic Analysis</span>
-</span>
-</div>
-</header>
-<div class=cross-refs>
-<h3 class=cross-refs-title>后续拓展</h3>
-<div class=ref-cards>
-<a href=https://amath390.sibeliusp.com/episodes/ep09/ class="ref-card forward">
-<span class=ref-ep>EP09</span>
+<a href=/about/>关于</a></div></nav><main class=main-content><div class=episode-layout><article class=episode-page><header class=episode-header><div class=ep-badge>EP02</div><h1 class=ep-main-title>EP02: String Vibration and the Wave Equation</h1><div class=ep-subtitle>PDE, Fourier级数</div><div class=ep-meta><span class=meta-item><span class=meta-icon>▶</span> —
+</span><span class="meta-item domains"><span class=domain-chip>Physics/Acoustics</span><span class=domain-chip>Harmonic Analysis</span></span></div></header><div class=cross-refs><h3 class=cross-refs-title>后续拓展</h3><div class=ref-cards><a href=https://amath390.sibeliusp.com/episodes/ep09/ class="ref-card forward"><span class=ref-ep>EP09</span>
 <span class=ref-title>Combination Tones and Nonlinear Acoustics</span>
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep15/ class="ref-card forward">
-<span class=ref-ep>EP15</span>
+</a><a href=https://amath390.sibeliusp.com/episodes/ep15/ class="ref-card forward"><span class=ref-ep>EP15</span>
 <span class=ref-title>Opera Acoustics and the Singer's Formant</span>
-</a>
-</div>
-</div>
-<div class=xhs-section>
-<div class=xhs-section-header>
-<span class=xhs-logo-badge>小红书</span>
-<span class=xhs-section-title>Watch on 小红书</span>
-</div>
-<div class=xhs-cards>
-<a href="https://www.xiaohongshu.com/discovery/item/69821522000000001a037ea0?source=webshare&xhsshare=pc_web&xsec_token=ABYCcsvxnszmHLcelXSVriB2XOQQwS8Vgg-_U447MToVc=&xsec_source=pc_share" target=_blank rel=noopener class=xhs-card>
-<div class=xhs-card-inner>
-<div class=xhs-card-icon>▶</div>
-<div class=xhs-card-text>
-<div class=xhs-card-title>弦振动的秘密（上）｜从物理模型到波动方程</div>
-<div class=xhs-card-sub>xiaohongshu.com</div>
-</div>
-<div class=xhs-card-arrow>→</div>
-</div>
-</a>
-<a href="https://www.xiaohongshu.com/discovery/item/6982bd97000000001a024f7b?source=webshare&xhsshare=pc_web&xsec_token=ABYCcsvxnszmHLcelXSVriB7sXOXltG-zRLSmLZG8Yc1c=&xsec_source=pc_share" target=_blank rel=noopener class=xhs-card>
-<div class=xhs-card-inner>
-<div class=xhs-card-icon>▶</div>
-<div class=xhs-card-text>
-<div class=xhs-card-title>弦振动的秘密（下）｜泛音列的数学起源</div>
-<div class=xhs-card-sub>xiaohongshu.com</div>
-</div>
-<div class=xhs-card-arrow>→</div>
-</div>
-</a>
-</div>
-</div>
-<div class="episode-content content">
-<h2 id=overview>Overview</h2>
-<p>When you pluck a guitar string, why does it produce a rich spectrum of overtones rather than a single pure tone? The answer lies in a second-order partial differential equation derived by d&rsquo;Alembert in 1747 and the separation-of-variables technique that Fourier refined in the early 19th century.</p>
-<p>This episode derives the <strong>1D wave equation</strong> from Newton&rsquo;s second law, establishes <strong>d&rsquo;Alembert&rsquo;s general solution</strong> as a superposition of traveling waves, and then reframes everything as <strong>Fourier series</strong> — infinite sums of standing-wave modes whose frequencies form the integer harmonic series <span class=math-inline data-latex="f_1, 2f_1, 3f_1, \ldots"></span></p>
-<blockquote>
-<p><em>中文:</em> &ldquo;从波动方程到傅里叶级数，我们看到了数学如何揭示音乐的物理本质。达朗贝尔的行波解告诉我们波如何传播，傅里叶的级数解告诉我们泛音如何叠加。&rdquo;</p>
-</blockquote>
-<hr>
-<h2 id=prerequisites>Prerequisites</h2>
-<ul>
-<li>Multivariable calculus: partial derivatives, Taylor expansion</li>
-<li>Ordinary differential equations: constant-coefficient second-order ODEs</li>
-<li>Basic real analysis: convergence of series</li>
-<li>
-<a href=https://amath390.sibeliusp.com/episodes/ep09/ class=episode-ref-link>Cochlear nonlinearity (EP09)</a>
-— this wave equation is the linear model from which EP09 departs</li>
-<li>
-<a href=https://amath390.sibeliusp.com/episodes/ep28/ class=episode-ref-link>Microphone physics (EP28)</a>
-— the same ODE structure reappears as a damped oscillator</li>
-</ul>
-<hr>
-<h2 id=definitions>Definitions</h2>
-<div class=definition-block id=definition-2.1>
-<div class=block-label>
-Definition 2.1 (The Wave Equation)
-</div>
-<div class=block-body><p>Let <span class=math-inline data-latex=u(x,t)></span> denote the transverse displacement of a string at position <span class=math-inline data-latex="x \in [0,L]"></span> and time <span class=math-inline data-latex="t \geq 0"></span>. The <strong>1D wave equation</strong> is</p>
-<p><span class=math-display data-latex="\frac{\partial^2 u}{\partial t^2} = c^2 \frac{\partial^2 u}{\partial x^2}, \qquad c = \sqrt{\frac{T}{\mu}}"></span></p>
-<p>where <span class=math-inline data-latex="T > 0"></span> is the string tension (force) and <span class=math-inline data-latex="\mu > 0"></span> is the linear mass density (mass per unit length). The constant <span class=math-inline data-latex=c></span> has units of velocity and is the propagation speed of waves on the string.</p>
-</div>
-</div>
-<div class=definition-block id=definition-2.2>
-<div class=block-label>
-Definition 2.2 (Dirichlet Boundary Conditions)
-</div>
-<div class=block-body><p>For a string with <strong>fixed endpoints</strong>, the boundary conditions are</p>
-<p><span class=math-display data-latex="u(0,t) = 0 \quad \text{and} \quad u(L,t) = 0 \qquad \text{for all } t \geq 0"></span></p>
-<p>Combined with initial conditions <span class=math-inline data-latex="u(x,0) = \phi(x)"></span> (initial shape) and <span class=math-inline data-latex="u_t(x,0) = \psi(x)"></span> (initial velocity), this forms a well-posed initial-boundary value problem.</p>
-</div>
-</div>
-<div class=definition-block id=definition-2.3>
-<div class=block-label>
-Definition 2.3 (Normal Modes)
-</div>
-<div class=block-body><p>The <strong><span class=math-inline data-latex=n></span>-th normal mode</strong> (or standing wave) is the particular solution</p>
-<p><span class=math-display data-latex="u_n(x,t) = \sin\!\left(\frac{n\pi x}{L}\right)\!\left(A_n \cos\omega_n t + B_n \sin\omega_n t\right), \qquad n = 1, 2, 3, \ldots"></span></p>
-<p>where</p>
-<p><span class=math-display data-latex="\omega_n = \frac{n\pi c}{L}, \qquad f_n = \frac{\omega_n}{2\pi} = \frac{nc}{2L}"></span></p>
-<p>The frequency <span class=math-inline data-latex="f_1 = c/(2L)"></span> is the <strong>fundamental frequency</strong> (first harmonic). The frequency <span class=math-inline data-latex="f_n = n f_1"></span> is the <strong><span class=math-inline data-latex=n></span>-th harmonic</strong> or <span class=math-inline data-latex=(n-1)></span>-th <strong>overtone</strong>.</p>
-</div>
-</div>
-<div class=definition-block id=definition-2.4>
-<div class=block-label>
-Definition 2.4 (Fourier Series Solution)
-</div>
-<div class=block-body><p>The general solution to the wave equation with Dirichlet boundary conditions is the <strong>Fourier series</strong></p>
-<p><span class=math-display data-latex="u(x,t) = \sum_{n=1}^{\infty} \sin\!\left(\frac{n\pi x}{L}\right)\!\left(A_n \cos\omega_n t + B_n \sin\omega_n t\right)"></span></p>
-<p>The coefficients are determined by initial conditions via</p>
-<p><span class=math-display data-latex="A_n = \frac{2}{L}\int_0^L \phi(x)\sin\!\left(\frac{n\pi x}{L}\right) dx, \qquad B_n = \frac{2}{n\pi c}\int_0^L \psi(x)\sin\!\left(\frac{n\pi x}{L}\right) dx"></span></p>
-</div>
-</div>
-<div class=definition-block id=definition-2.5>
-<div class=block-label>
-Definition 2.5 (Modal Energy)
-</div>
-<div class=block-body><p>The <strong>total mechanical energy</strong> of the string is</p>
-<p><span class=math-display data-latex="E = \frac{1}{2}\int_0^L \left[\mu\, u_t^2 + T\, u_x^2\right] dx"></span></p>
-<p>The <strong>energy of the <span class=math-inline data-latex=n></span>-th mode</strong> is</p>
-<p><span class=math-display data-latex="E_n = \frac{L}{4}\left[\mu\, \omega_n^2(A_n^2 + B_n^2) + T\!\left(\frac{n\pi}{L}\right)^2(A_n^2 + B_n^2)\right] = \frac{L\mu\omega_n^2}{4}(A_n^2 + B_n^2)"></span></p>
-<p>(using <span class=math-inline data-latex="T(n\pi/L)^2 = \mu\omega_n^2"></span>).</p>
-</div>
-</div>
-<hr>
-<h2 id=main-theorems>Main Theorems</h2>
-<div class=theorem-block id=theorem-2.1>
-<div class=block-label>
-Theorem 2.1 (Wave Equation from Newton's Second Law)
-</div>
-<div class=block-body><p>Under the <strong>small-amplitude approximation</strong> (displacements much smaller than string length), Newton&rsquo;s second law applied to an infinitesimal string element of length <span class=math-inline data-latex=dx></span> yields the wave equation</p>
-<p><span class=math-display data-latex="u_{tt} = c^2\, u_{xx}, \qquad c = \sqrt{T/\mu}"></span></p>
-</div>
-</div>
-<div class=proof-block>
-<div class=block-label>Proof.</div>
-<div class=block-body><p>Consider the string element occupying <span class=math-inline data-latex="[x, x+dx]"></span> with transverse displacement <span class=math-inline data-latex=u(x,t)></span>. The element has mass <span class=math-inline data-latex="dm = \mu\, dx"></span>.</p>
-<p>The tension acts tangentially at both ends. At the right end, the string makes angle <span class=math-inline data-latex="\theta(x+dx,t) \approx u_x(x+dx,t)"></span> with the horizontal (small angle approximation: <span class=math-inline data-latex="\sin\theta \approx \tan\theta \approx \theta"></span>). At the left end, angle is <span class=math-inline data-latex="\theta(x,t) \approx u_x(x,t)"></span>.</p>
-<p>The net transverse force on the element is:
-<span class=math-display data-latex="dF = T\sin\theta(x+dx,t) - T\sin\theta(x,t) \approx T\left[u_x(x+dx,t) - u_x(x,t)\right] = T\, u_{xx}(x,t)\, dx"></span></p>
-<p>Newton&rsquo;s second law: <span class=math-inline data-latex="dF = dm \cdot u_{tt}"></span>, so</p>
-<p><span class=math-display data-latex="T\, u_{xx}\, dx = \mu\, dx\cdot u_{tt}"></span></p>
-<p>Dividing by <span class=math-inline data-latex="\mu\, dx"></span>:</p>
-<p><span class=math-display data-latex="u_{tt} = \frac{T}{\mu}\, u_{xx} = c^2\, u_{xx} \qquad \square"></span></p>
-</div>
-</div>
-<blockquote>
-<p><em>Visual:</em> Draw a curved string element with tangent lines at both endpoints. The net upward force from tension is proportional to the curvature <span class=math-inline data-latex=u_{xx}></span> — positive curvature (concave up) creates upward restoring force, driving oscillation.</p>
-</blockquote>
-<div class=theorem-block id=theorem-2.2>
-<div class=block-label>
-Theorem 2.2 (D'Alembert's General Solution)
-</div>
-<div class=block-body><p>Every solution of <span class=math-inline data-latex="u_{tt} = c^2 u_{xx}"></span> on <span class=math-inline data-latex="\mathbb{R} \times \mathbb{R}"></span> can be written as</p>
-<p><span class=math-display data-latex="u(x,t) = f(x - ct) + g(x + ct)"></span></p>
-<p>for arbitrary twice-differentiable functions <span class=math-inline data-latex=f></span> and <span class=math-inline data-latex=g></span>. The term <span class=math-inline data-latex=f(x-ct)></span> represents a rightward-traveling wave; <span class=math-inline data-latex=g(x+ct)></span> represents a leftward-traveling wave. Given initial conditions <span class=math-inline data-latex="u(x,0) = \phi(x)"></span> and <span class=math-inline data-latex="u_t(x,0) = \psi(x)"></span>, the unique solution is</p>
-<p><span class=math-display data-latex="u(x,t) = \frac{\phi(x-ct) + \phi(x+ct)}{2} + \frac{1}{2c}\int_{x-ct}^{x+ct}\psi(s)\,ds"></span></p>
-</div>
-</div>
-<div class=proof-block>
-<div class=block-label>Proof.</div>
-<div class=block-body><p><strong>Step 1 — Change of variables.</strong> Let <span class=math-inline data-latex="\xi = x - ct"></span>, <span class=math-inline data-latex="\eta = x + ct"></span>. By the chain rule:</p>
-<p><span class=math-display data-latex="u_{xx} = u_{\xi\xi} + 2u_{\xi\eta} + u_{\eta\eta}, \qquad u_{tt} = c^2(u_{\xi\xi} - 2u_{\xi\eta} + u_{\eta\eta})"></span></p>
-<p>The wave equation <span class=math-inline data-latex="u_{tt} = c^2 u_{xx}"></span> becomes</p>
-<p><span class=math-display data-latex="c^2(u_{\xi\xi} - 2u_{\xi\eta} + u_{\eta\eta}) = c^2(u_{\xi\xi} + 2u_{\xi\eta} + u_{\eta\eta})"></span></p>
-<p>Simplifying: <span class=math-inline data-latex="-4c^2 u_{\xi\eta} = 0"></span>, so <span class=math-inline data-latex="u_{\xi\eta} = 0"></span>.</p>
-<p><strong>Step 2 — Integration.</strong> Integrate <span class=math-inline data-latex="u_{\xi\eta} = 0"></span> first in <span class=math-inline data-latex=\eta></span>: <span class=math-inline data-latex="u_\xi = h(\xi)"></span> for some function <span class=math-inline data-latex=h></span>. Then integrate in <span class=math-inline data-latex=\xi></span>: <span class=math-inline data-latex="u = F(\xi) + G(\eta)"></span> where <span class=math-inline data-latex="F' = h"></span>. Setting <span class=math-inline data-latex="f = F"></span>, <span class=math-inline data-latex="g = G"></span> gives <span class=math-inline data-latex="u(x,t) = f(x-ct) + g(x+ct)"></span>.</p>
-<p><strong>Step 3 — Initial conditions.</strong> From <span class=math-inline data-latex="u(x,0) = f(x) + g(x) = \phi(x)"></span> and <span class=math-inline data-latex="u_t(x,0) = -cf'(x) + cg'(x) = \psi(x)"></span>:</p>
-<p><span class=math-display data-latex="f'(x) - g'(x) = -\frac{\psi(x)}{c}"></span></p>
-<p>Integrating: <span class=math-inline data-latex="f(x) - g(x) = -\frac{1}{c}\int_0^x \psi(s)\,ds + K"></span>. Solving the system of two equations for <span class=math-inline data-latex=f></span> and <span class=math-inline data-latex=g></span>, then substituting back yields the stated formula. <span class=math-inline data-latex=\square></span></p>
-</div>
-</div>
-<div class=theorem-block id=theorem-2.3>
-<div class=block-label>
-Theorem 2.3 (Separation of Variables: Normal Modes)
-</div>
-<div class=block-body><p>The only solutions of <span class=math-inline data-latex="u_{tt} = c^2 u_{xx}"></span> of the separable form <span class=math-inline data-latex="u(x,t) = X(x)T(t)"></span> satisfying Dirichlet boundary conditions <span class=math-inline data-latex="X(0) = X(L) = 0"></span> are (up to scalar multiples) the normal modes:</p>
-<p><span class=math-display data-latex="X_n(x) = \sin\!\left(\frac{n\pi x}{L}\right), \quad T_n(t) = A_n\cos\omega_n t + B_n\sin\omega_n t, \quad \omega_n = \frac{n\pi c}{L}"></span></p>
-<p>for <span class=math-inline data-latex="n = 1, 2, 3, \ldots"></span></p>
-</div>
-</div>
-<div class=proof-block>
-<div class=block-label>Proof.</div>
-<div class=block-body><p>Substituting <span class=math-inline data-latex="u = X(x)T(t)"></span> into <span class=math-inline data-latex="u_{tt} = c^2 u_{xx}"></span>:</p>
-<p><span class=math-display data-latex="X(x)T''(t) = c^2 X''(x)T(t)"></span></p>
-<p>Dividing both sides by <span class=math-inline data-latex="c^2 X(x)T(t)"></span> (assuming both nonzero):</p>
-<p><span class=math-display data-latex="\frac{T''(t)}{c^2 T(t)} = \frac{X''(x)}{X(x)} = -\lambda"></span></p>
-<p>where <span class=math-inline data-latex=-\lambda></span> is a separation constant (it must be constant since the left side depends only on <span class=math-inline data-latex=t></span> and the right only on <span class=math-inline data-latex=x></span>).</p>
-<p><strong>Spatial ODE:</strong> <span class=math-inline data-latex="X'' = -\lambda X"></span> with <span class=math-inline data-latex="X(0) = X(L) = 0"></span>.</p>
-<ul>
-<li>If <span class=math-inline data-latex="\lambda \leq 0"></span>: the general solution is exponential or linear; neither can satisfy both boundary conditions with <span class=math-inline data-latex="X \not\equiv 0"></span>.</li>
-<li>If <span class=math-inline data-latex="\lambda > 0"></span>: write <span class=math-inline data-latex="\lambda = (n\pi/L)^2"></span>. Then <span class=math-inline data-latex="X(x) = A\sin(\sqrt{\lambda}\,x) + B\cos(\sqrt{\lambda}\,x)"></span>. Condition <span class=math-inline data-latex="X(0) = 0"></span> gives <span class=math-inline data-latex="B = 0"></span>. Condition <span class=math-inline data-latex="X(L) = 0"></span> gives <span class=math-inline data-latex="\sin(\sqrt{\lambda}\,L) = 0"></span>, so <span class=math-inline data-latex="\sqrt{\lambda} = n\pi/L"></span> for <span class=math-inline data-latex="n = 1, 2, 3, \ldots"></span></li>
-</ul>
-<p><strong>Temporal ODE:</strong> <span class=math-inline data-latex="T'' = -\lambda c^2 T = -\omega_n^2 T"></span> (with <span class=math-inline data-latex="\omega_n = n\pi c/L"></span>), which has general solution <span class=math-inline data-latex="T_n(t) = A_n\cos\omega_n t + B_n\sin\omega_n t"></span>. <span class=math-inline data-latex=\square></span></p>
-</div>
-</div>
-<blockquote>
-<p><em>Visual:</em> The first five normal modes: mode 1 has one arch (no interior nodes), mode 2 has one interior node at <span class=math-inline data-latex="x=L/2"></span>, mode <span class=math-inline data-latex=n></span> has <span class=math-inline data-latex=n-1></span> interior nodes at <span class=math-inline data-latex="x = L/n, 2L/n, \ldots, (n-1)L/n"></span>. Each mode vibrates at frequency <span class=math-inline data-latex="f_n = n f_1"></span>.</p>
-</blockquote>
-<div class=theorem-block id=theorem-2.4>
-<div class=block-label>
-Theorem 2.4 (Energy Conservation and Modal Orthogonality)
-</div>
-<div class=block-body><p>The total energy decomposes as a sum over modes with no cross terms:</p>
-<p><span class=math-display data-latex="E = \sum_{n=1}^{\infty} E_n"></span></p>
-<p>where <span class=math-inline data-latex="E_n = \frac{L\mu\omega_n^2}{4}(A_n^2 + B_n^2)"></span>, and each <span class=math-inline data-latex=E_n></span> is independently conserved in time.</p>
-</div>
-</div>
-<div class=proof-block>
-<div class=block-label>Proof.</div>
-<div class=block-body><p>Compute the kinetic energy <span class=math-inline data-latex="K = \frac{\mu}{2}\int_0^L u_t^2\,dx"></span>.</p>
-<p>Differentiate the Fourier series:</p>
-<p><span class=math-display data-latex="u_t = \sum_{n=1}^\infty \sin\!\left(\frac{n\pi x}{L}\right)\!(-A_n\omega_n\sin\omega_n t + B_n\omega_n\cos\omega_n t)"></span></p>
-<p><span class=math-display data-latex="u_t^2 = \sum_{n=1}^\infty\sum_{m=1}^\infty \sin\!\left(\frac{n\pi x}{L}\right)\!\sin\!\left(\frac{m\pi x}{L}\right) \cdot (\text{time factors})"></span></p>
-<p>Integrate over <span class=math-inline data-latex=[0,L]></span> using the <strong>orthogonality</strong> of sine functions:</p>
-<p><span class=math-display data-latex="\int_0^L \sin\!\left(\frac{n\pi x}{L}\right)\!\sin\!\left(\frac{m\pi x}{L}\right) dx = \frac{L}{2}\,\delta_{nm}"></span></p>
-<p>All cross terms (<span class=math-inline data-latex="n \neq m"></span>) vanish. The same orthogonality applies to the potential energy <span class=math-inline data-latex="\frac{T}{2}\int_0^L u_x^2\,dx"></span>. Adding kinetic and potential contributions for mode <span class=math-inline data-latex=n></span> and using <span class=math-inline data-latex="T(n\pi/L)^2 = \mu\omega_n^2"></span>:</p>
-<p><span class=math-display data-latex="E_n = \frac{\mu}{2}\cdot\frac{L}{2}\,\omega_n^2(A_n^2 + B_n^2) + \frac{T}{2}\cdot\frac{L}{2}\cdot\left(\frac{n\pi}{L}\right)^2\!(A_n^2 + B_n^2) = \frac{L\mu\omega_n^2}{4}(A_n^2 + B_n^2)"></span></p>
-<p>Each <span class=math-inline data-latex=E_n></span> is constant in time (the <span class=math-inline data-latex="A_n^2 + B_n^2"></span> factor does not depend on <span class=math-inline data-latex=t></span>). <span class=math-inline data-latex=\square></span></p>
-</div>
-</div>
-<div class=proposition-block id=prop-2.1>
-<div class=block-label>
-Prop 2.1 (Harmonic Series)
-</div>
-<div class=block-body><p>The frequencies of the normal modes of a fixed string form the <strong>harmonic series</strong>:</p>
-<p><span class=math-display data-latex="f_1 : f_2 : f_3 : f_4 : \cdots = 1 : 2 : 3 : 4 : \cdots"></span></p>
-<p>where <span class=math-inline data-latex="f_1 = c/(2L) = \frac{1}{2L}\sqrt{T/\mu}"></span> is the fundamental frequency.</p>
-</div>
-</div>
-<div class=proof-block>
-<div class=block-label>Proof.</div>
-<div class=block-body><p>By Definition 2.3, <span class=math-inline data-latex="f_n = \omega_n/(2\pi) = nc/(2L) = n f_1"></span>. The ratio <span class=math-inline data-latex="f_n / f_1 = n"></span>. <span class=math-inline data-latex=\square></span></p>
-<p><strong>Physical interpretation</strong>: Doubling the string length halves <span class=math-inline data-latex=f_1></span> (one octave lower). Doubling the tension multiplies <span class=math-inline data-latex=f_1></span> by <span class=math-inline data-latex=\sqrt{2}></span> (a musical tritone up). Quadrupling tension doubles <span class=math-inline data-latex=f_1></span> (one octave up).</p>
-</div>
-</div>
-<hr>
-<h2 id=worked-example-plucked-string>Worked Example: Plucked String</h2>
-<p><strong>Setup</strong>: A string of length <span class=math-inline data-latex="L = 1"></span> is plucked at the midpoint to height <span class=math-inline data-latex=h></span> and released from rest. Initial conditions:</p>
-<span class=math-display data-latex="\phi(x) = \begin{cases}2hx & 0 \leq x \leq 1/2 \\ 2h(1-x) & 1/2 \leq x \leq 1\end{cases}, \qquad \psi(x) = 0"></span>
-<p><strong>Fourier coefficients</strong>: Since <span class=math-inline data-latex="\psi = 0"></span>, all <span class=math-inline data-latex="B_n = 0"></span>. For <span class=math-inline data-latex=A_n></span>:</p>
-<span class=math-display data-latex="A_n = 2\int_0^1 \phi(x)\sin(n\pi x)\,dx = \frac{8h}{n^2\pi^2}\sin\!\left(\frac{n\pi}{2}\right)"></span>
-<p>This equals <span class=math-inline data-latex=8h/(n^2\pi^2)></span> for <span class=math-inline data-latex="n \equiv 1 \pmod 4"></span>, <span class=math-inline data-latex=-8h/(n^2\pi^2)></span> for <span class=math-inline data-latex="n \equiv 3 \pmod 4"></span>, and $0$ for even <span class=math-inline data-latex=n></span>.</p>
-<p><strong>Conclusion</strong>: Plucking at the midpoint <strong>eliminates all even harmonics</strong> (<span class=math-inline data-latex="A_2 = A_4 = \cdots = 0"></span>). The resulting timbre contains only odd harmonics <span class=math-inline data-latex="f_1, 3f_1, 5f_1, \ldots"></span> — this is the mathematical explanation for why plucking position shapes timbre.</p>
-<blockquote>
-<p><em>中文:</em> &ldquo;傅里叶级数的威力在于：任何初始形状，无论多复杂，都可以分解为这些正弦驻波的叠加。系数Aₙ由初始条件决定，而这些系数正是傅里叶系数。&rdquo;</p>
-</blockquote>
-<hr>
-<h2 id=musical-connection>Musical Connection</h2>
-<div class=music-block>
-<div class=block-label>音乐联系</div>
-<div class=block-body><p><strong>The Overtone Series is the Harmonic Series</strong></p>
-<p>Theorem 2.3 shows that a vibrating string produces frequencies in the exact ratio <span class=math-inline data-latex=1:2:3:4:5:6:\ldots></span> This is called the <strong>overtone series</strong> or <strong>harmonic series</strong> in music. The first several intervals it generates are:</p>
-<table>
-<thead>
-<tr>
-<th>Harmonic ratio</th>
-<th>Interval</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><span class=math-inline data-latex=2:1></span></td>
-<td>Octave</td>
-</tr>
-<tr>
-<td><span class=math-inline data-latex=3:2></span></td>
-<td>Perfect fifth</td>
-</tr>
-<tr>
-<td><span class=math-inline data-latex=4:3></span></td>
-<td>Perfect fourth</td>
-</tr>
-<tr>
-<td><span class=math-inline data-latex=5:4></span></td>
-<td>Major third</td>
-</tr>
-<tr>
-<td><span class=math-inline data-latex=6:5></span></td>
-<td>Minor third</td>
-</tr>
-<tr>
-<td><span class=math-inline data-latex=7:6></span></td>
-<td>&ldquo;Harmonic seventh&rdquo; (slightly flat of B<span class=math-inline data-latex=\flat></span>)</td>
-</tr>
-</tbody>
-</table>
-<p>The ratios <span class=math-inline data-latex=3:2></span> (perfect fifth) and <span class=math-inline data-latex=5:4></span> (major third) that define the consonant intervals in Western music emerge directly from the integer structure of the harmonic series. This is why <strong>Pythagorean tuning</strong> (built from pure <span class=math-inline data-latex=3:2></span> fifths) and <strong>just intonation</strong> (built from pure <span class=math-inline data-latex=5:4></span> thirds) have mathematical foundations in the wave equation.</p>
-<p><strong>Timbre as spectral envelope</strong>: Different instruments playing the same pitch <span class=math-inline data-latex=f_1></span> differ only in the amplitudes <span class=math-inline data-latex=A_n></span> of each harmonic. A clarinet emphasizes odd harmonics (similar to our midpoint-pluck example, because of its cylindrical bore closed at one end). A violin&rsquo;s spectral envelope depends on bow speed and contact point. The piano&rsquo;s hammer position at roughly <span class=math-inline data-latex=1/8></span> of the string length from one end suppresses harmonics <span class=math-inline data-latex="8, 16, 24, \ldots"></span>, avoiding the harsh high partials that would come from the exact hammer resonance.</p>
-<blockquote>
-<p><em>中文:</em> &ldquo;泛音的相对强度决定了音色。这就是为什么钢琴和吉他演奏同一个音符，听起来却完全不同——它们的泛音结构不同。&rdquo;</p>
-</blockquote>
-</div>
-</div>
-<hr>
-<h2 id=limits-and-open-questions>Limits and Open Questions</h2>
-<ol>
-<li>
-<p><strong>Small-amplitude approximation</strong>: The derivation in Theorem 2.1 requires <span class=math-inline data-latex="|u_x| \ll 1"></span>. For large-amplitude vibrations (e.g., hard piano hammering), nonlinear terms enter. The nonlinear string equation introduces overtone <strong>inharmonicity</strong> — the higher modes deviate from exact integer multiples, which piano technicians compensate for by <strong>stretching the octave</strong> during tuning.</p>
-</li>
-<li>
-<p><strong>Real strings have stiffness</strong>: Physical strings are not perfectly flexible. The corrected model adds a bending stiffness term:
+</a><a href=https://amath390.sibeliusp.com/episodes/ep28/ class="ref-card forward"><span class=ref-ep>EP28</span>
+<span class=ref-title>Your Microphone Is a Damped Oscillator</span></a></div></div><div class=xhs-section><div class=xhs-section-header><span class=xhs-logo-badge>小红书</span>
+<span class=xhs-section-title>Watch on 小红书</span></div><div class=xhs-cards><a href="https://www.xiaohongshu.com/discovery/item/69821522000000001a037ea0?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABYCcsvxnszmHLcelXSVriB2XOQQwS8Vgg-_U447MToVc=&amp;xsec_source=pc_share" target=_blank rel=noopener class=xhs-card><div class=xhs-card-inner><div class=xhs-card-icon>▶</div><div class=xhs-card-text><div class=xhs-card-title>弦振动的秘密（上）｜从物理模型到波动方程</div><div class=xhs-card-sub>xiaohongshu.com</div></div><div class=xhs-card-arrow>→</div></div></a><a href="https://www.xiaohongshu.com/discovery/item/6982bd97000000001a024f7b?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABYCcsvxnszmHLcelXSVriB7sXOXltG-zRLSmLZG8Yc1c=&amp;xsec_source=pc_share" target=_blank rel=noopener class=xhs-card><div class=xhs-card-inner><div class=xhs-card-icon>▶</div><div class=xhs-card-text><div class=xhs-card-title>弦振动的秘密（下）｜泛音列的数学起源</div><div class=xhs-card-sub>xiaohongshu.com</div></div><div class=xhs-card-arrow>→</div></div></a></div></div><div class="episode-content content"><h2 id=overview>Overview</h2><p>When you pluck a guitar string, why does it produce a rich spectrum of overtones rather than a single pure tone? The answer lies in a second-order partial differential equation derived by d&rsquo;Alembert in 1747 and the separation-of-variables technique that Fourier refined in the early 19th century.</p><p>This episode derives the <strong>1D wave equation</strong> from Newton&rsquo;s second law, establishes <strong>d&rsquo;Alembert&rsquo;s general solution</strong> as a superposition of traveling waves, and then reframes everything as <strong>Fourier series</strong> — infinite sums of standing-wave modes whose frequencies form the integer harmonic series <span class=math-inline data-latex="f_1, 2f_1, 3f_1, \ldots"></span></p><blockquote><p><em>中文:</em> &ldquo;从波动方程到傅里叶级数，我们看到了数学如何揭示音乐的物理本质。达朗贝尔的行波解告诉我们波如何传播，傅里叶的级数解告诉我们泛音如何叠加。&rdquo;</p></blockquote><hr><h2 id=prerequisites>Prerequisites</h2><ul><li>Multivariable calculus: partial derivatives, Taylor expansion</li><li>Ordinary differential equations: constant-coefficient second-order ODEs</li><li>Basic real analysis: convergence of series</li><li><a href=https://amath390.sibeliusp.com/episodes/ep09/ class=episode-ref-link>Cochlear nonlinearity (EP09)</a>
+— this wave equation is the linear model from which EP09 departs</li><li><a href=https://amath390.sibeliusp.com/episodes/ep28/ class=episode-ref-link>Microphone physics (EP28)</a>
+— the same ODE structure reappears as a damped oscillator</li></ul><hr><h2 id=definitions>Definitions</h2><div class=definition-block id=definition-2.1><div class=block-label>Definition 2.1 (The Wave Equation)</div><div class=block-body><p>Let <span class=math-inline data-latex=u(x,t)></span> denote the transverse displacement of a string at position <span class=math-inline data-latex="x \in [0,L]"></span> and time <span class=math-inline data-latex="t \geq 0"></span>. The <strong>1D wave equation</strong> is</p><p><span class=math-display data-latex="\frac{\partial^2 u}{\partial t^2} = c^2 \frac{\partial^2 u}{\partial x^2}, \qquad c = \sqrt{\frac{T}{\mu}}"></span></p><p>where <span class=math-inline data-latex="T > 0"></span> is the string tension (force) and <span class=math-inline data-latex="\mu > 0"></span> is the linear mass density (mass per unit length). The constant <span class=math-inline data-latex=c></span> has units of velocity and is the propagation speed of waves on the string.</p></div></div><div class=definition-block id=definition-2.2><div class=block-label>Definition 2.2 (Dirichlet Boundary Conditions)</div><div class=block-body><p>For a string with <strong>fixed endpoints</strong>, the boundary conditions are</p><p><span class=math-display data-latex="u(0,t) = 0 \quad \text{and} \quad u(L,t) = 0 \qquad \text{for all } t \geq 0"></span></p><p>Combined with initial conditions <span class=math-inline data-latex="u(x,0) = \phi(x)"></span> (initial shape) and <span class=math-inline data-latex="u_t(x,0) = \psi(x)"></span> (initial velocity), this forms a well-posed initial-boundary value problem.</p></div></div><div class=definition-block id=definition-2.3><div class=block-label>Definition 2.3 (Normal Modes)</div><div class=block-body><p>The <strong><span class=math-inline data-latex=n></span>-th normal mode</strong> (or standing wave) is the particular solution</p><p><span class=math-display data-latex="u_n(x,t) = \sin\!\left(\frac{n\pi x}{L}\right)\!\left(A_n \cos\omega_n t + B_n \sin\omega_n t\right), \qquad n = 1, 2, 3, \ldots"></span></p><p>where</p><p><span class=math-display data-latex="\omega_n = \frac{n\pi c}{L}, \qquad f_n = \frac{\omega_n}{2\pi} = \frac{nc}{2L}"></span></p><p>The frequency <span class=math-inline data-latex="f_1 = c/(2L)"></span> is the <strong>fundamental frequency</strong> (first harmonic). The frequency <span class=math-inline data-latex="f_n = n f_1"></span> is the <strong><span class=math-inline data-latex=n></span>-th harmonic</strong> or <span class=math-inline data-latex=(n-1)></span>-th <strong>overtone</strong>.</p></div></div><div class=definition-block id=definition-2.4><div class=block-label>Definition 2.4 (Fourier Series Solution)</div><div class=block-body><p>The general solution to the wave equation with Dirichlet boundary conditions is the <strong>Fourier series</strong></p><p><span class=math-display data-latex="u(x,t) = \sum_{n=1}^{\infty} \sin\!\left(\frac{n\pi x}{L}\right)\!\left(A_n \cos\omega_n t + B_n \sin\omega_n t\right)"></span></p><p>The coefficients are determined by initial conditions via</p><p><span class=math-display data-latex="A_n = \frac{2}{L}\int_0^L \phi(x)\sin\!\left(\frac{n\pi x}{L}\right) dx, \qquad B_n = \frac{2}{n\pi c}\int_0^L \psi(x)\sin\!\left(\frac{n\pi x}{L}\right) dx"></span></p></div></div><div class=definition-block id=definition-2.5><div class=block-label>Definition 2.5 (Modal Energy)</div><div class=block-body><p>The <strong>total mechanical energy</strong> of the string is</p><p><span class=math-display data-latex="E = \frac{1}{2}\int_0^L \left[\mu\, u_t^2 + T\, u_x^2\right] dx"></span></p><p>The <strong>energy of the <span class=math-inline data-latex=n></span>-th mode</strong> is</p><p><span class=math-display data-latex="E_n = \frac{L}{4}\left[\mu\, \omega_n^2(A_n^2 + B_n^2) + T\!\left(\frac{n\pi}{L}\right)^2(A_n^2 + B_n^2)\right] = \frac{L\mu\omega_n^2}{4}(A_n^2 + B_n^2)"></span></p><p>(using <span class=math-inline data-latex="T(n\pi/L)^2 = \mu\omega_n^2"></span>).</p></div></div><hr><h2 id=main-theorems>Main Theorems</h2><div class=theorem-block id=theorem-2.1><div class=block-label>Theorem 2.1 (Wave Equation from Newton's Second Law)</div><div class=block-body><p>Under the <strong>small-amplitude approximation</strong> (displacements much smaller than string length), Newton&rsquo;s second law applied to an infinitesimal string element of length <span class=math-inline data-latex=dx></span> yields the wave equation</p><p><span class=math-display data-latex="u_{tt} = c^2\, u_{xx}, \qquad c = \sqrt{T/\mu}"></span></p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p>Consider the string element occupying <span class=math-inline data-latex="[x, x+dx]"></span> with transverse displacement <span class=math-inline data-latex=u(x,t)></span>. The element has mass <span class=math-inline data-latex="dm = \mu\, dx"></span>.</p><p>The tension acts tangentially at both ends. At the right end, the string makes angle <span class=math-inline data-latex="\theta(x+dx,t) \approx u_x(x+dx,t)"></span> with the horizontal (small angle approximation: <span class=math-inline data-latex="\sin\theta \approx \tan\theta \approx \theta"></span>). At the left end, angle is <span class=math-inline data-latex="\theta(x,t) \approx u_x(x,t)"></span>.</p><p>The net transverse force on the element is:
+<span class=math-display data-latex="dF = T\sin\theta(x+dx,t) - T\sin\theta(x,t) \approx T\left[u_x(x+dx,t) - u_x(x,t)\right] = T\, u_{xx}(x,t)\, dx"></span></p><p>Newton&rsquo;s second law: <span class=math-inline data-latex="dF = dm \cdot u_{tt}"></span>, so</p><p><span class=math-display data-latex="T\, u_{xx}\, dx = \mu\, dx\cdot u_{tt}"></span></p><p>Dividing by <span class=math-inline data-latex="\mu\, dx"></span>:</p><p><span class=math-display data-latex="u_{tt} = \frac{T}{\mu}\, u_{xx} = c^2\, u_{xx} \qquad \square"></span></p></div></div><blockquote><p><em>Visual:</em> Draw a curved string element with tangent lines at both endpoints. The net upward force from tension is proportional to the curvature <span class=math-inline data-latex=u_{xx}></span> — positive curvature (concave up) creates upward restoring force, driving oscillation.</p></blockquote><div class=theorem-block id=theorem-2.2><div class=block-label>Theorem 2.2 (D'Alembert's General Solution)</div><div class=block-body><p>Every solution of <span class=math-inline data-latex="u_{tt} = c^2 u_{xx}"></span> on <span class=math-inline data-latex="\mathbb{R} \times \mathbb{R}"></span> can be written as</p><p><span class=math-display data-latex="u(x,t) = f(x - ct) + g(x + ct)"></span></p><p>for arbitrary twice-differentiable functions <span class=math-inline data-latex=f></span> and <span class=math-inline data-latex=g></span>. The term <span class=math-inline data-latex=f(x-ct)></span> represents a rightward-traveling wave; <span class=math-inline data-latex=g(x+ct)></span> represents a leftward-traveling wave. Given initial conditions <span class=math-inline data-latex="u(x,0) = \phi(x)"></span> and <span class=math-inline data-latex="u_t(x,0) = \psi(x)"></span>, the unique solution is</p><p><span class=math-display data-latex="u(x,t) = \frac{\phi(x-ct) + \phi(x+ct)}{2} + \frac{1}{2c}\int_{x-ct}^{x+ct}\psi(s)\,ds"></span></p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p><strong>Step 1 — Change of variables.</strong> Let <span class=math-inline data-latex="\xi = x - ct"></span>, <span class=math-inline data-latex="\eta = x + ct"></span>. By the chain rule:</p><p><span class=math-display data-latex="u_{xx} = u_{\xi\xi} + 2u_{\xi\eta} + u_{\eta\eta}, \qquad u_{tt} = c^2(u_{\xi\xi} - 2u_{\xi\eta} + u_{\eta\eta})"></span></p><p>The wave equation <span class=math-inline data-latex="u_{tt} = c^2 u_{xx}"></span> becomes</p><p><span class=math-display data-latex="c^2(u_{\xi\xi} - 2u_{\xi\eta} + u_{\eta\eta}) = c^2(u_{\xi\xi} + 2u_{\xi\eta} + u_{\eta\eta})"></span></p><p>Simplifying: <span class=math-inline data-latex="-4c^2 u_{\xi\eta} = 0"></span>, so <span class=math-inline data-latex="u_{\xi\eta} = 0"></span>.</p><p><strong>Step 2 — Integration.</strong> Integrate <span class=math-inline data-latex="u_{\xi\eta} = 0"></span> first in <span class=math-inline data-latex=\eta></span>: <span class=math-inline data-latex="u_\xi = h(\xi)"></span> for some function <span class=math-inline data-latex=h></span>. Then integrate in <span class=math-inline data-latex=\xi></span>: <span class=math-inline data-latex="u = F(\xi) + G(\eta)"></span> where <span class=math-inline data-latex="F' = h"></span>. Setting <span class=math-inline data-latex="f = F"></span>, <span class=math-inline data-latex="g = G"></span> gives <span class=math-inline data-latex="u(x,t) = f(x-ct) + g(x+ct)"></span>.</p><p><strong>Step 3 — Initial conditions.</strong> From <span class=math-inline data-latex="u(x,0) = f(x) + g(x) = \phi(x)"></span> and <span class=math-inline data-latex="u_t(x,0) = -cf'(x) + cg'(x) = \psi(x)"></span>:</p><p><span class=math-display data-latex="f'(x) - g'(x) = -\frac{\psi(x)}{c}"></span></p><p>Integrating: <span class=math-inline data-latex="f(x) - g(x) = -\frac{1}{c}\int_0^x \psi(s)\,ds + K"></span>. Solving the system of two equations for <span class=math-inline data-latex=f></span> and <span class=math-inline data-latex=g></span>, then substituting back yields the stated formula. <span class=math-inline data-latex=\square></span></p></div></div><div class=theorem-block id=theorem-2.3><div class=block-label>Theorem 2.3 (Separation of Variables: Normal Modes)</div><div class=block-body><p>The only solutions of <span class=math-inline data-latex="u_{tt} = c^2 u_{xx}"></span> of the separable form <span class=math-inline data-latex="u(x,t) = X(x)T(t)"></span> satisfying Dirichlet boundary conditions <span class=math-inline data-latex="X(0) = X(L) = 0"></span> are (up to scalar multiples) the normal modes:</p><p><span class=math-display data-latex="X_n(x) = \sin\!\left(\frac{n\pi x}{L}\right), \quad T_n(t) = A_n\cos\omega_n t + B_n\sin\omega_n t, \quad \omega_n = \frac{n\pi c}{L}"></span></p><p>for <span class=math-inline data-latex="n = 1, 2, 3, \ldots"></span></p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p>Substituting <span class=math-inline data-latex="u = X(x)T(t)"></span> into <span class=math-inline data-latex="u_{tt} = c^2 u_{xx}"></span>:</p><p><span class=math-display data-latex="X(x)T''(t) = c^2 X''(x)T(t)"></span></p><p>Dividing both sides by <span class=math-inline data-latex="c^2 X(x)T(t)"></span> (assuming both nonzero):</p><p><span class=math-display data-latex="\frac{T''(t)}{c^2 T(t)} = \frac{X''(x)}{X(x)} = -\lambda"></span></p><p>where <span class=math-inline data-latex=-\lambda></span> is a separation constant (it must be constant since the left side depends only on <span class=math-inline data-latex=t></span> and the right only on <span class=math-inline data-latex=x></span>).</p><p><strong>Spatial ODE:</strong> <span class=math-inline data-latex="X'' = -\lambda X"></span> with <span class=math-inline data-latex="X(0) = X(L) = 0"></span>.</p><ul><li>If <span class=math-inline data-latex="\lambda \leq 0"></span>: the general solution is exponential or linear; neither can satisfy both boundary conditions with <span class=math-inline data-latex="X \not\equiv 0"></span>.</li><li>If <span class=math-inline data-latex="\lambda > 0"></span>: write <span class=math-inline data-latex="\lambda = (n\pi/L)^2"></span>. Then <span class=math-inline data-latex="X(x) = A\sin(\sqrt{\lambda}\,x) + B\cos(\sqrt{\lambda}\,x)"></span>. Condition <span class=math-inline data-latex="X(0) = 0"></span> gives <span class=math-inline data-latex="B = 0"></span>. Condition <span class=math-inline data-latex="X(L) = 0"></span> gives <span class=math-inline data-latex="\sin(\sqrt{\lambda}\,L) = 0"></span>, so <span class=math-inline data-latex="\sqrt{\lambda} = n\pi/L"></span> for <span class=math-inline data-latex="n = 1, 2, 3, \ldots"></span></li></ul><p><strong>Temporal ODE:</strong> <span class=math-inline data-latex="T'' = -\lambda c^2 T = -\omega_n^2 T"></span> (with <span class=math-inline data-latex="\omega_n = n\pi c/L"></span>), which has general solution <span class=math-inline data-latex="T_n(t) = A_n\cos\omega_n t + B_n\sin\omega_n t"></span>. <span class=math-inline data-latex=\square></span></p></div></div><blockquote><p><em>Visual:</em> The first five normal modes: mode 1 has one arch (no interior nodes), mode 2 has one interior node at <span class=math-inline data-latex="x=L/2"></span>, mode <span class=math-inline data-latex=n></span> has <span class=math-inline data-latex=n-1></span> interior nodes at <span class=math-inline data-latex="x = L/n, 2L/n, \ldots, (n-1)L/n"></span>. Each mode vibrates at frequency <span class=math-inline data-latex="f_n = n f_1"></span>.</p></blockquote><div class=theorem-block id=theorem-2.4><div class=block-label>Theorem 2.4 (Energy Conservation and Modal Orthogonality)</div><div class=block-body><p>The total energy decomposes as a sum over modes with no cross terms:</p><p><span class=math-display data-latex="E = \sum_{n=1}^{\infty} E_n"></span></p><p>where <span class=math-inline data-latex="E_n = \frac{L\mu\omega_n^2}{4}(A_n^2 + B_n^2)"></span>, and each <span class=math-inline data-latex=E_n></span> is independently conserved in time.</p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p>Compute the kinetic energy <span class=math-inline data-latex="K = \frac{\mu}{2}\int_0^L u_t^2\,dx"></span>.</p><p>Differentiate the Fourier series:</p><p><span class=math-display data-latex="u_t = \sum_{n=1}^\infty \sin\!\left(\frac{n\pi x}{L}\right)\!(-A_n\omega_n\sin\omega_n t + B_n\omega_n\cos\omega_n t)"></span></p><p><span class=math-display data-latex="u_t^2 = \sum_{n=1}^\infty\sum_{m=1}^\infty \sin\!\left(\frac{n\pi x}{L}\right)\!\sin\!\left(\frac{m\pi x}{L}\right) \cdot (\text{time factors})"></span></p><p>Integrate over <span class=math-inline data-latex=[0,L]></span> using the <strong>orthogonality</strong> of sine functions:</p><p><span class=math-display data-latex="\int_0^L \sin\!\left(\frac{n\pi x}{L}\right)\!\sin\!\left(\frac{m\pi x}{L}\right) dx = \frac{L}{2}\,\delta_{nm}"></span></p><p>All cross terms (<span class=math-inline data-latex="n \neq m"></span>) vanish. The same orthogonality applies to the potential energy <span class=math-inline data-latex="\frac{T}{2}\int_0^L u_x^2\,dx"></span>. Adding kinetic and potential contributions for mode <span class=math-inline data-latex=n></span> and using <span class=math-inline data-latex="T(n\pi/L)^2 = \mu\omega_n^2"></span>:</p><p><span class=math-display data-latex="E_n = \frac{\mu}{2}\cdot\frac{L}{2}\,\omega_n^2(A_n^2 + B_n^2) + \frac{T}{2}\cdot\frac{L}{2}\cdot\left(\frac{n\pi}{L}\right)^2\!(A_n^2 + B_n^2) = \frac{L\mu\omega_n^2}{4}(A_n^2 + B_n^2)"></span></p><p>Each <span class=math-inline data-latex=E_n></span> is constant in time (the <span class=math-inline data-latex="A_n^2 + B_n^2"></span> factor does not depend on <span class=math-inline data-latex=t></span>). <span class=math-inline data-latex=\square></span></p></div></div><div class=proposition-block id=prop-2.1><div class=block-label>Prop 2.1 (Harmonic Series)</div><div class=block-body><p>The frequencies of the normal modes of a fixed string form the <strong>harmonic series</strong>:</p><p><span class=math-display data-latex="f_1 : f_2 : f_3 : f_4 : \cdots = 1 : 2 : 3 : 4 : \cdots"></span></p><p>where <span class=math-inline data-latex="f_1 = c/(2L) = \frac{1}{2L}\sqrt{T/\mu}"></span> is the fundamental frequency.</p></div></div><div class=proof-block><div class=block-label>Proof.</div><div class=block-body><p>By Definition 2.3, <span class=math-inline data-latex="f_n = \omega_n/(2\pi) = nc/(2L) = n f_1"></span>. The ratio <span class=math-inline data-latex="f_n / f_1 = n"></span>. <span class=math-inline data-latex=\square></span></p><p><strong>Physical interpretation</strong>: Doubling the string length halves <span class=math-inline data-latex=f_1></span> (one octave lower). Doubling the tension multiplies <span class=math-inline data-latex=f_1></span> by <span class=math-inline data-latex=\sqrt{2}></span> (a musical tritone up). Quadrupling tension doubles <span class=math-inline data-latex=f_1></span> (one octave up).</p></div></div><hr><h2 id=worked-example-plucked-string>Worked Example: Plucked String</h2><p><strong>Setup</strong>: A string of length <span class=math-inline data-latex="L = 1"></span> is plucked at the midpoint to height <span class=math-inline data-latex=h></span> and released from rest. Initial conditions:</p><span class=math-display data-latex="\phi(x) = \begin{cases}2hx & 0 \leq x \leq 1/2 \\ 2h(1-x) & 1/2 \leq x \leq 1\end{cases}, \qquad \psi(x) = 0"></span><p><strong>Fourier coefficients</strong>: Since <span class=math-inline data-latex="\psi = 0"></span>, all <span class=math-inline data-latex="B_n = 0"></span>. For <span class=math-inline data-latex=A_n></span>:</p><span class=math-display data-latex="A_n = 2\int_0^1 \phi(x)\sin(n\pi x)\,dx = \frac{8h}{n^2\pi^2}\sin\!\left(\frac{n\pi}{2}\right)"></span><p>This equals <span class=math-inline data-latex=8h/(n^2\pi^2)></span> for <span class=math-inline data-latex="n \equiv 1 \pmod 4"></span>, <span class=math-inline data-latex=-8h/(n^2\pi^2)></span> for <span class=math-inline data-latex="n \equiv 3 \pmod 4"></span>, and $0$ for even <span class=math-inline data-latex=n></span>.</p><p><strong>Conclusion</strong>: Plucking at the midpoint <strong>eliminates all even harmonics</strong> (<span class=math-inline data-latex="A_2 = A_4 = \cdots = 0"></span>). The resulting timbre contains only odd harmonics <span class=math-inline data-latex="f_1, 3f_1, 5f_1, \ldots"></span> — this is the mathematical explanation for why plucking position shapes timbre.</p><blockquote><p><em>中文:</em> &ldquo;傅里叶级数的威力在于：任何初始形状，无论多复杂，都可以分解为这些正弦驻波的叠加。系数Aₙ由初始条件决定，而这些系数正是傅里叶系数。&rdquo;</p></blockquote><hr><h2 id=musical-connection>Musical Connection</h2><div class=music-block><div class=block-label>音乐联系</div><div class=block-body><p><strong>The Overtone Series is the Harmonic Series</strong></p><p>Theorem 2.3 shows that a vibrating string produces frequencies in the exact ratio <span class=math-inline data-latex=1:2:3:4:5:6:\ldots></span> This is called the <strong>overtone series</strong> or <strong>harmonic series</strong> in music. The first several intervals it generates are:</p><table><thead><tr><th>Harmonic ratio</th><th>Interval</th></tr></thead><tbody><tr><td><span class=math-inline data-latex=2:1></span></td><td>Octave</td></tr><tr><td><span class=math-inline data-latex=3:2></span></td><td>Perfect fifth</td></tr><tr><td><span class=math-inline data-latex=4:3></span></td><td>Perfect fourth</td></tr><tr><td><span class=math-inline data-latex=5:4></span></td><td>Major third</td></tr><tr><td><span class=math-inline data-latex=6:5></span></td><td>Minor third</td></tr><tr><td><span class=math-inline data-latex=7:6></span></td><td>&ldquo;Harmonic seventh&rdquo; (slightly flat of B<span class=math-inline data-latex=\flat></span>)</td></tr></tbody></table><p>The ratios <span class=math-inline data-latex=3:2></span> (perfect fifth) and <span class=math-inline data-latex=5:4></span> (major third) that define the consonant intervals in Western music emerge directly from the integer structure of the harmonic series. This is why <strong>Pythagorean tuning</strong> (built from pure <span class=math-inline data-latex=3:2></span> fifths) and <strong>just intonation</strong> (built from pure <span class=math-inline data-latex=5:4></span> thirds) have mathematical foundations in the wave equation.</p><p><strong>Timbre as spectral envelope</strong>: Different instruments playing the same pitch <span class=math-inline data-latex=f_1></span> differ only in the amplitudes <span class=math-inline data-latex=A_n></span> of each harmonic. A clarinet emphasizes odd harmonics (similar to our midpoint-pluck example, because of its cylindrical bore closed at one end). A violin&rsquo;s spectral envelope depends on bow speed and contact point. The piano&rsquo;s hammer position at roughly <span class=math-inline data-latex=1/8></span> of the string length from one end suppresses harmonics <span class=math-inline data-latex="8, 16, 24, \ldots"></span>, avoiding the harsh high partials that would come from the exact hammer resonance.</p><blockquote><p><em>中文:</em> &ldquo;泛音的相对强度决定了音色。这就是为什么钢琴和吉他演奏同一个音符，听起来却完全不同——它们的泛音结构不同。&rdquo;</p></blockquote></div></div><hr><h2 id=limits-and-open-questions>Limits and Open Questions</h2><ol><li><p><strong>Small-amplitude approximation</strong>: The derivation in Theorem 2.1 requires <span class=math-inline data-latex="|u_x| \ll 1"></span>. For large-amplitude vibrations (e.g., hard piano hammering), nonlinear terms enter. The nonlinear string equation introduces overtone <strong>inharmonicity</strong> — the higher modes deviate from exact integer multiples, which piano technicians compensate for by <strong>stretching the octave</strong> during tuning.</p></li><li><p><strong>Real strings have stiffness</strong>: Physical strings are not perfectly flexible. The corrected model adds a bending stiffness term:
 <span class=math-display data-latex="u_{tt} = c^2 u_{xx} - \frac{EI}{\mu}u_{xxxx}"></span>
 where <span class=math-inline data-latex=EI></span> is the bending stiffness. This yields frequencies <span class=math-inline data-latex="f_n \approx nf_1\sqrt{1 + Bn^2}"></span> for a small constant <span class=math-inline data-latex=B></span> (inharmonicity coefficient). The effect is musically significant for piano bass strings and is discussed in
 <a href=https://amath390.sibeliusp.com/episodes/ep33/ class=episode-ref-link>EP33 (physical modeling)</a>
-.</p>
-</li>
-<li>
-<p><strong>Two and three dimensions</strong>: Drumhead vibrations satisfy the 2D wave equation <span class=math-inline data-latex="u_{tt} = c^2(u_{xx} + u_{yy})"></span>. The normal modes involve Bessel functions rather than sines, and the frequency ratios are no longer integer multiples — hence drums do not produce a clear pitch the way strings do.</p>
-</li>
-<li>
-<p><strong>Damping and decay</strong>: Real strings have internal friction. Adding a damping term <span class=math-inline data-latex="-2\beta u_t"></span> to the right side shifts the normal mode frequencies to <span class=math-inline data-latex="\omega_n^{\text{damp}} = \sqrt{\omega_n^2 - \beta^2}"></span> and causes exponential amplitude decay <span class=math-inline data-latex="e^{-\beta t}"></span>, which gives each string note its characteristic sustain and decay envelope.</p>
-</li>
-</ol>
-<div class=conjecture-block id=conjecture>
-<div class=block-label>
-Conjecture (Optimal Plucking Position)
-</div>
-<div class=block-body>For a plucking position at <span class=math-inline data-latex="x = L/k"></span> (where <span class=math-inline data-latex=k></span> is an integer <span class=math-inline data-latex="\geq 2"></span>), the Fourier coefficients satisfy <span class=math-inline data-latex="A_{mk} = 0"></span> for all positive integers <span class=math-inline data-latex=m></span>. Therefore plucking at <span class=math-inline data-latex=1/k></span> eliminates all harmonics that are multiples of <span class=math-inline data-latex=k></span>. Among all plucking positions, <span class=math-inline data-latex="x = L/2"></span> minimizes the total power in even harmonics and <span class=math-inline data-latex="x = L/3"></span> minimizes power in harmonics <span class=math-inline data-latex="3, 6, 9, \ldots"></span> Is there a plucking position (not at a rational multiple of <span class=math-inline data-latex=L></span>) that produces the smoothest (most rapidly decaying <span class=math-inline data-latex=A_n></span>) spectral envelope? The answer relates to the Diophantine approximation properties of the plucking position.</div>
-</div>
-<hr>
-<h2 id=academic-references>Academic References</h2>
-<ol>
-<li>
-<p>Strauss, W. A. (2008). <em>Partial Differential Equations: An Introduction</em> (2nd ed.). Wiley. Ch. 1–2.</p>
-</li>
-<li>
-<p>Haberman, R. (2013). <em>Applied Partial Differential Equations</em> (5th ed.). Pearson. Ch. 4 (Wave equation), Ch. 3 (Fourier series).</p>
-</li>
-<li>
-<p>Fletcher, N. H., & Rossing, T. D. (1998). <em>The Physics of Musical Instruments</em> (2nd ed.). Springer. Ch. 2 (Vibrating strings).</p>
-</li>
-<li>
-<p>Rayleigh, J. W. S. (1877). <em>The Theory of Sound</em> (2nd ed., 1894). Macmillan. Vol. 1, Ch. 6.</p>
-</li>
-<li>
-<p>d&rsquo;Alembert, J. (1747). Recherches sur la courbe que forme une corde tendue mise en vibration. <em>Histoire de l&rsquo;Académie Royale des Sciences et Belles-Lettres de Berlin</em>, 3, 214–219.</p>
-</li>
-<li>
-<p>Morse, P. M. (1948). <em>Vibration and Sound</em> (2nd ed.). McGraw-Hill. Ch. 3.</p>
-</li>
-<li>
-<p>Terhardt, E. (1974). Pitch, consonance, and harmony. <em>Journal of the Acoustical Society of America</em>, 55(5), 1061–1069.</p>
-</li>
-</ol>
-</div>
-<nav class=ep-nav>
-<a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-nav-prev>
-← EP01: Chord Space and the Torus
-</a>
-<a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-nav-next>
-EP03: Bach and Graph Connectivity →
-</a>
-</nav>
-</article>
-<aside class=ep-toc-aside>
-<div class=ep-toc-sticky>
-<div class=ep-toc-label>本页目录</div>
-<nav id=TableOfContents>
-<ul>
-<li><a href=#overview>Overview</a></li>
-<li><a href=#prerequisites>Prerequisites</a></li>
-<li><a href=#definitions>Definitions</a></li>
-<li><a href=#main-theorems>Main Theorems</a></li>
-<li><a href=#worked-example-plucked-string>Worked Example: Plucked String</a></li>
-<li><a href=#musical-connection>Musical Connection</a></li>
-<li><a href=#limits-and-open-questions>Limits and Open Questions</a></li>
-<li><a href=#academic-references>Academic References</a></li>
-</ul>
-</nav>
-</div>
-</aside>
-</div>
-<footer class=site-footer>
-<div class=footer-content>
-<a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link>
-<img src=/images/avatar.png alt="Sibelius P." class=footer-avatar>
-</a>
-<div class=footer-text>
-<span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
+.</p></li><li><p><strong>Two and three dimensions</strong>: Drumhead vibrations satisfy the 2D wave equation <span class=math-inline data-latex="u_{tt} = c^2(u_{xx} + u_{yy})"></span>. The normal modes involve Bessel functions rather than sines, and the frequency ratios are no longer integer multiples — hence drums do not produce a clear pitch the way strings do.</p></li><li><p><strong>Damping and decay</strong>: Real strings have internal friction. Adding a damping term <span class=math-inline data-latex="-2\beta u_t"></span> to the right side shifts the normal mode frequencies to <span class=math-inline data-latex="\omega_n^{\text{damp}} = \sqrt{\omega_n^2 - \beta^2}"></span> and causes exponential amplitude decay <span class=math-inline data-latex="e^{-\beta t}"></span>, which gives each string note its characteristic sustain and decay envelope.</p></li></ol><div class=conjecture-block id=conjecture><div class=block-label>Conjecture (Optimal Plucking Position)</div><div class=block-body>For a plucking position at <span class=math-inline data-latex="x = L/k"></span> (where <span class=math-inline data-latex=k></span> is an integer <span class=math-inline data-latex="\geq 2"></span>), the Fourier coefficients satisfy <span class=math-inline data-latex="A_{mk} = 0"></span> for all positive integers <span class=math-inline data-latex=m></span>. Therefore plucking at <span class=math-inline data-latex=1/k></span> eliminates all harmonics that are multiples of <span class=math-inline data-latex=k></span>. Among all plucking positions, <span class=math-inline data-latex="x = L/2"></span> minimizes the total power in even harmonics and <span class=math-inline data-latex="x = L/3"></span> minimizes power in harmonics <span class=math-inline data-latex="3, 6, 9, \ldots"></span> Is there a plucking position (not at a rational multiple of <span class=math-inline data-latex=L></span>) that produces the smoothest (most rapidly decaying <span class=math-inline data-latex=A_n></span>) spectral envelope? The answer relates to the Diophantine approximation properties of the plucking position.</div></div><hr><h2 id=academic-references>Academic References</h2><ol><li><p>Strauss, W. A. (2008). <em>Partial Differential Equations: An Introduction</em> (2nd ed.). Wiley. Ch. 1–2.</p></li><li><p>Haberman, R. (2013). <em>Applied Partial Differential Equations</em> (5th ed.). Pearson. Ch. 4 (Wave equation), Ch. 3 (Fourier series).</p></li><li><p>Fletcher, N. H., & Rossing, T. D. (1998). <em>The Physics of Musical Instruments</em> (2nd ed.). Springer. Ch. 2 (Vibrating strings).</p></li><li><p>Rayleigh, J. W. S. (1877). <em>The Theory of Sound</em> (2nd ed., 1894). Macmillan. Vol. 1, Ch. 6.</p></li><li><p>d&rsquo;Alembert, J. (1747). Recherches sur la courbe que forme une corde tendue mise en vibration. <em>Histoire de l&rsquo;Académie Royale des Sciences et Belles-Lettres de Berlin</em>, 3, 214–219.</p></li><li><p>Morse, P. M. (1948). <em>Vibration and Sound</em> (2nd ed.). McGraw-Hill. Ch. 3.</p></li><li><p>Terhardt, E. (1974). Pitch, consonance, and harmony. <em>Journal of the Acoustical Society of America</em>, 55(5), 1061–1069.</p></li></ol></div><nav class=ep-nav><a href=https://amath390.sibeliusp.com/episodes/ep01/ class=ep-nav-prev>← EP01: Chord Space and the Torus
+</a><a href=https://amath390.sibeliusp.com/episodes/ep03/ class=ep-nav-next>EP03: Bach and Graph Connectivity →</a></nav></article><aside class=ep-toc-aside><div class=ep-toc-sticky><div class=ep-toc-label>本页目录</div><nav id=TableOfContents><ul><li><a href=#overview>Overview</a></li><li><a href=#prerequisites>Prerequisites</a></li><li><a href=#definitions>Definitions</a></li><li><a href=#main-theorems>Main Theorems</a></li><li><a href=#worked-example-plucked-string>Worked Example: Plucked String</a></li><li><a href=#musical-connection>Musical Connection</a></li><li><a href=#limits-and-open-questions>Limits and Open Questions</a></li><li><a href=#academic-references>Academic References</a></li></ul></nav></div></aside></div><footer class=site-footer><div class=footer-content><a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener class=footer-avatar-link><img src=/images/avatar.png alt="Sibelius P." class=footer-avatar></a><div class=footer-text><span>AMATH 390 数学与音乐 &copy; 2026 Sibelius P.</span>
 <span class=footer-sep>·</span>
 <a href=https://www.xiaohongshu.com/user/profile/5ff8add60000000001003d3f target=_blank rel=noopener>小红书</a>
 <span class=footer-sep>·</span>
-<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span>
-</div>
-</div>
-</footer>
-</main>
-</div>
-</body>
-</html>
+<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> + KaTeX</span></div></div></footer></main></div></body></html>

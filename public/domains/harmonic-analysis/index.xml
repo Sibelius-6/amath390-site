@@ -1,12 +1,130 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Harmonic Analysis on AMATH 390 数学与音乐</title><link>https://amath390.sibeliusp.com/domains/harmonic-analysis/</link><description>Recent content in Harmonic Analysis on AMATH 390 数学与音乐</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://amath390.sibeliusp.com/domains/harmonic-analysis/index.xml" rel="self" type="application/rss+xml"/><item><title>EP02: String Vibration and the Wave Equation</title><link>https://amath390.sibeliusp.com/episodes/ep02/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep02/</guid><description>Overview When you pluck a guitar string, why does it produce a rich spectrum of overtones rather than a single pure tone? The answer lies in a second-order partial differential equation derived by d&amp;rsquo;Alembert in 1747 and the separation-of-variables technique that Fourier refined in the early 19th century.
-This episode derives the 1D wave equation from Newton&amp;rsquo;s second law, establishes d&amp;rsquo;Alembert&amp;rsquo;s general solution as a superposition of traveling waves, and then reframes everything as Fourier series — infinite sums of standing-wave modes whose frequencies form the integer harmonic series</description></item><item><title>EP14: Tonnetz Hodge Duality</title><link>https://amath390.sibeliusp.com/episodes/ep14/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep14/</guid><description>Overview The Tonnetz — Euler&amp;rsquo;s 1739 interval lattice, rediscovered by neo-Riemannian theorists — is not merely a picture of chord relationships. It is a simplicial complex triangulating a torus, and every chord progression on it is a cochain that decomposes, uniquely and orthogonally, into three mathematically distinct components.
-This episode applies discrete Hodge theory (Eckmann 1944; Lim 2020) to the Tonnetz. The central result:
-Any 1-cochain on the Tonnetz torus decomposes as: where the three summands are pairwise orthogonal and uniquely determined.</description></item><item><title>EP26: The 1/f Law of Music</title><link>https://amath390.sibeliusp.com/episodes/ep26/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep26/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
-本集探讨：功率谱密度S(f)∝1/fᵅ, Hurst指数H, 分形维数。
-前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 26.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item><item><title>EP35: The Phase Vocoder — Mathematics of Pitch Shifting</title><link>https://amath390.sibeliusp.com/episodes/ep35/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep35/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
-本集探讨：STFT相位展开, COLA条件, 重叠相加, 音高移位。
-前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 35.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item><item><title>EP36: Quanta of Sound — Gabor and the Uncertainty Principle</title><link>https://amath390.sibeliusp.com/episodes/ep36/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep36/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
-本集探讨：Heisenberg-Gabor σ_t·σ_f≥1/(4π), Gabor原子, Balian-Low定理。
-前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 36.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item><item><title>EP40: What MP3 Deletes — Psychoacoustics and MDCT</title><link>https://amath390.sibeliusp.com/episodes/ep40/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep40/</guid><description>概述 本页内容正在撰写中。请先观看小红书视频了解核心概念。
-本集探讨：心理声学掩蔽(Bark尺度), MDCT核, TDAC定理, Huffman编码。
-前置知识 定义 Definition (...) &amp;hellip; -- 主要定理 Theorem 40.1 (...) &amp;hellip; -- Proof. &amp;hellip; -- 音乐联系 音乐联系 &amp;hellip; -- 局限性与开放问题 参考文献 待补充</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Harmonic Analysis on AMATH 390 数学与音乐</title><link>https://amath390.sibeliusp.com/domains/harmonic-analysis/</link><description>Recent content in Harmonic Analysis on AMATH 390 数学与音乐</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://amath390.sibeliusp.com/domains/harmonic-analysis/index.xml" rel="self" type="application/rss+xml"/><item><title>EP02: String Vibration and the Wave Equation</title><link>https://amath390.sibeliusp.com/episodes/ep02/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep02/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>When you pluck a guitar string, why does it produce a rich spectrum of overtones rather than a single pure tone? The answer lies in a second-order partial differential equation derived by d&amp;rsquo;Alembert in 1747 and the separation-of-variables technique that Fourier refined in the early 19th century.&lt;/p>
+&lt;p>This episode derives the &lt;strong>1D wave equation&lt;/strong> from Newton&amp;rsquo;s second law, establishes &lt;strong>d&amp;rsquo;Alembert&amp;rsquo;s general solution&lt;/strong> as a superposition of traveling waves, and then reframes everything as &lt;strong>Fourier series&lt;/strong> — infinite sums of standing-wave modes whose frequencies form the integer harmonic series &lt;span class="math-inline" data-latex="f_1, 2f_1, 3f_1, \ldots">&lt;/span>&lt;/p></description></item><item><title>EP14: Tonnetz Hodge Duality</title><link>https://amath390.sibeliusp.com/episodes/ep14/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep14/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>The Tonnetz — Euler&amp;rsquo;s 1739 interval lattice, rediscovered by neo-Riemannian theorists — is not merely a picture of chord relationships. It is a &lt;strong>simplicial complex triangulating a torus&lt;/strong>, and every chord progression on it is a cochain that decomposes, uniquely and orthogonally, into three mathematically distinct components.&lt;/p>
+&lt;p>This episode applies &lt;strong>discrete Hodge theory&lt;/strong> (Eckmann 1944; Lim 2020) to the Tonnetz. The central result:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>Any 1-cochain on the Tonnetz torus decomposes as:&lt;/em>
+&lt;span class="math-display" data-latex="\omega = \omega_{\text{exact}} \;&amp;#43;\; \omega_{\text{coexact}} \;&amp;#43;\; \omega_{\text{harmonic}}">&lt;/span>
+&lt;em>where the three summands are pairwise orthogonal and uniquely determined.&lt;/em>&lt;/p></description></item><item><title>EP26: The 1/f Law of Music</title><link>https://amath390.sibeliusp.com/episodes/ep26/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep26/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Take Bach, Jay Chou, Taylor Swift, and a segment of random noise, and feed all four through a spectrum analyser. Three centuries of stylistic difference nearly vanish in a single graph. That is the counterintuitive fact at the centre of this episode: across wildly different genres and eras, the &lt;em>power spectral density&lt;/em> of pitch sequences tends to fall off as &lt;span class="math-inline" data-latex="S(f) \propto 1/f^\alpha">&lt;/span> with &lt;span class="math-inline" data-latex="\alpha \approx 1">&lt;/span>. It is not an iron law, but it is a statistical regularity that recurs with striking consistency.&lt;/p></description></item><item><title>EP35: The Phase Vocoder — Mathematics of Pitch Shifting</title><link>https://amath390.sibeliusp.com/episodes/ep35/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep35/</guid><description>&lt;h2 id="概述">概述&lt;/h2>
+&lt;p>&lt;em>本页内容正在撰写中。请先观看&lt;a href="#">小红书视频&lt;/a>了解核心概念。&lt;/em>&lt;/p>
+&lt;p>本集探讨：STFT相位展开, COLA条件, 重叠相加, 音高移位。&lt;/p>
+&lt;h2 id="前置知识">前置知识&lt;/h2>
+&lt;!-- cross-refs partial handles callback links -->
+&lt;h2 id="定义">定义&lt;/h2>
+&lt;!-- 
+
+&lt;div class="definition-block" id="definition">
+ &lt;div class="block-label">
+ Definition (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="主要定理">主要定理&lt;/h2>
+&lt;!-- 
+
+&lt;div class="theorem-block" id="theorem-35.1">
+ &lt;div class="block-label">
+ Theorem 35.1 (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;!-- &lt;div class="proof-block">
+ &lt;div class="block-label">Proof.&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="音乐联系">音乐联系&lt;/h2>
+&lt;!-- &lt;div class="music-block">
+ &lt;div class="block-label">音乐联系&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="局限性与开放问题">局限性与开放问题&lt;/h2>
+&lt;h2 id="参考文献">参考文献&lt;/h2>
+&lt;ol>
+&lt;li>&lt;em>待补充&lt;/em>&lt;/li>
+&lt;/ol></description></item><item><title>EP36: Quanta of Sound — Gabor and the Uncertainty Principle</title><link>https://amath390.sibeliusp.com/episodes/ep36/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep36/</guid><description>&lt;h2 id="概述">概述&lt;/h2>
+&lt;p>&lt;em>本页内容正在撰写中。请先观看&lt;a href="#">小红书视频&lt;/a>了解核心概念。&lt;/em>&lt;/p>
+&lt;p>本集探讨：Heisenberg-Gabor σ_t·σ_f≥1/(4π), Gabor原子, Balian-Low定理。&lt;/p>
+&lt;h2 id="前置知识">前置知识&lt;/h2>
+&lt;!-- cross-refs partial handles callback links -->
+&lt;h2 id="定义">定义&lt;/h2>
+&lt;!-- 
+
+&lt;div class="definition-block" id="definition">
+ &lt;div class="block-label">
+ Definition (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="主要定理">主要定理&lt;/h2>
+&lt;!-- 
+
+&lt;div class="theorem-block" id="theorem-36.1">
+ &lt;div class="block-label">
+ Theorem 36.1 (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;!-- &lt;div class="proof-block">
+ &lt;div class="block-label">Proof.&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="音乐联系">音乐联系&lt;/h2>
+&lt;!-- &lt;div class="music-block">
+ &lt;div class="block-label">音乐联系&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="局限性与开放问题">局限性与开放问题&lt;/h2>
+&lt;h2 id="参考文献">参考文献&lt;/h2>
+&lt;ol>
+&lt;li>&lt;em>待补充&lt;/em>&lt;/li>
+&lt;/ol></description></item><item><title>EP40: What MP3 Deletes — Psychoacoustics and MDCT</title><link>https://amath390.sibeliusp.com/episodes/ep40/</link><pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate><guid>https://amath390.sibeliusp.com/episodes/ep40/</guid><description>&lt;h2 id="概述">概述&lt;/h2>
+&lt;p>&lt;em>本页内容正在撰写中。请先观看&lt;a href="#">小红书视频&lt;/a>了解核心概念。&lt;/em>&lt;/p>
+&lt;p>本集探讨：心理声学掩蔽(Bark尺度), MDCT核, TDAC定理, Huffman编码。&lt;/p>
+&lt;h2 id="前置知识">前置知识&lt;/h2>
+&lt;!-- cross-refs partial handles callback links -->
+&lt;h2 id="定义">定义&lt;/h2>
+&lt;!-- 
+
+&lt;div class="definition-block" id="definition">
+ &lt;div class="block-label">
+ Definition (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="主要定理">主要定理&lt;/h2>
+&lt;!-- 
+
+&lt;div class="theorem-block" id="theorem-40.1">
+ &lt;div class="block-label">
+ Theorem 40.1 (...)
+ &lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;!-- &lt;div class="proof-block">
+ &lt;div class="block-label">Proof.&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="音乐联系">音乐联系&lt;/h2>
+&lt;!-- &lt;div class="music-block">
+ &lt;div class="block-label">音乐联系&lt;/div>
+ &lt;div class="block-body">&amp;hellip;&lt;/div>
+&lt;/div>
+ -->
+&lt;h2 id="局限性与开放问题">局限性与开放问题&lt;/h2>
+&lt;h2 id="参考文献">参考文献&lt;/h2>
+&lt;ol>
+&lt;li>&lt;em>待补充&lt;/em>&lt;/li>
+&lt;/ol></description></item></channel></rss>
